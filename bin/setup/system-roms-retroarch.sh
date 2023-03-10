@@ -26,11 +26,6 @@ configure() {
 # existing built-in RetroArch configuration, which makes configurations a pain
 # to manage otherwise.
 __configure_retroarch_configs() {
-  local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
-  if [ -z "$rom_dirs" ]; then
-    return
-  fi
-
   # Merge in rom-specific overrides
   while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
