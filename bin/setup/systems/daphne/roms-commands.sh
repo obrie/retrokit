@@ -23,7 +23,7 @@ __configure_params() {
 
   local insert_line=$(grep -nE '^if' "$hypseus_launch_file" | head -n 1 | cut -d: -f 1)
   local append_to_script="if [[ -f \"$hypseus_commands_dir/\$name.commands\" ]]; then params=\$(<\"$hypseus_commands_dir/\$name.commands\"); fi"
-  sed "i $insert_line $append_to_script" "$hypseus_launch_file"
+  sed -i "$insert_line i $append_to_script" "$hypseus_launch_file"
 }
 
 __configure_commands() {
