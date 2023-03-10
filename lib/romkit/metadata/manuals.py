@@ -36,7 +36,15 @@ class ManualsMetadata(BaseMetadata):
     }
 
     # Unique list of all language codes available
-    ALL_LANGUAGE_CODES = ['ar', 'cs', 'da', 'de', 'en', 'en-au', 'en-ca', 'en-gb', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh']
+    # 
+    # The order here matters in terms of what language is chosen first when
+    # regional prioritization is disabled and no allowlist is provided by the user.
+    ALL_LANGUAGE_CODES = [
+        # English (prefer en-gb first since you're more likely to get multiple languages)
+        'en-gb', 'en', 'en-au', 'en-ca',
+        # Everything else
+        'ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'
+    ]
 
     def load(self) -> None:
         # Look up what languages the user wants to allow
