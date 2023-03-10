@@ -5,36 +5,24 @@
 install_retropie_package() {
   local package_type=$1
   local name=$2
-  local build=${3:-binary}
+  local build=${3:-auto}
 
   local install_dir="$retropie_dir/$package_type/$name"
 
-  # Determine whether we're updating an existing package or installing
-  # a new one
-  local mode
-  local pkg_origin
+  # If the package is already installed, don't do anything.  Updates must be done
+  # explicitly by the user.
   if [ -d "$install_dir" ]; then
-    pkg_origin=$(crudini --get "$retropie_dir/$package_type/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
-
-    # If the package is already installed and the build source has remained the same,
-    # then don't do anything.  Updates must be done explicitly by the user.
-    if [ "$pkg_origin" == "$build" ]; then
-      echo "$name already installed by RetroPie ($build)"
-      return 0
-    fi
+    echo "$name already installed by RetroPie ($build)"
+    return 0
   fi
 
-  if [ "$build" == 'binary' ]; then
-    # If this is one of retrokit's script modules, follow redirects
-    local __curl_opts=''
-    if find "$ext_dir/scriptmodules" -name "$name.sh" | grep . >/dev/null; then
-      __curl_opts='-L'
-    fi
-
-    sudo __curl_opts=$__curl_opts "$retropie_setup_dir/retropie_packages.sh" "$name" ${mode:-_binary_}
-  else
-    sudo "$retropie_setup_dir/retropie_packages.sh" "$name" ${mode:-_source_}
+  # If this is one of retrokit's scriptmodules, follow redirects
+  local __curl_opts=''
+  if find "$ext_dir/scriptmodules" -name "$name.sh" | grep . >/dev/null; then
+    __curl_opts='-L'
   fi
+
+  sudo __curl_opts=$__curl_opts "$retropie_setup_dir/retropie_packages.sh" "$name" "_${build}_"
 }
 
 configure_retropie_package() {
