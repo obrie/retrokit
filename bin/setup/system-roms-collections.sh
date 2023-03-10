@@ -56,14 +56,23 @@ configure() {
 
 # Finds file in the system's configured rom directories
 __find_in_directories() {
+  local filename=$1
+
   local rom_dir
   for rom_dir in "${rom_dirs[@]}"; do
-    path=$(find "$rom_dir" -mindepth 1 -maxdepth 1 -name "$1" -print -quit)
+    path=$(find "$rom_dir" -mindepth 1 -maxdepth 1 -name "$filename" -print -quit)
     if [ -n "$path" ]; then
       echo "$path"
       return
     fi
   done
+
+  # Default to the first listed rom directory if we can't find the actual
+  # file on the filesystem.
+  # 
+  # This way, we can set up collections for when the files are eventually
+  # present.
+  echo "$rom_dir/$filename"
 }
 
 restore() {
