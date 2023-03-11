@@ -40,6 +40,11 @@ __install_emulators() {
 
 # Install BIOS files required by emulators
 __download_bios_files() {
+  local should_download=$(system_setting '.bios.download')
+  if [ "$should_download" == 'false' ]; then
+    return
+  fi
+
   local bios_dir=$(system_setting '.bios.dir')
   local base_url=$(system_setting '.bios.url')
 
