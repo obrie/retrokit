@@ -26,7 +26,8 @@ restore() {
 
 __reconfigure_packages() {
   # Update symlinks for the timezone
-  sudo timedatectl set-timezone $(cat /etc/timezone)
+  sudo rm -fv /etc/localtime
+  sudo dpkg-reconfigure -f noninteractive tzdata 2> /dev/null
 
   # Update current session settings
   export $(grep -v '^#' /etc/default/locale | xargs)
