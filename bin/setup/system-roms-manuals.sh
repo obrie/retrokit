@@ -55,7 +55,7 @@ configure() {
 
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=» read -ra manual_data; do
+  while IFS=$field_delim read -ra manual_data; do
     declare -A manual
     __build_manual manual "${manual_data[@]}"
 
@@ -166,7 +166,7 @@ __list_manuals() {
       (.manual .languages | join(",")),
       .manual .url,
       ((select(.manual .options) | .manual .options | @json) // "")
-    ] | join("»")
+    ] | join("'$field_delim'")
   '
 }
 
@@ -790,7 +790,7 @@ vacuum() {
 
   # Build the list of files we should *not* delete
   declare -A files_to_keep
-  while IFS=» read -ra manual_data; do
+  while IFS=$field_delim read -ra manual_data; do
     declare -A manual
     __build_manual manual "${manual_data[@]}"
 

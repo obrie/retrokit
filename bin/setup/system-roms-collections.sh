@@ -18,9 +18,9 @@ configure() {
   declare -A installed_collections
   declare -A installed_playlists
 
-  while IFS=» read -r name playlist_name install_path collections_dsv; do
+  while IFS=$field_delim read -r name playlist_name install_path collections_dsv; do
     local collections
-    IFS=» read -r -a collections <<< "$collections_dsv"
+    IFS=$field_delim read -r -a collections <<< "$collections_dsv"
 
     local rom_path
     if [ -z "$playlist_name" ]; then
@@ -45,7 +45,7 @@ configure() {
         installed_collections[$collection_name]=1
       done
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, .path, (.collections | join ("»"))] | join("»")' | sort)
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, .path, (.collections | join("'$field_delim'"))] | join("'$field_delim'")' | sort)
 
   # Sort the modified collections
   for collection_name in "${!installed_collections[@]}"; do

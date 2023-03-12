@@ -49,7 +49,7 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name playlist_name title group_name orientation emulator overlay_override_url controls; do
+  while IFS=$field_delim read -r rom_name playlist_name title group_name orientation emulator overlay_override_url controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local supports_overlays=${emulators["$emulator/library_name"]}
@@ -103,7 +103,7 @@ configure() {
         __update_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
       fi
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, .media.overlay, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, .media.overlay, (.controls | join(","))] | join("'$field_delim'")')
 
   __remove_unused_configs
 }

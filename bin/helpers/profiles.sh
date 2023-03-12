@@ -12,7 +12,7 @@ declare -A cached_path_exists
 init_profiles() {
   # Read list of profiles
   declare -a profiles=()
-  IFS=',' read -r -a profiles <<< "$PROFILES"
+  IFS=, read -r -a profiles <<< "$PROFILES"
 
   local profile
   for profile in '..' "${profiles[@]}"; do

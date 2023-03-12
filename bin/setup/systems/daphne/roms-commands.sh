@@ -29,7 +29,7 @@ __configure_params() {
 __configure_commands() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
-  while IFS=» read -r rom_name title group_name emulator controls; do
+  while IFS=$field_delim read -r rom_name title group_name emulator controls; do
     emulator=${emulators["${emulator:-default}/emulator"]}
 
     # Set up the path that we're writing to
@@ -81,7 +81,7 @@ __configure_commands() {
         echo -n "-bezel $bezel_name.png" >> "$target_file"
       fi
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("'$field_delim'")')
 }
 
 restore() {

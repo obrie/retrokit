@@ -29,7 +29,7 @@ __migrate_system() {
   local system=$1
   . "$dir/setup/system-common.sh"
 
-  while IFS=» read path name playlist_name group_name manual_filename xref_path; do
+  while IFS=$field_delim read path name playlist_name group_name manual_filename xref_path; do
     # Skip if:
     # * No xref path configured
     # * xref path doesn't exist
@@ -78,7 +78,7 @@ __migrate_system() {
       .group .name,
       (select(.manual) | (.manual.name // .group.name) + " (" + (.manual.languages | join(",")) + ")"),
       .xref .path
-    ] | join("»")
+    ] | join("'$field_delim'")
   ')
 }
 

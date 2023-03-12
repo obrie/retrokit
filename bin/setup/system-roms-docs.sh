@@ -26,7 +26,7 @@ build() {
   # Redefine the controls file for ROMs
   doc_data_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
 
-  while IFS='»' read name group_name emulator; do
+  while IFS=$field_delim read name group_name emulator; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local core_options_file="$retroarch_config_dir/$library_name/$name.opt"
@@ -53,7 +53,7 @@ build() {
     # Move PDF to final location
     mkdir -p "$(dirname "$output_file")"
     mv "$staging_file" "$output_file"
-  done < <(romkit_cache_list | jq -r '[.name, .group.name, .emulator] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .group.name, .emulator] | join("'$field_delim'")')
 }
 
 remove() {

@@ -44,7 +44,7 @@ build_gamelist() {
     local system_title=$(xmlstarlet select -t -m "/*/*[name='$system']" -v 'fullname' "$home/.emulationstation/es_systems.cfg")
     echo "Generating $system_title gamelist..."
 
-    while IFS=» read name players genres; do
+    while IFS=$field_delim read name players genres; do
       if [[ "$name" == *'"'* ]]; then
         name=$(echo -n "$name" | jq -aRs .)
       fi
@@ -55,7 +55,7 @@ build_gamelist() {
       fi
 
       gamelist="$gamelist\n{\"system\": \"$system_title\", \"name\": \"$name\", \"players\": \"$players\", \"genres\": \"$genres\"},"
-    done < <(xmlstarlet select -t -m '/*/*' -v 'name' -o » -v 'players' -o » -v 'genre' -n "$home/.emulationstation/gamelists/$system/gamelist.xml" | xmlstarlet unesc | grep -Ev ' - Disc.*' | sort | uniq)
+    done < <(xmlstarlet select -t -m '/*/*' -v 'name' -o $field_delim -v 'players' -o $field_delim -v 'genre' -n "$home/.emulationstation/gamelists/$system/gamelist.xml" | xmlstarlet unesc | grep -Ev ' - Disc.*' | sort | uniq)
   done < <(setting '.systems[]')
 
   if [ -n "$gamelist" ]; then

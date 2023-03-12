@@ -180,9 +180,9 @@ outline_overlay_image() {
 load_emulator_data() {
   declare -A -g emulators
 
-  while IFS=» read -r package core_name core_option_prefix library_name is_default supports_overlays emulator_names alias_names; do
-    IFS=',' read -r -a emulator_names <<< "$emulator_names"
-    IFS=',' read -r -a alias_names <<< "$alias_names"
+  while IFS=$field_delim read -r package core_name core_option_prefix library_name is_default supports_overlays emulator_names alias_names; do
+    IFS=, read -r -a emulator_names <<< "$emulator_names"
+    IFS=, read -r -a alias_names <<< "$alias_names"
     local default_emulator=${emulator_names[0]}
 
     for emulator in "${emulator_names[@]}"; do
@@ -218,7 +218,7 @@ load_emulator_data() {
       (.value.supports_overlays // false | tostring),
       (.value.names // [.key] | join(",")),
       (select(.value.aliases) | .value.aliases | join(","))
-    ] | join("»")
+    ] | join("'$field_delim'")
   ')
 }
 

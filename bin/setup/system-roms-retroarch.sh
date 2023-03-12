@@ -27,7 +27,7 @@ configure() {
 # to manage otherwise.
 __configure_retroarch_configs() {
   # Merge in rom-specific overrides
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local target_file="$retroarch_config_dir/$library_name/$rom_name.cfg"
     local files_to_include=()
@@ -49,7 +49,7 @@ __configure_retroarch_configs() {
     done
 
     local override_paths
-    IFS=» read -r -a override_paths <<< "$override_paths_dsv"
+    IFS=$field_delim read -r -a override_paths <<< "$override_paths_dsv"
     paths_to_merge+=("${override_paths[@]}")
 
     # Merge in any valid paths
@@ -74,12 +74,12 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Emulator-specific remapping file
     local target_file="$retroarch_remapping_dir/$library_name/$rom_name.rmp"
 
     local paths_to_merge
-    IFS=» read -r -a paths_to_merge <<< "$override_paths_dsv"
+    IFS=$field_delim read -r -a paths_to_merge <<< "$override_paths_dsv"
 
     for path in "${paths_to_merge[@]}"; do
       ini_merge "$path" "$target_file" backup=false
@@ -92,7 +92,7 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_file=$(get_retroarch_path 'core_options_path')
 
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     local target_file="$emulator_config_dir/$rom_name.opt"
@@ -112,7 +112,7 @@ __configure_retroarch_core_options() {
     fi
 
     local override_paths
-    IFS=» read -r -a override_paths <<< "$override_paths_dsv"
+    IFS=$field_delim read -r -a override_paths <<< "$override_paths_dsv"
     paths_to_merge+=("${override_paths[@]}")
 
     # Merge in any valid paths
@@ -165,7 +165,7 @@ __list_libretro_roms() {
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name disc_name playlist_name title parent_name group_name rom_path emulator controls peripherals; do
+  while IFS=$field_delim read -r rom_name disc_name playlist_name title parent_name group_name rom_path emulator controls peripherals; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -213,10 +213,10 @@ __list_libretro_roms() {
         checked_overrides[$override_name]=1
       fi
     done
-    local override_paths_delimited=$(IFS=» ; echo "${override_paths[*]}")
+    local override_paths_delimited=$(IFS=$field_delim ; echo "${override_paths[*]}")
 
-    echo "${target_name}»${core_name}»${core_option_prefix}»${library_name}»${control_type}»${peripherals}»${override_paths_delimited}"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
+    echo "${target_name}${field_delim}${core_name}${field_delim}${core_option_prefix}${field_delim}${library_name}${field_delim}${control_type}${field_delim}${peripherals}${field_delim}${override_paths_delimited}"
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("'$field_delim'")')
 }
 
 restore() {

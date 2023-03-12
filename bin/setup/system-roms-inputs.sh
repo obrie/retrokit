@@ -20,7 +20,7 @@ configure() {
   declare -A installed_playlists
   declare -A installed_files
 
-  while IFS=» read -r rom_name disc_name playlist_name title parent_name group_name controls; do
+  while IFS=$field_delim read -r rom_name disc_name playlist_name title parent_name group_name controls; do
     local target_file="$retropie_system_config_dir/autoport/${playlist_name:-$rom_name}.cfg"
     if [ "${installed_files["$target_file"]}" ]; then
       # We've already processed this file (it's a playlist) -- don't process it again
@@ -51,7 +51,7 @@ configure() {
     if [ -f "$target_file" ]; then
       installed_files["$target_file"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, (.controls | join(","))] | join("'$field_delim'")')
 
   # Remove unused files
   while read -r path; do

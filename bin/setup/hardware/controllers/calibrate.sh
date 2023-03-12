@@ -22,11 +22,11 @@ depends() {
 configure() {
   local rules=()
 
-  while IFS=» read controller_name controller_id axis_config; do
+  while IFS=$field_delim read controller_name controller_id axis_config; do
     local script=$script_start
 
     # Add a write command for each axis code we need to calibrate
-    while IFS='=' read axis_event_code axis_midpoint; do
+    while IFS== read axis_event_code axis_midpoint; do
       script="$script"$'\n'"device.write(ecodes.EV_ABS, ecodes.$axis_event_code, $axis_midpoint)"
     done < <(echo "$axis_config" | tr ',' '\n')
 
@@ -48,7 +48,7 @@ configure() {
     rule+=', RUN+="/usr/bin/python3 -c \"'"$script"'\""'
 
     rules+=("$rule")
-  done < <(setting '.hardware.controllers.inputs[] | select(.axis) | [.name, .id, ([.axis | to_entries[] | [.key, .value | tostring] | join("=")] | join(","))] | join("»")')
+  done < <(setting '.hardware.controllers.inputs[] | select(.axis) | [.name, .id, ([.axis | to_entries[] | [.key, .value | tostring] | join("=")] | join(","))] | join("'$field_delim'")')
 
   # Write the udev rule
   if [ ${#rules[@]} -gt 0 ]; then

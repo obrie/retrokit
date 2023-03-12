@@ -94,7 +94,7 @@ __configure_controller_input() {
   local sdl_config=$2
   local swap_buttons=$3
 
-  IFS=',' read -r -a sdl_properties <<< "$sdl_config"
+  IFS=, read -r -a sdl_properties <<< "$sdl_config"
   local id=${sdl_properties[0]}
   local hotkey=$(setting '.hardware.controllers.hotkey')
 

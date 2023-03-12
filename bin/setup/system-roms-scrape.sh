@@ -25,7 +25,7 @@ configure() {
 # as a source of scraping params
 __load_rom_data() {
   declare -Ag rom_data
-  while IFS=» read -r name playlist_name rom_name rom_crc rom_path; do
+  while IFS=$field_delim read -r name playlist_name rom_name rom_crc rom_path; do
     rom_data["$name/rom"]="$rom_name"
     rom_data["$name/crc"]="$rom_crc"
     rom_data["$name/path"]="$rom_path"
@@ -36,7 +36,7 @@ __load_rom_data() {
       rom_data["$playlist_name/rom"]="$rom_name"
       rom_data["$playlist_name/crc"]="$rom_crc"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc, .path] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc, .path] | join("'$field_delim'")')
 }
 
 # Scrape from all configured sources
