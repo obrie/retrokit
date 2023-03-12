@@ -49,11 +49,11 @@ build_joycond() {
 }
 
 configure() {
-  sudo systemctl enable --now joycond
+  sudo systemctl enable joycond
 }
 
 restore() {
-  sudo systemctl disable --now joycond
+  sudo systemctl disable joycond
 }
 
 remove() {
