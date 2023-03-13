@@ -1,8 +1,7 @@
 {
   "roms": {
     "priority": {
-      "enabled": true,
-      "single_title": false,
+      "group_by": ["group"],
       "order": [
         "names",
         "titles",

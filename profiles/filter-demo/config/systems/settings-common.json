@@ -1,7 +1,7 @@
 {
   "roms": {
     "priority": {
-      "enabled": true,
+      "group_by": ["group"],
       "order": ["flags|countries", "flag_groups_total", "name_length"],
       "flags|countries": [
         "USA",

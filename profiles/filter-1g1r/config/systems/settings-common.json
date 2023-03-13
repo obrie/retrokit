@@ -1,8 +1,7 @@
 {
   "roms": {
     "priority": {
-      "enabled": true,
-      "single_title": true,
+      "group_by": ["group", "disc_title"],
       "order": ["flags|countries", "romsets", "flag_groups_total", "is_group_title", "name_length"],
       "flags|countries": [
         "USA",

@@ -1,6 +1,7 @@
 from romkit.sorters.sortable_set import SortableSet
 
 from romkit.sorters.description import FlagSorter, FlagsCountSorter, FlagGroupsTotalSorter, KeywordSorter, VersionSorter
+from romkit.sorters.emulator import IsEmulatorCompatibleSorter
 from romkit.sorters.name import NameSorter, NameLengthSorter, TitleSorter, TitleLengthSorter
 from romkit.sorters.group import IsGroupTitleSorter
 from romkit.sorters.parent import IsParentSorter
@@ -12,6 +13,7 @@ __all_sorters__ = [
     FlagGroupsTotalSorter,
     KeywordSorter,
     VersionSorter,
+    IsEmulatorCompatibleSorter,
     NameSorter,
     NameLengthSorter,
     TitleSorter,

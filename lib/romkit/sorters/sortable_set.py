@@ -9,14 +9,15 @@ from typing import List, Optional
 
 # Represents a sortable collection of machines
 class SortableSet:
+    # A set of keys that have been reserved for special use in configuring
+    # a sortable set.
+    RESERVED_KEYS = {'group_by', 'order'}
+
     def __init__(self,
-        # Whether machine sorted has been enabeld
-        enabled: bool = False,
-        # Whether this collection should only allow a single machine to share a title
-        single_title: bool = False,
+        # The list of properties to group by
+        group_by: List[str] = [],
     ) -> None:
-        self.enabled = enabled
-        self.single_title = single_title
+        self.group_by = group_by
 
         # Tracks machines associated with a specific group name
         self.groups = defaultdict(list)
@@ -31,15 +32,14 @@ class SortableSet:
     @classmethod
     def from_json(cls, json: dict, supported_sorters: list) -> SortableSet:
         sortable_set = cls(
-            enabled=json.get('enabled', False),
-            single_title=json.get('single_title', False),
+            group_by=json.get('group_by', []),
         )
 
         sorters_by_name = {sorter.name: sorter for sorter in supported_sorters}
 
         # Either use a pre-defined order in which to process the sort strategies
         # or, by default, use the order in which the strategies were defined
-        sorter_configs = {key: json[key] for key in json if key != 'enabled' and key != 'order'}
+        sorter_configs = {key: json[key] for key in json if key not in cls.RESERVED_KEYS}
         sorter_config_names = json.pop('order', sorter_configs.keys())
 
         for sorter_config_name in sorter_config_names:
@@ -87,7 +87,7 @@ class SortableSet:
     # post-processing, such as restricting the list of machines to prevent
     # multiple with the same title
     def prioritize(self) -> List[Machine]:
-        if self.enabled:
+        if 'group' in self.group_by:
             machines = []
             groups = self.groups.copy()
 
@@ -99,20 +99,24 @@ class SortableSet:
 
             # Add remaining prioritized groups
             machines.extend(self.__prioritize_groups(groups))
-
-            if self.single_title:
-                # Reduce the list further by only allowing a single machine/playlist
-                # with a certain title
-                groups_by_title = defaultdict(list)
-                for machine in machines:
-                    group = Machine.normalize(machine.disc_title)
-                    groups_by_title[group].append(machine)
-
-                machines = self.__prioritize_groups(groups_by_title)
         else:
             machines = self.all()
 
+        for property_name in self.group_by:
+            if property_name != 'group':
+                machines = self.__prioritize_by_property(machines, property_name)
+
         return machines
+
+    # Reduce a list of machines further by only allowing a single machine/playlist
+    # with a certain property value
+    def __prioritize_by_property(self, machines: List[Machine], property_name: str) -> List[Machine]:
+        groups_by_value = defaultdict(list)
+        for machine in machines:
+            value = Machine.normalize(getattr(machine, property_name))
+            groups_by_value[value].append(machine)
+
+        return self.__prioritize_groups(groups_by_value)
 
     # Generates a list of prioritized machines for the given machine groupings.
     # 
