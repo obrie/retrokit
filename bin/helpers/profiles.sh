@@ -10,12 +10,17 @@ declare -A cached_path_exists
 
 # Loads and caches the current profiles being used
 init_profiles() {
-  # Read list of profiles
-  declare -a profiles=()
+  # Read list of profiles requested by the user.  By default, we always include
+  # the root of this repo (..)
   IFS=, read -r -a profiles <<< "$PROFILES"
+  profiles=(.. "${profiles[@]}")
 
-  local profile
-  for profile in '..' "${profiles[@]}"; do
+  # Profiles which we've "preprocessed" by evaluating their #include directives
+  declare -A preprocessed_profiles
+
+  while [ ${#profiles[@]} -gt 0 ]; do
+    local profile=${profiles[0]}
+
     # Ensure any remote profiles have been pulled down
     if [[ "$profile" =~ ^(https|git).* ]]; then
       local profile_name=${profile##*/}
@@ -28,19 +33,47 @@ init_profiles() {
     fi
 
     if [ "$profile" != '..' ]; then
+      # Only process #include directives for profiles we haven't already processed
+      if [ -z "${preprocessed_profiles[$profile]}" ]; then
+        preprocessed_profiles[$profile]=1
+
+        # When there are new profiles to include in the processing, they always get
+        # prioritized first (since they're dependencies).  So we push those to the
+        # front of the queue and restart our loop.
+        declare -a included_profiles=($(__find_included_profiles "$profile"))
+        if [ ${#included_profiles[@]} -gt 0 ]; then
+          profiles=("${included_profiles[@]}" "${profiles[@]}")
+          continue
+        fi
+      fi
+
       __profiles+=("$profile")
     fi
 
-    local profile_dir="$profiles_dir/$profile"
-
     # Make sure we're dealing with a valid profile
+    local profile_dir="$profiles_dir/$profile"
     if [ -d "$profile_dir" ]; then
       local full_profile_dir=$(realpath "$profile_dir")
       __profile_dirs+=("$full_profile_dir")
     else
       >&2 echo "[INFO] Profile not found: $profile"
     fi
+
+    profiles=("${profiles[@]:1}")
   done
+}
+
+# Searches for #include directories in the given profile and returns a
+# list of profiles that haven't yet been evaluated.
+__find_included_profiles() {
+  local profile=$1
+  local profile_dir="$profiles_dir/$profile"
+
+  while read included_profile; do
+    if [[ ! " ${__profiles[*]} " =~ " $included_profile " ]]; then
+      echo "$included_profile"
+    fi
+  done < <(grep -sE '^#include +[^ ]+' "$profile_dir/.env" | sed 's/^#include *//g')
 }
 
 # Determines whether any path exists from the given template.
