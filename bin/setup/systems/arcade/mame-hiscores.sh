@@ -23,13 +23,13 @@ build() {
 }
 
 __build_mame2010() {
-  if has_emulator 'lr-mame2010'; then
+  if has_libretro_core 'mame2010'; then
     download 'https://github.com/libretro/mame2010-libretro/raw/master/metadata/hiscore.dat' "$bios_dir/mame2010/hiscore.dat"
   fi
 }
 
 __build_mame2015() {
-  if has_emulator 'lr-mame2015'; then
+  if has_libretro_core 'mame2015'; then
     download 'https://github.com/libretro/mame2015-libretro/raw/master/metadata/hiscore.dat' "$bios_dir/mame2015/hiscore.dat"
   fi
 }
@@ -41,6 +41,10 @@ configure() {
 
   if has_emulator 'lr-mame0244'; then
     __configure_mame 0244
+  fi
+
+  if has_emulator 'lr-mame'; then
+    __configure_mame
   fi
 }
 
@@ -54,7 +58,8 @@ __configure_mame() {
 restore() {
   rm -fv \
     "$bios_dir/mame0222/ini/hiscore.ini" \
-    "$bios_dir/mame0244/ini/hiscore.ini"
+    "$bios_dir/mame0244/ini/hiscore.ini" \
+    "$bios_dir/mame/ini/hiscore.ini"
 }
 
 remove() {

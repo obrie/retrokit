@@ -20,11 +20,12 @@ build() {
   __build_mame2016
   __build_mame0222
   __build_mame0244
+  __build_mame
 }
 
 __build_fbneo() {
   # Cheats: FBNeo
-  if has_emulator 'lr-fbneo'; then
+  if has_libretro_core 'fbneo'; then
     mkdir -p "$bios_dir/fbneo/cheats"
     local url='https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip'
 
@@ -39,20 +40,20 @@ __build_fbneo() {
 }
 
 __build_mame2015() {
-  if has_emulator 'lr-mame2015'; then
+  if has_libretro_core 'mame2015'; then
     download 'https://github.com/libretro/mame2015-libretro/raw/master/metadata/cheat.7z' "$bios_dir/mame2015/cheat.7z"
   fi
 }
 
 __build_mame2016() {
-  if has_emulator 'lr-mame2016'; then
+  if has_libretro_core 'mame2016'; then
     download 'https://github.com/libretro/mame2016-libretro/raw/master/metadata/cheat.7z' "$bios_dir/mame2016/cheat.7z"
   fi
 }
 
 __build_mame0222() {
   # Cheats: MAME (Pugsy)
-  if has_emulator 'lr-mame'; then
+  if has_emulator 'lr-mame0222'; then
     local url='http://cheat.retrogames.com/download/cheat0221.zip'
 
     if [ ! -f "$bios_dir/mame0222/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
@@ -67,7 +68,7 @@ __build_mame0222() {
 
 __build_mame0244() {
   # Cheats: MAME (Pugsy)
-  if has_emulator 'lr-mame'; then
+  if has_emulator 'lr-mame0244'; then
     local url='http://cheat.retrogames.com/download/cheat0245.zip'
 
     if [ ! -f "$bios_dir/mame0244/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
@@ -80,13 +81,29 @@ __build_mame0244() {
   fi
 }
 
+__build_mame() {
+  # Cheats: MAME (Pugsy)
+  if has_emulator 'lr-mame'; then
+    local url='http://cheat.retrogames.com/download/cheat0245.zip'
+
+    if [ ! -f "$bios_dir/mame/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$cheats_file"
+      unzip -ju "$cheats_file" "cheat.7z" -d "$bios_dir/mame/"
+    else
+      echo "Already downloaded $url"
+    fi
+  fi
+}
+
 remove() {
   rm -rfv \
     "$bios_dir/fbneo/cheats/" \
     "$bios_dir/mame2015/cheat.7z" \
     "$bios_dir/mame2016/cheat.7z" \
     "$bios_dir/mame0222/cheats.7z" \
-    "$bios_dir/mame0244/cheats.7z"
+    "$bios_dir/mame0244/cheats.7z" \
+    "$bios_dir/mame/cheats.7z"
 }
 
 setup "${@}"

@@ -176,6 +176,10 @@ outline_overlay_image() {
 # Emulators
 ##############
 
+emulators_setting() {
+  system_setting "[select(.emulators) | .emulators | to_entries[] | select(.value.enabled != false) | {key: .key, value: .value}] | from_entries | $1"
+}
+
 # Load emulator info into the global variable $emulators
 load_emulator_data() {
   declare -A -g emulators
@@ -208,7 +212,7 @@ load_emulator_data() {
       emulators['default/library_name']=$library_name
       emulators["default/supports_overlays"]=$supports_overlays
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] |
+  done < <(emulators_setting 'to_entries[] |
     [
       .key,
       .value.core_name,
@@ -223,17 +227,29 @@ load_emulator_data() {
 }
 
 get_core_library_names() {
-  system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name'
+  emulators_setting '.[] | select(.library_name) | .library_name' | uniq
+}
+
+has_core_library_name() {
+  get_core_library_names | grep -q "^$1\$"
+}
+
+get_libretro_cores() {
+  emulators_setting '.[] | select(.core_name) | .core_name' | uniq
 }
 
 has_libretro_cores() {
-  local libretro_cores=$(get_core_library_names)
+  local libretro_cores=$(get_libretro_cores)
   [ -n "$libretro_cores" ]
+}
+
+has_libretro_core() {
+  get_libretro_cores | grep -q "^$1\$"
 }
 
 has_emulator() {
   local emulator=$1
-  local result=$(system_setting "select(.emulators) | (.emulators | keys) + ([.emulators | values[] | select(.name) | .name]) + ([.emulators | values[] | .aliases | select(.)] | flatten) | any(. == \"$emulator\")")
+  local result=$(emulators_setting "keys | any(. == \"$emulator\")")
   if [ "$result" == 'true' ]; then
     return 0
   else

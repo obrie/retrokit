@@ -190,7 +190,7 @@ __list_path_templates() {
   fi
 
   # List system-specific paths
-  system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.gamestate) | .key as $emulator | .value.gamestate[] | [$emulator, .] | @tsv'
+  emulators_setting 'to_entries[] | select(.value.gamestate) | .key as $emulator | .value.gamestate[] | [$emulator, .] | @tsv'
 }
 
 # Disable confirmation since none of the destruction of actions in this script

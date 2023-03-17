@@ -29,7 +29,7 @@ __install_emulators() {
     if [ -n "$cmd" ]; then
       sudo "$retropie_setup_dir/retropie_packages.sh" retrokit-system configure "$package" "$system" "$cmd"
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.build, .value.cmd] | join("'$field_delim'")')
+  done < <(emulators_setting 'to_entries[] | [.key, .value.build, .value.cmd] | join("'$field_delim'")')
 
   if [ "$system" == 'ports' ]; then
     # Ensure ports has been added to the default conf since other tools may
@@ -62,7 +62,7 @@ reconfigure_packages() {
   # Reconfigure packages for all emulators set up in this system
   while read -r package; do
     configure_retropie_package "$package"
-  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
+  done < <(emulators_setting 'keys[]')
 
   # Re-apply configuration overrides
   __reconfigure_packages_hook after_retropie_reconfigure
@@ -94,7 +94,7 @@ configure() {
   done < <(each_path '{system_config_dir}/emulators.cfg' ini_get '{}' '')
 
   # Set default emulator
-  local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | (.value.names // [.key]) | first')
+  local default_emulator=$(emulators_setting 'to_entries[] | select(.value.default == true) | (.value.names // [.key]) | first')
   crudini --set "$emulators_config_file" '' 'default' "\"$default_emulator\""
 
   # Additional emulator settings
@@ -144,7 +144,7 @@ remove() {
     if [ -z "${default_packages[$package]}" ]; then
       uninstall_retropie_package "$package" || true
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
+  done < <(emulators_setting 'keys[]')
 }
 
 setup "${@}"

@@ -11,10 +11,11 @@ build() {
   __build_mame2016
   __build_mame0222
   __build_mame0244
+  __build_mame
 }
 
 __build_mame2016() {
-  if has_emulator 'lr-mame2016'; then
+  if has_libretro_core 'mame2016'; then
     if [ ! -f "$bios_dir/mame2016/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local mame_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
       git clone --depth 1 https://github.com/libretro/mame2016-libretro "$mame_dir"
@@ -54,11 +55,27 @@ __build_mame0244() {
   fi
 }
 
+__build_mame() {
+  if has_emulator 'lr-mame'; then
+    if [ ! -f "$bios_dir/mame/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      local repo_archive_file=$(mktemp -p "$tmp_ephemeral_dir")
+      local mame_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+      download "https://github.com/mamedev/mame/archive/master.zip" "$repo_archive_file"
+      unzip "$repo_archive_file" "mame-*/plugins/*" -d "$mame_dir"
+      rm -rf "$bios_dir/mame/plugins"
+      cp -Rv "$mame_dir/mame-"*"/plugins/" "$bios_dir/mame/"
+    else
+      echo "Already installed plugins (lr-mame)"
+    fi
+  fi
+}
+
 remove() {
   rm -rfv \
     "$bios_dir/mame2016/plugins/" \
     "$bios_dir/mame0222/plugins/" \
-    "$bios_dir/mame0244/plugins/"
+    "$bios_dir/mame0244/plugins/" \
+    "$bios_dir/mame/plugins/"
 }
 
 setup "${@}"

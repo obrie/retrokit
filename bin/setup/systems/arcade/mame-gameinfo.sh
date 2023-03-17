@@ -17,10 +17,11 @@ build() {
   __build_mame2016
   __build_mame0222
   __build_mame0244
+  __build_mame
 }
 
 __build_mame2016() {
-  if has_emulator 'lr-mame2016'; then
+  if has_libretro_core 'mame2016'; then
     # Newer versions of command.dat break on lr-mame2016.  This is the newest
     # version of the file that I could find which doesn't break the emulator.
     download 'https://archive.org/download/shmupmame-4.2-mameplus-0.148-extras/SHMUPMAME_4.2_MAMEPLUS_0.148_EXTRAS.zip/command.dat' "$bios_dir/mame2016/history/command.dat"
@@ -37,9 +38,16 @@ __build_mame0222() {
 }
 
 __build_mame0244() {
-  if has_emulator 'lr-mame'; then
+  if has_emulator 'lr-mame0244'; then
     __download_command_dat "$bios_dir/mame0244/history/command.dat"
     __download_gameinit_dat "$bios_dir/mame0244/history/gameinit.dat"
+  fi
+}
+
+__build_mame() {
+  if has_emulator 'lr-mame'; then
+    __download_command_dat "$bios_dir/mame/history/command.dat"
+    __download_gameinit_dat "$bios_dir/mame/history/gameinit.dat"
   fi
 }
 
@@ -96,7 +104,9 @@ remove() {
     "$bios_dir/mame0222/history/command.dat" \
     "$bios_dir/mame0222/history/gameinit.dat" \
     "$bios_dir/mame0244/history/command.dat" \
-    "$bios_dir/mame0244/history/gameinit.dat"
+    "$bios_dir/mame0244/history/gameinit.dat" \
+    "$bios_dir/mame/history/command.dat" \
+    "$bios_dir/mame/history/gameinit.dat"
 }
 
 setup "${@}"
