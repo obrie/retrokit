@@ -58,12 +58,10 @@ __build_mame0244() {
 __build_mame() {
   if has_emulator 'lr-mame'; then
     if [ ! -f "$bios_dir/mame/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local repo_archive_file=$(mktemp -p "$tmp_ephemeral_dir")
       local mame_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
-      download "https://github.com/mamedev/mame/archive/master.zip" "$repo_archive_file"
-      unzip "$repo_archive_file" "mame-*/plugins/*" -d "$mame_dir"
+      git clone -b master --depth 1 https://github.com/libretro/mame.git "$mame_dir"
       rm -rf "$bios_dir/mame/plugins"
-      cp -Rv "$mame_dir/mame-"*"/plugins/" "$bios_dir/mame/"
+      cp -Rv "$mame_dir/plugins/" "$bios_dir/mame/"
     else
       echo "Already installed plugins (lr-mame)"
     fi
