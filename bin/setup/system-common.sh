@@ -227,7 +227,7 @@ load_emulator_data() {
 }
 
 get_core_library_names() {
-  emulators_setting '.[] | select(.library_name) | .library_name' | uniq
+  emulators_setting '.[] | select(.library_name) | .library_name' | sort | uniq
 }
 
 has_core_library_name() {
@@ -235,7 +235,7 @@ has_core_library_name() {
 }
 
 get_libretro_cores() {
-  emulators_setting '.[] | select(.core_name) | .core_name' | uniq
+  emulators_setting '.[] | select(.core_name) | .core_name' | sort | uniq
 }
 
 has_libretro_cores() {

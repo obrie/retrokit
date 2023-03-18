@@ -90,7 +90,7 @@ __configure_core_options() {
     if [ -s "$tmp_core_options_file" ]; then
       ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
     fi
-  done < <(emulators_setting '.[] | select(.core_name) | .core_option_prefix // .core_name' | uniq)
+  done < <(emulators_setting '.[] | select(.core_name) | .core_option_prefix // .core_name' | sort | uniq)
 
   # Merge in system-specific overrides
   ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_file" backup=false
