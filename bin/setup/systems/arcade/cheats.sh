@@ -101,9 +101,9 @@ remove() {
     "$bios_dir/fbneo/cheats/" \
     "$bios_dir/mame2015/cheat.7z" \
     "$bios_dir/mame2016/cheat.7z" \
-    "$bios_dir/mame0222/cheats.7z" \
-    "$bios_dir/mame0244/cheats.7z" \
-    "$bios_dir/mame/cheats.7z"
+    "$bios_dir/mame0222/cheat.7z" \
+    "$bios_dir/mame0244/cheat.7z" \
+    "$bios_dir/mame/cheat.7z"
 }
 
 setup "${@}"
