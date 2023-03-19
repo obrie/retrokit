@@ -19,21 +19,7 @@ restore() {
 }
 
 __restore_config() {
-  if has_backup_file "$drastic_config_file"; then
-    if [ -f "$drastic_config_file" ]; then
-      # Keep track of the input_maps since we don't want to lose those
-      grep -E '^controls_' "$drastic_config_file" > "$tmp_ephemeral_dir/controls.cfg"
-
-      # Restore and remove any controls from the original file
-      restore_file "$drastic_config_file" "${@}"
-      sed -i '/^controls_/d' "$drastic_config_file"
-
-      # Merge the controls back in
-      crudini --inplace --merge "$drastic_config_file" < "$tmp_ephemeral_dir/controls.cfg"
-    else
-      restore_file "$drastic_config_file" "${@}"
-    fi
-  fi
+  restore_partial_ini "$config_file" '^controls_' remove_source_matches=true "${@}"
 }
 
 setup "${@}"

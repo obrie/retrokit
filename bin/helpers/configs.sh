@@ -222,6 +222,37 @@ ini_get() {
   done < <(each_path "$source" | tac)
 }
 
+# Restores partial contents from an INI file, keeping those configurations in the
+# current file that match a particular Perl-style regular expression.
+restore_partial_ini() {
+  local file=$1
+  local regex_match=$2
+  local remove_source_matches='false'
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  if has_backup_file "$file"; then
+    if [ -f "$file" ]; then
+      # Keep track of matched configurations
+      local file_to_remerge=$(mktemp -p "$tmp_ephemeral_dir")
+      grep -P "$regex_match" "$file" > "$file_to_remerge"
+
+      restore_file "$file" "${@:3}"
+
+      # Remove regex matches from the restored file
+      if [ "$remove_source_matches" == 'true' ]; then
+        local filtered_file=$(mktemp -p "$tmp_ephemeral_dir")
+        grep -vP "$regex_match" "$file" > "$filtered_file"
+        mv "$filtered_file" "$file"
+      fi
+
+      # Merge the inputs back in
+      crudini --merge --inplace "$file" < "$file_to_remerge"
+    else
+      restore_file "$file" "${@:3}"
+    fi
+  fi
+}
+
 # Merges JSON files, backing up the target
 json_merge() {
   local source=$1
