@@ -257,6 +257,16 @@ has_emulator() {
   fi
 }
 
+has_emulator_name() {
+  local name=$1
+  local result=$(emulators_setting "keys + ([values[] | .names | select(.) | flatten]) + ([values[] | .aliases | select(.)] | flatten) | any(. == \"$name\")")
+  if [ "$result" == 'true' ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 ##############
 # Controls
 ##############

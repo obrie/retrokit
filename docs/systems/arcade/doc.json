@@ -22,7 +22,7 @@
     },
     "layout": {
       "panel": "YXLBAR",
-      "labels": ["Y", "X", "L", "B", "A", "R"],
+      "buttons": [3, 4, 6, 1, 2, 5],
       "emulators": {
         "BAYXRL": [
           "default"

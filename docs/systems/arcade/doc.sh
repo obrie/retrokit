@@ -31,9 +31,10 @@ __add_system_extensions() {
     button_class='button-enabled'
   fi
 
-  # Look up the control panel layout
+  # Look up the control panel physical layout
   local control_panel_layout=$(jq -r '.controls .layout .panel' "$doc_data_file")
-  local control_panel_labels=($(jq -r '.controls .layout .labels[]' "$doc_data_file"))
+  local control_panel_button_ids=($(jq -r '.controls .layout .buttons[]' "$doc_data_file"))
+  local control_panel_labels=($(system_setting '.controls .layout[]'))
 
   # Look up the button mapping layout
   local button_mappings=$(jq -r "(.controls .layout .roms | to_entries[] | select(.value | index(\"$group_name\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"$emulator\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"default\")) | .key)" "$doc_data_file")
@@ -55,7 +56,9 @@ __add_system_extensions() {
   local html=""
   for column in $(seq 1 3); do
     local control_panel_name=${control_panel_layout:column-1:1}
-    local control_panel_label=${control_panel_labels[column-1]}
+    local control_panel_button_id=${control_panel_button_ids[column-1]}
+    local control_panel_label=${control_panel_labels[control_panel_button_id-1]^^}
+
     local button_action=${button_name_actions[$control_panel_name]}
 
     html="${html}$(__create_button 'top' $column "$control_panel_label" "$button_action" "$button_class")"
@@ -64,7 +67,9 @@ __add_system_extensions() {
   # Build bottom row
   for column in $(seq 1 3); do
     local control_panel_name=${control_panel_layout:column+2:1}
-    local control_panel_label=${control_panel_labels[column+2]}
+    local control_panel_button_id=${control_panel_button_ids[column+2]}
+    local control_panel_label=${control_panel_labels[control_panel_button_id-1]^^}
+
     local button_action=${button_name_actions[$control_panel_name]}
 
     html="${html}$(__create_button 'bottom' $column "$control_panel_label" "$button_action" "$button_class")"

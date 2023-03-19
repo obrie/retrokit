@@ -397,5 +397,19 @@
       "machine": {"target": "{dir}/{machine_filename}"},
       "disk": {"source": "{target_path}/..", "target": "{dir}/{machine}"}
     }
+  },
+  "controls": {
+    "layout": [
+      "b",
+      "a",
+      "y",
+      "x",
+      "r",
+      "l",
+      "r2",
+      "l2",
+      "r3",
+      "l3"
+    ]
   }
 }
