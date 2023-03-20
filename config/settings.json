@@ -88,7 +88,7 @@
         {"name": "Keyboard"}
       ],
       "hotkey": "select",
-      "autoconfig": [
+      "configscripts": [
         "advmame",
         "drastic",
         "hypseus",
@@ -186,17 +186,18 @@
       "tools-psp",
 
       "system-emulators",
-      "systems/arcade/advmame",
-      "systems/arcade/button_layouts",
       "systems/ports/roms-packages",
+
+      "systems/arcade/controllers-layout",
       "systems/psp/controllers",
-      "emulationstation-systems",
-      "emulationstation-configscripts",
-      "hardware/controllers",
+      "controllers-configscripts",
+      "controllers-autoconf",
       "hardware/controllers/nintendo_switch",
       "hardware/controllers/xpad",
       "hardware/controllers/xpad-bluetooth",
       "hardware/controllers/calibrate",
+
+      "emulationstation-systems",
       "system-retroarch",
       "system-inputs",
       "system-mess",
@@ -217,6 +218,7 @@
       "system-roms-docs",
       "system-roms-mess_artwork",
 
+      "systems/arcade/advmame",
       "systems/arcade/cheats",
       "systems/arcade/mame-config",
       "systems/arcade/mame-plugins",

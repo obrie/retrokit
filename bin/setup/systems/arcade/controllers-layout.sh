@@ -4,8 +4,8 @@ system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-setup_module_id='systems/arcade/button_layouts'
-setup_module_desc='Remaps buttons according to a logical layout so all Arcade emulators behave consistently'
+setup_module_id='systems/arcade/controllers-layout'
+setup_module_desc='Remaps controller buttons according to a logical layout so all Arcade emulators behave consistently'
 
 retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
 retroarch_remapping_dir=${retroarch_remapping_dir%/}
