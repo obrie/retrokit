@@ -9,11 +9,8 @@
   "metadata": {
     "manuals": {
       "languages": {
-        "allowlist": [
-          "en",
-          "en-gb"
-        ],
-        "prioritize_region_languages": false,
+        "allowlist": [],
+        "prioritize_region_languages": true,
         "only_region_languages": false
       }
     }
