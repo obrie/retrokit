@@ -19,7 +19,10 @@ class EmulatorCompatibilityFilter(BaseFilter):
     normalize_values = False
 
     def values(self, machine: Machine) -> Set[bool]:
-        return {machine.emulator is not None and machine.emulator in machine.romset.emulators}
+        if machine.emulator is None or not machine.romset.emulators:
+            return self.empty
+        else:
+            return {machine.emulator in machine.romset.emulators}
 
 # Filter on rating of the compatibility of the game with the emulator
 class EmulatorRatingFilter(BaseFilter):
