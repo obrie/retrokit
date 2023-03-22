@@ -33,6 +33,9 @@ class ResourceZipFile(ResourcePath):
 
     # Re-archives the file using TorrentZip for consistency with other services
     def clean(self, expected_files: Optional[Set[File]] = None) -> None:
+        if not self.exists():
+            return
+
         with zipfile.ZipFile(self.path, 'r') as zip_ref:
             zip_file_count = len(zip_ref.infolist())
 
