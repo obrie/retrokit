@@ -4,18 +4,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
 setup_module_id='system-emulators'
-setup_module_desc='Emulator installation and configuration (including BIOS, defaults, and custom commands)'
+setup_module_desc='Emulator installation and configuration (including defaults and custom commands)'
 
 emulators_config_file="$retropie_system_config_dir/emulators.cfg"
 emulators_config_backup_file="$emulators_config_file.rk-src"
 
 build() {
-  __install_emulators
-  __download_bios_files
-}
-
-# Install emulator packages
-__install_emulators() {
+  # Install emulator packages
   while IFS=$field_delim read -r package build cmd; do
     local package_type='emulators'
     if [[ "$package" == lr-* ]]; then
@@ -36,22 +31,6 @@ __install_emulators() {
     # add system management menus to it
     sudo "$retropie_setup_dir/retropie_packages.sh" emptyports configure
   fi
-}
-
-# Install BIOS files required by emulators
-__download_bios_files() {
-  local should_download=$(system_setting '.bios.download')
-  if [ "$should_download" == 'false' ]; then
-    return
-  fi
-
-  local bios_dir=$(system_setting '.bios.dir')
-  local base_url=$(system_setting '.bios.url')
-
-  while IFS=$'\t' read -r bios_name bios_url_template; do
-    local bios_url=$(render_template "$bios_url_template" url="$base_url")
-    download "$bios_url" "$bios_dir/$bios_name"
-  done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
 # Re-runs the `configure` action for all RetroPie packages used by the system
@@ -127,12 +106,6 @@ restore() {
 }
 
 remove() {
-  # Remove bios files
-  local bios_dir=$(system_setting '.bios.dir')
-  while read -r bios_name; do
-    rm -fv "$bios_dir/$bios_name"
-  done < <(system_setting 'select(.bios) | .bios.files | keys[]')
-
   declare -A default_packages
   while read -r package; do
     default_packages[$package]=1
