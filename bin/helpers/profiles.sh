@@ -34,7 +34,7 @@ init_profiles() {
 
     if [ "$profile" != '..' ]; then
       # Only process #include directives for profiles we haven't already processed
-      if [ -z "${preprocessed_profiles[$profile]}" ]; then
+      if [ -z "${preprocessed_profiles[$profile]}" ] && [ "$PROFILE_DEPENDS" != 'false' ]; then
         preprocessed_profiles[$profile]=1
 
         # When there are new profiles to include in the processing, they always get
