@@ -63,8 +63,10 @@ class PCSystem(BaseSystem):
         config.read_string(non_autoexec_content)
         overwrite = False
 
+        conf_files = self.config['roms']['files'].get('conf', {})
+
         # Migrate predefined config to one suitable for the current emulator
-        migration_path_template = self.config['roms']['files']['conf'].get('migration')
+        migration_path_template = conf_files.get('migration')
         if migration_path_template:
             migration_path = Path(migration_path_template.format(emulator=machine.emulator))
             if migration_path.exists():
@@ -72,7 +74,7 @@ class PCSystem(BaseSystem):
                 self.migrate_config(machine, config, migration_path)
 
         # Override with Machine-specific configurations
-        overrides_template = self.config['roms']['files']['conf'].get('overrides')
+        overrides_template = conf_files.get('overrides')
         if overrides_template:
             overrides_path = Path(overrides_template.format(machine=machine.name))
             if overrides_path.exists():

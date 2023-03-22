@@ -5,6 +5,7 @@ from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
 from romkit.sorters import __all_sorters__, SortableSet
 from romkit.systems.system_dir import SystemDir
+from romkit.util.deepmerge import deepmerge
 
 import logging
 import os
@@ -29,41 +30,55 @@ class BaseSystem:
     supported_sorters = __all_sorters__
 
     def __init__(self, config: dict) -> None:
-        self.config = config
-        self.name = config['system']
-        self.download_config = config.get('downloads', {})
+        self.config = deepmerge({
+            'metadata': {},
+            'downloads': {},
+            'romsets': {},
+            'roms': {
+                'id': 'name',
+                'favorites': {},
+                'collections': {},
+                'priority': {},
+                'filters': {},
+                'files': {},
+                'dirs': []
+            }
+        }, config)
+
+        self.name = self.config['system']
+        self.download_config = self.config['downloads']
 
         # External metadata to load for filtering purposes
-        self.metadata_set = MetadataSet.from_json(config.get('metadata', {}), self.supported_metadata)
+        self.metadata_set = MetadataSet.from_json(self.config['metadata'], self.supported_metadata)
 
         # Install directories
-        file_templates = config['roms']['files']
+        file_templates = self.config['roms']['files']
         self.dirs = [
             SystemDir(
                 dir_config['path'],
-                FilterSet.from_json(dir_config.get('filters', {}), config, self.supported_filters, log=False),
+                FilterSet.from_json(dir_config.get('filters', {}), self.config, self.supported_filters, log=False),
                 dir_config.get('context', {}),
                 file_templates,
             )
-            for dir_config in config['roms']['dirs']
+            for dir_config in self.config['roms']['dirs']
         ]
 
         # Favorites (defaults to false if no favorites are provided)
-        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters, log=False)
+        self.favorites_set = FilterSet.from_json(self.config['roms']['favorites'], self.config, self.supported_filters, log=False)
         self.favorites_set.default_on_empty = False
 
         # Collections
-        self.collection_set = CollectionSet.from_json(config['roms'].get('collections', {}), config, self.supported_filters)
+        self.collection_set = CollectionSet.from_json(self.config['roms']['collections'], self.config, self.supported_filters)
 
         # Attribute type to define the unique machine identifier
-        self.rom_id_type = config['roms']['id']
+        self.rom_id_type = self.config['roms']['id']
 
         # Filters
-        self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
+        self.filter_set = FilterSet.from_json(self.config['roms']['filters'], self.config, self.supported_filters)
 
         # Track machines that have been filtered / prioritized
         self._loaded = False
-        self.machines = SortableSet.from_json(self.config['roms'].get('priority', {}), self.supported_sorters)
+        self.machines = SortableSet.from_json(self.config['roms']['priority'], self.supported_sorters)
         self.prioritized_machines = []
 
     # Looks up the system from the given name
