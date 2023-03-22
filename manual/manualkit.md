@@ -1,7 +1,112 @@
+# manualkit
+
+manualkit is a Python application that can display PDFs on the screen based on either the game
+being viewed in EmulationStation or the game being played.  Features of manualkit include:
+
+* Automatic integration with Retroarch controls via `devicekit` so you can use your joystick to control manualkit
+* Automatically pause the current game you're playing when displaying manuals
+* Display manuals over any existing content, including both EmulationStation and any emulator
+* High-performance navigation of PDFs including the use of turbo mode during long navigation
+* Zoom controls, especially useful with small handheld devices or small text
+* Complete control of inputs when displaying manuals (to prevent emulators from interpreting inputs)
+* Integration with EmulationStation lifecycle hooks to determine which game is being viewed
+* High-performance loading / control of manualkit using a long-lived server
+* Supplementary PDF support for use with system/game reference sheets
+* Persistence of location in a manual when toggling display
+
+## Goals
+
+For many retro gaming systems, manuals provided a treasure chest of information for how to
+play a game.  It's frustrating to have to spend time looking for manuals online when you
+stumble upon a new game that you want to play.  Even then, you have to have a separate device
+to look through the manual while you're playing -- not convenient when all you have is a
+handheld device.
+
+The goal of manualkit is to provide instant access to game manuals, whether from within a game
+or from your emulator launcher (i.e. EmulationStation).
+
+## Configuration
+
+`manualkit` is configured via the [`manualkit.cfg`](/config/manualkit/manualkit.cfg).
+For full details on the various configuration options to choose from, you can reference
+that file.
+
+By default, the following controls are used when toggle:
+
+| Control  | Keyboard / Frontend | Keyboard / Game | Controller / Frontend | Controller / Game |
+| -------- | ------------------- | --------------- | --------------------- | ----------------- |
+| Toggle   | m                   | Up              | L2                    | Up                |
+| Hotkey   | None                | Select (Space)  | None                  | Select            |
+
+When a manual is being displayed, the following controls are used:
+
+| Control  | Keyboard  | Controller    |
+| -------- | --------- | ------------- |
+| Next     | Page Down | Right Trigger |
+| Prev     | Page Up   | Left Trigger  |
+| Zoom In  | =         | X             |
+| Zoom Out | +         | Y             |
+| Up       | Up        | Up            |
+| Down     | Down      | Down          |
+| Left     | Left      | Left          |
+| Right    | Right     | Right         |
+
+Below is an example configuration:
+
+```
+[keyboard]
+retroarch = false
+toggle_frontend = m
+next = pagedown
+prev = pageup
+zoom_in = equals
+zoom_out = minus
+
+[profile_frontend]
+
+suspend = false
+hotkey_enable = false
+
+[profile_emulator]
+
+suspend = true
+hotkey_enable = true
+```
+
+## Integration
+
+In order to run `manualkit`, it must be launched when the system starts.  In order to do this,
+`manualkit` hooks into the `autostart.sh` script.  You can see these scripts [here](/lib/manualkit/autostart/).
+Upon startup, `manualkit` will run a long-lived Python process.  This process uses a FIFO file
+or providing communication between events that occur on the system and the `manualkit` process.
+
+`manualkit` is designed this way for one primary reason: It avoids the startup overhead of having to
+run the Python process anytime a manual is displayed.  This means we can quickly notify the
+process of a new manual to activate when scrolling through game lists without impacting the
+performance of the system.
+
+In addition to being run on startup, `manualkit` must integrate into one of the following
+in order to know when to load a manual or a new game:
+
+* EmulationStation hooks
+* Runcommand hooks
+
+EmulationStation hooks are preferred for several reasons:
+
+* It allows for the use of manualkit within EmulationStation by utilizing `system-select` and `game-select` hooks
+* It allows integration with EmulationStation's controller autoconfig lifecycle to know when to reload device controls
+* It provides hooks for when a game is started / terminated
+
+If you're not running EmulationStation or, for some reason, you don't want `manualkit` using these
+hooks, then you can still integrate with `runcommand`'s onstart/onend scripts.  This will still
+allow you to bring up manuals while playing the game.
+
+It's possible to integrate `manualkit` with other frontends, but there's no built-in support for it.
+
 ## Manuals
 
-The manuals used by this project were all hand-sourced from a variety of public websites.  Only
-manuals that have been defined in the DAT files used by retrokit are included.  All manuals
+There are over 18,000 manuals that have been hand-sourced over 2 years for this project.  They
+come from a variety of websites which are all defined in each system's data file.  All manuals
 are installed in PDF format, but they can be sourced from a variety of formats.  Details
 about the process are described below.
 
@@ -99,40 +204,30 @@ pieces of information for identifying a manual:
 
 ### Manual Selection
 
-The logic for determining which manual to use for a specific ROM is largely based on language
-preference for the user, *not* the country identifiers in the ROM filename.  The relevant
+The logic for determining which manual to use for a specific game is largely based on language
+preference for the user, *not* the country identifiers in the game filename.  The relevant
 retrokit configuration is:
 
 ```json
   "metadata": {
-    "manual": {
-      "languages": {
-        "priority": [
-          "en",
-          "en-gb"
-        ],
-        "prioritize_region_languages": false,
-        "only_region_languages": false
-      }
+    "manuals": {
+      "languages": [
+        "en",
+        "en-gb"
+      ],
+      "prioritize_region_languages": false,
+      "only_region_languages": false
     }
   },
 ```
 
-By default, retrokit will prefer languages based on the priority order defined in the system's
-configuration.  However, two additional settings are available to adjust this behavior:
+By default, retrokit will prefer languages based on the region of the game being installed.
+However, two additional settings are available to adjust this behavior:
 
-* `prioritize_region_languages` - If set to `true`, this will prioritize languages according to the
-  regions from the ROM name rather than the order defined in the configuration
+* `prioritize_region_languages` - If set to `false`, this will prioritize languages according to the
+  order defined in the configuration rather than the regions from the game name
 * `only_region_languages` - If set to `true`, then this will only use manuals in languages
-  associated with the region defined for the RM
-
-### Controls
-
-`manualkit` can be controlled by keyboard or controller.  These settings can be modified in
-`config/manualkit/manualkit.cfg`.  It's expected that the keyboard / joystick `toggle`
-buttons will be pressed in combination with retroarch's configured `hotkey` button.  For
-example, the default configuration expects that `select` + `up` will be used to toggle the
-display of the manual on the screen.
+  associated with the region defined for the game name
 
 ### Arcade manuals
 
@@ -154,45 +249,10 @@ than nothing.  You can see how these manuals are generated in the
 
 If anyone has better sources or wants to build better manuals, I'd fully support that effort.
 
-### Reference Guides
-
-In addition to the game manuals themselves, reference "cheat" sheets have been created for
-each individual system with documentation on what controls / hotkeys are available for the
-system and how they map between the original controller and your controller.
-
-The intention behind these reference guides is to make it easy to look up what controls
-are available rather than having to look up the controls in RetroPie or RetroArch
-documentation.
-
-These guides include:
-
 * System features available (e.g. cheats, netplay, etc.)
 * Keyboard controls
 * Hotkey configurations
-* Images of the system's original controller
-* Images of RetroArch's controller configuration
 * Game-specific controller overrides
 
 The guides are dynamically generated from your current configuration in RetroArch
 and additional system-specific configurations for:
-
-* c64
-* daphne
-* n64
-* nes
-* pc
-* pcengine
-* pce-cd
-
-Additionally, there are ROM-specific guides available with special features, including:
-
-* arcade: Joystick layout and button actions
-
-With the Arcade reference guides, you can quickly pull up which buttons map to which
-actions within the game and have it drawn on the screen to match your own control
-panel layout.
-
-All guides can be viewed by loading the manual via manualkit's configured hotkey and
-scrolling to the end of the manual (you can just go in reverse if you're on the first
-page of the manual).  If the game has no manual, an image will be displayed saying
-"No Manual".  However, you'll still be able to scroll forward to the reference guide.
