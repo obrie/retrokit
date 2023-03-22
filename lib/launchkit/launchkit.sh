@@ -15,12 +15,34 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 MAX_LOADING_TIME=10
 
 show() {
-  local system="$1"
+  local system=$1
+  local emulator=$2
+  local rom_path=$3
 
   __blank_screen
 
-  local launch_image="/opt/retropie/configs/$system/launching-extended.png"
-  if [ -f "$launch_image" ]; then
+  local rom_filename=$(basename "$rom_path")
+  local rom_name=${rom_filename%.*}
+
+  # Find a matching launch image
+  local launch_image_paths=(
+    "/opt/retropie/configs/$system/images/$rom_name-launching-extended"
+    "/opt/retropie/configs/$system/launching-extended"
+    "/opt/retropie/configs/all/launching-extended"
+  )
+  local launch_image_path
+  local launch_image
+  local image_ext
+  for launch_image_path in "${launch_image_paths[@]}"; do
+    for image_ext in png jpg; do
+      if [ -f "$launch_image_path.$image_ext" ]; then
+        launch_image="$launch_image_path.$image_ext"
+        break 2
+      fi
+    done
+  done
+
+  if [ -n "$launch_image" ]; then
     # Change tty to graphics mode
     python "$dir/tty.py" /dev/tty graphics
 
