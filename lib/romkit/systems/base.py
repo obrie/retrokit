@@ -92,6 +92,11 @@ class BaseSystem:
 
         return cls(json)
 
+    # Sorts the prioritized machines list by name
+    @property
+    def sorted_prioritized_machines(self) -> List[Machine]:
+        return sorted(self.prioritized_machines, key=lambda machine: machine.name)
+
     # Iterates over the romsets available to this system
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         for romset_name, romset_config in self.config['romsets'].items():
@@ -130,7 +135,7 @@ class BaseSystem:
     # Generates the list of machines to target, based are predefined priorities
     def list(self) -> List[Machine]:
         self.load()
-        return sorted(self.prioritized_machines, key=lambda machine: machine.name)
+        return self.sorted_prioritized_machines
 
     # Installs all of the filtered machines
     def install(self) -> None:
@@ -167,7 +172,7 @@ class BaseSystem:
         self.load()
         self.reset_directories()
 
-        for machine in self.prioritized_machines:
+        for machine in self.sorted_prioritized_machines:
             if not machine.is_valid_nonmerged():
                 logging.warn(f'[{machine.name}] is not a valid non-merged ROM')
                 continue
