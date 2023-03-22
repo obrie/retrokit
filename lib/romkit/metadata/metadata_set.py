@@ -69,13 +69,13 @@ class MetadataSet:
                 reference_attr_name = attr_name[0:merge_char_index]
                 reference_value = metadata.get(reference_attr_name)
 
-                if reference_value is None:
-                    metadata[reference_attr_name] = value_to_merge
-                elif isinstance(reference_value, list):
-                    reference_value.extend(value_to_merge)
+                if isinstance(reference_value, list):
+                    new_value = reference_value + value_to_merge
                 elif isinstance(reference_value, dict):
-                    reference_value.update(value_to_merge)
+                    new_value = {**reference_value, **value_to_merge}
                 else:
-                    metadata[reference_attr_name] = value_to_merge
+                    new_value = value_to_merge
+
+                metadata[reference_attr_name] = new_value
 
         self.data[key] = metadata
