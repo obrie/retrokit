@@ -1,9 +1,26 @@
-## Controllers
+# Controllers
 
-To identify your controller names and ids, there's unfortunately no easy way out
-of the box that I'm aware of.  However, you can follow the instructions here: https://askubuntu.com/a/368711
+With retrokit, controls for all emulators are autoconfigured through EmulationStation.
+There should be few cases where you need to modify the input configurations by hand.
+This is because retrokit introduces additional autoconfiguration scripts for a number
+of emulators, including:
 
-Here's a simplified version you can run:
+* advmame
+* drastic
+* hypseus
+* ppsspp
+* redream
+
+## Non-Interactive setup
+
+You may want to set up a custom retrokit profile so that your controllers are
+automatically configured without having to run them through EmulationStation.  In order
+to do this, you'll first need to identify your controller names and ids.
+
+Unfortunately, there's no easy way to do that out of the box.  However, you can follow the
+instructions here: https://askubuntu.com/a/368711
+
+Here's a simplified version you can run from your Raspberry Pi:
 
 ```sh
 cat > sdl2-joystick.c <<EOF
@@ -27,17 +44,12 @@ gcc -o sdl2-joystick sdl2-joystick.c `pkg-config --libs --cflags sdl2`
 ./sdl2-joystick
 ```
 
-Alternatively, you can either:
-
-* Find your controller in the [SDL controller database](https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt) or
-* Set up your controllers through EmulationStation
-
 If you're not familiar with SDL GUIDs, setting up your controllers through EmulationStation
 is probably the best way.
 
-### Configuration
+## Configuration
 
-You can configure your controllers through `config/settings.json` like so:
+Once you've identified your controllers, you can configure them through `config/settings.json` like so:
 
 ```
 {
@@ -76,25 +88,3 @@ You can configure your controllers through `config/settings.json` like so:
   }
 }
 ```
-
-### Default Keyboard inputs
-
-| RetroPad Button | Key         |
-| --------------- | ----------- |
-| A               | X           |
-| B               | Y           |
-| X               | S           |
-| Y               | A           |
-| Start           | Enter       |
-| Select          | Space       |
-| LS (L)          | Q           |
-| RS (R)          | W           |
-| LT (L2)         | 1           |
-| RT (R2)         | 2           |
-
-Hotkey: Select
-
-References:
-
-* [Key Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings)
-* [Hotkeys](https://retropie.org.uk/docs/Controller-Configuration/#hotkey)
