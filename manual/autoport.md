@@ -1,8 +1,8 @@
 # autoport
 
-autoport is an automatic controller (joystick *and* mouse) selection tool for emulators.
-It will prioritize which controllers are used as Player 1, Player 2, etc. based on
-predefined configuration settings.
+[autoport](/lib/autoport/) is an automatic controller (joystick *and* mouse) selection tool
+for emulators.  It will prioritize which controllers are used as Player 1, Player 2, etc. based
+on predefined configuration settings.
 
 The benefit of autoport is that you don't need to care which order your joystick or mouse
 was plugged in to.  You can guarantee that certain controllers are always chosen for
