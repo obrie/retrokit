@@ -3,33 +3,72 @@
 There are so many people / resources that I've pulled over time to make this
 project what it's become.  That includes:
 
-* [Abdessamad Derraz](https://github.com/Abdess)
-* [barbudreamon](https://github.com/libretro/flycast/issues/136) for Naomi compatibility list
-* [C64 Dreams](https://www.zombs-lair.com/c64-dreams) for Commodore 64 gamelists and configuration settings
-* [crcerror](https://github.com/crcerror/ES-generic-shutdown) for alternate NesPi safe shutdown design
-* [Dan Patric](https://archive.org/download/console-logos-professionally-redrawn-plus-official-versions) for console logos
-* [dosbox-staging](https://github.com/dosbox-staging/dosbox-staging) for their code of conduct
-* [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
-* [ehettervik](https://github.com/ehettervik) for the pixel theme
-* [Joshua Rancel](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) for the default splash screen (Retro History)
-* [louiehummv](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue) for axis calibration fixes
-* [Mark Davis](https://vectogram.us/) for controller images
-* [meleu](https://github.com/meleu/RetroPie-joystick-selection) for joystick selection reference implementation
-* [Progretto-Snaps](https://www.progettosnaps.net/) for arcade metadata and flyers
-* [Roslof's compatibility list](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=1985896929) for Arcade and Nintendo 64 emulator / configuration
-* [ScreenScraper](https://www.screenscraper.fr/) for game metadata
-* [Sinden Wiki / Widge-5](https://www.sindenwiki.org/wiki/Barebones_Compatibility) for lightgun configuration overrides
-* [Steven Cozart](https://github.com/Texacate/Visual-RetroPie-Control-Maps) for arcade control maps (including Kevin Jonas, Howard Casto and yo1dog)
-* [The Bezel Project](https://github.com/thebezelproject) for overlays
-* [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
-* [unexpectedpanda](https://github.com/unexpectedpanda/retool-clonelists-metadata) for clonelists
-* [valerino](https://github.com/valerino/RetroPie-Setup) for lr-mess integration
-* [Wikimedia](https://commons.wikimedia.org/) for controller images
-* [zerojay](https://github.com/zerojay/RetroPie-Extras) for lr-mess-jaguar scriptmodule
-* [Black Falcon Games](https://blackfalcongames.net/?p=155) for PC Engine multitap lists
-* [hackerb9](https://github.com/hackerb9/mktrans) for image transparency tools
-* [PatchesSmith](https://imgur.com/a/C03ixep) for Neo Geo CD EmulationStation theme assets
-* eXo for Dosbox game configuration settings
+* Abdessamad Derraz
+  * https://github.com/Abdess
+* barbudreamon
+  * [Naomi compatibility list](https://github.com/libretro/flycast/issues/136)
+* [batocera](https://github.com/batocera-linux/lr-duckstation) for lr-duckstation binaries
+* Black Falcon Games
+  * [PC Engine multitap lists](https://blackfalcongames.net/?p=155)
+* crcerror
+  * [Alternate NesPi safe shutdown design](https://github.com/crcerror/ES-generic-shutdown)
+* Dan Patric
+  * [Console logos](https://archive.org/download/console-logos-professionally-redrawn-plus-official-versions)
+* DirtBagXon
+  * [actionmax scriptmodule](https://github.com/DirtBagXon/actionmax-pi)
+* dosbox-staging
+  * [Code of conduct](https://github.com/dosbox-staging/dosbox-staging)
+* DTEAM
+  * [Atari Jaguar settings](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030)
+* ehettervik
+  * [Pixel theme](https://github.com/ehettervik)
+* eXo
+  * Dosbox game configuration settings
+* Jools Wills
+  * [lr-yabasanshiro scriptmodule](https://github.com/joolswills/RetroPie-Setup/blob/lr-yabasanshiro/scriptmodules/libretrocores/lr-yabasanshiro.sh)
+* Joshua Rancel
+  * [Retro History](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) splash screen
+* hackerb9
+  * [Image transparency tools](https://github.com/hackerb9/mktrans)
+* louiehummv
+  * [Axis calibration fixes](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue)
+* Mark Davis
+  * [Controller images])(https://vectogram.us/)
+* meleu
+  * [joystick selection](https://github.com/meleu/RetroPie-joystick-selection) reference implementation
+* PatchesSmith
+  * [Neo Geo CD EmulationStation theme assets](https://imgur.com/a/C03ixep)
+* Progretto-Snaps
+  * [Arcade metadata and flyers](https://www.progettosnaps.net/)
+* roslof
+  * [Arcade and Nintendo 64 compatibility list](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=1985896929)
+* ScreenScraper
+  * [Game metadata](https://www.screenscraper.fr/)
+* Widge-5
+  * [Lightgun configuration overrides](https://www.sindenwiki.org/wiki/Barebones_Compatibility)
+* Steven Cozart (including Kevin Jonas, Howard Casto and yo1dog)
+  * [Arcade control maps](https://github.com/Texacate/Visual-RetroPie-Control-Maps)
+* StormedBubbles
+  * [lr-mame2016 lightgun improvements](https://github.com/StormedBubbles/mame2016-libretro)
+* The Bezel Projec
+  * [Retroarch overlays](https://github.com/thebezelproject)
+* TMNTturtleguy
+  * [ComicBook launch images](https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie)
+* unexpectedpanda
+  * [Clone lists](https://github.com/unexpectedpanda/retool-clonelists-metadata)
+* valerino
+  * [lr-mess integration](https://github.com/valerino/RetroPie-Setup)
+* Wikimedia
+  * https://commons.wikimedia.org/
+* wingd
+  * [lr-swantstation scriptmodule](https://retropie.org.uk/forum/topic/32798/lr-swanstation-scriptmodule) 
+* zerojay
+  * [lr-mess-jaguar scriptmodule](https://github.com/zerojay/RetroPie-Extras)
+* Zombeaver
+  * [C64 Dreams](https://www.zombs-lair.com/c64-dreams) (Commodore 64 gamelists and configuration settings)
+
+Additionally, thank you to all the communities that have helped including:
+
 * RetroPie forums
 * Reddit forums
 
