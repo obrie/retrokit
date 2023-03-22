@@ -1,13 +1,11 @@
 {
   "metadata": {
     "manuals": {
-      "languages": {
-        "allowlist": [
-          "en",
-          "en-gb"
-        ],
-        "prioritize_region_languages": false
-      }
+      "languages": [
+        "en",
+        "en-gb"
+      ],
+      "prioritize_region_languages": false
     }
   },
   "roms": {

@@ -46,13 +46,17 @@ class ManualsMetadata(BaseMetadata):
         'ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'
     ]
 
-    def load(self) -> None:
+    def load(self,
+        languages: List[str] = [],
+        prioritize_region_languages: bool = False,
+        only_region_languages: bool = False
+    ) -> None:
         # Look up what languages the user wants to allow
-        self.allowlist = self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES
+        self.allowlist = languages or self.ALL_LANGUAGE_CODES
 
         # Priority preferences
-        self.prioritize_region_languages = self.config['languages']['prioritize_region_languages']
-        self.only_region_languages = self.config['languages']['only_region_languages']
+        self.prioritize_region_languages = prioritize_region_languages
+        self.only_region_languages = only_region_languages
 
     def update(self, machine: Machine, manuals: List[dict]) -> None:
         # Use a dict, so we get fast lookups and ordered insertions

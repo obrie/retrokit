@@ -11,7 +11,7 @@ class BaseMetadata:
         self.data = data
         self.defaults = defaults
         self.config = config
-        self.load()
+        self.load(**config)
 
     # Looks up the data associated with the given machine.  The following machine
     # attributes will be used to find a matching key (in order of priority):
