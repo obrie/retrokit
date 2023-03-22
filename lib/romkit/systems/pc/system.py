@@ -32,8 +32,10 @@ class PCSystem(BaseSystem):
         with zipfile.ZipFile(self.CONFIG_ARCHIVE, 'r') as conf_zip:
             exodos_name = machine.sourcefile
             machine_dir = str(machine.resource.target_path.path)
+            expected_zip_filename = f'{exodos_name}/dosbox.conf'.lower()
 
-            conf_file = conf_zip.getinfo(f'{exodos_name}/dosbox.conf')
+            filename = next(filename for filename in conf_zip.namelist() if filename.lower() == expected_zip_filename)
+            conf_file = conf_zip.getinfo(filename)
             conf_file.filename = 'dosbox.conf'
             conf_zip.extract(conf_file, machine_dir)
 
