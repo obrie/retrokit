@@ -285,6 +285,16 @@ Keys to reducing input lag:
 * Use NTCS version of games
 * Enable runahead
 
+### Configurations
+
+Some important configuration changes to be aware of:
+
+* The 8Bitdo Arcade Stick in X-Input mode reports A/B and X/Y in reverse when compared
+  to other 8Bitdo controllers (like the SN30 Pro) even though they register as the with
+  the same device name (Microsoft X-Box 360 pad).  If you want these buttons to have the
+  same behavior across controllers, you must use the 8Bitdo Ultimate Software to reassign
+  A/B and X/Y on the Arcade Stick.
+
 ## References
 
 * [Input latency spreadsheet](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
