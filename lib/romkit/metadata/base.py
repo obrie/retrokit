@@ -7,8 +7,9 @@ class BaseMetadata:
     name = None
     default_context = {}
 
-    def __init__(self, data: dict = {}, config: dict = {}) -> None:
+    def __init__(self, data: dict = {}, defaults: dict = {}, config: dict = {}) -> None:
         self.data = data
+        self.defaults = defaults
         self.config = config
         self.load()
 
@@ -21,7 +22,7 @@ class BaseMetadata:
     # 
     # The first match will be returned.
     def get_data(self, machine: Machine):
-        return self.data.get(machine.name) or self.data.get(machine.parent_name) or self.data.get(machine.group_title)
+        return self.data.get(machine.name) or self.data.get(machine.parent_name) or self.data.get(machine.group_title) or self.defaults
 
     # Loads all of the relevant data needed to machine attributes
     def load(self) -> None:

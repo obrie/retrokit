@@ -1,7 +1,12 @@
 {
   "system": "arcade",
   "metadata": {
-    "path": "$RETROKIT_HOME/data/arcade.json"
+    "path": "$RETROKIT_HOME/data/arcade.json",
+    "defaults": {
+      "emulation": {
+        "rating": 0
+      }
+    }
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",

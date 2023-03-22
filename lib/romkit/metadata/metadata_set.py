@@ -4,27 +4,35 @@ from romkit.models.machine import Machine
 
 import json
 from pathlib import Path
-from typing import Type
+from typing import Optional, Type
 
 # Represents a collection of external metadata loaders
 class MetadataSet:
-    def __init__(self, path: Path, config: dict) -> None:
+    def __init__(self,
+        path: Optional[Path],
+        defaults: dict = {},
+        config: dict = {},
+    ) -> None:
         self.config = config
         self.data = {}
+        self.defaults = defaults
         self.metadatas = []
 
         # Populate metadata based on the provided path
-        with path.open() as file:
-            self.data = json.load(file)
+        if path:
+            with path.open() as file:
+                self.data = json.load(file)
 
-            # Resolve dynamically generated metadata
-            for key in list(self.data.keys()):
-                self._resolve_metadata(key)
+                # Resolve dynamically generated metadata
+                for key in list(self.data.keys()):
+                    self._resolve_metadata(key)
 
     # Builds a MetadataSet from the given json data
     @classmethod
     def from_json(cls, json: dict, supported_metadata: set) -> MetadataSet:
-        metadata_set = cls(Path(json['path']), json)
+        path = json.get('path')
+        defaults = json.get('defaults', {})
+        metadata_set = cls(path and Path(path), defaults, json)
 
         for metadata_cls in supported_metadata:
             metadata_set.append(metadata_cls)
@@ -34,7 +42,7 @@ class MetadataSet:
     # Adds a new metadata loader
     def append(self, metadata_cls: Type[BaseMetadata]) -> None:
         metadata_config = self.config.get(metadata_cls.name, {})
-        self.metadatas.append(metadata_cls(self.data, metadata_config))
+        self.metadatas.append(metadata_cls(self.data, self.defaults, metadata_config))
 
     # Updates the metadata on the given machine
     def update(self, machine: Machine) -> None:
@@ -48,7 +56,9 @@ class MetadataSet:
 
         # Merge in parent meadata
         if 'group' in metadata:
-            metadata = {**self.data[metadata['group']], **metadata}
+            metadata = {**self.defaults, **self.data[metadata['group']], **metadata}
+        else:
+            metadata = {**self.defaults, **metadata}
 
         # Merge individual attributes
         for attr_name in list(metadata.keys()):

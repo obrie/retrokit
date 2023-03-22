@@ -1,7 +1,12 @@
 {
   "system": "saturn",
   "metadata": {
-    "path": "$RETROKIT_HOME/data/saturn.json"
+    "path": "$RETROKIT_HOME/data/saturn.json",
+    "defaults": {
+      "emulation": {
+        "rating": 0
+      }
+    }
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Saturn/raw/master/retroarch/overlay/Sega-Saturn.png",

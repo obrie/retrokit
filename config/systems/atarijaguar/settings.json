@@ -1,7 +1,12 @@
 {
   "system": "atarijaguar",
   "metadata": {
-    "path": "$RETROKIT_HOME/data/atarijaguar.json"
+    "path": "$RETROKIT_HOME/data/atarijaguar.json",
+    "defaults": {
+      "emulation": {
+        "rating": 0
+      }
+    }
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-AtariJaguar/raw/master/retroarch/overlay/Atari-Jaguar.png",

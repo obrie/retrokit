@@ -1,7 +1,12 @@
 {
   "system": "n64",
   "metadata": {
-    "path": "$RETROKIT_HOME/data/n64.json"
+    "path": "$RETROKIT_HOME/data/n64.json",
+    "defaults": {
+      "emulation": {
+        "rating": 0
+      }
+    }
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-N64/raw/master/retroarch/overlay/Nintendo-64.png",
