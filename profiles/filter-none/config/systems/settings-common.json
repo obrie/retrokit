@@ -1,10 +1,10 @@
 {
   "roms": {
-    "priority": {
-      "group_by": []
-    },
     "filters": {
-      "enabled": []
+      "enabled": [
+        "names|empty"
+      ],
+      "names|empty": []
     }
   }
 }
