@@ -12,8 +12,9 @@
   },
   "roms": {
     "filters": {
-      "!mechanical": [true],
+      "!emulator_compatibility": [false],
       "!emulator_ratings": [0, 1, 2, 3],
+      "!mechanical": [true],
       "categories": [
         null,
         "Games"
