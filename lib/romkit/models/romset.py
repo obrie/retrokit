@@ -46,6 +46,7 @@ class ROMSet:
                 downloader=self.downloader,
                 discovery=self.discovery,
                 default_context={'url': url},
+                stub=self.system.stub,
             )
             for name, config in resource_templates.items()
         }

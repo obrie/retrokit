@@ -36,6 +36,7 @@ class BaseSystem:
             'romsets': {},
             'roms': {
                 'id': 'name',
+                'stub': False,
                 'favorites': {},
                 'collections': {},
                 'priority': {},
@@ -47,6 +48,7 @@ class BaseSystem:
 
         self.name = self.config['system']
         self.download_config = self.config['downloads']
+        self.stub = self.config['roms']['stub']
 
         # External metadata to load for filtering purposes
         self.metadata_set = MetadataSet.from_json(self.config['metadata'], self.supported_metadata)
@@ -173,7 +175,7 @@ class BaseSystem:
         self.reset_directories()
 
         for machine in self.sorted_prioritized_machines:
-            if not machine.is_valid_nonmerged():
+            if not self.stub and not machine.is_valid_nonmerged():
                 logging.warn(f'[{machine.name}] is not a valid non-merged ROM')
                 continue
 

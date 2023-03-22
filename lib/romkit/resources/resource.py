@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from romkit.models.file import File
 from romkit.resources.actions import BaseAction, Copy
+from romkit.resources.actions.stub import Stub, StubDownloader
 from romkit.resources.resource_path import ResourcePath
 from romkit.util import Downloader
 
@@ -137,6 +138,7 @@ class ResourceTemplate:
         discovery: Optional[BaseDiscovery] = None,
         file_identifier: str = 'crc',
         default_context: dict = {},
+        stub: bool = False,
     ):
         self.source_url_template = source_url_template
         self.cached_source_url_template = cached_source_url_template
@@ -148,6 +150,10 @@ class ResourceTemplate:
         self.discovery = discovery
         self.file_identifier = file_identifier
         self.default_context = default_context
+
+        if stub:
+            self.install_action = Stub({})
+            self.downloader = StubDownloader()
 
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> ResourceTemplate:
