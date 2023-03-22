@@ -20,6 +20,8 @@ This attempts to cover a few things:
 * Provide a brief highlight of what features the system supports
 * Describe what each Keyboard key does
 * Describe what each joystick button maps to on the original controller
+* Provide images of the system's original controller
+* Provide images of RetroArch's controller configuration
 
 This reference documentation is generated specific to your system.  This means it'll use
 the configurations available on your system in order to determine what shows up in the
@@ -53,6 +55,16 @@ reference sheet:
 
 You can see a full list of example system reference documentation in the [manual/reference](/manual/examples/reference/)
 folder.
+
+System-specific integrations are provided for:
+
+* c64
+* daphne
+* n64
+* nes
+* pc
+* pcengine
+* pce-cd
 
 ### Game-specific overrides
 
