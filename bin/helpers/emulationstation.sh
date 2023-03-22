@@ -6,5 +6,5 @@
 # we are overriding an ES configuration and don't want it to get overwritten
 # by ES.
 stop_emulationstation() {
-  killall -q "$retropie_dir/supplementary/emulationstation/emulationstation" || true
+  killall -q "$retropie_dir/supplementary/emulationstation/emulationstation" 2>/dev/null || true
 }
