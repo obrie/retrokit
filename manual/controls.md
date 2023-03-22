@@ -44,14 +44,14 @@ go back one page.
 ### System-specific overrides
 
 Each system can provide its own customizations around how the reference sheet is built and
-what content is available.  You can see the various overrides in the [doc](/doc/) folder.
+what content is available.  You can see the various overrides in the [docs](/docs/) folder.
 
 For example, for the c64 system, vice configuration options are used to generate the following
 reference sheet:
 
 ![C64 Reference Sheet](/manual/reference/c64.png)
 
-You can see a full list of example system reference documentation in the (manual/reference)[/manual/reference/]
+You can see a full list of example system reference documentation in the [manual/reference](/manual/reference/)
 folder.
 
 ### Game-specific overrides
@@ -62,7 +62,7 @@ the reference sheet will account for those overrides.
 For arcade systems, a visual representation of an arcade stick is used together with metadata
 on what each button does to generate a reference sheet like so:
 
-![Arcade: Tekken Reference Sheet](/manual/reference/tekken.png)
+![Arcade: Tekken Reference Sheet](/manual/reference/arcade-tekken.png)
 
 Arcade reference sheets are unique in this way because they're using information you've
 provided about your panel layout, data that's been gathered on what buttons are available
@@ -79,7 +79,7 @@ Before you've even started to use RetroPie, sometimes you just need to get start
 what controls are available to begin with.  To help with there, a RetroPie reference
 sheet is also available:
 
-![RetroPie Reference Sheet](/manual/reference/reference.png)
+![RetroPie Reference Sheet](/manual/reference/retropie.png)
 
 ## Defaults
 
