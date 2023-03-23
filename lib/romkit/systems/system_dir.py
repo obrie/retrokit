@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from romkit.filters import FilterSet
 
+import logging
 import os
 from pathlib import Path
 
@@ -65,10 +66,16 @@ class SystemDir:
 
         if str(source)[-1] == '*':
             for source_filepath in source.parent.iterdir():
-                subtarget = target.joinpath(source_filepath.name)
-                if os.path.lexists(subtarget):
-                    subtarget.unlink()
-                subtarget.symlink_to(source_filepath)
+                self._symlink_file(source_filepath, target.joinpath(source_filepath.name))
+        else:
+            self._symlink_file(source, target)
+
+    # Symlinks the given source path to the given target path *only* if the target
+    # either doesn't exist or is a symlink.  We never want to risk overwriting the
+    # user's actual files / directories.
+    def _symlink_file(self, source: Path, target: Path) -> None:
+        if os.path.exists(target) and not target.is_symlink():
+            logging.warn(f'[{target.stem}] Failed to create symlink at {target} (file exists and is not symlink)')
         else:
             if os.path.lexists(target):
                 target.unlink()
