@@ -9,7 +9,7 @@
       "add": [
         "hardware/controllers/sinden"
       ],
-      "after": "hardware/controllers"
+      "after": "hardware/controllers/xpad-bluetooth"
     }
   }
 }

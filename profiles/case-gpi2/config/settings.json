@@ -10,7 +10,7 @@
       "add": [
         "hardware/controllers/xboxdrv"
       ],
-      "after": "hardware/controllers"
+      "after": "hardware/controllers/xpad-bluetooth"
     }
   }
 }
