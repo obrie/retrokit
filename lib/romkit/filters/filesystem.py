@@ -17,4 +17,11 @@ class FilesystemFilter(BaseFilter):
                 self.installed_names.add(installed_file.stem)
 
     def values(self, machine: Machine) -> Set[bool]:
-        return {machine.name in self.installed_names or machine.playlist_name in self.installed_names}
+        candidates = {
+            machine.name,
+            machine.playlist_name,
+            *machine.alt_names,
+            *{Playlist.name_from(name) for name in machine.alt_names},
+        }
+
+        return {self.installed_names.isdisjoint(candidates) > 0}
