@@ -32,7 +32,7 @@ class PDF():
         self.page_image = None
         self.clip_rect = fitz.Rect()
 
-        if self.path and Path(self.path).exists():
+        if self.has_valid_path:
             self.document = fitz.open(self.path)
         else:
             # Create an empty pdf
@@ -58,10 +58,20 @@ class PDF():
             text_writer.write_text(page, color=(1, 1, 1))
 
         # Add supplementary material (usually reference info)
-        if self.supplementary_path and Path(self.supplementary_path).exists():
+        if self.has_valid_supplemental_path:
             pdf = fitz.open(self.supplementary_path)
             self.document.insert_pdf(pdf)
             pdf.close()
+
+    # Was this PDF configured with a path that exists?
+    @property
+    def has_valid_path(self) -> bool:
+        return self.path and Path(self.path).exists()
+
+    # Was this PDF configurated with a supplemental path that exists?
+    @property
+    def has_valid_supplemental_path(self) -> bool:
+        return self.supplementary_path and Path(self.supplementary_path).exists()
 
     # Closes the PDF so it can no longer be used
     def close(self) -> None:
