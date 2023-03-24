@@ -30,6 +30,8 @@ class PDF():
         self.zoom_level = 0
         self.page_number = None
         self.page_image = None
+        self.shown_on_screen = False
+        self.navigated = False
         self.clip_rect = fitz.Rect()
 
         if self.has_valid_path:

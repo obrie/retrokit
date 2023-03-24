@@ -12,7 +12,7 @@ import signal
 from argparse import ArgumentParser
 from functools import partial
 from pathlib import Path
-from threading import RLock
+from threading import RLock, Timer
 from typing import Callable, Optional
 
 from devicekit.input_device import DeviceEvent
@@ -53,6 +53,7 @@ class ManualKit():
         self.process_watcher = None
         self.display = None
         self.lock = RLock()
+        self.scheduled_action = None
 
         # Read from config
         self.config = configparser.ConfigParser(strict=False)
@@ -211,6 +212,14 @@ class ManualKit():
                 self.process_watcher.suspend()
             self.refresh()
             self.display.show()
+
+            # Check if first time displaying and no manual -- switch to reference pdf if available after
+            # a period of time has passed so the user doesn't need to.
+            if not self.pdf.shown_on_screen and not self.pdf.has_valid_path and self.pdf.has_valid_supplemental_path:
+                self.scheduled_action = scheduled_action = Timer(1.0, self._auto_advance)
+                scheduled_action.start()
+
+            self.pdf.shown_on_screen = True
         except Exception as e:
             # If there's an error, then we're going to hide ourselves in order
             # to have the best chance at ensuring the screen isn't blocked
@@ -221,6 +230,7 @@ class ManualKit():
     # Hides the manual
     @synchronized
     def hide(self) -> None:
+        self._cancel_scheduled_actions()
         self.input_listener.ungrab()
         try:
             if self.display.visible:
@@ -236,6 +246,7 @@ class ManualKit():
         logging.debug('Exiting')
         try:
             # Try to close things gracefully
+            self._cancel_scheduled_actions()
             self.server.stop()
             self.input_listener.stop()
             self.display.close()
@@ -248,6 +259,8 @@ class ManualKit():
 
     # Renders the currently active PDF page
     def refresh(self) -> None:
+        self._cancel_scheduled_actions()
+
         # Ensure display is connected
         self.display.open()
 
@@ -261,6 +274,21 @@ class ManualKit():
             )
 
         self.display.draw(self.pdf.get_page_image())
+
+    # Automatically advances to the next page in the PDF, assuming that the user hasn't
+    # already manually navigated within the PDF
+    @synchronized
+    def _auto_advance(self) -> None:
+        if not self.pdf.navigated and self.display.visible:
+            self.pdf.next()
+            self.refresh()
+
+    # Cancel any actions scheduled to run for the UI
+    def _cancel_scheduled_actions(self) -> None:
+        scheduled_action = self.scheduled_action
+        if scheduled_action:
+            scheduled_action.cancel()
+            self.scheduled_action = None
 
     # Adds toggle / navigation handlers for the given input type
     def _add_handlers(self, input_type: InputType, config: configparser.SectionProxy) -> None:
@@ -284,12 +312,14 @@ class ManualKit():
     @synchronized
     def _navigate(self, navigation_api: Callable, event: DeviceEvent) -> None:
         navigation_api(self.pdf)
+        self.pdf.navigated = True
         self.refresh()
 
     # Calls the given navigation API, including the turbo value
     @synchronized
     def _navigate_with_turbo(self, navigation_api: Callable, event: DeviceEvent) -> None:
         navigation_api(self.pdf, event.turbo)
+        self.pdf.navigated = True
         self.refresh()
 
     # Sends a SIGINT signal to the current process
