@@ -206,6 +206,9 @@ _EOF_
       # Analog
       input_type='axis'
       input_id=$sdl_value
+      if [ -z "$input_values" ]; then
+        input_values=(1)
+      fi
     fi
 
     # Add input
