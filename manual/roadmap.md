@@ -8,7 +8,6 @@ There are too many improvements to count here, but some ideas are:
 * Support for non-Raspbian platforms
 * Support different frontends (attractmode, pegasus)
 * More comprehensive compatibility ratings
-* Support axis controls in manualkit
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your

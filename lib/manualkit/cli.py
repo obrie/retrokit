@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import configparser
+import csv
 import distutils.util
 import logging
 import signal
@@ -27,18 +28,31 @@ from manualkit.profile import Profile
 from manualkit.server import Server
 
 class ManualKit():
-    BINDING_DEFAULTS = {
-        'toggle_emulator': 'up',
+    SHARED_BINDING_DEFAULTS = {
         'toggle_frontend': 'l2',
-        'up': 'up',
-        'down': 'down',
-        'left': 'left',
-        'right': 'right',
         'next': 'r',
         'prev': 'l',
         'zoom_in': 'x',
         'zoom_out': 'y',
         'retroarch': 'true'
+    }
+
+    KEYBOARD_BINDING_DEFAULTS = {
+        'toggle_emulator': 'up',
+        'up': 'up',
+        'down': 'down',
+        'left': 'left',
+        'right': 'right',
+        **SHARED_BINDING_DEFAULTS
+    }
+
+    JOYSTICK_BINDING_DEFAULTS = {
+        'toggle_emulator': 'up,l_y_minus',
+        'up': 'up,l_y_minus',
+        'down': 'down,l_y_plus',
+        'left': 'left,l_x_minus',
+        'right': 'right,l_x_plus',
+        **SHARED_BINDING_DEFAULTS
     }
 
     def __init__(self,
@@ -63,8 +77,8 @@ class ManualKit():
             'input': {},
             'logging': {'level': 'INFO'},
             'process_watcher': {},
-            'keyboard': self.BINDING_DEFAULTS,
-            'joystick': self.BINDING_DEFAULTS,
+            'keyboard': self.KEYBOARD_BINDING_DEFAULTS,
+            'joystick': self.JOYSTICK_BINDING_DEFAULTS,
             'profile_frontend': {},
             'profile_emulator': {},
         })
@@ -297,16 +311,23 @@ class ManualKit():
         # Add hotkey listeners for each profile
         for profile in self.profiles.values():
             hotkey = profile.hotkey_enable and config.get('hotkey', fallback=True)
-            self.input_listener.on(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey, on_key_down=False, repeat=False)
+            self._add_handler(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey, on_key_down=False, repeat=False)
 
-        self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up), retroarch=retroarch)
-        self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down), retroarch=retroarch)
-        self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left), retroarch=retroarch)
-        self.input_listener.on(input_type, config['right'], partial(self._navigate, PDF.move_right), retroarch=retroarch)
-        self.input_listener.on(input_type, config['next'], partial(self._navigate_with_turbo, PDF.next), retroarch=retroarch)
-        self.input_listener.on(input_type, config['prev'], partial(self._navigate_with_turbo, PDF.prev), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, PDF.zoom_in), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, PDF.zoom_out), retroarch=retroarch)
+        self._add_handler(input_type, config['up'], partial(self._navigate, PDF.move_up), retroarch=retroarch)
+        self._add_handler(input_type, config['down'], partial(self._navigate, PDF.move_down), retroarch=retroarch)
+        self._add_handler(input_type, config['left'], partial(self._navigate, PDF.move_left), retroarch=retroarch)
+        self._add_handler(input_type, config['right'], partial(self._navigate, PDF.move_right), retroarch=retroarch)
+        self._add_handler(input_type, config['next'], partial(self._navigate_with_turbo, PDF.next), retroarch=retroarch)
+        self._add_handler(input_type, config['prev'], partial(self._navigate_with_turbo, PDF.prev), retroarch=retroarch)
+        self._add_handler(input_type, config['zoom_in'], partial(self._navigate, PDF.zoom_in), retroarch=retroarch)
+        self._add_handler(input_type, config['zoom_out'], partial(self._navigate, PDF.zoom_out), retroarch=retroarch)
+
+    # Adds a handler for the given input type.  The provided button name can be a CSV in order
+    # to enable adding multiple inputs for the same handler.
+    def _add_handler(self, input_type: InputType, btn_name_csv: str, callback: Callable, *args) -> None:
+        for btn_name in list(csv.reader([btn_name_csv]))[0]:
+            if btn_name:
+                self.input_listener.on(input_type, btn_name, callback, *args)
 
     # Calls the given navigation API
     @synchronized

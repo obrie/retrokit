@@ -7,7 +7,7 @@ from devicekit.input_type import InputType
 
 class ButtonConfig(NamedTuple):
     btn_prefixes: List[str]
-    btn_suffix: str
+    btn_suffixes: List[str]
 
 class Config:
     # Path to the global RetroArch configuration
@@ -18,8 +18,8 @@ class Config:
 
     # Config name structure for each device type for looking up inputs
     BUTTON_CONFIGS = {
-        InputType.JOYSTICK: ButtonConfig(['input_'], '_btn'),
-        InputType.KEYBOARD: ButtonConfig(['input_', 'input_player1_'], ''),
+        InputType.JOYSTICK: ButtonConfig(['input_'], ['_btn', '_axis']),
+        InputType.KEYBOARD: ButtonConfig(['input_', 'input_player1_'], ['']),
     }
 
     def __init__(self, path: str = GLOBAL_CONFIG_PATH, input_type: InputType = InputType.KEYBOARD):
@@ -62,6 +62,7 @@ class Config:
     def get_button(self, btn_name: str) -> str:
         button_config = self._button_config
         for btn_prefix in button_config.btn_prefixes:
-            value = self.get(f'{btn_prefix}{btn_name}{button_config.btn_suffix}')
-            if value is not None:
-                return value
+            for btn_suffix in button_config.btn_suffixes:
+                value = self.get(f'{btn_prefix}{btn_name}{btn_suffix}')
+                if value is not None:
+                    return value

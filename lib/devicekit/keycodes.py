@@ -113,13 +113,23 @@ def retroarch_keyboard(device: evdev.Inputdevice) -> dict:
 
 # Retroarch joystick input name => evdev ecode
 def retroarch_joystick(device: evdev.InputDevice) -> dict:
-    retroarch_codes = {
-        # - D-Pad
-        'h0up': (ABS_HAT0Y, -1),
-        'h0right': (ABS_HAT0X, 1),
-        'h0down': (ABS_HAT0Y, 1),
-        'h0left': (ABS_HAT0X, -1),
-    }
+    retroarch_codes = {}
+
+    # Evaluate device capabilities
+    capabilities = device.capabilities()
+    for index, (code, abs_info) in enumerate(capabilities.get(EV_ABS, [])):
+        if code == ABS_HAT0X:
+            # D-Pad X
+            retroarch_codes['h0left'] = (code, -1)
+            retroarch_codes['h0right'] = (code, 1)
+        elif code == ABS_HAT0Y:
+            # D-Pad Y
+            retroarch_codes['h0down'] = (code, -1)
+            retroarch_codes['h0up'] = (code, 1)
+        else:
+            # Analog controls
+            retroarch_codes[f'-{index}'] = (code, -1)
+            retroarch_codes[f'+{index}'] = (code, 1)
 
     # Translate retroarch index-based layout to evdev code-based layout
     if EV_KEY in device.capabilities():

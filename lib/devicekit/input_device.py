@@ -20,16 +20,12 @@ class Handler(NamedTuple):
     event_type: KeyEvent
     repeat: bool
 
-    # List of EV_ABS codes that we actually care about -- everything else can be
-    # ignored.
-    VALID_ABS_CODES = {evdev.ecodes.ABS_HAT0X, evdev.ecodes.ABS_HAT0Y}
-
     # Whether this input event can result in a handler callback:
     # * Ignore hold events
     # * Ignore non-keyboard/unhandled abs events
     @classmethod
     def is_callable_event(cls, event: evdev.InputEvent)-> bool:
-        return abs(event.value) != KeyEvent.key_hold and (event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in cls.VALID_ABS_CODES))
+        return abs(event.value) != KeyEvent.key_hold and (event.type == evdev.ecodes.EV_KEY or event.type == evdev.ecodes.EV_ABS)
 
     # Whether this handler matches the current state of the input
     def match(self, event: evdev.InputEvent, grabbed: bool) -> bool:
@@ -41,6 +37,12 @@ class DeviceEvent(NamedTuple):
 
 # Represents an evdev device that we're listening for events from
 class InputDevice():
+    # Zone in which the axis inputs is considered no longer active (based on EmulationStation)
+    AXIS_DEADZONE = 23000
+
+    # List of EV_ABS codes for HAT inputs
+    HAT_ABS_CODES = {evdev.ecodes.ABS_HAT0X, evdev.ecodes.ABS_HAT0Y}
+
     def __init__(self,
         dev_device: evdev.InputDevice,
         input_type: InputType,
@@ -71,6 +73,11 @@ class InputDevice():
         self.active_inputs = {}
         self.last_active_inputs = {}
         self.grabbed = False
+
+        # Track ABS info for determining up/down
+        self.abs_info = {}
+        for code, abs_info in dev_device.capabilities().get(evdev.ecodes.EV_ABS, []):
+            self.abs_info[code] = abs_info
 
     # Unique identifier for the device
     @property
@@ -176,25 +183,50 @@ class InputDevice():
     # Tracks the active inputs and triggers any relevant handlers
     async def _read_event(self, event: evdev.InputEvent) -> None:
         if Handler.is_callable_event(event):
-            # Wait for repeater to officially stop
-            if self.repeaters:
-                for repeater in self.repeaters:
-                    await repeater.stop()
-                self.repeaters.clear()
+            event = self._normalize_event(event)
 
             if abs(event.value) == KeyEvent.key_down:
                 # Key pressed
-                self.active_inputs[event.code] = event.value
-                self.last_active_inputs = self.active_inputs.copy()
+                if event.code not in self.active_inputs:
+                    await self._cancel_repeaters()
 
-                # Check what's currently pressed down
-                self._check_inputs(event, self.active_inputs)
+                    self.active_inputs[event.code] = event.value
+                    self.last_active_inputs = self.active_inputs.copy()
+
+                    # Check what's currently pressed down
+                    self._check_inputs(event, self.active_inputs)
             else:
                 # Key released
-                self.active_inputs.pop(event.code)
-                if not self.active_inputs:
-                    self._check_inputs(event, self.last_active_inputs)
+                if event.code in self.active_inputs:
+                    await self._cancel_repeaters()
 
+                    self.active_inputs.pop(event.code)
+                    if not self.active_inputs:
+                        self._check_inputs(event, self.last_active_inputs)
+
+    # Cancels all running repeater jobs
+    async def _cancel_repeaters(self) -> None:
+        if self.repeaters:
+            for repeater in self.repeaters:
+                await repeater.stop()
+            self.repeaters.clear()
+
+    # Normalizes the given evdev event to something that can be more easily processed within
+    # this class.  Specifically, this handles axis values so they are more easily interpreted
+    # as "pressed" or "not pressed".
+    def _normalize_event(self, event: evdev.InputEvent) -> evdev.InputEvent:
+        if event.type != evdev.ecodes.EV_ABS or event.code in self.HAT_ABS_CODES:
+            return event
+
+        if abs(event.value) > self.AXIS_DEADZONE or event.value == self.abs_info[event.code].max:
+            if event.value < 0:
+                new_value = -1
+            else:
+                new_value = 1
+        else:
+            new_value = 0
+
+        return evdev.InputEvent(event.sec, event.usec, event.type, event.code, new_value)
 
     # Check the currently active inputs to see if they should trigger an event
     def _check_inputs(self, event: evdev.InputEvent, active_inputs: dict) -> None:
