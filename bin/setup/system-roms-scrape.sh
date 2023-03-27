@@ -153,7 +153,13 @@ __build_missing_reports() {
   # indicators of a prior issue:
   # * Missing title means we likely missed all the textual content
   # * Missing screenshot means we likely missed the media content
-  __scraper --cache report:missing=title,screenshot
+
+  local resources_to_check=title
+  local cache_screenshots=$(crudini --get "$retropie_configs_dir/all/skyscraper/config.ini" main cacheScreenshots 2>/dev/null | tr -d '"')
+  if [ "$cache_screenshots" == 'true' ]; then
+    resources_to_check="$resources_to_check,screenshot"
+  fi
+  __scraper --cache report:missing=$resources_to_check
 
   # Generate aggregate list of roms
   cat "$retropie_configs_dir/all/skyscraper/reports/report-"* | sort | uniq > "$aggregate_report_file"
