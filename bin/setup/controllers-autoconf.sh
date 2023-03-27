@@ -8,29 +8,7 @@ setup_module_desc='Controller autoconfiguration'
 
 autoconf_file="$retropie_configs_dir/all/autoconf.cfg"
 autoconf_backup_file="$autoconf_file.rk-src"
-sdldb_file="$tmp_dir/gamecontrollerdb.txt"
-sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
-
-build() {
-  __build_gamecontrollerdb
-}
-
-# Download the latest game controller database
-__build_gamecontrollerdb() {
-  local gamecontrollerdb_version="$(cat "$tmp_dir/gamecontrollerdb.version" 2>/dev/null || true)"
-  if has_newer_commit "$sdldb_repo" "$gamecontrollerdb_version"; then
-    if download "$sdldb_repo/raw/master/gamecontrollerdb.txt" "$sdldb_file" force=true; then
-      # Track the new version
-      git ls-remote "$sdldb_repo" HEAD | cut -f1 > "$tmp_dir/gamecontrollerdb.version"
-    else
-      # Even if downloads fail, still allow the action to succeed if the file was
-      # previously downloaded
-      [ -f "$sdldb_file" ]
-    fi
-  else
-    echo "gamecontrollerdb already the latest version ($gamecontrollerdb_version)"
-  fi
-}
+sdldb_file="$retropie_configs_dir/all/gamecontrollerdb.txt"
 
 # Run RetroPie autoconfig for each controller input
 configure() {
@@ -60,23 +38,18 @@ __configure_autoconf() {
 }
 
 __configure_controllers() {
-  # Combine gamecontrollerdb.txt files
-  local sdldb_combined_file=$(mktemp -p "$tmp_ephemeral_dir")
-  cp "$sdldb_file" "$sdldb_combined_file"
-  each_path "{config_dir}/controllers/gamecontrollerdb.local.txt" cat '{}' | tee -a "$sdldb_combined_file" >/dev/null
-
   while IFS=, read -r name id swap_buttons; do
     local config_file=$(first_path "{config_dir}/controllers/inputs/$name.cfg")
 
     if [ -f "$config_file" ]; then
       # Explicit ES configuration is provided
       cp "$config_file" "$home/.emulationstation/es_temporaryinput.cfg"
-    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_combined_file"; then
+    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_file"; then
       # Auto-generate ES input configuration from id
-      __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_combined_file" | tail -n 1)" "$swap_buttons"
-    elif grep -qE ",$name," "$sdldb_combined_file"; then
+      __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_file" | tail -n 1)" "$swap_buttons"
+    elif grep -qE ",$name," "$sdldb_file"; then
       # Auto-generate ES input configuration from name
-      __configure_controller_input "$name" "$(grep -E ",$name," "$sdldb_combined_file" | tail -n 1)" "$swap_buttons"
+      __configure_controller_input "$name" "$(grep -E ",$name," "$sdldb_file" | tail -n 1)" "$swap_buttons"
     else
       echo "No controller mapping found for $name"
       continue
@@ -262,10 +235,6 @@ __restore_autoconf() {
     # Remove the backup since we're now fully restored
     rm -v "$autoconf_backup_file"
   fi
-}
-
-remove() {
-  rm -fv "$sdldb_file" "$tmp_dir/gamecontrollerdb.version"
 }
 
 setup "${@}"

@@ -16,8 +16,7 @@ after_retropie_reconfigure() {
 }
 
 configure() {
-  backup_and_restore "$ppsspp_dir/assets/gamecontrollerdb.txt" as_sudo=true
-  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a "$ppsspp_dir/assets/gamecontrollerdb.txt" >/dev/null
+  file_ln "$retropie_configs_dir/all/gamecontrollerdb.txt" "$ppsspp_dir/assets/gamecontrollerdb.txt" as_sudo=true
 }
 
 restore() {

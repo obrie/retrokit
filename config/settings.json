@@ -188,14 +188,17 @@
       "system-emulators",
       "systems/ports/roms-packages",
 
-      "systems/arcade/controllers-layout",
-      "systems/psp/controllers",
-      "controllers-configscripts",
-      "controllers-autoconf",
       "hardware/controllers/nintendo_switch",
       "hardware/controllers/xpad",
       "hardware/controllers/xpad-bluetooth",
       "hardware/controllers/calibrate",
+
+      "systems/arcade/controllers-layout",
+      "controllers-configscripts",
+      "controllers-database",
+      "systems/psp/controllers",
+      
+      "controllers-autoconf",
 
       "emulationstation-systems",
       "system-bios",
