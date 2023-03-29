@@ -82,6 +82,11 @@ __apply_patch() {
   local bin_file=$(mktemp -p "$tmp_ephemeral_dir")
   local patched_chd_file=$(mktemp -p "$tmp_ephemeral_dir")
 
+  if [ ! -s "$original_chd_file" ]; then
+    echo "Aborting patch process for $original_chd_file (file is invalid)"
+    return
+  fi
+
   # Download the ppf
   download "$guncon_patch_base_url/$rom_name.ppf" "$ppf_file"
 
