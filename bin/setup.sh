@@ -112,7 +112,7 @@ main() {
   if [ -z "$setupmodule" ] || [ "$setupmodule" == 'all' ]; then
     setup_all "$action"
   elif [[ "$setupmodule" == *~* ]]; then
-    IFS=~ read -ra range <<< "$setupmodule"
+    IFS='~' read -ra range <<< "$setupmodule"
     setup_all "$action" from_setupmodule="${range[0]}" to_setupmodule="${range[1]}"
   else
     setup "$action" "$setupmodule" "${@:3}"
