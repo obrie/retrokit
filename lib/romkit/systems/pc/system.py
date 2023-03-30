@@ -13,10 +13,21 @@ class PCSystem(BaseSystem):
     name = 'pc'
 
     APP_ROOT = Path(__file__).parent.resolve().joinpath('../../../..').resolve()
-    CONFIG_ARCHIVE = f'{APP_ROOT}/cache/exodos/dosbox-cfg.zip'
+    CONFIG_ARCHIVE_PATH = Path(f'{APP_ROOT}/cache/exodos/dosbox-cfg.zip')
 
     AUTOEXEC_OPTION_REGEX = re.compile('^(.+)(\[autoexec\].+)$', re.M|re.DOTALL)
 
+    def __init__(self, config: dict) -> None:
+        super().__init__(config)
+
+        self.config_archive_files = {}
+
+        if self.CONFIG_ARCHIVE_PATH.exists():
+            self.config_archive = zipfile.ZipFile(self.CONFIG_ARCHIVE_PATH, 'r')
+            for filename in self.config_archive.namelist():
+                self.config_archive_files[filename.lower()] = self.config_archive.getinfo(filename)
+
+    # Installs the given machine, additionally providing configs when applicable
     def install_machine(self, machine: Machine) -> bool:
         success = super().install_machine(machine)
 
@@ -29,15 +40,14 @@ class PCSystem(BaseSystem):
     # Installs the dosbox configuration file required to run the machine.
     # Note that this will install the default configuration provided by eXoDOS.
     def install_config(self, machine: Machine) -> None:
-        with zipfile.ZipFile(self.CONFIG_ARCHIVE, 'r') as conf_zip:
-            exodos_name = machine.sourcefile
-            machine_dir = str(machine.resource.target_path.path)
-            expected_zip_filename = f'{exodos_name}/dosbox.conf'.lower()
+        exodos_name = machine.sourcefile
+        machine_dir = str(machine.resource.target_path.path)
+        expected_zip_filename = f'{exodos_name}/dosbox.conf'.lower()
 
-            filename = next(filename for filename in conf_zip.namelist() if filename.lower() == expected_zip_filename)
-            conf_file = conf_zip.getinfo(filename)
+        conf_file = self.config_archive_files.get(expected_zip_filename)
+        if conf_file:
             conf_file.filename = 'dosbox.conf'
-            conf_zip.extract(conf_file, machine_dir)
+            self.config_archive.extract(conf_file, machine_dir)
 
             self.setup_config(machine)
 
@@ -91,7 +101,6 @@ class PCSystem(BaseSystem):
             config_file.write(autoexec_content)
 
     # Migrate the configuration based on the given migration file
-
     def migrate_config(self, machine: Machine, config: configparser.ConfigParser, migration_path: Path) -> None:
         with migration_path.open() as migration_file:
             migration = json.load(migration_file)
