@@ -12,10 +12,6 @@ class ArcadeSystem(BaseSystem):
         for external_data in __all_external_data__:
             external_data().download(force=refresh)
 
-    # Skip
-    def scrape(self, **kwargs) -> None:
-        pass
-
     # Update metadata from the exodos database
     def update_metadata(self) -> None:
         self.romkit.load()

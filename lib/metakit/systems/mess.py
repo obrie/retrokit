@@ -6,5 +6,5 @@ class MessSystem(BaseSystem):
     name = 'mess'
 
     # Skip
-    def scrape(self, **kwargs) -> None:
+    def update_metadata(self) -> None:
         pass

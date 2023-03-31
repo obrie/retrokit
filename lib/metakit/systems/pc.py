@@ -38,10 +38,6 @@ class PCSystem(BaseSystem):
     def update_dats(self) -> None:
         pass
 
-    # Skip
-    def scrape(self, **kwargs) -> None:
-        pass
-
     # Update metadata from the exodos database
     def update_metadata(self) -> None:
         romset = next(self.romkit.iter_romsets())
