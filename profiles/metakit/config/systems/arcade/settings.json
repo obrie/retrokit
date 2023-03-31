@@ -4,6 +4,9 @@
       "resources": {
         "dat": {
           "source": "file://$RETROKIT_HOME/cache/mame/MAME Latest (Arcade).dat"
+        },
+        "machine": {
+          "source": "file://$HOME/RetroPie/roms/arcade/.mame/{machine}.zip"
         }
       }
     },
