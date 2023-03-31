@@ -106,7 +106,10 @@ class Scraper:
             elif attribute_name == 'players':
                 metadata['players'] = max([int(players) for players in value.replace('+', '').split('-')])
             elif attribute_name == 'releasedate':
-                metadata['year'] = int(value[0:4])
+                if value[0:4].isnumeric():
+                    metadata['year'] = int(value[0:4])
+                else:
+                    metadata['year'] = None
             elif attribute_name == 'publisher':
                 metadata['publisher'] = value
             elif attribute_name == 'developer':
