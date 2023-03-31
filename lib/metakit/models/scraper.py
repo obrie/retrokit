@@ -18,8 +18,11 @@ class ScrapeType(Enum):
     # Only scrape machines that we haven't previously scraped
     NEW = 'new'
 
-    # Only scrape machines that have missing data
+    # Only scrape machines that had just some data scraped successfully
     INCOMPLETE = 'incomplete'
+
+    # Only scrape machines that were successfully looked up, but no data found
+    MISSING = 'missing'
 
     # Scrape all machines
     ALL = 'all'
@@ -64,7 +67,8 @@ class Scraper:
         for group in self.romkit.resolved_groups:
             if group in self.dataset:
                 # Scraped machine found -- Go ahead and use it
-                self.system.database.update(group, self.dataset[group])
+                data_to_update = {key: value for key, value in self.dataset[group].items() if value is not None}
+                self.system.database.update(group, data_to_update)
 
     # Loads metadata from the scraper database
     def _load(self) -> None:
@@ -162,6 +166,8 @@ class Scraper:
                 should_scrape = True
             elif scrape_type == ScrapeType.NEW:
                 should_scrape = (group not in self.dataset)
+            elif scrape_type == ScrapeType.MISSING:
+                should_scrape = (len(metadata) == 1 and 'title' in metadata)
             else:
                 metadata = self.dataset.get(group, {})
                 should_scrape = (self.ATTRIBUTE_NAMES.intersection(metadata.keys()) != self.ATTRIBUTE_NAMES)

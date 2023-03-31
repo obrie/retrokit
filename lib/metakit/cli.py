@@ -106,6 +106,10 @@ class MetaKit:
     def scrape_incomplete(self) -> None:
         self.system.scrape(ScrapeType.INCOMPLETE)
 
+    # Forces machines that have were never found in the scraper sources
+    def scrape_missing(self) -> None:
+        self.system.scrape(ScrapeType.MISSING)
+
     # Forces all scraped metadata to be refreshed from the source
     def rescrape(self) -> None:
         self.scrape(ScrapeType.ALL)
@@ -129,6 +133,7 @@ def main() -> None:
         'recache_external_data',
         'scrape',
         'scrape_incomplete',
+        'scrape_missing',
         'rescrape',
         'update_metadata',
     ])
