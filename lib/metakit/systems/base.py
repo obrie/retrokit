@@ -105,8 +105,8 @@ class BaseSystem:
         pass
 
     # Updates the metadata for this system based on data from a scraping service
-    def scrape(self, **kwargs) -> None:
-        self.scraper.scrape(**kwargs)
+    def scrape(self, *args, **kwargs) -> None:
+        self.scraper.scrape(*args, **kwargs)
 
     # Updates the metadata for games associated with this system
     def update_metadata(self) -> None:

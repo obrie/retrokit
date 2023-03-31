@@ -89,8 +89,8 @@ class MetaKit:
 
     # Requests that the system download any external data it doesn't already
     # have cached.
-    def cache_external_data(self, **kwargs) -> None:
-        self.system.cache_external_data(**kwargs)
+    def cache_external_data(self, *args, **kwargs) -> None:
+        self.system.cache_external_data(*args, **kwargs)
 
     # Forces any external data used by the system to be re-downloaded.  This
     # is useful if any changes have been made and we want to use the latest
@@ -99,11 +99,11 @@ class MetaKit:
         self.cache_external_data(refresh=True)
 
     # Scrapes for metadata from external services
-    def scrape(self, **kwargs) -> None:
-        self.system.scrape(**kwargs)
+    def scrape(self, *args, **kwargs) -> None:
+        self.system.scrape(*args, **kwargs)
 
     # Forces machines that have incomplete scrape metadata to be refreshed from the source
-    def scrape_incomplete(self, **kwargs) -> None:
+    def scrape_incomplete(self) -> None:
         self.system.scrape(ScrapeType.INCOMPLETE)
 
     # Forces all scraped metadata to be refreshed from the source
