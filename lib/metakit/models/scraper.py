@@ -175,7 +175,7 @@ class Scraper:
         # *except* arcade which is okay because arcade has its own metadata
         # source that we don't have to scrape from.
         primary_rom = machine.primary_rom
-        if primary_rom:
+        if primary_rom and machine.romset.system.rom_id_type == 'crc':
             romnom = quote(primary_rom.name).replace('%28', '(').replace('%29',')')
             crc = primary_rom.crc.upper()
         elif machine.resource:
