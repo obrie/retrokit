@@ -371,7 +371,11 @@ __build_pdf() {
   jinja2 "$reference_template" "$doc_data_file" > "$reference_html_file"
 
   # Render HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_file" "$reference_html_file" 2>/dev/null
+  local rendered_pdf_file=$(mktemp -p "$tmp_ephemeral_dir")
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$rendered_pdf_file" "$reference_html_file" 2>/dev/null
+
+  # Optimize PDF
+  gs -o "$output_file" -sDEVICE=pdfwrite -dQUIET -dBATCH -dNOPAUSE -dPDFSETTINGS=/prepress "$rendered_pdf_file"
 }
 
 # List all Retroarch configuration files which might contain controller info
