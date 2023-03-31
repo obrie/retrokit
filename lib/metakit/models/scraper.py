@@ -198,14 +198,14 @@ class Scraper:
         # instead of us.  Maybe we can get skyscraper to allow querying
         # without doing an upfront API request for the user's limits.
         for scraper_source in self.scraper_sources:
+            scraper_args = ['-s', scraper_source]
+            if scraper_source == 'screenscraper':
+                scraper_args.extend(['--query', f'crc={crc}&romnom={romnom}'])
+
             output = self._exec_skyscraper(
                 check=True,
                 capture_output=True,
-                args=[
-                    '-s', scraper_source,
-                    '--query', f'crc={crc}&romnom={romnom}',
-                    str(rom_path),
-                ]
+                args=[*scraper_args, str(rom_path)],
             )
 
             if 'found! :)' not in output:
