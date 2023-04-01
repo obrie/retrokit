@@ -151,7 +151,7 @@ class ResourceTemplate:
         self.file_identifier = file_identifier
         self.default_context = default_context
 
-        if stub:
+        if stub and urlparse(source_url_template).scheme != 'file':
             self.install_action = Stub({})
             self.downloader = StubDownloader()
 
