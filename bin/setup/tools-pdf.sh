@@ -141,7 +141,10 @@ remove() {
     tesseract-ocr-swe
   sudo apt-get autoremove --purge -y
 
-  sudo rm -rfv /usr/local/share/ghostscript
+  sudo rm -rfv \
+    /usr/local/bin/gs \
+    /usr/local/share/ghostscript \
+    /usr/local/share/doc/ghostscript
 }
 
 setup "${@}"
