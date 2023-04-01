@@ -64,7 +64,7 @@ __setup_env() {
     mkdir -p "$tmp_dir"
     export common_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
     export tmp_ephemeral_dir=$(mktemp -d -p "$common_ephemeral_dir")
-    trap 'rm -rf -- "$common_ephemeral_dir"' EXIT
+    trap 'rm -rf -- "$common_ephemeral_dir" "$tmp_ephemeral_dir"' EXIT
 
     # Read environment variable overrides.
     # 
@@ -88,9 +88,8 @@ __setup_env() {
     # Define build variables
     export MAKEFLAGS='-j4'
   else
-    # Remove any existing files in the ephemeral directory since this can get reused
-    # across multiple scripts
-    rm -rf "$tmp_ephemeral_dir/"*
+    export tmp_ephemeral_dir=$(mktemp -d -p "$common_ephemeral_dir")
+    trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
     init_profiles
   fi
