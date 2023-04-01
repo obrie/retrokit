@@ -151,9 +151,18 @@ class ResourceTemplate:
         self.file_identifier = file_identifier
         self.default_context = default_context
 
-        if stub and urlparse(source_url_template).scheme != 'file':
-            self.install_action = Stub({})
-            self.downloader = StubDownloader()
+        if stub:
+            source_is_local = urlparse(source_url_template).scheme == 'file'
+
+            download_path = download_path_template and Path(download_path_template)
+            download_path_exists = download_path and download_path.exists() and download_path.stat().st_size > 0
+
+            target_path = target_path_template and Path(target_path_template)
+            target_path_exists = target_path and target_path.exists() and target_path.stat().st_size > 0
+
+            if not(source_is_local or download_path_exists or target_path_exists):
+                self.install_action = Stub({})
+                self.downloader = StubDownloader()
 
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> ResourceTemplate:
