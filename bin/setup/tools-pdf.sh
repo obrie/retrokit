@@ -101,7 +101,7 @@ __depends_ghostscript() {
 
     # Compile
     pushd "$extract_dir/ghostscript-$ghostscript_min_version"
-    ./configure
+    ./configure CFLAGS='-DPNG_ARM_NEON_OPT=0'
     make
     sudo make install
 
