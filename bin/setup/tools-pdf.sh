@@ -3,8 +3,8 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_module_id='manualkit-tools'
-setup_module_desc='manualkit supplementary tools for processing new manuals'
+setup_module_id='tools-pdf'
+setup_module_desc='Supplementary tools for processing PDFs'
 
 ghostscript_min_version=9.55.0
 qpdf_min_version=10.6.3
