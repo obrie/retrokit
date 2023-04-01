@@ -167,6 +167,7 @@ class Scraper:
             elif scrape_type == ScrapeType.NEW:
                 should_scrape = (group not in self.dataset)
             elif scrape_type == ScrapeType.MISSING:
+                metadata = self.dataset.get(group, {})
                 should_scrape = (len(metadata) == 1 and 'title' in metadata)
             else:
                 metadata = self.dataset.get(group, {})
