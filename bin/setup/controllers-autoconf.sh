@@ -26,12 +26,13 @@ __configure_autoconf() {
   cp "$autoconf_staging_file" "$autoconf_backup_file"
 
   # Track which keys we've overridden and which we've added (so we can later restore with confidence)
+  local autoconf_keys=$(crudini --get "$autoconf_backup_file" '')
   while read autoconf_key; do
     local existing_value=$(crudini --get "$autoconf_file" '' "$autoconf_key" 2>/dev/null)
     if [ -z "$existing_value" ]; then
       crudini --set "$autoconf_backup_file" '' "$autoconf_key" ''
     fi
-  done < <(crudini --get "$autoconf_backup_file" '')
+  done < <(echo "$autoconf_keys")
 
   # Merge in the changes
   ini_merge "$autoconf_staging_file" "$autoconf_file" backup=false
