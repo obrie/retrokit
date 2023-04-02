@@ -16,7 +16,7 @@ configure() {
   load_emulator_data
 
   # Identify new emulator selections
-  declare -A installed_keys
+  echo 'Identifying emulator selections...'
   local selections_cfg=''
   while IFS=$field_delim read -r rom_name playlist_name source_emulator; do
     local target_emulator=${emulators["$source_emulator/emulator"]:-$source_emulator}
@@ -24,21 +24,12 @@ configure() {
 
     # Remove it from existing selections so we know what we should delete
     # at the end of this
-    installed_keys["$config_key"]=1
     selections_cfg+="$config_key = \"$target_emulator\"\n"
   done < <(romkit_cache_list | jq -r 'select(.emulator) | [.name, .playlist .name, .emulator] | join("'$field_delim'")')
 
-  # Add emulator selections for roms with an explicit one
-  echo 'Adding emulator selections...'
+  echo 'Replacing emulator selections...'
+  sed -i "/^${system}_/d" "$emulators_config_file"
   crudini --merge "$emulators_config_file" < <(echo -e "$selections_cfg")
-
-  # Remove emulator selections for roms without one
-  echo 'Removing unused emulator selections...'
-  while read -r config_key; do
-    [ "${installed_keys["$config_key"]}" ] || crudini --del "$emulators_config_file" '' "$config_key"
-  done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
-
-  # Sort the file
   sort -o "$emulators_config_file" "$emulators_config_file"
 }
 
