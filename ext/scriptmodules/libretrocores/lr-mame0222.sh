@@ -9,7 +9,7 @@ rp_module_section="exp"
 rp_module_flags=""
 
 function __binary_url_lr-mame0222() {
-    echo "https://github.com/obrie/retrokit/releases/download/latest/$md_id-$__platform-$__os_codename.tar.gz"
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$md_id-$__os_codename-$__platform$(isPlatform 'kms' && echo '-kms').tar.gz"
 }
 
 function install_bin_lr-mame0222() {
