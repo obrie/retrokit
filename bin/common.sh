@@ -11,6 +11,7 @@ export bin_dir="$app_dir/bin"
 export ext_dir="$app_dir/ext"
 export lib_dir="$app_dir/lib"
 export field_delim=$'\u001f'
+export retrokit_version='2.0'
 
 export binary_base_url='https://github.com/obrie/retrokit/releases/download/latest'
 

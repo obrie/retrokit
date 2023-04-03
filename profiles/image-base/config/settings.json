@@ -1,0 +1,12 @@
+{
+  "overlays": {
+    "enable_game_overrides": false
+  },
+  "setup": {
+    "remove": [
+      "network-wifi",
+      "system-bios",
+      "system-roms-manuals"
+    ]
+  }
+}

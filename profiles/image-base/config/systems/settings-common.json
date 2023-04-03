@@ -1,0 +1,9 @@
+{
+  "roms": {
+    "stub": true,
+    "filters": {
+      "!emulator_compatibility": [false],
+      "!emulator_ratings": [0, 1, 2, 3]
+    }
+  }
+}
