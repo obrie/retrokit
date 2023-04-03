@@ -3,15 +3,10 @@
 system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
+. "$dir/mame-common.sh"
 
 setup_module_id='systems/arcade/mame-gameinfo'
 setup_module_desc='Game information support for MAME (command / gameinit)'
-
-command_dat_home='https://www.progettosnaps.net/command/'
-command_dat_url='https://www.progettosnaps.net/download/?tipo=command&file={filename}'
-
-gameinit_dat_home='https://www.progettosnaps.net/gameinit/'
-gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={filename}'
 
 build() {
   __build_mame2016
@@ -32,20 +27,24 @@ __build_mame2016() {
 
 __build_mame0222() {
   if has_emulator 'lr-mame0222'; then
-    __download_command_dat "$bios_dir/mame0222/history/command.dat"
-    __download_gameinit_dat "$bios_dir/mame0222/history/gameinit.dat"
+    __build_mame
+    file_ln "$bios_dir/mame/history/command.dat" "$bios_dir/mame0222/history/command.dat" backup=false
+    file_ln "$bios_dir/mame/history/gameinit.dat" "$bios_dir/mame0222/history/gameinit.dat" backup=false
   fi
 }
 
 __build_mame0244() {
   if has_emulator 'lr-mame0244'; then
-    __download_command_dat "$bios_dir/mame0244/history/command.dat"
-    __download_gameinit_dat "$bios_dir/mame0244/history/gameinit.dat"
+    __build_mame
+    file_ln "$bios_dir/mame/history/command.dat" "$bios_dir/mame0244/history/command.dat" backup=false
+    file_ln "$bios_dir/mame/history/gameinit.dat" "$bios_dir/mame0244/history/gameinit.dat" backup=false
   fi
 }
 
 __build_mame() {
-  if has_emulator 'lr-mame'; then
+  local force=$1
+
+  if has_emulator 'lr-mame' || [ "$force" == 'true' ]; then
     __download_command_dat "$bios_dir/mame/history/command.dat"
     __download_gameinit_dat "$bios_dir/mame/history/gameinit.dat"
   fi
@@ -59,15 +58,8 @@ __download_command_dat() {
     return
   fi
 
-  local filename=$(download "$command_dat_home" | grep -oE 'pS_Command_[0-9]+.zip')
-  if [ -z "$filename" ]; then
-    echo '[WARN] Unable to scrape command.dat filename'
-    return 1
-  fi
-
-  local url=$(render_template "$command_dat_url" filename="$filename")
   local archive_file=$(mktemp -p "$tmp_ephemeral_dir")
-  download "$url" "$archive_file"
+  download "$(__find_latest_mame_support_file pS_Command_)" "$archive_file"
 
   local extract_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
   unzip -ojq "$archive_file" 'dats/command.dat' -d "$extract_dir/"
@@ -82,15 +74,8 @@ __download_gameinit_dat() {
     return
   fi
 
-  local filename=$(download "$gameinit_dat_home" | grep -oE 'pS_gameinit_[0-9]+.zip')
-  if [ -z "$filename" ]; then
-    echo '[WARN] Unable to scrape gameinit.dat filename'
-    return 1
-  fi
-
-  local url=$(render_template "$gameinit_dat_url" filename="$filename")
   local archive_file=$(mktemp -p "$tmp_ephemeral_dir")
-  download "$url" "$archive_file"
+  download "$(__find_latest_mame_support_file pS_gameinit_)" "$archive_file"
 
   local extract_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
   unzip -ojq "$archive_file" 'dats/gameinit.dat' -d "$extract_dir/"

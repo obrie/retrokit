@@ -3,6 +3,7 @@
 system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
+. "$dir/mame-common.sh"
 
 setup_module_id='systems/arcade/cheats'
 setup_module_desc='Cheats for Arcade systems'
@@ -84,12 +85,11 @@ __build_mame0244() {
 __build_mame() {
   # Cheats: MAME (Pugsy)
   if has_emulator 'lr-mame'; then
-    local url='http://cheat.retrogames.com/download/cheat0245.zip'
-
-    if [ ! -f "$bios_dir/mame/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+    if [ ! -f "$bios_dir/mame/cheat.zip" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$url" "$cheats_file"
-      unzip -ju "$cheats_file" "cheat.7z" -d "$bios_dir/mame/"
+
+      download "$(__find_latest_mame_support_file cheats_pugsys)" "$cheats_file"
+      unzip -ju "$cheats_file" "cheat.zip" -d "$bios_dir/mame/"
     else
       echo "Already downloaded $url"
     fi

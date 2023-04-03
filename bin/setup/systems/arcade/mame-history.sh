@@ -3,6 +3,7 @@
 system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
+. "$dir/mame-common.sh"
 
 setup_module_id='systems/arcade/mame-history'
 setup_module_desc='History DAT support for MAME'
@@ -77,8 +78,7 @@ __build_mame() {
   if has_emulator 'lr-mame'; then
     if [ ! -f "$bios_dir/mame/history/history.xml" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local historydat_file=$(mktemp -p "$tmp_ephemeral_dir")
-      local latest_version=$(download 'https://archive.org/download/mame-support/mame-support_files.xml' | grep -oE 'historyxml[0-9]+\.zip' | grep -oE '[0-9]+')
-      download "https://archive.org/download/mame-support/Support/Support-Files/historyxml${latest_version}.zip" "$historydat_file"
+      download "$(__find_latest_mame_support_file historyxml)" "$historydat_file"
 
       mkdir -p "$bios_dir/mame/history"
       unzip -oj "$historydat_file" -d "$bios_dir/mame/history/"
