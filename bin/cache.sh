@@ -134,7 +134,7 @@ sync_emulator_binaries() {
 
     # Upload to github
     if [ -f "$archive_file" ]; then
-      local asset_name="$package-$platform-$dist.tar.gz"
+      local asset_name="$package-$dist-$platform-kms.tar.gz"
 
       # Get ID of the asset based on given filename.
       local asset_id=$(echo "$release_json" | jq -r ".assets[] | select(.name == \"$asset_name\").id")
