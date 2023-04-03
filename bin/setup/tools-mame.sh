@@ -43,7 +43,9 @@ __build_chdman_source() {
 }
 
 __build_chdman_binary() {
-  sudo unzip -o "$cache_dir/mame/mame0230-tools.zip" -d /usr/local/bin/
+  local mame_tools_archive=$(mktemp -p "$tmp_ephemeral_dir")
+  download "$binary_base_url/mame-tools-buster-rpi4-kms.tar.gz" "$mame_tools_archive"
+  sudo tar -zxvf "$mame_tools_archive" -C /usr/local/bin/
 }
 
 remove() {
