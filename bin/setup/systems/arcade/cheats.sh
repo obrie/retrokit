@@ -55,7 +55,7 @@ __build_mame2016() {
 __build_mame0222() {
   # Cheats: MAME (Pugsy)
   if has_emulator 'lr-mame0222'; then
-    local url='http://cheat.retrogames.com/download/cheat0221.zip'
+    local url="$binary_base_url/mame-cheats_pugsys0221.zip"
 
     if [ ! -f "$bios_dir/mame0222/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
@@ -70,7 +70,7 @@ __build_mame0222() {
 __build_mame0244() {
   # Cheats: MAME (Pugsy)
   if has_emulator 'lr-mame0244'; then
-    local url='http://cheat.retrogames.com/download/cheat0245.zip'
+    local url="$binary_base_url/mame-cheats_pugsys0244.zip"
 
     if [ ! -f "$bios_dir/mame0244/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")

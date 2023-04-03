@@ -12,6 +12,8 @@ export ext_dir="$app_dir/ext"
 export lib_dir="$app_dir/lib"
 export field_delim=$'\u001f'
 
+export binary_base_url='https://github.com/obrie/retrokit/releases/download/latest'
+
 # RetroPie paths
 export retropie_dir="/opt/retropie"
 export retropie_configs_dir="$retropie_dir/configs"

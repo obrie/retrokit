@@ -8,7 +8,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='systems/arcade/mame-history'
 setup_module_desc='History DAT support for MAME'
 
-history_dat_url='https://www.arcade-history.com/dats/historydat241.zip'
+history_dat_url="$binary_base_url/mame-historydat241.zip"
 
 # The following emulators have their history dats installed automatically by RetroPie:
 # * advmame (/opt/retropie/emulators/advmame-joy/share/advance/history.dat)
