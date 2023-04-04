@@ -214,9 +214,10 @@ class Database:
             # Format attributes within the metadata
             for attribute in self.attributes:
                 merge_attr_name = f'{attribute.name}|'
+                replace_attr_name = f'{attribute.name}~'
 
                 for attr_name in metadata_attrs:
-                    if attr_name == attribute.name or attr_name.startswith(merge_attr_name):
+                    if attr_name == attribute.name or attr_name.startswith(merge_attr_name) or attr_name.startswith(replace_attr_name):
                         value = metadata[attr_name]
                         if value or value == False or value == 0:
                             new_metadata[attr_name] = attribute.format(value)

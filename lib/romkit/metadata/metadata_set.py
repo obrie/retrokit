@@ -64,6 +64,7 @@ class MetadataSet:
         for attr_name in list(metadata.keys()):
             value_to_merge = metadata[attr_name]
             merge_char_index = attr_name.find('|')
+            replace_char_index = attr_name.find('~')
 
             if merge_char_index != -1:
                 reference_attr_name = attr_name[0:merge_char_index]
@@ -77,5 +78,8 @@ class MetadataSet:
                     new_value = value_to_merge
 
                 metadata[reference_attr_name] = new_value
+            elif replace_char_index != -1:
+                reference_attr_name = attr_name[0:replace_char_index]
+                metadata[reference_attr_name] = value_to_merge
 
         self.data[key] = metadata

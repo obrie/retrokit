@@ -38,6 +38,13 @@ class BaseAttribute:
                     if new_errors:
                         errors.extend(new_errors)
 
+        replace_key = f'{self.name}~'
+        for key, value in metadata.items():
+            if key.startswith(replace_key) and value is not None:
+                new_errors = self.validate(value)
+                if new_errors:
+                    errors.extend(new_errors)
+
         return errors
 
     # Gets the value of this attribute from the given metadata
