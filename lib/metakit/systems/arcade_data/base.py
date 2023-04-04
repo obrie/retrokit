@@ -25,6 +25,9 @@ class ExternalData:
     # need a version rendered in its template.
     version_pattern = None
 
+    # Whether this attribute can be associated with multiple values
+    multiple_values = False
+
     # Updates the given database with data loaded from the external resource
     def update(self, database: Database) -> None:
         self._load()
@@ -75,7 +78,10 @@ class ExternalData:
 
         for section in config.sections():
             for name, value in config.items(section, raw=True):
-                self.values[name] = section
+                if self.multiple_values:
+                    self.values.setdefault(name, []).append(section)
+                else:
+                    self.values[name] = section
 
     # Downloads the external resource data
     def download(self, force: bool = False) -> Resource:
@@ -113,7 +119,10 @@ class ExternalData:
     def get_value(self, name, attribute, database):
         value = self.values.get(name)
         if value:
-            return self._parse_value(value)
+            if self.multiple_values:
+                return list(map(self._parse_value, value))
+            else:
+                return self._parse_value(value)
 
     # Runs any post-processing on the raw data from the external resource
     def _parse_value(self, value):

@@ -1162,6 +1162,7 @@
   "5clownsp": {
     "group": "5clown",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -3477,7 +3478,7 @@
     "screen": {
       "orientation": "horizontal"
     },
-    "controls|override": [
+    "controls|extra": [
       "joy"
     ],
     "emulation": {
@@ -3790,6 +3791,7 @@
   "alien3j": {
     "group": "alien3",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -4316,6 +4318,7 @@
   "alpinerjc": {
     "group": "alpinerd",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -7144,6 +7147,7 @@
   "armwarb": {
     "group": "armwar",
     "languages": [
+      "en",
       "pt"
     ]
   },
@@ -8323,6 +8327,7 @@
     ],
     "series": "Asura",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -9132,6 +9137,7 @@
   "avalonca": {
     "group": "avalonc",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -9150,6 +9156,7 @@
   "avalonsa": {
     "group": "avalons",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -9284,6 +9291,7 @@
   "avsph": {
     "group": "avsp",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -10484,7 +10492,8 @@
     ],
     "series": "Bare Knuckle",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -10804,6 +10813,7 @@
   "batlzone": {
     "group": "mayday",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -11163,6 +11173,7 @@
   "bay_f201": {
     "group": "baywatch",
     "languages": [
+      "en",
       "fr"
     ]
   },
@@ -11764,6 +11775,7 @@
       "Casino / Cards"
     ],
     "languages": [
+      "en",
       "fr"
     ],
     "screen": {
@@ -13242,6 +13254,7 @@
       "Sports / Wrestling"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -13830,6 +13843,7 @@
     ],
     "series": "Bare Knuckle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -14806,6 +14820,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ko"
     ],
     "screen": {
@@ -15254,6 +15269,7 @@
     ],
     "series": "Tetris",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -17146,6 +17162,7 @@
   "borenchj": {
     "group": "borench",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -17213,6 +17230,7 @@
       "Maze / Collect"
     ],
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -18472,6 +18490,13 @@
     },
     "controls": [
       "gambling"
+    ]
+  },
+  "bsuertev": {
+    "group": "bsuerte",
+    "languages": [
+      "es",
+      "pt"
     ]
   },
   "bsv103": {
@@ -19977,7 +20002,8 @@
   "cadashgo": {
     "group": "cadash",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "cadashi": {
@@ -20007,6 +20033,7 @@
   "cadashs": {
     "group": "cadash",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -20580,6 +20607,8 @@
     ],
     "series": "SNK vs. Capcom",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -22778,6 +22807,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -23947,6 +23977,12 @@
       "gambling"
     ]
   },
+  "chmpnum": {
+    "group": "chsuper3",
+    "languages": [
+      "it"
+    ]
+  },
   "chmpnuma": {
     "group": "chsuper3",
     "languages": [
@@ -24071,9 +24107,24 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
+    "emulation|override": {
+      "rating": 0
+    },
     "merge": [
       "chplft"
     ]
+  },
+  "chopliftb": {
+    "group": "choplift",
+    "emulation|override": {
+      "rating": 5
+    }
+  },
+  "chopliftu": {
+    "group": "choplift",
+    "emulation|override": {
+      "rating": 5
+    }
   },
   "chopper": {
     "players": 2,
@@ -24198,6 +24249,7 @@
       "Slot Machine / Video Slot * Mature *"
     ],
     "languages": [
+      "en",
       "it"
     ],
     "screen": {
@@ -25417,6 +25469,7 @@
       "Maze / Collect"
     ],
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -26098,6 +26151,7 @@
       "Maze / Collect"
     ],
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -27534,6 +27588,7 @@
   "coolminii": {
     "group": "coolmini",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -29605,6 +29660,7 @@
   "crystalca": {
     "group": "crystalc",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -29751,6 +29807,8 @@
       "Driving / Race (chase view)"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -30242,6 +30300,8 @@
       "Sports / Tennis"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -30288,6 +30348,8 @@
       "Shooter / Field"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -30944,6 +31006,7 @@
       "Casino / Cards"
     ],
     "languages": [
+      "en",
       "it"
     ],
     "screen": {
@@ -31437,6 +31500,7 @@
   "cybrcyccj": {
     "group": "cybrcycc",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -31675,30 +31739,35 @@
   "czmon_21": {
     "group": "czmon_13",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "czmon_22": {
     "group": "czmon_13",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "czmon_23": {
     "group": "czmon_13",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "czmon_24": {
     "group": "czmon_13",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "czmon_25": {
     "group": "czmon_13",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -33385,6 +33454,13 @@
       "rating": 5
     }
   },
+  "ddboya": {
+    "group": "ddboy",
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
   "ddcrew": {
     "players": 4,
     "rating": 70,
@@ -34148,6 +34224,7 @@
       "Music Game / Dance"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34163,6 +34240,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34179,6 +34257,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34258,6 +34337,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34273,6 +34353,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34288,6 +34369,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34303,6 +34385,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34318,6 +34401,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34333,6 +34417,7 @@
     ],
     "series": "Dance Dance Revolution",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -34714,6 +34799,8 @@
   "deathcoxo": {
     "group": "deathcox",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ]
   },
@@ -35119,6 +35206,7 @@
     ],
     "series": "Densha de GO!",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -35148,6 +35236,7 @@
     ],
     "series": "Densha de GO!",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -35176,6 +35265,7 @@
     ],
     "series": "Densha de GO!",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -35193,6 +35283,7 @@
     ],
     "series": "Denjin Makai",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -35225,6 +35316,7 @@
   "denseib2": {
     "group": "denseib",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -35285,6 +35377,8 @@
     ],
     "series": "Derby Owners Club",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -35304,6 +35398,8 @@
     ],
     "series": "Derby Owners Club",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -35323,6 +35419,8 @@
     ],
     "series": "Derby Owners Club",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -35343,6 +35441,7 @@
       "Puzzle / Drop"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -35764,6 +35863,7 @@
       "Music Game / Dance"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -36049,6 +36149,7 @@
       "Maze / Move and Sort"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -36502,6 +36603,13 @@
       "joy"
     ]
   },
+  "dinokich": {
+    "group": "dinoki25",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
   "dinoking": {
     "players": 2,
     "genres": [
@@ -36863,6 +36971,7 @@
     ],
     "series": "Donkey Kong",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -37290,6 +37399,8 @@
     ],
     "series": "Dead or Alive",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -37335,6 +37446,7 @@
       "Medal Game / Timing"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -39229,6 +39341,20 @@
       "chindrag"
     ]
   },
+  "drgnwrldv11h": {
+    "group": "drgnwrld",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "drgnwrldv11ha": {
+    "group": "drgnwrld",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
   "drgnwrldv20j": {
     "group": "drgnwrld",
     "languages": [
@@ -39295,6 +39421,13 @@
     "group": "drgw2",
     "languages": [
       "ja"
+    ]
+  },
+  "drgw2101c": {
+    "group": "drgw2",
+    "languages": [
+      "en",
+      "zh"
     ]
   },
   "drgw3": {
@@ -39415,6 +39548,7 @@
   "driftoutj": {
     "group": "driftout",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -40023,6 +40157,7 @@
     ],
     "series": "Dancing Stage",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -40385,6 +40520,7 @@
     ],
     "series": "Dragon World",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -40464,7 +40600,8 @@
     ],
     "series": "Dragon World",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -40490,6 +40627,8 @@
     ],
     "series": "Dynamite Baseball",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -42636,6 +42775,12 @@
     "group": "empcity",
     "languages": [
       "fr"
+    ]
+  },
+  "empcityi": {
+    "group": "empcity",
+    "languages~replace": [
+      "it"
     ]
   },
   "empcityj": {
@@ -46448,7 +46593,8 @@
   "fantasyg2": {
     "group": "fantasyu",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "fantasyj": {
@@ -46680,6 +46826,7 @@
     ],
     "series": "Fantasy Zone",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -47361,36 +47508,42 @@
   "fcockt2_10": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt2_11": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt2_12": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt2_13": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt2_14": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt2_15": {
     "group": "fcockt2",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -47403,18 +47556,21 @@
   "fcockt_20": {
     "group": "fcockt_8",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt_21": {
     "group": "fcockt_8",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "fcockt_22": {
     "group": "fcockt_8",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -47751,36 +47907,42 @@
   "fg_1000ag": {
     "group": "fg_120af",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "fg_1000ai": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "it"
     ]
   },
   "fg_1000al": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "es"
     ]
   },
   "fg_110ag": {
     "group": "fg_120af",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "fg_110ai": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "it"
     ]
   },
   "fg_110al": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -47789,6 +47951,7 @@
       "Electromechanical / Pinball"
     ],
     "languages": [
+      "en",
       "fr"
     ],
     "mechanical": true
@@ -47796,24 +47959,28 @@
   "fg_120ag": {
     "group": "fg_120af",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "fg_120ai": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "it"
     ]
   },
   "fg_120al": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "es"
     ]
   },
   "fg_300ai": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -47826,18 +47993,21 @@
   "fg_400ag": {
     "group": "fg_120af",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "fg_700al": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "es"
     ]
   },
   "fg_800al": {
     "group": "fg_120af",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -48573,7 +48743,7 @@
       "Quiz / Questions in Italian"
     ],
     "languages": [
-      "en"
+      "it"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -49312,6 +49482,7 @@
   "flashgdnfv": {
     "group": "flashgdn",
     "languages": [
+      "en",
       "fr"
     ]
   },
@@ -50130,6 +50301,7 @@
   "fourtraxj": {
     "group": "fourtrax",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -50297,6 +50469,7 @@
   "fredmesp": {
     "group": "fredmem",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -50807,7 +50980,8 @@
       "Casino / Misc."
     ],
     "languages": [
-      "de"
+      "de",
+      "en"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -51758,6 +51932,7 @@
   "fzeroaxd": {
     "group": "fzeroax",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -52574,6 +52749,7 @@
   "galkamika": {
     "group": "galaxian",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -52698,6 +52874,7 @@
   "galpani2k": {
     "group": "galpani2",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -52993,6 +53170,7 @@
   "gambl186c": {
     "group": "gambl186",
     "languages": [
+      "en",
       "fr"
     ]
   },
@@ -53511,30 +53689,35 @@
   "garage_13": {
     "group": "garage_5",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "garage_14": {
     "group": "garage_5",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "garage_15": {
     "group": "garage_5",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "garage_16": {
     "group": "garage_5",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "garage_17": {
     "group": "garage_5",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -54816,6 +54999,7 @@
       "Medal Game / Action"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -54832,6 +55016,8 @@
     ],
     "series": "All Japan Pro Wrestling",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -55835,7 +56021,8 @@
   "gldncrwnhop": {
     "group": "gldncrwn",
     "languages": [
-      "en"
+      "en",
+      "nl"
     ]
   },
   "gldneye": {
@@ -56260,30 +56447,35 @@
   "gnome_15": {
     "group": "gnome_9",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "gnome_16": {
     "group": "gnome_9",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "gnome_17": {
     "group": "gnome_9",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "gnome_18": {
     "group": "gnome_9",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "gnome_19": {
     "group": "gnome_9",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -56664,6 +56856,7 @@
       "Sports / Darts"
     ],
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -56676,6 +56869,7 @@
   "goldartp": {
     "group": "goldart",
     "languages": [
+      "en",
       "pt"
     ]
   },
@@ -57790,6 +57984,7 @@
   "grally": {
     "group": "polepos2",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -57800,6 +57995,8 @@
     ],
     "series": "All Japan Pro Wrestling",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -57956,7 +58153,8 @@
       "Casino / Cards"
     ],
     "languages": [
-      "de"
+      "de",
+      "en"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -58527,6 +58725,7 @@
   "grudgei": {
     "group": "grudge",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -59372,6 +59571,8 @@
     ],
     "series": "Great 1000 Miles Rally",
     "languages": [
+      "de",
+      "en",
       "it"
     ],
     "screen": {
@@ -59406,6 +59607,7 @@
     ],
     "series": "Great 1000 Miles Rally",
     "languages": [
+      "en",
       "it"
     ],
     "screen": {
@@ -59665,24 +59867,28 @@
   "gtrfrksaa": {
     "group": "gtrfrks",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "gtrfrksea": {
     "group": "gtrfrks",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "gtrfrksja": {
     "group": "gtrfrks",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "gtrfrksua": {
     "group": "gtrfrks",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -59692,6 +59898,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -59707,6 +59914,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -59722,6 +59930,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -59737,6 +59946,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -59752,6 +59962,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -59767,6 +59978,7 @@
     ],
     "series": "Guitar Freaks",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -60017,6 +60229,7 @@
       "Puzzle / Drop"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -60074,6 +60287,7 @@
   "gunbarla": {
     "group": "ptblank2",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -61112,6 +61326,8 @@
     ],
     "series": "Giga Wing",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -61789,6 +62005,7 @@
   "hangonvf": {
     "group": "hangon",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -61856,6 +62073,13 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "happy6100cn": {
+    "group": "happy6",
+    "languages": [
+      "en",
+      "zh"
+    ]
   },
   "happy6100hk": {
     "group": "happy6",
@@ -62962,6 +63186,7 @@
     ],
     "series": "Head On",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -63625,6 +63850,7 @@
     ],
     "series": "Hidden Catch",
     "languages": [
+      "en",
       "ko"
     ],
     "screen": {
@@ -63645,6 +63871,15 @@
       "emulator": "lr-fbneo",
       "rating": 3
     }
+  },
+  "hidctch2a": {
+    "group": "hidctch2",
+    "languages": [
+      "en",
+      "ja",
+      "ko",
+      "zh"
+    ]
   },
   "hidctch3": {
     "players": 2,
@@ -63707,6 +63942,7 @@
     ],
     "series": "Hidden Catch",
     "languages": [
+      "en",
       "ko"
     ],
     "screen": {
@@ -63913,6 +64149,7 @@
     ],
     "series": "Hi Pai Paradise",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -64242,6 +64479,7 @@
       "Fighter / 3D"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -67077,6 +67315,7 @@
   "iganinjub": {
     "group": "kazan",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -69091,6 +69330,7 @@
     ],
     "series": "Island * Slot",
     "languages": [
+      "en",
       "ru"
     ],
     "screen": {
@@ -69107,6 +69347,7 @@
     ],
     "series": "Island * Slot",
     "languages": [
+      "en",
       "ru"
     ],
     "screen": {
@@ -74361,6 +74602,8 @@
       "Driving / Race"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -75510,12 +75753,14 @@
   "jojojr1": {
     "group": "jojo",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "jojojr2": {
     "group": "jojo",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -75714,12 +75959,14 @@
   "jolycdif": {
     "group": "jollycrd",
     "languages": [
+      "en",
       "it"
     ]
   },
   "jolycdih": {
     "group": "jollycrd",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -75823,6 +76070,7 @@
       "Ball & Paddle / Breakout"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -75853,6 +76101,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -75872,6 +76121,7 @@
       "Tabletop / Mahjong * Mature *"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -76266,6 +76516,7 @@
     ],
     "series": "Jikkyou Powerful Pro Yakyuu",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -76673,18 +76924,6 @@
       "keypad"
     ]
   },
-  "jungleby": {
-    "group": "junglek",
-    "languages": [
-      "en"
-    ]
-  },
-  "jungleh": {
-    "group": "junglek",
-    "languages": [
-      "en"
-    ]
-  },
   "junglehbr": {
     "group": "junglek",
     "languages": [
@@ -76698,7 +76937,7 @@
       "Platform / Run, Jump & Scrolling"
     ],
     "languages": [
-      "ja"
+      "en"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -76721,12 +76960,6 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
-  },
-  "junglekas": {
-    "group": "junglek",
-    "languages": [
-      "en"
-    ]
   },
   "jungler": {
     "players": 2,
@@ -77802,6 +78035,7 @@
       "Casino / Racing"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -77862,42 +78096,49 @@
   "keks_13": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_14": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_15": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_16": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_17": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_18": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "keks_19": {
     "group": "keks_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -78593,7 +78834,8 @@
     ],
     "series": "The Killing Blade",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -78609,18 +78851,21 @@
   "killbld100": {
     "group": "killbld",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "killbld104": {
     "group": "killbld",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "killbld106": {
     "group": "killbld",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -78632,7 +78877,8 @@
     ],
     "series": "The Killing Blade",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -79893,7 +80139,8 @@
       "Fighter / Versus"
     ],
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -80770,6 +81017,20 @@
       "rating": 5
     }
   },
+  "kov2p200": {
+    "group": "kov2p",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "kov2p203": {
+    "group": "kov2p",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
   "kov3": {
     "players": 2,
     "rating": 60,
@@ -80871,6 +81132,20 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "kovsh101": {
+    "group": "kovsh",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "kovsh102": {
+    "group": "kovsh",
+    "languages": [
+      "en",
+      "zh"
+    ]
   },
   "kovshp": {
     "players": 4,
@@ -82337,7 +82612,8 @@
       "Driving / Race Bike"
     ],
     "languages": [
-      "ko"
+      "ko",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -83012,6 +83288,7 @@
   "legionnaj": {
     "group": "legionna",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -83428,18 +83705,21 @@
   "lhaunt_14": {
     "group": "lhaunt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "lhaunt_15": {
     "group": "lhaunt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "lhaunt_16": {
     "group": "lhaunt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -99383,6 +99663,7 @@
   "mag10": {
     "group": "pool10",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -101146,6 +101427,7 @@
     ],
     "series": "Mario Bros.",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -101352,6 +101634,7 @@
       "Tabletop / Mahjong * Mature *"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -101527,6 +101810,7 @@
     ],
     "series": "Super Mario Fushigi no Korokoro Party",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -102219,6 +102503,7 @@
   "mazanj": {
     "group": "mazan",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -103132,7 +103417,8 @@
   "megat3tg": {
     "group": "megat3",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "megat4": {
@@ -103188,7 +103474,8 @@
   "megat5g": {
     "group": "megat5",
     "languages": [
-      "de"
+      "de",
+      "en"
     ]
   },
   "megat6": {
@@ -105263,11 +105550,19 @@
       "rating": 5
     }
   },
+  "mirninjaa": {
+    "group": "mirninja",
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
   "mirworld": {
     "genres": [
       "Medal Game / Coin Pusher"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -106170,6 +106465,7 @@
     ],
     "series": "Mahjong The Mysterious World",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -106189,6 +106485,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -106205,6 +106502,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -106221,6 +106519,7 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -106807,6 +107106,7 @@
   "mlandingj": {
     "group": "mlanding",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -108017,18 +108317,21 @@
   "moonlghta": {
     "group": "goldstar",
     "languages": [
+      "en",
       "it"
     ]
   },
   "moonlghtb": {
     "group": "goldstar",
     "languages": [
+      "en",
       "it"
     ]
   },
   "moonlghtc": {
     "group": "goldstar",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -109969,18 +110272,6 @@
       "el"
     ]
   },
-  "mspacmanbg": {
-    "group": "mspacman",
-    "languages": [
-      "es"
-    ]
-  },
-  "mspacmanbgd": {
-    "group": "mspacman",
-    "languages": [
-      "el"
-    ]
-  },
   "mspacmanbhe": {
     "group": "mspacman",
     "languages": [
@@ -109990,6 +110281,7 @@
   "mspacmanblt2": {
     "group": "mspacman",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -111280,6 +111572,7 @@
       "Arcade / Strength Tester"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111311,6 +111604,7 @@
     ],
     "series": "Mushiking - The King Of Beetle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111331,6 +111625,7 @@
     ],
     "series": "Mushiking - The King Of Beetle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111350,6 +111645,7 @@
       "Fighter / Versus"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111365,6 +111661,7 @@
       "Fighter / Versus"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111381,6 +111678,7 @@
     ],
     "series": "Mushiking - The King Of Beetle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111397,6 +111695,7 @@
   "mushik2k": {
     "group": "mushik2e",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -111407,6 +111706,7 @@
     ],
     "series": "Mushiking - The King Of Beetle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111423,7 +111723,8 @@
   "mushikc": {
     "group": "mushike",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ]
   },
   "mushike": {
@@ -111433,6 +111734,7 @@
     ],
     "series": "Mushiking - The King Of Beetle",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -111881,6 +112183,7 @@
     ],
     "series": "Marvel Vs. Capcom",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -113013,12 +113316,14 @@
   "nbapbpj": {
     "group": "nbapbp",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "nbapbpja": {
     "group": "nbapbp",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -114459,6 +114764,7 @@
       "Sports / Baseball"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -115021,7 +115327,8 @@
   "nkoulit": {
     "group": "royalcrd",
     "languages": [
-      "el"
+      "el",
+      "en"
     ]
   },
   "nmaster": {
@@ -116672,12 +116979,14 @@
   "oedfight": {
     "group": "bloodwar",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "oedfighta": {
     "group": "bloodwar",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -116985,6 +117294,13 @@
       "mahjong"
     ]
   },
+  "ojankocb": {
+    "group": "ojankoc",
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
   "ojankohs": {
     "players": 1,
     "genres": [
@@ -117086,7 +117402,10 @@
   "oldsplus203": {
     "group": "oldsplus",
     "languages": [
-      "ko"
+      "en",
+      "ja",
+      "ko",
+      "zh"
     ]
   },
   "olibochu": {
@@ -117123,6 +117442,7 @@
   "olibug": {
     "group": "jumpbug",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -117170,6 +117490,7 @@
   "olmandingo": {
     "group": "amidar",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -117643,6 +117964,7 @@
   "opwolf3j": {
     "group": "opwolf3",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -117944,6 +118266,13 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "orlegend105t": {
+    "group": "orlegend",
+    "languages": [
+      "en",
+      "zh"
+    ]
   },
   "orlegend111k": {
     "group": "orlegend",
@@ -118310,6 +118639,8 @@
       "Shooter / 1st Person"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -118357,6 +118688,7 @@
       "Tabletop / Mahjong * Mature *"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -122646,6 +122978,7 @@
   "pebe0014a": {
     "group": "pebe0014",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -123597,6 +123930,7 @@
   "pepp0242": {
     "group": "pepp0054",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -123673,6 +124007,7 @@
   "pepp0449a": {
     "group": "pepp0001",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -124788,18 +125123,21 @@
   "pex0055pj": {
     "group": "pex0055p",
     "languages": [
+      "en",
       "es"
     ]
   },
   "pex0055po": {
     "group": "pex0055p",
     "languages": [
+      "en",
       "es"
     ]
   },
   "pex0055pr": {
     "group": "pex0055p",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -127351,13 +127689,20 @@
       "Puzzle / Misc. * Mature *"
     ],
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
     },
     "controls": [
       "joy"
+    ]
+  },
+  "pgm3in1c100": {
+    "group": "pgm3in1",
+    "languages": [
+      "en"
     ]
   },
   "pgmdemo": {
@@ -127845,6 +128190,7 @@
   "photoy2k103j": {
     "group": "photoy2k",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -128486,30 +128832,35 @@
   "pirate2_10": {
     "group": "pirate2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "pirate2_11": {
     "group": "pirate2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "pirate2_12": {
     "group": "pirate2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "pirate2_8": {
     "group": "pirate2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "pirate2_9": {
     "group": "pirate2",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -128550,6 +128901,7 @@
   "pirate_5": {
     "group": "pirate_3",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -128645,12 +128997,6 @@
     "screen": {
       "orientation": "horizontal"
     }
-  },
-  "piratpet": {
-    "group": "junglek",
-    "languages": [
-      "en"
-    ]
   },
   "pirpok2": {
     "players": 1,
@@ -128956,6 +129302,8 @@
   "pjustica": {
     "group": "pjustic",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ]
   },
@@ -129625,7 +129973,7 @@
       "Touchscreen / Multi-Games"
     ],
     "languages": [
-      "es"
+      "en"
     ]
   },
   "plygonet": {
@@ -129752,6 +130100,7 @@
       "Puzzle / Drop"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -129963,6 +130312,7 @@
       "Casino / Cards"
     ],
     "languages": [
+      "fr",
       "it"
     ],
     "screen": {
@@ -130238,6 +130588,7 @@
   "polepos2bs": {
     "group": "polepos2",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -130658,12 +131009,14 @@
   "pool10j": {
     "group": "pool10",
     "languages": [
+      "en",
       "it"
     ]
   },
   "pool10k": {
     "group": "pool10",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -130935,6 +131288,7 @@
   "popn1j": {
     "group": "popn1",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -131290,6 +131644,7 @@
   "portera": {
     "group": "dockman",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -131330,91 +131685,106 @@
   "potc_110ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_110gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potc_111as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_113ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_113as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_113gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potc_115ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_115as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_115gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potc_300ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_300as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_300gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potc_400ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_400as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_400gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potc_600": {
@@ -131422,6 +131792,7 @@
       "Electromechanical / Pinball"
     ],
     "languages": [
+      "en",
       "fr"
     ],
     "mechanical": true
@@ -131429,19 +131800,22 @@
   "potc_600ai": {
     "group": "potc_600",
     "languages": [
+      "en",
       "it"
     ]
   },
   "potc_600as": {
     "group": "potc_600",
     "languages": [
+      "en",
       "es"
     ]
   },
   "potc_600gf": {
     "group": "potc_600",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "potgame": {
@@ -131704,6 +132078,7 @@
   "powerinspj": {
     "group": "powerins",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -131783,6 +132158,7 @@
     ],
     "series": "Jikkyou Powerful Pro Yakyuu",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -131818,6 +132194,7 @@
   "ppchampa": {
     "group": "gotcha",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -131993,6 +132370,9 @@
     ],
     "languages": [
       "en"
+    ],
+    "languages~replace": [
+      "ja"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -133535,6 +133915,7 @@
     ],
     "series": "Power Stone",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -133555,6 +133936,7 @@
     ],
     "series": "Power Stone",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -134320,6 +134702,7 @@
       "Puzzle / Misc."
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -134537,6 +134920,7 @@
   "puzlbanga": {
     "group": "suplup",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -134730,6 +135114,7 @@
   "puzzlia": {
     "group": "puzzli",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -135617,6 +136002,8 @@
       "Quiz / Questions in Japanese"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -137728,6 +138115,7 @@
     "genres": [
       "Driving / Race (chase view)"
     ],
+    "series": "Racing Jam",
     "languages": [
       "en"
     ],
@@ -138215,6 +138603,7 @@
   "raiden2k": {
     "group": "raiden2",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -139063,12 +139452,14 @@
   "rbff1k": {
     "group": "rbff1",
     "languages": [
+      "en",
       "ko"
     ]
   },
   "rbff1ka": {
     "group": "rbff1",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -139404,24 +139795,28 @@
   "rclimb_11": {
     "group": "rclimb_3",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "rclimb_12": {
     "group": "rclimb_3",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "rclimb_13": {
     "group": "rclimb_3",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "rclimb_14": {
     "group": "rclimb_3",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -140606,36 +141001,42 @@
   "resdnt_12": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "resdnt_13": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "resdnt_14": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "resdnt_15": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "resdnt_16": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "resdnt_17": {
     "group": "resdnt_6",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -141026,6 +141427,7 @@
   "ribbitj": {
     "group": "ribbit",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -142789,6 +143191,7 @@
   "rodlandjb2": {
     "group": "rodland",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -143461,6 +143864,7 @@
   "royalcrdb": {
     "group": "royalcrd",
     "languages": [
+      "de",
       "pl"
     ]
   },
@@ -144727,6 +145131,7 @@
       "Medal Game / Action"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -158341,6 +158746,9 @@
       "Puzzle / Misc."
     ],
     "languages": [
+      "en",
+      "it",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -158769,6 +159177,7 @@
     ],
     "series": "Wonder League",
     "languages": [
+      "en",
       "ko"
     ],
     "screen": {
@@ -161138,6 +161547,8 @@
       "Tabletop / Mahjong"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -161948,6 +162359,9 @@
     ],
     "series": "Shootout Pool",
     "languages": [
+      "en",
+      "ja",
+      "ko",
       "ru"
     ],
     "screen": {
@@ -161963,6 +162377,7 @@
     ],
     "series": "Shootout Pool",
     "languages": [
+      "en",
       "ru"
     ],
     "screen": {
@@ -161975,6 +162390,7 @@
   "shootplmp": {
     "group": "shootplm",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -162021,7 +162437,8 @@
     ],
     "series": "Star Horse",
     "languages": [
-      "en"
+      "en",
+      "zh"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -164294,6 +164711,8 @@
     ],
     "series": "Spikeout",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -164722,162 +165141,189 @@
   "sman_102ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_130ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_130ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_130es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_130gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_140ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_140ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_140es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_140gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_160ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_160ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_160es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_160gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_170ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_170ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_170es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_170gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_190ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_190ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_190es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_190gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_192ef": {
     "group": "sman_240",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "sman_192ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_192es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
   "sman_192gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_210ei": {
     "group": "sman_240",
     "languages": [
+      "en",
       "it"
     ]
   },
   "sman_210es": {
     "group": "sman_240",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -164890,7 +165336,8 @@
   "sman_210gf": {
     "group": "sman_240",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "sman_240": {
@@ -166662,6 +167109,7 @@
   "sotsugyok": {
     "group": "sotsugyo",
     "languages": [
+      "en",
       "ko"
     ]
   },
@@ -168491,6 +168939,7 @@
       "Medal Game / Action"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -169497,12 +169946,14 @@
   "spikes91": {
     "group": "pspikes",
     "languages": [
+      "en",
       "it"
     ]
   },
   "spikes91b": {
     "group": "pspikes",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -170531,6 +170982,7 @@
   "sqixr0": {
     "group": "sqix",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -170909,6 +171361,7 @@
     ],
     "series": "Super Real Mahjong",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -171124,12 +171577,14 @@
   "sscopeja": {
     "group": "sscope",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "sscopejb": {
     "group": "sscope",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -171754,6 +172209,7 @@
     ],
     "series": "Sonic",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -172414,6 +172870,7 @@
   "stadhr96j2": {
     "group": "stadhr96",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -173979,6 +174436,7 @@
   "strahljbl": {
     "group": "strahl",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -174704,6 +175162,7 @@
   "strxt_it_101": {
     "group": "strikext",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -176722,6 +177181,13 @@
       "rating": 5
     }
   },
+  "svghk": {
+    "group": "svg",
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
   "svolley": {
     "players": 2,
     "rating": 50,
@@ -176758,6 +177224,7 @@
   "svolleybl": {
     "group": "svolley",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -176949,30 +177416,35 @@
   "sweetl2_10": {
     "group": "sweetl2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "sweetl2_11": {
     "group": "sweetl2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "sweetl2_12": {
     "group": "sweetl2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "sweetl2_8": {
     "group": "sweetl2",
     "languages": [
+      "en",
       "ru"
     ]
   },
   "sweetl2_9": {
     "group": "sweetl2",
     "languages": [
+      "en",
       "ru"
     ]
   },
@@ -178137,6 +178609,13 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "tantrbl4": {
+    "group": "tantr",
+    "languages": [
+      "en",
+      "ja"
+    ]
   },
   "tantrkor": {
     "group": "tantr",
@@ -179699,12 +180178,14 @@
   "terabrstj": {
     "group": "terabrst",
     "languages": [
+      "en",
       "ja"
     ]
   },
   "terabrstja": {
     "group": "terabrst",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -180641,6 +181122,7 @@
   "thegladpcb": {
     "group": "theglad",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -180718,6 +181200,13 @@
       "emulator": "lr-mame",
       "rating": 5
     }
+  },
+  "themj2": {
+    "group": "themj",
+    "languages": [
+      "en",
+      "ja"
+    ]
   },
   "thenanpa": {
     "genres": [
@@ -181129,6 +181618,7 @@
     ],
     "series": "Thrill Drive",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -182350,6 +182840,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -182383,6 +182874,12 @@
       "en"
     ]
   },
+  "tm2kspeval": {
+    "group": "tm2k",
+    "languages": [
+      "es"
+    ]
+  },
   "tm3k": {
     "players": 2,
     "rating": 50,
@@ -182391,6 +182888,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -182420,6 +182918,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -182455,6 +182954,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -182490,6 +182990,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -182514,6 +183015,9 @@
   "tm7kde": {
     "group": "tm7k",
     "languages": [
+      "de",
+      "en",
+      "it",
       "tr"
     ]
   },
@@ -182525,6 +183029,7 @@
     ],
     "series": "Touchmaster",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -183619,6 +184124,7 @@
       "Fighter / Versus"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -184294,6 +184800,8 @@
       "Shooter / Misc."
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -184736,6 +185244,7 @@
     ],
     "series": "Toy's March",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -184751,6 +185260,7 @@
     ],
     "series": "Toy's March",
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -191042,6 +191552,7 @@
     ],
     "series": "Aristocrat MK Hardware",
     "languages": [
+      "en",
       "es"
     ],
     "screen": {
@@ -191452,6 +191963,7 @@
   "victlapj": {
     "group": "victlap",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -192165,6 +192677,8 @@
       "Sports / Basketball"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -192492,6 +193006,7 @@
   "vonr": {
     "group": "von",
     "languages": [
+      "en",
       "ja"
     ]
   },
@@ -192710,6 +193225,8 @@
     ],
     "series": "Virtua Striker",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -192919,7 +193436,10 @@
   },
   "vscompmj": {
     "group": "jongpute",
-    "players": 2
+    "players": 2,
+    "languages": [
+      "ja"
+    ]
   },
   "vsfdf": {
     "players": 2,
@@ -193363,6 +193883,8 @@
     ],
     "series": "Virtua Tennis",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -193379,6 +193901,7 @@
     ],
     "series": "Virtua Tennis",
     "languages": [
+      "ja",
       "ko"
     ],
     "screen": {
@@ -196507,6 +197030,8 @@
       "Driving / Motorbike"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -197292,12 +197817,14 @@
   "wpt_111a": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "wpt_111ai": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -197316,7 +197843,8 @@
   "wpt_111gf": {
     "group": "wpt_1400",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "wpt_111i": {
@@ -197334,12 +197862,14 @@
   "wpt_112af": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "wpt_112ai": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -197358,7 +197888,8 @@
   "wpt_112gf": {
     "group": "wpt_1400",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "wpt_112i": {
@@ -197385,12 +197916,14 @@
   "wpt_1400af": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "fr"
     ]
   },
   "wpt_1400ai": {
     "group": "wpt_1400",
     "languages": [
+      "en",
       "it"
     ]
   },
@@ -197409,7 +197942,8 @@
   "wpt_1400gf": {
     "group": "wpt_1400",
     "languages": [
-      "de"
+      "de",
+      "fr"
     ]
   },
   "wpt_1400i": {
@@ -198023,7 +198557,11 @@
   },
   "wwallyja3p": {
     "group": "wwallyj",
-    "players": 3
+    "players": 3,
+    "languages": [
+      "en",
+      "ja"
+    ]
   },
   "wwaratah": {
     "genres": [
@@ -198125,6 +198663,7 @@
   "wwfr_103f": {
     "group": "wwfr_106",
     "languages": [
+      "en",
       "fr"
     ]
   },
@@ -198149,6 +198688,8 @@
       "Sports / Wrestling"
     ],
     "languages": [
+      "en",
+      "ja",
       "ko"
     ],
     "screen": {
@@ -199772,6 +200313,7 @@
       "Slot Machine / Video Slot"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -199786,6 +200328,7 @@
       "Slot Machine / Video Slot"
     ],
     "languages": [
+      "en",
       "ja"
     ],
     "screen": {
@@ -199991,12 +200534,14 @@
   "zerotimemc": {
     "group": "galaxian",
     "languages": [
+      "en",
       "es"
     ]
   },
   "zerotimeu": {
     "group": "galaxian",
     "languages": [
+      "en",
       "es"
     ]
   },
@@ -200413,6 +200958,8 @@
   "zombrvno": {
     "group": "zombrvn",
     "languages": [
+      "en",
+      "ja",
       "ko"
     ]
   },
