@@ -290,7 +290,7 @@ vacuum() {
   # Generate rm commands for unused images
   while read -r path; do
     [ "${installed_images["$path"]}" ] || echo "rm -fv $(printf '%q' "$path")"
-  done < <(find "$system_overlay_dir" -name '*.png')
+  done < <(find "$system_overlay_dir" -name '*.png' -not -name "$system.png" -not -name "$system-lightgun.png" -not -name "$system-vertical.png")
 }
 
 remove() {
