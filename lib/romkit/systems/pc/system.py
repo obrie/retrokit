@@ -17,15 +17,18 @@ class PCSystem(BaseSystem):
 
     AUTOEXEC_OPTION_REGEX = re.compile('^(.+)(\[autoexec\].+)$', re.M|re.DOTALL)
 
-    def __init__(self, config: dict) -> None:
-        super().__init__(config)
+    def __init__(self, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
 
         self.config_archive_files = {}
 
         if self.CONFIG_ARCHIVE_PATH.exists():
+            # Map zip file contents to improve lookup performance
             self.config_archive = zipfile.ZipFile(self.CONFIG_ARCHIVE_PATH, 'r')
             for filename in self.config_archive.namelist():
                 self.config_archive_files[filename.lower()] = self.config_archive.getinfo(filename)
+        else:
+            self.config_archive = None
 
     # Installs the given machine, additionally providing configs when applicable
     def install_machine(self, machine: Machine) -> bool:
@@ -75,7 +78,7 @@ class PCSystem(BaseSystem):
         config.read_string(non_autoexec_content)
         overwrite = False
 
-        conf_files = self.config['roms']['files'].get('conf', {})
+        conf_files = self.file_templates.get('conf', {})
 
         # Migrate predefined config to one suitable for the current emulator
         migration_path_template = conf_files.get('migration')

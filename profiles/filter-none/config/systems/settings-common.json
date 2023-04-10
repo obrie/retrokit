@@ -2,9 +2,9 @@
   "roms": {
     "filters": {
       "enabled": [
-        "names|empty"
+        "names/empty"
       ],
-      "names|empty": []
+      "names/empty": []
     }
   }
 }

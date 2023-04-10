@@ -1,0 +1,34 @@
+import romkit.attributes.base
+import romkit.attributes.age_rating
+import romkit.attributes.alternates
+import romkit.attributes.bios
+import romkit.attributes.buttons
+import romkit.attributes.category
+import romkit.attributes.collections
+import romkit.attributes.controls
+import romkit.attributes.description
+import romkit.attributes.developer
+import romkit.attributes.emulation
+import romkit.attributes.favorite
+import romkit.attributes.filesystem
+import romkit.attributes.genres
+import romkit.attributes.group
+import romkit.attributes.languages
+import romkit.attributes.manuals
+import romkit.attributes.mechanical
+import romkit.attributes.media
+import romkit.attributes.name
+import romkit.attributes.parent
+import romkit.attributes.peripherals
+import romkit.attributes.players
+import romkit.attributes.publisher
+import romkit.attributes.rating
+import romkit.attributes.romset
+import romkit.attributes.runnable
+import romkit.attributes.screen
+import romkit.attributes.series
+import romkit.attributes.system
+import romkit.attributes.tags
+import romkit.attributes.year
+
+__all_attributes__ = base.BaseAttribute.__subclasses__()

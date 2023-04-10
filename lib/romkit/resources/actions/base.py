@@ -12,7 +12,6 @@ class BaseAction:
 
     def __init__(self, config: dict = {}) -> None:
       self.config = config
-      # if not self.overwrite_target and config.get('overwrite_target'):
       self.overwrite_target = config.get('overwrite_target', self.overwrite_target)
 
     # Builds an action from the given JSON data

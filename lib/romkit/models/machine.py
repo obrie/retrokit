@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from romkit.filters.filter_set import FilterReason
 from romkit.models.disk import Disk
 from romkit.models.file import File
 from romkit.models.playlist import Playlist
@@ -243,7 +242,7 @@ class Machine:
         if rom_id_type == 'crc':
             # Exclude cue files since they will always change when the name changes
             roms = filter(lambda file: Path(file.name).suffix != '.cue', self.roms)
-            rom_crcs = list(map(lambda file: file.crc, roms))
+            rom_crcs = [file.crc for file in roms]
 
             # Sort to ensure any change in rom order has no effect
             rom_crcs.sort()

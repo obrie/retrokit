@@ -6,7 +6,7 @@
     "gamelist_args": ["--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
     "gamelist_include_base_args": true
   },
-  "metadata": {
+  "attributes": {
     "manuals": {
       "languages": [],
       "prioritize_region_languages": true,
@@ -59,7 +59,7 @@
       },
       "Manuals": {
         "filters": {
-          "manuals": [true]
+          "has_manual": [true]
         }
       },
       "Multiplayer": {

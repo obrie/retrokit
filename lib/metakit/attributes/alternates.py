@@ -12,7 +12,7 @@ class AlternatesAttribute(BaseAttribute):
         self.valid_discovered_names = set()
 
         # Discover which names are available in the romset archives
-        for romset in self.romkit.system.iter_romsets():
+        for romset in self.romkit.system.romsets:
             if not romset.discovery:
                 continue
 

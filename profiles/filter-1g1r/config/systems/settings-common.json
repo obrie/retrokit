@@ -2,19 +2,39 @@
   "roms": {
     "priority": {
       "group_by": ["group", "disc_title"],
-      "order": ["flags|countries", "romsets", "flag_groups_total", "is_group_title", "name_length"],
-      "flags|countries": [
-        "USA",
-        "World",
-        "English",
-        "Europe",
-        "Canada",
-        "Australia"
+      "order": ["flags/countries", "!flags/prototypes", "!flags/addons", "romsets", "years", "!flags/versions", "versions", "is_group_title", "flag_groups_total", "names.length", "names/alphabetical"],
+      "flags/countries": [
+        "/\\bUSA?\\b",
+        "/World",
+        "/English",
+        "/Europe",
+        "/Canada",
+        "/Australia"
       ],
+      "!flags/prototypes": [
+        "Bootleg",
+        "Pirate",
+        "/\\bProto(type)?\\b",
+        "/Demo",
+        "/Alpha",
+        "/Beta",
+        "/\\bAlt(ernate|ernative)?\\b",
+        "Unl"
+      ],
+      "!flags/addons": [],
       "romsets": [],
-      "flag_groups_total": "ascending",
+      "years": "ascending",
+      "!flags/versions": [
+        "# Prioritize original releases over versioned releases",
+        "/Version",
+        "/v[0-9]",
+        "/^Rev"
+      ],
+      "versions": "ascending",
       "is_group_title": [true],
-      "name_length": "ascending"
+      "flag_groups_total": "ascending",
+      "names.length": "ascending",
+      "names/alphabetical": "ascending"
     }
   }
 }

@@ -40,7 +40,7 @@ class PCSystem(BaseSystem):
 
     # Update metadata from the exodos database
     def update_metadata(self) -> None:
-        romset = next(self.romkit.iter_romsets())
+        romset = self.romkit.romsets[0]
         doc = lxml.etree.iterparse(str(romset.dat.download_path.path), tag=('Game'))
 
         # Map game names to their exodos metadata

@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-from romkit.filters import FilterSet
 from romkit.models.collection import Collection
-
-from typing import Type
+from romkit.processing.ruleset import Ruleset
 
 # Represents a collection of external metadata loaders
 class CollectionSet:
@@ -12,12 +10,12 @@ class CollectionSet:
 
     # Builds a CollectionSet from the given json data
     @classmethod
-    def from_json(cls, json: dict, config: dict, supported_filters: list) -> CollectionSet:
-        collection_set = cls()
+    def from_json(cls, json: dict, attributes: List[BaseAttribute], **kwargs) -> CollectionSet:
+        collection_set = cls(**kwargs)
 
         for name, collection_config in json.items():
-            filter_set = FilterSet.from_json(collection_config['filters'], config, supported_filters, log=False)
-            collection = Collection(name, filter_set)
+            ruleset = Ruleset.from_json(collection_config['filters'], attributes)
+            collection = Collection(name, ruleset)
             collection_set.add(collection)
 
         return collection_set
@@ -31,4 +29,4 @@ class CollectionSet:
 
     # Lists the collections that are associated with this machine
     def list(self, machine: Machine) -> Set[str]:
-        return set([collection.name for collection in self.collections if collection.allow(machine)])
+        return {collection.name for collection in self.collections if collection.match(machine)}

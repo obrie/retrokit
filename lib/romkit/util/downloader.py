@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.auth import BaseAuth
+from romkit.util.dict_utils import slice_only
 
 import logging
 import math
@@ -47,6 +48,20 @@ class Downloader:
             cls._instance = cls.__new__(cls)
             cls._instance.__init__()
         return cls._instance
+
+    # Builds a new downloader from the given json
+    @classmethod
+    def from_json(cls, json: dict, **kwargs) -> Downloader:
+        return cls(**slice_only(json, ['auth', 'concurrency', 'part_threshold', 'part_size']), **kwargs)
+
+    # Builds a new downloader configured for the given authentication
+    def with_auth(self, auth: str) -> Downloader:
+        return Downloader(
+            auth=auth,
+            concurrency=self.concurrency,
+            part_threshold=self.part_threshold,
+            part_size=self.part_size,
+        )
 
     # Attempts to download from the given source unless either:
     # * It already exists in the destination

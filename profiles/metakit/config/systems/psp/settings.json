@@ -1,11 +1,11 @@
 {
   "roms": {
     "priority": {
-      "!flags|addons": [
-        "(PSN)"
+      "!flags/addons": [
+        "PSN"
       ],
-      "flags|system_names": [
-        "(PSP)"
+      "flags/system_names": [
+        "PSP"
       ]
     },
     "filters": {

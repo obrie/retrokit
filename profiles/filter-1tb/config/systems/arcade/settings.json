@@ -1,7 +1,6 @@
 {
   "roms": {
     "filters": {
-      "clones": [false],
       "!genres": [
         "Puzzle / Match",
         "Sports / Baseball",
@@ -37,30 +36,35 @@
       ],
       "flags": null,
       "!flags": [
-        "Hack",
-        "Demo"
+        "/\\bDemo\\b",
+        "/\\bHack\\b",
+        "/\\bHB\\b",
+        "/Bootleg",
+        "/DECO Cassette",
+        "/Homebrew",
+        "/Location test",
+        "/Prototype",
+        "/Virtual Console"
+      ],
+      "!comments": [
+        "/Bootleg",
+        "/Demo",
+        "/Hack",
+        "/Homebrew",
+        "/Prototype"
       ],
       "!descriptions": [
         "/Anniversary",
-        "/Bootleg",
-        "/DECO Cassette",
-        "/\\([^\\)]*Hack",
-        "/HB,",
-        "/Homebrew",
-        "/Prototype"
+        "/Bootleg"
+      ],
+      "!developers": [
+        "/bootleg",
+        "/\\bhack\\b"
       ],
       "!controls": [
         "gambling",
         "hanafuda",
         "mahjong"
-      ],
-      "!names": [
-        "# Non-English",
-        "ppsatan"
-      ],
-      "+names": [
-        "# Clone exceptions",
-        "pacman"
       ]
     }
   }

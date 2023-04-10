@@ -35,6 +35,11 @@
           "target": "$HOME/RetroPie/roms/gameandwatch/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         }
+      },
+      "filters": {
+        "parent_names": [
+          "/^gnw_"
+        ]
       }
     }
   },
@@ -43,9 +48,6 @@
     "priority": {
     },
     "filters": {
-      "parent_names": [
-        "/^gnw_"
-      ]
     },
     "favorites": {
     },

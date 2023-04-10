@@ -71,7 +71,7 @@ class MAMEData(ExternalData):
                     self.mechanical[name] = True
 
         # Load from FBNeo
-        fbneo_romset = next((romset for romset in romkit.iter_romsets() if romset.name == 'fbneo'))
+        fbneo_romset = next(romset for romset in romkit.romsets if romset.name == 'fbneo')
         doc = lxml.etree.iterparse(str(fbneo_romset.dat.target_path.path), tag=('game'))
         for event, game in doc:
             name = game.get('name')

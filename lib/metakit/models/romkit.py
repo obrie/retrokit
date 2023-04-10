@@ -34,9 +34,10 @@ class ROMKit:
     def machines(self) -> SortableSet:
         return self.system.machines
 
-    # Iterates over each romset defined for the system
-    def iter_romsets(self) -> Generator[None, ROMSet, None]:
-        return self.system.iter_romsets()
+    # List of romsets defined for the system
+    @property
+    def romsets(self) -> List[ROMSet]:
+        return self.system.romsets
 
     # Loads machines from the system's romsets in order to determine which set we
     # should be targeting when building the database

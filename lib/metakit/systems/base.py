@@ -59,7 +59,7 @@ class BaseSystem:
 
     # Update dats from their sources
     def update_dats(self) -> None:
-        for romset in self.romkit.iter_romsets():
+        for romset in self.romkit.romsets:
             dat = romset.dat
             if not dat:
                 continue

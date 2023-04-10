@@ -7,21 +7,21 @@
         "titles",
         "romsets",
         "is_parent",
-        "!flags|prototypes",
-        "!flags|addons",
-        "!keywords|addons",
-        "flags|system_names",
-        "flags|world",
-        "!flags_count|primary_countries",
-        "flags|primary_countries",
-        "flags|primary_languages",
-        "!keywords|versions",
-        "flags|country_of_origin",
+        "!flags/prototypes",
+        "!flags/addons",
+        "!descriptions/addons",
+        "flags/system_names",
+        "flags/world",
+        "!flags.match_count/primary_countries",
+        "flags/primary_countries",
+        "flags/primary_languages",
+        "!flags/versions",
+        "flags/country_of_origin",
         "versions",
         "flag_groups_total",
-        "title_length",
-        "name_length",
-        "names|alphabetical"
+        "titles.length",
+        "names.length",
+        "names/alphabetical"
       ],
       "names": [
         "# Prioritize specific names"
@@ -35,60 +35,60 @@
       "is_parent": [
         true
       ],
-      "!flags|prototypes": [
-        "Proto",
-        "Beta",
-        "Alpha",
-        "Demo",
-        "Unl",
-        "Alt",
-        "Pirate"
+      "!flags/prototypes": [
+        "Pirate",
+        "/Proto",
+        "/Demo",
+        "/Alpha",
+        "/Beta",
+        "/\\bAlt\\b",
+        "Unl"
       ],
-      "!flags|addons": [
+      "!flags/addons": [
         "# System-specific add-ons to deprioritize (e.g. streaming service editions)"
       ],
-      "!keywords|addons": [
+      "!descriptions/addons": [
         "# System-specific add-ons to deprioritize (e.g. streaming service editions)"
       ],
-      "flags|system_names": [
+      "flags/system_names": [
         "# Flags that specifically call out they are for this system"
       ],
-      "flags|world": [
+      "flags/world": [
         "# Prioritize world releases over country-based releases",
         "World"
       ],
-      "!flags_count|primary_countries": [
+      "!flags.match_count/primary_countries": [
         "# Descending order (total count of number of primary countries in the flags)",
         "Europe",
         "USA",
         "Japan"
       ],
-      "flags|primary_countries": [
+      "flags/primary_countries": [
         "Europe",
         "USA",
         "Japan"
       ],
-      "flags|primary_languages": [
+      "flags/primary_languages": [
         "# Prioritize English-based language titles",
-        "En",
-        "English"
+        "/\\bEn\\b",
+        "English Logo"
       ],
-      "!keywords|versions": [
+      "!flags/versions": [
         "# Prioritize original releases over versioned releases",
-        "(Version",
-        "(Rev",
-        "(v",
-        "(Ver."
+        "/Version",
+        "/v[0-9]",
+        "/^Rev"
       ],
-      "flags|country_of_origin": [
+      "flags/country_of_origin": [
         "Made in EU",
+        "Made in USA",
         "Made in Japan"
       ],
       "flag_groups_total": "ascending",
-      "title_length": "ascending",
+      "titles.length": "ascending",
       "versions": "ascending",
-      "name_length": "ascending",
-      "names|alphabetical": "ascending"
+      "names.length": "ascending",
+      "names/alphabetical": "ascending"
     }
   }
 }

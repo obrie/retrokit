@@ -1,7 +1,7 @@
 {
   "roms": {
     "priority": {
-      "order": ["romsets"],
+      "order": ["is_group_title", "romsets", "flags/countries", "!flags/prototypes", "years", "flag_groups_total", "names.length"],
       "romsets": [
         "fbneo",
         "mame-0244",

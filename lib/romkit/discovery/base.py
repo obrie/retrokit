@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.util import Downloader
+from romkit.util.dict_utils import slice_only
 
 import logging
 import tempfile
@@ -29,8 +30,7 @@ class BaseDiscovery:
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> BaseDiscovery:
         return cls.for_name(json['type'])(
-            json['urls'],
-            json['match'],
+            **slice_only(json, ['urls', 'match']),
             **kwargs,
         )
 

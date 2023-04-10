@@ -1,11 +1,13 @@
-from romkit.filters import __all_filters__, BaseFilter, FilterReason, FilterSet, TitleFilter
-from romkit.metadata import __all_metadata__, MetadataSet
+from __future__ import annotations
+
+from romkit.attributes import __all_attributes__
 from romkit.models.collection_set import CollectionSet
 from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
-from romkit.sorters import __all_sorters__, SortableSet
+from romkit.processing import Metadata, Ruleset, RuleMatchReason, SortableSet
 from romkit.systems.system_dir import SystemDir
-from romkit.util.deepmerge import deepmerge
+from romkit.util import Downloader
+from romkit.util.dict_utils import deepmerge
 
 import logging
 import os
@@ -13,6 +15,7 @@ import requests
 import shlex
 import time
 import traceback
+from collections import defaultdict
 from copy import copy
 from pathlib import Path
 from typing import Dict, Generator, List, Optional, Tuple
@@ -24,86 +27,119 @@ INSTALL_RETRY_WAIT_TIME = os.getenv('INSTALL_RETRY_WAIT_TIME', 30) # seconds
 class BaseSystem:
     name = 'base'
 
-    # Filters that run based on an allowlist/blocklist provided at runtime
-    supported_filters = __all_filters__
-    supported_metadata = __all_metadata__
-    supported_sorters = __all_sorters__
+    def __init__(self,
+        name: str,
+        stub: bool = False,
+        rom_id_type: str = 'name',
+        downloader: Downloader = Downloader.instance(),
+        favorites_rules: Ruleset = Ruleset(default_on_empty=None, log=False),
+        collections: CollectionSet = CollectionSet(),
+        filters: Ruleset = Ruleset(),
+        dirs: List[SystemDir] = [],
+    ) -> None:
+        self.name = name
+        self.stub = stub
+        self.rom_id_type = rom_id_type
+        self.downloader = downloader
+        self.favorites_rules = favorites_rules
+        self.collections = collections
+        self.filters = filters
+        self.dirs = dirs
+        self.file_templates = {}
+        self.romsets = []
 
-    def __init__(self, config: dict) -> None:
-        self.config = deepmerge({
-            'metadata': {},
-            'downloads': {},
-            'romsets': {},
-            'roms': {
-                'id': 'name',
-                'stub': False,
-                'favorites': {},
-                'collections': {},
-                'priority': {},
-                'filters': {},
-                'files': {},
-                'dirs': []
-            }
-        }, config)
-
-        self.name = self.config['system']
-        self.download_config = self.config['downloads']
-        self.stub = self.config['roms']['stub']
-
-        # External metadata to load for filtering purposes
-        self.metadata_set = MetadataSet.from_json(self.config['metadata'], self.supported_metadata)
-
-        # Install directories
-        file_templates = self.config['roms']['files']
-        self.dirs = [
-            SystemDir(
-                dir_config['path'],
-                FilterSet.from_json(dir_config.get('filters', {}), self.config, self.supported_filters, log=False),
-                dir_config.get('context', {}),
-                file_templates,
-            )
-            for dir_config in self.config['roms']['dirs']
-        ]
-
-        # Favorites (defaults to false if no favorites are provided)
-        self.favorites_set = FilterSet.from_json(self.config['roms']['favorites'], self.config, self.supported_filters, log=False)
-        self.favorites_set.default_on_empty = False
-
-        # Collections
-        self.collection_set = CollectionSet.from_json(self.config['roms']['collections'], self.config, self.supported_filters)
-
-        # Attribute type to define the unique machine identifier
-        self.rom_id_type = self.config['roms']['id']
-
-        # Filters
-        self.filter_set = FilterSet.from_json(self.config['roms']['filters'], self.config, self.supported_filters)
+        # Set up attributes
+        self.attributes = [attribute_cls() for attribute_cls in __all_attributes__]
+        self.metadata = Metadata(self.attributes)
+        for attribute in self.attributes:
+            self.reconfigure_attribute(attribute.primary_name)
 
         # Track machines that have been filtered / prioritized
-        self._loaded = False
-        self.machines = SortableSet.from_json(self.config['roms']['priority'], self.supported_sorters)
+        self.machines = SortableSet()
         self.prioritized_machines = []
+        self._loaded = False
 
     # Looks up the system from the given name
     @classmethod
-    def from_json(cls, json: dict) -> None:
+    def from_json(cls, json: dict, **kwargs) -> None:
         name = json['system']
+        system_cls = cls
 
         for subcls in cls.__subclasses__():
             if subcls.name == name:
-                return subcls(json)
+                system_cls = subcls
 
-        return cls(json)
+        json = defaultdict(dict, json)
+
+        options = {}
+        if 'stub' in json['roms']:
+            options['stub'] = json['roms']['stub']
+        if 'id' in json['roms']:
+            options['rom_id_type'] = json['roms']['id']
+        if 'downloads' in json:
+            options['downloader'] = Downloader.from_json(json['downloads'])
+
+        system = system_cls(name=name, **options, **kwargs)
+
+        # Metadata
+        if 'metadata' in json:
+            system.metadata = Metadata.from_json(json['metadata'], system.attributes)
+
+        # ROM settings
+        if 'favorites' in json['roms']:
+            system.favorites_rules = Ruleset.from_json(json['roms']['favorites'], system.attributes, default_on_empty=None, log=False)
+
+        if 'collections' in json['roms']:
+            system.collections = CollectionSet.from_json(json['roms']['collections'], system.attributes)
+
+        if 'filters' in json['roms']:
+            system.filters = Ruleset.from_json(json['roms']['filters'], system.attributes)
+
+        if 'priority' in json['roms']:
+            system.machines = SortableSet.from_json(json['roms']['priority'], system.attributes)
+
+        if 'romsets' in json:
+            for romset_name, romset_config in json['romsets'].items():
+                system.romsets.append(ROMSet.from_json({**romset_config, 'name': romset_name}, system))
+
+        # Install files/directories
+        if 'files' in json['roms']:
+            system.file_templates = json['roms']['files']
+
+        if 'dirs' in json['roms']:
+            system.dirs = [
+                SystemDir(
+                    dir_config['path'],
+                    Ruleset.from_json(dir_config.get('filters', {}), system.attributes, log=False),
+                    dir_config.get('context', {}),
+                    system.file_templates,
+                )
+                for dir_config in json['roms']['dirs']
+            ]
+
+        # Attributes
+        if 'attributes' in json:
+            for attribute_name, attribute_config in json['attributes'].items():
+                system.reconfigure_attribute(attribute_name, attribute_config)
+
+        return system
 
     # Sorts the prioritized machines list by name
     @property
     def sorted_prioritized_machines(self) -> List[Machine]:
         return sorted(self.prioritized_machines, key=lambda machine: machine.name)
 
-    # Iterates over the romsets available to this system
-    def iter_romsets(self) -> Generator[None, ROMSet, None]:
-        for romset_name, romset_config in self.config['romsets'].items():
-            romset_config['name'] = romset_name
-            yield ROMSet.from_json(romset_config, system=self, downloads=self.download_config)
+    # Finds the machine attribute with the given name
+    def attribute(self, name: str) -> BaseAttribute:
+        return next(filter(lambda attr: attr.metadata_name == name or attr.rule_name == name, self.attributes), None)
+
+    # Configures an attribute with the given overrides
+    def reconfigure_attribute(self, name: str, config: Dict[str, Any] = {}) -> None:
+        defaults = {
+            'install_paths': [system_dir.path for system_dir in self.dirs],
+        }
+
+        self.attribute(name).configure(**defaults, **config)
 
     # Sorts the machines available in each romset
     def load(self, force: bool = False) -> bool:
@@ -113,26 +149,30 @@ class BaseSystem:
         self.machines.clear()
         self.prioritized_machines.clear()
 
-        for romset in self.iter_romsets():
+        # Filter and sort
+        for romset in self.romsets:
+            romset.load()
+
             for machine, allow_reason in self._filter_romset(romset).items():
-                if allow_reason == FilterReason.OVERRIDE:
+                if allow_reason == RuleMatchReason.OVERRIDE:
                     self.machines.override(machine)
                 else:
                     self.machines.add(machine)
 
+        # Cache prioritized list
         self.prioritized_machines = self.machines.prioritize()
 
         # Update favorites / collections
         for machine in self.prioritized_machines:
-            machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW
-            machine.collections.update(self.collection_set.list(machine))
+            machine.favorite = self.favorites_rules.match(machine) is not None
+            machine.collections.update(self.collections.list(machine))
 
         self._loaded = True
         return True
 
     # Filters the machines in the given romset
-    def _filter_romset(self, romset: ROMSet) -> Dict[Machine, FilterReason]:
-        return romset.filter_machines(self.filter_set, self.metadata_set)
+    def _filter_romset(self, romset: ROMSet) -> Dict[Machine, RuleMatchReason]:
+        return romset.filter_machines(self.filters, self.metadata)
 
     # Generates the list of machines to target, based are predefined priorities
     def list(self) -> List[Machine]:
@@ -227,7 +267,7 @@ class BaseSystem:
             'sha1': '*',
             'url': '',
         }
-        for romset in self.iter_romsets():
+        for romset in self.romsets:
             for resource_name in resource_names:
                 resource = romset.resource(resource_name, **resource_context)
                 if resource:

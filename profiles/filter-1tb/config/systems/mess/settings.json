@@ -1,9 +1,12 @@
 {
   "roms": {
     "filters": {
-      "clones": [false],
       "!genres|empty": null,
       "flags": null,
+      "!developers": [
+        "/bootleg",
+        "/hack"
+      ],
       "media": [
         "artwork"
       ]

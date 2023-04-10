@@ -6,10 +6,13 @@
         "Dancing Plate",
         "Spider Fighter"
       ],
-      "flags|primary_countries": [
+      "flags/primary_countries": [
         "USA",
         "Europe",
         "Japan"
+      ],
+      "!flags/addons": [
+        "Atari Anthology"
       ]
     }
   }

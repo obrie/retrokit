@@ -1,9 +1,9 @@
 {
   "roms": {
     "priority": {
-      "order": ["!flags", "romsets", "flags|countries", "flag_groups_total", "flags", "name_length"],
+      "order": ["!flags", "romsets", "flags/countries", "flag_groups_total", "flags", "names.length"],
       "!flags": [
-        "(Proto)"
+        "Proto"
       ],
       "romsets": [
         "nointro-carts",
@@ -12,7 +12,7 @@
       "flags": [
         "# Publishers",
         "Lucasfilm",
-        "(Activision)",
+        "Activision",
         "Anirog",
         "Cosmi",
         "Electric Dreams",

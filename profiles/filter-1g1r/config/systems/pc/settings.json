@@ -1,8 +1,7 @@
 {
   "roms": {
     "priority": {
-      "order": ["flags"],
-      "flags": "descending"
+      "years": "descending"
     }
   }
 }

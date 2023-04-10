@@ -2,10 +2,11 @@ from __future__ import annotations
 
 from romkit.auth import BaseAuth
 from romkit.discovery import BaseDiscovery
-from romkit.filters import FilterSet
 from romkit.models.machine import Machine
+from romkit.processing.ruleset import Ruleset
 from romkit.resources.resource import ResourceTemplate
 from romkit.util import Downloader
+from romkit.util.dict_utils import slice_only
 
 import logging
 import lxml.etree
@@ -17,39 +18,30 @@ class ROMSet:
     def __init__(self,
         system: BaseSystem,
         name: str,
-        protocol: Optional[str],
-        url: Optional[str],
-        resource_templates: Dict[str, dict],
-        emulators: Optional[List[str]] = None,
+        protocol: Optional[str] = None,
+        url: Optional[str] = None,
+        resource_templates: Dict[str, ResourceTemplate] = {},
+        emulators: List[str] = [],
         auth: Optional[str] = None,
-        discovery: Optional[dict] = None,
+        discovery: Optional[BaseDiscovery] = None,
         datlist: Optional[List[str]] = None,
-        downloads: Optional[dict] = None,
-        filters: Optional[dict]  = None,
+        filters: Optional[Ruleset] = None,
         enabled: bool = True,
-        context: dict = {},
     ):
         self.system = system
         self.name = name
         self.protocol = protocol
         self.url = url
-        self.emulators = emulators or []
-        self.downloader = Downloader(auth=auth, **downloads)
-        self.filter_set = FilterSet.from_json(filters or {}, system.config, system.supported_filters)
+        self.resource_templates = resource_templates
+        self.emulators = emulators
+        self.auth = auth
+        self.discovery = discovery
+        self.filters = filters
         self.enabled = enabled
+        self.downloader = system.downloader
 
-        # Configure resources
-        self.discovery = discovery and BaseDiscovery.from_json(discovery, downloader=self.downloader)
-        self.resource_templates = {
-            name: ResourceTemplate.from_json(
-                config,
-                downloader=self.downloader,
-                discovery=self.discovery,
-                default_context={'url': url},
-                stub=self.system.stub,
-            )
-            for name, config in resource_templates.items()
-        }
+        if auth:
+            self.downloader = self.downloader.with_auth(auth)
 
         # Internal dat list for systems that don't have dat files
         if datlist:
@@ -60,24 +52,38 @@ class ROMSet:
         else:
             self.datlist = None
 
-        self.load()
-
-    # Builds a ROMSet from the given JSON data
+    # Builds a ROMSet from the given json data
     @classmethod
-    def from_json(cls, json: dict, **kwargs) -> ROMSet:
-        return cls(
-            name=json['name'],
-            protocol=json.get('protocol'),
-            url=json.get('url'),
-            resource_templates=json['resources'],
-            emulators=json.get('emulators'),
-            auth=json.get('auth'),
-            discovery=json.get('discovery'),
-            datlist=json.get('datlist'),
-            filters=json.get('filters'),
-            enabled=json.get('enabled', True),
-            **kwargs,
-        )
+    def from_json(cls, json: dict, system: System, **kwargs) -> ROMSet:
+        romset = cls(system=system, **slice_only(json, [
+            'name',
+            'protocol',
+            'url',
+            'emulators',
+            'auth',
+            'datlist',
+            'enabled',
+        ]), **kwargs)
+
+        if 'filters' in json:
+            romset.filters = Ruleset.from_json(json['filters'], system.attributes)
+
+        if 'discovery' in json:
+            romset.discovery = BaseDiscovery.from_json(json['discovery'], downloader=romset.downloader)
+
+        if 'resources' in json:
+            romset.resource_templates = {
+                name: ResourceTemplate.from_json(
+                    config,
+                    downloader=romset.downloader,
+                    discovery=romset.discovery,
+                    default_context={'url': romset.url},
+                    stub=system.stub,
+                )
+                for name, config in json['resources'].items()
+            }
+
+        return romset
 
     # Whether this romset has defined the given resource
     def has_resource(self, name: str) -> bool:
@@ -104,7 +110,7 @@ class ROMSet:
         if not self.enabled:
             return
 
-        if self.datlist:
+        if self.datlist is not None:
             # Read from an internal dat list
             for machine_attrs in self.datlist:
                 machine = Machine.from_dict(self, machine_attrs)
@@ -115,8 +121,7 @@ class ROMSet:
             for event, element in doc:
                 if Machine.is_installable(element):
                     machine = Machine.from_xml(self, element)
-                    if self.filter_set.allow(machine):
-                        yield machine
+                    yield machine
                 else:
                     logging.debug(f"[{element.get('name')}] Ignored (not installable)")
                 
@@ -126,18 +131,21 @@ class ROMSet:
     # 
     # This returns the machines that passed the filters and the reason why
     # the filter applied.
-    def filter_machines(self, filter_set: FilterSet, metadata_set: MetadataSet) -> Dict[Machine, FilterReason]:
+    def filter_machines(self, filters: Ruleset, metadata: Metadata) -> Dict[Machine, FilterReason]:
         results = {}
         dependent_machines = {}
 
         for machine in self.iter_machines():
             # Update based on metadata database
-            metadata_set.update(machine)
+            metadata.update(machine)
 
-            allow_reason = filter_set.allow(machine)
-            if allow_reason:
+            if self.filters and not self.filters.match(machine):
+                continue
+
+            match_reason = filters.match(machine)
+            if match_reason:
                 dependent_machines[machine.name] = machine
-                results[machine] = allow_reason
+                results[machine] = match_reason
             elif not machine.is_clone:
                 # We track all parent/bios/device machines in case they're needed as a dependency
                 # in future machines.
