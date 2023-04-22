@@ -1,19 +1,5 @@
 {
   "roms": {
-    "priority": {
-      "group_by": ["group"],
-      "order": ["flags/countries", "flag_groups_total", "names.length"],
-      "flags/countries": [
-        "USA",
-        "World",
-        "English Logo",
-        "Europe",
-        "Canada",
-        "Australia"
-      ],
-      "flag_groups_total": "ascending",
-      "names.length": "ascending"
-    },
     "filters": {
       "enabled": ["titles"]
     }
