@@ -49,6 +49,10 @@ class Database:
             if key in self.dataset:
                 return self.dataset[key]
 
+    # Overrides the given key with new metadata
+    def set(self, key: str, metadata: dict) -> None:
+        self.dataset[key] = metadata
+
     # Updates the given key with new metadata
     def update(self, key: str, metadata: dict) -> None:
         if key not in self.dataset:
@@ -71,14 +75,37 @@ class Database:
 
     # Migrates metadata from one key value to another
     def migrate(self, from_key: str, to_key: str) -> None:
-        metadata = self.get(from_key)
-        self.delete(from_key)
+        source_metadata = self.get(from_key)
+        target_metadata = self.get(to_key)
+
+        if target_metadata and (from_key in self.romkit.names or from_key in self.romkit.disc_titles or from_key in self.romkit.titles):
+            # Ensure there's no group override in the target
+            target_metadata.pop('group', None)
+
+            # Old key is still valid and isn't just a strict rename.  We need to
+            # do a swap while making a best effort at keeping overrides in tact.
+            overlapping_keys = set(source_metadata.keys()).intersection(target_metadata.keys())
+            new_source_metadata = {'group': to_key}
+            for key in overlapping_keys:
+                new_source_metadata[key] = source_metadata[key]
+                del source_metadata[key]
+
+            self.set(from_key, new_source_metadata)
+        else:
+            # Old key is no longer valid
+            self.delete(from_key)
 
         # Migrate attributes
         for attribute in self.attributes:
-            attribute.migrate_metadata(from_key, to_key, metadata)
+            attribute.migrate_metadata(from_key, to_key, source_metadata)
 
-        self.update(to_key, metadata)
+        # Migrate overrides tied to the group being migrated
+        for other_key, other_metadata in self.dataset.items():
+            if other_metadata.get('group') == from_key:
+                logging.info(f'[{to_key}] [group] Updated {other_key}')
+                other_metadata['group'] = to_key
+
+        self.update(to_key, source_metadata)
 
     # Updates the group identifiers used to help with migrations during date updates
     def update_ids(self) -> None:
@@ -106,7 +133,7 @@ class Database:
 
         errors = {}
 
-        # Check metadta values
+        # Check metadata values
         for key, metadata in self.dataset.items():
             for attribute in self.attributes:
                 key_errors = attribute.validate_metadata(key, metadata)
@@ -156,6 +183,10 @@ class Database:
         for group in sorted(target_groups):
             # Short circuit if group hasn't changed
             if self.exists(group):
+                original_key = self.get(group).get('group', group)
+                if original_key != group:
+                    migration_plan[original_key] = group
+
                 continue
 
             # Try to find the original key, attempting by:

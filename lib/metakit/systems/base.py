@@ -79,9 +79,6 @@ class BaseSystem:
         migration = self.database.build_migration_plan(target_groups=self.target_groups)
         for from_key in sorted(migration.keys()):
             to_key = migration[from_key]
-            if self.database.exists(to_key):
-                # No change
-                continue
 
             if to_key is None:
                 logging.info(f'[{from_key}] Removed')
