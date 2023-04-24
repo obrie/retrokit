@@ -78,7 +78,7 @@ class Database:
         source_metadata = self.get(from_key)
         target_metadata = self.get(to_key)
 
-        if target_metadata and (from_key in self.romkit.names or from_key in self.romkit.disc_titles or from_key in self.romkit.titles):
+        if target_metadata and from_key in self.romkit.keys:
             # Ensure there's no group override in the target
             target_metadata.pop('group', None)
 
@@ -218,7 +218,7 @@ class Database:
         # Mark invalid keys as not having a corresponding target
         for key, metadata in self.dataset.items():
             group = metadata.get('group', key)
-            if group not in target_groups and group not in migration_plan:
+            if group not in target_groups and migration_plan.get(group) == None:
                 migration_plan[key] = None
 
         return migration_plan
