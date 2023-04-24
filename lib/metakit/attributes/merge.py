@@ -45,4 +45,4 @@ class MergeAttribute(BaseAttribute):
 
     # Is this key allowed to be part of this attribute?
     def _is_valid_merge_key(self, merge_key: str) -> bool:
-        return merge_key in self.romkit.names or merge_key in self.romkit.titles or merge_key in self.romkit.disc_titles
+        return merge_key in self.romkit.keys

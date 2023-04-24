@@ -13,6 +13,7 @@ class ROMKit:
         self.names = set()
         self.titles = set()
         self.disc_titles = set()
+        self.keys = set()
         self.resolved_group_to_machine = {}
 
     # The names of the groups that were prioritized based on the
@@ -53,6 +54,10 @@ class ROMKit:
             self.names.add(machine.name)
             self.titles.add(machine.title)
             self.disc_titles.add(machine.disc_title)
+
+            self.keys.add(machine.name)
+            self.keys.add(machine.title)
+            self.keys.add(machine.disc_title)
 
         for machine in self.prioritized_machines:
             if '(' in machine.group_name:

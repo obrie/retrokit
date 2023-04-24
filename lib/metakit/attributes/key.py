@@ -27,7 +27,7 @@ class KeyAttribute(BaseAttribute):
         return key
 
     def validate(self, value: str) -> List[str]:
-        if value not in self.romkit.names and value not in self.romkit.titles and value not in self.romkit.disc_titles:
+        if value not in self.romkit.keys:
             return [f"key not a valid name / disc title / title: {value}"]
 
     # Migrates any references to the group outside the context of the metadata
