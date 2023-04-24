@@ -360,19 +360,25 @@ class Machine:
 
     # Primary rom in the machine.  This is either going to be the *only*
     # rom or a cue that represents multiple rom files.
+    # 
+    # Not that only roms that are contributed by this machine are considered.
+    # A rom from a parent, bios, or device cannot be considered a primary rom
+    # for this machine.
     @property
     def primary_rom(self) -> Optional[File]:
-        if len(self.non_merged_roms) == 1:
+        roms = self.roms_from_self
+
+        if len(roms) == 1:
             # Only one rom in the machine -- that's the primary one
-            return next(iter(self.non_merged_roms))
-        elif len(self.non_merged_roms) > 1:
+            return next(iter(roms))
+        elif len(roms) > 1:
             # Multiple roms -- see if there's a cue file
-            cue_file = next(filter(lambda rom: '.cue' in rom.name, self.non_merged_roms), None)
+            cue_file = next(filter(lambda rom: '.cue' in rom.name, roms), None)
             if cue_file:
                 return cue_file
 
             # Pick the largest file as a last resort
-            return sorted(self.non_merged_roms, key=lambda file: [file.size, file.name])[-1]
+            return sorted(roms, key=lambda file: [file.size, file.name])[-1]
 
     # Target destination for installing this sample
     @property
@@ -420,46 +426,47 @@ class Machine:
 
         return names
 
-    # ROMs installed directly from the parent (excluding parent bios)
+    # ROMs installed directly from the given machine (excluding any bios)
     # 
     # Note that this assumes ROMs have either the same CRC or the
     # same name.  If using "name" as the file_identifier but the
     # parent ROM has a different name, this will be broken.  We could
     # utilize the @merge property on ROMs to fix this, but at the
     # moment there's no need.
-    @property
-    def roms_from_parent(self) -> Set[File]:
-        if self.parent_machine:
-            parent_roms = self.parent_machine.roms_from_self
-            return set(rom for rom in self.roms if rom in parent_roms)
-        else:
-            return set()
+    def roms_from(self, machine: Machine) -> Set[File]:
+        machine_roms = machine.roms_from_self
+        non_merged_roms = self.non_merged_roms
+
+        return set(rom for rom in non_merged_roms if rom in machine_roms)
 
     # ROMs installed directly from this machine
     @property
     def roms_from_self(self) -> Set[File]:
-        self_roms = self.roms - self.roms_from_parent
+        # roms does *not* include roms from device machines, so we only need
+        # to exclude those roms from the parent and bios
+        roms = self.roms
+        if self.parent_machine:
+            roms = roms - self.parent_machine.roms
+
         if self.bios_machine:
-            self_roms -= self.bios_machine.roms
+            roms = roms - self.bios_machine.roms
 
-        return self_roms
+        return roms
 
-    # All ROMs expected to be in the non-merged build (includes parent, bios, and devices)
+    # All ROMs expected to be in the non-merged build (from self, parent, bios, and devices)
     @property
     def non_merged_roms(self) -> Set[File]:
         # Define the machines containing the lists of roms required
         # for a non-merged archive
-        machines = [self]
+        machines = [self] # includes self, parent, and bios
         machines.extend(self.device_machines)
-        if self.bios_machine:
-            machines.append(self.bios_machine)
 
         # Build up the full set of ROMs required
-        all_roms = set()
+        roms = set()
         for machine in machines:
-            all_roms.update(machine.roms)
+            roms.update(machine.roms)
 
-        return all_roms
+        return roms
 
     # Root folder that the ROMs live in (may not be applicable to the current romset)
     @property
@@ -602,24 +609,17 @@ class Machine:
         if self.resource:
             self.resource.check_xref()
 
-        # ROMs: Self
-        self.install_from(self, self.roms_from_self)
-
-        # ROMs: Parent
-        if self.parent_machine:
-            self.install_from(self.parent_machine, self.roms_from_parent)
-
-        # ROMs: BIOS
-        if self.bios_machine and self.bios_machine.roms:
-            self.install_from(self.bios_machine, self.bios_machine.roms)
+        # Always install from self first in case we're working with a non-merged source
+        self.install_from(self)
+        self.install_from(self.parent_machine)
+        self.install_from(self.bios_machine)
 
         if self.resource:
             self.resource.create_xref()
 
         # Devices
         for device_machine in self.device_machines:
-            if device_machine.roms:
-                self.install_from(device_machine, device_machine.roms)
+            self.install_from(device_machine)
 
         # Disks
         for disk in (self.disks_from_self | self.disks_from_parent):
@@ -634,8 +634,13 @@ class Machine:
             self.playlist.install()
 
     # Installs the roms from the given source machine
-    def install_from(self, machine: Machine, roms: Set[File]) -> None:
+    def install_from(self, machine: Machine) -> None:
         if not machine or not self.resource:
+            return
+
+        # Find matching ROMs to install
+        roms = self.roms_from(machine)
+        if not roms:
             return
 
         if self.resource.contains(roms):
