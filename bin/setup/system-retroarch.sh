@@ -36,7 +36,7 @@ __configure_emulator_configs() {
     local source_file="$source_dir/$library_name.cfg"
     local target_dir="$retroarch_config_dir/$library_name"
     local target_file="$target_dir/$library_name.cfg"
-    if [ ! -d "$source_dir" ]; then
+    if ! any_path_exists "$source_dir"; then
       continue
     fi
 
