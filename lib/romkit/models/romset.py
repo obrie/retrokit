@@ -133,7 +133,7 @@ class ROMSet:
     # the filter applied.
     def filter_machines(self, filters: Ruleset, metadata: Metadata) -> Dict[Machine, FilterReason]:
         results = {}
-        dependent_machines = {}
+        possible_dependencies = {}
 
         for machine in self.iter_machines():
             # Update based on metadata database
@@ -144,18 +144,20 @@ class ROMSet:
 
             match_reason = filters.match(machine)
             if match_reason:
-                dependent_machines[machine.name] = machine
+                possible_dependencies[machine.name] = machine
                 results[machine] = match_reason
-            elif not machine.is_clone:
+            elif not machine.is_clone or not machine.runnable:
                 # We track all parent/bios/device machines in case they're needed as a dependency
                 # in future machines.
-                dependent_machines[machine.name] = machine
+                possible_dependencies[machine.name] = machine
 
-        # Update the filtered machines with the dependent machines they need
-        # in order to run
-        for machine in results.keys():
-            for dependency_name in machine.dependent_machine_names:
-                if dependency_name in dependent_machines:
-                    machine.dependent_machines[dependency_name] = dependent_machines[dependency_name]
+        # All dependent machines (filtered machines + dependencies)
+        dependent_machines = set(results.keys())
+        for machine in dependent_machines.copy():
+            dependent_machines.update(slice_only(possible_dependencies, machine.dependent_machine_names).values())
+
+        # Set dependencies
+        for machine in dependent_machines:
+            machine.dependent_machines.update(slice_only(possible_dependencies, machine.dependent_machine_names))
 
         return results
