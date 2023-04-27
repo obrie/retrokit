@@ -52,7 +52,7 @@ configure() {
   while IFS=$field_delim read -r rom_name playlist_name title group_name orientation emulator overlay_override_url controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
-    local supports_overlays=${emulators["$emulator/library_name"]}
+    local supports_overlays=${emulators["$emulator/supports_overlays"]}
     local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
     local overlay_title=$group_name
 
@@ -277,7 +277,14 @@ vacuum() {
 
   # Identify valid overlay images
   declare -A installed_images
-  while IFS=$'\t' read -r title group_name; do
+  while IFS=$'\t' read -r title group_name emulator; do
+    emulator=${emulator:-default}
+    local library_name=${emulators["$emulator/library_name"]}
+    local supports_overlays=${emulators["$emulator/supports_overlays"]}
+    if [ -z "$library_name" ] && [ "$supports_overlays" == 'false' ]; then
+      continue
+    fi
+
     if [ -f "$system_overlay_dir/$title.png" ]; then
       installed_images["$system_overlay_dir/$title.png"]=1
       installed_images["$system_overlay_dir/$title-lightgun.png"]=1
@@ -285,7 +292,7 @@ vacuum() {
       installed_images["$system_overlay_dir/$group_name.png"]=1
       installed_images["$system_overlay_dir/$group_name-lightgun.png"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.title, .group.name] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.title, .group.name, .emulator] | @tsv')
 
   # Generate rm commands for unused images
   while read -r path; do
