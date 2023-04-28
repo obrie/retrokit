@@ -21,7 +21,7 @@ configure() {
 }
 
 restore() {
-  rm -rfv \
+  rm -fv \
     "$retropie_configs_dir/all/autoport.cfg" \
     "$retropie_configs_dir/all/runcommand.d/autoport/"
 }
