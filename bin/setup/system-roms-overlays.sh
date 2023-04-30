@@ -275,6 +275,8 @@ vacuum() {
     return
   fi
 
+  load_emulator_data
+
   # Identify valid overlay images
   declare -A installed_images
   while IFS=$'\t' read -r title group_name emulator; do
