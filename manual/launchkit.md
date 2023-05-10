@@ -6,7 +6,7 @@ It's intended to be, more or less, a drop-in replacement.  It enables the follow
 * Shows the launch image on the screen until the emulator takes over rendering
 * Adjusts launch images to the available screen size in order to avoid image skew
 
-The impact of this is two fold:
+The impact of this is twofold:
 
 * The amount of time it takes to launch an emulator is reduced since the runcommand script
   isn't sleeping while the launch image is dislaying
