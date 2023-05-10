@@ -81,7 +81,7 @@ __configure_controller_input() {
 _EOF_
 
   local sdl_property
-  for sdl_property in "${sdl_properties[@]}"; do
+  for sdl_property in "${sdl_properties[@]:2}"; do
     local sdl_parts=(${sdl_property//:/ })
     local sdl_name=${sdl_parts[0]}
     local sdl_raw_value=${sdl_parts[1]}
