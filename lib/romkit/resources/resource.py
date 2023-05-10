@@ -179,6 +179,16 @@ class ResourceTemplate:
             **kwargs
         )
 
+    # The path of the source url, intended to only be used with a file protocol
+    @property
+    def source_url_path(self) -> Path:
+        return Path(urlparse(self.source_url_template).path)
+
+    # Whether this resource is located locally on the system
+    @property
+    def is_locally_sourced(self) -> bool:
+        return urlparse(self.source_url_template).scheme == 'file'
+
     # Builds a URL for an asset in this romset
     def render(self, **context) -> Resource:
         # Add context already assumed to be encoded

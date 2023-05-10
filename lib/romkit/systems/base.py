@@ -250,6 +250,12 @@ class BaseSystem:
                     if resource.xref_path:
                         installable_paths.add(resource.xref_path.path)
 
+        # Ensure we're accounting for static resources from the templates themselves
+        for romset in self.romsets:
+            for resource_template in romset.resource_templates.values():
+                if resource_template.is_locally_sourced:
+                    installable_paths.add(resource_template.source_url_path)
+
         # Identify the installable path globs.  It's important that the context
         # includes all of the necessary glob patterns, otherwise this'll error out.
         installable_path_globs = set()
