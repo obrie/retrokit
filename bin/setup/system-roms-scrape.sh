@@ -11,6 +11,7 @@ gamelist_file="$home/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
   __load_rom_data
+  __reset_imports
   __scrape_sources
   __import_titles
   __import_user_overrides
@@ -37,6 +38,12 @@ __load_rom_data() {
       rom_data["$playlist_name/crc"]="$rom_crc"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc, .path] | join("'$field_delim'")')
+}
+
+# Reset metadata that was imported either through romkit or user configuration
+__reset_imports() {
+  __scraper --cache purge:m=import
+  __scraper --cache purge:m=user
 }
 
 # Scrape from all configured sources
@@ -180,8 +187,7 @@ __build_missing_reports() {
 __import_titles() {
   local import_dat_titles=$(system_setting '.scraper .import_dat_titles')
   if [ "$import_dat_titles" != 'true' ]; then
-    # Don't import titles from romkit (purge anything we've previously imported for this system)
-    __scraper --cache purge:m=import
+    # Don't import titles from romkit
     return
   fi
 
@@ -250,9 +256,6 @@ __import_titles() {
 }
 
 __import_user_overrides() {
-  # Remove existing overrides we may have previously added
-  __scraper --cache purge:m=user
-
   while IFS=$'\t' read rom_name resource_type resource_value; do
     local rom_path=${rom_data["$rom_name/path"]}
     if [ -z "$rom_path" ]; then
