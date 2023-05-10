@@ -32,9 +32,9 @@ restore() {
 
 remove() {
   sudo rm -rfv \
+    /etc/autossh \
     /etc/systemd/system/autossh.service \
     /var/log/autossh \
-    /etc/autossh \
     /var/run/autossh
 
   sudo apt-get remove -y autossh
