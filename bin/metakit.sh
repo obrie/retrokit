@@ -7,7 +7,7 @@ export PROFILES=metakit
 
 usage() {
   echo "usage:"
-  echo " $0 <cache_external_data|format|vacuum|recache_external_data|rescrape|scrape|scrape_incomplete|scrape_missing|update|update_dats|update_groups|update_metadata|validate|validate_discovery> [system|all] [options]"
+  echo " $0 <cache_external_data|format|vacuum|recache_external_data|rescrape|scrape_incomplete|scrape_missing|update|update_dats|update_groups|update_metadata|validate|validate_discovery> [system|all] [options]"
   exit 1
 }
 

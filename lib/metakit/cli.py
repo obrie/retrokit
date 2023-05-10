@@ -104,11 +104,11 @@ class MetaKit:
 
     # Forces machines that have incomplete scrape metadata to be refreshed from the source
     def scrape_incomplete(self) -> None:
-        self.system.scrape(ScrapeType.INCOMPLETE)
+        self.scrape(ScrapeType.INCOMPLETE)
 
     # Forces machines that have were never found in the scraper sources
     def scrape_missing(self) -> None:
-        self.system.scrape(ScrapeType.MISSING)
+        self.scrape(ScrapeType.MISSING)
 
     # Forces all scraped metadata to be refreshed from the source
     def rescrape(self) -> None:
@@ -131,7 +131,6 @@ def main() -> None:
         'update_groups',
         'cache_external_data',
         'recache_external_data',
-        'scrape',
         'scrape_incomplete',
         'scrape_missing',
         'rescrape',
