@@ -191,6 +191,8 @@ __import_titles() {
     return
   fi
 
+  echo "Importing DAT titles for $system..."
+
   local import_dir="$home/.skyscraper/import/$system"
   mkdir -p "$import_dir/textual"
 
@@ -248,7 +250,7 @@ __import_titles() {
 
   # Import the data
   if [ -n "$(ls -A "$import_dir/textual")" ]; then
-    __scraper -s import
+    __scraper -s import >/dev/null
   fi
 
   # Clean up unused files
@@ -282,7 +284,7 @@ __build_gamelist() {
   # Add gamelist arguments
   args+=($(system_setting '.scraper | .gamelist_args? | .[]'))
 
-  echo "Building gamelist for $system"
+  echo "Building gamelist for $system..."
   "$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${args[@]}" >/dev/null
 
   # Fix gamelist being generated incorrectly with games marked as folders
