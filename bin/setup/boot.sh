@@ -81,9 +81,9 @@ __configure_kernel() {
 
   while IFS=$'\t' read search_option replace_option; do
     if grep -qE "$search_option" /boot/cmdline.txt; then
-      sudo sed -i "s/$search_option[^ ]*/$replace_option/g" /boot/cmdline.txt
+      sudo sed -i "s|$search_option[^ ]*|$replace_option|g" /boot/cmdline.txt
     else
-      sudo sed -i "$ s/$/ $replace_option/" /boot/cmdline.txt
+      sudo sed -i "$ s|$| $replace_option|" /boot/cmdline.txt
     fi
   done < <(each_path '{config_dir}/boot/cmdline.tsv' cat '{}')
 }
