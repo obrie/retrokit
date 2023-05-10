@@ -4,12 +4,15 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 setup_module_id='controllers-database'
-setup_module_desc='Controller database'
+setup_module_desc='Controller database (with auto conversion for xpad/triggers_to_buttons)'
 
 sdldb_file="$retropie_configs_dir/all/gamecontrollerdb.txt"
 sdldb_version="$retropie_configs_dir/all/gamecontrollerdb.version"
 sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
 
+# Vendor IDs used in linux to identify xbox controllers.
+# 
+# Source: https://github.com/paroj/xpad/blob/51af0649c2926e8992b70ca1bb506db949c6d8d9/xpad.c#L482
 xpad_vendor_ids=(
   0079
   03eb
@@ -67,6 +70,10 @@ configure() {
   backup_and_restore "$sdldb_file"
   __configure_overrides
   __configure_xpad
+}
+
+__configure_overrides() {
+  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a "$sdldb_file" >/dev/null
 }
 
 __configure_xpad() {
@@ -150,10 +157,6 @@ __configure_xpad() {
   done < <(grep -E "^[0-9a-z]{8}($sdl_vendor_ids_regex)" "$sdldb_file" | grep 'lefttrigger:a' | grep 'righttrigger:a' | grep 'leftshoulder:b' | grep 'rightshoulder:b' | grep Linux)
 
   echo "# END - triggers_to_buttons overrides" >> "$sdldb_file"
-}
-
-__configure_overrides() {
-  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a "$sdldb_file" >/dev/null
 }
 
 restore() {
