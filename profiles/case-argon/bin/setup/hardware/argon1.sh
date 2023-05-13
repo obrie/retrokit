@@ -17,10 +17,7 @@ build() {
 }
 
 configure() {
-  backup_and_restore '/usr/bin/argononed.py' as_sudo=true
-
-  # Disable power management since it's handled by powerkit
-  sudo sed -i 's/^\tt1/\t#t1/g' /usr/bin/argononed.py
+  backup_file '/usr/bin/argononed.py' as_sudo=true
 }
 
 restore() {
