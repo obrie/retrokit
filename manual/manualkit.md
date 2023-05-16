@@ -103,6 +103,69 @@ allow you to bring up manuals while playing the game.
 
 It's possible to integrate `manualkit` with other frontends, but there's no built-in support for it.
 
+## Usage
+
+`manualkit` must be run as `root` using `sudo` in order for it to have the necessary permissions to
+draw on top of the screen.
+
+```bash
+# Show a specific manual
+sudo python3 manualkit/cli.py --pdf /path/to/game.pdf
+
+# Equivalent to the above command
+sudo python3 manualkit/cli.py /opt/retropie/configs/all/manualkit.cfg --pdf /path/to/game.pdf --profile frontend --server false
+
+# Show a manual with a supplementary reference PDF
+sudo python3 manualkit/cli.py --pdf /path/to/game.pdf --supplementary-pdf /path/to/supplementary.pdf
+
+# Use an explicit configuration and start manualkit with the emulator profile (meaning an emulator is running)
+sudo python3 manualkit/cli.py --pdf /path/to/game.pdf --profile emulator
+```
+
+In most cases, the preferred way to run `manualkit` is as a server.  In this mode, `manualkit` can switch
+which PDF it's configured to use rather than terminating and re-running `manualkit` each time a new game
+is selected.  This is particularly useful in cases where you're scrolling through EmulationStation.
+
+When `manualkit` runs in server mode, it uses a Linux FIFO file to enable communication between clients
+and the server.  This type of API is used in order to keep the design as simple as possible.
+
+Example usage:
+
+```bash
+# Start server
+sudo python3 manualkit/cli.py /path/to/manualkit.cfg --server --profile frontend --track-pid $PPID
+
+# Hide manualkit, load a new PDF, and reconfigure it to use the emulator profile
+echo \
+  'hide'$'\n' \
+  'reset_display'$'\n' \
+  'load'$'\t'"$rom_manual_file"$'\t'"$rom_reference_file"$'\t''true'$'\n' \
+  'set_profile'$'\t''emulator' > /opt/retropie/configs/all/manualkit.fifo
+```
+
+The following server commands are available:
+
+* `hide` - Hides the manual if it's currently being displayed (or does nothing)
+* `reset_display` - Resets the connected display, to be re-opened the next time we attempt to show a PDF
+* `load` - Loads a new PDF / supplementary PDF
+* `set_profile` - Sets the input profile to use (frontend / emulator)
+* `reload_devices` - Reloads the configuration used for all input devices
+
+Examples:
+
+```bash
+echo 'hide' > /path/to/manualkit.fifi
+
+echo 'reset_display' > /path/to/manualkit.fifi
+
+# Note that the last argument is whether to pre-render the first page of the manual
+echo 'load'$'\t'"/path/to/manual.pdf"$'\t'"/path/to/reference.pdf"$'\t''true' > /path/to/manualkit.fifi
+
+echo 'set_profile'$'\t''emulator' > /path/to/manualkit.fifi
+
+echo 'reload_devices' > /path/to/manualkit.fifi
+```
+
 ## Manuals
 
 There are over 18,000 manuals that have been hand-sourced over 2 years for this project.  They

@@ -35,3 +35,13 @@ The monitoring thread is used to check when either the runcommand dialog is disp
 *or* the emulator has exited.  This ensures that we clear the screen when other
 things may be getting displayed on the screen.  Assuming this doesn't happen, then
 the image will be automatically cleared when the emulator starts rendering.
+
+## Usage
+
+```bash
+# Show a launch image for the given system / rom
+launchkit/launchkit.sh show <system> <emulator> <path-to-rom>
+
+# Clear any currently drawn launch image (this can be safely done multiple times)
+launchkit/launchkit.sh clear
+```

@@ -183,6 +183,16 @@ Additionally, when paired with retrokit, autoport profiles will be automatically
 based on metadata known about what inputs are used by certain games.  This can make
 setting up inputs, such as lightguns, very easy to do.
 
+## Usage
+
+```
+# Reconfigure inputs for the given system/emulator
+autoport/autoport.sh setup <system> <emulator> <path-to-rom>
+
+# Restore input configuration for the given system/emulator
+autoport/autoport.sh restore <system> <emulator> <path-to-rom>
+```
+
 ## Examples
 
 Below are some example use cases you could run into.
