@@ -13,6 +13,25 @@ with system controllers, this library is built with the following goals in mind:
 
 * Provide high-level functionality, such as repeat events, key down/up events, and "grab" support
 
+## Dependencies
+
+devicekit has the following dependencies:
+
+* evdev
+* pyudev
+
+To install the dependencies, you can run the following:
+
+```
+devicekit/setup.sh depends
+```
+
+To remove dependencies:
+
+```bash
+devicekit/setup.sh remove
+```
+
 ## Example
 
 Below is an example integration with `devicekit`:

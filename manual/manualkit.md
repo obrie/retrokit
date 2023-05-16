@@ -103,6 +103,30 @@ allow you to bring up manuals while playing the game.
 
 It's possible to integrate `manualkit` with other frontends, but there's no built-in support for it.
 
+## Dependencies
+
+`manualkit` has the following dependencies:
+
+* devicekit
+* PyMuPDF
+* psutil
+
+Due to version requirements and what's available on the current release of Raspbian,
+mupdf must be built from source.  To install the required dependencies, you can run
+the following:
+
+```
+manualkit/setup.sh depends
+```
+
+Note that `devicekit` must be present in the same parent directory as `manualkit`.
+
+To remove dependencies:
+
+```bash
+manualkit/setup.sh remove
+```
+
 ## Usage
 
 `manualkit` must be run as `root` using `sudo` in order for it to have the necessary permissions to
