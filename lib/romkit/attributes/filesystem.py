@@ -6,7 +6,7 @@ from romkit.models.playlist import Playlist
 from pathlib import Path
 from typing import Set
 
-# Attribute on the presence of the machine on the filesystem
+# Whether the machine is present on the filesystem
 class FilesystemAttribute(BaseAttribute):
     rule_name = 'filesystem'
     data_type = bool

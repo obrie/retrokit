@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from romkit.attributes.base import BaseAttribute
 
-# Community-determined rating of the game
+# Custom labels associated with the machine
 class TagsAttribute(BaseAttribute):
     metadata_name = 'tags'
     rule_name = metadata_name
