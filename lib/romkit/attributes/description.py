@@ -30,8 +30,8 @@ class FlagAttribute(BaseAttribute):
 
 
 # All Flags (text between parens) from the description
-class CombinedFlagAttribute(BaseAttribute):
-    rule_name = 'combined_flags'
+class FlagGroupsAttribute(BaseAttribute):
+    rule_name = 'flag_groups'
     data_type = str
 
     def get(self, machine: Machine) -> Set[str]:
