@@ -102,8 +102,8 @@ class ManualsAttribute(BaseAttribute):
         machine.manual = fallback_manual
 
 # Whether the machine has a manual
-class HasManualAttribute(BaseAttribute):
-    rule_name = 'has_manual'
+class ManualExistsAttribute(BaseAttribute):
+    rule_name = 'manual_exists'
     data_type = bool
 
     def get(self, machine: Machine) -> bool:

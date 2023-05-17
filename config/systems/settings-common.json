@@ -59,7 +59,7 @@
       },
       "Manuals": {
         "filters": {
-          "has_manual": [true]
+          "manual_exists": [true]
         }
       },
       "Multiplayer": {

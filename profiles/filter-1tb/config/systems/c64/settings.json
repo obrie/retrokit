@@ -1,7 +1,7 @@
 {
   "roms": {
     "filters": {
-      "has_manual": [true],
+      "manual_exists": [true],
       "tags": [
         "C64 Dreams"
       ],
