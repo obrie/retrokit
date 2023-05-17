@@ -2,7 +2,7 @@
   "roms": {
     "priority": {
       "group_by": ["group", "disc_title"],
-      "order": ["flags/countries", "!flags/prototypes", "!flags/addons", "romsets", "years", "!flags/versions", "versions", "is_group_title", "flag_groups_total", "names.length", "names/alphabetical"],
+      "order": ["flags/countries", "!flags/prototypes", "!flags/addons", "romsets", "years", "!flags/versions", "versions", "group_is_title", "flag_groups_total", "names.length", "names/alphabetical"],
       "flags/countries": [
         "/\\bUSA?\\b",
         "/World",
@@ -33,7 +33,7 @@
         "/^Rev"
       ],
       "versions": "ascending",
-      "is_group_title": [true],
+      "group_is_title": [true],
       "flag_groups_total": "ascending",
       "names.length": "ascending",
       "names/alphabetical": "ascending"

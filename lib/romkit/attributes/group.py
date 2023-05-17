@@ -17,8 +17,8 @@ class GroupAttribute(BaseAttribute):
 
 
 # Whether the machine has the same title as the group
-class IsGroupTitleAttribute(BaseAttribute):
-    rule_name = 'is_group_title'
+class GroupIsTitleAttribute(BaseAttribute):
+    rule_name = 'group_is_title'
     data_type = bool
 
     def get(self, machine: Machine) -> bool:
