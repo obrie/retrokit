@@ -523,7 +523,7 @@ class Machine:
             'category': self.category,
 
             # ROM info
-            'path': str(self.resource and self.resource.target_path.path),
+            'path': self.resource and str(self.resource.target_path.path),
             'filesize': self.filesize,
             'description': self.description,
             'comment': self.comment,
@@ -532,7 +532,7 @@ class Machine:
             'is_mechanical': self.is_mechanical,
 
             # Download info
-            'url': str(self.resource and self.resource.source_url),
+            'url': self.resource and str(self.resource.source_url),
 
             # User overrides
             'favorite': self.favorite,
