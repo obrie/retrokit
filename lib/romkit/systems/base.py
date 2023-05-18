@@ -30,7 +30,7 @@ class BaseSystem:
     def __init__(self,
         name: str,
         stub: bool = False,
-        rom_id_type: str = 'name',
+        rom_id_type: str = 'crc',
         downloader: Downloader = Downloader.instance(),
         favorites_rules: Ruleset = Ruleset(default_on_empty=None, log=False),
         collections: CollectionSet = CollectionSet(),
