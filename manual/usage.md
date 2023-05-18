@@ -42,30 +42,6 @@ bin/setup.sh configure system-retroarch n64
 DEBUG=true bin/setup.sh install splashscreen
 ```
 
-romkit:
-
-```
-bin/romkit.sh <action> <system> <options>
-
-# List filtered ROMs for all systems
-bin/romkit.sh list
-
-# List filtered ROMs for specific system
-bin/romkit.sh list n64
-
-# Set verbose mode
-bin/romkit.sh list n64 --log-level DEBUG
-
-# Download/Install ROMs
-bin/romkit.sh install <system>
-
-# Re-build the ROM folder structure
-bin/romkit.sh organize <system>
-
-# Print which ROM files are no longer needed according to system settings
-bin/romkit.sh vacuum <system>
-```
-
 update:
 
 ```
