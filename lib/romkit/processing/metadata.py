@@ -88,7 +88,11 @@ class Metadata:
         metadata = self.get(machine)
 
         for attribute in self.attributes:
-            value = metadata and metadata.get(attribute.metadata_name) or attribute.default
+            if metadata and attribute.metadata_name in metadata:
+                value = metadata[attribute.metadata_name]
+            else:
+                value = attribute.default
+
             if value is not None:
                 attribute.set(machine, value)
 
