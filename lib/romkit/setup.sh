@@ -11,7 +11,7 @@ depends() {
   sudo pip3 install lxml~=4.9
 
   # High-Performance HTTP
-  sudo pip3 install pycurl~=7.45
+  sudo pip3 install pycurl~=7.45 'requests>=2.12'
 
   # Torrentzip
   __depends_trrntzip
