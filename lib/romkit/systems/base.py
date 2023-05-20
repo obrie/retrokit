@@ -291,7 +291,9 @@ class BaseSystem:
         # Look up all files that match the path template glob pattern.  If they
         # weren't tracked as an installable resource, then we know they can be
         # deleted.
-        for path_glob in installable_path_globs:
-            for path in Path('/').glob(str(path_glob)[1:]):
+        # 
+        # Paths are sorted to make for prettier output.
+        for path_glob in sorted(installable_path_globs):
+            for path in sorted(Path('/').glob(str(path_glob)[1:])):
                 if path not in installable_paths:
                     print(f'rm -rfv {shlex.quote(str(path))}')
