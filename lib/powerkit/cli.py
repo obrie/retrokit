@@ -41,13 +41,7 @@ class PowerKit():
 
         # Set up logger
         log_level = self.config['logging']['level']
-        root = logging.getLogger()
-        root.setLevel(getattr(logging, log_level))
-        handler = logging.StreamHandler(sys.stdout)
-        handler.setLevel(getattr(logging, log_level))
-        formatter = logging.Formatter('%(asctime)s - %(message)s')
-        handler.setFormatter(formatter)
-        root.addHandler(handler)
+        logging.basicConfig(level=getattr(logging, log_level), format='%(asctime)s - %(message)s', stream=sys.stdout)
 
         # Identify which power provider we're working with
         self.provider = BaseProvider.from_config(self.config)

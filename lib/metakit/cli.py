@@ -26,13 +26,7 @@ class MetaKit:
             self.config = json.loads(os.path.expandvars(f.read()))
 
         # Set up logger
-        root = logging.getLogger()
-        root.setLevel(getattr(logging, log_level))
-        handler = logging.StreamHandler(sys.stdout)
-        handler.setLevel(getattr(logging, log_level))
-        formatter = logging.Formatter('%(asctime)s - %(message)s')
-        handler.setFormatter(formatter)
-        root.addHandler(handler)
+        logging.basicConfig(level=getattr(logging, log_level), format='%(asctime)s - %(message)s', stream=sys.stdout)
 
         # Build system
         self.system = BaseSystem.from_json(self.config)
