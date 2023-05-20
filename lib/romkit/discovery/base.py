@@ -59,7 +59,7 @@ class BaseDiscovery:
             try:
                 self.downloader.get(source, target, force=True)
             except Exception as e:
-                logging.warn(f'Failed to refresh discovery source: {source}')
+                logging.debug(f'Failed to refresh discovery source: {source}')
 
     # Loads the data needed for discovery
     def load(self) -> None:
