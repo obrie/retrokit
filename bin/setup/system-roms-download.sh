@@ -7,15 +7,13 @@ setup_module_id='system-roms-download'
 setup_module_desc='Download ROMs via romkit'
 
 build() {
-  local log_level
+  local args=()
   if [ "$DEBUG" == 'true' ]; then
-    log_level='DEBUG'
-  else
-    log_level='INFO'
+    args+=(--log_level DEBUG)
   fi
 
   echo 'Looking for new ROMs to download...'
-  romkit_cli install --log-level "$log_level"
+  romkit_cli install ${args[@]}
 }
 
 # Outputs the commands required to remove files no longer required by the current

@@ -26,11 +26,7 @@ run() {
   local command=$1
   local system=$2
   local system_settings_file=$(generate_system_settings_file "$system")
-
   local args=("${@:3}")
-  if [ -z "$args" ]; then
-    args=(--log-level ERROR)
-  fi
 
   TMPDIR="$tmp_dir" python3 "$lib_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
 }
