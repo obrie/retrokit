@@ -13,5 +13,11 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "hotkeys_extra": {
+      "l2,dpad_left": "Color Palette -",
+      "l2,dpad_right": "Color Palette +"
+    }
   }
 }
