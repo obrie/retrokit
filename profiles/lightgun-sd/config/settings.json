@@ -1,0 +1,7 @@
+{
+  "setup": {
+    "remove|rom_overlays": [
+      "system-roms-overlays"
+    ]
+  }
+}
