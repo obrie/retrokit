@@ -10,9 +10,6 @@
     "dosbox-staging": {"default": true},
     "dosbox": {}
   },
-  "downloads": {
-    "concurrency": 2
-  },
   "bios": {
     "url": "$ROMSET_MAME_LATEST_URL",
     "dir": "/opt/retropie/configs/pc/mt32-roms",
