@@ -136,7 +136,7 @@ and sorting/prioritizing roms:
 `romkit` is configured via a json file that describes everything required for the
 system being used.  Below is an example configuration at its most basic.
 
-```json
+```jsonc
 {
   "system": "vectrex",
   "metadata": {
@@ -178,7 +178,7 @@ The `metadata` setting is used for 2 main purposes:
 
 For example:
 
-```json
+```jsonc
 {
   // ...
   "metadata": {
@@ -206,7 +206,7 @@ used by romkit.  Currently the following attributes support behavior overrides:
 
 For example:
 
-```json
+```jsonc
 {
   // ...
   "attributes": {
@@ -254,7 +254,7 @@ external archive.
 
 Resources can be sourced from either the local file system or a remote url:
 
-```json
+```jsonc
 // Locally sourced
 "dat": {
   "source": "file://$RETROKIT_HOME/cache/nointro/GCE - Vectrex (Parent-Clone).dat"
@@ -338,6 +338,7 @@ For example, consider the following Commodore 64 configuration:
           "target": "$RETROKIT_HOME/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(PP.*\\.dat"}
         }
+      }
     }
   }
 }
@@ -355,11 +356,12 @@ When configuring romsets with machine/disk/sample resources, you may need
 "discover" where those resources exist instead of having explicit urls for
 them.  For example, consider the following:
 
-```json
+```jsonc
 {
   // ...
   "romsets": {
     "nointro": {
+      // Discover files from the given provider that are under the URL `.../<machine>.zip`
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -372,6 +374,7 @@ them.  For example, consider the following:
           "source": "$RETROKIT_HOME/cache/redump/Sega - Dreamcast.dat"
         },
         "machine": {
+          // {discovery_url} will be the url based on the machine's name
           "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
@@ -443,14 +446,16 @@ for sorting/prioritizing groups of games in order to build a 1G1R list.
 
 Filtering rules are applied like so:
 
-```json
+```jsonc
 {
   // ...
   "roms": {
     "filters": {
+      // Only select English titles
       "languages": [
         "en"
       ],
+      // Don't select Board game / Casino games
       "!genres": [
         "Board game",
         "Casino"
@@ -467,7 +472,9 @@ Prioritization rules are applied like so:
   "roms": {
     "priority": {
       "group_by": ["group", "disc_title"],
+      // Order of rule names
       "order": ["flags"],
+      // Actual rules
       "flags": [
         "USA",
         "World",
@@ -483,7 +490,7 @@ so that you can build the exact game list you want.  The examples below demonstr
 different types of behavior you can add to rules.  These examples apply to rules used for
 both filtering and prioritization.
 
-```json
+```jsonc
 // Disabled key (ignored by romkit)
 "#flags": ["USA"]
 
@@ -517,7 +524,7 @@ both filtering and prioritization.
 Additionally, prioritization rules support a few additional features that can be
 useful:
 
-```json
+```jsonc
 // Sort machines in ascending order
 "years": "ascending",
 
@@ -549,12 +556,15 @@ implemented by utilizing rules.  See the section on Rules for more information.
 
 Example filter configuration:
 
-```json
+```jsonc
 {
   "roms": {
     "filters": {
+      // Remove games marked as incompatible
       "!emulator_compatibility": [false],
+      // Remove games that don't work great
       "!emulator_ratings": [0, 1, 2, 3],
+      // Only select games that are in English
       "languages": [
         "en"
       ]
@@ -571,20 +581,31 @@ Rules for more information.
 
 Example priority configuration:
 
-```json
+```jsonc
 {
   "roms": {
     "priority": {
+      // Games are first grouped by their metakit `group` with a single game/playlist
+      // selected.
+      //
+      // Games are then grouped by their `disc_title` so that only a single disc number
+      // is chosen for multi-disc games
       "group_by": ["group", "disc_title"],
+
+      // The order in which the priorities are determined
       "order": [
         "is_parent",
         "!flags/prototypes",
         "!flags.match_count/primary_countries",
         "names/alphabetical"
       ],
+
+      // Choose the parent defined in the DAT
       "is_parent": [
         true
       ],
+
+      // Prioritize non-prototype games (items matching earlier are lower priority)
       "!flags/prototypes": [
         "Pirate",
         "Proto",
@@ -593,30 +614,21 @@ Example priority configuration:
         "Beta",
         "Unl"
       ],
+
+      // Prioritize games listing the matching countries
       "!flags.match_count/primary_countries": [
         "# Descending order (total count of number of primary countries in the flags)",
         "Europe",
         "USA",
         "Japan"
       ],
+
+      // Prioritize games by their name
       "names/alphabetical": "ascending"
     }
   }
 }
 ```
-
-In this example:
-
-* Games are first grouped by their metakit `group` with a single game/playlist selected
-* Games are then grouped by their `disc_title` so that only a single disc number is chosen for multi-disc games
-* The order in which the priorities are determined is based on the `order` setting
-
-Each time that we run through the game selection process, the priorities are:
-
-* `is_parent`: Choose the parent if defined in the DAT
-* `!flags/prototypes`: Prioritize non-prototype games (items matching earlier are lower priority)
-* `!flags.match_count/primary_countries`: Prioritize games listing the matching countries
-* `names/alphabetical`: Prioritize games by their name
 
 ### Favorites
 

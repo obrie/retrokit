@@ -124,7 +124,7 @@ python3 powerkit/cli.py /path/to/powerkit.cfg
 
 ## Example Configuration
 
-```
+```ini
 [provider]
 
 # Name of the software shutdown provider to use (hotkey is always enabled)

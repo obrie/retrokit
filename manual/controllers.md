@@ -51,7 +51,7 @@ is probably the best way.
 
 Once you've identified your controllers, you can configure them through `config/settings.json` like so:
 
-```
+```json
 {
   "hardware": {
     "controllers": {

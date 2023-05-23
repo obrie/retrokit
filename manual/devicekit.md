@@ -22,7 +22,7 @@ devicekit has the following dependencies:
 
 To install the dependencies, you can run the following:
 
-```
+```bash
 devicekit/setup.sh depends
 ```
 

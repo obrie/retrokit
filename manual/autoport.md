@@ -58,7 +58,7 @@ It will prioritize each of the above configurations like so (highest to lowest):
 
 At its most basic, autoport configurations are structured like so:
 
-```
+```ini
 [base]
 
 mouse1...
@@ -88,7 +88,7 @@ or a joystick), you can configure the following filters:
 
 Example configuration:
 
-```
+```ini
 joystick1_vendor_id = "1234"
 joystick1_product_id = "5678"
 ```
@@ -100,7 +100,7 @@ Additionally, each input can define how it gets set up in the emulator:
 
 Example configuration:
 
-```
+```ini
 joystick1_limit = 2
 joystick1_set_device_type = 123
 ```
@@ -116,7 +116,7 @@ Finally, you can control how joysticks and mice get set up overall with the foll
 
 Example configuration:
 
-```
+```ini
 joystick_start = 2
 joystick_limit = 1
 ```
@@ -129,7 +129,7 @@ autoport supports the concept of profiles.  A profile is a group of configuratio
 a certain category of games.  The default "base" profile is used when a specific profile isn't
 referenced.  Below is an example of an autoport configuration that defines multiple profiles:
 
-```
+```ini
 [base]
 
 [lightgun]
@@ -185,7 +185,7 @@ setting up inputs, such as lightguns, very easy to do.
 
 ## Usage
 
-```
+```bash
 # Reconfigure inputs for the given system/emulator
 autoport/autoport.sh setup <system> <emulator> <path-to-rom>
 
@@ -202,7 +202,7 @@ Below are some example use cases you could run into.
 To set up Sinden lightguns to be set up as a mouse for Player 1 / Player 2, you can
 define an autoport profile like so:
 
-```
+```ini
 [lightgun]
 
 mouse1 = "Unknown SindenLightgun Mouse"
@@ -222,7 +222,7 @@ and connected before using it as an input.
 Support you have a GPi case and you want to prioritize wireless controllers over the
 built-in gamepad.  You can do that like so:
 
-```
+```ini
 [base]
 
 joystick1 = "8Bitdo SN30 Pro"
@@ -247,7 +247,7 @@ This prioritizes, in oder:
 Below is my autoport.cfg that defines different profiles based on the type of inputs
 the game supports:
 
-```
+```ini
 [base]
 
 mouse1 = "Telink Wireless Receiver Mouse"

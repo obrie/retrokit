@@ -47,7 +47,7 @@ You can even define multiple profiles.  For example, suppose you wanted to defin
 a "base" profile and then layer customizations for different systems on top of that.
 To do that, add something like this to your `.env`:
 
-```
+```bash
 PROFILES=mykit/base,mykit/crt
 # PROFILES=mykit/base,mykit/hd
 ```
@@ -128,7 +128,7 @@ export PROFILES=filter-demo
 environment.  To instead respect the current environment, you can change the format
 to:
 
-```sh
+```bash
 export PROFILES=${PROFILES:-filter-demo}
 ```
 
@@ -169,7 +169,7 @@ You can include multiple include lines as well:
 With this functionality, you can codify each hardware build that you create and simply
 reference that from the root `.env`:
 
-```
+```bash
 export PROFILES=${PROFILES:-mykit/tv}
 ```
 

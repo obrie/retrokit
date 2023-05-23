@@ -53,7 +53,7 @@ When a manual is being displayed, the following controls are used:
 
 Below is an example configuration:
 
-```
+```ini
 [keyboard]
 retroarch = false
 toggle_frontend = m
@@ -115,7 +115,7 @@ Due to version requirements and what's available on the current release of Raspb
 mupdf must be built from source.  To install the required dependencies, you can run
 the following:
 
-```
+```bash
 manualkit/setup.sh depends
 ```
 
@@ -240,7 +240,7 @@ or new systems supported.
 
 To generate archives:
 
-```
+```bash
 PROFILES=manualkit-original bin/manualkit.sh remote_sync_system_manuals <system>
 PROFILES=manualkit-compressed bin/manualkit.sh remote_sync_system_manuals <system>
 ```
@@ -263,14 +263,15 @@ If you want to configure your own post-processing configuration, you can still u
 manuals by using a configuration like so:
 
 config/settings.json:
-```json
+
+```jsonc
 {
   "manuals": {
     "archive": {
       "url": "https://archive.org/download/romkit-manualkit/{system}/original.zip/{parent_title} ({languages}).pdf",
       "processed": false
     },
-    ...
+    // ...
   }
 }
 ```
@@ -295,26 +296,30 @@ The logic for determining which manual to use for a specific game is largely bas
 preference for the user, *not* the country identifiers in the game filename.  The relevant
 retrokit configuration is:
 
-```json
+```jsonc
+{
   "metadata": {
     "manuals": {
+      // Allowlist of languages to pick for manuals.  Manuals in other langauges will never
+      // be selected.
       "languages": [
         "en",
         "en-gb"
       ],
+
+      // Prioritize languages according to the game name and the languages selected above
+      // rather than *just* the order in which they're defined
       "prioritize_region_languages": false,
+
+      // Only use languages associated with the region defined in the game name?
       "only_region_languages": false
     }
   },
+  // ...
+}
 ```
 
 By default, retrokit will prefer languages based on the region of the game being installed.
-However, two additional settings are available to adjust this behavior:
-
-* `prioritize_region_languages` - If set to `false`, this will prioritize languages according to the
-  order defined in the configuration rather than the regions from the game name
-* `only_region_languages` - If set to `true`, then this will only use manuals in languages
-  associated with the region defined for the game name
 
 ### Arcade manuals
 
