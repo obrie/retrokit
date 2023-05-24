@@ -1,6 +1,6 @@
 # Cache
 
-The retrokit cache is a way of keep resources local to this repository and avoiding
+The retrokit cache is a way of keeping resources local to this repository and avoiding
 a dependency on external websites when either (a) you're not connected to the
 internet or (b) the external websites have reliability issues.  Over time, the
 cache will be re-synced with the external sources to ensure that retrokit doesn't
