@@ -270,6 +270,7 @@ is one group that's worked hard to build game-specific bezels for these systems.
 To define overlays for an individual systems, you can configure it like so:
 
 ```jsonc
+{
   "overlays": {
     // The default horizontal overlay to display if a game-specific one isn't found
     "default": "https://github.com/thebezelproject/bezelprojectSA-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",
