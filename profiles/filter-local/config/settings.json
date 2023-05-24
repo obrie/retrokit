@@ -1,7 +1,9 @@
 {
   "setup": {
-    "remove|local": [
-      "system-roms-download"
-    ]
+    "modules|local": {
+      "remove": [
+        "system-roms-download"
+      ]
+    }
   }
 }

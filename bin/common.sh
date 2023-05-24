@@ -143,13 +143,13 @@ list_setupmodules() {
 
     # Insert the new set of modules
     modules=("${modules[@]:0:insert_index}" "${new_modules[@]}" "${modules[@]:insert_index}")
-  done < <(setting '.setup | to_entries[] | select(.key | startswith("modules|")) | [.key, .value.before, .value.after, (.value.add | join(","))] | join(",")' | sort)
+  done < <(setting '.setup | to_entries[] | select(.key | startswith("modules|")) | select(.value.add) | [.key, .value.before, .value.after, (.value.add | join(","))] | join(",")' | sort)
 
   # Identify which modules we're removing
   declare -A modules_to_remove
   while read module; do
     modules_to_remove[$module]=1
-  done < <(setting '.setup | to_entries[] | select(.key | startswith("remove")) | .value[]')
+  done < <(setting '.setup | to_entries[] | select(.key | startswith("modules|")) | select(.value.remove) | .value.remove[]')
 
   # Print the resolved set of modules, being sure to:
   # * Not print removed modules
