@@ -413,7 +413,7 @@ The following authenticiation strategies are implemented:
 
 * internetarchive: Uses the cookies stored from the `ia` command-line tool
 
-## `roms`
+### `roms`
 
 The `roms` setting is where most of the hard work is done.  This is where you'll be
 setting up:
@@ -426,7 +426,7 @@ setting up:
 
 Each section is described below.
 
-### Identification
+#### Identification
 
 The `id` setting is used to tell romkit how to uniquely identify a game.  There are
 two options here:
@@ -439,7 +439,7 @@ Typically, `name` is used for MAME-like systems and `crc` is used for everything
 The unique identifier here is used for many purposes in retrokit.  Most importantly,
 in the context of romkit, it's often used for the `xref` path in a resource.  
 
-### Rules
+#### Rules
 
 Rules define the conditions required in order for a game to be included / excluded *or*
 for sorting/prioritizing groups of games in order to build a 1G1R list.
@@ -549,7 +549,7 @@ useful:
 ]
 ```
 
-### Filtering
+#### Filtering
 
 The `filters` setting is used to remove games you don't want listed.  Filters are
 implemented by utilizing rules.  See the section on Rules for more information.
@@ -573,7 +573,7 @@ Example filter configuration:
 }
 ```
 
-### Prioritization
+#### Prioritization
 
 The `priority` setting is used for choosing which game to use within a group of
 clones.  Prioritization is implementing by utilizing rules.  See the section on
@@ -630,7 +630,7 @@ Example priority configuration:
 }
 ```
 
-### Favorites
+#### Favorites
 
 The `favorites` setting provides a way to mark a game as being a favorite and include
 that information in romkit's output.  This is useful when combined with a script that
@@ -674,7 +674,7 @@ Example in the output:
 {"system": "nes", "romset": "nointro", "name": "Super Mario Bros. (World)", ..., "favorite": true, ...}
 ```
 
-### Collections
+#### Collections
 
 The `collections` setting provides a way to categorize games and include that information in
 romkit's output.  This is useful when combined with a script that defines your collections
@@ -798,7 +798,7 @@ In the above example, we're combining both US-based games and Europe-based games
 then prioritizing them.  There's a simpler way to write this configuration, but this
 is just demonstrating the principle.
 
-### Organization
+#### Organization
 
 Once installed, romkit can organize your games into a directory structure based on
 a set of filters.  For example, the below configuration installs all files from the
@@ -837,6 +837,24 @@ so:
 ```
 
 As you can see, there are a lot of possible when it comes to organizing your games.
+
+### `downloads`
+
+When downloading games via your own private archives, you can set some limits
+on how the download functionality behaves.
+
+For example:
+
+```json
+{
+  "downloads": {
+    "concurrency": 2
+  }
+}
+```
+
+By default, romkit will use a concurrency of 5 when downloading from external sources.
+If you want to adjust that concurrency, you can do so.
 
 ## Output
 
