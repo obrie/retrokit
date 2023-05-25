@@ -1,67 +1,91 @@
 # retrokit
 
-retrokit provides software automation for the management of retro-gaming systems
-with RetroPie / Raspberry Pi 4.
+retrokit provides powerful automation and UX improvements for retro-gaming systems
+built with RetroPie / Raspberry Pi 4.
 
-In addition to configuration management, retrokit consists of several sub-projects,
-including:
+In addition to being a configuration management tool, retrokit consists of several
+sub-projects, including:
 
-* [autoport](manuals/autoport.md) - Automatic joystick (controller/mouse) selection for libretro and standalone emulators
-* [devicekit](manuals/devicekit.md) - Python library for building applications based on RetroArch autoconfig controls
-* [manualkit](manuals/manualkit.md) - Application for displaying game manuals from EmulationStation or during gameplay
-* [metakit](manuals/metakit.md) - Python tool for managing system metadata sourced from many different websites, forums, etc.
-* [powerkit](manuals/powerkit.md) - Advanced safe system/emulator shutdown tool controlled through hardware and joysticks
-* [romkit](manuals/romkit.md) - Tool for listing, filtering, organizing, converting, and installing games from romsets
-* [sindenkit](manuals/sindenkit.md) -Plug 'n play functionality and quality-of-life improvements for Sinden Lightguns
+* 🎮 [autoport](manual/autoport.md) - Advanced automatic joystick (controller/mouse) selection for libretro and standalone emulators
+* 🎮 [devicekit](manual/devicekit.md) - Python library for building applications based on RetroArch autoconfig controls
+* 📖 [manualkit](manual/manualkit.md) - Application for displaying game manuals from EmulationStation or during gameplay
+* 🏷️ [metakit](manual/metakit.md) - Python tool for managing system metadata sourced from many different websites, forums, etc.
+* 🔌 [powerkit](manual/powerkit.md) - Advanced safe system/emulator shutdown tool controlled through hardware and joysticks
+* 🗃️ [romkit](manual/romkit.md) - Tool for listing, filtering, organizing, converting, and installing games from romsets
+* 🔫 [sindenkit](manual/sindenkit.md) - Plug 'n play functionality and quality-of-life improvements for Sinden Lightguns
+* 📚 [manuals archive](https://archive.org/details/retrokit-manuals) - A collection of ~20,000 manuals across 40+ systems, catalogued by hand
 
 With support of the above sub-projects, retrokit is capable of automating the
 installation, configuration, and management of:
 
-* Hardware
-  * Cases (e.g. Argon, NESPi, GPi 2), including safe reset/shutdown
-  * Xbox bluetooth support + customizations
-* Inputs
-  * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
-  * Automatic port selection based on active inputs (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
-  * Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard
-  * Sinden lightgun autoconfiguration, crosshair removal across all systems
-  * IR configuration
-* Media
-  * Splash screens (using a new async loading process, reducing load time by 2s)
-  * Overlays / Bezels (with auto-generated lightgun-compatible overlays)
-  * Scraping (via skyscraper) with automated fallback queries
-  * Launch images
-  * Themes
-* Manuals
-  * In-game manuals (using a collection of ~20,000 manuals catalogued by hand)
-  * System controller reference guides
-  * Printable gamelist reference books
-* Game Configurations
-  * Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
-  * ROM Playlist (m3u) auto-generation for multi-disc games
-  * Playstation GunCon patches (PPF)
-  * Game state (import/export)
-* Frontend
-  * EmulationStation configuration
-  * EmulationStation Collections (including auto-generated ones for input type, players, etc.)
-* Emulators
-  * Emulator installation
-  * Retroarch configuration
-  * Multi-Tap device configurations
-  * MAME Hi-scores, plugins, game info, history, and artwork
-  * MESS multi-system support
-* System Management
-  * SSH + AutoSSH for remote management
-  * VNC
-  * Display settings
-  * Wifi
-  * Overclocking
-  * Localization
-* Other
-  * Custom Retropie modules
-  * Various fixes / workarounds for many common issues
+▶️ **Inputs**
 
-Through [romkit](manuals/romkit.md), retrokit is able to provide ROM management
+* Controller autoconfig (including support for advmame, drastic, hypseus, mupen64plus/keyboard, ppsspp, redream, and ir)
+* Automatic port selection based on active inputs (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
+* Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard
+* Sinden lightgun autoconfiguration (including crosshair removal)
+* Xbox bluetooth customizations (triggers_to_buttons)
+* Nintendo Switch controller setup
+* Joystick axis calibration
+* gamecontrollerdb compatibility support for xbox triggers_to_buttons
+
+▶️ **Media**
+
+* Splash screens (using a new async loading process, reducing load time by 2s)
+* Overlays / Bezels (with auto-generated lightgun-compatible overlays)
+* Scraping (via skyscraper) with automated fallback queries
+* Launch images
+* Themes
+
+▶️ **Manuals**
+
+* In-game manuals (using a collection of ~20,000 manuals catalogued by hand)
+* System controller reference guides
+* Printable gamelist reference books
+
+▶️ **Game Configurations**
+
+* RetroArch configurations
+* Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
+* ROM Playlist (m3u) auto-generation for multi-disc games
+* Playstation GunCon patches (PPF)
+* Game state (import/export)
+
+▶️ **Frontend**
+
+* EmulationStation configuration
+* EmulationStation Collections (including auto-generated ones for input type, players, etc.)
+
+▶️ **Emulators**
+
+* Automatic emulator installation
+* Support for additional emulators (actionmax, lr-duckstation, lr-yabasanshiro, etc.)
+* Retroarch configuration (overall, per-system, per-emulator, per-game)
+* Multi-Tap device configurations
+* MAME Hi-scores, plugins, game info, history, and artwork
+* MESS multi-system support
+
+▶️ **System Management**
+
+* SSH + AutoSSH for remote management
+* VNC
+* Display settings
+* Wifi
+* Overclocking
+* Localization
+
+▶️ **Hardware**
+
+* Cases (e.g. Argon, NESPi, GPi 2), including safe reset/shutdown
+* IR configuration
+
+▶️ **And more!**
+
+* Custom Retropie modules
+* Various fixes / workarounds for many common issues
+* Many other things I'm forgetting to mention...
+
+Through **[romkit](manual/romkit.md)**, retrokit is able to provide ROM management
 capabilities, include:
 
 * Advanced filtering
@@ -76,10 +100,11 @@ capabilities, include:
 * Simple sub-directory management based on filters
 * High-performance multi-threaded downloads
 * Automatic resolution of name differences between DATs and public rom sets
+* Conversion of games to compressed formats
+* Management of game favorites and collections
 
-Through [manualkit](manuals/manualkit.md), retrokit is able to provide game
-manual management capabilities (across ~20,000 manuals that have been sourced
-by hand for this project), including:
+Through **[manualkit](manual/manualkit.md)**, retrokit is able to provide game
+manual management capabilities, including:
 
 * Installation via public manual sets
 * In-game viewing and control of manuals via keyboard and joysticks
@@ -145,19 +170,19 @@ There are also system-specific features, including:
 * Conversion of ISO-based ROMS to CSO for PSP
 * DLC support for PSP (PSN) ROMs
 
-For all of these integrations, retrokit provides a large library of [profiles](manuals/profiles.md)
+For all of these integrations, retrokit provides a large library of [profiles](manual/profiles.md)
 which allow you to add more functionality onto the default configuration, including:
 
-* 8BitDo input configurations
-* Preset rom filters for 512gb and 1tb hard drives
 * Predefined hardware kit configurations for GPi Case 2 handhelds, Argon TV setups, and Nespi TV setups
+* Preset rom filters for 512gb and 1tb hard drives
 * Sinden lightgun integrations (HD and SD)
+* 8BitDo input configurations
 
 All of this means you can set up your system from scratch to feature-complete
 with less than a few hours worth of work.  Systems built with retrokit are:
 
 * **Easy to use**: No need to worry about getting phone calls from your friends
-  about how to use the system.
+  about how to use the system
 * **Easy to recreate**: Every aspect is automated and codified
 * **Easy to extend**: Start with your base image and layer on new functionality
 
@@ -217,8 +242,9 @@ You can use retrokit just for its sub-projects (e.g. manualkit / romkit) or you
 can use it for software automation / configuration management as well.
 
 You will need to provide a `.env` file with the appropriate details filled out.
-In order to not encourage improper use of the ROM downloader (via romkit), you
-must provide the source rom set URLs yourself.
+You can use [.env.template](.env.template) as a starting point. In order to not
+encourage improper use of the ROM downloader (via romkit), you must provide the
+source rom set URLs yourself.
 
 Go through the settings and setup modules and become familiar with what this does.
 If you have a proper `.env` file, you can get a fully working system with very
@@ -235,7 +261,7 @@ all of your personal preferences.
 ### Creating a base image
 
 1. Override settings in `profiles/mykit/` to match your personal preferences and hardware requirements
-1. Create a `.env` file based on env.template to provide the required configuration settings
+1. Create a `.env` file based on [env.template](.env.template) to provide the required configuration settings
 1. Flash new image (Note this will also expand the main partition and copy retrokit
    onto the sd card):
    ```
