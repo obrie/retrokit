@@ -67,6 +67,9 @@ bin/setup.sh install splashscreen~
 # Install a range of setup modules (based on order in config/settings.json)
 bin/setup.sh install splashscreen~runcommand
 
+# Install multiple specific setup  modules
+bin/setup.sh install splashscreen,themes
+
 # Install all system-specific setup modules for all systems
 bin/setup.sh install system
 

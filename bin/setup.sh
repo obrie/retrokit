@@ -107,15 +107,20 @@ run() {
 
 main() {
   local action="$1"
-  local setupmodule="$2"
+  local setupmodules="$2"
 
-  if [ -z "$setupmodule" ] || [ "$setupmodule" == 'all' ]; then
+  if [ -z "$setupmodules" ] || [ "$setupmodules" == 'all' ]; then
     setup_all "$action"
-  elif [[ "$setupmodule" == *~* ]]; then
-    IFS='~' read -ra range <<< "$setupmodule"
-    setup_all "$action" from_setupmodule="${range[0]}" to_setupmodule="${range[1]}"
   else
-    setup "$action" "$setupmodule" "${@:3}"
+    # Multipl scripts can be comma-separated
+    for setupmodule in ${setupmodules//,/ }; do
+      if [[ "$setupmodule" == *~* ]]; then
+        IFS='~' read -ra range <<< "$setupmodule"
+        setup_all "$action" from_setupmodule="${range[0]}" to_setupmodule="${range[1]}" "${@:3}"
+      else
+        setup "$action" "$setupmodule" "${@:3}"
+      fi
+    done
   fi
 
   >&2 echo 'Done!'
