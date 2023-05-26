@@ -35,6 +35,31 @@ The following high-level features are supported by autoport:
 * Profile-based configurations so you can use different autoport configurations based on the game being played
 * Global, system, emulator, and game-specific overrides
 
+## Install
+
+To install `autoport` via retrokit (which will install all dependencies and configurations):
+
+```bash
+# Support multiple integrated autostart.sh scripts
+bin/setup.sh install retropie-autostart
+
+# Install autoport
+bin/setup.sh install autoport
+```
+
+## Usage
+
+Normally you won't need to directly interface with the autoport CLI, but if you're
+integrating it manually, then the CLI can be used like so:
+
+```bash
+# Reconfigure inputs for the given system/emulator
+autoport/autoport.sh setup <system> <emulator> <path-to-rom>
+
+# Restore input configuration for the given system/emulator
+autoport/autoport.sh restore <system> <emulator> <path-to-rom>
+```
+
 ## Configuration files
 
 Autoport uses pre-configured profiles to determine the priority order of joystick and mouse
@@ -182,16 +207,6 @@ playing.
 Additionally, when paired with retrokit, autoport profiles will be automatically selected
 based on metadata known about what inputs are used by certain games.  This can make
 setting up inputs, such as lightguns, very easy to do.
-
-## Usage
-
-```bash
-# Reconfigure inputs for the given system/emulator
-autoport/autoport.sh setup <system> <emulator> <path-to-rom>
-
-# Restore input configuration for the given system/emulator
-autoport/autoport.sh restore <system> <emulator> <path-to-rom>
-```
 
 ## Examples
 
