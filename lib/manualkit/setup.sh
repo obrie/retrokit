@@ -2,6 +2,8 @@
 
 set -e
 
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
 target_mupdf_version=1.18.0
 tmp_ephemeral_dir=$(mktemp -d)
 
@@ -52,13 +54,11 @@ depends() {
   # TODO: Add dependency on devicekit here
 
   # Python libs
-  sudo pip3 install \
-    psutil~=5.8 \
-    PyMuPDF==1.18.15
+  sudo pip3 install -r "$dir/requirements.txt"
 }
 
 remove() {
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y psutil PyMuPDF
+  command -v pip3 >/dev/null && sudo pip3 uninstall -yr "$dir/requirements.txt"
 }
 
 "${@}"

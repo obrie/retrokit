@@ -132,6 +132,18 @@ manualkit/setup.sh remove
 `manualkit` must be run as `root` using `sudo` in order for it to have the necessary permissions to
 draw on top of the screen.
 
+To install `manualkit` via retrokit (which will install all dependencies and configurations):
+
+```bash
+# Support multiple integrated autostart.sh scripts
+bin/setup.sh install retropie-autostart
+
+# Install manualkit
+bin/setup.sh install manualkit
+```
+
+To use the `manualkit` CLI:
+
 ```bash
 # Show a specific manual
 sudo python3 manualkit/cli.py --pdf /path/to/game.pdf
