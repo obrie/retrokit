@@ -17,10 +17,52 @@ from romsets.  Think of it like clrmamepro, but with the following functionality
 It provides a way to parse romsets, filter their contents, and manage the files for
 games using a single interface across all types of gaming systems.
 
+## Dependencies
+
+The minimum romkit dependencies are:
+
+* lxml
+* pycurl
+* requests
+
+Additionally, if you're going to be processing game files, you will need to have the
+following system dependencies installed:
+
+* zip
+* mame-tools
+* trrntzip
+
+To install the relevant Python / system dependencies:
+
+```bash
+# Install the minimum Python dependencies
+romkit/setup.sh depends
+
+# Install the dependencies required for processing game files
+romkit/setup.sh gamefile_depends
+
+# Install all required dependencies
+romkit/setup.sh all_depends
+```
+
+To remove dependencies:
+
+```bash
+romkit/setup.sh remove
+```
+
 ## Quick Start
 
 `romkit` works out of the box without having to make any configuration changes to
-retrokit.  Simply run commands like so:
+retrokit.
+
+To install romkit on your RetroPie system:
+
+```bash
+bin/setup.sh install romkit
+```
+
+To use the romkit CLI through retrokit:
 
 ```bash
 bin/romkit.sh <action> <system> <options>

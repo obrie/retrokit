@@ -1,17 +1,20 @@
 #!/bin/bash
 
+all_depends() {
+  depends
+  gamefile_depends
+}
+
 depends() {
+  sudo pip3 install -r requirements.txt
+}
+
+gamefile_depends() {
   # Zip
   sudo apt-get install -y zip
 
   # CHDMan
   sudo apt-get install -y mame-tools
-
-  # XML processing
-  sudo pip3 install lxml~=4.9
-
-  # High-Performance HTTP
-  sudo pip3 install pycurl~=7.45 'requests>=2.12'
 
   # Torrentzip
   __depends_trrntzip
@@ -38,6 +41,13 @@ __depends_trrntzip() {
   else
     echo "trrntzip is already the newest version ($(cat /usr/local/etc/trrntzip.version))"
   fi
+}
+
+remove() {
+  sudo apt-get remove -y zip mame-tools
+  sudo apt-get autoremove --purge -y
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r requirements.txt
+  sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 
 "${@}"
