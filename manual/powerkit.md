@@ -116,7 +116,15 @@ To remove dependencies:
 powerkit/setup.sh remove
 ```
 
-## Usage
+To install powerkit via the retrokit setupmodule:
+
+```bash
+bin/setup.sh install powerkit
+```
+
+## Getting Started
+
+To use the powerkit CLI manually:
 
 ```bash
 python3 powerkit/cli.py /path/to/powerkit.cfg
