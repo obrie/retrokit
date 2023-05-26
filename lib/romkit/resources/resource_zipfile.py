@@ -8,6 +8,7 @@ import subprocess
 import tempfile
 import zipfile
 from pathlib import Path
+from shutil import which
 from typing import Optional, Set
 
 class ResourceZipFile(ResourcePath):
@@ -39,7 +40,7 @@ class ResourceZipFile(ResourcePath):
         with zipfile.ZipFile(self.path, 'r') as zip_ref:
             zip_file_count = len(zip_ref.infolist())
 
-        if zip_file_count:
+        if zip_file_count and which('trrntzip'):
             logging.debug(f"Torrentzip'ing {self.path} {expected_files}")
 
             # Run trrntzip in its own directory due to the log files it creates (with no control)

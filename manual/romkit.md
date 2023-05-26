@@ -25,7 +25,7 @@ The minimum romkit dependencies are:
 * pycurl
 * requests
 
-Additionally, if you're going to be processing game files, you will need to have the
+Additionally, if you're going to be processing game files, you may need to have the
 following system dependencies installed:
 
 * zip
