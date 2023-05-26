@@ -52,6 +52,9 @@ __depends_conversion_tools() {
   # Convert cbr archives to pdf
   sudo apt-get install -y unrar-free
 
+  # Convert 7z archives to pdf
+  sudo apt-get install -y p7zip-full
+
   # Convert doc to pdf
   sudo apt-get install -y unoconv
 
@@ -120,6 +123,7 @@ remove() {
     chromium \
     img2pdf \
     unrar-free \
+    p7zip-full \
     unoconv \
     libimage-exiftool-perl \
     tesseract-ocr-ara \
