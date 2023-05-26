@@ -2,12 +2,14 @@
 
 set -e
 
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
 depends() {
-  sudo pip3 install evdev~=1.6 pyudev~=0.24.0
+  sudo pip3 install -r "$dir/requirements.txt"
 }
 
 remove() {
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y evdev pyudev
+  command -v pip3 >/dev/null && sudo pip3 uninstall -yr "$dir/requirements.txt"
 }
 
 "${@}"
