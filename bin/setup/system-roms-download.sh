@@ -9,7 +9,7 @@ setup_module_desc='Download ROMs via romkit'
 build() {
   local args=()
   if [ "$DEBUG" == 'true' ]; then
-    args+=(--log_level DEBUG)
+    args+=(--log-level DEBUG)
   fi
 
   echo 'Looking for new ROMs to download...'
