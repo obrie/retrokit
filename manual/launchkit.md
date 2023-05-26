@@ -36,6 +36,18 @@ The monitoring thread is used to check when either the runcommand dialog is disp
 things may be getting displayed on the screen.  Assuming this doesn't happen, then
 the image will be automatically cleared when the emulator starts rendering.
 
+## Install
+
+To install launchkit via retrokit:
+
+```bash
+# Support multiple integrated runcommand hooks
+bin/setup.sh install retropie-runcommand
+
+# Install launchkit
+bin/setup.sh install launchkit
+```
+
 ## Usage
 
 ```bash
