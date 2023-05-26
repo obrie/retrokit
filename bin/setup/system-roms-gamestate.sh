@@ -8,6 +8,10 @@ setup_module_desc='Manage game state'
 
 readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
+depends() {
+  sudo apt-get install -y zip
+}
+
 # Attempts to find game state that we aren't needed anymore
 vacuum() {
   load_emulator_data
