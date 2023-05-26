@@ -1,5 +1,6 @@
 from romkit.models.file import File
 from romkit.resources.resource_path import ResourcePath
+from romkit.util.zip_file import MutableZipFile
 
 import contextlib
 import logging
@@ -37,10 +38,14 @@ class ResourceZipFile(ResourcePath):
         if not self.exists():
             return
 
-        with zipfile.ZipFile(self.path, 'r') as zip_ref:
-            zip_file_count = len(zip_ref.infolist())
+        # Short-circuit if there are no entries in the zip file
+        with zipfile.ZipFile(self.path, 'r') as target_zip:
+            zip_file_count = len(target_zip.infolist())
 
-        if zip_file_count and which('trrntzip'):
+        if not zip_file_count:
+            return
+
+        if which('trrntzip'):
             logging.debug(f"Torrentzip'ing {self.path} {expected_files}")
 
             # Run trrntzip in its own directory due to the log files it creates (with no control)
@@ -48,11 +53,12 @@ class ResourceZipFile(ResourcePath):
                 with self._pushd(tmpdir):
                     subprocess.run(['trrntzip', self.path], stdout=subprocess.DEVNULL, check=True)
 
-            # Remove files we don't need
-            if expected_files:
+        # Remove files we don't need
+        if expected_files:
+            with MutableZipFile(self.path, 'a') as target_zip:
                 for file in (self.list_files() - expected_files):
                     logging.warn(f'Removing unexpected file {file.name} from {self.path}')
-                    subprocess.run(['zip', '-d', self.path, file.name], check=True)
+                    target_zip.remove(file.name)
 
     @contextlib.contextmanager
     def _pushd(self, new_dir: str) -> None:

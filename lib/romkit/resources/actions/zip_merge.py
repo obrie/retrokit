@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.resources.actions.base import BaseAction
+from romkit.util.zip_file import MutableZipFile
 
 import shutil
 import subprocess
@@ -19,7 +20,7 @@ class ZipMerge(BaseAction):
         existing_files_by_name = {file.name: file for file in existing_files}
 
         # Open target zip for appending new files
-        with zipfile.ZipFile(target.path, 'a') as target_zip:
+        with MutableZipFile(target.path, 'a') as target_zip:
             for file in files:
                 existing_file = existing_files_by_name.get(file.name)
                 if existing_file:
@@ -28,7 +29,8 @@ class ZipMerge(BaseAction):
                         continue
                     else:
                         # File exists with a different CRC; remove it
-                        subprocess.run(['zip', '-d', target.path, existing_file.name], check=True)
+                        logging.debug(f'Removing conflicting file {existing_file.name} from {target.path}')
+                        target_zip.remove(existing_file.name)
 
                 # Write ROM from source
                 source_file = source_files_by_id[file.id]

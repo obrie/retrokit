@@ -9,12 +9,9 @@ depends() {
   sudo pip3 install -r requirements.txt
 }
 
-gamefile_depends() {
-  # Zip
-  sudo apt-get install -y zip
-
-  # CHDMan
-  sudo apt-get install -y mame-tools
+optional_depends() {
+  # CHDMan, 7z
+  sudo apt-get install -y mame-tools p7zip-full
 
   # Torrentzip
   __depends_trrntzip
@@ -44,7 +41,7 @@ __depends_trrntzip() {
 }
 
 remove() {
-  sudo apt-get remove -y zip mame-tools
+  sudo apt-get remove -y mame-tools p7zip-full
   sudo apt-get autoremove --purge -y
   [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r requirements.txt
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version

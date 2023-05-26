@@ -28,9 +28,10 @@ The minimum romkit dependencies are:
 Additionally, if you're going to be processing game files, you may need to have the
 following system dependencies installed:
 
-* zip
-* mame-tools
-* trrntzip
+* mame-tools (chdman)
+* p7zip-full (if working with 7z files)
+* trrntzip (if you want standardized CRC values for your .zip files)
+* nibtools (for converting .nib files to .g64 -- generally not needed)
 
 To install the relevant Python / system dependencies:
 
@@ -38,11 +39,17 @@ To install the relevant Python / system dependencies:
 # Install the minimum Python dependencies
 romkit/setup.sh depends
 
-# Install the dependencies required for processing game files
-romkit/setup.sh gamefile_depends
+# Install the dependencies that may be used for processing game files (chdman, 7z, trrntzip)
+romkit/setup.sh optional_depends
 
 # Install all required dependencies
 romkit/setup.sh all_depends
+```
+
+To install `nibtools` via retrokit:
+
+```bash
+bin/setup.sh install c64/tools
 ```
 
 To remove dependencies:
