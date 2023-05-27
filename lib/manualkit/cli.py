@@ -318,10 +318,10 @@ class ManualKit():
 
     # Adds a handler for the given input type.  The provided button name can be a CSV in order
     # to enable adding multiple inputs for the same handler.
-    def _add_handler(self, input_type: InputType, btn_name_csv: str, callback: Callable, *args) -> None:
+    def _add_handler(self, input_type: InputType, btn_name_csv: str, callback: Callable, *args, **kwargs) -> None:
         for btn_name in list(csv.reader([btn_name_csv]))[0]:
             if btn_name:
-                self.input_listener.on(input_type, btn_name, callback, *args)
+                self.input_listener.on(input_type, btn_name, callback, *args, **kwargs)
 
     # Calls the given navigation API
     @synchronized
