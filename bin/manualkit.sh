@@ -40,6 +40,7 @@ remote_sync_system_manuals() {
 
   local sources_only='false'
   local install='true'
+  local upload='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
@@ -75,7 +76,7 @@ remote_sync_system_manuals() {
     local postprocess_dir=$(render_template "$postprocess_dir_template" base="$base_dir" system="$system")
 
     # Ensure the path actually exists and has files in it
-    if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
+    if [ "$upload" == 'true' ] && [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
       # Zip up the files and upload to internetarchive
       local zip_file=$(mktemp -u -p "$tmp_ephemeral_dir")
       zip -j -db -r "$zip_file" "$postprocess_dir"/*.pdf
