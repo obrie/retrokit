@@ -15,6 +15,7 @@ depends() {
   __depends_exif
   __depends_ocr
   __depends_ghostscript
+  __depends_downloaders
 }
 
 __depends_qpdf() {
@@ -115,8 +116,12 @@ __depends_ghostscript() {
   fi
 }
 
+__depends_downloaders() {
+  sudo pip3 install gallery-dl
+}
+
 remove() {
-  [ -z $(command -v pip3) ] ||  sudo pip3 uninstall -y ocrmypdf
+  [ -z $(command -v pip3) ] ||  sudo pip3 uninstall -y ocrmypdf gallery-dl
 
   sudo apt-get remove -y \
     bc \

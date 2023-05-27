@@ -287,7 +287,14 @@ __download_with_sleep() {
   fi
 
   local download_status=0
-  download "$url" "${@:2}" || download_status=$?
+  if [[ "$url" == *tumblr* ]]; then
+    local tumblr_dir="$tmp_ephemeral_dir/tumblr"
+    rm -rf "$tumblr_dir"
+    gallery-dl "$url" -o "api-key=$TUMBLR_API_KEY" -o "api-secret=$TUMBLR_API_SECRET" -D "$tumblr_dir/output" --zip
+    mv "$tumblr_dir/output.zip" "$2"
+  else
+    download "$url" "${@:2}" || download_status=$?
+  fi
 
   # Track the last time this domain was downloaded from.  We can skip this for:
   # * archive.org
