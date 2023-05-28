@@ -17,6 +17,8 @@ from romsets.  Think of it like clrmamepro, but with the following functionality
 It provides a way to parse romsets, filter their contents, and manage the files for
 games using a single interface across all types of gaming systems.
 
+![](examples/shell/romkit.gif)
+
 ## Dependencies
 
 The minimum romkit dependencies are:
