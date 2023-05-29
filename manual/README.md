@@ -9,6 +9,7 @@ for adding retrokit and customizing its behaviors:
 * [Profiles](/manual/profiles.md)
 * [Settings](/manual/settings.md)
 * [Systems](/manual/systems.md)
+* [Environment](/manual/environment.md)
 
 ## Building Your System
 
