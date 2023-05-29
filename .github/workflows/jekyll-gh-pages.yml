@@ -27,8 +27,9 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Setup public subdir
         run: |
-          cp README.md public/
+          cp *.md public/
           rsync -avzR ./manual/ public/
+          find public/ -name '*.md' -exec sed -i 's#](/\?\(bin\|cache\|config\|data\|docs\|ext\|lib\|profiles\|.env\)#](https://github.com/obrie/retrokit/tree/main/\1#' {} +
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
