@@ -1,7 +1,7 @@
 # Settings
 
 The general configuration settings for retrokit are stored in [`config/settings.json`](/config/settings.json).
-Although these settings can be fully customized through [profiles](/manual/profiles.md), there
+Although these settings can be fully customized through [profiles](profiles.md), there
 are a number of defaults and configurations to become familiar with so you understand how it
 affects retrokit.
 
@@ -328,7 +328,7 @@ For example:
 ### Controllers
 
 For information on how to identify your controller id, you can look at the
-[controls](/manual/controls.md) documentation.  There are a few interesting
+[controls](controls.md) documentation.  There are a few interesting
 pieces to call out in the example provided above.
 
 * The `swap_buttons` flag allows you to tell retrokit that your controller has
@@ -408,7 +408,7 @@ For example, the default setup is defined like so:
 }
 ```
 
-If you want to add/remove certain modules from a [profile](/manual/profiles.md), you
+If you want to add/remove certain modules from a [profile](profiles.md), you
 can adjust the configuration like so:
 
 ```json

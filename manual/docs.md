@@ -30,7 +30,7 @@ EmulationStation's gamelists being filled in (either by your favorite scraper or
 
 Below is an example screenshot of a gamelist document that can be generated with this tool:
 
-![Game List By Name](/manual/examples/docs/gamelist-by_name.png)
+![Game List By Name](examples/docs/gamelist-by_name.png)
 
 As you can see, game lists include several pieces of information:
 

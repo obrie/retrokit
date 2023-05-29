@@ -137,7 +137,7 @@ bin/update.sh emulator_configs
 ## docs
 
 The `docs` script is used to generate printable documentation for your system.
-For more information about this, see the [docs](/manual/docs.md) manual.
+For more information about this, see the [docs](docs.md) manual.
 
 ```bash
 # Builds the intro and gamelist PDFs to the given output directory

@@ -310,7 +310,7 @@ automatically determine whether to use a horizontal or vertical overlay based on
 the available metadata for the system.
 
 For Sinden lightgun integration, a border will also be drawn on top of the selected
-overlay based on the configuration settings in the system and the [retrokit settings](/manual/settings.md).
+overlay based on the configuration settings in the system and the [retrokit settings](settings.md).
 
 ## romkit
 
@@ -318,7 +318,7 @@ In addition to all of the settings described so far, all of the settings for `ro
 are also needed when setting up a new system configuration.  Those settings are added
 side-by-side with the system-specific settings used elsewhere in retrokit.
 
-See the [romkit](/manual/romkit.md) documentation for more information.
+See the [romkit](romkit.md) documentation for more information.
 
 ## Systems-specific configurations
 

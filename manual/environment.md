@@ -183,7 +183,7 @@ export TUMBLR_API_SECRET=...
 Like other functionality in retrokit, you can also define environment variables
 at the profile-level so that your own profiles can introduce overrides.
 
-As discussed in the [profiles](/manual/profiles.md) documentation, the `.env`
+As discussed in the [profiles](profiles.md) documentation, the `.env`
 file is also where you can instruct retrokit to integrate other profiles.
 
 For example:

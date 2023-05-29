@@ -514,7 +514,7 @@ Dependencies:
 * filter-1g1r
 * filter-1tb
 
-This is the base profile used for all hardware kits described in the [hardware](/manual/hardware.md)
+This is the base profile used for all hardware kits described in the [hardware](hardware.md)
 documentation.  It includes:
 
 * 8bitdo controller configurations in x-input mode

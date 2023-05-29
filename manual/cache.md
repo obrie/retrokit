@@ -16,7 +16,7 @@ The following types of resources are stored in the cache:
 * Redump databases
 * Screenscraper textual data
 
-Almost everything in the cache is managed by [metakit](/manual/metakit.md).  Only
+Almost everything in the cache is managed by [metakit](metakit.md).  Only
 the following are not:
 
 * exodos configuration files

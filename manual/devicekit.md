@@ -1,8 +1,8 @@
 # devicekit
 
 [`devicekit`](/lib/devicekit/) is a Python library for building applications based on the controls
-set up in RetroArch.  It's used to power the controls for both [`manualkit`](/manual/manualkit.md)
-and [`powerkit`](/manual/powerkit.md).  While other libraries exist for interacting
+set up in RetroArch.  It's used to power the controls for both [`manualkit`](manualkit.md)
+and [`powerkit`](powerkit.md).  While other libraries exist for interacting
 with system controllers, this library is built with the following goals in mind:
 
 * Provide compatibility with RetroArch controller configurations

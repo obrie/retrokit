@@ -12,7 +12,7 @@ directly through the UI.
 
 A reference sheet looks something like this:
 
-![Playstation Reference Sheet](/manual/examples/reference/psx.png)
+![Playstation Reference Sheet](examples/reference/psx.png)
 
 This attempts to cover a few things:
 
@@ -39,7 +39,7 @@ playing the game itself.  The default controls are:
 | EmulationStation | M           | Select + Up |
 | Game             | Select + Up | Select + Up |
 
-This behavior is managed by [manualkit](/manual/manualkit.md).  If a game has a manual, then
+This behavior is managed by [manualkit](manualkit.md).  If a game has a manual, then
 the first page of the manual will always be shown first.  To view the reference sheet, simply
 go back one page.
 
@@ -51,9 +51,9 @@ what content is available.  You can see the various overrides in the [docs](/doc
 For example, for the c64 system, vice configuration options are used to generate the following
 reference sheet:
 
-![C64 Reference Sheet](/manual/examples/reference/c64.png)
+![C64 Reference Sheet](examples/reference/c64.png)
 
-You can see a full list of example system reference documentation in the [manual/reference](/manual/examples/reference/)
+You can see a full list of example system reference documentation in the [manual/reference](examples/reference/)
 folder.
 
 System-specific integrations are provided for:
@@ -74,7 +74,7 @@ the reference sheet will account for those overrides.
 For arcade systems, a visual representation of an arcade stick is used together with metadata
 on what each button does to generate a reference sheet like so:
 
-![Arcade: Tekken Reference Sheet](/manual/examples/reference/arcade-tekken.png)
+![Arcade: Tekken Reference Sheet](examples/reference/arcade-tekken.png)
 
 Arcade reference sheets are unique in this way because they're using information you've
 provided about your panel layout, data that's been gathered on what buttons are available
@@ -91,7 +91,7 @@ Before you've even started to use RetroPie, sometimes you just need to get start
 what controls are available to begin with.  To help with there, a RetroPie reference
 sheet is also available:
 
-![RetroPie Reference Sheet](/manual/examples/reference/retropie.png)
+![RetroPie Reference Sheet](examples/reference/retropie.png)
 
 ## Defaults
 
