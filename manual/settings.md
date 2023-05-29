@@ -375,7 +375,7 @@ order in which (a) they are set up and (b) they appear in EmulationStation.
 
 Example:
 
-```json
+```jsonc
 {
   "systems": [
     "arcade",
@@ -394,7 +394,7 @@ installations.
 
 For example, the default setup is defined like so:
 
-```json
+```jsonc
 {
   "setup": {
     "modules": [

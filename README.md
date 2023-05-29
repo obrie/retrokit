@@ -15,8 +15,19 @@ sub-projects, including:
 * 🔫 [sindenkit](manual/sindenkit.md) - Plug 'n play functionality and quality-of-life improvements for Sinden Lightguns
 * 📚 [manuals archive](https://archive.org/details/retrokit-manuals) - A collection of ~20,000 manuals across 40+ systems, catalogued by hand
 
-With support of the above sub-projects, retrokit is capable of automating the
-installation, configuration, and management of:
+## Quick Links
+
+* [Manual](manual/README.md)
+* [Acknowledgements](ACKNOWLEDGEMENTS.md)
+* [How to Contribute!](CONTRIBUTING.md)
+* [Code Of Conduct](CODE_OF_CONDUCT.md)
+* [Changelog](CHANGELOG.md)
+* [License](LICENSE.md)
+
+## Overview
+
+With support of its sub-projects, retrokit is capable of automating the installation,
+configuration, and management of:
 
 ▶️ **Inputs**
 
@@ -193,35 +204,6 @@ to your own needs.
 ROMs.  To utilize any download functionality in retrokit, you must provide the
 configurations yourself.  Please familiarize yourself with the law in your country
 before attempting to download ROMs.
-
-## Manual
-
-To read more about the different components of retrokit, please see the documentation
-in the [manual](manual/):
-
-* [Cache](manual/cache.md)
-* [Controllers](manual/controllers.md)
-* [Controls](manual/controls.md)
-* [Documentation](manual/docs.md)
-* [Emulators](manual/emulators.md)
-* [Extensions](manual/extensions.md)
-* [Game State](manual/gamestate.md)
-* [Hardware](manual/hardware.md)
-* [Profiles](manual/profiles.md)
-* [Roadmap](manual/roadmap.md)
-* [Settings](manual/settings.md)
-* [Systems](manual/systems.md)
-* [Usage](manual/usage.md)
-
-Sub-projects:
-
-* [autoport](manual/autoport.md)
-* [devicekit](manual/devicekit.md)
-* [launchkit](manual/launchkit.md)
-* [manualkit](manual/manualkit.md)
-* [metakit](manual/metakit.md)
-* [powerkit](manual/powerkit.md)
-* [sindenkit](manual/sindenkit.md)
 
 ## Why does this exist?
 

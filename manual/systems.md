@@ -360,10 +360,10 @@ The default layouts for each emulator is shown below:
 
 | Emulators                               | Layout                  |
 |-----------------------------------------|-------------------------|
-| lr-mame2003                             | b,y,x,a,l,r,l2,r2,l3,r3 |
-| lr-mame2010 / lr-mame2015 / lr-mame2016 | a,b,x,y,l,r,l2,r2,l3,r3 |
-| lr-mame / lr-mame2003-plus              | b,a,y,x,l,r,l2,r2,l3,r3 |
-| lr-fbneo / advmame                      | b,a,y,x,r,l,r2,l2,r3,l3 |
+| lr-mame2003                             | `b,y,x,a,l,r,l2,r2,l3,r3` |
+| lr-mame2010 / lr-mame2015 / lr-mame2016 | `a,b,x,y,l,r,l2,r2,l3,r3` |
+| lr-mame / lr-mame2003-plus              | `b,a,y,x,l,r,l2,r2,l3,r3` |
+| lr-fbneo / advmame                      | `b,a,y,x,r,l,r2,l2,r3,l3` |
 
 As you can see, the controls you may be used to in a specific emulator
 may change significantly when switching to another emulator.

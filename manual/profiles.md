@@ -189,17 +189,13 @@ so: `retrokit-profile-<name>`.
 There are a ton of profiles that have been built for all the different hardware
 builds that I've created over the years.  Those profiles are described below.
 
-### 8bitdo-arcadestick
-
-[Link](/profiles/8bitdo-arcadestick/)
+### [8bitdo-arcadestick](/profiles/8bitdo-arcadestick/)
 
 Provides `arcade` system overrides to support the [8BitDo Arcade Stick](https://www.8bitdo.com/arcade-stick/).
 
 * Changes arcade button layout to: a,b,x,y,r2,r,l2,l,r3,l3
 
-### 8bitdo-dinput
-
-[Link](/profiles/8bitdo-dinput/)
+### [8bitdo-dinput](/profiles/8bitdo-dinput/)
 
 Sets up controller configurations for 8BitDo controllers in d-input mode.
 Controllers include:
@@ -207,9 +203,7 @@ Controllers include:
 * SN30 Pro (Wired + Bluetooth)
 * Arcade Stick
 
-### 8bitdo-xinput
-
-[Link](/profiles/8bitdo-xinput/)
+### [8bitdo-xinput](/profiles/8bitdo-xinput/)
 
 Sets up controller configurations for 8BitDo controllers in x-input mode.
 Controllers include:
@@ -217,9 +211,7 @@ Controllers include:
 * SN30 Pro (Wired + Bluetooth)
 * Arcade Stick
 
-### case-argon
-
-[Link](/profiles/case-argon/)
+### [case-argon](/profiles/case-argon/)
 
 Installs and configures the system for use in an argon1 case.  This includes:
 
@@ -227,9 +219,7 @@ Installs and configures the system for use in an argon1 case.  This includes:
 * Sets up the system boot configuration
 * Updates powerkit to be set up for argon1 cases
 
-### case-gpi2
-
-[Link](/profiles/case-gpi2/)
+### [case-gpi2](/profiles/case-gpi2/)
 
 Installs and configures the system for use in an gpi2 case.  This include the following:
 
@@ -268,35 +258,27 @@ As you can see, there's a ton that this profile does to improve your quality of 
 the GPi2 cases.  I *strongly* recommended using this profile when building your system with the GPi2
 case.  It makes everything work much more smoothly.
 
-### case-nespi
-
-[Link](/profiles/case-nespi/)
+### [case-nespi](/profiles/case-nespi/)
 
 Installs and configures the system for use in an nespi 4 case.  This includes:
 
 * Sets up the system boot configuration for power management
 * Updates powerkit to be set up for nespi cases
 
-### display-hdmi-1080
-
-[Link](/profiles/display-hdmi-1080/)
+### [display-hdmi-1080](/profiles/display-hdmi-1080/)
 
 Sets up the system boot configuration parameters for using in a 1080p60 display
 connected by HDMI.
 
-### display-sd
-
-[Link](/profiles/display-sd/)
+### [display-sd](/profiles/display-sd/)
 
 Sets up the system to be used for an SD display.  This includes:
 
 * Display RetroArch overlays
 * Use 4x3 launch images and splashscreens
 
-### filter-1g1r
-
-[Link](/profiles/filter-1g1r/)
-
+### [filter-1g1r](/profiles/filter-1g1r/)
+=
 The `filter-1g1r` profile sets up the romkit prioritization rules so that only
 a single game is chosen from a group of clones.
 
@@ -334,9 +316,7 @@ psp:
 
 * Original release (vs. DLC)
 
-### filter-1tb
-
-[Link](/profiles/filter-1tb/)
+### [filter-1tb](/profiles/filter-1tb/)
 
 Dependencies:
 
@@ -423,9 +403,7 @@ Additional files:
 | Screenshots  | 3GB      |
 | Videos       | 21GB     |
 
-### filter-demo
-
-[Link](/profiles/filter-demo/)
+### [filter-demo](/profiles/filter-demo/)
 
 The `filter-demo` profile is intended to select a handful of games from each system
 that demonstrates some of the various functionality available, including:
@@ -437,9 +415,7 @@ that demonstrates some of the various functionality available, including:
 This is a great profile to use just to get a sense of what a retrokit system
 would look like with just a few games installed.
 
-### filter-handheld-512gb
-
-[Link](/profiles/filter-handheld-512gb/)
+### [filter-handheld-512gb](/profiles/filter-handheld-512gb/)
 
 Dependencies:
 
@@ -480,34 +456,26 @@ Additionally, only the following systems are included:
 
 The intention is to only include systems that make most sense in a handheld format.
 
-### filter-local
-
-[Link](/profiles/filter-local/)
+### [filter-local](/profiles/filter-local/)
 
 The `filter-local` profile is primarily used when you are managing and downloading
 your list of games yourself.  This filter will instruct romkit to look at the
 filesystem to determine what games have been selected by the user *rather than*
 building a list based on some predefined set of filters.
 
-### filter-none
-
-[Link](/profiles/filter-none/)
+### [filter-none](/profiles/filter-none/)
 
 The `filter-none` profile is used to simply tell romkit that there should be
 no games selected in each system's list.  This is more of an internal profile
 used when building images and ensuring that no stubbed-out game files are left
 behind on the image.
 
-### filter-reset
-
-[Link](/profiles/filter-reset/)
+### [filter-reset](/profiles/filter-reset/)
 
 The `filter-reset` profile is intended to disable all filters and priority (1g1r)
 configurations regardless of what's set in other profiles.
 
-### image-base
-
-[Link](/profiles/image-base/)
+### [image-base](/profiles/image-base/)
 
 The `image-base` profile is used for building retrokit images.  It has a few main
 configurations it overrides:
@@ -518,9 +486,7 @@ configurations it overrides:
 * Ensure that gamelists only include high-compatibility games
 * Remove setup scripts that consume significant disk space or might accidentally violate copyright
 
-### kiosk
-
-[Link](/profiles/kiosk/)
+### [kiosk](/profiles/kiosk/)
 
 The `kiosk` profile makes changes to your system in order to reduce the possibility
 of users accidentally changing settings or triggering unexpected behaviors on the
@@ -538,9 +504,7 @@ system.  This includes:
 The goal here is to avoid things getting messed up and poor experiences when your
 kids are playing and smashing all the buttons.
 
-### kit-base
-
-[Link](/profiles/kit-base/)
+### [kit-base](/profiles/kit-base/)
 
 Dependencies:
 
@@ -558,9 +522,7 @@ documentation.  It includes:
 * kiosk mode
 * 1tb game filters
 
-### kit-handheld-gpi2
-
-[Link](/profiles/kit-handheld-gpi2/)
+### [kit-handheld-gpi2](/profiles/kit-handheld-gpi2/)
 
 Dependencies:
 
@@ -575,9 +537,7 @@ from the base kit as well as:
 * GPi configuration
 * 512gb game filters
 
-### kit-tv-argon
-
-[Link](/profiles/kit-tv-argon/)
+### [kit-tv-argon](/profiles/kit-tv-argon/)
 
 Dependencies:
 
@@ -588,9 +548,7 @@ Dependencies:
 The `kit-tv-argon` profile is used for argon1 hardware kits that are connected to a 1080p60 TV.
 It includes everything from thebase kit.
 
-### kit-tv-nespi
-
-[Link](/profiles/kit-nespi/)
+### [kit-tv-nespi](/profiles/kit-nespi/)
 
 Dependencies:
 
@@ -601,9 +559,7 @@ Dependencies:
 The `kit-tv-nespi` profile is used for nespi 4 hardware kits that are connected to a 1080p60 TV.
 It includes everything from thebase kit.
 
-### lightgun
-
-[Link](/profiles/lightgun/)
+### [lightgun](/profiles/lightgun/)
 
 The `lightgun` profile is used for setting up all of the per-system and per-game configurations
 required to use the Sinden lightgun with every supported system.  When using this lightgun,
@@ -636,9 +592,7 @@ and input mappings) are set up for the following systems:
 `autoport` is used heavily in the development of this lightgun as it allows us to use default
 shared RetroArch configurations for device type selection.
 
-### lightgun-sd
-
-[Link](/profiles/lightgun-sd/)
+### [lightgun-sd](/profiles/lightgun-sd/)
 
 Dependencies:
 
@@ -648,9 +602,7 @@ The `lightgun-sd` profile is used to set up lightgun games to work in a 4:3 aspe
 It does this by setting up all lightgun games to point to the default `base` overlay
 configuration.  This configuration is set with a 4:3 aspect ratio border.
 
-### manualkit-compressed
-
-[Link](/profiles/manualkit-compressed/)
+### [manualkit-compressed](/profiles/manualkit-compressed/)
 
 The `manualkit-compressed` profile is used for creating and sync'ing compressed versions
 of manuals in manualkit to archive.org.  It does this by:
@@ -662,9 +614,7 @@ of manuals in manualkit to archive.org.  It does this by:
 
 This profiles is intended to be used internally for the management of manualkit manuals.
 
-### manualkit-original
-
-[Link](/profiles/manualkit-original/)
+### [manualkit-original](/profiles/manualkit-original/)
 
 The `manualkit-original` profile is used for creating and sync'ing original quality versions
 of manuals in manualkit to archive.org.  It does this by:
@@ -674,9 +624,7 @@ of manuals in manualkit to archive.org.  It does this by:
 
 This profiles is intended to be used internally for the management of manualkit manuals.
 
-### metakit
-
-[Link](/profiles/metakit/)
+### [metakit](/profiles/metakit/)
 
 The `metakit` profile is used by metakit to define a set of rules for identifying which
 regional game name is considered the "primary" game in a group and, therefore, defines
@@ -687,9 +635,7 @@ understanding of game releases.
 This profile is intended to be used internally by retrokit for the management of database
 updates.
 
-### network-wired
-
-[Link](/profiles/network-wired/)
+### [network-wired](/profiles/network-wired/)
 
 The `network-wired` profile is intended to be used in hardware configurations where the
 wifi is not needed since a wired connection is provided (or no network connection is
@@ -697,17 +643,13 @@ required at all).  It does this by:
 
 * Disabling the wifi interface via the boot options
 
-### none
-
-[Link](/profiles/none/)
+### [none](/profiles/none/)
 
 The `none` profile is a basic placeholder.  It literally does nothing.  However, it can
 sometimes be useful if you want to make sure that there are no profiles being used and
 you're just using what's provided by retrokit in its base configuration.
 
-### overclock
-
-[Link](/profiles/overclock/)
+### [overclock](/profiles/overclock/)
 
 The `overclock` profile provides some default system overrides that should work fine for
 most Raspberry Pi 4b devices.  This includes:

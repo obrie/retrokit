@@ -70,7 +70,7 @@ devices when starting up a game.  You will find these configurations located her
 | Global   | config/autoport/autoport.cfg                              | /opt/retropie/config/systems/all/autoport.cfg                          |
 | System   | config/systems/{system}/autoport.cfg                      | /opt/retropie/config/systems/{system}/autoport.cfg                     |
 | Emulator | config/systems/{system}/autoport/emulators/{emulator}.cfg | /opt/retropie/config/systems/{system}/autoport/emulators/{emlator}.cfg |
-| Game     | config/systems/{system}/autoport/{name|title}.cfg         | /opt/retropie/config/systems/{system}/autoport/{name}.cfg              |
+| Game     | config/systems/{system}/autoport/{name or title}.cfg      | /opt/retropie/config/systems/{system}/autoport/{name}.cfg              |
 
 It will prioritize each of the above configurations like so (highest to lowest):
 
