@@ -80,6 +80,10 @@ nav {
     opacity: 1;
   }
 
+  li:last-child ul {
+    right: 0;
+  }
+
   li ul li {
     background-color: #444444;
     width: 100%;
