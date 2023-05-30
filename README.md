@@ -207,9 +207,11 @@ before attempting to download ROMs.
 
 ## Why does this exist?
 
-When I started creating my own RetroPie system, I wanted to build it in such a way
-that I could re-create the exact same setup steps each time.  As it turns out, there's
-a lot involved in building out the perfect Raspberry Pi 4 system.
+In 2021, I set out to build a retro gaming system for my brother's 40th birthday.
+I wanted to build the best experience I could to transport us back to our childhood.
+As I started to create the system, I quickly realized how complicated it could get.
+To help iterate on the setup more quickly, I wanted to build the system in such a way
+that I could re-create the exact same setup steps each time.
 
 retrokit represents the work I did to build a configuration management system for
 all of my personal builds.
