@@ -1,0 +1,69 @@
+- title: Manual
+  url: '#'
+  sublinks:
+    - title: Getting Started
+      url: /manual/index.html
+    - title: Usage
+      url: /manual/usage.html
+    - title: Profiles
+      url: /manual/profiles.html
+    - title: Settings
+      url: /manual/settings.html
+    - title: Systems
+      url: /manual/systems.html
+    - title: Environment
+      url: /manual/environment.html
+    - title: Hardware
+      url: /manual/hardware.html
+
+- title: Advanced
+  url: '#'
+  sublinks:
+    - title: Cache
+      url: /manual/cache.html
+    - title: Controllers
+      url: /manual/controllers.html
+    - title: Controls
+      url: /manual/controls.html
+    - title: Docs
+      url: /manual/docs.html
+    - title: Emulators
+      url: /manual/emulators.html
+    - title: Extensions
+      url: /manual/extensions.html
+    - title: Game State
+      url: /manual/gamestate.html
+
+- title: Projects
+  url: '#'
+  sublinks:
+    - title: autoport
+      url: /manual/autoport.html
+    - title: devicekit
+      url: /manual/devicekit.html
+    - title: launchkit
+      url: /manual/launchkit.html
+    - title: manualkit
+      url: /manual/manualkit.html
+    - title: metakit
+      url: /manual/metakit.html
+    - title: powerkit
+      url: /manual/powerkit.html
+    - title: sindenkit
+      url: /manual/sindenkit.html
+
+- title: About
+  url: '#'
+  sublinks:
+    - title: Acknowledgements
+      url: /ACKNOWLEDGEMENTS.html
+    - title: Changelog
+      url: /CHANGELOG.html
+    - title: Roadmap
+      url: /manual/roadmap.html
+    - title: Contributing
+      url: /CONTRIBUTING.html
+    - title: Code Of Conduct
+      url: /CODE_OF_CONDUCT.html
+    - title: License
+      url: /LICENSE.html
