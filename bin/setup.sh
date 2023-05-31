@@ -37,7 +37,7 @@ setup_all() {
   __confirm "$action"
 
   while read setupmodule; do
-    setup "$action" "$setupmodule"
+    setup "$action" "$setupmodule" "${@:4}"
   done < <(echo "$modules" | sed -n "\|${from_setupmodule:-.*}|, \|${to_setupmodule}|p")
 }
 
@@ -112,7 +112,7 @@ main() {
   if [ -z "$setupmodules" ] || [ "$setupmodules" == 'all' ]; then
     setup_all "$action"
   else
-    # Multipl scripts can be comma-separated
+    # Multiple scripts can be comma-separated
     for setupmodule in ${setupmodules//,/ }; do
       if [[ "$setupmodule" == *~* ]]; then
         IFS='~' read -ra range <<< "$setupmodule"
