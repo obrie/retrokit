@@ -615,6 +615,11 @@ class Machine:
         self.install_from(self.bios_machine)
 
         if self.resource:
+            # Special cases where there were no roms (e.g. pong in mame)
+            if not self.resource.exists():
+                logging.info(f'[{self.name}] Creating empty resource')
+                self.resource.target_path.touch()
+
             self.resource.create_xref()
 
         # Devices

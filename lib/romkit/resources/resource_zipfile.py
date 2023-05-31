@@ -60,6 +60,12 @@ class ResourceZipFile(ResourcePath):
                     logging.warn(f'Removing unexpected file {file.name} from {self.path}')
                     target_zip.remove(file.name)
 
+    # Create an empty file
+    def touch(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(self.path, 'a') as target_zip:
+            pass
+
     @contextlib.contextmanager
     def _pushd(self, new_dir: str) -> None:
         previous_dir = os.getcwd()

@@ -75,6 +75,11 @@ class ResourcePath:
     def list_files(self) -> Set[File]:
         raise NotImplementedError
 
+    # Create an empty file
+    def touch(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.touch()
+
     ##############
     # Equality
     ##############
