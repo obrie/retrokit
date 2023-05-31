@@ -30,6 +30,7 @@ you can read through these pages:
 * [Emulators](emulators.md)
 * [Extensions](extensions.md)
 * [Game State](gamestate.md)
+* [Pre-Made Images](images.md)
 
 ## Developers
 
