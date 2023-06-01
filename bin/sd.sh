@@ -11,6 +11,7 @@ usage() {
   echo "usage:"
   echo " $0 create <device> (run from laptop)"
   echo " $0 backup <device> <backup_file.tar.gz> (run from laptop)"
+  echo " $0 clone <from_device> <to_device>"
   echo " $0 restore <device> <backup_file.tar.gz> (run from laptop)"
   echo " $0 sync_full <from_dir> <to_dir> (run from laptop/retropie)"
   echo " $0 sync_media <from_dir> <to_dir> (run from laptop/retropie)"

@@ -12,6 +12,9 @@ It's intended to be used in a linux environment and has only been tested under U
 # Create new SD card with RetroPie on it
 bin/sd.sh create /path/to/device
 
+# Clone SD card
+bin/sd.sh clone /path/to/source_device /path/to/target_device
+
 # Back up SD card
 bin/sd.sh backup /path/to/device /path/to/backup/folder
 
