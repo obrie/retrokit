@@ -29,11 +29,34 @@ configure() {
 
   # Restart
   sudo systemctl restart powerkit
+
+  __configure_emulationstation
+}
+
+# Install emulationstation hooks
+__configure_emulationstation() {
+  __restore_emulationstation
+
+  while read hook_file; do
+    local hook=$(basename "$hook_file" .sh)
+    local target_dir="$home/.emulationstation/scripts/$hook"
+    mkdir -pv "$target_dir"
+    ln -fsv "$hook_file" "$target_dir/powerkit.sh"
+  done < <(ls "$install_dir/emulationstation-scripts/"*.sh)
+
+  xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$home/.emulationstation/scripts/controls-onfinish/powerkit.sh" "$home/.emulationstation/es_input.cfg"
 }
 
 restore() {
   sudo systemctl stop powerkit.service || true
   sudo systemctl disable powerkit.service || true
+
+  __restore_emulationstation
+}
+
+__restore_emulationstation() {
+  rm -fv "$home/.emulationstation/scripts"/*/powerkit.sh
+  xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"powerkit\")]" "$home/.emulationstation/es_input.cfg"
 }
 
 remove() {
