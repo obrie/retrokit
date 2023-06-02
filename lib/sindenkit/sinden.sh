@@ -11,6 +11,7 @@ usage() {
   echo " $0 backgrounded <add_device|remove_device> <devpath> <devname>"
   echo " $0 add_device <devpath> <devname>"
   echo " $0 remove_device <devpath> <devname>"
+  echo " $0 status <player_id>"
   echo " $0 start_all"
   echo " $0 start <player_id>"
   echo " $0 stop_all"
@@ -126,6 +127,16 @@ restart() {
 
   stop $player_id
   start $player_id
+}
+
+status() {
+  [ "$#" -eq 1 ] || usage
+
+  local player_id=$1
+
+  if ! __is_running "$player_id"; then
+    exit 1
+  fi
 }
 
 # Checks whether the sinden service is running for the given player id
