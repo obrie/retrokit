@@ -15,6 +15,8 @@ sub-projects, including:
 * 🔫 [sindenkit](manual/sindenkit.md) - Plug 'n play functionality and quality-of-life improvements for Sinden Lightguns
 * 📚 [manuals archive](https://archive.org/details/retrokit-manuals) - A collection of ~20,000 manuals across 40+ systems, catalogued by hand
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/obrie)
+
 ## Quick Links
 
 * [Manual](manual/README.md)
