@@ -68,12 +68,60 @@ __configure_players() {
     backup_file "$target_file" as_sudo=true
     __restore_player $player_id
 
+    # Resolves conflicts for Player 2
+    if [ "$player_id" == '2' ]; then
+      local player1_file=$(__retropie_config_file_for_player 1)
+      if diff <(cat "$target_file" | grep Button | sed 's/ //g') <(cat "$player1_file" | grep Button | sed 's/ //g') >/dev/null; then
+        __resolve_button_conflicts
+      fi
+    fi
+
     # Add common settings
     each_path '{config_dir}/controllers/sinden/Player.config' __configure_player '{}' "$target_file"
 
     # Add player-specific settings
     each_path "{config_dir}/controllers/sinden/Player$player_id.config" __configure_player '{}' "$target_file"
   done
+}
+
+# Resolves conflicts between Player 1 and Player 2 default button controls.
+# 
+# By default, Sinden software comes with Player 1 and Player 2 having the same
+# exact buttons, which doesn't work here.
+__resolve_button_conflicts() {
+  local player_id=2
+  local target_file=$(__retropie_config_file_for_player $player_id)
+
+  echo "Resolving default button conflicts for $target_file"
+
+  local defaults='
+    <add key="ButtonFrontLeft" value="14" />
+    <add key="ButtonRearLeft" value="15" />
+    <add key="ButtonFrontRight" value="16" />
+    <add key="ButtonRearRight" value="17" />
+    <add key="ButtonUp" value="61" />
+    <add key="ButtonDown" value="49" />
+    <add key="ButtonLeft" value="47" />
+    <add key="ButtonRight" value="50" />
+    <add key="ButtonFrontLeftOffscreen" value="14" />
+    <add key="ButtonRearLeftOffscreen" value="15" />
+    <add key="ButtonFrontRightOffscreen" value="16" />
+    <add key="ButtonRearRightOffscreen" value="17" />
+    <add key="ButtonUpOffscreen" value="61" />
+    <add key="ButtonDownOffscreen" value="49" />
+    <add key="ButtonLeftOffscreen" value="47" />
+    <add key="ButtonRightOffscreen" value="50" />
+'
+
+  local file_with_defaults=$(mktemp -p "$tmp_ephemeral_dir")
+
+  # Apply defaults to avoid conflicts between Player 1 & 2
+  grep -vP 'Button(Front|Rear|Up|Down|Left|Right)' "$target_file" |\
+    xmlstarlet ed -s '/configuration/appSettings' -t text -n '' -v "$defaults" |\
+    xmlstarlet unescape |\
+    xmlstarlet fo > "$file_with_defaults"
+
+  sudo mv "$file_with_defaults" "$target_file"
 }
 
 __configure_player() {
