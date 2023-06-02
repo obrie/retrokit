@@ -60,6 +60,7 @@ Additionally, there are custom extensions / overrides for existing emulators and
 system via the following configscripts:
 
 * ir - Support for IR remote controls
+* retroarch-nkb - Adds support for Player 2/3/4 Keyboard configuration in RetroArch
 * retrokit-mupen64plus - Adds support for Keyboard configuration in mupen64plus (rather than being hard-coded)
 * retrokit-overrides - Adds support for automatically disabling certain buttons enabled via autoconf
 

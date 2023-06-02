@@ -88,3 +88,52 @@ Once you've identified your controllers, you can configure them through `config/
   }
 }
 ```
+
+You can even set up Player 2/3/4 keyboard controls in RetroArch like so:
+
+```json
+{
+  "hardware": {
+    "controllers": {
+      "inputs": [
+        {
+          "name": "Keyboard"
+        },
+        {
+          "name": "Keyboard2"
+        }
+      ]
+    }
+  }
+}
+```
+
+Keyboard2.cfg:
+
+```xml
+<?xml version="1.0"?>
+<inputList>
+  <!-- Represents the Player 2 controls on a keyboard -->
+  <inputConfig type="keyboard2" deviceName="Keyboard2" deviceGUID="-1">
+    <!-- r -->
+    <input name="up" type="key" id="114" value="1" />
+    <!-- f -->
+    <input name="down" type="key" id="102" value="1" />
+    <!-- d -->
+    <input name="left" type="key" id="100" value="1" />
+    <!-- g -->
+    <input name="right" type="key" id="103" value="1" />
+    <!-- 8 -->
+    <input name="start" type="key" id="56" value="1" />
+    <!-- 9 -->
+    <input name="select" type="key" id="57" value="1" />
+    <!-- 6 -->
+    <input name="a" type="key" id="54" value="1" />
+    <!-- 7 -->
+    <input name="b" type="key" id="55" value="1" />
+  </inputConfig>
+</inputList>
+```
+
+Notice we identify which player id we're dealing with for the keyboard by both the `type`
+and the `deviceName`.  Player 1 is identified by simply not providing a player number.
