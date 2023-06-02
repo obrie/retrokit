@@ -228,7 +228,13 @@ restore_partial_ini() {
   local file=$1
   local regex_match=$2
   local remove_source_matches='false'
+  local as_sudo='false'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
 
   if has_backup_file "$file"; then
     if [ -f "$file" ]; then
@@ -242,11 +248,11 @@ restore_partial_ini() {
       if [ "$remove_source_matches" == 'true' ]; then
         local filtered_file=$(mktemp -p "$tmp_ephemeral_dir")
         grep -vP "$regex_match" "$file" > "$filtered_file"
-        mv "$filtered_file" "$file"
+        $cmd mv "$filtered_file" "$file"
       fi
 
       # Merge the inputs back in
-      crudini --merge --inplace "$file" < "$file_to_remerge"
+      $cmd crudini --merge --inplace "$file" < "$file_to_remerge"
     else
       restore_file "$file" "${@:3}"
     fi
@@ -344,6 +350,48 @@ json_edit() {
   local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
   jq "${jq_args[@]}" "$jq_commands" "$target" > "$staging_file"
   mv "$staging_file" "$target"
+}
+
+# Restores partial contents from an XML file, keeping those configurations in the
+# current file that match a particular Perl-style regular expression.
+restore_partial_xml() {
+  local file=$1
+  local regex_match=$2
+  local as_sudo='false'
+  local parent_node='/*'
+  local remove_source_matches='true'
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
+  if has_backup_file "$file"; then
+    if [ -f "$file" ]; then
+      # Keep track of matched configurations
+      local file_to_remerge=$(mktemp -p "$tmp_ephemeral_dir")
+      local content_to_remerge=$(grep -P "$regex_match" "$file")
+
+      restore_file "$file" "${@:3}"
+
+      # Remove regex matches from the restored file
+      if [ "$remove_source_matches" == 'true' ]; then
+        local filtered_file=$(mktemp -p "$tmp_ephemeral_dir")
+        grep -vP "$regex_match" "$file" > "$filtered_file"
+        $cmd mv "$filtered_file" "$file"
+      fi
+
+      cat "$file" |\
+        xmlstarlet ed -s '/configuration/appSettings' -t text -n '' -v "$content_to_remerge" |\
+        xmlstarlet unescape |\
+        xmlstarlet fo > "$file_to_remerge"
+
+      $cmd mv "$file_to_remerge" "$file"
+    else
+      restore_file "$file" as_sudo=true delete_src=true
+    fi
+  fi
 }
 
 # Copies a file, backing up the target and substituting environment variables

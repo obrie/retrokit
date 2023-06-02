@@ -65,7 +65,8 @@ __configure_players() {
   local player_id
   for player_id in $(seq 1 2); do
     local target_file=$(__retropie_config_file_for_player $player_id)
-    backup_and_restore "$target_file" as_sudo=true
+    backup_file "$target_file" as_sudo=true
+    __restore_player $player_id
 
     # Add common settings
     each_path '{config_dir}/controllers/sinden/Player.config' __configure_player '{}' "$target_file"
@@ -114,8 +115,14 @@ __restore_autostart() {
 __restore_players() {
   local player_id
   for player_id in $(seq 1 2); do
-    restore_file "$(__retropie_config_file_for_player $player_id)" as_sudo=true delete_src=true
+    __restore_player "$player_id"
   done
+}
+
+__restore_player() {
+  local player_id=$1
+  local config_file=$(__retropie_config_file_for_player $player_id)
+  restore_partial_xml "$config_file" 'Button(Front|Rear|Up|Down|Left|Right)' parent_node='/configuration/appSettings' as_sudo=true
 }
 
 __retropie_config_file_for_player() {
