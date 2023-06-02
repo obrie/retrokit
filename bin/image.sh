@@ -220,6 +220,9 @@ run_cleanup_configs() {
 
   "$bin_dir/setup.sh" install scraper
   "$bin_dir/setup.sh" restore auth-internetarchive
+
+  # Remove ES input so user is on startup
+  xmlstarlet ed --inplace -d '/inputList/inputConfig' "$home/.emulationstation/es_input.cfg"
 }
 
 # Clear all temporary files
