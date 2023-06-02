@@ -227,8 +227,8 @@ run_cleanup_configs() {
 
 # Clear all temporary files
 run_cleanup_tmp() {
-  if [ -f "$home_dir/.bash_history" ]; then
-    truncate -s0 "$home_dir/.bash_history"
+  if [ -f "$home/.bash_history" ]; then
+    truncate -s0 "$home/.bash_history"
   fi
 
   rm -rf "$tmp_dir"/*
