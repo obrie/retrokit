@@ -2,6 +2,18 @@
   "overlays": {
     "enable_game_overrides": false
   },
+  "hardware": {
+    "controllers": {
+      "inputs": [
+        {
+          "name": "Keyboard"
+        },
+        {
+          "name": "Keyboard2"
+        }
+      ]
+    }
+  },
   "setup": {
     "modules|image": {
       "remove": [
