@@ -182,7 +182,7 @@ __parse_args() {
 # Initializes various files / directories on the system
 run_init_system() {
   sudo chmod 1777 /dev/shm
-  echo "export PROFILES=\${PROFILES:-filter-local,lightgun}" > .env
+  echo "export PROFILES=\${PROFILES:-filter-local,lightgun,display-hdmi}" > .env
 }
 
 # Update components of the system

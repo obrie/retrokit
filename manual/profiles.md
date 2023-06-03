@@ -265,7 +265,16 @@ Installs and configures the system for use in an nespi 4 case.  This includes:
 * Sets up the system boot configuration for power management
 * Updates powerkit to be set up for nespi cases
 
+### [display-hdmi](/profiles/display-hdmi/)
+
+Sets up the system boot configuration parameters for using in a display connected
+by HDMI.
+
 ### [display-hdmi-1080](/profiles/display-hdmi-1080/)
+
+Dependencies:
+
+* display-hdmi
 
 Sets up the system boot configuration parameters for using in a 1080p60 display
 connected by HDMI.
@@ -278,7 +287,7 @@ Sets up the system to be used for an SD display.  This includes:
 * Use 4x3 launch images and splashscreens
 
 ### [filter-1g1r](/profiles/filter-1g1r/)
-=
+
 The `filter-1g1r` profile sets up the romkit prioritization rules so that only
 a single game is chosen from a group of clones.
 
