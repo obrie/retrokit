@@ -238,7 +238,7 @@ The instructions I followed came from the websites above and are covered here:
 2. Download the latest firmware for the [ICY BOX IB-1817MC-C31 or ICY BOX IB-1817MCT-C31](https://raidsonic-static-content.s3.eu-central-1.amazonaws.com/IcyBox/Files/ICY%20BOX%20IB-1817MC-C31%20Firmware%20Update.zip), they are the same.
 3. Unzip the ICY BOX firmware, and replace the `configure/IB-1817MC-C31.cfg` file with the Sabrent `SA8307.cfg`.
 4. Plug in the Sabrent, open `UTHSB_MPtool_Lite.exe` in Windows, and you should see MPtool has picked the `SA8307.cfg` file.
-5. Click the Upload Device button and enjoy the latest, fastest and most stable firmware for your Sabrent.
+5. Click the Update Device button and enjoy the latest, fastest and most stable firmware for your Sabrent.
 
 If you don't want to deal with this (I don't blame you) here are additional enclosures whose hardware
 appears to be compatible with the Raspberry Pi without a firmware upgrade:
