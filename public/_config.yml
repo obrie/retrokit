@@ -1,4 +1,6 @@
 theme: jekyll-theme-slate
+plugins:
+  - jekyll-sitemap
 include:
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
