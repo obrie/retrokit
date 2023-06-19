@@ -204,7 +204,7 @@ echo 'reload_devices' > /path/to/manualkit.fifi
 
 ## Manuals
 
-There are over 18,000 manuals that have been hand-sourced over 2 years for this project.  They
+There are ~20,000 manuals that have been hand-sourced over 2 years for this project.  They
 come from a variety of websites which are all defined in each system's data file.  All manuals
 are installed in PDF format, but they can be sourced from a variety of formats.  Details
 about the process are described below.
