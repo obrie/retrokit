@@ -33,6 +33,7 @@
       "archive": "{base}/.download/{name} ({languages}) (archive).pdf",
       "download": "{base}/.download/{name} ({languages}).{extension}",
       "postprocess": "{base}/.files/{name} ({languages}).pdf",
+      "meta": "{base}/.files/{name} ({languages}).json",
       "install": "{base}/{rom_name}.pdf"
     },
     "keep_downloads": false,

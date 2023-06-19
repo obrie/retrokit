@@ -7,7 +7,8 @@
     },
     "paths": {
       "download": "{base}/.files/{name} ({languages}).pdf",
-      "postprocess": "{base}/.files-compressed/{name} ({languages}).pdf"
+      "postprocess": "{base}/.files-compressed/{name} ({languages}).pdf",
+      "meta": "{base}/.files-compressed/{name} ({languages}).json"
     },
     "keep_downloads": true,
     "postprocess": {

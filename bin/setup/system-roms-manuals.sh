@@ -43,83 +43,80 @@ declare -A domain_timestamps
 # Common settings
 base_dir_template=$(setting '.manuals.paths.base')
 download_file_template=$(setting '.manuals.paths.download')
-archive_file_template=$(setting '.manuals.paths.archive')
 postprocess_file_template=$(setting '.manuals.paths.postprocess')
 install_file_template=$(setting '.manuals.paths.install')
 archive_url_template=$(setting '.manuals.archive.url')
 fallback_to_source=$(setting '.manuals.archive.fallback_to_source')
+keep_downloads=$(setting '.manuals.keep_downloads')
+archive_processed=$(setting '.manuals.archive.processed')
 
-configure() {
-  local keep_downloads=$(setting '.manuals.keep_downloads')
-  local archive_processed=$(setting '.manuals.archive.processed')
-
+build() {
   declare -A installed_files
   declare -A installed_playlists
   while IFS=$field_delim read -ra manual_data; do
     declare -A manual
     __build_manual manual "${manual_data[@]}"
 
-    # Look up the manual properties
-    local url=${manual['url']}
-    local archive_url=${manual['archive_url']}
-    local download_file=${manual['download_file']}
-    local archive_file=${manual['archive_file']}
     local postprocess_file=${manual['postprocess_file']}
-    local install_file=${manual['install_file']}
-    local playlist_install_file=${manual['playlist_install_file']}
-    local playlist_name=${manual['playlist_name']}
 
-    # Track whether we had to download the file
-    local downloaded=false
-
-    # Download the file
-    if [ ! -f "$download_file" ] && [ ! -f "$archive_file" ] && [ ! -f "$postprocess_file" ]; then
-      if ! { __download_pdf "$archive_url" "$archive_file" max_attempts=1 || __download_pdf "$url" "$download_file"; }; then
-        # We couldn't download from the archive or source -- nothing to do
-        echo "[${manual['rom_name']}] Failed to download from $archive_url (source: $url)"
+    if __check_file_needs_update manual postprocess; then
+      # Download the manual (if needed)
+      if __check_file_needs_update manual download && ! __download_manual manual; then
+        echo "[${manual['rom_name']}] Failed to download from ${manual['archive_url']} (source: ${manual['url']})"
         continue
-      else
-        downloaded=true
       fi
-    fi
 
-    # Use the archive as our download source
-    if [ -f "$archive_file" ]; then
-      download_file=$archive_file
-    fi
+      local download_file=${manual['download_file']}
+      local download_meta_file=${manual['download_meta_file']}
+      local download_source=$(cat "$download_meta_file" | jq -r '.source')
+      local postprocess_meta_file=${manual['postprocess_meta_file']}
+      local postprocess_options=${manual['options']}
 
-    # Post-process the pdf
-    if [ ! -f "$postprocess_file" ]; then
+      # Ensure the download file's metadata is up-to-date
+      if [ "$FORCE_UPDATE" == 'true' ]; then
+        local updated_meta=$(jq ".options = ${postprocess_options:-null}" "$download_meta_file" | jq 'del(..|nulls)')
+        echo "$updated_meta" > "$download_meta_file"
+      fi
+
       mkdir -p "$(dirname "$postprocess_file")"
+      rm -fv "$postprocess_file"
 
-      if [ -f "$archive_file" ] && [ "$archive_processed" == 'true' ]; then
-        # Archive file has already been processed -- just do a straight copy
-        cp "$archive_file" "$postprocess_file"
+      if [ "$download_source" == 'archive' ] && [ "$archive_processed" == 'true' ]; then
+        # Archive files are already processed -- straight copy
+        cp "$download_file" "$postprocess_file"
       else
         # Download file hasn't been processed -- do so now
+        echo "Postprocessing $download_file"
         rm -f "$tmp_ephemeral_dir/rom.pdf"
         __convert_to_pdf "$download_file" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" "${manual['rewrite_exif']}"
         __postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_file" "${manual['languages']}" "${manual['pages']}" "${manual['rotate']}"
       fi
+
+      # Promote the postprocess metadata to the download's metadata
+      cp "$download_meta_file" "$postprocess_meta_file"
+
+      # Remove unused files (to avoid consuming too much disk space during the loop).
+      # We only do this when processing new files -- existing files need to be handled
+      # through a vacuum.
+      if [ "$keep_downloads" != 'true' ]; then
+        rm -fv "$download_file" "$download_meta_file"
+      fi
     fi
 
-    # Remove unused files (to avoid consuming too much disk space during the loop).
-    # We only do this when processing new files -- existing files need to be handled
-    # through a vacuum.
-    if [ "$downloaded" == 'true' ] && [ "$keep_downloads" != 'true' ]; then
-      rm -fv "$download_file" "$archive_file"
-    fi
-
-    # Final check to make sure the PDF is valid before installing it
+    # Validate - Make sure the PDF is valid before installing it
     __validate_pdf "$postprocess_file"
 
+    # Look up the manual properties
+    local install_file=${manual['install_file']}
+    local playlist_install_file=${manual['playlist_install_file']}
+    local playlist_name=${manual['playlist_name']}
+
+    # Install - Symlink to either the rom or the playlist location
     if [ -z "$playlist_name" ]; then
-      # Install the pdf to location expected for this specific rom
       mkdir -p "$(dirname "$install_file")"
       ln_if_different "$postprocess_file" "$install_file"
       installed_files[$install_file]=1
     elif [ ! "${installed_playlists[$playlist_name]}" ]; then
-      # Install a playlist symlink
       mkdir -p "$(dirname "$playlist_install_file")"
       ln_if_different "$postprocess_file" "$playlist_install_file"
       installed_files[$playlist_install_file]=1
@@ -134,6 +131,72 @@ configure() {
       [ "${installed_files[$file]}" ] || rm -v "$file"
     done < <(find "$base_dir" -maxdepth 1 -type l -not -xtype d)
   fi
+}
+
+# Downloads the given manual, preferring the archive url if it's available
+__download_manual() {
+  local -n manual_ref=$1
+
+  # Look up url sources
+  local url=${manual_ref['url']}
+  local archive_url=${manual_ref['archive_url']}
+  local download_file=${manual_ref['download_file']}
+
+  if [ -n "$archive_url" ] && __download_file "$archive_url" "$download_file" max_attempts=1; then
+    source=archive
+  elif [ "$fallback_to_source" != 'false' ] && __download_file "$url" "$download_file"; then
+    source=original
+  else
+    # We couldn't download from the archive or source -- nothing to do
+    return 1
+  fi
+
+  # Write metadata for the downloaded file
+  local download_meta_file=${manual_ref['download_meta_file']}
+  local postprocess_options=${manual_ref['options']}
+  echo "{\"url\": \"$url\", \"options\": ${postprocess_options:-null}, \"source\": \"$source\"}" | jq 'del(..|nulls)' > "$download_meta_file"
+}
+
+# Checks whether the given file needs to be updated (either it doesn't exist or
+# the url/postprocess options mismatch)
+__check_file_needs_update() {
+  local -n manual_ref=$1
+  local file_key=$2
+
+  # Check: file exists
+  local file=${manual_ref["${file_key}_file"]}
+  local meta_file=${manual_ref["${file_key}_meta_file"]}
+  if [ ! -f "$file" ] || [ ! -f "$meta_file" ]; then
+    return 0
+  fi
+
+  # If the file exists, short-circuit unless we're updating
+  if [ "$FORCE_UPDATE" != 'true' ]; then
+    return 1
+  fi
+
+  # Check: source url mismatch
+  local url=${manual_ref['url']}
+  local meta_url=$(cat "$meta_file" | jq -r '.url')
+  if [ "$url" != "$meta_url" ]; then
+    return 0
+  fi
+
+  # Check: postprocess options mismatch
+  local postprocess_options=$(echo "${manual_ref['options']:-null}" | jq -rS '.')
+  local meta_options=$(cat "$meta_file" | jq -r '.options')
+  if [ "$postprocess_options" != "$meta_options" ]; then
+    local meta_source=$(cat "$meta_file" | jq -r '.source')
+    if [ "$meta_source" == 'original' ] && [ "$file_key" == 'postprocess' ]; then
+      return 0
+    fi
+
+    if [ "$meta_source" == 'archive' ] && [ "$archive_processed" == 'true' ]; then
+      return 0
+    fi
+  fi
+
+  return 1
 }
 
 # Lists the manuals to install
@@ -189,6 +252,7 @@ __build_manual() {
     [playlist_name]="$playlist_name"
     [name]="$manual_name"
     [languages]="$manual_languages"
+    [options]="$postprocess_options"
     [format]=
     [pages]=
     [rotate]=
@@ -204,14 +268,9 @@ __build_manual() {
     done < <(echo "$postprocess_options" | jq -r 'to_entries[] | [.key, .value] | @tsv')
   fi
 
-  # Add URL only if we're allowed to fall back to downloading from the original
-  # source URL.
-  # 
-  # This also fixes:
+  # Fix urls:
   # * Explicitly escape the character "#" since rom names can have that character
-  if [ "$fallback_to_source" != 'false' ]; then
-    manual_ref['url']=${manual_url//#/%23}
-  fi
+  manual_ref['url']=${manual_url//#/%23}
 
   # Define the souce manual's extension
   local manual_url_extension=${manual_url##*.}
@@ -232,8 +291,9 @@ __build_manual() {
     extension="${manual_ref['extension']}"
   )
   manual_ref['download_file']=$(render_template "$download_file_template" "${template_variables[@]}")
-  manual_ref['archive_file']=$(render_template "$archive_file_template" "${template_variables[@]}")
+  manual_ref['download_meta_file']="${manual_ref['download_file']%.*}.json"
   manual_ref['postprocess_file']=$(render_template "$postprocess_file_template" "${template_variables[@]}")
+  manual_ref['postprocess_meta_file']="${manual_ref['postprocess_file']%.*}.json"
   manual_ref['install_file']=$(render_template "$install_file_template" "${template_variables[@]}")
   manual_ref['archive_url']=$(render_template "$archive_url_template" "${template_variables[@]}")
   manual_ref['archive_url']=${manual_ref['archive_url']//&/%26}
@@ -246,7 +306,7 @@ __build_manual() {
 }
 
 # Downloads the manual from the given URL
-__download_pdf() {
+__download_file() {
   local source_url=$1
   local download_file=$2
   local max_attempts=3
@@ -479,7 +539,7 @@ __rotate_pdf() {
   local pdf_file=$1
   local rotate=$2
 
-  mutool draw -R "$rotate" -o "$pdf_file" "$pdf_file"
+  mutool draw -q -R "$rotate" -o "$pdf_file" "$pdf_file"
 }
 
 # Attempts to make the PDF searchable by running the Tesseract OCR processor
@@ -804,6 +864,7 @@ vacuum() {
     # Keep files to ensure they don't get deleted
     files_to_keep[${manual['install_file']}]=1
     files_to_keep[${manual['postprocess_file']}]=1
+    files_to_keep[${manual['postprocess_meta_file']}]=1
 
     local playlist_name=${manual['playlist_name']}
     if [ -n "$playlist_name" ]; then
@@ -813,7 +874,7 @@ vacuum() {
     # Keep downloads (if configured to persist)
     if [ "$keep_downloads" == 'true' ]; then
       files_to_keep[${manual['download_file']}]=1
-      files_to_keep[${manual['archive_file']}]=1
+      files_to_keep[${manual['download_meta_file']}]=1
     fi
   done < <(__list_manuals)
 
