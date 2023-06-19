@@ -118,7 +118,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/58/Advanced_Daisenryaku_DC_jp_manual.pdf"
+      }
+    ]
   },
   "Advanced Daisenryaku 2001": {
     "id": "2fc8fafb18c4bc5b4e312e44868def74dbb3fb4b",
@@ -129,6 +137,14 @@
     "publisher": "SEGA",
     "genres": [
       "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c0/Advanced_Daisenryaku_2001_DC_jp_manual.pdf"
+      }
     ]
   },
   "Aero Dancing - Todoroki Taichou no Himitsu Disc": {
@@ -722,7 +738,7 @@
         "languages": [
           "pt"
         ],
-        "url": "https://archive.org/download/Blue_Stinger_200x_Br/Blue_Stinger_200x_Br.pdf"
+        "url": "https://segaretro.org/images/c/c8/BlueStinger_DC_PT_Manual.pdf"
       }
     ]
   },
@@ -897,13 +913,27 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/TNN Motorsports Hardcore Heat (USA).pdf"
+        "url": "https://segaretro.org/images/3/38/TNNMotorsportsHardcoreHeat_DC_US_Manual.pdf"
       },
       {
         "languages": [
           "ja"
         ],
         "url": "https://segaretro.org/images/d/d4/Buggy_Heat_DC_JP_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "el",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/2/21/BuggyHeat_DC_EU_Manual.pdf"
       }
     ],
     "merge": [
@@ -1359,6 +1389,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Chicken Run (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manual_cr_dc/manual_cr_dc.pdf"
       }
     ]
   },
@@ -1966,6 +2002,12 @@
       {
         "languages": [
           "pt"
+        ],
+        "url": "https://segaretro.org/images/2/22/DeadlySkies_DC_PT_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt-br"
         ],
         "url": "https://archive.org/download/Airforce_Delta_200x_Br/Airforce_Delta_200x_Br.pdf"
       },
@@ -3200,6 +3242,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/70/F1WGP_DC_PT_Manual.pdf"
       }
     ],
     "merge": [
@@ -3220,6 +3268,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manualdcf1grandprix2/manualdcf1grandprix2.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -3457,7 +3511,15 @@
       "Action",
       "Action / Adventure"
     ],
-    "age_rating": "E10+"
+    "age_rating": "E10+",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://segaretro.org/images/6/68/Flashback_DC_EU_Manual.pdf"
+      }
+    ]
   },
   "Flintstones, The - Viva Rock Vegas": {
     "id": "83960cb58637920c508193aedf57df70557a6343",
@@ -3547,7 +3609,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c1/FrameGrideTestOperationDisc_DC_JP_Manual.pdf"
+      }
+    ]
   },
   "Freestyle Scooter": {
     "id": "65bbd9354d0c6f97c4b3ae9022606418eec0b516",
@@ -3566,7 +3636,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Razor Freestyle Scooter (USA).pdf"
+        "url": "https://segaretro.org/images/3/36/RazorFreestyleScooter_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -4294,7 +4364,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Heavy Metal - Geomatrix (USA).pdf"
+        "url": "https://segaretro.org/images/c/c9/HeavyMetalGeomatrix_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -4423,7 +4493,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hidden & Dangerous (USA).pdf"
+        "url": "https://segaretro.org/images/4/4f/HiddenandDangerous_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -4468,7 +4538,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/House of the Dead 2, The (USA).pdf"
+        "url": "https://segaretro.org/images/f/f8/THotD2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -4538,7 +4608,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hydro Thunder (USA).pdf"
+        "url": "https://segaretro.org/images/a/ae/HydroThunder_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -4606,7 +4676,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.digitpress.com/library/manuals/dreamcast/illbleed.pdf"
+        "url": "https://segaretro.org/images/c/ca/Illbleed_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -4635,7 +4705,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Incoming (USA).pdf"
+        "url": "https://segaretro.org/images/0/00/Incoming_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -4660,7 +4730,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Industrial Spy - Operation Espionage (USA).pdf"
+        "url": "https://segaretro.org/images/9/9b/ISpy_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -4785,7 +4855,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Iron Aces (USA).pdf"
+        "url": "https://segaretro.org/images/b/ba/IronAces_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -4859,7 +4929,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jeremy Mcgrath Supercross 2000 (USA).pdf"
+        "url": "https://segaretro.org/images/a/ab/JMS2000_DC_US_Manual.pdf"
       }
     ]
   },
@@ -5004,7 +5074,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/JoJo's Bizarre Adventure (USA).pdf"
+        "url": "https://segaretro.org/images/7/77/JoJosBizarreAdventure_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5054,7 +5124,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/KISS Psycho Circus - The Nightmare Child (USA).pdf"
+        "url": "https://segaretro.org/images/0/04/KISSPsychoCircus_DC_US_Manual.pdf"
       }
     ]
   },
@@ -5094,7 +5164,15 @@
       "Adventure",
       "Adventure / Visual Novel"
     ],
-    "age_rating": "18"
+    "age_rating": "18",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/5e/Kanon_Dreamcast_Manual.pdf"
+      }
+    ]
   },
   "Kao the Kangaroo": {
     "id": "30d35aff0c043fd516505804364d81e7d4b786ca",
@@ -5112,7 +5190,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Kao the Kangaroo (USA).pdf"
+        "url": "https://segaretro.org/images/1/1f/KaotheKangaroo_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5279,7 +5357,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/King of Fighters Dream Match 1999, The (USA).pdf"
+        "url": "https://segaretro.org/images/1/1b/KoF99_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5311,7 +5389,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/King of Fighters '99 Evolution, The (USA).pdf"
+        "url": "https://segaretro.org/images/5/51/KoFEvolution_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5499,7 +5577,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Last Blade 2 - Heart of the Samurai, The (USA).pdf"
+        "url": "https://segaretro.org/images/1/12/LastBlade2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5551,7 +5629,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive Le Mans (USA).pdf"
+        "url": "https://segaretro.org/images/e/ed/TestDriveLeMans_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -5576,7 +5654,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Legacy of Kain - Soul Reaver (USA).pdf"
+        "url": "https://segaretro.org/images/c/c5/SoulReaver_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5664,7 +5742,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MDK 2 (USA).pdf"
+        "url": "https://segaretro.org/images/d/df/MDK2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5701,6 +5779,12 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Metropolis Street Racer (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manualdcmsr/manualdcmsr.pdf"
       }
     ]
   },
@@ -5735,7 +5819,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MTV Sports - Skateboarding Featuring Andy McDonald (USA).pdf"
+        "url": "https://segaretro.org/images/6/6d/MTVSportsSkateboarding_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5795,7 +5879,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MagForce Racing (USA).pdf"
+        "url": "https://segaretro.org/images/8/83/MagForceRacing_DC_US_Manual.pdf"
       }
     ]
   },
@@ -5867,7 +5951,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Maken X (USA).pdf"
+        "url": "https://segaretro.org/images/9/92/MakenX_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -5995,7 +6079,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mars Matrix (USA).pdf"
+        "url": "https://segaretro.org/images/5/55/MarsMatrix_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6015,7 +6099,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel vs. Capcom (USA).pdf"
+        "url": "https://segaretro.org/images/d/df/MarvelvsCapcom_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -6047,7 +6131,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel vs. Capcom 2 (USA).pdf"
+        "url": "https://segaretro.org/images/2/24/MarvelvsCapcom2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -6104,7 +6188,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Max Steel (USA).pdf"
+        "url": "https://segaretro.org/images/5/58/MaxSteel_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6125,7 +6209,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Maximum Pool (USA).pdf"
+        "url": "https://segaretro.org/images/8/87/MaximumPool_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6239,7 +6323,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Midway's Greatest Arcade Hits Volume 1 (USA).pdf"
+        "url": "https://segaretro.org/images/b/b6/MAGH1_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6259,7 +6343,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Midway's Greatest Arcade Hits Volume 2 (USA).pdf"
+        "url": "https://segaretro.org/images/b/bf/MAGH2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6428,7 +6512,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mortal Kombat Gold (USA).pdf"
+        "url": "https://segaretro.org/images/d/d4/MortalKombatGold_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -6476,7 +6560,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mr. Driller (USA).pdf"
+        "url": "https://segaretro.org/images/4/4f/MrDriller_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -6504,7 +6588,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ms. Pac-Man Maze Madness (USA).pdf"
+        "url": "https://segaretro.org/images/d/d4/MsPacManMazeMadness_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6563,7 +6647,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K (USA).pdf"
+        "url": "https://segaretro.org/images/4/4c/NBA2K_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -6614,7 +6698,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Sega_Sports_NBA_2K2_2001_Sega_US/Sega_Sports_NBA_2K2_2001_Sega_US.pdf"
+        "url": "https://segaretro.org/images/f/f3/NBA2K2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6635,7 +6719,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Hoopz (USA).pdf"
+        "url": "https://segaretro.org/images/2/25/NBAHoopz_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6656,7 +6740,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Showtime - NBA on NBC (USA).pdf"
+        "url": "https://segaretro.org/images/3/3b/NBAShowtime_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6677,7 +6761,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NCAA College Football 2K2 (USA).pdf"
+        "url": "https://segaretro.org/images/e/e0/NCAACollegeFootball2K2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6698,7 +6782,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K (USA).pdf"
+        "url": "https://segaretro.org/images/2/27/NFL2K_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6719,7 +6803,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K1 (USA).pdf"
+        "url": "https://segaretro.org/images/3/34/NFL2K1_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6740,7 +6824,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K2 (USA).pdf"
+        "url": "https://segaretro.org/images/f/fb/NFL2K2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6761,7 +6845,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Blitz 2000 (USA).pdf"
+        "url": "https://segaretro.org/images/a/ab/NFLBlitz2000_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6782,7 +6866,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Blitz 2001 (USA).pdf"
+        "url": "https://segaretro.org/images/3/34/NFLBlitz2001_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6803,7 +6887,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL QB Club 2001 (USA).pdf"
+        "url": "https://segaretro.org/images/6/65/NFLQBC2001_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6824,7 +6908,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Quarterback Club 2000 (USA).pdf"
+        "url": "https://segaretro.org/images/1/13/NFLQBC2000_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6845,7 +6929,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K (USA).pdf"
+        "url": "https://segaretro.org/images/3/3b/NHL2K_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6866,7 +6950,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K2 (USA).pdf"
+        "url": "https://segaretro.org/images/0/03/NHL2K2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6900,7 +6984,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Namco Museum (USA).pdf"
+        "url": "https://segaretro.org/images/a/a8/NamcoMuseum_DC_US_Manual.pdf"
       }
     ]
   },
@@ -6928,7 +7012,15 @@
       "Action",
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/51/NappleTale_DC_JP_Manual.pdf"
+      }
+    ]
   },
   "Neo Golden Logres": {
     "id": "9ad2a85628bc15a8ed07d320a35d10d13bf013ef",
@@ -7143,7 +7235,15 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0c/NettodeTennis_DC_JP_Manual.pdf"
+      }
+    ]
   },
   "Nettou Golf": {
     "id": "6390af8bdfd20caafe34658ac9063624aebe0d81",
@@ -7186,7 +7286,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Next Tetris - On-line Edition, The (USA).pdf"
+        "url": "https://segaretro.org/images/1/1d/TheNextTetris_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -7387,7 +7487,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ooga Booga (USA).pdf"
+        "url": "https://segaretro.org/images/1/15/OogaBooga_DC_US_Manual.pdf"
       }
     ],
     "tags": [
@@ -7464,7 +7564,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Outtrigger (USA).pdf"
+        "url": "https://segaretro.org/images/3/3c/Outtrigger_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7494,7 +7594,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/POD - Speedzone (USA).pdf"
+        "url": "https://segaretro.org/images/0/05/PODSpeedZone_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7601,7 +7701,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Pen Pen TriIcelon (USA).pdf"
+        "url": "https://segaretro.org/images/8/81/PenPen_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7630,13 +7730,19 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online (USA).pdf"
+        "url": "https://segaretro.org/images/b/b5/PSO_DC_US_Manual.pdf"
       },
       {
         "languages": [
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/51/PSONTE_DC_JP_Manual.pdf"
       },
       {
         "languages": [
@@ -7662,7 +7768,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online Ver. 2 (USA).pdf"
+        "url": "https://segaretro.org/images/c/cb/PSOV2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7775,7 +7881,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Plasma Sword - Nightmare of Bilstein (USA).pdf"
+        "url": "https://segaretro.org/images/9/92/PlasmaSword_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7897,7 +8003,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone (USA).pdf"
+        "url": "https://segaretro.org/images/c/c3/PowerStone_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7933,7 +8039,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone 2 (USA).pdf"
+        "url": "https://segaretro.org/images/6/62/PowerStone2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -7970,7 +8076,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Prince of Persia - Arabian Nights (USA).pdf"
+        "url": "https://segaretro.org/images/a/a1/PoPAN_DC_US_Manual.pdf"
       }
     ]
   },
@@ -8151,7 +8257,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Project_Justice_2001_U/Project_Justice_2001_U.pdf"
+        "url": "https://segaretro.org/images/3/31/ProjectJustice_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -8175,7 +8281,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Psychic Force 2012 (USA).pdf"
+        "url": "https://segaretro.org/images/7/7b/PsychicForce2012_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8276,7 +8382,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Q-Bert (USA).pdf"
+        "url": "https://segaretro.org/images/8/81/QBert_DC_US_Manual.pdf"
       }
     ]
   },
@@ -8300,7 +8406,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Quake III Arena (USA).pdf"
+        "url": "https://segaretro.org/images/c/c6/QuakeIIIArena_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8353,7 +8459,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Monaco Grand Prix (USA).pdf"
+        "url": "https://segaretro.org/images/4/4f/MonacoGrandPrix_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8407,7 +8513,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Railroad Tycoon II - Gold Edition (USA).pdf"
+        "url": "https://segaretro.org/images/7/7c/RailroadTycoon2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -8448,7 +8554,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rayman 2 - The Great Escape (USA).pdf"
+        "url": "https://segaretro.org/images/f/f2/Rayman2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8478,7 +8584,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Re-Volt_1999_U/Re-Volt_1999_U.pdf"
+        "url": "https://segaretro.org/images/3/3d/ReVolt_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8508,7 +8614,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing (USA).pdf"
+        "url": "https://segaretro.org/images/6/64/Ready2Rumble_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8538,7 +8644,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing - Round 2 (USA).pdf"
+        "url": "https://segaretro.org/images/a/a1/Ready2Rumble2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8577,7 +8683,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Record of Lodoss War (USA).pdf"
+        "url": "https://segaretro.org/images/2/22/RecordofLodossWar_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8622,7 +8728,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Red Dog - Superior Firepower (USA).pdf"
+        "url": "https://segaretro.org/images/0/03/RedDog_DC_US_Manual.pdf"
       }
     ]
   },
@@ -8656,7 +8762,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Reel Fishing - Wild (USA).pdf"
+        "url": "https://segaretro.org/images/4/4a/ReelFishingWild_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -8711,7 +8817,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil Code - Veronica (USA).pdf"
+        "url": "https://segaretro.org/images/4/47/RECV_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8744,7 +8850,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 2 (USA).pdf"
+        "url": "https://segaretro.org/images/f/f2/ResidentEvil2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8783,7 +8889,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (USA).pdf"
+        "url": "https://segaretro.org/images/2/29/ResidentEvil3_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -8859,7 +8965,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ring - Terror's Realm, The (USA).pdf"
+        "url": "https://segaretro.org/images/7/7e/Ring_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -8883,7 +8989,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Roadsters (USA).pdf"
+        "url": "https://segaretro.org/images/e/ed/Roadsters_DC_US_Manual.pdf"
       }
     ]
   },
@@ -9286,7 +9392,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/San Francisco Rush 2049 (USA).pdf"
+        "url": "https://segaretro.org/images/8/83/SFR2049_DC_US_Manual.pdf"
       }
     ],
     "tags": [
@@ -9340,7 +9446,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seaman (USA).pdf"
+        "url": "https://segaretro.org/images/8/89/Seaman_DC_US_Manual.pdf"
       }
     ]
   },
@@ -9365,7 +9471,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing (USA).pdf"
+        "url": "https://segaretro.org/images/9/9b/SegaBassFishing_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -9396,7 +9502,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing 2 (USA).pdf"
+        "url": "https://segaretro.org/images/4/4c/SegaBassFishing2_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -9419,7 +9525,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Xtreme Sports (USA).pdf"
+        "url": "https://segaretro.org/images/a/ae/XtremeSports_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -9486,7 +9592,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Sega_Marine_Fishing_2000_Sega_US/Sega_Marine_Fishing_2000_Sega_US.pdf"
+        "url": "https://segaretro.org/images/7/7d/SegaMarineFishing_DC_US_Manual.pdf"
       }
     ]
   },
@@ -9507,7 +9613,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Rally Championship 2 (USA).pdf"
+        "url": "https://segaretro.org/images/3/36/SegaRally2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -9687,7 +9793,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seventh Cross Evolution (USA).pdf"
+        "url": "https://segaretro.org/images/3/37/SeventhCrossEvolution_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -9718,6 +9824,12 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shadow Man (France).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manualdcshadowman/manualdcshadowman.pdf"
       }
     ]
   },
@@ -9750,7 +9862,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue (USA).pdf"
+        "url": "https://segaretro.org/images/a/a2/Shenmue_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -9920,7 +10032,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silent Scope (USA).pdf"
+        "url": "https://segaretro.org/images/4/4f/SilentScope_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -9950,7 +10062,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silver (USA).pdf"
+        "url": "https://segaretro.org/images/f/fe/Silver_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10040,7 +10152,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Skies of Arcadia (USA).pdf"
+        "url": "https://segaretro.org/images/d/d5/SkiesofArcadia_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10078,7 +10190,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Slave Zero (USA).pdf"
+        "url": "https://segaretro.org/images/6/62/SlaveZero_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10102,13 +10214,19 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sno-Cross Championship Racing (USA).pdf"
+        "url": "https://segaretro.org/images/e/e7/SnoCross_DC_US_Manual.pdf"
       },
       {
         "languages": [
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sno-Cross Championship Racing (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manualdcsnocross/manualdcsnocross.pdf"
       }
     ]
   },
@@ -10141,7 +10259,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rippin' Riders (USA).pdf"
+        "url": "https://segaretro.org/images/4/44/RippinRiders_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10154,6 +10272,12 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/2/27/CoolBoardersDCJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/manualdcsnowsurfers/manualdcsnowsurfers.pdf"
       }
     ],
     "merge": [
@@ -10178,7 +10302,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soldier of Fortune (USA).pdf"
+        "url": "https://segaretro.org/images/c/cf/SoldierofFortune_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10365,7 +10489,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Fighter (USA).pdf"
+        "url": "https://segaretro.org/images/4/40/SoulFighter_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10385,7 +10509,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Calibur (USA).pdf"
+        "url": "https://segaretro.org/images/1/11/SoulCalibur_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10418,7 +10542,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park - Chef's Luv Shack (USA).pdf"
+        "url": "https://segaretro.org/images/7/78/SPCLS_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10439,7 +10563,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park Rally (USA).pdf"
+        "url": "https://segaretro.org/images/6/61/SouthParkRally_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10459,7 +10583,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Space Channel 5 (USA).pdf"
+        "url": "https://segaretro.org/images/0/0d/SpaceChannel5_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10508,7 +10632,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spawn - In the Demon's Hand (USA).pdf"
+        "url": "https://segaretro.org/images/0/0b/Spawn_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10565,7 +10689,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils (USA).pdf"
+        "url": "https://segaretro.org/images/d/d9/SpeedDevils_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10586,7 +10710,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils Online Racing (USA).pdf"
+        "url": "https://segaretro.org/images/7/78/SpeedDevilsOnlineRacing_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10606,7 +10730,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spider-Man (USA).pdf"
+        "url": "https://segaretro.org/images/f/f7/SpiderMan_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10633,7 +10757,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spirit of Speed 1937 (USA).pdf"
+        "url": "https://segaretro.org/images/a/ab/SpiritofSpeed1937_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10653,7 +10777,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sports Jam (USA).pdf"
+        "url": "https://segaretro.org/images/0/08/SportsJam_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10700,7 +10824,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars Episode I - Jedi Power Battles (USA).pdf"
+        "url": "https://segaretro.org/images/d/db/SWEIJPB_DC_US_Manual.pdf"
       }
     ]
   },
@@ -10721,7 +10845,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars - Episode I Racer (USA).pdf"
+        "url": "https://segaretro.org/images/b/b0/StarWarsEpisodeIRacer_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10751,7 +10875,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Starlancer (USA).pdf"
+        "url": "https://segaretro.org/images/8/8e/StarLancer_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10777,7 +10901,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter Alpha 3 (USA).pdf"
+        "url": "https://segaretro.org/images/c/ca/SFA3_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10813,7 +10937,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - 3rd Strike (USA).pdf"
+        "url": "https://segaretro.org/images/b/b0/SF33S_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10848,7 +10972,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - Double Impact (USA).pdf"
+        "url": "https://segaretro.org/images/8/80/SF3DI_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10897,7 +11021,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Stupid Invaders (USA).pdf"
+        "url": "https://segaretro.org/images/a/a5/StupidInvaders_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -10928,6 +11052,13 @@
           "en"
         ],
         "url": "https://segaretro.org/images/0/09/Sturmwind_(World)_(Unl)_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/6/6d/Sturmwind_DC_JoshProd_EU_Manual.pdf"
       }
     ]
   },
@@ -10989,7 +11120,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Magnetic Neo (USA).pdf"
+        "url": "https://segaretro.org/images/1/15/SuperMagneticNeo_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11077,7 +11208,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Runabout - San Francisco Edition (USA).pdf"
+        "url": "https://segaretro.org/images/f/fa/SuperRunaboutSFE_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11128,7 +11259,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Surf Rocket Racers (USA).pdf"
+        "url": "https://segaretro.org/images/6/6f/SurfRocketRacers_DC_US_Manual.pdf"
       }
     ]
   },
@@ -11149,7 +11280,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Suzuki_Alstare_Extreme_Racing_1999_U/Suzuki_Alstare_Extreme_Racing_1999_U.pdf"
+        "url": "https://segaretro.org/images/e/e3/SAER_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11198,7 +11329,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sword of the Berserk - Guts' Rage (USA).pdf"
+        "url": "https://segaretro.org/images/a/aa/SotB_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -11222,7 +11353,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sydney 2000 (USA).pdf"
+        "url": "https://segaretro.org/images/1/1f/Sydney2000_DC_US_Manual.pdf"
       }
     ]
   },
@@ -11238,7 +11369,15 @@
       "Mahjong",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b7/TNGCaPAS_DC_JP_Manual.pdf"
+      }
+    ]
   },
   "Tako no Marine": {
     "id": "1452ce6efc5e64e5f54d5a87b8edff2654afefd2",
@@ -11317,7 +11456,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tech Romancer (USA).pdf"
+        "url": "https://segaretro.org/images/d/d4/TechRomancer_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11348,7 +11487,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tee Off (USA).pdf"
+        "url": "https://segaretro.org/images/e/ea/TeeOff_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11400,7 +11539,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive 6 (USA).pdf"
+        "url": "https://segaretro.org/images/7/72/TestDrive6_DC_US_Manual.pdf"
       }
     ]
   },
@@ -11432,7 +11571,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Time Stalkers (USA).pdf"
+        "url": "https://segaretro.org/images/0/0f/TimeStalkers_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11515,7 +11654,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer (USA).pdf"
+        "url": "https://segaretro.org/images/b/b3/TokyoXtremeRacer_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11546,7 +11685,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer 2 (USA).pdf"
+        "url": "https://segaretro.org/images/d/d9/TokyoXtremeRacer2_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11579,7 +11718,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six - Rogue Spear (USA).pdf"
+        "url": "https://segaretro.org/images/0/09/RainbowSixRogueSpear_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11631,7 +11770,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - The Last Revelation (USA).pdf"
+        "url": "https://segaretro.org/images/7/76/TombRaiderTLR_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11675,7 +11814,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - Chronicles (USA).pdf"
+        "url": "https://segaretro.org/images/c/ce/TombRaiderChronicles_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -11701,7 +11840,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater 2 (USA).pdf"
+        "url": "https://segaretro.org/images/8/88/THPS2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -11722,7 +11861,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater (USA).pdf"
+        "url": "https://segaretro.org/images/e/ee/THPS_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -11746,7 +11885,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Commander (USA).pdf"
+        "url": "https://segaretro.org/images/7/7f/ToyCommander_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -11810,7 +11949,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Trickstyle (USA).pdf"
+        "url": "https://segaretro.org/images/2/2f/TrickStyle_DC_US_Manual.pdf"
       }
     ]
   },
@@ -11967,7 +12106,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Typing of the Dead, The (USA).pdf"
+        "url": "https://segaretro.org/images/a/a3/TTotD_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12015,7 +12154,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Striker Pro 2000 (USA).pdf"
+        "url": "https://segaretro.org/images/d/dd/StrikerPro2000_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12046,7 +12185,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ultimate Fighting Championship (USA).pdf"
+        "url": "https://segaretro.org/images/9/93/UFC_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12150,7 +12289,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Urban Chaos (USA).pdf"
+        "url": "https://segaretro.org/images/2/22/UrbanChaos_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12184,7 +12323,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive V-Rally (USA).pdf"
+        "url": "https://segaretro.org/images/9/97/TestDriveVRally_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12234,7 +12373,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vanishing Point (USA).pdf"
+        "url": "https://segaretro.org/images/4/49/VanishingPoint_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12269,7 +12408,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vigilante 8 - 2nd Offense (USA).pdf"
+        "url": "https://segaretro.org/images/4/41/V8SO_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -12341,7 +12480,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Fighter 3tb (USA).pdf"
+        "url": "https://segaretro.org/images/2/27/VF3TB_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12374,13 +12513,19 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Striker 2 (USA).pdf"
+        "url": "https://segaretro.org/images/7/7e/VirtuaStriker2_DC_US_Manual.pdf"
       },
       {
         "languages": [
           "ja"
         ],
         "url": "https://segaretro.org/images/a/a2/Virtuastriker2_dc_jp_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/7b/VS2V20001_DC_PT_Manual.pdf"
       }
     ],
     "merge": [
@@ -12404,7 +12549,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Tennis (USA).pdf"
+        "url": "https://segaretro.org/images/a/a3/VirtuaTennis_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -12429,7 +12574,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Tennis_2K2_2001_U_color/Tennis_2K2_2001_U_color.pdf"
+        "url": "https://segaretro.org/images/6/63/Tennis2K2_DC_US_Manual.pdf"
       }
     ],
     "merge": [
@@ -12478,7 +12623,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/WWF Attitude (USA).pdf"
+        "url": "https://segaretro.org/images/c/ca/WWFAttitude_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12598,7 +12743,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wetrix+ (USA).pdf"
+        "url": "https://segaretro.org/images/a/ad/WetrixPlus_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12648,7 +12793,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Who Wants to Beat up a Millionaire (USA).pdf"
+        "url": "https://segaretro.org/images/6/6f/WWtBUaM_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12668,7 +12813,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wild Metal (USA).pdf"
+        "url": "https://segaretro.org/images/7/74/WildMetal_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12689,7 +12834,15 @@
       "Adventure",
       "Adventure / Visual Novel"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/02/Wind_-a_breath_of_heart-_Dreamcast_Manual.pdf"
+      }
+    ]
   },
   "Wind and Water - Puzzle Battles": {
     "id": "c2411140ec888033d24c224fdd42edec9dc60475",
@@ -12782,7 +12935,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K1 (USA).pdf"
+        "url": "https://segaretro.org/images/5/58/WSB2K1_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12803,7 +12956,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K2 (USA).pdf"
+        "url": "https://segaretro.org/images/6/69/WSB2K2_DC_US_Manual.pdf"
       }
     ]
   },
@@ -12824,7 +12977,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms Armageddon (USA).pdf"
+        "url": "https://segaretro.org/images/9/90/WormsArmageddon_DC_US_Manual.pdf"
       },
       {
         "languages": [
@@ -12854,7 +13007,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms World Party (USA).pdf"
+        "url": "https://segaretro.org/images/0/08/WormsWorldParty_DC_US_Manual.pdf"
       },
       {
         "languages": [

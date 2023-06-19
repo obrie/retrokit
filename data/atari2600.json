@@ -6,6 +6,14 @@
     "publisher": "Amiga",
     "genres": [
       "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/3d_genesis.pdf"
+      }
     ]
   },
   "3-D Ghost Attack": {
@@ -14,12 +22,28 @@
     "publisher": "Amiga",
     "genres": [
       "Shooter"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/3d_ghost_attack.pdf"
+      }
     ]
   },
   "3-D Havoc": {
     "id": "d53aa34c686a3cf8426de30d11756316048bebd1",
     "year": 1983,
-    "publisher": "Amiga"
+    "publisher": "Amiga",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/3d_havoc.pdf"
+      }
+    ]
   },
   "3-D Tic-Tac-Toe": {
     "id": "ae59cbcdf6010c620e4f8a03cfaa5f84254f6e5d",
@@ -232,7 +256,15 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/air_raid.pdf"
+      }
+    ]
   },
   "Air Raiders": {
     "id": "2b088d15b15dea33405d7d91b35855b05bf4a2f7",
@@ -383,6 +415,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/alpha_beam.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Alpha_Beam_with_Ernie_Atari_international/Alpha_Beam_with_Ernie_Atari_international.pdf"
       }
     ]
   },
@@ -587,6 +629,14 @@
     "publisher": "Video Soft",
     "genres": [
       "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/atom_smasher.pdf"
+      }
     ]
   },
   "BASIC Programming": {
@@ -1024,6 +1074,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/bigbird.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Big_Birds_Egg_Catch_Atari_international/Big_Birds_Egg_Catch_Atari_international.pdf"
       }
     ]
   },
@@ -1039,7 +1099,15 @@
     "id": "2cb24a4d5f8d32aae4a4f1a6d03bd946d15e563b",
     "players": 1,
     "developer": "Anthony Tokar",
-    "publisher": "Anthony Tokar"
+    "publisher": "Anthony Tokar",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/birthday_mania.pdf"
+      }
+    ]
   },
   "Black Jack": {
     "id": "e83b0dcaafb74d331c1cad2c3aaee53332a09665",
@@ -1132,7 +1200,15 @@
     "players": 1,
     "year": 1983,
     "developer": "Alex Leavens",
-    "publisher": "Telesys"
+    "publisher": "Telesys",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/bouncin_baby_bunnies.pdf"
+      }
+    ]
   },
   "Bowling": {
     "id": "c8549da12aee88b0583aff1d681047d2a37ae841",
@@ -1515,6 +1591,14 @@
         "options": {
           "pages": "9-12"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/a26_Canyon_Bomber_Atari_international/Canyon_Bomber_Atari_international.pdf"
       }
     ]
   },
@@ -1578,6 +1662,16 @@
         "options": {
           "pages": "1-6"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Casino_Atari_international/Casino_Atari_international.pdf"
       }
     ]
   },
@@ -1686,6 +1780,16 @@
           "en"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Championship Soccer (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Peles_Soccer_Atari_international/Peles_Soccer_Atari_international.pdf"
       }
     ]
   },
@@ -2684,7 +2788,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/depth_charge.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/depth_charge.pdf"
       }
     ]
   },
@@ -3472,12 +3576,23 @@
     ]
   },
   "Fire Spinner": {
-    "id": "39bca466d972062fc06e313e24a341d0e069c01f",
+    "id": "132cc9ee65f260573d2f61dbb9f009d529d18b39",
     "year": 1983,
     "developer": "Vidco",
     "publisher": "Suntek",
     "genres": [
       "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/spinning_fireball.txt"
+      }
+    ],
+    "merge": [
+      "Spinning Fireball"
     ]
   },
   "Fireball": {
@@ -3683,7 +3798,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/frog_pond.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/frog_pond.pdf"
       }
     ]
   },
@@ -3844,6 +3959,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/galaxian-atari-2800-jp/\u30ae\u30e3\u30e9\u30af\u30b7\u30a2\u30f3 (Galaxian) (Atari 2800)(JP).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Galaxian_Atari_international/Galaxian_Atari_international.pdf"
       }
     ]
   },
@@ -4118,7 +4243,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/good_luck_charlie_brown.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/good_luck_charlie_brown.pdf"
       }
     ]
   },
@@ -4369,6 +4494,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/hangman.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Hangman_Atari_international/Hangman_Atari_international.pdf"
       }
     ]
   },
@@ -4409,6 +4544,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/haunted-house-atari-2800-jp/\u30db\u30fc\u30f3\u30c6\u30a3\u30c9\u30fb\u30cf\u30a6\u30b9 (Haunted House) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Haunted_House_Atari_international/Haunted_House_Atari_international.pdf"
       }
     ]
   },
@@ -4477,6 +4622,16 @@
           "en"
         ],
         "url": "https://archive.org/download/humancannonballgamemanualatari26001979/Human Cannonball game manual Atari 2600 (1979).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Human_Cannonball_Atari_International/Human_Cannonball_Atari_International.pdf"
       }
     ]
   },
@@ -4638,6 +4793,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/indy_500.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Indy_500_Atari_international/Indy_500_Atari_international.pdf"
       }
     ]
   },
@@ -4770,6 +4935,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/joust-atari-2800-jp/\u98db\u3073\u9ce5\u6226\u58eb (Joust) (Atari 2800)(JP).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Joust_Atari_international/Joust_Atari_international.pdf"
       }
     ]
   },
@@ -4810,6 +4985,16 @@
           "en"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Jungle Fever (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Jungle_Hunt_Atari_international/Jungle_Hunt_Atari_international.pdf"
       }
     ]
   },
@@ -4903,6 +5088,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/kangaroo.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Kangaroo_Atari_international/Kangaroo_Atari_international.pdf"
       }
     ]
   },
@@ -5014,7 +5209,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "18"
+    "age_rating": "18",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/knight_town.pdf"
+      }
+    ]
   },
   "Kool-Aid Man": {
     "id": "8685fd8e88899834153ef5402683506ce30daba4",
@@ -5243,7 +5446,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/looping.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/looping.pdf"
       }
     ]
   },
@@ -5427,6 +5630,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/mario_bros.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Mario_Bros_Atari_international/Mario_Bros_Atari_international.pdf"
       }
     ]
   },
@@ -5491,6 +5704,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/math-gran-prix-2800-jp/\u7b97\u6570\u30b0\u30e9\u30f3\u30d7\u30ea (Math Gran Prix) 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Math_Gran_Prix_Atari_international/Math_Gran_Prix_Atari_international.pdf"
       }
     ]
   },
@@ -5511,6 +5734,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/maze_craze.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Maze_Craze_Atari_international/Maze_Craze_Atari_international.pdf"
       }
     ]
   },
@@ -5534,7 +5767,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/mcdonalds.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/mcdonalds.pdf"
       }
     ]
   },
@@ -5654,6 +5887,17 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/millipede.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/a26_Millipede_Atari_international/Millipede_Atari_international.pdf"
       }
     ]
   },
@@ -5742,6 +5986,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/miniature_golf.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Miniature_Golf_Atari_international/Miniature_Golf_Atari_international.pdf"
       }
     ]
   },
@@ -5779,6 +6033,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/missile-command-atari-2800-jp/\u30df\u30b5\u30a4\u30eb\u7dcf\u53f8\u4ee4\u90e8 (Missile Command) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Missile_Command_Atari_international/Missile_Command_Atari_international.pdf"
       }
     ]
   },
@@ -5899,6 +6163,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/moon_patrol.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Moon_Patrol_Atari_international/Moon_Patrol_Atari_international.pdf"
       }
     ]
   },
@@ -6097,6 +6371,16 @@
         "options": {
           "pages": "1-12"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Ms_Pac-Man_Atari_international/Ms_Pac-Man_Atari_international.pdf"
       }
     ]
   },
@@ -6196,6 +6480,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/night-driver-atari-2800-jp/\u30ca\u30a4\u30c8\u30fb\u30c9\u30e9\u30a4\u30d0\u30fc (Night Driver) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Night_Driver_Atari_international/Night_Driver_Atari_international.pdf"
       }
     ]
   },
@@ -6232,7 +6526,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/nuts.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/nuts.pdf"
       }
     ]
   },
@@ -6253,6 +6547,16 @@
           "en"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Obelix (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Obelix_Atari_international/Obelix_Atari_international.pdf"
       }
     ]
   },
@@ -6408,6 +6712,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/othello.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Othello_Atari_International/Othello_Atari_International.pdf"
       }
     ]
   },
@@ -6450,6 +6764,16 @@
         "options": {
           "pages": "1-4"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Outlaw_Atari_international/Outlaw_Atari_international.pdf"
       }
     ]
   },
@@ -6477,6 +6801,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/pac-man-atari-2800-jp/\u30d1\u30c3\u30af\u30de\u30f3 (Pac-Man) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Pac-Man_Atari_international/Pac-Man_Atari_international.pdf"
       }
     ]
   },
@@ -6637,7 +6971,7 @@
           "fr",
           "it"
         ],
-        "url": "https://archive.org/download/Atari2600Manuals_201812/Phoenix (USA).pdf"
+        "url": "https://archive.org/download/a26_Phoenix_Atari_international/Phoenix_Atari_international.pdf"
       }
     ]
   },
@@ -6731,6 +7065,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/pigs_in_space.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Pigs_in_Space_Atari_international/Pigs_in_Space_Atari_international.pdf"
       }
     ]
   },
@@ -6896,6 +7240,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/pole_position.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Pole_Position_Atari_international/Pole_Position_Atari_international.pdf"
       }
     ]
   },
@@ -7039,7 +7393,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/pursuit_pink_panther.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/pursuit_pink_panther.pdf"
       }
     ]
   },
@@ -7167,7 +7521,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/racer.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/racer.pdf"
       }
     ]
   },
@@ -7275,6 +7629,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/rotla.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Raiders_of_the_Lost_Ark_Atari_international/Raiders_of_the_Lost_Ark_Atari_international.pdf"
       }
     ]
   },
@@ -7369,6 +7733,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/real-sports-baseball-atari-2800-jp/\u30ea\u30a2\u30eb\u30b9\u30dd\u30fc\u30c4 \u30d9\u30fc\u30b9\u30dc\u30fc\u30eb (RealSports Baseball) (Atari 2800)(JP).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_RealSports_Baseball_Atari_international/RealSports_Baseball_Atari_international.pdf"
       }
     ]
   },
@@ -7426,6 +7800,14 @@
           "en"
         ],
         "url": "https://archive.org/download/RealsportsFootballAtari2600HiReScans/RealSports Football - Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/a26_RealSports_Football_Atari_international/RealSports_Football_Atari_international.pdf"
       }
     ]
   },
@@ -7447,6 +7829,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/rs_soccer.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_RealSports_Soccer_Atari_international/RealSports_Soccer_Atari_international.pdf"
       }
     ]
   },
@@ -7466,6 +7858,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/rs_tennis.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_RealSports_Tennis_Atari_international/RealSports_Tennis_Atari_international.pdf"
       }
     ]
   },
@@ -7491,6 +7893,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/real-sports-volleyball-atari-2800-jp/\u30ea\u30a2\u30eb\u30b9\u30dd\u30fc\u30c4 \u30d0\u30ec\u30fc\u30dc\u30fc\u30eb (RealSports Volleyball) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_RealSports_Volleyball_Atari_international/RealSports_Volleyball_Atari_international.pdf"
       }
     ]
   },
@@ -7508,7 +7920,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/red_sea_crossing_fan-based.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/red_sea_crossing_fan-based.pdf"
       }
     ]
   },
@@ -7806,7 +8218,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/sac_alert.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/sac_alert.pdf"
       }
     ]
   },
@@ -7858,7 +8270,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/save_our_ship.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/save_our_ship.pdf"
       }
     ]
   },
@@ -8247,6 +8659,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sky_diver.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Sky_Diver_Atari_international/Sky_Diver_Atari_international.pdf"
       }
     ]
   },
@@ -8337,6 +8759,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/slot_racers.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Slot_Racers_Atari_international/Slot_Racers_Atari_international.pdf"
       }
     ]
   },
@@ -8413,6 +8845,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/snoopy.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Snoopy_and_the_Red_Baron_Atari_international/Snoopy_and_the_Red_Baron_Atari_international.pdf"
       }
     ]
   },
@@ -8529,6 +8971,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sorcerers_apprentice.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Sorcerers_Apprentice_Atari_international/Sorcerers_Apprentice_Atari_international.pdf"
       }
     ]
   },
@@ -8595,6 +9047,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/space_invaders.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Space_Invaders_Atari_international/Space_Invaders_Atari_international.pdf"
       }
     ]
   },
@@ -8683,6 +9145,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/space_war.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Space_War_Atari_international/Space_War_Atari_international.pdf"
       }
     ]
   },
@@ -8804,23 +9276,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/ghost-manor-spikes-peak-atari-2600eurm6/Spike's Peak (Atari 2600)(EUR)[M6]_images.zip"
-      }
-    ]
-  },
-  "Spinning Fireball": {
-    "id": "132cc9ee65f260573d2f61dbb9f009d529d18b39",
-    "year": 1983,
-    "developer": "Vidco",
-    "publisher": "Suntek",
-    "genres": [
-      "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/spinning_fireball.txt"
       }
     ]
   },
@@ -9031,6 +9486,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/star-raiders-atari-2800-jp/\u30b9\u30bf\u30fc\u30fb\u30ec\u30fc\u30c0\u30fc\u30ba (Star Raiders) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Star_Raiders_Atari_international/Star_Raiders_Atari_international.pdf"
       }
     ]
   },
@@ -9381,6 +9846,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/street_racer.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Street_Racer_Atari_international/Street_Racer_Atari_international.pdf"
       }
     ]
   },
@@ -9592,6 +10067,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/super-breakout-atari-2800-jp/\u30b9\u30fc\u30d1\u30fc\u30fb\u30d6\u30ec\u30a4\u30af\u30a2\u30a6\u30c8 (Super Breakout) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Super_Breakout_Atari_international/Super_Breakout_Atari_international.pdf"
       }
     ]
   },
@@ -9691,6 +10176,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/superman.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Superman_Atari_international/Superman_Atari_international.pdf"
       }
     ]
   },
@@ -9739,6 +10234,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/surround.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Surround_Atari_international/Surround_Atari_international.pdf"
       }
     ]
   },
@@ -9822,6 +10327,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sq_earth.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Swordquest-_Earthworld_Atari_international/Swordquest-_Earthworld_Atari_international.pdf"
       }
     ]
   },
@@ -9841,6 +10356,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sq_fire.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Swordquest-_Fireworld_Atari_international/Swordquest-_Fireworld_Atari_international.pdf"
       }
     ]
   },
@@ -10135,7 +10660,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/thwocker.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/thwocker.pdf"
       }
     ]
   },
@@ -10382,7 +10907,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.ataricompendium.com/archives/manuals/vcs/turbo.pdf"
+        "url": "https://www.ataricompendium.com/archives/manuals/vcs/turbo.pdf"
       }
     ]
   },
@@ -10481,6 +11006,16 @@
           "en"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Vanguard (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Vanguard_Atari_international/Vanguard_Atari_international.pdf"
       }
     ]
   },
@@ -10557,6 +11092,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/video_checkers.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Video_Checkers_Atari_international/Video_Checkers_Atari_international.pdf"
       }
     ]
   },
@@ -10579,6 +11124,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/video_chess.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Video_Chess_Atari_international/Video_Chess_Atari_international.pdf"
       }
     ]
   },
@@ -10635,6 +11190,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/video_olympics.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Video_Olympics_Atari_international/Video_Olympics_Atari_international.pdf"
       }
     ]
   },
@@ -10657,6 +11222,16 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/video_pinball.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Video_Pinball_Atari_international/Video_Pinball_Atari_international.pdf"
       }
     ]
   },
@@ -10770,6 +11345,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/warlords-atari-2800-jp/\u6226\u3046\u5c06\u8ecd (Warlords) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Warlords_Atari_international/Warlords_Atari_international.pdf"
       }
     ]
   },
@@ -10997,6 +11582,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/yars-revenge-atari-2800-jp/\u30e4\u30fc\u306e\u5fa9\u8b90 (Yars' Revenge) (Atari 2800)(JP)_images.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/a26_Yars_Revenge_Atari_international/Yars_Revenge_Atari_international.pdf"
       }
     ]
   },

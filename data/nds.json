@@ -769,6 +769,14 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/again-interactive-crime-novel-us-manual/Again manual.pdf"
+      }
     ]
   },
   "Agatha Christie - The ABC Murders": {
@@ -2317,7 +2325,15 @@
     "genres": [
       "Music and Dance"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/beat-city-manual_20220312/Beat City Manual.pdf"
+      }
+    ]
   },
   "Beat the Intro": {
     "id": "5b00d6d88e60addd83b9458875ab457147244978"
@@ -2399,7 +2415,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/bejt-09-00244-manual-mech-120109/BEJT_09_00244_Manual_MECH_120109.pdf"
+      }
+    ]
   },
   "Bella Sara": {
     "id": "0acc818a4947d5f1a8cad63de4cb2e631e589cf3",
@@ -4521,6 +4545,14 @@
     "publisher": "Disney Interactive",
     "genres": [
       "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/club-penguin-herberts-revenge-manual-scan/Club Penguin Herbert's Revenge PDF (Scan).pdf"
+      }
     ]
   },
   "Club Penguin - Elite Penguin Force": {
@@ -9111,7 +9143,15 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ghost-trick-phantom-detective-aus-manual/Ghost Trick - Phantom Detective (Europe) (Manual).pdf"
+      }
+    ]
   },
   "Ghostbusters - The Video Game": {
     "id": "edd3dc83254b39cc89561d604507dffab541b1ce",
@@ -9919,7 +9959,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/harry-potter-and-the-half-blood-prince-manual-nl/Harry Potter and the Half-Blood Prince - Manual - NL.pdf"
+      }
+    ]
   },
   "Harry Potter and the Order of the Phoenix": {
     "id": "3c898ecaf345607d6c8b1bb7cca8a3eb26a88aae",
@@ -12780,7 +12828,15 @@
     "age_rating": "7"
   },
   "Kidou Gekidan Haro Ichiza - Gundam Mahjong +Z - Sarani Dekiru You ni Natta Na!": {
-    "id": "00d6174d01bc7890060f0c493ad89a5ded02db38"
+    "id": "00d6174d01bc7890060f0c493ad89a5ded02db38",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ds-gundam-mahjong-plus-z-manual/DS-Gundam-Mahjong-Plus-Z-manual.pdf"
+      }
+    ]
   },
   "Kidou Gekidan Haro Ichiza - Gundam Mahjong DS - Oyaji ni mo Agarareta Koto nai no ni!": {
     "id": "b3973af6f42e5057cad93951028f878b1fc56f1f"
@@ -13223,7 +13279,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Korg Ds-10 Synthesizer (U).pdf"
+        "url": "https://archive.org/download/korg-ds-10-manual/korg_ds-10_manual.pdf"
       }
     ]
   },
@@ -14715,7 +14771,15 @@
       "Action",
       "Role playing games"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/lunar-knights-instruction-manual/Lunar Knights Instruction Manual.pdf"
+      }
+    ]
   },
   "Lunnis": {
     "id": "afb88e72ebfd09e1e2ea77168953183f492b24f6"
@@ -16147,7 +16211,18 @@
       "Compilation",
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/image-28_202209/formats=JPEG&file=/image-28_202209.zip",
+        "options": {
+          "rotate": 90
+        }
+      }
+    ]
   },
   "Mega Mindy": {
     "id": "670e65ae603cce860c16c34cdcb5dcdaa1e0a877"
@@ -21539,6 +21614,14 @@
     "publisher": "SEGA",
     "genres": [
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/04/PPF_DS_JP_manual.pdf"
+      }
     ]
   },
   "Puyo Puyo 7": {
@@ -23024,7 +23107,15 @@
     "id": "5144a011c804031aa34f7d5e2cb489e21655cebf"
   },
   "Sangokushi DS 3": {
-    "id": "df0a53e765046cb16aac303ff1a6c65c42ab0ddb"
+    "id": "df0a53e765046cb16aac303ff1a6c65c42ab0ddb",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/Sangokushi3-NDS-NTRB35JJPN-Scans/formats=JPEG&file=/Sangokushi3-NDS-NTRB35JJPN-Scans.zip"
+      }
+    ]
   },
   "Sangokushi Taisen DS": {
     "id": "a54423f90e9b08e4a9c986ae40ab416a2123f374"
@@ -23540,6 +23631,14 @@
     "genres": [
       "Role playing games",
       "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e4/ShiningForceFeather_DS_JP_Manual.pdf"
+      }
     ]
   },
   "Shining Stars - Super Starcade": {
@@ -28431,7 +28530,15 @@
     "genres": [
       "Sports"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/games-nintendo-ds-wiffle-ball-user-manual/Games Nintendo DS WIFFLE BALL User Manual.pdf"
+      }
+    ]
   },
   "Wild West, The": {
     "id": "97a0aa743f2dc91c20e3faf7fcfc4ea51e1613bd",
@@ -28650,13 +28757,29 @@
     ]
   },
   "Wizardry - Boukyaku no Isan": {
-    "id": "36181b8399ec2b35dbee88e400273076c498f278"
+    "id": "36181b8399ec2b35dbee88e400273076c498f278",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-boukyaku-no-isan-manual-ds/Wizardry_Boukyaku_no_Isan_Manual_DS.pdf"
+      }
+    ]
   },
   "Wizardry - Inochi no Kusabi": {
     "id": "cc1c5f7c27d597cf3901e9c9b61ecaa1896758ff"
   },
   "Wizardry Asterisk - Hiiro no Fuuin": {
-    "id": "19029687be05ab65d5c067ef844b9603e9a3f888"
+    "id": "19029687be05ab65d5c067ef844b9603e9a3f888",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-asterisk-hiiro-no-fuuin-manual-ds/Wizardry_Asterisk_Hiiro_no_Fuuin_Manual_DS.pdf"
+      }
+    ]
   },
   "Wizards of Waverly Place": {
     "id": "51f0efb6a821fd3a139484e1f8fcc91200fc53d1",

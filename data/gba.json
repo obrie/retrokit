@@ -166,7 +166,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/2 Games in One! - Dr. Mario + Puzzle League (USA, Australia).pdf"
+        "url": "https://archive.org/download/2-games-in-one-dr-mario-puzzle-league-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -204,7 +204,15 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/2-games-in-1-finding-nemo-the-incredibles-agb-binx-hol/2 Games In 1 (Finding Nemo + The Incredibles) [AGB-BINX-HOL].pdf"
+      }
+    ]
   },
   "2 Games in 1 - Finding Nemo - The Continuing Adventures + The Incredibles": {
     "id": "baa52af605521f89ca59a68f027f747ba94b170e",
@@ -347,7 +355,15 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/2-games-in-1-sonic-pinball-party-sonic-battle-noe-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "2 Games in 1 - Sonic Battle + ChuChu Rocket!": {
     "id": "7cdaba052cb2bfd878df4f3b1eefe9ce89a6189d",
@@ -510,7 +526,15 @@
       "Compilation",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/3.5-manual-scan_202109/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "2 Games in One! - Paperboy + Rampage": {
     "id": "387c51c8400e85650dce51c409a6f60cf1d0f640",
@@ -703,7 +727,15 @@
       "Compilation",
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/3.5-manual-scan/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "3 Game Pack! - Mouse Trap + Simon + Operation": {
     "id": "f080944ba8d06cc1aee6ba8bc4b90b393e925fcd",
@@ -729,7 +761,15 @@
       "Board game",
       "Compilation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-game-of-life-yahtzee-payday-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "3 Games in 1 - Rugrats - I Gotta Go Party + SpongeBob SquarePants - SuperSponge + Tak and the Power of Juju": {
     "id": "9079275c534dccf84073a0e574b04db9eb808da0",
@@ -776,6 +816,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/millipede-super-break-out-lunar-lander-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -783,7 +829,7 @@
           "it",
           "nl"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/3 Games in One! - Super Breakout + Millipede + Lunar Lander (E).pdf"
+        "url": "https://archive.org/download/millipede-super-break-out-lunar-lander-eur-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -797,12 +843,35 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/pong-asteroids-yars-revenge-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/pong-asteroids-yars-revenge-usa-canadian-manual/7.5 French Manual Scan.pdf"
+      }
+    ]
   },
   "4 Games on One Game Pak": {
-    "id": "4d617935e8541643295c849f020be4561d3716db",
+    "id": "0192d9a9151484ba542b95c700d660f9644091e9",
     "players": 2,
     "year": 2007,
+    "publisher": "THQ",
+    "age_rating": "E"
+  },
+  "4 Games on One Game Pak (Nicktoons) (USA)": {
+    "id": "8447a17feed7d006dcce1262a471b99b679364a3",
+    "players": 2,
+    "rating": 0.65,
+    "year": 2007,
+    "developer": "Helixe",
     "publisher": "THQ",
     "genres": [
       "Compilation",
@@ -816,6 +885,21 @@
           "en"
         ],
         "url": "https://archive.org/download/4-games-on-one-game-pak-sponge-bob-square-pants-super-sponge-nicktoons-freeze-fr/4 Games On One Game Pak (SpongeBob SquarePants - SuperSponge & Nicktoons - Freeze Frame Frenzy & Fairly Oddparents - Enter the Cleft  & Rocket Power - Zero Gravity Zone) [AGB-BI7E-USA] Manual.pdf"
+      }
+    ]
+  },
+  "4 Games on One Game Pak (Racing) (USA) (En,Fr,De,Es,It)": {
+    "id": "4d617935e8541643295c849f020be4561d3716db",
+    "players": 2,
+    "year": 2007,
+    "publisher": "THQ",
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/4-games-on-one-game-pack-gt-advance-moto-gp/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -958,6 +1042,15 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Advance Wars (USA) (Rev 1).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "nl"
+        ],
+        "url": "https://archive.org/download/advance-wars-nfhug-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -978,6 +1071,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Advance Wars 2 - Black Hole Rising (USA, Australia).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Advance Wars 2 - Black Hole Rising (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -1105,7 +1208,15 @@
       "Shooter",
       "Sports"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/aggressive-inline-gba-manual/Aggressive Inline GBA Manual.pdf"
+      }
+    ]
   },
   "Aka-chan Doubutsuen": {
     "id": "6c6bdb44a1beac5bc6ebc7fb766fa274876c6f28",
@@ -1272,7 +1383,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E10+"
+    "age_rating": "E10+",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-american-dragon-jake-long-rise-of-the-huntsclan-game-boy-advance-manual/Disney's American Dragon Jake Long Rise of the Huntsclan Game Boy Advance Manual.pdf"
+      }
+    ]
   },
   "American Tail, An - Fievel's Gold Rush": {
     "id": "68af51501180fbb88964c0eb9921ae17453744c7",
@@ -1295,6 +1414,14 @@
     "genres": [
       "Simulation",
       "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/angel-collection-mezase-gakuen-no-fashion-leader-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Angel Collection 2 - Pichimo ni Narou": {
@@ -1433,7 +1560,15 @@
       "Sports",
       "Sports / Pool"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/archer-macleans-3d-pool-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Arctic Tale": {
     "id": "495fdfccaf15e0dca6dab5d39ec7e05bc054de05",
@@ -1569,7 +1704,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Astro Boy - Omega Factor (USA) (En,Ja,Fr,De,Es,It).pdf"
+        "url": "https://archive.org/download/astro-boy-omega-factor-ukv-manual/3.5 Manual Scan_jp2.zip"
       },
       {
         "languages": [
@@ -1611,6 +1746,12 @@
     ],
     "age_rating": "E",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-atlantis-the-lost-empire-gba-manual/Disney's Atlantis The Lost Empire GBA Manual.pdf"
+      },
       {
         "languages": [
           "pt"
@@ -2297,7 +2438,15 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-berenstain-bears-and-the-spooky-old-tree-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Best Play Pro Yakyuu": {
     "id": "56be4fc1a03e275d8b76af4b00d7504bac5d42b4",
@@ -2474,6 +2623,14 @@
     "publisher": "Interchannel",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/black-matrix-zero-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Blackthorne": {
@@ -2588,6 +2745,14 @@
     "publisher": "Hudson",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/bobobobo-bobobo-majide-shinken-shoubu-jpn-manual/3.5 Manual Front_jp2.zip"
+      }
     ]
   },
   "Boboboubo Boubobo - Ougi 87.5 Bakuretsu Hanage Shinken": {
@@ -2612,7 +2777,15 @@
       "Platform / Shooter Scrolling",
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/boktai-the-sun-is-in-your-hand-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Boktai 2 - Solar Boy Django": {
     "id": "08625035ba9147a76f31eb850f920db0ac59895a",
@@ -2627,7 +2800,15 @@
       "Platform / Shooter Scrolling",
       "Shooter"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manual_boktai2/manual_boktai2.pdf"
+      }
+    ]
   },
   "Boku wa Koukuu Kanseikan": {
     "id": "e6502b47e04ce4babf6f0f33703691c0823da2bc",
@@ -2747,6 +2928,21 @@
         "options": {
           "filter": "manual*"
         }
+      },
+      {
+        "languages": [
+          "sk"
+        ],
+        "url": "https://archive.org/download/bomberman-max-2-red-advance-eur-slovakian-manual/5.5 Slovakian Manual Scan.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/bomberman-max-2-red-advance-eur-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -3016,7 +3212,15 @@
       "Action",
       "Music and Dance"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/britneys-dance-beat-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Broken Circle": {
     "id": "1a47d848b518c78a948e766f26b0cd2d71e06743",
@@ -3122,7 +3326,15 @@
       "Puzzle-Game",
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/frontier-stories-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "CT Special Forces": {
     "id": "ea691946c27a0d8ffe2b9d42956f43d015bc728a",
@@ -3135,7 +3347,15 @@
       "Action",
       "Shooter"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ct-special-forces-usa-manual/4.5 Manual Scan.pdf"
+      }
+    ]
   },
   "CT Special Forces - Back to Hell": {
     "id": "a39c0f08a63caef0bb2dcc6ba26c0bb97d6a068c",
@@ -3148,7 +3368,15 @@
       "Action",
       "Shooter"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ct-special-forces-2-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "CT Special Forces - Bioterror": {
     "id": "04bab33fd0d33fa04e8fc8b4614377db4d615c49",
@@ -3359,7 +3587,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Cars (USA, Europe).pdf"
+        "url": "https://archive.org/download/cars-scn-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -3435,6 +3663,16 @@
           "en"
         ],
         "url": "https://archive.org/download/castlevania-circle-of-the-moon-agb-aame-usa-manual/Castlevania - Circle of the Moon [AGB-AAME-USA] Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Castlevania - Circle Of The Moon (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -3457,6 +3695,16 @@
           "en"
         ],
         "url": "https://archive.org/download/CastlevaniaAriaOfSorrowManual/Castlevania - Aria of Sorrow - Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Castlevania - Aria Of Sorrow (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -3479,6 +3727,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Castlevania - Harmony of Dissonance (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Castlevania - Harmony Of Dissonance (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -3529,7 +3787,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-cat-in-the-hat-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Catwoman": {
     "id": "c0cd6af56f931e081835bbee4946282f5372bf22",
@@ -3561,6 +3827,18 @@
           "en"
         ],
         "url": "https://archive.org/download/catz-gbamanual-images/CatzGBAManual.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/catz-usa-canadian-manual/7.5 French Manual Scan.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/nakayoshi-pet-advance-series-3-kawaii-koneko-minna-no-soft-2980-series-jpn-2-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -3592,7 +3870,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Charlotte's Web (USA) (En,Fr,De,Es,It).pdf"
+        "url": "https://archive.org/download/charlottes-web-agb-bcje-usa-manual/Charlotte's Web [AGB-BCJE-USA] Manual.pdf"
       }
     ]
   },
@@ -3638,7 +3916,14 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Chicken Little (USA, Europe) (En,Fr,De,Es,It,Nl).pdf"
+        "url": "https://archive.org/download/chicken-little-usa-maual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "da",
+          "sv"
+        ],
+        "url": "https://archive.org/download/chicken-little-scn-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -3798,6 +4083,17 @@
         "options": {
           "filter": "GBAmanual*.jpg"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/bomberman-nes-classics-agb-fbmp-neu-6-manual/Bomberman - NES Classics [AGB-FBMP-NEU6].pdf"
       }
     ]
   },
@@ -3812,7 +4108,15 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/donkey-kong-nes-classics-manual/5.5 Game Manual.pdf"
+      }
+    ]
   },
   "Classic NES Series - Dr. Mario": {
     "id": "5e50263158ccda6fa5ca770cef5f3be16a4c0a7f",
@@ -3863,7 +4167,15 @@
       "Platform",
       "Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/metroid-classic-nes-series-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Classic NES Series - Pac-Man": {
     "id": "435cfde8f8fe1cdf2998c104484e094435d50e4b",
@@ -4140,7 +4452,20 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/compress/n-tranced-manual/formats=JPEG&file=/n-tranced-manual.zip"
+      }
+    ]
   },
   "Crash Bandicoot Fusion": {
     "id": "5325972fea51af4b23d8926f3a2d6237ad17cc2f",
@@ -4179,7 +4504,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Crash Bandicoot - The Huge Adventure (USA).pdf"
+        "url": "https://archive.org/download/crash-bandicoot-the-huge-adventure-agb-acqe-usa-manual/Crash Bandicoot - The Huge Adventure [AGB-ACQE-USA] Manual.pdf"
       }
     ]
   },
@@ -4194,7 +4519,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/CNK_GBA_manual/formats=JPEG&file=/CNK_GBA_manual.zip"
+      }
+    ]
   },
   "Crash Superpack - Crash Bandicoot 2 - N-Tranced + Crash Nitro Kart": {
     "id": "4a935c9ae7bb817cc7228ac86b52dd90c5d2ae11",
@@ -4410,7 +4743,21 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "da"
+        ],
+        "url": "https://archive.org/download/peter-pedal-dan-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://archive.org/download/nicke-nyfiken-swe-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Custom Robo GX": {
     "id": "7f4e69daa66d883d9abd240441bd827e2e0b463c",
@@ -4450,7 +4797,17 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/DK_-_King_of_Swing_-_Manual_-_GBA.pdf"
+        "url": "https://archive.org/download/dk-king-of-swing-manual/DK_King of Swing Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Donkey Kong - King Of Swing (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -4662,7 +5019,15 @@
       "Fight",
       "Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/airforce-delta-storm-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Deal or No Deal": {
     "id": "78df52e3e9090b7c4722754d0eba9e1b6c959d3b",
@@ -4712,7 +5077,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/demikids-dark-version-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "DemiKids - Light Version": {
     "id": "566c2ca46eefac030122b273e58fc3f14f7777aa",
@@ -4724,7 +5097,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/devil-children-light-book-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Demon Driver - Time to Burn Rubber!": {
     "id": "89738ae507aaa4ea5167df980b47cf5960790b6e",
@@ -4949,7 +5330,15 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disney-princess-agb-aqpe-usa/Disney Princess [AGB-AQPE-USA].pdf"
+      }
+    ]
   },
   "Disney Princess - Royal Adventure": {
     "id": "0e021874209610b84aea658e63f17674516b8879",
@@ -4961,7 +5350,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disney-princess-royal-adventure-manual/5.5 Game Manual.pdf"
+      }
+    ]
   },
   "Disney Sports - Basketball": {
     "id": "b957a3d1088a7b631979bc15966248aa7dbc426e",
@@ -5074,7 +5471,15 @@
     "genres": [
       "Educational"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dogz-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dogz - Fashion": {
     "id": "ad5ecfb8264de7367a598e6b896f49d1b29644b9",
@@ -5086,7 +5491,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dogz-fashion-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dogz 2": {
     "id": "f477537000bb499e0fe02dff4fd639cf1ceb5a4c",
@@ -5150,6 +5563,14 @@
     "publisher": "Nintendo",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/domo-kun-no-fushigi-terebi-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Donald Duck Advance": {
@@ -5293,7 +5714,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dora-the-explorer-super-spies-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dora the Explorer - Super Star Adventures!": {
     "id": "7657ede1fb02ed7759eb760f9bc011b8a01a4181",
@@ -5305,7 +5734,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dora-the-explorer-super-star-adventures-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dora the Explorer - The Search for the Pirate Pig's Treasure": {
     "id": "1256f3891d25babf24f5da94e66e53e204fb0287",
@@ -5314,7 +5751,15 @@
     "year": 2002,
     "developer": "Handheld Games",
     "publisher": "NewKidCo",
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dora-the-explorer-the-search-for-pirate-pigs-treasure/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dora the Explorer Double Pack": {
     "id": "56e7538969bff3399d09cca55f4effab06e6d780",
@@ -5441,7 +5886,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/dr-sudoku-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Dragon Ball - Advanced Adventure": {
     "id": "2d7370ed3a15543020e35a22e60982e323d50210",
@@ -5600,6 +6053,14 @@
     "publisher": "Enix",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dragon-quest-monsters-caravan-heart-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Dragon Tales - Dragon Adventures": {
@@ -5720,7 +6181,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/drome-racers-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Droopy's Tennis Open": {
     "id": "3900c3098b481b4522578e59698563b130c92f7d",
@@ -5770,7 +6239,24 @@
     "genres": [
       "Playing cards"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/duel-masters-kaijudo-showdown-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fi",
+          "pt",
+          "sv"
+        ],
+        "url": "https://archive.org/download/duel-masters-kaijudo-showdown-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Duel Masters - Sempai Legends": {
     "id": "13421d961ffc0dfc30e1fbc0b27bfde416e46445",
@@ -5783,7 +6269,19 @@
       "Playing cards",
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fi",
+          "nl",
+          "pt",
+          "sv"
+        ],
+        "url": "https://archive.org/download/duel-masters-sempai-legends-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Duel Masters - Shadow of the Code": {
     "id": "22bb14fef55f219cd48f4060ff55f47e36b03e85",
@@ -5795,7 +6293,15 @@
     "genres": [
       "Playing cards"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/duel-masters-shadow-of-the-code-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Duel Masters 2 - Invincible Advance": {
     "id": "591e14e566e73cd8f78739e2f9704d271f969e9f",
@@ -5891,7 +6397,15 @@
       "Sports",
       "Sports / Golf"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/espn-final-round-golf-2002/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "ESPN Great Outdoor Games - Bass Tournament": {
     "id": "b4558f3f3f8c6705b92c126117d23bd11bf0f4de",
@@ -6139,7 +6653,15 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/enchanted-once-upon-andalasia-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Eragon": {
     "id": "91719da963e6f383736ef5ccd9a151f7f5f44100",
@@ -6151,7 +6673,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E10+"
+    "age_rating": "E10+",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/eragon-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Erementar Gerad - Tozasareshi Uta": {
     "id": "6a9ca391ff6d84664ba40aebb74bfad5d8ab8c9e",
@@ -6217,7 +6747,15 @@
       "Sports",
       "Sports / Skateboard"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-extreme-skate-adventure-manual/5.5 Game Manual.pdf"
+      }
+    ]
   },
   "Eyeshield 21 - DevilBats DevilDays": {
     "id": "136a4591ce6a7af2e51c7569d6df33b9e2916812",
@@ -6229,6 +6767,14 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/eyeshield-21-devilbats-devildays-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "F-14 Tomcat": {
@@ -6268,7 +6814,19 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/F-Zero GP Legend (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "F-Zero - Maximum Velocity": {
     "id": "0167d4b394e4e7830d847ae9e7f6b008914e4a4b",
@@ -6288,6 +6846,22 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/F-Zero_-_Maximum_Velocity_-_UK_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/f-zero-maximum-velocity-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/F-Zero Maximum Velocity (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -6348,7 +6922,18 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "da",
+          "no",
+          "sv"
+        ],
+        "url": "https://archive.org/download/fifa-07-scn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "FIFA Soccer 2003": {
     "id": "d5ca5a9e2531d1a0115d4219d5d05c09cfea28f3",
@@ -6707,6 +7292,14 @@
     "publisher": "Jorudan",
     "genres": [
       "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/fancy-pocket-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Fantastic 4": {
@@ -6827,7 +7420,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Final Fantasy IV Advance (USA, Australia).pdf"
+        "url": "https://archive.org/download/final-fantasy-iv-advance-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -6847,7 +7440,23 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Final Fantasy Tactics Advance (USA, Australia).pdf"
+        "url": "https://archive.org/download/final-fantasy-tactics-advance-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/final-fantasy-tactics-advance-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Final Fantasy Tactics Advance (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -6867,7 +7476,16 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Final Fantasy V Advance (USA).pdf"
+        "url": "https://archive.org/download/final-fantasy-v-advance-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "nl"
+        ],
+        "url": "https://archive.org/download/final-fantasy-v-advance-fhug-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -6888,7 +7506,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/Final_Fantasy_VI_2007_Square_Enix_US/Final_Fantasy_VI_2007_Square_Enix_US.pdf"
+        "url": "https://archive.org/download/final-fantasy-vi-advance-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -6903,7 +7521,19 @@
       "Beat'em Up",
       "Fight"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Final Fight One (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Finding Nemo": {
     "id": "0d69d4c32700a4f9643fbd79f335810a0a8ff6a3",
@@ -6915,7 +7545,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/finding-nemo-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Finding Nemo - The Continuing Adventures": {
     "id": "8d93d742371fe58cf447d91d5feb81e112343e10",
@@ -6949,6 +7587,22 @@
           "en"
         ],
         "url": "https://archive.org/download/fireemblemmanualgba/Fire_Emblem_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Fire Emblem (EN_DE_FR).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "it"
+        ],
+        "url": "https://archive.org/download/manual-game-boy-advance-fire-emblem-en-es-it/Manual_GameBoyAdvance_Fire_Emblem_EN_ES_IT.pdf"
       }
     ]
   },
@@ -6984,6 +7638,16 @@
           "en"
         ],
         "url": "https://archive.org/download/fireemblemthesacredstonesmanualgba/Fire_Emblem_the_Sacred_Stones_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Fire Emblem - The Sacred Stones (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -7036,7 +7700,21 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/the-flintstones-big-trouble-in-bedrock-ukv-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "sk"
+        ],
+        "url": "https://archive.org/download/the-flintstones-big-trouble-in-bedrock-ukv-slovakian-manual/5.5 Slovakian Manual Scan.pdf"
+      }
+    ]
   },
   "Flushed Away": {
     "id": "ccb22d63be1553f4799f698539b5f745e46825ae",
@@ -7424,7 +8102,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/gadget-racers-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Gakkou no Kaidan - Hyakuyoubako no Fuuin": {
     "id": "71957ab8752c09216ff782eb45c5b7fb903fb3d1",
@@ -7511,6 +8197,19 @@
       "Action",
       "Compilation",
       "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Game Watch Gallery Advance (EN_DE_FR_ES_IT_NL).pdf"
+      }
     ]
   },
   "Game Boy Advance Video - All Grown Up! - Volume 1": {
@@ -7518,10 +8217,32 @@
     "players": 1,
     "genres": [
       "Various"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-grown-up-volume-1-usa-manual/3.5 English Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/all-grown-up-volume-1-usa-canadian-manual/7.5 French Manual Scan.pdf"
+      }
     ]
   },
   "Game Boy Advance Video - Cartoon Network Collection - Limited Edition": {
-    "id": "0c3f5744be217f4c1024fc839ab54f7f24475afa"
+    "id": "0c3f5744be217f4c1024fc839ab54f7f24475afa",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/cartoon-network-collection-limited-edition-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Game Boy Advance Video - Cartoon Network Collection - Platinum Edition": {
     "id": "db8b0cfd2d81831d442de66e9fa0cc9f4bed5895",
@@ -7603,10 +8324,26 @@
     "id": "07d08544f190e886f938cde510201f865722eabe"
   },
   "Game Boy Advance Video - Shark Tale": {
-    "id": "db5650982f0bcc67bca5823b76319f338e72be19"
+    "id": "db5650982f0bcc67bca5823b76319f338e72be19",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/shark-tale-gba-video-usa-manual/5.5 Shark Tale Manual Scan.pdf"
+      }
+    ]
   },
   "Game Boy Advance Video - Shrek": {
-    "id": "891ad5faa4302193a20d8710745833970cd96189"
+    "id": "891ad5faa4302193a20d8710745833970cd96189",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/shrek-gba-video-usa-manual/3.5 Shrek Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Game Boy Advance Video - Shrek + Shark Tale": {
     "id": "f429b4a316bee5ac8d4edd9d8b562d277e003197",
@@ -7625,6 +8362,14 @@
     "publisher": "Majesco",
     "genres": [
       "N/A"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sonic-x-a-sonic-super-hero-volume-1-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Game Boy Advance Video - SpongeBob SquarePants - Volume 1": {
@@ -7637,7 +8382,15 @@
     "id": "990a3296f1362fd60641754218fb3a91964a2b7c"
   },
   "Game Boy Advance Video - Strawberry Shortcake - Volume 1": {
-    "id": "4a5a85fcd6ae06a545628d33dfb3b33450df89fe"
+    "id": "4a5a85fcd6ae06a545628d33dfb3b33450df89fe",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/strawberry-short-cake-volume-1-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Game Boy Advance Video - Super Robot Monkey Team - Hyper Force Go! - Volume 1": {
     "id": "8efc4dcd5b155cf987ba5b84ebfc3c2d93b31c25"
@@ -7662,7 +8415,15 @@
     "id": "880af0b43453fc34586292f0e3b0b24261d717ae"
   },
   "Game Boy Advance Video - Yu-Gi-Oh! - Yugi vs. Joey": {
-    "id": "efca6a4eeb5a3d1d0922406bc3b361de662cd436"
+    "id": "efca6a4eeb5a3d1d0922406bc3b361de662cd436",
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/yu-gi-oh-yugi-vs-joey-volume-1-fra-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Game Boy Wars Advance 1+2": {
     "id": "202d904fa0431cd7f08194bee276a9848087ca0c",
@@ -7774,7 +8535,15 @@
       "Puzzle-Game",
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/gem-smashers-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Genseishin Justirisers - Souchaku! Hoshi no Senshi-tachi": {
     "id": "1698bdda412948b654011bbc4e27b501489d4689",
@@ -7859,7 +8628,21 @@
       "Platform",
       "Race"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ghost-rider-usa-manual/3.5 English Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/ghost-rider-usa-canadian-manual/5.5 French Manual Scan.pdf"
+      }
+    ]
   },
   "Ghost Trap": {
     "id": "5bdad8e6606cfec12c539b6c73a74410b0bc71da",
@@ -7882,7 +8665,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sudoku-fever-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Go! Go! Beckham! - Adventure on Soccer Island": {
     "id": "75da302fe7e68d48997072c5bd29f312f9a7b059",
@@ -7894,7 +8685,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/go-go-beckham-abenteuer-auf-der-fussball-insel/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Godzilla - Domination!": {
     "id": "795c0a4f01704af6a8766552cc90d8855b743eed",
@@ -7949,6 +8748,16 @@
         "options": {
           "pages": "3-30"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Golden Sun (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -7970,6 +8779,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Golden Sun - The Lost Age (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Golden Sun The Lost Age (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -8176,7 +8995,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/gyakuten-saiban-2-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Gyakuten Saiban 3": {
     "id": "307bf650b61a6b63c51ad5f9ca37a5c888079cb9",
@@ -8426,7 +9253,21 @@
       "Adventure",
       "Music and Dance"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/happy-feet-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/happy-feet-usa-canadian-manual/6.5 French Manual Scan.pdf"
+      }
+    ]
   },
   "Hardcore Pinball": {
     "id": "f082da1d5be93a38694ad0e354cfd73fdd051dc4",
@@ -8495,7 +9336,15 @@
     "genres": [
       "Sports"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/harry-potter-quidditch-world-cup-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Harry Potter Collection": {
     "id": "dbbc005959f71ba7b512159042484971f781fdac",
@@ -8565,7 +9414,16 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/harry-potter-and-the-prisoner-of-azkaban-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Harry Potter and the Sorcerer's Stone": {
     "id": "7348992920afd2d705fe30fb99e2c6381e61c3cb",
@@ -8663,7 +9521,15 @@
       "Puzzle-Game",
       "Various"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/hello-kiity-happy-party-pals-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Hello Kitty Collection - Miracle Fashion Maker": {
     "id": "6ca964213ee50f8e92256700325fb78d84ab8bc1",
@@ -8695,7 +9561,16 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/herbie-fully-loaded-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Hey Arnold! - The Movie": {
     "id": "e93196e9dc6ad0389b7754a42ae2c10748242281",
@@ -8788,6 +9663,14 @@
       "Board game",
       "Go",
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hikaru-no-go-jpn-1-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Hikaru no Go 2": {
@@ -8831,7 +9714,15 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/home-on-the-range-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Horsez": {
     "id": "cb1006bc61f28dda9c4a88f3d2acc1851ee6388c",
@@ -8844,7 +9735,15 @@
       "Simulation",
       "Simulation / Life"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/horsez-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Hot Potato!": {
     "id": "397788d573d2e9a7f5f661e61ed051f9d33f4a42",
@@ -8999,6 +9898,14 @@
     "publisher": "Hudson",
     "genres": [
       "Compilation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hudson-best-collection-vol-5-shooting-collection-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Hudson Best Collection Vol. 6 - Bouken-jima Collection": {
@@ -9114,7 +10021,15 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ignition-collection-volume-1-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Incredible Hulk, The": {
     "id": "ce516bad7931c7fd793fb47b992d913e71d13711",
@@ -9282,7 +10197,22 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/invader-eur-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Invincible Iron Man, The": {
     "id": "8fd29efaad321d5517e97b818b6a313d7a3a7806",
@@ -9297,7 +10227,15 @@
       "Platform",
       "Platform / Fighter Scrolling"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-invincible-iron-man-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Iridion 3D": {
     "id": "174ced4865ffb3aef9e45adfa9cc96de5f6117d2",
@@ -9357,7 +10295,16 @@
       "Action",
       "Action / Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "fr",
+          "nl"
+        ],
+        "url": "https://archive.org/download/island-xtreme-stunts-fah-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Isseki Hatchou - Kore 1ppon de 8shurui!": {
     "id": "e3fc24fccfdb5f3d25f91beaecf8a558abeb0421",
@@ -9446,6 +10393,14 @@
     "publisher": "Jaleco",
     "genres": [
       "Compilation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/jajamaru-jr-denshouki-jaleco-memorial-jpn-manual/3.5 Manaul Scan_jp2.zip"
+      }
     ]
   },
   "James Pond - Codename Robocod": {
@@ -9458,7 +10413,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/james-pond-codename-robocod-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Jazz Jackrabbit": {
     "id": "70048b796548b688ba10e2c35c5a378aa0f6a34d",
@@ -9591,7 +10554,15 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/jurassic-park-iii-park-builder/Jurassic Park III - Park Builder.pdf"
+      }
+    ]
   },
   "Jurassic Park III - The DNA Factor": {
     "id": "683918c47c4399cbce27504cf007519279607dc3",
@@ -9752,7 +10723,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/karnaaj-rally-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Kawa no Nushi Tsuri 3 & 4": {
     "id": "ecaf8d60b9ecd6ae9783df1deb7652f62dd81b7f",
@@ -9828,6 +10807,14 @@
     "publisher": "Smilesoft",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/keitai-denjuu-telefang-speed-version-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Kelly Slater's Pro Surfer": {
@@ -10124,7 +11111,19 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Kirby And The Amazing Mirror (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Kirby - Nightmare in Dream Land": {
     "id": "417c03c76a24d80712b3880604dddf7f28866bc4",
@@ -10137,7 +11136,19 @@
       "Platform",
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Kirby Nightmare In DreamLand (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Kisekko Gurumii - Chesty to Nuigurumi-tachi no Mahou no Bouken": {
     "id": "91a999909d88cf0fd713fcf5b94507fa4e5e7846",
@@ -10157,6 +11168,14 @@
     "publisher": "Bandai",
     "genres": [
       "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kiss-x-kiss-seirei-gakuen-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Kiwame Mahjong Deluxe - Mirai Senshi 21": {
@@ -10326,7 +11345,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Konami Collectors Series - Arcade Advanced (U).pdf"
+        "url": "https://archive.org/download/komani-collectors-series-arcade-advanced-usa-manual-1/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -10342,7 +11361,20 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/konami-krazy-racers-eur-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Konchuu Monster - Battle Master": {
     "id": "a9aa244b391fe9d6bc5e60994525c6cf96cbd3c0",
@@ -10537,6 +11569,16 @@
           "en"
         ],
         "url": "https://archive.org/download/kuru-kuru-kururin-complete-manual-guide-book/Kuru Kuru Kururin Complete Manual ISBN 978-4757704572 rotated.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Kuru Kuru Kururin (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -10590,7 +11632,18 @@
       "Puzzle-Game",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "da",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/lego-racers-2-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "LEGO Soccer Mania": {
     "id": "c01c8b60da5a9c0486f02b1a4bab03e7e9e18842",
@@ -10641,9 +11694,21 @@
     "manuals": [
       {
         "languages": [
+          "da"
+        ],
+        "url": "https://archive.org/download/lego-star-wars-ii-the-original-trilogy-dan-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/lsw2-manual-gba/LEGO Star Wars II - The Original Trilogy Manual (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/lego-star-wars-ii-the-original-trilogy-usa-canadian-manual/7.5 French Manual Scan.pdf"
       }
     ]
   },
@@ -10727,6 +11792,12 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Lara Croft Tomb Raider - The Prophecy (USA) (En,Fr,De,Es,It).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/tomb-raider-prophecy-ukv-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -10805,6 +11876,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Legend of Zelda, The - The Minish Cap (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/The Legend Of Zelda - The Minish Cap (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -11060,7 +12141,16 @@
     "genres": [
       "Music and Dance"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/lizzie-mcguire-3-homecoming-havoc-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Lode Runner": {
     "id": "74ffbcebafc1fb3524bdeb7f2dd1538dae7333ab",
@@ -11148,7 +12238,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/the-lord-of-the-rings-the-two-towers-hol-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Lost Vikings, The": {
     "id": "c48a7db8e38f2eaa49caa11c4ac8c8d76072a083",
@@ -11173,6 +12271,14 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/love-hina-advance-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Lucky Luke - Wanted!": {
@@ -11199,7 +12305,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/alrl_20220418/formats=JPEG&file=/alrl_20220418.zip"
+      }
+    ]
   },
   "Lunar Legend": {
     "id": "1f5fa3710e9b0154e4b8aae6ceaf62bd7027e438",
@@ -11212,7 +12326,15 @@
       "Action",
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/lunar-legend-gba-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "M&M's - Blast!": {
     "id": "0e4f297853860e10c0a88f5cf95653147f2e6cf8",
@@ -11292,7 +12414,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Madagascar (USA).pdf"
+        "url": "https://archive.org/download/madagascar-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -11346,7 +12468,15 @@
       "Sports",
       "Sports / Football"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/madden-2002-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Madden NFL 2003": {
     "id": "d9995d970900c7d14e0c3accb210866494481660",
@@ -11461,7 +12591,15 @@
       "Action",
       "Role playing games"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/magical-vacation-jpn-1-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mahjong Keiji": {
     "id": "57e7f54e025ed96dd08c997c8df468507a9def08",
@@ -11482,7 +12620,15 @@
     "year": 2006,
     "developer": "Natsume",
     "publisher": "Marvelous Entertainment",
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mahou-sensei-negima-private-lesson-2-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mail de Cute": {
     "id": "b12d57c6395a98097159f9e2fcc46c3c0cccd661",
@@ -11566,13 +12712,21 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/March of the Penguins (USA).pdf"
+        "url": "https://archive.org/download/march-of-the-pengiins-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
   "Marie, Elie & Anis no Atelier - Soyokaze kara no Dengon": {
     "id": "7e84d6ddffb3904f03bcdb2bff70892247af2391",
-    "year": 2003
+    "year": 2003,
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/atelier-marie-elie-anis-message-on-the-gentle-breeze-jpn-1-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mario & Luigi - Superstar Saga": {
     "id": "c1691ed822cf9c6c590ed8c43a09be2c13fcaf07",
@@ -11592,6 +12746,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Mario & Luigi - Superstar Saga (USA, Australia).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mario And Luigi - Superstar Saga (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -11608,7 +12772,25 @@
       "Sports",
       "Sports / Golf"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mario-golf-gba-tour-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mario Golf Advance Tour (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mario Kart - Super Circuit": {
     "id": "564a0559b84fbef267454756e9d2dc893f9a8b7a",
@@ -11637,7 +12819,7 @@
           "fr",
           "nl"
         ],
-        "url": "https://archive.org/download/Mario_Kart_Super_Circuit_2001_Nintendo_EU/Mario_Kart_Super_Circuit_2001_Nintendo_EU.pdf"
+        "url": "https://archive.org/download/mario-kart-super-circuit-neu5-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -11652,7 +12834,19 @@
       "Board game",
       "Various"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mario Party Advance (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mario Power Tennis": {
     "id": "188911193cf26307a27b3c764f38d7f29822fa3f",
@@ -11665,7 +12859,19 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mario Power Tennis (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mario vs. Donkey Kong": {
     "id": "9e0379cd632e75846d536887d832b0c2ac074232",
@@ -11685,6 +12891,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Mario vs. Donkey Kong (USA, Australia).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mario Vs Donkey Kong (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -11712,7 +12928,15 @@
     "genres": [
       "Music and Dance"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/mary-kate-and-ashley-girls-night-out-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mary-Kate and Ashley - Sweet 16 - Licensed to Drive": {
     "id": "08d0ca681db5e2de3100d7068d50544d9793ba3e",
@@ -11793,7 +13017,15 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/math-patrol-the-kleptoid-threat-usa-manual/3.5 Manual Front_jp2.zip"
+      }
+    ]
   },
   "Max Payne Advance": {
     "id": "ba6c7f6cf360474df9904df052892a2128883cd3",
@@ -11866,7 +13098,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/amm_20220419/formats=JPEG&file=/amm_20220419.zip"
+      }
+    ]
   },
   "Medabots - Rokusho": {
     "id": "fab7fff2d429a083bbc3baa591cf1de28045c730",
@@ -11878,7 +13118,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Medabots - Rokusho (EN).pdf"
+      }
+    ]
   },
   "Medabots AX - Metabee Ver.": {
     "id": "c5640be46c7bb19729f44544354f2f87b9b2afe4",
@@ -11892,7 +13140,18 @@
       "Fight / 2D",
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Medabots AX Metabee Version (EN_DE_FR_ES).pdf"
+      }
+    ]
   },
   "Medabots AX - Rokusho Ver.": {
     "id": "94f737519f62dded8c1dc470612695d5df080f61",
@@ -11904,7 +13163,18 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Medabots AX Rokusho Version (EN_DE_FR_ES).pdf"
+      }
+    ]
   },
   "Medal of Honor - Infiltrator": {
     "id": "c7a07b7f0d2580a66f83cf6dfdcd728e92e20dd9",
@@ -11938,7 +13208,15 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/medal-of-honor-underground-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Medarot Navi - Kabuto": {
     "id": "9dac93b460af76aa875eadbf640ecbc366b56c3a",
@@ -11962,7 +13240,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/meet-the-robinsons-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mega Man & Bass": {
     "id": "9d1fd73c746c69f210e8c40e24fb000bbbc7b0ea",
@@ -11983,6 +13269,14 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Mega_Man_and_Bass_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man And Bass (EN_DE_FR).pdf"
       }
     ]
   },
@@ -11998,7 +13292,19 @@
       "Strategy",
       "Various"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Chip Challenge (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network": {
     "id": "1b073fbf97ba48aac7bf46b8532643f7a9131a5f",
@@ -12011,7 +13317,27 @@
       "Action",
       "Role playing games"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "de",
+          "fr",
+          "nl"
+        ],
+        "url": "https://archive.org/download/megaman-battle-network-euu-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 2": {
     "id": "7c090b2cf6944e8668fb07f1af442960d6d7370d",
@@ -12023,7 +13349,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 2 (EN).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 3 - Blue": {
     "id": "383bbb1ce59f6f7bc428cd0b87b717f9266d6b7d",
@@ -12035,7 +13369,25 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/megaman-battle-network-3-jpn-1-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 3 Blue (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 3 - White": {
     "id": "98e7f08d4b6f0c015adbca4053ed81fc0d514e42",
@@ -12047,7 +13399,25 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/megaman-battle-network-3-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 3 White (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 4 - Blue Moon": {
     "id": "88a8899397e9185484986e9ec89d0f421cb8da93",
@@ -12060,7 +13430,19 @@
       "Role playing games",
       "Strategy"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 4 Blue Moon (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 4 - Red Sun": {
     "id": "f35f125eb62965d97a084e5a3b3d584373754b97",
@@ -12072,7 +13454,19 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 4 Red Sun (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 5 - Team Colonel": {
     "id": "b7e5a5a217f513bdc50131bcb7b9a27a5ab773af",
@@ -12091,6 +13485,16 @@
           "en"
         ],
         "url": "https://archive.org/download/megaman-battle-network-5-team-protoman-manual-images/MegamanBattleNetwork5TeamProtomanManual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 5 Team Colonel (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -12105,7 +13509,19 @@
       "Role playing games",
       "Strategy"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 5 Team Protoman (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 6 - Cybeast Falzar": {
     "id": "3ef1857d76da8ab65e4c0f787ec7eb89667ae8ce",
@@ -12117,7 +13533,19 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 6 Cybeast Falzar (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Battle Network 6 - Cybeast Gregar": {
     "id": "cb4063950d7c816d4a9747de21e430a44d8b9223",
@@ -12130,7 +13558,19 @@
       "Role playing games",
       "Strategy"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Battle Network 6 Cybeast Gregar (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Mega Man Zero": {
     "id": "4a6c6ce2a39e9e6b6a7c5ecd08f9dea1de18d59f",
@@ -12143,7 +13583,17 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Zero (EN_DE_FR).pdf"
+      }
+    ]
   },
   "Mega Man Zero 2": {
     "id": "c648f4161b4a8a784735babf7eb8f625c9b045f7",
@@ -12156,7 +13606,17 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Zero 2 (EN_DE_FR).pdf"
+      }
+    ]
   },
   "Mega Man Zero 3": {
     "id": "82180b0146f9773dbf76fa880baa249ca17e69b4",
@@ -12169,7 +13629,17 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Zero 3 (EN_DE_FR).pdf"
+      }
+    ]
   },
   "Mega Man Zero 4": {
     "id": "c545c4c4ee8b32b4b718ddfcd38da67986b57d42",
@@ -12183,7 +13653,17 @@
       "Platform",
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mega Man Zero 4 (EN_DE_FR).pdf"
+      }
+    ]
   },
   "Meine Tierarztpraxis": {
     "id": "089a665045f399ca6c781905bce69ceeca3390c1",
@@ -12194,6 +13674,14 @@
     "publisher": "DTP Young Entertainment",
     "genres": [
       "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/mijn-dierenpraktijk-euu-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Meitantei Conan - Akatsuki no Monument": {
@@ -12508,7 +13996,15 @@
     "id": "35673081af009f94996d83de6432b6f63a9a47cb",
     "players": 4,
     "year": 2003,
-    "publisher": "Success"
+    "publisher": "Success",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tetris-advance-minna-no-soft-series-2980-jpn-2-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Minority Report - Everybody Runs": {
     "id": "690e51019fdc4aa00663e7c59674cc76d117b23d",
@@ -12627,7 +14123,15 @@
     "players": 1,
     "year": 2001,
     "developer": "Mobile21",
-    "publisher": "Konami"
+    "publisher": "Konami",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/monster-guardians-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Monster House": {
     "id": "5793c0e68fd84cfc81fe6a5fe7a4b933ff858bc8",
@@ -12641,7 +14145,15 @@
       "Adventure / Survival Horror",
       "Shooter"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/monster-house-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Monster Jam - Maximum Destruction": {
     "id": "dd5adfd7dde305d31bfd04a5afeaeb06085b9b98",
@@ -12780,7 +14292,23 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/monster-inc-usa-manual/3.5 Manual_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fi",
+          "sv"
+        ],
+        "url": "https://archive.org/download/monster-inc-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Moorhen 3 - The Chicken Chase!": {
     "id": "91db8ef59cf208cf73346c2351e510ef14d524c6",
@@ -12875,6 +14403,14 @@
     "genres": [
       "Role playing games",
       "Various"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mother-1-2-jpn-manual/3.5 Manual Front_jp2.zip"
+      }
     ]
   },
   "Mother 3": {
@@ -12968,6 +14504,22 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Mr_Driller_2_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mr-driller-2-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Mr Driller 2 (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -12990,7 +14542,15 @@
       "Action / Labyrinth",
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ms-pac-man-maze-madness-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Mucha Lucha! - Mascaritas of the Lost Code": {
     "id": "bc1b36e02a81bbbe6f16936b9481361277dd0a4a",
@@ -13187,7 +14747,15 @@
     "id": "de67cf2f0e897b897781b37dbfd776bbd276eedc",
     "players": 1,
     "year": 2002,
-    "publisher": "MTO"
+    "publisher": "MTO",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/nakayoshi-pet-advance-series-2-kawaii-koinu-jpn-1-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wanko to Asobou!! Kogata-ken": {
     "id": "70219ac42a81a49cf51ed0d1bdc92847ae13524a",
@@ -13211,7 +14779,31 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/namco-museum-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/man_PA7J_00/man_PA7J_00.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Namco Museum (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Namco Museum - 50th Anniversary": {
     "id": "fdbbab95d83bc80e4fb6aa6781ad03a6656113d3",
@@ -13281,6 +14873,12 @@
           "en"
         ],
         "url": "https://archive.org/download/naruto-ninja-council-manual-images/NarutoNinja CouncilManual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/naruto-ninja-council-jpn-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -13374,7 +14972,16 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/need-for-speed-underground-2-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Need for Speed Carbon - Own the City": {
     "id": "b58c053df8f9631b72384b3edcf135b21add1ad9",
@@ -13419,7 +15026,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nicktoons-racing-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Nihon Pro Mahjong Renmei Kounin - Tetsuman Advance - Menkyo Kaiden Series": {
     "id": "e1bde8c383db70c2e7528788b45aeb809745bb84",
@@ -13607,7 +15222,25 @@
       "Role playing games",
       "Strategy"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/onimusha-tactics-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Onimusha Tactics (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Onmyou Taisenki - Zeroshiki": {
     "id": "5c4f04b463e4629cea7312e29353283ccf360535",
@@ -13639,7 +15272,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/operation-armored-liberty-usa-manaul/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Oriental Blue - Ao no Tengai": {
     "id": "2c09b2d9a74a5df1f4d815b870b8d8c14c02ebd2",
@@ -13651,7 +15292,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "NOT RATED"
+    "age_rating": "NOT RATED",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/oriental-blue-ao-no-tengai-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Oshaberi Inko Club": {
     "id": "74d206c5631ee58e8e57ed232c2dd2ab50223ccc",
@@ -13672,7 +15321,15 @@
     "id": "7a81862e7cf8bb9a441991a42518bd70588ba31b",
     "players": 4,
     "year": 2002,
-    "publisher": "Culture Brain"
+    "publisher": "Culture Brain",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/oshare-princess-2-doubutsu-kyaranabi-uranah-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Oshare Princess 3": {
     "id": "c2da9280d1c279ac815489ffbcd72bd959af042a",
@@ -13691,6 +15348,14 @@
     "id": "4d498626dcad92b75e9146ec9e73c4c739602b4b",
     "genres": [
       "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/ottifanten-pinball-noe-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Over the Hedge": {
@@ -13759,6 +15424,22 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Pac-Man_Collection_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pacmancollectionmanualJP/man_PAYJ_00.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Pac Man Collection (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -13829,7 +15510,16 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/paws-claws-best-friends-dogs-cats-usa-canadian-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Paws & Claws - Pet Resort": {
     "id": "eec79c3587393fa2a4296696fde86601cce81d89",
@@ -13916,7 +15606,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/petz-hamsterz-2-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Petz Vet": {
     "id": "4c66c8bfe09ff06fc47396e09af106c04269a68d",
@@ -13954,7 +15652,15 @@
       "Compilation",
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/phantasy-star-collection-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Phantom, The": {
     "id": "d96c3ea23bd0d4a6fe700c9d3b11d058a863ec35"
@@ -13992,7 +15698,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/piglets-big-game-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pikapika Nurse Monogatari - Nurse Ikusei Game": {
     "id": "c852f87a45a0845a45977cfb5fb4d3fcf9895f9a",
@@ -14050,7 +15764,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Pinball of the Dead, The (USA).pdf"
+        "url": "https://archive.org/download/the-pinball-of-the-dead-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -14086,7 +15800,18 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/pinky-and-the-brain-the-master-plan-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pinobee & Phoebee": {
     "id": "03d8b1fe424d2bd3a579edf2b1276539f2cc80d9",
@@ -14117,7 +15842,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/paard-pony-paard-in-galop-eut-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pippa Funnell 2": {
     "id": "48d72200460a26b00e37f789339a9b9ae45a2bdc",
@@ -14177,7 +15910,21 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/pitfall-the-mayan-adventure-eur-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pixeline i Pixieland": {
     "id": "dca410edc9c9ae373ddea864ca738d910f70e4aa",
@@ -14186,6 +15933,14 @@
     "publisher": "Krea\u00a0Medie",
     "genres": [
       "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "da"
+        ],
+        "url": "https://archive.org/download/pixeline-i-pixieland-dan-manaul/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Planet Monsters": {
@@ -14210,7 +15965,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/planet-of-the-apes-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Play Novel - Silent Hill": {
     "id": "a6fa035c7d3b10695affd337001a7eb7622d8441",
@@ -14248,7 +16011,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/pocket-dogs-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pocket Music": {
     "id": "ec2199e9775bc03f653db0dfaecf6ed28967856b",
@@ -14279,7 +16050,15 @@
       "Role playing games",
       "Shoot'em Up"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/prba_20220416/formats=JPEG&file=/prba_20220416.zip"
+      }
+    ]
   },
   "Pokemon - 10th Anniversary Distribution": {
     "id": "072c2b640ca0e24fe7a9797d35feab58b36ac5eb"
@@ -14304,7 +16083,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pokemon-emerald-version-jpn-2-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pokemon - FireRed Version": {
     "id": "3a7495633cc341b09b45d7a48653a6951e504dfd",
@@ -14349,7 +16136,13 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Pokemon - Ruby Version (USA, Europe) (Rev 2).pdf"
+        "url": "https://archive.org/download/pokemon-ruby-version-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pokemon-ruby-version-jpn-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -14370,6 +16163,12 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Pokemon - Sapphire Version (USA, Europe) (Rev 2).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pokemon-sapphire-version-jpn-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -14386,7 +16185,21 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Pokemon Mystery Dungeon - RedRescueTeam (EN).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pokemon-mystery-dungeon-red-rescue-team-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pokemon Pinball - Ruby & Sapphire": {
     "id": "24be098f37b69f717938e132fbe308a2f430d3b8",
@@ -14404,7 +16217,17 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Pokemon Pinball - Ruby & Sapphire (U).pdf"
+        "url": "https://archive.org/download/pokemon-pinball-ruby-sapphire-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Pokemon Pinball - Ruby And Sapphire (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -14418,7 +16241,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-polar-express-usa-manual/3.5 Manual Front_jp2.zip"
+      }
+    ]
   },
   "Polarium Advance": {
     "id": "d083dfd322120dfc540d599b1105ece5746df38f",
@@ -14443,7 +16274,15 @@
     "genres": [
       "Casual Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/polly-pocket-super-splash-island-vivendi-universal-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pop Idol": {
     "id": "c778489fa3a58479cf85d55a8adcb79cd51287fc",
@@ -14733,7 +16572,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/princess-natasha-student-secret-agent-princess-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Pro Beach Soccer": {
     "id": "a1585d032e8d4443ff6f76423ca8283a98946e5c",
@@ -14996,7 +16843,21 @@
       "Platform",
       "Various"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "el"
+        ],
+        "url": "https://archive.org/download/ratatouille-gre-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ratatouille-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Rave Master - Special Attack Force!": {
     "id": "03783e23dde1c40346033831443b7ce4616aaab6",
@@ -15008,7 +16869,15 @@
     "genres": [
       "Fight"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/rave-master-special-attack-force-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Rayman - 10th Anniversary": {
     "id": "df46f1685ea70781b37f799f01a8e6379a0fdb43",
@@ -15051,7 +16920,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Rayman - Raving Rabbids (USA) (En,Fr,Es).pdf"
+        "url": "https://archive.org/download/rayman-raving-rabbids-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -15065,7 +16934,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Rayman3 (EN).pdf"
+      }
+    ]
   },
   "Rayman Advance": {
     "id": "4e38cff2f83321665bf8f2a0c8b4528b4763d1d5",
@@ -15077,7 +16954,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Rayman Advance (EN).pdf"
+      }
+    ]
   },
   "Ready 2 Rumble Boxing - Round 2": {
     "id": "68ca33c9307193a17f09c1d3e9e696cd0c667dff",
@@ -15103,7 +16988,21 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "E10+"
+    "age_rating": "E10+",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/rebelstar-tactical-command-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/rebelstar-tactical-command-canadian-manual/3.5 French Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Recca no Honoo - The Game": {
     "id": "16ad4e13803ca1d91bf24511567965681f3ddfa8",
@@ -15142,7 +17041,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/rescue-heores-billy-blazes-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Resident Evil 2": {
     "id": "a733bf9da5939e68a534d880be6f5f162b8b7d27",
@@ -15338,7 +17245,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/robots-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Rock 'N Roll Racing": {
     "id": "c081676c3a77d2a918c3acef6555055f02ce6a14",
@@ -15425,6 +17340,14 @@
     "publisher": "Capcom",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/rokman-exe-4.5-real-operation-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Rocky": {
@@ -15450,7 +17373,21 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/rugrats-castle-capers-aus-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "ko"
+        ],
+        "url": "https://archive.org/download/rugrats-castle-capers-korean-manual/5.5 Korean Manual Scan.pdf"
+      }
+    ]
   },
   "Rugrats - Go Wild": {
     "id": "20fcf7515b9c54d35df589977fb08009397519db",
@@ -15550,7 +17487,19 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/sega-smash-pack-eur-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "SN Systems": {
     "id": "2ab583529d0aa9982f8ef0a6f398b849f88ea702"
@@ -15857,7 +17806,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/scrabble-blast-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Scurge - Hive": {
     "id": "9055d6dd8603b27464f25de7df23a0bd79596485",
@@ -15893,7 +17850,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/secret-agent-barbie-royal-jewels-mission-usa-manual/3.5 Manual Back_jp2.zip"
+      }
+    ]
   },
   "Sengoku Kakumei Gaiden": {
     "id": "240054cc8cd42dc2906646459e11acf9878e9b07",
@@ -16007,7 +17972,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/shamus-deep-sea-adventures-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Shanghai Advance": {
     "id": "ef196262ff15d78368426bd05531412f99bd23e8",
@@ -16207,7 +18180,15 @@
       "Role playing games",
       "Tactical RPG"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/shining-force-resurrection-of-the-dark-dragon-ukv-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Shining Soul": {
     "id": "555de14dcbd7fdf2136df08ed82374fa3181a163",
@@ -16363,7 +18344,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E10+"
+    "age_rating": "E10+",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sigma-star-saga-manual/Sigma_Star_Saga_Manual.pdf"
+      }
+    ]
   },
   "Silent Scope": {
     "id": "68eec15cdc08199b78ee0afc8db6f7d50b8b92ec",
@@ -16470,7 +18459,16 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/the-sims-2-pets-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Sims, The - Bustin' Out": {
     "id": "c7e1f1065634395a1a772b62a1be832e328d615b",
@@ -16547,7 +18545,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/smashing-drive-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Smuggler's Run": {
     "id": "c5e7bf8d97d555b20cd37d84bcdb1a0cedcbe8ee",
@@ -16566,7 +18572,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Smuggler's Run (E).pdf"
+        "url": "https://archive.org/download/smugglers-run-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -16637,7 +18643,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Sonic Advance (USA) (En,Ja).pdf"
+        "url": "https://archive.org/download/sonic-advance-gba-us-manual/SonicAdvance_GBA_US_manual.pdf"
       },
       {
         "languages": [
@@ -16683,7 +18689,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Sonic Advance 3 (USA) (En,Ja,Fr,De,Es,It).pdf"
+        "url": "https://archive.org/download/sonic-advance-3-gba-us-manual/SonicAdvance3_GBA_US_manual.pdf"
       }
     ]
   },
@@ -16930,7 +18936,27 @@
       "Action",
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "da"
+        ],
+        "url": "https://archive.org/download/svampebob-firkant-uhyret-fra-den-knasende-krabbe-dan-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/spongebob-squarepants-creature-from-the-krusty-krab-usa-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://archive.org/download/svampbob-fyrkant-varelse-fran-den-krangliga-krabban-swe-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "SpongeBob SquarePants - Lights, Camera, Pants!": {
     "id": "8dd1050abd8bdd931a45f1c1866fec54e937b037",
@@ -17047,7 +19073,16 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/spongebobs-atlantis-squarepants-usa-canadian-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Sports Illustrated for Kids - Baseball": {
     "id": "196ef4c08cd40eb04b285d96a634ffe3d9fc958d",
@@ -17080,6 +19115,14 @@
     "rating": 0.6,
     "genres": [
       "Compilation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sportsmans-pack-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Spy Hunter": {
@@ -17093,7 +19136,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/spyhunter-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Spy Kids 3-D - Game Over": {
     "id": "5b4aa465903ee7c8665d3af7c4e2ab3ff078275e",
@@ -17111,7 +19162,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Spy Kids 3-D - Game Over (U).pdf"
+        "url": "https://archive.org/download/spy-kids-3d-game-over-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -17216,7 +19267,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/Spyro_Orange_-_Manual_-_GBA.pdf"
+        "url": "https://archive.org/download/spyro-orange-the-cortex-conspiracy-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -17236,7 +19287,15 @@
     "genres": [
       "Sports"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/stadium-games-usa-1-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Star Wars - Episode II - Attack of the Clones": {
     "id": "5e1238be380defa9eb64057bdb3cb3d55ea63f1f",
@@ -17280,7 +19339,15 @@
     "genres": [
       "Shooter"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/star-wars-flight-of-the-falcon-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Star Wars - Jedi Power Battles": {
     "id": "c9925b4ea75197ad6d6155632b849a6e2d4dbee6",
@@ -17304,7 +19371,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/star-wars-new-droid-army-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Star Wars Trilogy - Apprentice of the Force": {
     "id": "ca668d0182cc8eb0681f1aa3d776f1acaa8c0abd",
@@ -17354,7 +19429,15 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/steel-empire-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Steven Gerrard's Total Soccer 2002": {
     "id": "d33dffc2f52a72e392cad18f8a7eb21cdadffc9d",
@@ -17386,7 +19469,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/strawberry-shortcake-summertime-adventure-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Strawberry Shortcake - Summertime Adventure - Special Edition": {
     "id": "79cd0b414934e203616d4b915a6195e4a5b3cd96",
@@ -17395,7 +19486,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/strawberry-shortcake-summertime-adventure-special-edition-usa-manual/3.5 Manaul Scan_jp2.zip"
+      }
+    ]
   },
   "Strawberry Shortcake - Sweet Dreams": {
     "id": "ea343c9af2b1558dd974d2be376025e6457e5190",
@@ -17497,7 +19596,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/the-suite-life-of-zack-and-cody-tipton-caper-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Sum of All Fears, The": {
     "id": "dc22613c615e818aa60c4c86ae909fbaf7dd8bbb",
@@ -17648,7 +19755,17 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Ghouls N Ghosts (EN_DE_FR).pdf"
+      }
+    ]
   },
   "Super Hornet FA 18F": {
     "id": "46f55951c37dd85ae90714dc1c9ccded604830d4",
@@ -17679,6 +19796,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/Super_Mario_Advance_2001_Nintendo_JP/Super_Mario_Advance_2001_Nintendo_JP.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Mario Advance (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -17699,6 +19826,16 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Super_Mario_World_-_Super_Mario_Advance_2_-_Map_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Mario Advance 2 - Super Mario World (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -17719,6 +19856,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Super Mario Advance 3 - Yoshi's Island (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Mario Advance 3 - Yoshi Island (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -17765,6 +19912,16 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Mario_Pinball_Land_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Mario Ball (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -17819,7 +19976,22 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/super-robot-taisen-original-generation-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "it"
+        ],
+        "url": "https://archive.org/download/super-robot-taisen-original-generation-eur-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Super Robot Taisen - Original Generation 2": {
     "id": "b8e5a8469c2a802fca8155a90c273e6c9ada0956",
@@ -17842,11 +20014,27 @@
     "genres": [
       "Role playing games",
       "Tactical RPG"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/super-robot-taisen-a-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Super Robot Taisen D": {
     "id": "6d11084dcf824b01fbe8125c6eb23e0154d3a555",
-    "year": 2003
+    "year": 2003,
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/super-robot-taisen-d-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Super Robot Taisen J": {
     "id": "f12323d0b644ad64d7f508beefe9be5a580b6fb7",
@@ -17856,7 +20044,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/super-robot-taisen-j-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Super Robot Taisen R": {
     "id": "9752edbadb080198df10aaa57e20e76764e77d83",
@@ -17879,7 +20075,19 @@
     "genres": [
       "Fight"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Super Street Fighter II - Turbo Revival (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Superman - Countdown to Apokolips": {
     "id": "f37609b3b0d5dc4aea67a1bcd731011b84786f11",
@@ -18021,7 +20229,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tactics-ogre-the-knight-of-lodis-manual/Tactics Ogre the Knight of Lodis Manual.pdf"
+      }
+    ]
   },
   "Taiketsu! Ultra Hero": {
     "id": "a16d23ecc4ee85df66b4e87924733dfc812d6ebb",
@@ -18101,6 +20317,14 @@
     "publisher": "Namco",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tales-of-the-world-narikiri-dungeon-2-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Tales of the World - Narikiri Dungeon 3": {
@@ -18125,6 +20349,14 @@
     "genres": [
       "Strategy",
       "Various"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tales-of-the-world-summoners-lineage-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Tanbi Musou - Meine Liebe": {
@@ -18374,7 +20606,19 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fi",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/tetris-worlds-euu-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Texas Hold 'em Poker": {
     "id": "e4ea86d52382c856e97472d1e5ac83d676b0c637",
@@ -18399,7 +20643,17 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/thats-so-raven-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "That's So Raven 2 - Supernatural Style": {
     "id": "dfd674480a373c285873c826200d2c1b01ff25c8",
@@ -18411,7 +20665,16 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/thats-so-raven-2-supernatural-style-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Three Stooges, The": {
     "id": "10fb1f19fa36afb73ed960032014782d9ff7308c",
@@ -18460,7 +20723,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Three-in-One Pack - Risk + Battleship + Clue (USA).pdf"
+        "url": "https://archive.org/download/risk-battleship-clue-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -18472,7 +20735,15 @@
       "Board game",
       "Compilation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sorry-aggravation-scrabble-junior-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Thunder Alley": {
     "id": "2e03d06b59efb4833fd31b269c54c296cef6f101",
@@ -18534,7 +20805,15 @@
       "Sports",
       "Sports / Golf"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tiger-woods-pga-tour-golf-usa-incorrect-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Tim Burton's The Nightmare Before Christmas - The Pumpkin King": {
     "id": "77afcfe4a977e0f463b425aa945232ce19e90fd0",
@@ -18553,6 +20832,13 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Tim Burton's The Nightmare Before Christmas - The Pumpkin King (USA, Europe) (En,Fr,De,Es,It).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/the-nightmare-before-christmas-the-pumpkin-king-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -18649,6 +20935,17 @@
           "en"
         ],
         "url": "http://files.replacementdocs.com/Tokyo_Xtreme_Racer_Advance_-_Manual_-_GBA.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/tokyo-xtreme-racer-advance-eur-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -18680,6 +20977,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tom-clancys-splinter-cell-pandora-tomorrow-usa-manual/3.5 English Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
           "en-gb",
           "es",
           "it"
@@ -18698,7 +21001,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/tom-clancys-splinter-cell-pandora-tomorrow-usa-french-manual/5.5 French Manual Scan.pdf"
+      }
+    ]
   },
   "Tom and Jerry - The Magic Ring": {
     "id": "a61168c8abf7c6982cfb1a7c38062ff82b19813a",
@@ -18744,6 +21055,14 @@
     "publisher": "Nintendo",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tomato-adventure-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Tonka - On the Job": {
@@ -18756,7 +21075,15 @@
       "Simulation",
       "Simulation / Vehicle"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tonk-on-the-job-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Tony Hawk's American Sk8land": {
     "id": "0d639311b34b60c50ff3a79ce963920f7a400fef",
@@ -18987,7 +21314,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-treasure-planet-gba-manual/Disney's Treasure Planet GBA Manual.pdf"
+      }
+    ]
   },
   "Trick Star": {
     "id": "fc9146fbc81a8e8856ef29e424c1ffb7cc8ac54f",
@@ -19024,7 +21359,15 @@
     "genres": [
       "Casual Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/trollz-hair-affair-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Tron 2.0 - Killer App": {
     "id": "e2cfbc21d2e29c5cab230a6b96ec75ef6a9164e4",
@@ -19164,7 +21507,18 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "da",
+          "no",
+          "sv"
+        ],
+        "url": "https://archive.org/download/ty-the-tasmanian-tiger-2-bush-rescue-scn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Ty the Tasmanian Tiger 3 - Night of the Quinkan": {
     "id": "b6e96fbb2cf6ea34610594d803d6450113d6c3fc",
@@ -19249,7 +21603,15 @@
     "genres": [
       "Playing cards"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ultimate-card-games-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Ultimate Muscle - The Kinnikuman Legacy - The Path of the Superhero": {
     "id": "a125226304898dc938946ce93366aa13f56b0ad2",
@@ -19275,7 +21637,15 @@
       "Puzzle-Game",
       "Thinking"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ultimate-puzzle-games-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Ultimate Spider-Man": {
     "id": "9967a7e6a453a878b8bfcd22b592022671ac24a8",
@@ -19330,7 +21700,15 @@
     "genres": [
       "Playing cards"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/uno-52-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Uno Free Fall": {
     "id": "08250e2b082cc963bab3f4275f54b9bd174ba878",
@@ -19366,7 +21744,18 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "da",
+          "no",
+          "sv"
+        ],
+        "url": "https://archive.org/download/the-urbz-sims-in-the-city-scn-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "V-Master Cross": {
     "id": "28358485ff755150a2a8634e3c425c8325dd5366",
@@ -19460,7 +21849,15 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/virtua-tennis-usa-scan2/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Virtual Kasparov": {
     "id": "e4b2b9e471e08051737e6510764f227577968173",
@@ -19675,6 +22072,16 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyAdvanceManuals/Wario Land 4 (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Wario Land 4 (EN_DE_FR_ES_IT).pdf"
       }
     ]
   },
@@ -19708,7 +22115,25 @@
     "genres": [
       "Casual Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/made-in-wario-jpn-manual/3.5 Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Game-Manuals-GBA_032023/Wario Ware Inc Minigame Mania (EN_DE_FR_ES_IT).pdf"
+      }
+    ]
   },
   "Whac-A-Mole": {
     "id": "f11a0d019ce84c6fdf00edeb659dba580f20c6e7",
@@ -19861,7 +22286,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/wing-commander-prophecy/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Wings": {
     "id": "8bbb653f24e8bedb35074511aaa86ec6d4ee7c00",
@@ -19920,6 +22353,14 @@
     "publisher": "Media Rings",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-summoner-manual-gba/Wizardry_Summoner_Manual_GBA.pdf"
+      }
     ]
   },
   "Wolfenstein 3D": {
@@ -20052,7 +22493,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Worms World Party (E).pdf"
+        "url": "https://archive.org/download/worms-world-party-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -20116,7 +22557,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/xs-moto-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Xploder Advance": {
     "id": "2c177ca618304de4958d79b920a021160216add6"
@@ -20196,7 +22645,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/yu-yu-hakusho-tournament-tactics-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "Yu-Gi-Oh! - Day of the Duelist - World Championship Tournament 2005": {
     "id": "1d405ac3a1be161423ae0804b7e6c783ded207a3",
@@ -20227,7 +22684,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/Yu-Gi-Oh_Destiny_Board_Traveler_-_Manual_-_GBA.pdf"
+        "url": "https://archive.org/download/yu-gi-oh-destiny-board-traveler-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -20272,7 +22729,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/Yu-Gi-Oh_The_Eternal_Duelist_Soul_-_Manual_-_GBA.pdf"
+        "url": "https://archive.org/download/yu-gi-oh-the-eternal-duelist-soul-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -20292,7 +22749,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://dl3.emu-land.net/manuals/gba/Yu-Gi-Oh! - The Sacred Cards (U).pdf"
+        "url": "https://archive.org/download/yu-gi-oh-the-sacred-cards-usa-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -20318,7 +22775,21 @@
       "Playing cards",
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/yu-gi-oh-world-championship-2004-usa-manual/3.5 English Manual Scan_jp2.zip"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/yu-gi-oh-world-championship-2004-usa-canadian-manual/5.5 French Manual Scan.pdf"
+      }
+    ]
   },
   "Yu-Gi-Oh! - Worldwide Edition - Stairway to the Destined Duel": {
     "id": "e7fdd3089352629cb35d1350cc61a410900bb005",
@@ -20465,6 +22936,14 @@
     "genres": [
       "Japanese RPG",
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mugen-kinogyou-zero-tours-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Zettaizetsumei Dangerous Jiisan - Naki no 1-kai - Zettaifukujuu Violence Kouchou - Wagahai ga 1-ban Erainjai!!": {
@@ -20570,7 +23049,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "6"
+    "age_rating": "6",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/zone-of-the-enders-the-fist-of-mars-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   },
   "ZooCube": {
     "id": "83dd3d589ce7e596638d7bc39f512b0a530912a6",
@@ -20685,6 +23172,14 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/xxx-a-new-breed-of-secret-agent-usa-manual/3.5 Manual Scan_jp2.zip"
+      }
+    ]
   }
 }

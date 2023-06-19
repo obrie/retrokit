@@ -106,6 +106,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/007 - Tomorrow Never Dies (USA).pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/007 - Tomorrow never dies (S) [SLES-01324].cbr"
       }
     ],
     "merge": [
@@ -136,6 +142,13 @@
           "en"
         ],
         "url": "http://psxdatacenter.com/manuals/007 Racing [SLUS-01300] (E).cbr"
+      },
+      {
+        "languages": [
+          "es",
+          "pt"
+        ],
+        "url": "http://psxdatacenter.com/manuals/007 - Racing (S)(Pt) [SLES-03355].cbr"
       }
     ]
   },
@@ -421,6 +434,12 @@
           "en"
         ],
         "url": "https://archive.org/download/40-winks-manuale/40 Winks - Manuale.pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/40 Winks - con Ruff & Tumble (S) [SLES-01941].cbr"
       }
     ],
     "merge": [
@@ -461,7 +480,15 @@
     "genres": [
       "Driving / Racing"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/5 Star Racing (S) [SLES-04064].cbr"
+      }
+    ]
   },
   "70's Robot Anime - Geppy-X": {
     "id": "42a0402cc4e46f558d5cc1af3278fa4bc1478f58",
@@ -766,6 +793,15 @@
           "ja"
         ],
         "url": "https://archive.org/download/AceCombat3ManualJPPlayStationPSX/Ace Combat 3 (Manual)(JP)(PlayStation)(PSX).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "el",
+          "es",
+          "pt"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Ace Combat 3 - Electrosphere (S)(P)Gr)(E) [SCES-02066].cbr"
       }
     ]
   },
@@ -1111,6 +1147,14 @@
     "age_rating": "3",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Actua Tennis (Zoo Classics) (S) [SLES-00265].cbr"
+      }
     ]
   },
   "Addie no Okurimono - To Moze from Addie": {
@@ -1613,7 +1657,16 @@
     "genres": [
       "Action / Platformer"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "es",
+          "it"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Akuji the Heartless (S)(I) [SLES-01298].cbr"
+      }
+    ]
   },
   "Akumajou Dracula X - Gekka no Yasoukyoku": {
     "id": "8ec01e184df2dfddcc31a810cd115e2f25be78c6",
@@ -1747,6 +1800,16 @@
           "en"
         ],
         "url": "https://archive.org/download/alien_trilogy_english/alien_trilogy_english.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Alien Trilogy (E)(F)(S)(I)(G) [SLES-00101].cbr"
       }
     ]
   },
@@ -1807,6 +1870,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/All Star Racing (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "nl"
+        ],
+        "url": "http://psxdatacenter.com/manuals/All Star Racing (E)(F)(G)(Du) [SLES-03740].cbr"
       }
     ]
   },
@@ -1898,6 +1970,14 @@
     ],
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/All Star Watersports (S) [SLES-04060].cbr"
+      }
     ]
   },
   "All-Star Baseball 97 featuring Frank Thomas": {
@@ -2054,6 +2134,12 @@
       },
       {
         "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Alundra (S) [SLES-01258].cbr"
+      },
+      {
+        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/AlundraManualJPPlayStationPSX/Alundra (Manual)(JP)(PlayStation)(PSX).pdf"
@@ -2077,6 +2163,12 @@
           "en"
         ],
         "url": "https://archive.org/download/alundra_2/Alundra 2.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/alundra-2-manual-scan-jp-play-station-psx/Alundra 2 (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
       }
     ],
     "merge": [
@@ -2138,6 +2230,14 @@
       "Adventure"
     ],
     "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Amerzone - El Legado del Explorador (S) [SLES-02349].cbr"
+      }
+    ],
     "merge": [
       "Amerzone - Das Testament des Forschungsreisenden",
       "Amerzone - El Legado del Explorador",
@@ -2297,6 +2397,14 @@
     "publisher": "Phoenix Games",
     "genres": [
       "Jigsaw puzzle"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Animal Football (S) [SLES-04071].cbr"
+      }
     ]
   },
   "Animal Snap - Rescue Them 2 by 2": {
@@ -2380,6 +2488,17 @@
     "age_rating": "3",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "el",
+          "es",
+          "pt"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Anna Kournikova's Smash Court Tennis (S)(P)(Gr)(E) [SCES-01833].cbr"
+      }
     ]
   },
   "Annanjarin": {
@@ -2498,6 +2617,12 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/ape_escape_english/ape_escape_english.pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Ape Escape - La Invasion de los Monos (S) [SCES-02031].cbr"
       },
       {
         "languages": [
@@ -3024,6 +3149,16 @@
           "en"
         ],
         "url": "https://archive.org/download/area51_202101/area51.pdf"
+      },
+      {
+        "languages": [
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Area 51 (F)(G)(S)(I)(Du) [SLES-03783].cbr"
       }
     ],
     "emulation": {
@@ -3232,6 +3367,18 @@
       "Action / Shooter"
     ],
     "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Army Men - Omega Soldier (E)(F)(S)(I)(Du) [SLES-03431].cbr"
+      }
+    ],
     "merge": [
       "Army Men - Green Rogue"
     ]
@@ -3323,6 +3470,17 @@
           "en"
         ],
         "url": "https://archive.org/download/Army_Men_3D_English/Army_Men_3D_English.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Army Men 3D (E)(F)(G)(S)(I)(Du) [SLES-02378].cbr"
       }
     ]
   },
@@ -3470,6 +3628,14 @@
       "Action / Mini Games"
     ],
     "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Asterix %26 Obelix - Contra C%C3%A9sar (S) [SLES-02473].cbr"
+      }
+    ],
     "merge": [
       "Asterix & Obelix contro Cesare"
     ]
@@ -3484,7 +3650,16 @@
     "genres": [
       "Action / Strategy"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "es",
+          "pt"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Asterix - Mega Madness (S) (Pt) [SLES-03324].cbr"
+      }
+    ]
   },
   "Asteroids": {
     "id": "d526b647be1eb3101aaac2d5067e325577141aac",
@@ -3502,7 +3677,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Asteroids (USA).pdf"
+        "url": "http://psxdatacenter.com/manuals/Asteroids (E) [SLES-01418].cbr"
       }
     ],
     "merge": [
@@ -3597,6 +3772,13 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Atari Anniversary Edition Redux (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "nl"
+        ],
+        "url": "https://archive.org/download/ps1atari_manual/ps1atari_manual.pdf"
       }
     ]
   },
@@ -3681,6 +3863,17 @@
       "Adventure"
     ],
     "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "nl",
+          "sv"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Atlantis - The Lost Tales (E)(S)(Du)(Sw) [SLES-01605].cbr"
+      }
+    ],
     "merge": [
       "Atlantis - Das sagenhafte Abenteuer",
       "Atlantis - Secrets d'un Monde Oublie",
@@ -3747,7 +3940,15 @@
     "genres": [
       "Pinball"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/ps1austin_manual/ps1austin_manual.pdf"
+      }
+    ]
   },
   "Australian Summer Special": {
     "id": "3c25891f91db99af850db3bec3291164ea56621a"
@@ -3898,7 +4099,15 @@
     "genres": [
       "Mahjong"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/azumanga-donjyara-daioh-playstation-1-manual/Azumanga Donjyara Daioh Playstation 1 Manual.pdf"
+      }
+    ]
   },
   "Azure Dreams": {
     "id": "07d6318a44f577faa715417bc30131c47fdcc8c4",
@@ -5108,6 +5317,12 @@
           "en"
         ],
         "url": "https://archive.org/download/manual-virtual-stupidity/Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/slps-01219-beavis-and-butthead-virtual-aho-shoukougun/SLPS-01219 - Beavis and Butthead Virtual Aho Shoukougun.pdf"
       }
     ]
   },
@@ -5722,6 +5937,14 @@
     "peripherals": [
       "multitap"
     ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Blaze & Blade.pdf"
+      }
+    ],
     "merge": [
       "Legend of Foresia - La Contree Interdite"
     ]
@@ -6136,6 +6359,12 @@
       },
       {
         "languages": [
+          "en-gb"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/psx-1/file/manual-e.zip"
+      },
+      {
+        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/bomberman_202101/bomberman.pdf"
@@ -6165,6 +6394,21 @@
           "en"
         ],
         "url": "https://archive.org/download/bomberman_fantasy_race_english/bomberman_fantasy_race_english.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/psx-race/file/manual-e.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/psx-race/file/manual-j.rar",
+        "options": {
+          "filter": "*manual*"
+        }
       }
     ]
   },
@@ -6224,6 +6468,12 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/bomberman_world_english/bomberman_world_english.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/psx-wo/file/manual-j.zip"
       }
     ],
     "tags": [
@@ -6372,7 +6622,15 @@
     "genres": [
       "RPG / Strategy"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/bounty-sword-double-edge-manual-scan-jp-play-station-psx/Bounty Sword Double Edge (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Bounty Sword First": {
     "id": "ad6a897f0133ae73612f254ac391970f7c9b382e",
@@ -6525,7 +6783,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Brave Fencer Musashi (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Brave Fencer Musashi_SP.pdf"
       },
       {
         "languages": [
@@ -8024,6 +8282,12 @@
           "en"
         ],
         "url": "http://psxdatacenter.com/manuals/Castlevania Symphony of the Night [SLUS-00067] (E).cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/castlevania-sotn-jp-manual/Castlevania SoTN (JP) Manual.pdf"
       }
     ]
   },
@@ -8726,7 +8990,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Chocobo's Dungeon 2 (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Chocobo's Dungeon 2_SP.pdf"
       }
     ],
     "merge": [
@@ -11049,7 +11313,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dai-bouken-deluxe-manual-scan-jp-play-station-psx/DaiBouken Deluxe (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Daikoukai Jidai Gaiden": {
     "id": "3e9bf188e9f7d11c8d4b305c4357a040f0e49748",
@@ -11073,7 +11345,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dai-koukai-jidai-2-manual-scan-jp-play-station-psx/Dai Koukai Jidai 2 (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Daikoukai Jidai IV - Porto Estado": {
     "id": "73dbc71ba0164fc33039b23d415746c9be3aed03",
@@ -11085,7 +11365,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dai-koukai-jidai-4-manual-scan-jp-play-station-psx/Dai Koukai Jidai 4 (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Daiobake Yashiki - Hamamura Jun no Jitsuwa Kaidan": {
     "id": "f397ebff9c2d25325fc99b509ee56828a4e66a67",
@@ -12200,7 +12488,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dd-g-14/DdGManual.pdf"
+      }
+    ]
   },
   "Densha de Go! 2": {
     "id": "87785f1dd0310e14f03fab0a75778ff4962f2fee",
@@ -12601,6 +12897,14 @@
       "Action / Adventure / Strategy"
     ],
     "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Techmo's Deception.pdf"
+      }
+    ],
     "merge": [
       "Kokumeikan",
       "Tecmo's Deception - Invitation to Darkness"
@@ -12845,6 +13149,14 @@
       "Breeding / RPG"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Digimon World 2_SP.pdf"
+      }
+    ],
     "merge": [
       "DigimonWorld 2"
     ]
@@ -12860,6 +13172,14 @@
       "RPG / Breeding"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Digimon World 3_SP.pdf"
+      }
+    ],
     "merge": [
       "Digimon World 3",
       "DigimonWorld 3 - Aratanaru Bouken no Tobira"
@@ -13017,6 +13337,12 @@
           "en"
         ],
         "url": "http://psxdatacenter.com/manuals/Dino Crisis 2 [SLUS-01279] (E).cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Dino Crisis 2 (J) [SLPM-86627].cbr"
       }
     ]
   },
@@ -13269,6 +13595,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-atlantis-the-lost-empire-playstation-1-manual/Disney's Atlantis The Lost Empire Playstation 1 Manual.pdf"
+      },
+      {
+        "languages": [
           "it"
         ],
         "url": "https://archive.org/download/disney-atlantis-manuale/Disney Atlantis - Manuale.pdf"
@@ -13501,6 +13833,14 @@
       "Platformer"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-the-emperors-new-groove-playstation-1-manual/Disney's The Emperors New Groove Playstation 1 Manual.pdf"
+      }
+    ],
     "merge": [
       "Disney El Emperador y sus Locuras",
       "Disney Keisarin Uudet Kuviot",
@@ -14041,7 +14381,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/doko-demo-issyo-manual_202301/Doko Demo Issyo Manual.pdf"
+      }
+    ]
   },
   "Doko made mo Aoku...": {
     "id": "f16e345ccaafafbfb00197fc97b588f26e5a6df9",
@@ -14087,7 +14435,15 @@
     "genres": [
       "First Person Shooter"
     ],
-    "age_rating": "M"
+    "age_rating": "M",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/doom-usa_202211/Doom (USA).pdf"
+      }
+    ]
   },
   "Doraemon - Nobita to Fukkatsu no Hoshi": {
     "id": "fa0858b115640ef3315352746c79fc53e39721ca",
@@ -14501,6 +14857,12 @@
     ],
     "age_rating": "T",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Dragon Valor_SP.pdf"
+      },
       {
         "languages": [
           "it"
@@ -15460,7 +15822,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Einhander (USA).pdf"
+        "url": "https://archive.org/download/einhander-1/Einhander (1).pdf"
       }
     ]
   },
@@ -15591,6 +15953,14 @@
       "Pinball"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/ps1elepinball_manual/ps1elepinball_manual.pdf"
+      }
+    ],
     "merge": [
       "Nice Price Series Vol. 08 - Elemental Pinball"
     ]
@@ -17016,6 +17386,14 @@
     "peripherals": [
       "multitap"
     ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/fifa98_manual/fifa98_manual.pdf"
+      }
+    ],
     "merge": [
       "FIFA - Die WM-Qualifikation 98",
       "FIFA - En Route pour la Coupe du Monde 98",
@@ -17603,7 +17981,15 @@
     "genres": [
       "Adventure / RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/favorite-dear-manual-scan-jp-play-station-psx/Favorite Dear (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Favorite Dear - Enkan no Monogatari": {
     "id": "10f1dd024edb7ef75e970b1ef2d48cd2611d0124",
@@ -17614,7 +18000,15 @@
     "genres": [
       "Adventure / RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/favorite-dear-enkan-no-monogatari-manual-scan-jp-play-station-psx/Favorite Dear Enkan no Monogatari (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Favorite Dear - Junpaku no Yogensha": {
     "id": "f2edd2728912428479804bec6e876c01e8334c68",
@@ -17625,7 +18019,15 @@
     "genres": [
       "Adventure / RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/favorite-dear-junpaku-no-yogensha-manual-scan-jp-play-station-psx/Favorite Dear Junpaku no Yogensha (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Fear Effect": {
     "id": "ac45f627bb0b678c013f4269326a9dd02ca94765",
@@ -17945,6 +18347,19 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Final Fantasy Chronicles - Final Fantasy IV (USA).pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Final Fantasy Anthology (S) [SCES-03840].cbr"
+      },
+      {
+        "name": "Final Fantasy IV",
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Final Fantasy VI (S) [SCES-03828].cbr"
       }
     ],
     "merge": [
@@ -18040,6 +18455,12 @@
       },
       {
         "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Final Fantasy IX (S) [SLES-02969].cbr"
+      },
+      {
+        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/final-fantasy-ix-manual-scan-jp-play-station-psx/Final Fantasy IX (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
@@ -18069,6 +18490,13 @@
           "it"
         ],
         "url": "https://archive.org/download/final-fantasy-origins-manuale/Final Fantasy Origins - Manuale.pdf"
+      },
+      {
+        "languages": [
+          "es",
+          "it"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Final Fantasy - Origins (I)(S) [SLES-04034].cbr"
       }
     ]
   },
@@ -18168,6 +18596,12 @@
           "en-gb"
         ],
         "url": "http://psxdatacenter.com/manuals/Final Fantasy VII [SCES-00867] (E).cbr"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Final Fantasy VII (S) [SCES-00900].cbr"
       },
       {
         "languages": [
@@ -18727,6 +19161,13 @@
           "en"
         ],
         "url": "https://archive.org/download/formula_1_english/formula_1_english.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Formula 1 (Multi-2) (E)(F) [SLES-00298].cbr"
       }
     ]
   },
@@ -18792,7 +19233,15 @@
     "genres": [
       "Driving / Racing"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Formula GP (S) [SLES-03994].cbr"
+      }
+    ]
   },
   "Formula Grand Prix - Team Un'ei Simulation 2 - 1997-nenban": {
     "id": "56c0e3949c6c28aba47f7297e429fe80d642aff8",
@@ -18848,7 +19297,15 @@
     "genres": [
       "Racing / Driving"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Formula One 2000 (E) [SCES-02777].cbr"
+      }
+    ]
   },
   "Formula One 2001": {
     "id": "b34cd7392b0037d90517181d36d35177abfae9f0",
@@ -19208,7 +19665,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Front Mission 3 (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Front Mission 3_SP.pdf"
       },
       {
         "languages": [
@@ -19332,6 +19789,13 @@
           "en"
         ],
         "url": "https://archive.org/download/future_cop_english/future_cop_english.pdf"
+      },
+      {
+        "languages": [
+          "es",
+          "pt"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Future Cop L.A.P.D. (E)(P) [SLES-01449].cbr"
       }
     ],
     "merge": [
@@ -19400,7 +19864,15 @@
     "genres": [
       "Action / Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/g.darius_manual/g.darius_manual.pdf"
+      }
+    ]
   },
   "G-Police": {
     "id": "2565361bebea16420ed710fa09ecc17ab135f234",
@@ -19474,7 +19946,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/g.-o.-d-pure-manual-scan-jp-play-station-psx/G.O.D Pure (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "GI Jockey": {
     "id": "4bcceaec13871e59086ed7cbea9fb2c58873b763",
@@ -20645,7 +21125,15 @@
     "genres": [
       "Tactical RPG"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/GingaOjousamaDensetsuYunaFinalEditionManualJPPlayStation/Galaxy Fraulein Yuna Final Edition Manual (PS1).pdf"
+      }
+    ]
   },
   "Gionbana": {
     "id": "a5210cddf34d07c85514ed4b93575b3bcd7c1ec2",
@@ -23442,6 +23930,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Hoshigami - Ruining Blue Earth_SP.pdf"
+      },
+      {
+        "languages": [
           "ja"
         ],
         "url": "http://psxdatacenter.com/manuals/Hoshigami - Ruining Blue Earth [SLUS-01375] (E).cbr"
@@ -23952,7 +24446,15 @@
     "genres": [
       "Mahjong"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hyper-value-2800-mahjong-playstation-1-manual/Hyper Value 2800 Mahjong Playstation 1 Manual.pdf"
+      }
+    ]
   },
   "I'Max Shougi II": {
     "id": "894df45468bd790eb1398ec01aad676f5f6a8f24",
@@ -24202,6 +24704,12 @@
     ],
     "age_rating": "T",
     "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "http://psxdatacenter.com/manuals/A Sangre Fria (S) [SLES-02153].cbr"
+      },
       {
         "languages": [
           "ru"
@@ -24842,7 +25350,15 @@
     "genres": [
       "Adventure / Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/itsuka-kasanariau-ashita-he-sayuri-hen-manual-scan-jp-play-station-psx/Itsuka Kasanariau Ashita he Sayuri-hen (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Itsuka, Kasanariau Ashita e - Shirou Hen": {
     "id": "e255d2339517245a5aec38ff7328ec4bf3d87ac7",
@@ -24853,7 +25369,15 @@
     "genres": [
       "Adventure / Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/itsuka-kasanariau-ashita-he-shirou-hen-manual-scan-jp-play-station-psx/Itsuka Kasanariau Ashita he Shirou-hen (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Iwatobi Penguin Rocky x Hopper": {
     "id": "9b594f1706a72a4ba4cae35e0fba940b24789c38",
@@ -25485,7 +26009,15 @@
     "genres": [
       "Puzzle / Jigsaw"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/jigsaw-world-manual-scan-jp-play-station-psx/Jigsaw World (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Jikki Pachi-Slot Tettei Kouryaku - Speed-CR Kinkakuji 3": {
     "id": "2cfa69bd761f7284949bbd7b8ffd6cb26bdcaeeb",
@@ -25520,6 +26052,14 @@
     "age_rating": "E",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/jikkyou-golf-master-2000-playstation-1-manual/Jikkyou Golf Master 2000 Playstation 1 Manual.pdf"
+      }
     ]
   },
   "Jikkyou J.League 1999 - Perfect Striker": {
@@ -26118,6 +26658,14 @@
       "Platformer"
     ],
     "age_rating": "KA",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/jumping-flash-2-playstation-us-manual/formats=JPEG&file=/jumping-flash-2-playstation-us-manual.zip"
+      }
+    ],
     "merge": [
       "Jumping Flash! Aloha Danshaku Funky Daisakusen no Maki"
     ]
@@ -26206,7 +26754,15 @@
     "genres": [
       "Strategy / RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/junjou-de-karen-meymay-kishidan-spectral-force-seishoujo-gaiden-idea-factory-col/Junjou de Karen Meymay Kishidan Spectral Force Seishoujo Gaiden (Idea Factory Collection)(Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Jupiter Strike": {
     "id": "8b20dd0f65fa749813d81f81c7ece30497ba4126",
@@ -26352,7 +26908,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/kiss_pinball_english/kiss_pinball_english.pdf"
+        "url": "https://archive.org/download/ps1kiss_manual/ps1kiss_manual.pdf"
       }
     ]
   },
@@ -27843,7 +28399,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/King's Field (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/King's Field.pdf"
       }
     ]
   },
@@ -27863,7 +28419,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/King's Field II (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/King's Field II.pdf"
       }
     ],
     "merge": [
@@ -28417,7 +28973,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/koneko-mo-issho-manual/Koneko Mo Issho Manual.pdf"
+      }
+    ]
   },
   "Konohana - TrueReport": {
     "id": "e3edf712689fda3fcf43a87d4db8778feb47a358",
@@ -28877,7 +29441,15 @@
     "genres": [
       "Driving / Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kurukuru-marumaru-psx-manual/kurukuru-marumaru-psx-manual.pdf"
+      }
+    ]
   },
   "Kuru Kuru Panic": {
     "id": "da47a9aaae600738979dff360319179e621730d5",
@@ -29158,7 +29730,15 @@
     "genres": [
       "Action / Platformer"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/DDI-RockRaiders-PSXManual_v0-8/pdf version/Rock Raiders Manual v0-8.pdf"
+      }
+    ]
   },
   "LMA Manager": {
     "id": "b62a475a3033391e656c95e95c84d6c1767153b8",
@@ -30183,6 +30763,20 @@
       "Platformer"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/The-Adventures-of-Lomax-PlayStation-US-Manual/formats=JPEG&file=/The-Adventures-of-Lomax-PlayStation-US-Manual.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/the-adventures-of-lomax-playstation-japanese-manual/formats=JPEG&file=/the-adventures-of-lomax-playstation-japanese-manual.zip"
+      }
+    ],
     "merge": [
       "Adventures of Lomax, The"
     ]
@@ -35791,6 +36385,12 @@
           "en"
         ],
         "url": "https://archive.org/download/nba_live_99_english/nba_live_99_english.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/nba99_manual/nba99_manual.pdf"
       }
     ]
   },
@@ -36715,6 +37315,12 @@
           "en"
         ],
         "url": "https://archive.org/download/nhl_99_english/nhl_99_english.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/nhl99_manual/nhl99_manual.pdf"
       }
     ]
   },
@@ -36883,6 +37489,14 @@
     "age_rating": "E",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nhl-face-off-99-playstation-1-manual/NHL FaceOff 99 Playstation 1 Manual.pdf"
+      }
     ]
   },
   "NHL Open Ice - 2 on 2 Challenge": {
@@ -37471,6 +38085,14 @@
       "Racing / Driving"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/nfs2_manual/nfs2_manual.pdf"
+      }
+    ],
     "merge": [
       "Over Drivin' II"
     ]
@@ -37492,6 +38114,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Need for Speed III - Hot Pursuit (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/nfs3_manual/nfs3_manual.pdf"
       }
     ],
     "merge": [
@@ -38066,7 +38694,15 @@
     "genres": [
       "Platformer"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nickelodeon-sponge-bob-square-pants-super-sponge_202303/Nickelodeon SpongeBob SquarePants -  SuperSponge.pdf"
+      }
+    ]
   },
   "Nicktoons Racing": {
     "id": "f4d70f0daa3d8c127035a2bb76a01519a4ce07bd",
@@ -38895,6 +39531,12 @@
           "en"
         ],
         "url": "https://archive.org/download/oddworld_abes_odyssee_english/oddworld_abes_odyssee_english.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Abe a GoGo (J) [SLPS-01118].cbr"
       }
     ],
     "merge": [
@@ -38911,7 +39553,15 @@
     "genres": [
       "Action / Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/odo-odo-oddity-manual-scan-jp-play-station-psx/Odo Odo Oddity (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Oehlins Hyper-Rally": {
     "id": "90d64cf7d8bc67ba5bd3bc629f84f20763c02bac",
@@ -39989,7 +40639,15 @@
     "genres": [
       "Sports / Golf"
     ],
-    "age_rating": "KA"
+    "age_rating": "KA",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/pga98_manual/pga98_manual.pdf"
+      }
+    ]
   },
   "PO'ed": {
     "id": "a0c15b0c7745f01978cae670dd7516367a505a73",
@@ -40782,6 +41440,12 @@
           "en"
         ],
         "url": "https://archive.org/download/pandemonium_english/pandemonium_english.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/magical-hoppers-manual-scan-jp-play-station-psx/Magical Hoppers (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
       }
     ],
     "merge": [
@@ -42792,7 +43456,18 @@
     "genres": [
       "Mini Games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/PocketMuuMuuManual/formats=PNG&file=/PocketMuuMuuManual.zip",
+        "options": {
+          "pages": "1-14"
+        }
+      }
+    ]
   },
   "Pocket PowerStation PlayStation Cheats CD": {
     "id": "e7b530baf28af68e3869651ffce1430420f72991"
@@ -43821,6 +44496,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Pro Pinball - Fantastic Journey (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/ps1fantjour_manual/ps1fantjour_manual.pdf"
       }
     ]
   },
@@ -44126,6 +44807,12 @@
     ],
     "age_rating": "E",
     "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/shr/puchi/psxmanual-j.zip"
+      },
       {
         "languages": [
           "en-gb",
@@ -44465,7 +45152,15 @@
     "genres": [
       "Simulation / Strategy"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/queens-road-manual-scan-jp-play-station-psx/Queens Road (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Quest for Fame - Be a Virtual Rock Legend": {
     "id": "53d16478d0f42c2b00f7e344fb8d899f64c36cf2",
@@ -44722,7 +45417,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/RPG_Maker_-_System_Data_Manual_-_PSX.pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/RPG Maker.pdf"
       }
     ],
     "merge": [
@@ -45801,6 +46496,20 @@
           "ja"
         ],
         "url": "http://psxdatacenter.com/manuals/Biohazard [SLPS-00222] (J).cbr"
+      },
+      {
+        "name": "Bio Hazard - Director's Cut",
+        "languages": [
+          "ja"
+        ],
+        "url": "http://psxdatacenter.com/manuals/Bio Hazard Director's Cut (J) [SLPS-00998].cbr"
+      },
+      {
+        "name": "Bio Hazard - Director's Cut - Dual Shock Ver.",
+        "languages": [
+          "ja"
+        ],
+        "url": "http://psxdatacenter.com/manuals/BioHazard - Director's Cut - Dual Shock (J) [SLPS-01512].cbr"
       }
     ],
     "merge": [
@@ -48780,6 +49489,15 @@
     ],
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Shaolin.pdf"
+      }
     ],
     "merge": [
       "Lord of Fist"
@@ -52871,7 +53589,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spectral-blade-idea-factory-collection-manual-scan-jp-play-station-psx/Spectral Blade (Idea Factory Collection)(Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Spectral Force": {
     "id": "121688ecbd3162365628c4d5546bcbcbd28aece9",
@@ -52882,7 +53608,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spectral-force-idea-factory-collection-manual-scan-jp-play-station-psx/Spectral Force (Idea Factory Collection)(Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Spectral Force - Itoshiki Jaaku": {
     "id": "b345c02c95f989274468aca7b4780d6f102c3750",
@@ -52893,7 +53627,15 @@
     "genres": [
       "Strategy / RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spectral-force-itoshiki-jaaku-manual-scan-jp-play-station-psx/Spectral Force Itoshiki Jaaku (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Spectral Force 2": {
     "id": "8aea864f2194ace95bf55f71acb0ec21241c40ea",
@@ -52904,7 +53646,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spectral-force-2-idea-factory-collection-manual-scan-jp-play-station-psx/Spectral Force 2 (Idea Factory Collection)(Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Spectral Tower": {
     "id": "8fabfece34942f0953bfe24157e27b98f5a11b2e",
@@ -52921,7 +53671,7 @@
         "languages": [
           "ja"
         ],
-        "url": "http://psxdatacenter.com/manuals/Spectral Tower [SLPS-00476] (J).cbr"
+        "url": "https://archive.org/download/spectral-tower-2-manual-scan-jp-play-station-psx/Spectral Tower 2 (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
       }
     ]
   },
@@ -53856,7 +54606,15 @@
     "genres": [
       "Driving / Racing / Shooting"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/starwinder-manual/starwinder manual.pdf"
+      }
+    ]
   },
   "Station Demo Disc 1": {
     "id": "9d0e77c40a8d1bf853bc851a35e156590fd26418"
@@ -54008,7 +54766,15 @@
     "genres": [
       "Action / Adventure"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/stray-sheep-psx-manual/stray-sheep-psx-manual.pdf"
+      }
+    ]
   },
   "Streak Hoverboard Racing": {
     "id": "6b0070a4fdae758edb3f50ba1bd2117cc5efe1a6",
@@ -54652,7 +55418,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/suna-no-embrace-manual-scan-jp-play-station-psx/Suna no Embrace (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Super Adventure Rockman": {
     "id": "e1714a18250425d1955de8a9fbd2de7edf1a9df7",
@@ -57460,7 +58234,15 @@
     "genres": [
       "Fighting"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/12_20230117_20230117tekken_1_ntsc_manual/formats=PNG&file=/12_20230117_20230117tekken_1_ntsc_manual.zip"
+      }
+    ]
   },
   "Tekken 2": {
     "id": "ee225714c5727de1276a0eb163d86d8672080281",
@@ -57479,6 +58261,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Tekken 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/compress/tekken_2_pal_manual/formats=JPEG&file=/tekken_2_pal_manual.zip"
       },
       {
         "languages": [
@@ -57646,7 +58434,10 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/tenchu_english/tenchu_english.pdf"
+        "url": "https://archive.org/download/tenchu_english/tenchu_english.pdf",
+        "options": {
+          "pages": "1,4-N"
+        }
       },
       {
         "languages": [
@@ -58226,7 +59017,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://files.replacementdocs.com/Thousand_Arms_-_Manual_-_PSX.pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Thousand Arms.pdf"
       }
     ]
   },
@@ -58241,6 +59032,16 @@
       "Sports / Skateboard"
     ],
     "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "it"
+        ],
+        "url": "https://archive.org/download/thrasher_manual/thrasher_manual.pdf"
+      }
+    ],
     "merge": [
       "Thrasher - SK8"
     ]
@@ -58393,6 +59194,14 @@
     "age_rating": "E",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tiger-woods-pga-tour-2000-playstation-1-manual/Tiger Woods PGA Tour 2000 Playstation 1 Manual.pdf"
+      }
     ],
     "merge": [
       "Tiger Woods USA Tour 2001"
@@ -58772,7 +59581,7 @@
         "languages": [
           "en"
         ],
-        "url": "http://psxdatacenter.com/manuals/Tobal N%C2%BA1 (E) [SCES-00497].cbr"
+        "url": "http://psxdatacenter.com/manuals/Tobal N%c2%ba1 (E) [SCES-00497].cbr"
       }
     ]
   },
@@ -58820,7 +59629,15 @@
     "genres": [
       "Dating / Adventure / Mini Games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tokimeki-memorial-2-psx-manual/TokimekiMemorial2-PSX-Manual.pdf"
+      }
+    ]
   },
   "Tokimeki Memorial 2 - Taisen Puzzledama": {
     "id": "8914bdf48becfbf677f033bbad53d9a07d01da19",
@@ -59567,7 +60384,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/tony_hawks_pro_skater_english/tony_hawks_pro_skater_english.pdf"
+        "url": "https://archive.org/download/tonyhawk_manual/tonyhawk_manual.pdf"
       },
       {
         "languages": [
@@ -59784,7 +60601,15 @@
     "genres": [
       "Driving / Racing"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/touge-max-g-playstation-1-manual/Touge Max G Playstation 1 Manual.pdf"
+      }
+    ]
   },
   "Touhaiden Akagi": {
     "id": "82e0c8acc4e36db1b086ac793957284ceaac0e2a",
@@ -60344,7 +61169,15 @@
     "genres": [
       "Puzzle"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tsumu-psx-manual/tsumu-psx-manual.pdf"
+      }
+    ]
   },
   "Tsumu Light": {
     "id": "75e26120a18c7c8cc04a99e6a46843add5f1920b",
@@ -61125,6 +61958,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Um Jammer Lammy (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/um-jammer-lammy-manual-scan-jp-play-station-psx/Um Jammer Lammy (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
       }
     ]
   },
@@ -61685,6 +62524,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/vagrant-story-manual-scan-jp-play-station-psx/Vagrant Story (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "nl"
         ],
@@ -61751,7 +62596,15 @@
     "genres": [
       "Adventure / Action / RPG"
     ],
-    "age_rating": "M"
+    "age_rating": "M",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/vampir-kyuuketsuki-densetsu-manual-scan-jp-play-station-psx/Vampir Kyuuketsuki Densetsu (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
+      }
+    ]
   },
   "Vampire Hunter D": {
     "id": "65338254311801a9d522c2d2ff9c0b1a41da421e",
@@ -61859,6 +62712,12 @@
           "en"
         ],
         "url": "http://psxdatacenter.com/manuals/Vanguard Bandits [SLUS-01070] (E).cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/epica-stella-manual-scan-jp-play-station-psx/Epica Stella (Manual)(Scan)(JP)(PlayStation)(PSX).pdf"
       }
     ],
     "merge": [
@@ -61882,6 +62741,12 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Vanishing Point (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/vanishing_manual/vanishing_manual.pdf"
       }
     ]
   },
@@ -62107,7 +62972,15 @@
     "genres": [
       "Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/viewpoint-playstation-us-manual/formats=JPEG&file=/viewpoint-playstation-us-manual.zip"
+      }
+    ]
   },
   "Vigilante 8": {
     "id": "de238284616debf730e0840861bc5452aa105c6d",
@@ -62764,6 +63637,14 @@
     "age_rating": "E",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ps-1-wai-wai-jansou-manual/PS1-Wai-Wai-Jansou-manual.pdf"
+      }
     ]
   },
   "Wai Wai Trump Taisen": {
@@ -63066,7 +63947,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPlaystationManuals/Warriors of Might and Magic (USA).pdf"
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Warriors of Might & Magic.pdf"
       }
     ]
   },
@@ -63329,6 +64210,14 @@
       "Quiz"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/millionaire2_manual/millionaire2_manual.pdf"
+      }
+    ],
     "alternates": {
       "Chi Vuol Essere Milionario - Seconda Edizione (Italy)": [
         "Chi Vuol Essere Milionario Seconda Edizione (Italy)"
@@ -63896,7 +64785,15 @@
     "genres": [
       "RPG"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-dimguil-original-bugged-manual-ps-1/Wizardry_Dimguil_Original_Bugged_Manual_PS1.pdf"
+      }
+    ]
   },
   "Wizardry - Llylgamyn Saga": {
     "id": "9257b98e9123161a339b5c15578bbea55bf78d5d",
@@ -63908,6 +64805,14 @@
       "RPG"
     ],
     "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-lllygamyn-saga-manual-ps-1/Wizardry_Lllygamyn_Saga_Manual_PS1.pdf"
+      }
+    ],
     "merge": [
       "SuperLite Gold Series - Wizardry - Llylgamyn Saga"
     ]
@@ -63988,7 +64893,15 @@
     "genres": [
       "Adventure / Action / Platformer"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wonder-trek-psx-manual/wonder-trek-psx-manual.pdf"
+      }
+    ]
   },
   "Woody Woodpecker Racing": {
     "id": "c21c6e2ab88c2ba91086316fd413bc92ae4ce719",
@@ -64312,6 +65225,14 @@
       "Action / RPG"
     ],
     "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/all-ps1-rpg-manuals/Torneko - The Last Hope.pdf"
+      }
+    ],
     "merge": [
       "Dragon Quest Characters - Torneko no Daibouken 2 - Fushigi no Dungeon"
     ]
@@ -64327,6 +65248,14 @@
       "Action / Racing / Shooter"
     ],
     "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/worlds-scariest-police-chases-ps1-manual/World's Scariest Police Chases Manual PDF.pdf"
+      }
+    ],
     "merge": [
       "Folles Poursuites"
     ]
@@ -65567,7 +66496,15 @@
     "genres": [
       "Action / Shooter"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/zanac-x-zanac-playstation-manual/formats=JPEG&file=/zanac-x-zanac-playstation-manual.zip"
+      }
+    ]
   },
   "Zap! Snowboarding Trix": {
     "id": "5175079ca92104822ceae7513dcd8a128583f7ae",

@@ -226,6 +226,17 @@
     "publisher": "Taito",
     "genres": [
       "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://drive.google.com/file/d/1k4yFanZLckm3-1nLD205bdsBPuYA0A4X/view",
+        "options": {
+          "format": "pdf"
+        }
+      }
     ]
   },
   "Densha de Go! 2": {
@@ -741,6 +752,17 @@
     "genres": [
       "Action"
     ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://drive.google.com/file/d/1gy5sTHUtfq7sE2zO1YVmtXQqxlCU_Lae/view",
+        "options": {
+          "format": "pdf"
+        }
+      }
+    ],
     "tags": [
       "English-Friendly"
     ]
@@ -1096,7 +1118,7 @@
         "languages": [
           "ja"
         ],
-        "url": "https://archive.org/download/rockmanfortemiraikaranochousenshawshiresscans/Rockman %26 Forte - Mirai Kara no Chousensha - Manual.pdf"
+        "url": "https://archive.org/download/rockmanfortemiraikaranochousenshawshiresscans/Rockman & Forte - Mirai Kara no Chousensha - Manual.pdf"
       }
     ],
     "tags": [
@@ -1700,7 +1722,15 @@
     ]
   },
   "WonderWitch": {
-    "id": "4ebe6a616749f0f5b7f58a50ce370db43623f112"
+    "id": "4ebe6a616749f0f5b7f58a50ce370db43623f112",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wonderwitch-manual/wwman2nd-20010218.pdf"
+      }
+    ]
   },
   "beat mania for WonderSwan": {
     "id": "17dec539d0284094aad1bee63bde82efd0a8713e",

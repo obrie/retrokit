@@ -502,6 +502,12 @@
           "en"
         ],
         "url": "https://segaretro.org/images/1/12/Battletoads_GG_US_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bd/Battletoads_GG_JP_Manual.pdf"
       }
     ]
   },
@@ -2043,6 +2049,14 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0b/GG_Aleste,_JP_Manual.pdf"
+      }
     ]
   },
   "GG Aleste 3": {
@@ -2055,6 +2069,14 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/22/GG_Aleste_3,_JP_Manual.pdf"
+      }
     ]
   },
   "GG Portrait - Pai Chen": {
@@ -4567,6 +4589,14 @@
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Vertical"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/58/GG_Aleste_II,_JP_Manual.pdf"
+      }
     ]
   },
   "Predator 2": {
@@ -4784,6 +4814,14 @@
     "publisher": "SEGA",
     "genres": [
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/puzzle-and-action-ichidant-r-gg-game-gear-manual/formats=JPEG&file=/puzzle-and-action-ichidant-r-gg-game-gear-manual.zip"
+      }
     ]
   },
   "Puzzle & Action - Tanto-R": {
@@ -6139,6 +6177,14 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/08/Super_Kick_Off_GG_PT_Manual.pdf"
+      }
     ]
   },
   "Super Momotarou Dentetsu III": {
@@ -7177,7 +7223,15 @@
     ]
   },
   "X-Terminator": {
-    "id": "b9cd29da45ade3930bed2dea1c0c54852e2587e6"
+    "id": "b9cd29da45ade3930bed2dea1c0c54852e2587e6",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/48/X-TerminatorGGManual.pdf"
+      }
+    ]
   },
   "Yogi Bear in Yogi Bear's Goldrush": {
     "id": "c647185112f6f4d057f44af2b1dd161683ce4148",

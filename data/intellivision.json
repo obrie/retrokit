@@ -488,7 +488,15 @@
     "players": 2,
     "year": 1990,
     "developer": "Realtime Associates",
-    "publisher": "Realtime Associates"
+    "publisher": "Realtime Associates",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/intv/deep_pockets.txt"
+      }
+    ]
   },
   "Defender": {
     "id": "9e1d00803aa3751d77b64f7b8bd39099909783c7",
@@ -1056,7 +1064,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/intv/league_light.txt"
+      }
+    ]
   },
   "Learning Fun I - Math Master, Factor Fun": {
     "id": "0146afcc4bcaab734638ddf630f1ade14e2cd12b",
@@ -1671,6 +1687,14 @@
     "publisher": "Activision",
     "genres": [
       "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/intv/robot_rubble.txt"
+      }
     ]
   },
   "Rocky & Bullwinckle": {

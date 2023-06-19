@@ -2634,7 +2634,15 @@
       "Sports",
       "Sports / Bowling"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/brunswick-pro-bowling-psp-manual/Brunswick Pro Bowling PSP Manual.pdf"
+      }
+    ]
   },
   "Bubble Bobble Evolution": {
     "id": "bd0e6bc067ed8883493d88252cef84ef5a94e265",
@@ -5193,7 +5201,15 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/downpanic_manual/downpanic_manual.pdf"
+      }
+    ]
   },
   "Dr. Maybee and the Adventures of Scarygirl": {
     "id": "532cc28f4a9a13ea48f7f36c51870d331e58fdf0",
@@ -6371,6 +6387,14 @@
       "Sports / Soccer"
     ],
     "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/fifa06_manual_202305/fifa06_manual.pdf"
+      }
+    ],
     "merge": [
       "FIFA Soccer 06"
     ]
@@ -6456,6 +6480,12 @@
         "languages": [
           "en"
         ],
+        "url": "https://archive.org/download/fifa10_manual/fifa10_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
         "url": "https://archive.org/download/SonyPSPManuals/FIFA Soccer 10 (USA).pdf"
       }
     ],
@@ -6479,6 +6509,12 @@
       {
         "languages": [
           "en"
+        ],
+        "url": "https://archive.org/download/fifa11_manual/fifa11_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/FIFA 11 (EUR).pdf"
       }
@@ -6562,6 +6598,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/fifastreet2_manual/fifastreet2_manual.pdf"
+      },
       {
         "languages": [
           "it"
@@ -6731,6 +6773,12 @@
     ],
     "age_rating": "12",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/fatprincess_manual/fatprincess_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -7713,6 +7761,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/hammerinhero_manual/hammerinhero_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "fr"
         ],
@@ -7940,7 +7994,15 @@
       "Various",
       "Various / Utilities"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/goexplore_manual/goexplore_manual.pdf"
+      }
+    ]
   },
   "God Eater": {
     "id": "602899d260a9216d060346c2b61a7489592cfa92",
@@ -8183,6 +8245,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/pinballgottlieb_manual/pinballgottlieb_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -8555,7 +8623,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "18"
+    "age_rating": "18",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/gun_manual/gun_manual.pdf"
+      }
+    ]
   },
   "Gundam Assault Survive": {
     "id": "6c76c67304b2aa54055e600cae90b1e9ad5adbc3",
@@ -8642,7 +8718,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/gunpey-psp-manual/Gunpey PSP Manual.pdf"
+      }
+    ]
   },
   "Gurumin - A Monstrous Adventure": {
     "id": "8f2263884ed5a85f93aef0ea76217201670e4657",
@@ -8780,7 +8864,15 @@
     "id": "fba3057def1c3e3a6a45ea2d71f3a9964c4ccedf"
   },
   "Hanaoni - Yume no Tsuzuki": {
-    "id": "323eede0211722c55ecb30425604d2d2a2509eb4"
+    "id": "323eede0211722c55ecb30425604d2d2a2509eb4",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/uljm-06048-hanaoni-yume-no-tsuzuki/ULJM-06048 - Hanaoni ~Yume no Tsuzuki~.pdf"
+      }
+    ]
   },
   "Hanayaka Nari, Wa ga Ichizoku": {
     "id": "a32c48e09dcf954842288c0b02911d1b2fc01ef3"
@@ -9297,6 +9389,14 @@
     "genres": [
       "Driving",
       "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/hot-wheels-ultimate-racing-psp-manual/Hot Wheels Ultimate Racing PSP Manual.pdf"
+      }
     ]
   },
   "Hotel Mogul": {
@@ -11512,6 +11612,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/locoroco2_manual/locoroco2_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -11735,6 +11841,14 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/mlb_manual/mlb_manual.pdf"
+      }
     ]
   },
   "MLB 06 - The Show": {
@@ -12378,6 +12492,24 @@
     ],
     "age_rating": "18",
     "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/manuals-for-manhunt/Manual_Manhunt2_PSP_German_ULUS00756.pdf"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manuals-for-manhunt/Manual_Manhunt2_PSP_English_ULES00756.pdf"
+      },
+      {
+        "languages": [
+          "it"
+        ],
+        "url": "https://archive.org/download/manuals-for-manhunt/Manual_Manhunt2_PSP_Italia.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -13027,7 +13159,15 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/microv4_manual/microv4_manual.pdf"
+      }
+    ]
   },
   "Midnight Club - L.A. Remix": {
     "id": "5173dd26053fa68b2837350ff7d7318a92f7a7ef",
@@ -13874,7 +14014,15 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nba06_manual_202305/nba06_manual.pdf"
+      }
+    ]
   },
   "NBA Live 07": {
     "id": "430d11cb5393b397f8d49d557fb59c5471fdb1cd",
@@ -13886,7 +14034,15 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nba07_manual_202305/nba07_manual.pdf"
+      }
+    ]
   },
   "NBA Live 08": {
     "id": "795761087cde76071bcc91b9bbd4cfe4225b4496",
@@ -13923,7 +14079,15 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nba09_manual/nba09_manual.pdf"
+      }
+    ]
   },
   "NBA Live 10": {
     "id": "602226d5b2c1feaf26a04818d7365ca53f975aee",
@@ -15324,6 +15488,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/patapon2_manual/patapon2_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -15870,6 +16040,14 @@
       "Strategy"
     ],
     "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/pixeljunk_manual/pixeljunk_manual.pdf"
+      }
+    ],
     "merge": [
       "PixelJunk Monsters UMD Limited Edition"
     ]
@@ -16215,6 +16393,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/prinny_manual/prinny_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -16627,6 +16811,14 @@
     "publisher": "SEGA",
     "genres": [
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/puyofever2psp/puyofever2psp.pdf"
+      }
     ]
   },
   "Puyo Puyo! Puyopuyo 15th Anniversary": {
@@ -17081,6 +17273,12 @@
           "en"
         ],
         "url": "https://archive.org/download/rengoku-ii/Rengoku II.pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/rengoku-ii-eu-manual/RengokuII_ULES00437_Manual.pdf"
       }
     ]
   },
@@ -18808,6 +19006,12 @@
     ],
     "age_rating": "16",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/soul-calibur-broken-destiny-psp-manual-eng-any-bookmarks/Soul Calibur - Broken Destiny PSP manual ENG (any bookmarks).pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -20741,6 +20945,14 @@
       "Sports"
     ],
     "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tiger07_manual/tiger07_manual.pdf"
+      }
+    ],
     "emulation": {
       "rating": 2
     }
@@ -20760,7 +20972,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Tiger Woods PGA Tour 08 (USA).pdf"
+        "url": "https://archive.org/download/tiger08_manual/tiger08_manual.pdf"
       }
     ]
   },
@@ -20778,7 +20990,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Tiger Woods PGA Tour 09 (USA).pdf"
+        "url": "https://archive.org/download/tiger09_manual/tiger09_manual.pdf"
       }
     ]
   },
@@ -22424,6 +22636,14 @@
       "Strategy"
     ],
     "age_rating": "12",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/lord2_manual/lord2_manual.pdf"
+      }
+    ],
     "merge": [
       "Yuusha no Kuse ni Namaikida or2"
     ]
@@ -22945,7 +23165,15 @@
     "genres": [
       "Strategy"
     ],
-    "age_rating": "7"
+    "age_rating": "7",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/worms2_manual/worms2_manual.pdf"
+      }
+    ]
   },
   "X-Men Legends II - Rise of Apocalypse": {
     "id": "c6767a88fc7282db2759d69d34d251388616e849",

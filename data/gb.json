@@ -161,7 +161,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://www.thegameisafootarcade.com/wp-content/uploads/2017/03/The-Addams-Family-Game-Manual.pdf"
+        "url": "https://archive.org/download/the-addams-family-ukv-manual/3.5 Manual Scan_jp2.zip"
       }
     ]
   },
@@ -1424,6 +1424,12 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyManuals/Battletoads (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/battletoads-gb-manual-jp/Battletoads_GB_Manual_JP.pdf"
       }
     ]
   },
@@ -3533,6 +3539,12 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyManuals/Donkey Kong Land (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/donkey-kong-land-game-boy-jp-600-dpi/Donkey Kong Land Game Boy JP 600DPI.pdf"
       }
     ]
   },
@@ -3870,6 +3882,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dr-mario-japan-manual/5.5 Game Manual.pdf"
+      },
+      {
+        "languages": [
           "en-ca",
           "fr"
         ],
@@ -4002,7 +4020,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "NOT RATED"
+    "age_rating": "NOT RATED",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/towerofdruagagbmanual/The Tower of Druaga Game Boy.pdf"
+      }
+    ]
   },
   "DuckTales": {
     "id": "669607ecacd58223d09fa7b3f76e3375a4214adb",
@@ -7614,6 +7640,12 @@
           "en"
         ],
         "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ZL-UKV_En_1.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/booklet_la_jp/booklet_la_jp.pdf"
       }
     ]
   },
@@ -7955,6 +7987,14 @@
     "publisher": "Tomy",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/magic-knight-rayearth-gb-manual/Magic Knight Rayearth GB Manual.pdf"
+      }
     ]
   },
   "Magic Knight Rayearth 2nd. - The Missing Colors": {
@@ -8126,7 +8166,15 @@
     "id": "611249fc5ec4f42f7936cbad436da132d9e76bde",
     "year": 1995,
     "developer": "Bandai Namco",
-    "publisher": "Bandai Namco"
+    "publisher": "Bandai Namco",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/marmaladeboy_sgb_manual/formats=PNG&file=/marmaladeboy_sgb_manual.zip"
+      }
+    ]
   },
   "Maru's Mission": {
     "id": "4ae4395016fefff4919ddb164ca1b03e31163961",
@@ -8712,6 +8760,14 @@
     "publisher": "Hudson",
     "genres": [
       "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/milonssecretcastlegameboymanual/milongb004.pdf"
+      }
     ]
   },
   "Miner 2049er Starring Bounty Bob": {
@@ -10002,6 +10058,12 @@
       "link_cable"
     ],
     "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/nintendo-world-cup/Nintendo World Cup.pdf"
+      },
       {
         "languages": [
           "fr",
@@ -14242,6 +14304,12 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/tetris_202303/Tetris.pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/gameboy/tetris (uk).pdf"
@@ -14690,7 +14758,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://www.thegameisafootarcade.com/wp-content/uploads/2017/04/Track-Meet-Game-Manual.pdf"
+        "url": "https://archive.org/download/trackmeet_us_gb_manual/trackmeet_us_gb_manual.pdf"
       }
     ]
   },
@@ -15216,6 +15284,14 @@
     ],
     "peripherals": [
       "link_cable"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/wwf-superstars/WWF Superstars.pdf"
+      }
     ]
   },
   "WWF Superstars 2": {

@@ -1245,7 +1245,15 @@
       "Action",
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/gb-max/file/manual-maxj.zip"
+      }
+    ]
   },
   "Bomberman Max - Red Challenger": {
     "id": "49216d233eda0268800bb702deb6ef68e3beae47",
@@ -1281,6 +1289,26 @@
     "age_rating": "E",
     "peripherals": [
       "link_cable"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/gb-q/file/manual-u.zip"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/gb-q/file/manual-e.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/gb-q/file/manual-j.zip"
+      }
     ]
   },
   "Bomberman Selection": {
@@ -2908,6 +2936,14 @@
     "genres": [
       "Action",
       "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/disneys-the-emperors-new-groove-game-boy-color-manual/Disney's The Emperors New Groove Game Boy Color Manual.pdf"
+      }
     ]
   },
   "Equestriad 2001": {
@@ -4289,7 +4325,15 @@
       "Action",
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Hoyle_Casino_GBC_Manual_cbz/Hoyle_Casino_GBC_Manual.cbz"
+      }
+    ]
   },
   "Hugo - Black Diamond Fever": {
     "id": "fe0d1de3e16d4142d6592ae6fd6562a4090992c8",
@@ -4885,6 +4929,14 @@
     ],
     "peripherals": [
       "link_cable"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/keitai-denjuu-telefang-speed-version-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Ken Griffey Jr.'s Slugfest": {
@@ -7731,6 +7783,12 @@
         "options": {
           "filter": "manual*"
         }
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/bomb/gb-p/file/manual-j.zip"
       }
     ]
   },
@@ -8364,6 +8422,20 @@
     ],
     "peripherals": [
       "link_cable"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/shr/puchi/gbcmanual-e.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://randomhoohaas.flyingomelette.com/shr/puchi/gbcmanual-j.zip"
+      }
     ]
   },
   "Pumuckls Abenteuer bei den Piraten": {
@@ -8752,7 +8824,15 @@
       "Action",
       "Puzzle-Game"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/areg_20220416/formats=JPEG&file=/areg_20220416.zip"
+      }
+    ]
   },
   "Return of the Ninja": {
     "id": "85c4d17ed5604acbf0b5a5e1b67930a8c8ff5907",
@@ -10032,7 +10112,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/ask_20220418/formats=JPEG&file=/ask_20220418.zip"
+      }
+    ]
   },
   "Street Fighter Alpha - Warriors' Dreams": {
     "id": "8d072eccebf6794cba3ad7200ba838fddf5ebaee",
@@ -10148,6 +10236,14 @@
     "publisher": "Konami",
     "genres": [
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/chou-gals-kotobuki-ran-2-gbc-manual/Chou Gals! Kotobuki Ran 2 GBC Manual.pdf"
+      }
     ]
   },
   "Super Mario Bros. Deluxe": {
@@ -10425,7 +10521,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Disneys_Tarzan_GBC_Manual_cbz/Disneys_Tarzan_GBC_Manual.cbz"
+      }
+    ]
   },
   "Tasmanian Devil - Munching Madness": {
     "id": "529fc9475646d61b4b72e73448e907d229cc8c38",
@@ -11621,6 +11725,14 @@
     "publisher": "Starfish",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-empire-manual-gbc/Wizardry_Empire_Manual_GBC.pdf"
+      }
     ]
   },
   "Wizardry Empire - Fukkatsu no Tsue": {
@@ -11630,6 +11742,14 @@
     "publisher": "Starfish",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-empire-fukkatsu-no-tsue-manual-gbc/Wizardry_Empire_Fukkatsu_no_Tsue_Manual_GBC.pdf"
+      }
     ]
   },
   "Wizardry I - Proving Grounds of the Mad Overlord": {
@@ -11640,6 +11760,14 @@
     "publisher": "Sir-tech",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-proving-grounds-of-the-mad-overlord-manual-gbc/Wizardry_Proving_Grounds_of_the_Mad_Overlord_Manual_GBC.pdf"
+      }
     ]
   },
   "Wizardry II - Llylgamyn no Isan": {
@@ -11650,6 +11778,14 @@
     "publisher": "ASCII Corporation",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-legacy-of-llylgamyn-manual-gbc/Wizardry_Legacy_of_Llylgamyn_Manual_GBC.pdf"
+      }
     ]
   },
   "Wizardry III - Diamond no Kishi": {
@@ -11659,6 +11795,14 @@
     "publisher": "ASCII Corporation",
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardry-knight-of-diamonds-manual-gbc/Wizardry_Knight_of_Diamonds_Manual_GBC.pdf"
+      }
     ]
   },
   "Woody Woodpecker": {

@@ -420,6 +420,12 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/armories-n-64-spielanleitung/Armories - N64 - Spielanleitung.pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/Nintendo64Manuals_201812/Armorines - Project S.W.A.R.M. (USA).pdf"
@@ -2638,6 +2644,15 @@
           "en"
         ],
         "url": "https://archive.org/download/flying-dragon-1998-ucolor/Flying-Dragon-1998Ucolor.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/hiryu-no-ken-twin-j-n64-hires-ozidual/formats=JPEG&file=/hiryu-no-ken-twin-j-n64-hires-ozidual.zip",
+        "options": {
+          "filter": "*Manual*"
+        }
       }
     ],
     "emulation": {
@@ -3876,6 +3891,12 @@
           "en"
         ],
         "url": "https://archive.org/download/Kirby_64_Manual/Kirby 64 manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/hoshi-no-kirby-64-j-n64-hires-manual-cart-ozidual/formats=JPEG&file=/hoshi-no-kirby-64-j-n64-hires-manual-cart-ozidual.zip"
       }
     ],
     "emulation": {
@@ -6181,6 +6202,15 @@
           "en"
         ],
         "url": "https://archive.org/download/Nintendo64GameManuals/Pilotwingsa.pdf"
+      },
+      {
+        "languages": [
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/pilotwings-64-manual/Pilotwings 64 - Manual.pdf"
       }
     ],
     "emulation": {
@@ -6224,6 +6254,12 @@
     ],
     "age_rating": "E",
     "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/pokemon-snap-der-offizielle-nintendo-spieleberater-n-64/Pokemon Snap - Der Offizielle Nintendo Spieleberater - N64.pdf"
+      },
       {
         "languages": [
           "en"
@@ -6453,6 +6489,14 @@
     "genres": [
       "Compilation",
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f3/Puyo-puyo-n-party-manual.pdf"
+      }
     ],
     "emulation": {
       "emulator": "lr-mupen64plus",
@@ -7605,6 +7649,12 @@
           "en"
         ],
         "url": "https://archive.org/download/Nintendo64Manuals_201812/Star Wars - Shadows of the Empire (USA) (Rev B).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/star-wars-shadows-of-the-empire-n-64-japanese/Star Wars - Shadows of the Empire (N64) [Japanese].pdf"
       }
     ],
     "emulation": {
@@ -8423,6 +8473,12 @@
     ],
     "age_rating": "M",
     "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/turok-nintendo-64-spielanleitung/Turok - Nintendo 64 - Spielanleitung.pdf"
+      },
       {
         "languages": [
           "en"

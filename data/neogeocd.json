@@ -215,7 +215,15 @@
     "rating": 1.0,
     "year": 1995,
     "developer": "Data East",
-    "publisher": "SNK"
+    "publisher": "SNK",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/flying-power-disc-jp/Flying Power Disc (JP).pdf"
+      }
+    ]
   },
   "Football Frenzy": {
     "id": "af67b4a8ecc184ad9f5bfc1f76ea94de07ff53ef",
@@ -445,7 +453,7 @@
     "manuals": [
       {
         "languages": [
-          "ja"
+          "en"
         ],
         "url": "https://archive.org/compress/l_20230216/formats=JPEG&file=/l_20230216.zip"
       },
