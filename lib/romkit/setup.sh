@@ -2,7 +2,7 @@
 
 all_depends() {
   depends
-  gamefile_depends
+  optional_depends
 }
 
 depends() {
