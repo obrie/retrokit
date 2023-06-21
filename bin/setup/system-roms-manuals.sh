@@ -437,7 +437,7 @@ __convert_file_to_pdf() {
     cp "$source_file" "$chromium_file"
     chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_file" "$chromium_file" 2>/dev/null
     rm "$chromium_file"
-  elif [[ "$extension" =~ ^(png|jpe?g|bmp|gif|tif)$ ]]; then
+  elif [[ "$extension" =~ ^(png|jpe?g|jp2|bmp|gif|tif)$ ]]; then
     # Sometimes images have corrupt exif data that causes img2pdf to fail.  In those
     # cases where we know this is the case, we'll rewrite the exif data so that it
     # can be properly parsed.
