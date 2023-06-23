@@ -387,7 +387,7 @@ __convert_to_pdf() {
 
     # Extract contents
     if [[ "$extension" =~ ^(zip|cbz)$ ]]; then
-      unzip -q -j "$source_file" -d "$extract_dir"
+      unzip -O utf8 -q -j "$source_file" -d "$extract_dir"
     elif [[ "$extension" =~ ^(7z|cb7)$ ]]; then
       7z e -y -o"$extract_dir/" "$source_file" >/dev/null
     else
