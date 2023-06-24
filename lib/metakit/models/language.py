@@ -38,4 +38,5 @@ class Language:
     'en-au',
     'en-ca',
     'en-gb',
+    'pt-br',
   ])
