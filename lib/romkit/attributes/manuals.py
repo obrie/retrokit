@@ -44,7 +44,7 @@ class ManualsAttribute(BaseAttribute):
         # English (prefer en-gb first since you're more likely to get multiple languages)
         'en-gb', 'en', 'en-au', 'en-ca',
         # Everything else
-        'ar', 'cs', 'da', 'de', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh'
+        'ar', 'cs', 'da', 'de', 'el', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'pt-br', 'ru', 'sk', 'sv', 'zh'
     ]
 
     def configure(self,

@@ -18,6 +18,7 @@ declare -A TESSERACT_LANGUAGES=(
   [cs]=ces
   [da]=dan
   [de]=deu
+  [el]=ell
   [en-au]=eng
   [en-ca]=eng
   [en-gb]=eng
@@ -32,7 +33,9 @@ declare -A TESSERACT_LANGUAGES=(
   [no]=nor
   [pl]=pol
   [pt]=por
+  [pt-br]=por
   [ru]=rus
+  [sk]=slk
   [sv]=swe
   [zh]=chi_sim
 )

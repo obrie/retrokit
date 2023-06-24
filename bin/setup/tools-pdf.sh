@@ -81,6 +81,7 @@ __depends_ocr() {
     tesseract-ocr-chi-sim \
     tesseract-ocr-dan \
     tesseract-ocr-deu \
+    tesseract-ocr-ell \
     tesseract-ocr-fin \
     tesseract-ocr-fra \
     tesseract-ocr-ita \
@@ -91,6 +92,7 @@ __depends_ocr() {
     tesseract-ocr-pol \
     tesseract-ocr-por \
     tesseract-ocr-rus \
+    tesseract-ocr-slk \
     tesseract-ocr-spa \
     tesseract-ocr-swe
 }
