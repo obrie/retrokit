@@ -3,6 +3,8 @@ from __future__ import annotations
 from metakit.attributes.base import BaseAttribute
 from metakit.models.language import Language
 
+from collections import defaultdict
+
 class ManualsAttribute(BaseAttribute):
     name = 'manuals'
 
@@ -21,6 +23,8 @@ class ManualsAttribute(BaseAttribute):
     def validate(self, value: List[dict]) -> List[str]:
         errors = []
 
+        languages_seen = defaultdict(set)
+
         for manual in value:
             if 'name' in manual and manual['name'] not in self.romkit.names and manual['name'] not in self.romkit.titles:
                 errors.append(f"manual name not found: {manual['name']}")
@@ -31,6 +35,12 @@ class ManualsAttribute(BaseAttribute):
             for language in manual['languages']:
                 if language not in Language.CODES:
                     errors.append(f"manual language not valid: {language}")
+
+            name = manual.get('name', None)
+            if frozenset(manual['languages']) in languages_seen[name]:
+                errors.append(f"manual conflict: {manual['languages']}")
+
+            languages_seen[name].add(frozenset(manual['languages']))
 
             if 'url' not in manual:
                 errors.append('manual url missing')
