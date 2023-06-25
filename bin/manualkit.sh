@@ -62,6 +62,10 @@ remote_sync_system_manuals() {
   # Upload sources reference
   ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
   ia upload "$archive_id" "$data_file.missing" --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
+
+  local manuals_count=$(cat "$data_file.sources" | wc -l)
+  local missing_count=$(cat "$data_file.missing" | wc -l)
+  echo "$system manuals ($manuals_count, missing: $missing_count)"
   if [ "$sources_only" == 'true' ]; then
     return
   fi
