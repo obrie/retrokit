@@ -73,13 +73,13 @@ class BaseAttribute:
     def migrate(self, from_group: str, to_group: str, value) -> None:
         pass
 
-    # Migrates the given metadata when moving from one group name to another
+    # Cleans the given metadata, removing any configurations deemed no longer necessary
     def clean_metadata(self, group: str, metadata: dict) -> None:
         value = self.value_from(group, metadata)
         if value:
             self.clean(group, value)
 
-    # Cleans the given attribute value when moving from one group name to another
+    # Cleans the given attribute, removing any configurations deemed no longer necessary
     def clean(self, group: str, value) -> None:
         pass
 

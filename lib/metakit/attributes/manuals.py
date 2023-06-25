@@ -78,3 +78,8 @@ class ManualsAttribute(BaseAttribute):
                 manual['options'] = self._sort_dict(manual['options'], self.OPTIONS_KEYS)
 
         return sorted(manuals, key=lambda manual: [manual.get('name', ''), len(manual['languages']), ','.join(manual['languages'])])
+
+    def clean(self, group: str, value: dict) -> None:
+        for manual in value:
+            if 'name' in manual and manual['name'] == group:
+                del manual['name']
