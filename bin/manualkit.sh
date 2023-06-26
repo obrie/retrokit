@@ -38,9 +38,9 @@ main() {
 remote_sync_system_manuals() {
   local system=$1
 
-  local sources_only='false'
   local install='true'
-  local upload='true'
+  local upload_sources='true'
+  local upload_manuals='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
@@ -59,34 +59,34 @@ remote_sync_system_manuals() {
   # Build the missing reference
   jq -r 'to_entries[] | select(.value.manuals == null and .value.group == null) | .key' "$data_file" > "$data_file.missing"
 
-  # Upload sources reference
-  ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
-  ia upload "$archive_id" "$data_file.missing" --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
-
   local manuals_count=$(cat "$data_file.sources" | wc -l)
   local missing_count=$(cat "$data_file.missing" | wc -l)
   echo "$system manuals ($manuals_count, missing: $missing_count)"
-  if [ "$sources_only" == 'true' ]; then
-    return
+  if [ "$upload_sources" == 'true' ]; then
+    # Upload sources reference
+    ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
+    ia upload "$archive_id" "$data_file.missing" --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
   fi
 
   # Download and process the manuals
-  if [ "$install" == 'false' ] || MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system; then
-    # Identify the post-processing base directory
-    local base_dir_template=$(setting '.manuals.paths.base')
-    local base_dir=$(render_template "$base_dir_template" system="$system")
-    local postprocess_file_template=$(setting '.manuals.paths.postprocess')
-    local postprocess_dir_template=$(dirname "$postprocess_file_template")
-    local postprocess_dir=$(render_template "$postprocess_dir_template" base="$base_dir" system="$system")
+  if [ "$install" == 'true' ]; then
+    MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system || return
+  fi
 
-    # Ensure the path actually exists and has files in it
-    if [ "$upload" == 'true' ] && [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
-      # Zip up the files and upload to internetarchive
-      local zip_file=$(mktemp -u -p "$tmp_ephemeral_dir")
-      zip -j -db -r "$zip_file" "$postprocess_dir"/*.pdf
-      ia upload "$archive_id" "$zip_file" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
-      rm "$zip_file"
-    fi
+  # Identify the post-processing base directory
+  local base_dir_template=$(setting '.manuals.paths.base')
+  local base_dir=$(render_template "$base_dir_template" system="$system")
+  local postprocess_file_template=$(setting '.manuals.paths.postprocess')
+  local postprocess_dir_template=$(dirname "$postprocess_file_template")
+  local postprocess_dir=$(render_template "$postprocess_dir_template" base="$base_dir" system="$system")
+
+  # Ensure the path actually exists and has files in it
+  if [ "$upload_manuals" == 'true' ] && [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
+    # Zip up the files and upload to internetarchive
+    local zip_file=$(mktemp -u -p "$tmp_ephemeral_dir")
+    zip -j -db -r "$zip_file" "$postprocess_dir"/*.pdf
+    ia upload "$archive_id" "$zip_file" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
+    rm "$zip_file"
   fi
 }
 
