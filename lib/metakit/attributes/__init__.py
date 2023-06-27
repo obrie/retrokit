@@ -1,5 +1,6 @@
 from metakit.attributes.base import BaseAttribute
 from metakit.attributes.age_rating import AgeRatingAttribute
+from metakit.attributes.aliases import AliasesAttribute
 from metakit.attributes.alternates import AlternatesAttribute
 from metakit.attributes.buttons import ButtonsAttribute
 from metakit.attributes.category import CategoryAttribute
@@ -49,4 +50,5 @@ __all_attributes__ = [
     TagsAttribute,
     AlternatesAttribute,
     MergeAttribute,
+    AliasesAttribute,
 ]

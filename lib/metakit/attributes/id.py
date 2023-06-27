@@ -4,6 +4,7 @@ from metakit.attributes.base import BaseAttribute
 
 class IdAttribute(BaseAttribute):
     name = 'id'
+    set_from_machine = True
 
     @property
     def required(self) -> bool:
@@ -12,3 +13,7 @@ class IdAttribute(BaseAttribute):
     def validate(self, value: str) -> List[str]:
         if not value or not isinstance(value, str):
             return [f'id not valid: {value}']
+
+    def get_from_machine(self, machine: Machine, grouped_machines: List[Machine]) -> Optional[str]:
+        if self.required:
+            return machine.id

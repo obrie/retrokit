@@ -6,7 +6,7 @@ class GroupAttribute(BaseAttribute):
     name = 'group'
     supports_overrides = False
 
-    def value_from(self, key, metadata) -> str:
+    def get(self, key, metadata) -> str:
         return metadata.get(self.name, key)
 
     def validate(self, value: str) -> List[str]:

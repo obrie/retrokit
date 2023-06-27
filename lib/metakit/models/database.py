@@ -108,15 +108,16 @@ class Database:
         self.update(to_key, source_metadata)
 
     # Updates the group identifiers used to help with migrations during date updates
-    def update_ids(self) -> None:
+    def update_metadata_from_romkit(self) -> None:
         self.romkit.load()
 
-        id_attribute = self.attribute('id')
-        if not id_attribute.required:
-            return
+        for attribute in self.attributes:
+            if not attribute.set_from_machine:
+                continue
 
-        for group, machine in self.romkit.resolved_group_to_machine.items():
-            self.dataset[group]['id'] = machine.id
+            for group, machine in self.romkit.resolved_group_to_machine.items():
+                metadata = self.dataset[group]
+                attribute.set(metadata, machine, self.romkit.find_machines_by_group(group))
 
     # Cleans up attribute values in the database based on the current DAT.
     # 

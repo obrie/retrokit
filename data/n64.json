@@ -201,7 +201,10 @@
     }
   },
   "Action Replay Pro 64": {
-    "id": "498aeb15cabe037a307c298d6d8a9d0d3747f4e0"
+    "id": "498aeb15cabe037a307c298d6d8a9d0d3747f4e0",
+    "aliases": [
+      "GameShark Pro"
+    ]
   },
   "AeroFighters Assault": {
     "id": "78f9860fd1c611130baaf31f8d10f59c59d892da",
@@ -227,7 +230,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Sonic Wings Assault"
+    ]
   },
   "AeroGauge": {
     "id": "ffeb32fa9ef452d5ad4c4b3a41a2f55862bd4a37",
@@ -302,7 +308,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Air Boarder 64"
+    ]
   },
   "All Star Tennis '99": {
     "id": "df0b74e221270a78b8adc5650ca5cc619f2cb27b",
@@ -327,7 +336,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "All Star Tennis 99"
+    ]
   },
   "All-Star Baseball 2000": {
     "id": "c76bbf6ee4915b4c24eb698192c035e9f87bfe89",
@@ -566,7 +578,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Super Speed Race 64"
+    ]
   },
   "Bakuretsu Muteki Bangaioh": {
     "id": "ab11e51ffa14fd7127166420371157106a2b461f",
@@ -624,7 +639,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Banjo to Kazooie no Daibouken"
+    ]
   },
   "Banjo-Tooie": {
     "id": "7063b1376eea2a75f4c87a8e4b59211c2a9a4202",
@@ -651,7 +669,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Banjo to Kazooie no Daibouken 2"
+    ]
   },
   "Bass Rush - ECOGEAR PowerWorm Championship": {
     "id": "601e882324709746ac981f0ae4b15510b1af443e",
@@ -715,7 +736,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Batman Beyond - Return of the Joker"
+    ]
   },
   "BattleTanx": {
     "id": "e06a3efd1ef979a46d5b5ccf8dfc5b13a82bcb9c",
@@ -817,6 +841,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "HSV Adventure Racing!"
     ]
   },
   "Big Mountain 2000": {
@@ -843,7 +870,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Snow Speeder"
+    ]
   },
   "Bio F.R.E.A.K.S.": {
     "id": "f39fa4ec12d2b868e71752eae19dd1b237c6e0e8",
@@ -894,7 +924,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Blastdozer"
+    ]
   },
   "Blues Brothers 2000": {
     "id": "f1c532e7a6036914cd09e901f3b38a3bf282c657",
@@ -986,6 +1019,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Baku Bomberman"
     ]
   },
   "Bomberman 64 - The Second Attack!": {
@@ -1020,7 +1056,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Baku Bomberman 2"
+    ]
   },
   "Bomberman Hero": {
     "id": "d34b699ee995fcdd2f653d1c1bc1c96e8326a510",
@@ -1054,7 +1093,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Bomberman Hero - Mirian Oujo o Sukue!"
+    ]
   },
   "Bottom of the 9th": {
     "id": "88b10e8480912cb893aa1d37adb915e09095db4a",
@@ -1206,7 +1248,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Bust-A-Move '99",
+      "Puzzle Bobble 64"
+    ]
   },
   "California Speed": {
     "id": "c8800979cf82ee93b268264e66cc3c103c5a1a2f",
@@ -1284,7 +1330,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Akumajou Dracula Mokushiroku - Real Action Adventure"
+    ]
   },
   "Castlevania - Legacy of Darkness": {
     "id": "d98e9d7546ff58e4763634f42cf1bf93132c98f8",
@@ -1310,7 +1359,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Akumajou Dracula Mokushiroku Gaiden - Legend of Cornell"
+    ]
   },
   "Centre Court Tennis": {
     "id": "db7c7676ef4589be6583a88f6fad0dc08fcf00d6",
@@ -1326,7 +1378,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Let's Smash"
+    ]
   },
   "Chameleon Twist": {
     "id": "4f018fae01bed221e8b9d5c1e30fd8f74f6b598f",
@@ -1428,7 +1483,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Wild Choppers"
+    ]
   },
   "Choro Q 64 2 - Hacha Mecha Grand Prix Race": {
     "id": "9b897f7ce02fe5c57fd2738324b7635f209301b5",
@@ -1679,7 +1737,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Zuhe Jiqiren"
+    ]
   },
   "Custom Robo V2": {
     "id": "b918b0cedfec9927e2e1ba8698f6393893db1967",
@@ -1747,7 +1808,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Duck Dodgers Starring Daffy Duck"
+    ]
   },
   "Dance Dance Revolution - Disney Dancing Museum": {
     "id": "9360f35c4359aced3a2f84df3bad34cdcbef8819",
@@ -1790,7 +1854,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Space Dynamites"
+    ]
   },
   "Densha de Go! 64": {
     "id": "a34d260865c21b16f09b8ea61c47c45294e0984f",
@@ -1938,6 +2005,9 @@
         ],
         "url": "https://archive.org/download/disneys-donald-duck-goin-quckers/Disneys-Donald-Duck-Goin-Quckers.pdf"
       }
+    ],
+    "aliases": [
+      "Donald Duck - Goin' Quackers"
     ]
   },
   "Donkey Kong 64": {
@@ -2066,7 +2136,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Dongwu Senlin"
+    ]
   },
   "Dr. Mario 64": {
     "id": "8ca1f0a1cb2cd45493651f9a548102cc191f9feb",
@@ -2090,7 +2163,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Mario Yisheng"
+    ]
   },
   "Dragon Sword 64": {
     "id": "56e1954d8f07295f108fa05a67713c6a89a2acad",
@@ -2280,6 +2356,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Yueye Motuo"
     ]
   },
   "Extreme-G": {
@@ -2403,6 +2482,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "F-Zero X - Weilai Saiche"
     ]
   },
   "F-Zero X - Weilai Saiche": {
@@ -2441,7 +2523,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Human Grand Prix - The New Generation"
+    ]
   },
   "F1 Racing Championship": {
     "id": "c1ed3542159c2786710da7682929667d6b415cf8",
@@ -2483,7 +2568,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 3
-    }
+    },
+    "aliases": [
+      "FIFA - Road to World Cup 98 - World Cup e no Michi"
+    ]
   },
   "FIFA 64": {
     "id": "7053a9304bac194f117eb2ceb99e21ae06cf8831",
@@ -2509,7 +2597,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "FIFA Soccer 64"
+    ]
   },
   "FIFA 99": {
     "id": "bbe1d2701c05c1958593c53555fcfe297bbf7e76",
@@ -2574,7 +2665,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Kakutou Denshou - F-Cup Maniax"
+    ]
   },
   "Fighters Destiny": {
     "id": "2bb62bf496d0a8a1393012b52fa7e126ec016fcf",
@@ -2599,7 +2693,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Fighting Cup"
+    ]
   },
   "Fighting Force 64": {
     "id": "d06fa84ff12a342a7d5a2d944398a808e5b2adf7",
@@ -2658,7 +2755,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Hiryuu no Ken Twin"
+    ]
   },
   "Forsaken": {
     "id": "a607042eb1866a66f853c89b2efa9e5d1d18eedf",
@@ -2684,7 +2784,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Forsaken 64"
+    ]
   },
   "Fox Sports College Hoops '99": {
     "id": "8d4cbbd8e531613c6b72d0076f042fcbd9a64a97",
@@ -2767,7 +2870,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Deadly Arts"
+    ]
   },
   "GT 64 - Championship Edition": {
     "id": "97087c014ca1b67c3dbb0244b235cad5457338d2",
@@ -2792,7 +2898,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "City-Tour GP - Zen-Nihon GT Senshuken"
+    ]
   },
   "GameBooster 64": {
     "id": "4b16cdb63fcf5547f09dd18d3e49ed6a40c27098"
@@ -2915,7 +3024,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Whack 'n' Roll"
+    ]
   },
   "Glover 2": {
     "id": "b92e6a075636532b4185fc49735c7a445c982ce5",
@@ -3059,7 +3171,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Bokujou Monogatari 2"
+    ]
   },
   "Heiwa Pachinko World 64": {
     "id": "b839ef9e7a832d2197d67ef78a4398edfc6a6939",
@@ -3146,6 +3261,9 @@
         ],
         "url": "https://archive.org/download/Nintendo64Manuals_201812/Hey You, Pikachu! (USA).pdf"
       }
+    ],
+    "aliases": [
+      "Pikachuu Genki de Chuu"
     ]
   },
   "Holy Magic Century": {
@@ -3170,7 +3288,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Eltale Monsters",
+      "Quest 64"
+    ]
   },
   "Hot Wheels - Turbo Racing": {
     "id": "007a8829ebb3dbe1987ae5d413f9306c767c2661",
@@ -3289,7 +3411,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Iggy-kun no Bura Bura Poyon"
+    ]
   },
   "In-Fisherman - Bass Hunter 64": {
     "id": "1b4ff8622c2494b6b6a0b5a8e288538b7c4e13e8",
@@ -3390,7 +3515,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Jikkyou World Soccer - World Cup France '98"
+    ]
   },
   "International Superstar Soccer 2000": {
     "id": "019c2f865dc44ac9646247c3cbaa810e96520b84",
@@ -3415,7 +3543,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Jikkyou J.League 1999 - Perfect Striker 2"
+    ]
   },
   "International Superstar Soccer 64": {
     "id": "2f118eeb208df2f0a0767cfb2f2c95e49f448365",
@@ -3440,7 +3571,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Jikkyou World Soccer 3",
+      "Ronaldinho's Soccer 64"
+    ]
   },
   "International Track & Field - Summer Games": {
     "id": "108007b679e4fc5e4afe62d436a8045b8930fb43",
@@ -3465,7 +3600,11 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Ganbare! Nippon! Olympics 2000",
+      "International Track & Field 2000"
+    ]
   },
   "Itoi Shigesato no Bass Tsuri No. 1 Kettei Ban!": {
     "id": "e898189328e8dc22477e6cdd9584db385d4f0d77",
@@ -3649,6 +3788,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Star Twins"
     ]
   },
   "Jikkyou G1 Stable": {
@@ -3905,6 +4047,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Hoshi no Kirby 64"
     ]
   },
   "Knife Edge - Nose Gunner": {
@@ -4043,7 +4188,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Zelda no Densetsu - Mujura no Kamen"
+    ]
   },
   "Legend of Zelda, The - Ocarina of Time": {
     "id": "66abac7ad1b553506ebb37ed6da3215e1039a58e",
@@ -4067,7 +4215,12 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Zelda Chuanshuo Shiguang Zhi Di",
+      "Zelda no Densetsu - Toki no Ocarina",
+      "Zelda no Densetsu - Toki no Ocarina GC"
+    ]
   },
   "Legend of Zelda, The - Ocarina of Time - Master Quest": {
     "id": "375388826ced0548cc40205e14fa24e4d9a1a2a5",
@@ -4082,7 +4235,10 @@
       "Adventure",
       "Role playing games"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "aliases": [
+      "Zelda no Densetsu - Toki no Ocarina GC Ura"
+    ]
   },
   "Lode Runner 3-D": {
     "id": "b5f2bc68fd35f3b3a582dce301353ad6419885a5",
@@ -4131,7 +4287,12 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Lylat Wars",
+      "Star Fox 64",
+      "Xingji Huohu"
+    ]
   },
   "MRC - Multi-Racing Championship": {
     "id": "b9fb55d8111d754dbd3bf88732774007a5ac1d4d",
@@ -4329,7 +4490,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Defi au Tetris Magique",
+      "Magical Tetris Challenge featuring Mickey"
+    ]
   },
   "Mahjong 64": {
     "id": "81847aca5481941c4f7bde5f19cf216c3e94f273",
@@ -4432,6 +4597,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Mario Golf 64"
     ]
   },
   "Mario Kadingche": {
@@ -4475,6 +4643,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Mario Kadingche"
     ]
   },
   "Mario Party": {
@@ -4589,6 +4760,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Mario Tennis 64"
     ]
   },
   "Mario Yisheng": {
@@ -4640,7 +4814,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Rockman Dash - Hagane no Boukenshin"
+    ]
   },
   "Michael Owen's WLS 2000": {
     "id": "21e24922af93903b28052766ff04c4b8dde1d37f",
@@ -4665,7 +4842,12 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Mia Hamm Soccer 64",
+      "RTL World League Soccer 2000",
+      "Telefoot Soccer 2000"
+    ]
   },
   "Mickey's Speedway USA": {
     "id": "509f30624a8b59679066742bca86b9c45b5ae233",
@@ -4690,7 +4872,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Mickey no Racing Challenge USA"
+    ]
   },
   "Micro Machines 64 Turbo": {
     "id": "435604da44716acf31292aac96f7009d9de9ff15",
@@ -4805,7 +4990,10 @@
       "Driving",
       "Race"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "aliases": [
+      "Tamiya Racing 64"
+    ]
   },
   "Mischief Makers": {
     "id": "e6237cf4e1ac04015d1d24cc0aa05c36742a7316",
@@ -4830,7 +5018,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Yuke Yuke!! Trouble Makers"
+    ]
   },
   "Mission - Impossible": {
     "id": "8eb88f12a678625b7f48f03109888df55a328b96",
@@ -4881,7 +5072,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Monaco Grand Prix",
+      "Racing Simulation 2"
+    ]
   },
   "Monopoly": {
     "id": "d8dc5f3491a5d0c83a69a88c4ebd7cc9b7ea89b7",
@@ -5069,7 +5264,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Ganbare Goemon - Dero Dero Douchuu Obake Tenkomori",
+      "Goemon's Great Adventure"
+    ]
   },
   "Mystical Ninja Starring Goemon": {
     "id": "43ab212c63ca7b88494e3413beb33c0878405b80",
@@ -5096,7 +5295,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Ganbare Goemon - Neo Momoyama Bakufu no Odori"
+    ]
   },
   "NASCAR 2000": {
     "id": "182f22cb36b2d190a62ed7d32e0639a73be39712",
@@ -5320,7 +5522,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "NBA in the Zone '98"
+    ]
   },
   "NBA Pro 99": {
     "id": "5f160c763fa4854d86dfab4877145858e6f3f494",
@@ -5345,7 +5550,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "NBA in the Zone '99",
+      "NBA in the Zone 2"
+    ]
   },
   "NBA Showtime - NBA on NBC": {
     "id": "2de41414e69b81ca4792e977d28f86a0dfb4f955",
@@ -5695,7 +5904,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "NHL Blades of Steel '99"
+    ]
   },
   "Nagano Winter Olympics '98": {
     "id": "d9959aaf9b7903470e606fd287c6422ebc7aa107",
@@ -5719,7 +5931,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Hyper Olympics in Nagano 64"
+    ]
   },
   "Namco Museum 64": {
     "id": "8bc3abcbe39dfcaab95d13c0b50defa2765be449",
@@ -6007,7 +6222,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "WinBack",
+      "WinBack - Covert Operations"
+    ]
   },
   "PD Ultraman Battle Collection 64": {
     "id": "78bad6bc6755fae29121e89f0eafbf934d32f4bf",
@@ -6047,7 +6266,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "PGA European Tour"
+    ]
   },
   "Pachinko 365 Nichi": {
     "id": "8286fee99eead60ffb83c50e21b01f8c4e118692",
@@ -6086,7 +6308,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Mario Story",
+      "Zhi Pian Mario"
+    ]
   },
   "Paperboy": {
     "id": "df7c47f77121f818497fa4caddb694461d8296d6",
@@ -6153,7 +6379,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Choro Q 64"
+    ]
   },
   "Perfect Dark": {
     "id": "4c3a919ecc3d6be207adb9354bd92a9f491e0268",
@@ -6270,7 +6499,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Pokemon Snap Station"
+    ]
   },
   "Pokemon Stadium": {
     "id": "40097c6b7dcd4d66cbdf0797a44e9e6547121540",
@@ -6295,7 +6527,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Pokemon Stadium 2"
+    ]
   },
   "Pokemon Stadium 2": {
     "id": "9dec855fb2bcb88057e9f2f436c0eccdff76f071",
@@ -6320,7 +6555,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Pokemon Stadium Kin Gin"
+    ]
   },
   "Polaris SnoCross": {
     "id": "5e8314588c3d9998c853b56c1fd387125ceecacd",
@@ -6619,7 +6857,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Rally '99"
+    ]
   },
   "Rampage - World Tour": {
     "id": "9a5d26dc9bc452dd85ded39583d5177bea7db5cf",
@@ -6692,7 +6933,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Rat Attack!"
+    ]
   },
   "Rayman 2 - The Great Escape": {
     "id": "b36995ffb0469503746a544a73bd9906466c29fd",
@@ -6857,7 +7101,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Biohazard 2"
+    ]
   },
   "Road Rash 64": {
     "id": "9e249cfddb240520bc81e1a595e10dac59703f20",
@@ -7008,7 +7255,12 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Razmoket, Les - La Chasse aux Tresors",
+      "Rugrats - Die grosse Schatzsuche",
+      "Rugrats - Scavenger Hunt"
+    ]
   },
   "Rugrats in Paris - The Movie": {
     "id": "135ba4027c4926aa7073c6d4e70c21438c88bfe6",
@@ -7396,7 +7648,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Snobo Kids"
+    ]
   },
   "Snowboard Kids 2": {
     "id": "b00c932823984ab608b9eac4751b2b8ff0686a68",
@@ -7423,7 +7678,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Chou Snobo Kids"
+    ]
   },
   "South Park": {
     "id": "e18db804d43dcaa8729417b4ea9ffcde2096e580",
@@ -7629,7 +7887,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Star Wars - Shutsugeki! Rogue Chuutai"
+    ]
   },
   "Star Wars - Shadows of the Empire": {
     "id": "3a0f7c5446ff1f71fb2f896e379bd59104ea92a2",
@@ -7660,7 +7921,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Star Wars - Teikoku no Kage"
+    ]
   },
   "Star Wars Episode I - Battle for Naboo": {
     "id": "ea7a4aea145e2b98d049d1f6c6b4ea89578276d2",
@@ -7847,7 +8111,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Shen You Mario"
+    ]
   },
   "Super Robot Spirits": {
     "id": "43a8a8dd7ee601084ff3e508eb99a53e333f37cc",
@@ -7907,6 +8174,10 @@
     },
     "tags": [
       "Party"
+    ],
+    "aliases": [
+      "Nintendo All-Star! Dairantou Smash Brothers",
+      "Rentiantang Mingxing - Daluan Dou"
     ]
   },
   "Supercross 2000": {
@@ -7960,7 +8231,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 4
-    }
+    },
+    "aliases": [
+      "Superman - The New Superman Aventures"
+    ]
   },
   "Susume! Taisen Puzzle Dama - Toukon! Marutama Chou": {
     "id": "6f0ffe480790d4a4b6b507d273f4f1d23d558feb",
@@ -8254,7 +8528,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Tony Hawk's Pro Skater"
+    ]
   },
   "Toon Panic": {
     "id": "fe39e2bcb277631c184fdf8f1d0f00265dc061a0",
@@ -8290,7 +8567,10 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64",
       "rating": 1
-    }
+    },
+    "aliases": [
+      "Top Gear Hyper-Bike"
+    ]
   },
   "Top Gear Overdrive": {
     "id": "a643047f05f3c2942f4eb62026a40add7d59c4b7",
@@ -8365,7 +8645,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "TG Rally 2"
+    ]
   },
   "Toy Story 2 - Buzz Lightyear to the Rescue!": {
     "id": "0379f4d431d20e5a67e393e2eb767fc3d1cd960e",
@@ -8389,7 +8672,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Toy Story 2 - Buzz l'Eclair a la Rescousse!",
+      "Toy Story 2 - Captain Buzz Lightyear auf Rettungsmission!"
+    ]
   },
   "Transformers - Beast Wars Transmetals": {
     "id": "3b642abd22d5c985b011adebf17a2253e20b5cd6",
@@ -8413,7 +8700,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Transformers - Beast Wars Metals 64"
+    ]
   },
   "Triple Play 2000": {
     "id": "d51a3f952207f37ec894716826d0cc7da96279ca",
@@ -8457,7 +8747,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Zui Yu Fa Diqiu De Jicheng Zhe"
+    ]
   },
   "Turok - Dinosaur Hunter": {
     "id": "f9a9becab53f39c6adef93f12d673ca1354553b4",
@@ -8489,7 +8782,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Jikuu Senshi Turok"
+    ]
   },
   "Turok - Rage Wars": {
     "id": "d0c77761d31a9572878a3d4fb157e4c3aa441bf0",
@@ -8515,7 +8811,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Turok - Legenden des Verlorenen Landes"
+    ]
   },
   "Turok 2 - Seeds of Evil": {
     "id": "19ce2d68024bd84b71c3aae154ffedc77e84b211",
@@ -8541,7 +8840,10 @@
     "emulation": {
       "emulator": "mupen64plus-gles2rice",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Violence Killer - Turok New Generation"
+    ]
   },
   "Turok 3 - Shadow of Oblivion": {
     "id": "8397064b3b09b3fda9deb9705abfb25909d8a7f1",
@@ -8588,7 +8890,11 @@
     "emulation": {
       "emulator": "mupen64plus-GLideN64-highres",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "King Hill 64 - Extreme Snowboarding",
+      "Twisted Edge - Extreme Snowboarding"
+    ]
   },
   "Utchan Nanchan no Hono no Challenger - Denryuu Ira Ira Bou": {
     "id": "b7b2cb8ff6787a60302ff2ebd450c83a65ec5c6d",
@@ -9072,7 +9378,10 @@
     "emulation": {
       "emulator": "lr-mupen64plus-next",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Shuishang Motuo"
+    ]
   },
   "Wayne Gretzky's 3D Hockey": {
     "id": "11165d55e08890029d5330926b0f6f1cb844e3ed",
@@ -9401,7 +9710,11 @@
     "emulation": {
       "emulator": "lr-mupen64plus",
       "rating": 5
-    }
+    },
+    "aliases": [
+      "Yaoxi Gushi",
+      "Yoshi Story"
+    ]
   },
   "Yueye Motuo": {
     "id": "8749059cbe8fd092e071e6238e9356b60d6ef0f0",

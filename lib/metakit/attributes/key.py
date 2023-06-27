@@ -23,7 +23,7 @@ class KeyAttribute(BaseAttribute):
         '.emulationstation/downloaded_media/*/manuals/.*/{group} (*'
     ]
 
-    def value_from(self, key, entry):
+    def get(self, key, entry):
         return key
 
     def validate(self, value: str) -> List[str]:

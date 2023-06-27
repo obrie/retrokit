@@ -108,4 +108,4 @@ class BaseSystem:
     # Updates the metadata for games associated with this system
     def update_metadata(self) -> None:
         self.scraper.update_metadata()
-        self.database.update_ids()
+        self.database.update_metadata_from_romkit()
