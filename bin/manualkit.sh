@@ -8,6 +8,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 remote_sync_system_manuals <system|all>"
+  echo " $0 remote_sync_manuals_description <date>"
   exit 1
 }
 
@@ -88,6 +89,59 @@ remote_sync_system_manuals() {
     ia upload "$archive_id" "$zip_file" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
     rm "$zip_file"
   fi
+}
+
+remote_sync_manuals_description() {
+  local updated_at=${1:-$(date +'%Y-%m-%d')}
+
+  local archive_id=$(setting '.manuals.archive.id')
+
+  # Build counts for each system
+  local counts=()
+  while read system; do
+    echo "Checking manual count for $system..."
+
+    local data_file=$(mktemp -p "$tmp_ephemeral_dir")
+    json_merge "{data_dir}/$system.json" "$data_file" backup=false >/dev/null
+
+    local found_count=$(jq -r 'to_entries[] | select(.value.manuals) | .value.manuals[] | .url' "$data_file" | wc -l)
+    local missing_count=$(jq -r 'to_entries[] | select(.value.manuals == null and .value.group == null) | .key' "$data_file" | wc -l)
+
+    counts+=("\"$system\": {\"found_count\": $found_count, \"missing_count\": $missing_count}")
+  done < <(setting '.systems[]' | grep -Ev "mess|gameandwatch")
+
+  # Builds counts for mess systems
+  declare -A mess_systems=(
+    [gameandwatch]='Game & Watch'
+    [tiger]='Tiger Electronics LCD'
+  )
+  local mess_data_file=$(mktemp -p "$tmp_ephemeral_dir")
+  json_merge '{data_dir}/mess.json' "$mess_data_file" backup=false >/dev/null
+  for system in "${!mess_systems[@]}"; do
+    echo "Checking manual count for $system..."
+
+    local tag=${mess_systems[$system]}
+
+    local jq_filter="[to_entries[] | select(.value.tags | index(\"$tag\")) | .key] as \$keys | to_entries[] | (.value.group // .key) as \$group | select(\$keys | index(\$group))"
+    local found_count=$(jq -r "$jq_filter | select(.value.manuals) | .value.manuals[] | .url" "$mess_data_file" | wc -l)
+    local missing_count=$(jq -r "$jq_filter | select(.value.manuals == null and .value.group == null) | .key" "$mess_data_file" | wc -l)
+
+    counts+=("\"$system\": {\"found_count\": $found_count, \"missing_count\": $missing_count}")
+  done
+
+  # Generate merged metadata file
+  local json_metadata_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
+  cp "$docs_dir/manuals.json" "$json_metadata_file"
+
+  local json_updates_file=$(mktemp -p "$tmp_ephemeral_dir")
+  echo "{\"updated_at\": \"$updated_at\", \"systems\":{$(IFS=, ; echo "${counts[*]}")}}" > "$json_updates_file"
+  json_merge "$json_updates_file" "$json_metadata_file" >/dev/null
+
+  # Generate html description
+  local description=$(jinja2 "$docs_dir/manuals.html.jinja" "$json_metadata_file")
+
+  # Synchronize it to the archive
+  ia metadata "$archive_id" --modify="description:$description"
 }
 
 if [[ $# -lt 1 ]]; then

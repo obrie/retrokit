@@ -1,0 +1,143 @@
+<p><strong>Last Updated: {{updated_at}}</strong></p>
+<p><strong>Overview</strong></p>
+<p>
+This is a library of retro gaming manuals sourced from a variety of websites and processed for optimal viewing.  These manuals have been:
+</p>
+<ul>
+  <li>Converted into a consistent PDF format</li>
+  <li>Auto-rotated, when appropriate</li>
+  <li>OCR'd</li>
+  <li>Cleaned</li>
+  <li>Named according to no-intro and redump DATs (using the parent, non-clone title + languages)</li>
+</ul>
+<p>
+Every manual has been:
+</p>
+<ul>
+  <li>Inspected for quality to archive the highest-quality manual available (up to 600dpi)</li>
+  <li>Inspected for the list of languages available within it</li>
+</ul>
+<p>
+This library is primarily used for the <a href="https://github.com/obrie/retrokit" rel="nofollow">retrokit</a> project, but is additionally meant as a means to track retro gaming manuals, where they're sourced from, and have a central community-managed source for them.
+</p>
+
+<p><strong>Links</strong></p>
+<p>Manuals are available for the following systems:</p>
+<ul>
+{% for name, system in systems.items() %}
+  <li>
+    {{system.title}}
+    [<a href="https://archive.org/download/retrokit-manuals/{{system.collection or name}}/{{system.collection or name}}-original.zip/" rel="nofollow">original</a>]
+    [<a href="https://archive.org/download/retrokit-manuals/{{system.collection or name}}/{{system.collection or name}}-compressed.zip/" rel="nofollow">compressed</a>]
+    [<a href="https://archive.org/download/retrokit-manuals/{{system.collection or name}}/{{system.collection or name}}-sources.tsv" rel="nofollow">sources</a>]
+    [<a href="https://archive.org/download/retrokit-manuals/{{system.collection or name}}/{{system.collection or name}}-missing.tsv" rel="nofollow">missing</a>]
+    (<strong>{{system.found_count}}</strong>, missing: {{system.missing_count}})
+  </li>
+{% endfor %}
+</ul>
+
+<p><strong>Sources</strong></p>
+<p>
+The specific website used to source manuals largely depends on the system and the community based around it. Manuals often exist on many different websites and in different forms.
+</p>
+<p>
+In general, the following priorities are used when determining which source to use:
+</p>
+<ol>
+  <li><b>Quality</b>: Higher quality &gt; lower quality</li>
+  <li><b>Resolution</b>: Higher resolution &gt; lower resolution</li>
+  <li><b>Color</b>: Color &gt; Black and White</li>
+  <li><b>Watermark</b>: Non-watermarked manuals &gt; watermarked manuals</li>
+  <li><b>Language</b>: Single language &gt; multi-language (unless it's just truncated)</li>
+  <li><b>Archives</b>: Archive.org sources &gt; other sources</li>
+  <li><b>Ownership</b>: Community-owned websites &gt; individually-owned websites</li>
+</ol>
+<p>
+As you can see, there are a large number of considerations to keep in mind when identifying the appropriate source for each individual manual.
+</p>
+
+<p><strong>Source formats</strong></p>
+<p>
+The following source formats are currently supported when converting to PDF:
+</p>
+<ul>
+  <li>pdf</li>
+  <li>cbz / zip</li>
+  <li>cb7 / 7z</li>
+  <li>cbr / rar</li>
+  <li>html</li>
+  <li>txt</li>
+  <li>doc / docx / wri / rtf</li>
+  <li>jpg / jpeg / png / gif / bmp / tiff</li>
+</ul>
+<p>
+Once downloaded, these formats will all be converted into PDF, maintaining the quality of the original manual when possible.
+</p>
+
+<p><strong>Archives</strong></p>
+<p>There are 2 archives available for every system:</p>
+<ul>
+   <li><strong>original</strong> - The highest, original quality PDF format available based on the identified source</li>
+   <li><strong>compressed</strong> - A highly-optimized, compressed version of the PDF based on a number of factors</li>
+</ul>
+<p>
+  In general, the compressed format is meant to be readable on a resolution up to 1920x1440. The compression effectively:
+</p>
+<ul>
+   <li>Resizes manuals to be no larger than 1920x1440</li>
+   <li>Uses high JPEG compression for large resolutions</li>
+   <li>Uses low JPEG compression for low resolutions</li>
+   <li>Converts jpx/jbig2/uncompressed images to jpeg for rendering performance</li>
+   <li>Converts ICC color profiles to RGB for rendering performance</li>
+</ul>
+<p>
+Note that, for some manuals, the "compressed" file may be larger than the original.  This is due to the conversion of jpx/jbig2 images to jpeg images for the purposes of rendering performance.
+</p>
+
+<p><strong>Sources</strong></p>
+<p>
+This archive was created entirely programmatically based on the source TSV files for each system. You can view the relevant code that processes these manuals in the retrokit project: <a href="https://github.com/obrie/retrokit/blob/main/bin/setup/system-roms-manuals.sh" rel="nofollow">https://github.com/obrie/retrokit/blob/main/bin/setup/system-roms-manuals.sh</a>
+</p>
+
+<p><strong>Arcade Manuals</strong></p>
+<p>
+As far as I've been able to find, there doesn't exist any form of player instruction manuals for arcade games.  You can attempt to cut out instructions from bezel artwork, but that's a very time consuming process that I haven't undertaken.  There *do* exist owner manuals for the arcade cabinets themselves, but that's not helpful to most players.
+</p>
+<p></p>
+<p>
+As an alternative, I've built manuals based on several sources:
+</p>
+<ul>
+  <li>Cabinets from <a href="https://www.progettosnaps.net/cabinets/" rel="nofollow">progrettosnaps</a></li>
+  <li>Flyers from <a href="https://www.progettosnaps.net/flyers/" rel="nofollow">progrettosnaps</a></li>
+  <li>Select artwork from <a href="https://www.progettosnaps.net/artworks/" rel="nofollow">progrettosnaps</a></li>
+  <li>Game initialization data from <a href="https://www.progettosnaps.net/gameinit/" rel="nofollow">progrettosnaps</a></li>
+</ul>
+<p>
+The generated manuals aren't perfect, but I felt having some form of instructions was better
+than nothing.
+</p>
+<p>
+If anyone has better sources or wants to build better manuals, I'd fully support that effort.
+</p>
+
+<p><strong>FAQ</strong></p>
+<p><em>How can I contribute a missing / better manual or missing system?</em></p>
+<p>
+  I'm happy to take the help! Please either contact me through archive.org or over at the <a href="https://github.com/obrie/retrokit" rel="nofollow">retrokit</a> project.
+</p>
+<p><em>How often is this archive updated?</em></p>
+<p>This archive will be updated approximately once a quarter as new manuals are added / updated.</p>
+<p><em>How is this any different from [insert website here]?</em></p>
+<p>I love that there are so many sources available and people who have organized retro gaming manuals.  My hope is to add some additional value:</p>
+<ul>
+   <li>Pull the highest quality manuals from multiple websites</li>
+   <li>OCR, optimize, and distribute in a single, consistent format</li>
+   <li>Identify specific languages available in each manual</li>
+   <li>Name based on community DAT standards (no-intro, redump, exodos)</li>
+   <li>Distribute for historical, achiving purposes (not commercial purposes)</li>
+</ul>
+<p><em>How do I request a manual to be removed?</em></p>
+<p>Please contact me -- happy to chat about it.</p>
+<hr>
+<p>I hope this archive helps bring a little extra joy to your day 😍</p>

@@ -1,0 +1,138 @@
+{
+  "systems": {
+    "arcade": {
+      "title": "Arcade - MAME"
+    },
+    "atari2600": {
+      "title": "Atari - 2600"
+    },
+    "atari5200": {
+      "title": "Atari - 5200"
+    },
+    "atari7800": {
+      "title": "Atari - 7800"
+    },
+    "atarijaguar": {
+      "title": "Atari - Jaguar"
+    },
+    "atarilynx": {
+      "title": "Atari - Lynx"
+    },
+    "wonderswan": {
+      "title": "Bandai - WonderSwan"
+    },
+    "wonderswancolor": {
+      "title": "Bandai - WonderSwan Color"
+    },
+    "coleco": {
+      "title": "Coleco - ColecoVision"
+    },
+    "c64": {
+      "title": "Commodore - Commodore 64"
+    },
+    "daphne": {
+      "title": "Daphne - Laserdisc"
+    },
+    "channelf": {
+      "title": "Fairchild - Channel F"
+    },
+    "vectrex": {
+      "title": "GCE - Vectrex"
+    },
+    "intellivision": {
+      "title": "Mattel - Intellivision"
+    },
+    "pc": {
+      "title": "MS-DOS"
+    },
+    "pcengine": {
+      "title": "NEC - PC Engine - TurboGrafx"
+    },
+    "pce-cd": {
+      "title": "NEC - PC Engine CD - TurboGrafx CD"
+    },
+    "supergrafx": {
+      "title": "NEC - SuperGrafx"
+    },
+    "gameandwatch": {
+      "title": "Nintendo - Game & Watch",
+      "collection": "mess"
+    },
+    "gb": {
+      "title": "Nintendo - Game Boy"
+    },
+    "gba": {
+      "title": "Nintendo - Game Boy Advanced"
+    },
+    "gbc": {
+      "title": "Nintendo - Game Boy Color"
+    },
+    "n64": {
+      "title": "Nintendo - Nintendo 64"
+    },
+    "nds": {
+      "title": "Nintendo - Nintendo DS"
+    },
+    "nes": {
+      "title": "Nintendo - Nintendo Entertainment System / Famicom"
+    },
+    "pokemini": {
+      "title": "Nintendo - Pokemon Mini"
+    },
+    "snes": {
+      "title": "Nintendo - Super Nintendo Entertainment System / Super Famicom"
+    },
+    "3do": {
+      "title": "Panasonic - 3DO Interactive Multiplayer"
+    },
+    "ports": {
+      "title": "PC - Ports"
+    },
+    "videopac": {
+      "title": "Philips - Videopac"
+    },
+    "sega32x": {
+      "title": "Sega - 32X"
+    },
+    "dreamcast": {
+      "title": "Sega - Dreamcast"
+    },
+    "gamegear": {
+      "title": "Sega - Game Gear"
+    },
+    "mastersystem": {
+      "title": "Sega - Master System - Mark III"
+    },
+    "segacd": {
+      "title": "Sega - Mega CD - Sega CD"
+    },
+    "megadrive": {
+      "title": "Sega - Mega Drive - Genesis"
+    },
+    "saturn": {
+      "title": "Sega - Saturn"
+    },
+    "sg-1000": {
+      "title": "Sega - SG-1000"
+    },
+    "psx": {
+      "title": "Sony - Playstation"
+    },
+    "psp": {
+      "title": "Sony - Playstation Portable"
+    },
+    "neogeocd": {
+      "title": "SNK - Neo Geo CD"
+    },
+    "ngp": {
+      "title": "SNK - Neo Geo Pocket"
+    },
+    "ngpc": {
+      "title": "SNK - Neo Geo Pocket Color"
+    },
+    "tiger": {
+      "title": "Tiger Electronics - LCD",
+      "collection": "mess"
+    }
+  }
+}
