@@ -30,6 +30,11 @@ jobs:
           cp -v *.md public/
           rsync -avzR ./manual/ public/
           find public/ -name '*.md' -exec sed -i 's#](/\?\(bin/\|cache/\|config/\|data/\|docs/\|ext/\|lib/\|profiles/\|.env\)#](https://github.com/obrie/retrokit/tree/main/\1#' {} +
+      - name: Create manuals search page
+        run: |
+          sudo apt-get install -y jq
+          ls data/ | sed 's/\.json//g' | grep -Ev arcade | sort | xargs -I{} jq -cr "to_entries[] | select(.value.manuals) | .key as \$group | .value as \$game | .value.manuals[] | [\"{}\", \$group, .name, ((\$game.aliases // [] + \$game.merge) | sort), .languages, .url]" "data/{}.json" | sed 's/$/,/g' > tmp/manuals.json
+          sed -e '/var data = /r tmp/manuals.json' public/_templates/manuals.md.tmpl > public/manuals.md
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

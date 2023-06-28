@@ -321,7 +321,7 @@ least want to call out my favorite features in retrokit:
   Where would I be if I couldn't bring up manuals for the games I'm playing?  With
   the [retrokit-manuals](https://archive.org/details/retrokit-manuals) project, I
   have access to thousands of manuals that I've personally validated and processed.
-  It makes life so much easier.
+  It makes life so much easier.  You can browse them [here](https://retrokit.dev/manuals).
 
 * **System / Game references**.
   With so many systems, it's impossible to keep track of what each button does for

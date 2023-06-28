@@ -148,3 +148,14 @@ nav {
     white-space: nowrap;
   }
 }
+
+.dataTable {
+  th {
+    background: transparent;
+    color: #000;
+  }
+
+  td {
+    border: none;
+  }
+}

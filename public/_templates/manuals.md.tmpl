@@ -1,0 +1,121 @@
+# Manuals
+
+This is a collection of ~20,000 manuals across 40+ systems that have been catalogued by hand.
+For more information and bulk downloads, you can view this project over at [archive.org](https://archive.org/details/retrokit-manuals).
+
+<table id="manuals_data" class="stripe hover order-column row-border">
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+// system,group,name,aliases,languages,url
+var data = [
+];
+
+const urlParams = new URLSearchParams(window.location.search);
+
+$(document).ready(function() {
+  $('#manuals_data').DataTable({
+    data: data,
+    columns: [
+      // System
+      {
+        data: 0
+      },
+      // Title w/ aliases
+      {
+        data: 1,
+        render: function(data, type, row) {
+          if (row[3] && row[3].length) {
+            return data + '<br /><em>Aliases</em>: ' + row[3].join(', ') + '</p>';
+          } else {
+            return data;
+          }
+        }
+      },
+      // Languages
+      {
+        data: 4,
+        render: function(data, type, row) {
+          return data.join(', ');
+        }
+      },
+      // Download links
+      {
+        data: 5,
+        searchable: false,
+        render: function(data, type, row) {
+          const name = row[2] || row[1];
+          return '<a href="' + data + '">Source</a><br />' +
+            '<a href="https://archive.org/download/retrokit-manuals/' + row[0] + '/' + row[0] + '-original.zip/' + name + ' (' + row[4].join(',') + ').pdf">Original</a><br />' +
+            '<a href="https://archive.org/download/retrokit-manuals/' + row[0] + '/' + row[0] + '-compressed.zip/' + name + ' (' + row[4].join(',') + ').pdf">Compressed</a>';
+        }
+      }
+    ],
+    // Disable unused features
+    // info: false,
+    ordering: false,
+    // Allow selection of "All" to render everything at once
+    lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+    // Default search value
+    oSearch: {
+      sSearch: urlParams.get('search') || ''
+    },
+    // Pagination
+    pageLength: urlParams.get('page_size') || 10,
+    pagingType: 'full',
+    // Text content
+    language: {
+      info: '_START_ - _END_ of _TOTAL_',
+      infoEmpty: 'No manuals',
+      infoFiltered: '(from _MAX_)',
+      zeroRecords: 'No matching manuals found',
+      lengthMenu: 'Show _MENU_ manuals',
+    },
+    initComplete: function() {
+      const columnParams = {0: 'system', 2: 'language'};
+
+      // Dropdown selection
+      this.api()
+        .columns([0, 2])
+        .every(function(index) {
+          var paramName = columnParams[index];
+          var column = this;
+
+          // Create select element and listener
+          var select = $('<select><option value=""></option></select>')
+            .appendTo($(column.header()).empty())
+            .on('change', function () {
+              var value = DataTable.util.escapeRegex($(this).val());
+              column.search(value ? '(^|, )' + value + '(, |$)' : '', true, false).draw();
+            });
+
+          // Add list of options
+          column
+            .data()
+            .flatten()
+            .unique()
+            .sort()
+            .each(function (value, j) {
+              select.append('<option value="' + value + '">' + value + '</option>');
+            });
+
+          // Set default from params
+          if (urlParams.get(paramName) != null) {
+            select.val(urlParams.get(paramName));
+            select.trigger('change');
+          }
+        });
+
+      // Initial page
+      const initialPage = urlParams.get('page');
+      if (initialPage != null && initialPage > 1 && initialPage <= table.api().page.info().pages) {
+        this.fnPageChange(initialPage - 1, true);
+      }
+    }
+  });
+});
+</script>

@@ -1,73 +1,79 @@
 - title: Manual
   url: '#'
   sublinks:
+    - title: Home
+      url: /
     - title: Getting Started
-      url: /manual/index.html
+      url: /manual
     - title: Usage
-      url: /manual/usage.html
+      url: /manual/usage
     - title: Profiles
-      url: /manual/profiles.html
+      url: /manual/profiles
     - title: Settings
-      url: /manual/settings.html
+      url: /manual/settings
     - title: Systems
-      url: /manual/systems.html
+      url: /manual/systems
     - title: Environment
-      url: /manual/environment.html
+      url: /manual/environment
     - title: Hardware
-      url: /manual/hardware.html
+      url: /manual/hardware
 
 - title: Advanced
   url: '#'
   sublinks:
     - title: Cache
-      url: /manual/cache.html
+      url: /manual/cache
     - title: Controllers
-      url: /manual/controllers.html
+      url: /manual/controllers
     - title: Controls
-      url: /manual/controls.html
+      url: /manual/controls
     - title: Docs
-      url: /manual/docs.html
+      url: /manual/docs
     - title: Emulators
-      url: /manual/emulators.html
+      url: /manual/emulators
     - title: Extensions
-      url: /manual/extensions.html
+      url: /manual/extensions
     - title: Game State
-      url: /manual/gamestate.html
+      url: /manual/gamestate
     - title: Images
-      url: /manual/images.html
+      url: /manual/images
 
 - title: Projects
   url: '#'
   sublinks:
+    - title: Manuals
+      url: '/manuals'
+    - title: '―'
+      url: '#'
     - title: autoport
-      url: /manual/autoport.html
+      url: /manual/autoport
     - title: devicekit
-      url: /manual/devicekit.html
+      url: /manual/devicekit
     - title: launchkit
-      url: /manual/launchkit.html
+      url: /manual/launchkit
     - title: manualkit
-      url: /manual/manualkit.html
+      url: /manual/manualkit
     - title: metakit
-      url: /manual/metakit.html
+      url: /manual/metakit
     - title: powerkit
-      url: /manual/powerkit.html
+      url: /manual/powerkit
     - title: romkit
-      url: /manual/romkit.html
+      url: /manual/romkit
     - title: sindenkit
-      url: /manual/sindenkit.html
+      url: /manual/sindenkit
 
 - title: About
   url: '#'
   sublinks:
     - title: Acknowledgements
-      url: /ACKNOWLEDGEMENTS.html
+      url: /ACKNOWLEDGEMENTS
     - title: Changelog
-      url: /CHANGELOG.html
+      url: /CHANGELOG
     - title: Roadmap
-      url: /manual/roadmap.html
+      url: /manual/roadmap
     - title: Contributing
-      url: /CONTRIBUTING.html
+      url: /CONTRIBUTING
     - title: Code Of Conduct
-      url: /CODE_OF_CONDUCT.html
+      url: /CODE_OF_CONDUCT
     - title: License
-      url: /LICENSE.html
+      url: /LICENSE
