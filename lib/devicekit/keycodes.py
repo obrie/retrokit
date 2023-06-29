@@ -124,8 +124,8 @@ def retroarch_joystick(device: evdev.InputDevice) -> dict:
             retroarch_codes['h0right'] = (code, 1)
         elif code == ABS_HAT0Y:
             # D-Pad Y
-            retroarch_codes['h0down'] = (code, -1)
-            retroarch_codes['h0up'] = (code, 1)
+            retroarch_codes['h0up'] = (code, -1)
+            retroarch_codes['h0down'] = (code, 1)
         else:
             # Analog controls
             retroarch_codes[f'-{index}'] = (code, -1)
