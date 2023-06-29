@@ -31,8 +31,8 @@ class MetaKit:
         # Build system
         self.system = BaseSystem.from_json(self.config)
 
-    def run(self) -> None:
-        getattr(MetaKit, self.action)(self)
+    def run(self, *args) -> None:
+        getattr(MetaKit, self.action)(self, *args)
 
     # Validate the content of the system's database
     def validate(self) -> bool:
@@ -93,8 +93,8 @@ class MetaKit:
         self.cache_external_data(refresh=True)
 
     # Scrapes for metadata from external services
-    def scrape(self, *args, **kwargs) -> None:
-        self.system.scrape(*args, **kwargs)
+    def scrape(self, *args) -> None:
+        self.system.scrape(*args)
 
     # Forces machines that have incomplete scrape metadata to be refreshed from the source
     def scrape_incomplete(self) -> None:
@@ -111,6 +111,15 @@ class MetaKit:
     # Forces all scraped metadata to be refreshed from the source
     def rescrape(self) -> None:
         self.scrape(ScrapeType.ALL)
+
+    # Searches for manuals for this system
+    def find_manuals(self, *args) -> None:
+        self.system.find_manuals(*args)
+        self.system.save()
+
+    # Snapshots the source websites for this system so we can compare them to content in the future
+    def snapshot_manuals(self, *args) -> None:
+        self.system.snapshot_manuals(*args)
 
     # Update the content of the database based on internal/external data
     def update_metadata(self) -> None:
@@ -133,12 +142,14 @@ def main() -> None:
         'scrape_missing',
         'scrape_new',
         'rescrape',
+        'find_manuals',
+        'snapshot_manuals',
         'update_metadata',
     ])
     parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
-    args = parser.parse_args()
-    MetaKit(**vars(args)).run()
+    args, action_args = parser.parse_known_args()
+    MetaKit(**vars(args)).run(*action_args)
 
 
 if __name__ == '__main__':

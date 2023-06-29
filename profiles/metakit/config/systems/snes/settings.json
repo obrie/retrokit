@@ -1,0 +1,23 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "videogameden",
+        "source": "http://www.videogameden.com/sfc/pan001.htm",
+        "match": "(?P<path>reviews/.+.htm)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "snes-spreadsheet",
+        "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsChNHLjB0GMwztaZL9GDQvBU7anov2iBYXthd167iLS-dQQUxDNq0zrGkGoGGeBZRkgNnW3fsl-we/pubhtml",
+        "compare_to": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsChNHLjB0GMwztaZL9GDQvBU7anov2iBYXthd167iLS-dQQUxDNq0zrGkGoGGeBZRkgNnW3fsl-we/pubhtml",
+        "match": "<td class=\"s0\">(?P<name>[^<]+)</td><td class=\"s1\" dir=\"ltr\"><a[^>]+>(?P<path>https?://archive.org/[^<]+)"
+      },
+      {
+        "name": "superfamicom-spreadsheet",
+        "source": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyvhdDjE3vJLAeeMh0PMBVW6JltsOOTA6LLHTWoLGpzi59adnG_mhdWNNgFhHUPvEIfRIIlAA07Npy/pubhtml",
+        "compare_to": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQyvhdDjE3vJLAeeMh0PMBVW6JltsOOTA6LLHTWoLGpzi59adnG_mhdWNNgFhHUPvEIfRIIlAA07Npy/pubhtml",
+        "match": "<td class=\"s2\">(?P<name>[^<]+)</td><td class=\"s3\" dir=\"ltr\"><a[^>]+>(?P<path>https?://archive.org/[^<]+)"
+      }
+    ]
+  }
+}

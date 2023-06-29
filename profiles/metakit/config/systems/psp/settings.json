@@ -13,5 +13,16 @@
         "DLC"
       ]
     }
+  },
+  "manuals": {
+    "websites": [
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "psp|playstation.?portable"
+        }
+      }
+    ]
   }
 }

@@ -1,0 +1,18 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "videogameden",
+        "source": "http://www.videogameden.com/hucard/pan001.htm",
+        "match": "(?P<path>reviews/.+.htm)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "supergrafx"
+        }
+      }
+    ]
+  }
+}

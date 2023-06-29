@@ -1,0 +1,19 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "gamingalexandria",
+        "source": "https://www.gamingalexandria.com/wp/scans/wonderswan-color/",
+        "match": "(?P<path>https://www\\.gamingalexandria\\.com/wp/2[^\"]+)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "wonderswan",
+          "exclude": "wonderswan.*color"
+        }
+      }
+    ]
+  }
+}

@@ -7,5 +7,16 @@
         "laserdisc_singe_v2"
       ]
     }
+  },
+  "manuals": {
+    "websites": [
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "daphne"
+        }
+      }
+    ]
   }
 }

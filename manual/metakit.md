@@ -48,6 +48,14 @@ bin/metakit.sh update_dats <system>
 # files and the priority settings defined in the metakit configuraiton
 bin/metakit.sh update_groups <system>
 
+# Discovers new manuals on preconfigured website sources that have been added
+# since the given date
+bin/metakit.sh find_manuals <system> [<date>] [<website_name>]
+
+# Snapshots all manual website sources so that they can be compared against
+# on a future date to see if any new manuals have been added
+bin/metakit.sh snapshot_manuals <system> <date>
+
 # Update the content of the database based on internal/external data
 bin/metakit.sh update_metadata <system>
 

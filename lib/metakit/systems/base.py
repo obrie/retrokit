@@ -5,6 +5,7 @@ import logging
 from metakit.models.database import Database
 from metakit.models.romkit import ROMKit
 from metakit.models.scraper import Scraper
+from metakit.models.manual_finder import ManualFinder
 
 class BaseSystem:
     name = 'base'
@@ -15,6 +16,7 @@ class BaseSystem:
         self.romkit = ROMKit(config)
         self.database = Database(self.romkit, config)
         self.scraper = Scraper(self)
+        self.manual_finder = ManualFinder(self)
 
     # Looks up the system from the given name
     @classmethod
@@ -104,6 +106,14 @@ class BaseSystem:
     # Updates the metadata for this system based on data from a scraping service
     def scrape(self, *args, **kwargs) -> None:
         self.scraper.scrape(*args, **kwargs)
+
+    # Searches for manuals for this system
+    def find_manuals(self, *args, **kwargs) -> None:
+        self.manual_finder.run(*args, **kwargs)
+
+    # Snapshots source manual websites for this system
+    def snapshot_manuals(self, *args, **kwargs) -> None:
+        self.manual_finder.snapshot(*args, **kwargs)
 
     # Updates the metadata for games associated with this system
     def update_metadata(self) -> None:

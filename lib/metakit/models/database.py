@@ -18,6 +18,10 @@ class Database:
 
         # Open the dataset
         self.path = Path(config['metadata']['path'])
+        self.reload()
+
+    # Loads the dataset into memory.  If previously opened, the dataset will be overwritten.
+    def reload(self) -> None:
         with self.path.open() as f:
             self.dataset = json.load(f)
 

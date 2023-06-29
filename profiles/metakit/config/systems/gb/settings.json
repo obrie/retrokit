@@ -1,0 +1,24 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/gameboy/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "gbdb",
+        "source": "https://www.sprintinglegs.com/gbdb/manuals/",
+        "match": "(?P<path>manualdata\\?id=[0-9]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "game.?boy",
+          "exclude": "gbc|gba|game.?boy.?color|advance"
+        }
+      }
+    ]
+  }
+}

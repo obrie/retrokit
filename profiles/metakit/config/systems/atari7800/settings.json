@@ -1,0 +1,23 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/atari7800/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "ataricompendium",
+        "source": "https://www.ataricompendium.com/archives/manuals/7800/7800_manuals.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "atari.*7800"
+        }
+      }
+    ]
+  }
+}

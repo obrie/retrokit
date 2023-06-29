@@ -1,0 +1,18 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "exodos",
+        "source": "https://archive.org/download/exov5_2/Content/XODOSMetadata.zip/",
+        "match": "(?P<path>Manuals/MS-DOS/[^\"<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "ms.?dos"
+        }
+      }
+    ]
+  }
+}

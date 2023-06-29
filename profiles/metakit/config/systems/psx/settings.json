@@ -7,5 +7,22 @@
         "Victory Boxing 2"
       ]
     }
+  },
+  "manuals": {
+    "websites": [
+      {
+        "name": "psxdatacenter",
+        "source": "https://psxdatacenter.com/manuals.html",
+        "match": "(?P<path>[^\"]+.cbr)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "psx|ps1|playstation",
+          "exclude": "ps[2-5]|playstation ?[2-5]"
+        }
+      }
+    ]
   }
 }

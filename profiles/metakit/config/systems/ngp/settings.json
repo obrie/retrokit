@@ -1,0 +1,14 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "neo.?geo",
+          "exclude": "ngpc|color|mvs|cd"
+        }
+      }
+    ]
+  }
+}

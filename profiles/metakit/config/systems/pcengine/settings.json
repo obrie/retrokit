@@ -1,0 +1,35 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "videogameden",
+        "source": "http://www.videogameden.com/hucard/pan001.htm",
+        "match": "(?P<path>reviews/.+.htm)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "tg-16",
+        "shared": true,
+        "source": "http://archives.tg-16.com/magazine_database.htm",
+        "match": "(?P<path>http://www.tg-16.com/[^\"]+\\.pdf)"
+      },
+      {
+        "name": "necretro",
+        "shared": true,
+        "source": "https://necretro.org/Special:NewFiles?like=&user=&mediatype%5B%5D=OFFICE&start={year}-{month}-{day}&end=&wpFormIdentifier=specialnewimages&limit=1000&offset=",
+        "match": "(?P<path>/File:[^\" ]*Manual[^\" ]*\\.pdf)",
+        "filter": {
+          "include": "PCE|TG16",
+          "exclude": "PCESCD"
+        }
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "pc.?engine|turbografx|tg.?16| pce |tgfx",
+          "exclude": "(pc.?engine|pce|turbografx|tgfx).?cd"
+        }
+      }
+    ]
+  }
+}

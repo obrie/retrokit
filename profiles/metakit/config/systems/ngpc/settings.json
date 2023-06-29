@@ -1,0 +1,13 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "ngpc|neo.?geo.pocket.?color"
+        }
+      }
+    ]
+  }
+}

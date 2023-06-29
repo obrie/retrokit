@@ -1,0 +1,24 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/nes/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "videogameden",
+        "source": "http://www.videogameden.com/fc/pan001.htm",
+        "match": "(?P<path>reviews/.+.htm)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": " nes |nintendo|famicom",
+          "exclude": "snes|wii|super.?(nintendo|famicom)|switch|youtube|gba|gbc|game.?boy|saturn|nds|nintendo.?ds|playstation|gamecube|3ds|n64|nintendo.?64|disk.?system|fds|aleck.?64"
+        }
+      }
+    ]
+  }
+}

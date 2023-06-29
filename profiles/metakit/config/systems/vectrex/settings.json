@@ -1,24 +1,16 @@
 {
-  "roms": {
-    "priority": {
-      "romsets": [
-        "nointro",
-        "nointro-plus"
-      ]
-    }
-  },
   "manuals": {
     "websites": [
       {
         "name": "digitpress",
-        "source": "http://www.digitpress.com/library/manuals/odyssey2/index.html",
+        "source": "http://www.digitpress.com/library/manuals/vectrex/index.html",
         "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
       },
       {
         "name": "internetarchive",
         "source": "internetarchive",
         "filter": {
-          "include": "videopac|odyssey.?2"
+          "include": "vectrex"
         }
       }
     ]

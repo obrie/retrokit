@@ -1,11 +1,4 @@
 {
-  "roms": {
-    "priority": {
-      "!descriptions/addons": [
-        "/SegaNet"
-      ]
-    }
-  },
   "manuals": {
     "websites": [
       {
@@ -14,15 +7,15 @@
         "source": "https://segaretro.org/Special:NewFiles?like=&user=&mediatype%5B%5D=OFFICE&start={year}-{month}-{day}&end=&wpFormIdentifier=specialnewimages&limit=5000&offset=",
         "match": "(?P<path>/File:[^\" ]*Manual[^\" ]*\\.pdf)",
         "filter": {
-          "include": "_(Saturn|Sat|SS)_",
-          "exclude": "_(SG-?1000|SMS|MD|32X|MegaCD|MCD|SegaCD|SCD|GG|DC|PC|PS2)_"
+          "include": "32X",
+          "exclude": "_(SG-?1000|SMS|MD|MegaCD|MCD|SegaCD|SCD|GG|Saturn|Sat|SS|DC|PC|PS2)_"
         }
       },
       {
         "name": "internetarchive",
         "source": "internetarchive",
         "filter": {
-          "include": "sega.*saturn"
+          "include": "sega.*32x"
         }
       }
     ]

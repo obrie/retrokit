@@ -1,0 +1,23 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/colecovision/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "cvaddict",
+        "source": "https://cvaddict.com/list.php",
+        "match": "(?P<path>[^\"]+pdf)[^>]+><span class=\"[^\"]*glyphicon-book"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "coleco"
+        }
+      }
+    ]
+  }
+}

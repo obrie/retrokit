@@ -1,0 +1,24 @@
+{
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/3do/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "emuland",
+        "source": "https://www.emu-land.net/library/manuals/3do/all",
+        "match": "(?P<path>library/manuals.+id=[0-9]+)[^>]+>(?P<name>[^<]+)",
+        "base_href": "https://www.emu-land.net/"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "3do"
+        }
+      }
+    ]
+  }
+}

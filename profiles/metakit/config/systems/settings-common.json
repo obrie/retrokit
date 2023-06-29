@@ -92,5 +92,10 @@
       "names.length": "ascending",
       "names/alphabetical": "ascending"
     }
+  },
+  "manuals": {
+    "finder": {
+      "tmpdir": "$RETROKIT_HOME/tmp/manuals"
+    }
   }
 }

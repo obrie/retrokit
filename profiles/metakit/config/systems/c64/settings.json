@@ -6,5 +6,74 @@
         "nointro-tapes"
       ]
     }
+  },
+  "manuals": {
+    "websites": [
+      {
+        "name": "digitpress",
+        "source": "http://www.digitpress.com/library/manuals/c64/index.html",
+        "match": "(?P<path>[^\"]+\\.(pdf|txt))[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "bombjack-games",
+        "source": "https://commodore.bombjack.org/commodore/games/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "bombjack-games_multi",
+        "source": "https://commodore.bombjack.org/commodore/games-multi/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "bombjack-cassette",
+        "source": "https://commodore.bombjack.org/commodore/games-cassette/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "bombjack-applications",
+        "source": "https://commodore.bombjack.org/commodore/applications/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "bombjack-educational",
+        "source": "https://commodore.bombjack.org/commodore/educational/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "bombjack-sound",
+        "source": "https://commodore.bombjack.org/commodore/sound/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})"
+      },
+      {
+        "name": "stadium64",
+        "source": "http://www.stadium64.com/manuals/manuals.htm",
+        "match": "(?P<path>[^\"]+\\.htm)[^>]+>(?P<name>[^<]+)"
+      },
+      {
+        "name": "project64",
+        "source": "https://project64.c64.org/Games/",
+        "match": "(?P<path>[^\"]+\\.txt).*<td>(?P<name>[^<]+)"
+      },
+      {
+        "name": "c64dreams",
+        "source": "https://archive.org/download/c64-dreams-v0.60/C64 Dreams v0.60.7z/",
+        "compare_to": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/",
+        "match": "Dreams/(?P<path>C64 Dreams/Games/.*(pdf|cbz))",
+        "base_href": "https://archive.org/download/c64-dreams-v0.60/C64 Dreams v0.60.7z/C64 Dreams/"
+      },
+      {
+        "name": "ultimate_tape_archive",
+        "source": "https://archive.org/download/Ultimate_Tape_Archive_V4.0/Ultimate_Tape_Archive_V4.0.zip/",
+        "compare_to": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/",
+        "match": "(?P<path>Ultimate_Tape_Archive_V4.0/[^/]+/Extras/.*(Inlay|Instructions)[^<]+)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "c64|commodore ?64"
+        }
+      }
+    ]
   }
 }
