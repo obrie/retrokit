@@ -13,7 +13,7 @@ sub-projects, including:
 * 🔌 [powerkit](manual/powerkit.md) - Advanced safe system/emulator shutdown tool controlled through hardware and joysticks
 * 🗃️ [romkit](manual/romkit.md) - Tool for listing, filtering, organizing, converting, and installing games from romsets
 * 🔫 [sindenkit](manual/sindenkit.md) - Plug 'n play functionality and quality-of-life improvements for Sinden Lightguns
-* 📚 [manuals archive](https://archive.org/details/retrokit-manuals) - A collection of ~20,000 manuals across 40+ systems, catalogued by hand
+* 📚 [manuals archive](https://archive.org/details/retrokit-manuals) - A collection of ~20,000 manuals across 40+ systems, catalogued by hand ([browser]](https://retrokit.dev/manuals))
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/obrie)
 
