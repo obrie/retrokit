@@ -77,7 +77,7 @@ build() {
 
       # Ensure the download file's metadata is up-to-date
       if [ "$FORCE_UPDATE" == 'true' ]; then
-        local updated_meta=$(jq ".options = ${postprocess_options:-null}" "$download_meta_file" | jq 'del(..|nulls)')
+        local updated_meta=$(jq ".options = ${postprocess_options:-null}" "$download_meta_file" | jq 'with_entries(select(.value != null))')
         echo "$updated_meta" > "$download_meta_file"
       fi
 
@@ -157,7 +157,7 @@ __download_manual() {
   # Write metadata for the downloaded file
   local download_meta_file=${manual_ref['download_meta_file']}
   local postprocess_options=${manual_ref['options']}
-  echo "{\"url\": \"$url\", \"options\": ${postprocess_options:-null}, \"source\": \"$source\"}" | jq 'del(..|nulls)' > "$download_meta_file"
+  echo "{\"url\": \"$url\", \"options\": ${postprocess_options:-null}, \"source\": \"$source\"}" | jq 'with_entries(select(.value != null))' > "$download_meta_file"
 }
 
 # Checks whether the given file needs to be updated (either it doesn't exist or
