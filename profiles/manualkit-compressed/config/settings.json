@@ -2,8 +2,8 @@
   "manuals": {
     "archive": {
       "version": "compressed",
-      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-original.zip/{name} ({languages}).pdf",
-      "processed": false
+      "url": null,
+      "fallback_to_source": false
     },
     "paths": {
       "download": "{base}/.files/{name} ({languages}).pdf",
