@@ -8129,7 +8129,15 @@
     "genres": [
       "Platform"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/flushed-away-usa-manual/3.5 Manual Front_jp2.zip"
+      }
+    ]
   },
   "Ford Racing 3": {
     "id": "070ad59de061b9b4a7a65c7be5a6fdc11686a681",
@@ -11228,6 +11236,14 @@
     "publisher": "Konami",
     "genres": [
       "Board game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kami-no-kijitsu-illusion-of-the-evil-eyes-jpn-manual/3.5 Manual Scan_jp2.zip"
+      }
     ]
   },
   "Kao the Kangaroo": {
@@ -22017,6 +22033,12 @@
     ],
     "age_rating": "T",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tom-clancys-splinter-cell-pandora-tomorrow-usa-manual/3.5 English Manual Scan_jp2.zip"
+      },
       {
         "languages": [
           "fr"
