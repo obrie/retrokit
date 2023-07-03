@@ -255,6 +255,7 @@ To generate archives:
 ```bash
 PROFILES=manualkit-original bin/manualkit.sh remote_sync_system_manuals <system>
 PROFILES=manualkit-compressed bin/manualkit.sh remote_sync_system_manuals <system>
+PROFILES=manualkit-original bin/manualkit.sh remote_sync_manuals_description <date>
 ```
 
 Reference: https://archive.org/details/retrokit-manuals
