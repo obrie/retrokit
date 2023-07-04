@@ -25,6 +25,7 @@ sub-projects, including:
 * [Code Of Conduct](CODE_OF_CONDUCT.md)
 * [Changelog](CHANGELOG.md)
 * [License](LICENSE.md)
+* [Gitter chat](https://gitter.im/#obrie_retrokit:gitter.im)
 
 ## Overview
 
