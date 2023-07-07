@@ -259,7 +259,7 @@ function _get_ui_key() {
 }
 
 # Generates the input_map configuration key to use for the advmame UI
-function _get_hotkey() {
+function _get_advmame_hotkey() {
     local input_name=$1
     local key=''
 
@@ -415,7 +415,7 @@ function _onend_advmame() {
             local pair_value=${advmame_mapped_inputs[$input_name]}
 
             # Check if there's a hotkey configuration for this input
-            local hotkey=$(_get_hotkey "$input_name")
+            local hotkey=$(_get_advmame_hotkey "$input_name")
 
             if [ -n "$hotkey" ]; then
                 map_advmame "$input_name" "$hotkey" "$controller" "$advmame_hotkey_value $pair_value"

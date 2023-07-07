@@ -172,7 +172,7 @@ function onstart_ppsspp_keyboard() {
 }
 
 # Generates the configuration key for a given ES input name
-function _get_config_key() {
+function _get_ppsspp_config_key() {
     local input_name=$1
     local key=''
 
@@ -265,7 +265,7 @@ function map_ppsspp_joystick() {
     local input_value=$4
 
     # Look up the ppsspp configuration key this input maps to
-    local key=$(_get_config_key "$input_name")
+    local key=$(_get_ppsspp_config_key "$input_name")
     if [ -z "$key" ]; then
         return
     fi
@@ -320,7 +320,7 @@ function map_ppsspp_keyboard() {
     local input_value=$4
 
     # Look up the ppsspp configuration key this input maps to
-    local key=$(_get_config_key "$input_name" 1)
+    local key=$(_get_ppsspp_config_key "$input_name" 1)
     if [ -z "$key" ]; then
         return
     fi

@@ -154,7 +154,7 @@ function onstart_redream_keyboard() {
 }
 
 # Generates the configuration key for a given ES input name
-function _get_config_key() {
+function _get_redream_config_key() {
     local input_name=$1
     local key=''
 
@@ -214,7 +214,7 @@ function map_redream_joystick() {
     local input_id=$3
     local input_value=$4
 
-    local key=$(_get_config_key "$input_name")
+    local key=$(_get_redream_config_key "$input_name")
     if [ -z "$key" ]; then
         return
     fi
@@ -247,7 +247,7 @@ function map_redream_keyboard() {
     local input_id=$3
     local input_value=$4
 
-    local key=$(_get_config_key "$input_name")
+    local key=$(_get_redream_config_key "$input_name")
     if [ -z "$key" ]; then
         return
     fi

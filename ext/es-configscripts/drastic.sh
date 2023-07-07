@@ -56,7 +56,7 @@ function onstart_drastic_keyboard() {
 }
 
 # Generates the configuration key for a given ES input name
-function _get_config_keys() {
+function _get_drastic_config_keys() {
     local input_name=$1
     local key=''
 
@@ -149,7 +149,7 @@ function map_drastic_joystick() {
     local input_id=$3
     local input_value=$4
 
-    local keys=($(_get_config_keys "$input_name"))
+    local keys=($(_get_drastic_config_keys "$input_name"))
     if [ ${#keys[@]} -eq 0 ]; then
         return
     fi
@@ -189,7 +189,7 @@ function map_drastic_keyboard() {
     local input_id=$3
     local input_value=$4
 
-    local keys=($(_get_config_keys "$input_name"))
+    local keys=($(_get_drastic_config_keys "$input_name"))
     if [ ${#keys[@]} -eq 0 ]; then
         return
     fi
