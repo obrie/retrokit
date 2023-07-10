@@ -10,6 +10,8 @@ sdldb_file="$retropie_configs_dir/all/gamecontrollerdb.txt"
 sdldb_version="$retropie_configs_dir/all/gamecontrollerdb.version"
 sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
 
+autostart_dir=/opt/retropie/configs/all/autostart.d/gamecontrollerdb
+
 # Vendor IDs used in linux to identify xbox controllers.
 # 
 # Source: https://github.com/paroj/xpad/blob/51af0649c2926e8992b70ca1bb506db949c6d8d9/xpad.c#L482
@@ -157,10 +159,18 @@ __configure_xpad() {
   done < <(grep -E "^[0-9a-z]{8}($sdl_vendor_ids_regex)" "$sdldb_file" | grep 'lefttrigger:a' | grep 'righttrigger:a' | grep 'leftshoulder:b' | grep 'rightshoulder:b' | grep Linux)
 
   echo "# END - triggers_to_buttons overrides" >> "$sdldb_file"
+
+  # Modify environment variables
+  mkdir -p "$autostart_dir"
+  cat > "$autostart_dir/onstart.sh" <<EOF
+export SDL_GAMECONTROLLERCONFIG_FILE=$sdldb_file
+EOF
+  chmod 755 "$autostart_dir/onstart.sh"
 }
 
 restore() {
   restore_file "$sdldb_file" delete_src=true
+  rm -rfv "$autostart_dir"
 }
 
 remove() {
