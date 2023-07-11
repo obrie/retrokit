@@ -7,11 +7,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system/nds/config'
 setup_module_desc='NDS emulator configuration'
 
-drastic_config_file="$retropie_system_config_dir/drastic/config/drastic.cfg"
+config_file="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
 configure() {
   __restore_config
-  ini_merge '{system_config_dir}/drastic.cfg' "$drastic_config_file" restore=false
+  ini_merge '{system_config_dir}/drastic.cfg' "$config_file" restore=false
 }
 
 restore() {
