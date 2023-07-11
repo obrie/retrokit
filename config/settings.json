@@ -98,7 +98,8 @@
         "retroarch-nkb",
         "retrokit-mupen64plus",
         "retrokit-overrides",
-        "sinden"
+        "sinden",
+        "supermodel3"
       ]
     },
     "ir": {
@@ -232,6 +233,8 @@
       "systems/arcade/mame-gameinfo",
       "systems/arcade/mame-hiscores",
       "systems/arcade/mame-history",
+      "systems/arcade/supermodel3",
+      "systems/arcade/roms-supermodel3-nvram",
       "systems/daphne/actionmax-crosshair",
       "systems/daphne/roms-commands",
       "systems/dreamcast/config",

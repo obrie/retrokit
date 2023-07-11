@@ -10696,6 +10696,7 @@
     }
   },
   "bassdx": {
+    "rating|launchbox": 70,
     "genres": [
       "Sports / Fishing"
     ],
@@ -10711,6 +10712,10 @@
       "pedal",
       "stick"
     ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 3
+    },
     "merge": [
       "bass"
     ]
@@ -32884,6 +32889,7 @@
   },
   "dayto2pe": {
     "players": 1,
+    "rating": 80,
     "genres": [
       "Driving / Race (chase view)"
     ],
@@ -32897,7 +32903,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": "2"
+    }
   },
   "daytona": {
     "players": 1,
@@ -32918,6 +32928,7 @@
   },
   "daytona2": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Driving / Race (chase view)"
     ],
@@ -32931,7 +32942,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": "2"
+    }
   },
   "daytona93": {
     "group": "daytona",
@@ -36760,6 +36775,7 @@
   },
   "dirtdvls": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Driving / Race"
     ],
@@ -36772,7 +36788,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "dirtdvlsj": {
     "group": "dirtdvls",
@@ -41689,6 +41709,7 @@
   },
   "eca": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Driving / Ambulance Guide"
     ],
@@ -41703,7 +41724,11 @@
       "joy",
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 2
+    }
   },
   "ecaj": {
     "group": "eca",
@@ -51881,6 +51906,7 @@
     ]
   },
   "fvipers2": {
+    "rating|launchbox": 60,
     "genres": [
       "Fighter / 3D"
     ],
@@ -51893,7 +51919,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "fvipers2o": {
     "group": "fvipers2",
@@ -62597,6 +62627,7 @@
   },
   "harley": {
     "players": 1,
+    "rating|launchbox": 70,
     "genres": [
       "Driving / Motorbike"
     ],
@@ -62609,7 +62640,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 2
+    }
   },
   "hasamu": {
     "players": 2,
@@ -82107,6 +82142,7 @@
     "mechanical": true
   },
   "lamachin": {
+    "rating|launchbox": 50,
     "genres": [
       "Shooter / Gun"
     ],
@@ -82122,7 +82158,11 @@
     ],
     "controls|extra": [
       "lightgun"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "lancelot": {
     "genres": [
@@ -83392,6 +83432,7 @@
     }
   },
   "lemans24": {
+    "rating|launchbox": 70,
     "genres": [
       "Driving / Race 1st Person"
     ],
@@ -83404,7 +83445,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "lemmings": {
     "players": 2,
@@ -84898,6 +84943,7 @@
     "mechanical": true
   },
   "lostwsga": {
+    "rating|launchbox": 70,
     "genres": [
       "Shooter / Gun"
     ],
@@ -84913,7 +84959,11 @@
     ],
     "controls|extra": [
       "lightgun"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 5
+    }
   },
   "lostwsgp": {
     "group": "lostwsga",
@@ -100616,6 +100666,7 @@
   },
   "magtruck": {
     "players": 2,
+    "rating|launchbox": 70,
     "genres": [
       "Platform / Run, Jump & Scrolling"
     ],
@@ -100629,7 +100680,11 @@
       "joy",
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 5
+    }
   },
   "magworm": {
     "group": "centiped",
@@ -116959,6 +117014,7 @@
     "mechanical": true
   },
   "oceanhun": {
+    "rating|launchbox": 80,
     "genres": [
       "Shooter / 1st Person"
     ],
@@ -116973,7 +117029,11 @@
     ],
     "controls|extra": [
       "lightgun"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "ochaken": {
     "genres": [
@@ -158349,6 +158409,7 @@
   },
   "scud": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Driving / Race (chase view)"
     ],
@@ -158361,7 +158422,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 3
+    }
   },
   "scuddx": {
     "group": "scud",
@@ -163975,6 +164040,7 @@
   },
   "skichamp": {
     "players": 1,
+    "rating|launchbox": 70,
     "genres": [
       "Sports / Skiing"
     ],
@@ -163988,7 +164054,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "skijump": {
     "genres": [
@@ -170010,6 +170080,7 @@
   },
   "spikeofe": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Fighter / 3D"
     ],
@@ -170022,10 +170093,15 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "spikeout": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Fighter / 3D"
     ],
@@ -170038,7 +170114,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 2
+    }
   },
   "spiker": {
     "players": 2,
@@ -171189,6 +171269,7 @@
   },
   "srally2": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Driving / Race (chase view)"
     ],
@@ -171203,6 +171284,10 @@
       "paddle",
       "pedal"
     ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    },
     "merge": [
       "srally2x",
       "sraly2dx"
@@ -177973,6 +178058,7 @@
   },
   "swtrilgy": {
     "players": 1,
+    "rating|launchbox": 80,
     "genres": [
       "Shooter / Misc."
     ],
@@ -177985,7 +178071,14 @@
     },
     "controls": [
       "stick"
-    ]
+    ],
+    "controls|extra": [
+      "lightgun"
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "sxeviousj": {
     "group": "xevious",
@@ -191817,6 +191910,7 @@
   },
   "vf3": {
     "players": 2,
+    "rating|launchbox": 80,
     "genres": [
       "Fighter / Versus"
     ],
@@ -191829,7 +191923,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 3
+    }
   },
   "vf4": {
     "players": 2,
@@ -193100,6 +193198,7 @@
   },
   "von2": {
     "players": 1,
+    "rating|launchbox": 70,
     "genres": [
       "Shooter / Versus"
     ],
@@ -193112,7 +193211,11 @@
     },
     "controls": [
       "doublejoy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "vonj": {
     "group": "von",
@@ -193282,6 +193385,7 @@
   },
   "vs2": {
     "players": 2,
+    "rating|launchbox": 80,
     "genres": [
       "Sports / Soccer"
     ],
@@ -193294,7 +193398,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "vs2002ex": {
     "players": 2,
@@ -193337,6 +193445,7 @@
   },
   "vs298": {
     "players": 2,
+    "rating|launchbox": 80,
     "genres": [
       "Sports / Soccer"
     ],
@@ -193349,7 +193458,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "vs2_2k": {
     "players": 2,
@@ -193382,6 +193495,7 @@
   },
   "vs2v991": {
     "players": 2,
+    "rating|launchbox": 70,
     "genres": [
       "Sports / Soccer"
     ],
@@ -193394,7 +193508,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation|override": {
+      "emulator": "supermodel3",
+      "rating": 4
+    }
   },
   "vs4": {
     "players": 2,

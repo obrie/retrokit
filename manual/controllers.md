@@ -10,6 +10,7 @@ of emulators, including:
 * hypseus
 * ppsspp
 * redream
+* supermodel3
 
 ## Non-Interactive setup
 

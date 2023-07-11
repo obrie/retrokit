@@ -358,6 +358,7 @@ The additional systems that are supported by retrokit include:
 * ppsspp
 * redream
 * mupen64plus (adds keyboard overrides, axis reconfigurations)
+* supermodel3
 
 Additionally, there are 2 configscripts which extend general functionality in
 the system.  That includes:

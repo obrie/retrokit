@@ -56,6 +56,7 @@ additional emulators used by retrokit.  Those systems include:
 * ppsspp
 * redream
 * sinden
+* supermodel3
 
 Additionally, there are custom extensions / overrides for existing emulators and the
 system via the following configscripts:

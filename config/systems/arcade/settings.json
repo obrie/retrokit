@@ -135,6 +135,14 @@
     "lr-flycast": {
       "core_name": "flycast",
       "library_name": "Flycast"
+    },
+    "supermodel3": {
+      "names": [
+        "supermodel3"
+      ],
+      "gamestate": [
+        "/opt/retropie/configs/supermodel3/Saves"
+      ]
     }
   },
   "romsets": {
@@ -327,7 +335,8 @@
       },
       "emulators": [
         "lr-mame0222",
-        "lr-flycast"
+        "lr-flycast",
+        "supermodel3"
       ]
     },
     "mame-0244": {

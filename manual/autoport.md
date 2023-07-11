@@ -22,6 +22,7 @@ autoport currently supports the following emulators:
 * mupen64plus
 * ppsspp
 * redream
+* supermodel3
 
 This means that autoport will adjust the input configuration for every one of these emulators
 based on a single configuration file.

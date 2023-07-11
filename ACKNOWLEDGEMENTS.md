@@ -7,7 +7,9 @@ project what it's become.  That includes:
   * https://github.com/Abdess
 * barbudreamon
   * [Naomi compatibility list](https://github.com/libretro/flycast/issues/136)
-* [batocera](https://github.com/batocera-linux/lr-duckstation) for lr-duckstation binaries
+* [batocera](https://github.com/batocera-linux/lr-duckstation) for:
+  * lr-duckstation binaries
+  * supermodel3 NVRAM files
 * Black Falcon Games
   * [PC Engine multitap lists](https://blackfalcongames.net/?p=155)
 * crcerror
