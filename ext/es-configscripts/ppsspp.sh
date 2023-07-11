@@ -249,7 +249,7 @@ function map_ppsspp() {
     iniGet "$key"
 
     # Merge the mapped value with existing ones
-    local merged_value=$(echo "$ini_value" | sed 's/,/\n/g' | grep -Ev "${controller}-" | sed ':a;N;$!ba;s/\n/,/g')
+    local merged_value=$(echo "$ini_value" | sed 's/,/\n/g' | grep -Ev "${controller}-" | head -c -1 | tr $'\n' ',')
     if [ -n "$merged_value" ]; then
         merged_value+=','
     fi
