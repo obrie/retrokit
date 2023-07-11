@@ -240,7 +240,7 @@ restore_partial_ini() {
     if [ -f "$file" ]; then
       # Keep track of matched configurations
       local file_to_remerge=$(mktemp -p "$tmp_ephemeral_dir")
-      grep -P "$regex_match" "$file" > "$file_to_remerge"
+      grep -P "$regex_match|^\[" "$file" > "$file_to_remerge"
 
       restore_file "$file" "${@:3}"
 
