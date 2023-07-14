@@ -10,9 +10,12 @@
         "/^NFL 2K(?!2)",
         "/^NHL 2K(?!2)"
       ],
+      "!genres|extra": [
+        "Quiz",
+        "Various"
+      ],
       "+titles": [
         "# Genre exceptions",
-        "South Park - Chef's Luv Shack",
         "Typing of the Dead, The"
       ]
     }
