@@ -4233,7 +4233,7 @@
     ],
     "emulation|override": {
       "emulator": "lr-flycast",
-      "rating": 5
+      "rating": 3
     },
     "merge": [
       "alpiltdx"
@@ -5243,6 +5243,9 @@
     ],
     "languages": [
       "en"
+    ],
+    "languages~replace": [
+      "ja"
     ],
     "screen": {
       "orientation": "vertical"
@@ -7807,7 +7810,7 @@
     ],
     "emulation|override": {
       "emulator": "lr-flycast",
-      "rating": 5
+      "rating": 4
     }
   },
   "asndynmto": {
@@ -9429,6 +9432,9 @@
     "series": "Puzzle Bobble",
     "languages": [
       "en"
+    ],
+    "languages~replace": [
+      "ja"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -81256,6 +81262,9 @@
     "languages": [
       "en"
     ],
+    "languages~replace": [
+      "ja"
+    ],
     "screen": {
       "orientation": "horizontal"
     },
@@ -86115,6 +86124,9 @@
     "series": "Lupin The Third",
     "languages": [
       "en"
+    ],
+    "languages~replace": [
+      "ja"
     ],
     "screen": {
       "orientation": "horizontal"
@@ -144724,6 +144736,9 @@
     "series": "The Rumble Fish",
     "languages": [
       "en"
+    ],
+    "languages~replace": [
+      "ja"
     ],
     "screen": {
       "orientation": "horizontal"
