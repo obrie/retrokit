@@ -19,4 +19,8 @@ configure() {
   done < <(romkit_cache_list | jq -r 'select(.emulator == "supermodel3") | .name')
 }
 
+restore() {
+  rm -rfv "$nvram_dir"/*
+}
+
 setup "${@}"
