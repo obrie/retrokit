@@ -19,7 +19,7 @@ function __override_retroarch_settings_retrokit() {
 
     while IFS='=' read key override_value; do
         key=${key//retroarch_${input_type}_/}
-        override_value=${value//\"/}
+        override_value=${override_value//\"/}
 
         if [ -n "$override_value" ]; then
             iniSet "$key" "$override_value"
