@@ -134,14 +134,17 @@
     },
     "lr-flycast": {
       "core_name": "flycast",
-      "library_name": "Flycast"
+      "library_name": "Flycast",
+      "gamestate": [
+        "{rom_dir}/{rom}.nvmem*"
+      ]
     },
     "supermodel3": {
       "names": [
         "supermodel3"
       ],
       "gamestate": [
-        "/opt/retropie/configs/supermodel3/Saves"
+        "/opt/retropie/configs/supermodel3/Saves/{rom}.st0"
       ]
     }
   },
