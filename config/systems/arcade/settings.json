@@ -145,6 +145,14 @@
       ]
     }
   },
+  "bios": {
+    "url": "$BIOS_URL/libretro/Arcade",
+    "dir": "$HOME/RetroPie/BIOS/dc",
+    "files": {
+      "awbios.zip": "{url}/awbios.zip",
+      "naomi.zip": "{url}/naomi.zip"
+    }
+  },
   "romsets": {
     "fbneo": {
       "protocol": "http",
