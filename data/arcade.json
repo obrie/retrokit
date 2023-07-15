@@ -10728,11 +10728,11 @@
       "emulator": "supermodel3",
       "rating": 3
     },
-    "merge": [
-      "bass"
-    ],
     "tags": [
       "Dreamcast Port"
+    ],
+    "merge": [
+      "bass"
     ]
   },
   "batcir": {
@@ -171411,12 +171411,12 @@
       "emulator": "supermodel3",
       "rating": 4
     },
+    "tags": [
+      "Dreamcast Port"
+    ],
     "merge": [
       "srally2x",
       "sraly2dx"
-    ],
-    "tags": [
-      "Dreamcast Port"
     ]
   },
   "srallyc": {
