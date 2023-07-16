@@ -368,7 +368,7 @@ _EOF_
 __setup_supermodel3() {
   local profile=$1
   local driver_name=$2
-  [[ "$driver_name" =~ mouse|keyboard ]] && return
+  [ "$driver_name" == 'keyboard' ] && return
 
   local config_file="$retropie_configs_dir/supermodel3/Supermodel.ini"
   local config_backup_file="$config_file.autoport"
