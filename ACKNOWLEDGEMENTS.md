@@ -47,7 +47,7 @@ project what it's become.  That includes:
 * ScreenScraper
   * [Game metadata](https://www.screenscraper.fr/)
 * Widge-5
-  * [Lightgun configuration overrides](https://www.sindenwiki.org/wiki/Barebones_Compatibility)
+  * [Lightgun configuration overrides / calibration data](https://github.com/Widge-5/sinden-barebones-configs)
 * Steven Cozart (including Kevin Jonas, Howard Casto and yo1dog)
   * [Arcade control maps](https://github.com/Texacate/Visual-RetroPie-Control-Maps)
 * StormedBubbles
@@ -60,6 +60,10 @@ project what it's become.  That includes:
   * [Clone lists](https://github.com/unexpectedpanda/retool-clonelists-metadata)
 * valerino
   * [lr-mess integration](https://github.com/valerino/RetroPie-Setup)
+* Warped Polygon
+  * [Sammy Atomistwave NVMEM settings](https://forums.launchbox-app.com/files/file/3601-sammy-atomiswave-norms-pre-configured-nvmem-testservice-menu-settings-to-play-in-english-free-play-and-unlock-hidden-features/)
+  * [Sega Naomi NVMEM settings](https://forums.launchbox-app.com/files/file/3975-sega-naomi-pre-configured-every-hidden-character-unlocked-analogue-volume-and-light-gun-games-calibrated-all-content-unlocked-controls-pre-mapped-correctly-censored-games-uncensored-2-player-mouse-for-flycast-retroarch/)
+  * [Sega Model 3 NVMEM settings](https://forums.launchbox-app.com/files/file/3857-sega-model-3-supermodel-git-everything-pre-configured-inc-controls-for-pc-controller-mouse-light-guns-test-menus-configured-free-play-all-games-in-english-2-player-mouse-support-audio-adjusted-layout-imagesthe-whole-9-yards/)
 * Wikimedia
   * https://commons.wikimedia.org/
 * wingd

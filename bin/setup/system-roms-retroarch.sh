@@ -16,6 +16,7 @@ configure() {
   __configure_retroarch_configs
   __configure_retroarch_remappings
   __configure_retroarch_core_options
+  __configure_retroarch_nvram
 }
 
 # Game-specific retroarch configuration overrides
@@ -27,7 +28,7 @@ configure() {
 # to manage otherwise.
 __configure_retroarch_configs() {
   # Merge in rom-specific overrides
-  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name rom_path core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local target_file="$retroarch_config_dir/$library_name/$rom_name.cfg"
     local files_to_include=()
@@ -74,7 +75,7 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name rom_path core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Emulator-specific remapping file
     local target_file="$retroarch_remapping_dir/$library_name/$rom_name.rmp"
 
@@ -92,7 +93,7 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_file=$(get_retroarch_path 'core_options_path')
 
-  while IFS=$field_delim read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+  while IFS=$field_delim read -r rom_name rom_path core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     local target_file="$emulator_config_dir/$rom_name.opt"
@@ -149,8 +150,43 @@ __configure_retroarch_core_options() {
   done < <(__list_libretro_roms 'opt')
 }
 
+# Game-specific libretro nvram overrides
+__configure_retroarch_nvram() {
+  local rom_dirs
+  readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
+
+  for nvram_extension in nv nvmem nvmem2 eeprom; do
+    while IFS=$field_delim read -r rom_name rom_path core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
+      if [ -z "$override_paths_dsv" ]; then
+        continue
+      fi
+
+      local target_file="$rom_path.$nvram_extension"
+
+      # Use the highest priority source file (the last one detected)
+      local source_files
+      IFS=$field_delim read -r -a source_files <<< "$override_paths_dsv"
+      local source_file=${source_files[-1]}
+
+      # Copy to primary ROM location (this isn't where the emulator will look it up, though)
+      file_cp "$source_file" "$target_file" backup=false
+
+      # Symlink to directories where the rom is installed
+      local rom_filename=${rom_path##*/}
+      local rom_dir
+      for rom_dir in "${rom_dirs[@]}"; do
+        local installed_path=$(find "$rom_dir" -mindepth 1 -maxdepth 1 -name "$rom_filename" -print -quit)
+        if [ -n "$installed_path" ]; then
+          file_ln "$target_file" "$installed_path.$nvram_extension"
+        fi
+      done
+    done < <(__list_libretro_roms "$nvram_extension" 'nvram/')
+  done
+}
+
 __list_libretro_roms() {
   local extension=$1
+  local subfolder=$2
 
   # Load core/library info for the emulators
   load_emulator_data
@@ -199,8 +235,8 @@ __list_libretro_roms() {
     local override_paths=()
     for override_name in "$group_name" "$title" "$disc_name" "$parent_name" "$playlist_name" "$rom_name"; do
       if [ -n "$override_name" ] && [ "${override_names[$override_name]}" ] && [ ! "${checked_overrides[$override_name]}" ]; then
-        local system_override_path="{system_config_dir}/retroarch/$override_name.$extension"
-        local emulator_override_path="{system_config_dir}/retroarch/$library_name/$override_name.$extension"
+        local system_override_path="{system_config_dir}/retroarch/$subfolder$override_name.$extension"
+        local emulator_override_path="{system_config_dir}/retroarch/$library_name/$subfolder$override_name.$extension"
 
         if any_path_exists "$system_override_path"; then
           override_paths+=("${system_override_path}")
@@ -215,7 +251,7 @@ __list_libretro_roms() {
     done
     local override_paths_delimited=$(IFS=$field_delim ; echo "${override_paths[*]}")
 
-    echo "${target_name}${field_delim}${core_name}${field_delim}${core_option_prefix}${field_delim}${library_name}${field_delim}${control_type}${field_delim}${peripherals}${field_delim}${override_paths_delimited}"
+    echo "${target_name}${field_delim}${rom_path}${field_delim}${core_name}${field_delim}${core_option_prefix}${field_delim}${library_name}${field_delim}${control_type}${field_delim}${peripherals}${field_delim}${override_paths_delimited}"
   done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("'$field_delim'")')
 }
 
