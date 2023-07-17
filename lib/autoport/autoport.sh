@@ -6,6 +6,11 @@ declare -g \
 
 retropie_configs_dir=/opt/retropie/configs
 
+# Allows individual systems to override what metadata is for
+# input devices.  This is helpful for dealing with non-libretro
+# systems that may use metadata from other frameworks like X11.
+declare -A input_overrides
+
 usage() {
   echo "usage: $0 <setup|restore> <system_name> <emulator_name> /path/to/rom"
   exit 1
@@ -373,6 +378,7 @@ __setup_supermodel3() {
   local config_file="$retropie_configs_dir/supermodel3/Supermodel.ini"
   local config_backup_file="$config_file.autoport"
 
+  __setup_x11 "$driver_name"
   __match_players "$profile" "$driver_name"
   if [ ${#player_indexes[@]} -eq 0 ]; then
     # No matches found, use defaults
@@ -382,26 +388,26 @@ __setup_supermodel3() {
   # Create config backup (only if one doesn't already exist)
   cp -vn "$config_file" "$config_backup_file"
 
-  if [ "$drive_name" == 'mouse' ]; then
+  if [ "$driver_name" == 'mouse' ]; then
     # Replace mouse entries so we can differentiate between player and device index
     sed -i 's/MOUSE1/MOUSE01/g' "$config_file"
     sed -i 's/MOUSE2/MOUSE02/g' "$config_file"
 
-    local device_index
+    local emulator_device_index
     for player_index in 1 2; do
-      device_index=${players["$player_index/device_index"]}
+      local device_index=${players["$player_index/device_index"]}
       if [ -z "$device_index" ]; then
         continue
       fi
 
       # Change existing setting
-      local emulator_device_index=$((device_index+1))
+      emulator_device_index=$((device_index+1))
       sed -i "s/MOUSE0${player_index}/MOUSE${emulator_device_index}/" "$config_file"
     done
 
     # If we didn't replace the 2nd mouse, assume that the 2nd mouse might start
     # at the next device index
-    sed -i "s/MOUSE02/MOUSE$((device_index+1))/g" "$config_file"
+    sed -i "s/MOUSE02/MOUSE$((emulator_device_index+1))/g" "$config_file"
   else
     # Remove all joystick configurations
     local joy_regex="JOY\+[^,\"]\+"
@@ -440,6 +446,43 @@ __setup_supermodel3() {
       # in order to improve loop performance)
       sed -i 's/",/"/g' "$config_file"
     done
+  fi
+}
+
+# Sets input overrides based on how X11 interprets input devices.
+# 
+# Specifically, X11 has some different logic around what's considered a
+# "mouse" (or pointer) device.  Typically this would involve just looking
+# for a mouse handler, but X11 reads the input's attributes and interprets
+# them differently.
+__setup_x11() {
+  local driver_name=$1
+
+  if [ "$driver_name" == 'mouse' ]; then
+    local xinput_outfile=$(mktemp)
+    local xinput_initfile=$(mktemp)
+    echo "exec xinput list > $xinput_outfile" > "$xinput_initfile"
+
+    # Use devices as reported by X11
+    # It would be nice to be able to interpret this just from device capabilities
+    # (and not have to launch a dummy X session), but I haven't figured out how
+    # to do that reliably yet
+    if [ -f /etc/X11/dummy.conf ]; then
+      # dummy drivers are faster in X11 (almost 2x), but require that the appropriate
+      # configure file be present on the filesystem relative to /etc/X11
+      xinit "$xinput_initfile" -- /usr/bin/X -config dummy.conf
+    else
+      local tty_path=$(tty)
+      xinit "$xinput_initfile" -- tty${tty_path:8:1} -keeptty
+    fi
+
+    while read input_name; do
+      input_overrides["$input_name/driver_name"]='mouse'
+    done < <(cat "$xinput_outfile" | grep pointer | grep slave | grep -Ev XTEST | cut -d$'\t' -f 1 | grep -oE '[a-zA-Z]+.+$')
+
+    rm -f "$xinput_outfile" "$xinput_initfile"
+  else
+    input_overrides=()
   fi
 }
 
@@ -764,6 +807,9 @@ __list_raw_devices() {
         ;;
 
       *)
+        if [ -n "$name" ] && [ "${#input_overrides[@]}" -ne 0 ]; then
+          driver_name=${input_overrides["$name/driver_name"]}
+        fi
 
         # Conditions required for an input to be considered:
         # * It's a mouse or joystick
