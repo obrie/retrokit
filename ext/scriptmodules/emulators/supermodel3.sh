@@ -46,7 +46,7 @@ function install_supermodel3() {
 function configure_supermodel3() {
     mkRomDir "arcade"
 
-    addEmulator 0 "$md_id" "arcade" "XINIT:$md_inst/supermodel3.sh $md_inst/$md_id $md_conf_root/$md_id/Supermodel.ini %ROM%"
+    addEmulator 0 "$md_id" "arcade" "XINIT:$md_inst/supermodel3.sh $md_inst/$md_id %ROM%"
     addSystem "arcade"
 
     [[ "$md_mode" == "remove" ]] && return
@@ -55,13 +55,8 @@ function configure_supermodel3() {
     mkUserDir "$md_conf_root/$md_id/Saves"
     mkUserDir "$md_conf_root/$md_id/NVRAM"
 
-    ln -snf "$md_conf_root/$md_id/NVRAM" "$md_inst/NVRAM"
-    ln -snf "$md_conf_root/$md_id/NVRAM" "$home/NVRAM"
     ln -snf "$md_conf_root/$md_id/Saves" "$md_inst/Saves"
-    ln -snf "$md_conf_root/$md_id/Saves" "$home/Saves"
-    ln -snf "$md_conf_root/$md_id" "$home/Config"
-    ln -snf "$md_conf_root/$md_id" "$md_inst/LocalConfig"
-    ln -snf "$md_conf_root/$md_id" "$home/LocalConfig"
+    ln -snf "$md_conf_root/$md_id/NVRAM" "$md_inst/NVRAM"
 
     copyDefaultConfig "$md_inst/Config/Supermodel.ini" "$md_conf_root/$md_id/Supermodel.ini"
     copyDefaultConfig "$md_inst/Config/Games.xml" "$md_conf_root/$md_id/Games.xml"
@@ -70,6 +65,8 @@ function configure_supermodel3() {
     chmod +x "$md_inst/supermodel3.sh"
 
     rm -rf "$md_inst/Config"
+    ln -snf "$md_conf_root/$md_id" "$md_inst/Config"
+
     chown -R $user:$user "$md_inst"
     chown -R $user:$user "$md_conf_root/$md_id"
 }
