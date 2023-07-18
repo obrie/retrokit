@@ -94,6 +94,9 @@ build_emulator_binaries() {
 
     # Build the image
     GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
+
+    # Pull the public retropie key
+    "$retropie_setup_dir/retropie_packages.sh" image chroot "$chroot_dir" sudo gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys DC9D77FF8208FFC51D8F50CCF1B030906A3B0D31
   fi
 
   # Copy modules over to the mounted RetroPie-Setup
@@ -102,6 +105,7 @@ build_emulator_binaries() {
   cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
 
   # Build packages
+  mkdir -p "$retropie_setup_dir/tmp/archives"
   "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
 }
 
