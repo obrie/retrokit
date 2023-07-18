@@ -17,6 +17,14 @@ rp_module_repo="git https://github.com/DirtBagXon/model3emu-code-sinden.git arm"
 rp_module_section="exp"
 rp_module_flags="sdl2"
 
+function __binary_url_supermodel3() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$md_id-$__os_codename-$__platform$(isPlatform 'kms' && echo '-kms').tar.gz"
+}
+
+function install_bin_supermodel3() {
+    downloadAndExtract "$(__binary_url_supermodel3)" "$md_inst" --strip-components 1
+}
+
 function depends_supermodel3() {
     getDepends xinit libsdl2-dev libsdl2-net-dev libsdl2-net-2.0-0 x11-xserver-utils xserver-xorg
     aptRemove xserver-xorg-legacy
