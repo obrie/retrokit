@@ -336,22 +336,27 @@ class Machine:
         if name:
             return cls.NORMALIZED_TITLE_REGEX.sub('', name.lower())
 
-    # Flags from description
+    # Flags part of the description
     @property
-    def flags(self) -> Set[str]:
-        values = set()
-        for group in self.FLAG_REGEX.findall(self.description):
-            values.update(self.FLAG_DELIMITER_REGEX.split(group))
-        return values
-
-    # Flags, isolated
-    @property
-    def flags_str(self) -> str:
+    def flags_description(self) -> str:
         flag_start = self.description.find('(')
         if flag_start >= 0:
             return self.description[flag_start:]
         else:
             return ''
+
+    # Groups of flags from the description
+    @property
+    def flag_groups(self) -> Set[str]:
+        return self.FLAG_REGEX.findall(self.flags_description)
+
+    # Individual flags from the description
+    @property
+    def flags(self) -> Set[str]:
+        values = set()
+        for group in self.flag_groups:
+            values.update(self.FLAG_DELIMITER_REGEX.split(group))
+        return values
 
     # Estimated filesize in bytes
     @property

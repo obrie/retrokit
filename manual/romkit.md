@@ -154,7 +154,8 @@ and sorting/prioritizing roms:
 | emulators              | emulation        | Total number of flag groups in the name                                   |
 | favorites              | config           | Whether the machine is marked as a favorite                               |
 | filesystem             | n/a              | Whether the machine is present on the filesystem                          |
-| flag_groups            | name             | All Flags (text between parens) from the description                      |
+| flag_descriptions      | name             | All Flags (text between parens) from the description, including parens    |
+| flag_groups            | name             | Groups of flags (text between each pair of parens) from the description   |
 | flag_groups_total      | name             | Total number of flag groups in the name                                   |
 | flags                  | name             | Individual Flags (text between parens) from the description               |
 | genres                 | genres           | Genre, as identified by the system or community                           |

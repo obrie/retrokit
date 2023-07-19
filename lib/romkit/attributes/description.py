@@ -20,6 +20,15 @@ class CommentsAttribute(BaseAttribute):
         return machine.comment
 
 
+# All Flags (text between parens) from the description, including parents
+class FlagDescriptionsAttribute(BaseAttribute):
+    rule_name = 'flag_descriptions'
+    data_type = str
+
+    def get(self, machine: Machine) -> str:
+        return machine.flags_description
+
+
 # Individual Flags (text between parens) from the description
 class FlagAttribute(BaseAttribute):
     rule_name = 'flags'
@@ -29,13 +38,13 @@ class FlagAttribute(BaseAttribute):
         return machine.flags
 
 
-# All Flags (text between parens) from the description
+# Groups of flags (text between each pair of parens) from the description
 class FlagGroupsAttribute(BaseAttribute):
     rule_name = 'flag_groups'
     data_type = str
 
     def get(self, machine: Machine) -> Set[str]:
-        return machine.flags_str
+        return machine.flag_groups
 
 
 # Total number of flag groups in the name
@@ -44,5 +53,5 @@ class FlagGroupsTotalAttribute(BaseAttribute):
     data_type = int
 
     def get(self, machine: Machine) -> int:
-        return machine.flags_str.count('(')
+        return len(machine.flag_groups)
 
