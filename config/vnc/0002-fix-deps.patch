@@ -1,0 +1,25 @@
+From 10a8c7c8224c51553a9c559aeb50215b693fe0fd Mon Sep 17 00:00:00 2001
+From: Aaron Pfeifer <aaron.pfeifer@gmail.com>
+Date: Fri, 21 Jul 2023 00:00:00 -0400
+Subject: [PATCH] Fix bullseye dependencies
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 1f47013..b5ef521 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,7 +3,7 @@ CXXFLAGS = -Wall -std=c++11 -O3 -DHAVE_LIBBCM_HOST -DUSE_EXTERNAL_LIBBCM_HOST -D
+ 
+ INCLUDES = -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux
+ LIB_PATHS = -L/opt/vc/lib/
+-LIBS = -lGLESv2 -lEGL -lopenmaxil -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lvncserver -lconfig++
++LIBS = -lGLESv2 -lEGL -lbcm_host -lvcos -lvchiq_arm -lpthread -lrt -lvncserver -lconfig++
+ 
+ SOURCES = main.cpp \
+ 		UFile.cpp \
+-- 
+2.25.1
+

@@ -22,6 +22,7 @@ build() {
 
     # Apply patches
     patch -p1 < "$config_dir/vnc/0001-fix-keyboard.patch"
+    patch -p1 < "$config_dir/vnc/0002-fix-deps.patch"
 
     # Compile
     make
