@@ -212,8 +212,8 @@ class PowerKit():
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/powerkit.cfg')
-    args = parser.parse_args()
-    PowerKit(**vars(args)).run()
+    args = {k: v for k, v in vars(parser.parse_args()).items() if v is not None}
+    PowerKit(**args).run()
 
 
 if __name__ == '__main__':

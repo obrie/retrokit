@@ -149,7 +149,8 @@ def main() -> None:
     parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     args, action_args = parser.parse_known_args()
-    MetaKit(**vars(args)).run(*action_args)
+    args = {k: v for k, v in vars(args).items() if v is not None}
+    MetaKit(**args).run(*action_args)
 
 
 if __name__ == '__main__':

@@ -349,8 +349,8 @@ def main() -> None:
     parser.add_argument('--profile', dest='profile_name', help='Which toggle profile configuration to use')
     parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
     parser.add_argument('--server', dest='server', help='Whether to run this as a server', action='store_true')
-    args = parser.parse_args()
-    ManualKit(**vars(args)).run()
+    args = {k: v for k, v in vars(parser.parse_args()).items() if v is not None}
+    ManualKit(**args).run()
 
 
 if __name__ == '__main__':

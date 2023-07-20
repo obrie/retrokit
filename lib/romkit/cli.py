@@ -57,8 +57,8 @@ def main() -> None:
     parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'organize', 'vacuum'])
     parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
-    args = parser.parse_args()
-    ROMKit(**vars(args)).run()
+    args = {k: v for k, v in vars(parser.parse_args()).items() if v is not None}
+    ROMKit(**args).run()
 
 
 if __name__ == '__main__':
