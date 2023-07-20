@@ -64,5 +64,5 @@ class Config:
         for btn_prefix in button_config.btn_prefixes:
             for btn_suffix in button_config.btn_suffixes:
                 value = self.get(f'{btn_prefix}{btn_name}{btn_suffix}')
-                if value is not None:
+                if value is not None and value != 'nul':
                     return value
