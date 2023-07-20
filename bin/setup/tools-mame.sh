@@ -4,7 +4,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 # We need to install a newer version of chdman for it to work with
-# Dreamcast redump images.  This won't be needed once we're on bullseye.
+# Dreamcast redump images.  This won't be needed once we're on bookworm.
 setup_module_id='tools-mame'
 setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
 
