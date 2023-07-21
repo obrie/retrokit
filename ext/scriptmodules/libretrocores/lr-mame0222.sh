@@ -22,6 +22,8 @@ function depends_lr-mame0222() {
 
 function sources_lr-mame0222() {
     sources_lr-mame
+
+    applyPatch "$md_data/0001-Fix-SOL2-build-on-GCC-10.2.patch"
 }
 
 function build_lr-mame0222() {
