@@ -102,6 +102,15 @@ __setup_env() {
 
     init_profiles
   fi
+
+  # Load common.sh files from profiles so they can provide extensions
+  while read bin_common_path; do
+    if [ "$bin_common_path" == "$bin_dir/common.sh" ]; then
+      continue
+    fi
+
+    source "$bin_common_path"
+  done < <(each_path '{bin_dir}/common.sh')
 }
 
 ##############
