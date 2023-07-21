@@ -83,6 +83,7 @@
   "retropie": {
     "show_menu": true,
     "packages": [
+      "mame-tools",
       "p2keyboard"
     ]
   },
@@ -189,7 +190,6 @@
       "emulationstation-settings",
       "romkit",
       "autoport",
-      "tools-mame",
       "tools-psp",
 
       "system-emulators",

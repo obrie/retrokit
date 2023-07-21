@@ -48,7 +48,7 @@ delete() {
   rm -rfv "$delete_dir"/*
 }
 
-default_binary_packages=(actionmax advmame-joy lr-mame0222 lr-mame0244 lr-mame2016-lightgun lr-swanstation lr-yabasanshiro supermodel3)
+default_binary_packages=(actionmax advmame-joy lr-mame0222 lr-mame0244 lr-mame2016-lightgun lr-swanstation lr-yabasanshiro supermodel3 mame-tools)
 
 # Build binaries for emulators that are added by retrokit
 # 
