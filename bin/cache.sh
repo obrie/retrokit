@@ -56,8 +56,8 @@ default_binary_packages=(actionmax advmame-joy lr-mame0222 lr-mame0244 lr-mame20
 # pretty hard for a number of the above packages when run on Ubuntu.
 build_emulator_binaries() {
   local package=$1
-  local dist=buster
-  local platform=rpi4
+  local dist=$default_retropie_dist
+  local platform=$default_retropie_platform
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [[ "$(id -u)" -ne 0 ]]; then
@@ -112,8 +112,8 @@ build_emulator_binaries() {
 # Upload emulator binaries to github
 sync_emulator_binaries() {
   local package=$1
-  local dist=buster
-  local platform=rpi4
+  local dist=$default_retropie_dist
+  local platform=$default_retropie_platform
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   local packages

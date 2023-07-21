@@ -10,9 +10,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 images_dir="$tmp_dir/images"
 
 # Default image configuration
-dist=buster
-platform=rpi4_400
-retropie_version=4.8
+dist=$default_retropie_dist
+platform=$default_retropie_image_platform
+retropie_version=$default_retropie_version
 profiles=image-base
 
 create() {

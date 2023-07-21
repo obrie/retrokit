@@ -137,13 +137,13 @@ create() {
   local device=$1
   local device_id=$(basename "$device")
 
-  local retropie_version=4.8
-  local raspbian_version=buster
-  local rpi_version=rpi4_400
+  local retropie_dist=$default_retropie_dist
+  local retropie_version=$default_retropie_version
+  local retropie_platform=$default_retropie_image_platform
 
   local images_dir="$tmp_dir/images"
   mkdir -p "$images_dir"
-  local image_name="retropie-$raspbian_version-$retropie_version-$rpi_version"
+  local image_name="retropie-$retropie_dist-$retropie_version-$retropie_platform"
   local image_file="$images_dir/$image_name.img.gz"
 
   # Download Retropie
