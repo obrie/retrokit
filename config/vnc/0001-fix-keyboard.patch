@@ -1,11 +1,13 @@
-From 3b4d11a451226a7fef8ac604090da2f7142f571d Mon Sep 17 00:00:00 2001
+From 2f8537f38c7d95f213191c485e473ebfafb09995 Mon Sep 17 00:00:00 2001
 From: Aaron Pfeifer <aaron.pfeifer@gmail.com>
-Date: Tue, 18 May 2021 15:11:08 -0400
-Subject: [PATCH] Fix keyboard mapping
+Date: Sat, 22 Jul 2023 22:35:47 -0400
+Subject: [PATCH] Improve accuracy of keys that can be emitted by the VNC
+ Keyboard udev device
 
 ---
- DMXKeyboard.cpp | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
+ DMXKeyboard.cpp |   8 ++--
+ UFile.cpp       | 103 ++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 103 insertions(+), 8 deletions(-)
 
 diff --git a/DMXKeyboard.cpp b/DMXKeyboard.cpp
 index cccad31..306b299 100644
@@ -29,6 +31,120 @@ index cccad31..306b299 100644
  	}
  	else if ((code >= 'A' && code <= 'Z') || (code >= 'a' && code <= 'z')) {
  		static const uint16_t map[] = {
+diff --git a/UFile.cpp b/UFile.cpp
+index a91aeb8..c92ea18 100644
+--- a/UFile.cpp
++++ b/UFile.cpp
+@@ -62,10 +62,105 @@ void UFile::Open(bool relativeMode, int width, int height)
+ 		ioctl(m_ufile, UI_SET_EVBIT, EV_KEY);
+ 		ioctl(m_ufile, UI_SET_EVBIT, EV_REP);
+ 		ioctl(m_ufile, UI_SET_EVBIT, EV_SYN);
+-
+-		for (int i = 0; i<KEY_MAX; i++) {
+-			ioctl(m_ufile, UI_SET_KEYBIT, i);
+-		}
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_HOME);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_LEFT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_UP);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_RIGHT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_DOWN);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_PAGEUP);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_PAGEDOWN);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_END);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_LEFTSHIFT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_RIGHTSHIFT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_LEFTCTRL);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_RIGHTCTRL);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_LEFTALT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_RIGHTALT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_A);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_B);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_C);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_D);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_E);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_G);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_H);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_I);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_J);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_K);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_L);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_M);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_N);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_O);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_P);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_Q);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_R);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_S);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_T);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_U);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_V);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_W);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_X);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_Y);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_Z);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_SPACE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_1);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_2);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_3);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_4);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_5);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_6);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_7);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_8);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_9);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_0);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_MINUS);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_EQUAL);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_BACKSPACE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_TAB);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_LEFTBRACE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_RIGHTBRACE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_ENTER);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_SEMICOLON);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_APOSTROPHE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_GRAVE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_BACKSLASH);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_COMMA);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_DOT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_SLASH);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_CAPSLOCK);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F1);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F2);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F3);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F4);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F5);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F6);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F7);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F8);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F9);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_F10);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_NUMLOCK);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_SCROLLLOCK);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_INSERT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_DELETE);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_ESC);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_MENU);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPSLASH);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPASTERISK);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPPLUS);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPMINUS);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPENTER);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KPDOT);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP0);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP1);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP2);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP3);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP4);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP5);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP6);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP7);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP8);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_KP9);
++		ioctl(m_ufile, UI_SET_KEYBIT, KEY_UNKNOWN);
+ 	}
+ 
+ 	strncpy(uinp.name, m_name.c_str(), UINPUT_MAX_NAME_SIZE - 1);
 -- 
-2.20.1
+2.25.1
 
