@@ -19,6 +19,7 @@ The following emulators fall in that category:
 * lr-mame2016 w/ lightgun fixes
 * lr-swanstation
 * lr-yabasanshiro
+* supermodel3
 
 ### Caching binaries
 

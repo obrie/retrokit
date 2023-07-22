@@ -108,6 +108,7 @@ The following emulator modules are included:
 * `actionmax` - Installs the `actionmax` emulator at https://github.com/DirtBagXon/actionmax-pi
 * `advmame-joy` - Installs the `advmame` emulator with patches that disable overrides in advmame
    which hard-code controls for certain controllers
+* `supermodel3` - Installs the `model3emu` emulator at https://github.com/DirtBagXon/model3emu-code-sinden
 
 ### libretrocores
 
@@ -136,6 +137,8 @@ a RetroPie scriptmodule.  In order to avoid replicating the logic for setting up
 
 The following supplementary modules are included:
 
+* mame-tools - Builds tools (such as chdman) for the latest version of MAME
+* p2keyboard - Provides a UI for configuration Player 2 keyboard controls in RetroArch
 * retrokit - UI controls for managing retrokit
 * retrokit-system - Interface for setting up custom emulators / retroarch configs outside the context of a scriptmodule (for use with lr-mess)
 * xpadneo-plus - xpadneo with v0.10.0 backports and support for triggers_to_buttons

@@ -35,6 +35,8 @@ are provided for the following emulators:
 * lr-mame2016-lightgun (adds sinden lightgun support)
 * lr-swanstation
 * lr-yabasanshiro
+* mame-tools
+* supermodel3
 
 In addition, the following types of resources are also stored in github:
 
