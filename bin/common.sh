@@ -241,10 +241,10 @@ check_prereqs() {
 
 # Installs the setupmodule
 install() {
-  depends
-  build
-  configure
-  clean
+  depends "${@}"
+  build "${@}"
+  configure "${@}"
+  clean "${@}"
 }
 
 # Installs required system dependencies
@@ -271,14 +271,14 @@ clean() {
 # downloaded / installed
 update() {
   FORCE_UPDATE=true
-  install
+  install "${@}"
 }
 
 # Uninstalls everything installed by the setupmodule, restoring configurations
 # back to their original form
 uninstall() {
-  restore
-  remove
+  restore "${@}"
+  remove "${@}"
 }
 
 # Restores the configurations modified by the setupmodule
@@ -293,8 +293,8 @@ remove() {
 
 # Uninstalls everything and then installs it again
 reinstall() {
-  uninstall
-  install
+  uninstall "${@}"
+  install "${@}"
 }
 
 # Finds files that can be deleted from the filesystem.  This will only
