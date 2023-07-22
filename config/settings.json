@@ -81,7 +81,10 @@
     "integration": "emulationstation"
   },
   "retropie": {
-    "show_menu": true
+    "show_menu": true,
+    "packages": [
+      "p2keyboard"
+    ]
   },
   "hardware": {
     "controllers": {
@@ -173,6 +176,7 @@
       "retropie-autostart",
       "retropie-scriptmodules",
       "retropie-menus",
+      "retropie-packages",
       "retropie-platforms",
       "retropie-runcommand",
       "scraper",
@@ -199,7 +203,6 @@
       "systems/arcade/controllers-layout",
       "controllers-configscripts",
       "controllers-database",
-      "controllers-p2keyboard",
       "systems/psp/controllers",
       
       "controllers-autoconf",
