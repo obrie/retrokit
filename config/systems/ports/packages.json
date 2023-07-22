@@ -1,14 +1,12 @@
 {
   "doom": {
     "package": "lr-prboom",
-    "package_type": "libretrocores",
     "files": {
       "doom.wad": "$HOME/RetroPie/roms/pc/.exodos/DOOM/DOOM.WAD"
     }
   },
   "duke3d": {
     "package": "eduke32",
-    "package_type": "ports",
     "files": {
       "duke3d.grp": "$HOME/RetroPie/roms/pc/.exodos/Duke3D/DUKE3D/DUKE3D.GRP",
       "duke.rts": "$HOME/RetroPie/roms/pc/.exodos/Duke3D/DUKE3D/DUKE.RTS"
@@ -16,7 +14,6 @@
   },
   "quake": {
     "package": "lr-tyrquake",
-    "package_type": "libretrocores",
     "files": {
       "id1/pak1.pak": "$HOME/RetroPie/roms/pc/.exodos/Quake/QUAKE/ID1/PAK1.PAK"
     }

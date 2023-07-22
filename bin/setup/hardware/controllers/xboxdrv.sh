@@ -10,7 +10,7 @@ depends() {
 }
 
 build() {
-  install_retropie_package supplementary xboxdrv source
+  install_retropie_package xboxdrv source
   __build_services
 }
 
@@ -53,7 +53,7 @@ restore() {
 }
 
 remove() {
-  uninstall_retropie_package supplementary xboxdrv
+  uninstall_retropie_package xboxdrv
   sudo apt-get remove -y acl
   sudo rm -rfv /etc/systemd/system/xboxdrv*.service
 }

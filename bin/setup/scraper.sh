@@ -12,7 +12,7 @@ skyscraper_dir="$retropie_configs_dir/all/skyscraper"
 # 
 # Instructions: https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper
 build() {
-  install_retropie_package 'supplementary' 'skyscraper'
+  install_retropie_package skyscraper
 
   # Add video convert script
   file_cp '{config_dir}/skyscraper/videoconvert.sh' "$skyscraper_dir/videoconvert.sh" backup=false envsubst=false
@@ -30,7 +30,7 @@ remove() {
   rm -fv "$skyscraper_dir/video_convert.sh"
 
   if [ -d "$retropie_dir/supplementary/skyscraper" ]; then
-    uninstall_retropie_package skyscraper || true
+    uninstall_retropie_package skyscraper
   fi
 }
 

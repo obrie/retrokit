@@ -3,9 +3,15 @@
 ##############
 
 install_retropie_package() {
-  local package_type=$1
-  local name=$2
-  local build=${3:-auto}
+  local name=$1
+  local build=${2:-auto}
+
+  # Identify package type (supplementary / emulators / etc.)
+  local package_type=$(get_retropie_package_type "$name")
+  if [ -z "$package_type" ]; then
+    >&2 echo "Could not find scriptmodule: $name"
+    return 1
+  fi
 
   local install_dir="$retropie_dir/$package_type/$name"
 
@@ -23,6 +29,22 @@ install_retropie_package() {
   fi
 
   sudo __curl_opts=$__curl_opts "$retropie_setup_dir/retropie_packages.sh" "$name" "_${build}_"
+}
+
+# Gets the package type for the given package.  Examples:
+# * emulators
+# * libretrocores
+# * supplementary
+get_retropie_package_type() {
+  local name=$1
+
+  local package_path=$(find "$retropie_setup_dir/scriptmodules" "$retropie_setup_dir/ext" -name "$name.sh")
+  if [ -z "$package_path" ]; then
+    return 1
+  fi
+
+  local package_dir=$(dirname "$package_path")
+  basename "$package_dir"
 }
 
 configure_retropie_package() {

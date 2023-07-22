@@ -9,7 +9,7 @@ setup_module_desc='Xbox bluetooth controller setup and configuration'
 xpadneo_conf_file='/etc/modprobe.d/99-xpadneo-bluetooth-overrides.conf'
 
 build() {
-  install_retropie_package 'supplementary' 'xpadneo-plus' 'source'
+  install_retropie_package xpadneo-plus source
 }
 
 configure() {
@@ -22,7 +22,7 @@ restore() {
 }
 
 remove() {
-  uninstall_retropie_package 'xpadneo-plus'
+  uninstall_retropie_package xpadneo-plus
 }
 
 setup "${@}"

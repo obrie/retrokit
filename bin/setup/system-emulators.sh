@@ -12,12 +12,7 @@ emulators_config_backup_file="$emulators_config_file.rk-src"
 build() {
   # Install emulator packages
   while IFS=$field_delim read -r package build cmd; do
-    local package_type='emulators'
-    if [[ "$package" == lr-* ]]; then
-      package_type='libretrocores'
-    fi
-
-    install_retropie_package "$package_type" "$package" "$build"
+    install_retropie_package "$package" "$build"
 
     # A custom command is provided for the emulator.  This is typically used when
     # the system name isn't automatically mapped by the emulator.
@@ -115,7 +110,7 @@ remove() {
   while read -r package; do
     # Only uninstall non-default packages
     if [ -z "${default_packages[$package]}" ]; then
-      uninstall_retropie_package "$package" || true
+      uninstall_retropie_package "$package"
     fi
   done < <(emulators_setting 'keys[]')
 }

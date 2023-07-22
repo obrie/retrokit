@@ -9,7 +9,7 @@ setup_module_desc='RetroPie menu visibility configuration'
 gamelist_file="$home/.emulationstation/gamelists/retropie/gamelist.xml"
 
 build() {
-  install_retropie_package 'supplementary' 'retrokit' 'source'
+  install_retropie_package retrokit source
 }
 
 configure() {
@@ -21,7 +21,7 @@ configure() {
 }
 
 __reconfigure_retrokit() {
-  configure_retropie_package 'retrokit'
+  configure_retropie_package retrokit
 }
 
 __hide_menus() {
@@ -56,7 +56,7 @@ restore() {
 }
 
 remove() {
-  uninstall_retropie_package 'retrokit'
+  uninstall_retropie_package retrokit
 }
 
 setup "${@}"
