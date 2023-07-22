@@ -127,14 +127,11 @@ sync_emulator_binaries() {
   local upload_url=$(echo "$release_json" | jq -r '.upload_url' | cut -d'{' -f1)
 
   for package in "${packages[@]}"; do
+    local package_type=$(get_retropie_package_type "$package")
+
     # Stage the archive file
     local archive_dir="$retropie_setup_dir/tmp/archives/$dist/$platform/kms"
-    local archive_file
-    if [[ "$package" == lr-* ]]; then
-      archive_file="$archive_dir/libretrocores/$package.tar.gz"
-    else
-      archive_file="$archive_dir/emulators/$package.tar.gz"
-    fi
+    local archive_file="$archive_dir/$package_type/$package.tar.gz"
 
     # Upload to github
     if [ -f "$archive_file" ]; then
