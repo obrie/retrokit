@@ -8,10 +8,13 @@ import math
 import pycurl
 import requests
 import shutil
+import signal
 import tempfile
 import threading
-from queue import Queue
+import time
+from collections import deque
 from pathlib import Path, PurePath
+from requests.adapters import HTTPAdapter, Retry
 from urllib.parse import urlparse
 
 # High-performance downloader using a multi-threaded approach in order to
@@ -30,17 +33,33 @@ class Downloader:
     def __init__(self,
         auth: str = None,
         # Number of threads to run per download
-        concurrency: int = 5,
+        max_concurrency: int = 5,
         # File size after which the file will be split into multiple parts
         part_threshold: int = 10 * 1024 * 1024,
         # The size of parts that are downloaded in each thread
         part_size: int = 1 * 1024 * 1024,
+        # Timeout *after* connection when no data is received
+        timeout: int = 300,
+        # Timeout of initial connection
+        connect_timeout: int = 15,
+        # Number of times to re-attempt a download
+        retries: int = 3,
+        # Backoff factor to apply between attempts
+        backoff_factor: float = 2.0,
     ) -> None:
         self.auth = auth and BaseAuth.from_name(auth)
-        self.concurrency = concurrency
+        self.max_concurrency = max_concurrency
         self.part_threshold = part_threshold
         self.part_size = part_size
+        self.timeout = timeout
+        self.connect_timeout = connect_timeout
+        self.retries = retries
+        self.backoff_factor = backoff_factor
         self.session = requests.Session()
+
+        http_adapter = HTTPAdapter(max_retries=Retry(total=retries, backoff_factor=backoff_factor))
+        self.session.mount('http://', http_adapter)
+        self.session.mount('https://', http_adapter)
 
     @classmethod
     def instance(cls) -> Downloader:
@@ -52,15 +71,28 @@ class Downloader:
     # Builds a new downloader from the given json
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> Downloader:
-        return cls(**slice_only(json, ['auth', 'concurrency', 'part_threshold', 'part_size']), **kwargs)
+        return cls(**slice_only(json, [
+            'auth',
+            'max_concurrency',
+            'part_threshold',
+            'part_size',
+            'timeout',
+            'connect_timeout',
+            'retries',
+            'backoff_factor',
+        ]), **kwargs)
 
     # Builds a new downloader configured for the given authentication
     def with_auth(self, auth: str) -> Downloader:
         return Downloader(
             auth=auth,
-            concurrency=self.concurrency,
+            max_concurrency=self.max_concurrency,
             part_threshold=self.part_threshold,
             part_size=self.part_size,
+            timeout=self.timeout,
+            connect_timeout=self.connect_timeout,
+            retries=self.retries,
+            backoff_factor=self.backoff_factor,
         )
 
     # Attempts to download from the given source unless either:
@@ -97,6 +129,7 @@ class Downloader:
                     download_path.unlink()
                     raise requests.exceptions.HTTPError()
 
+    # Downloads from a remote source to the given local destination file path
     def download(self, source: str, destination: Path) -> None:
         if self.auth and self.auth.match(source):
             headers = self.auth.headers
@@ -111,7 +144,12 @@ class Downloader:
 
         # Find how how big the file is so that we can potentially split the download
         # between many workers
-        response = self.session.head(source, headers=headers, cookies=cookies, allow_redirects=True)
+        response = self.session.head(source,
+            headers=headers,
+            cookies=cookies,
+            allow_redirects=True,
+            timeout=(self.connect_timeout, self.timeout),
+        )
         response.raise_for_status()
         file_size = int(response.headers.get('Content-Length', 0))
 
@@ -121,100 +159,222 @@ class Downloader:
         # * Server cannot encode response
         if file_size > self.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
             parts = math.ceil(file_size / self.part_size)
-
-            # Create a file with the expect size so that each thread can write to
-            # its own portion
-            with destination.open('wb') as file:
-                file.truncate(file_size)
         else:
-            # Download with a single thread
-            destination.touch()
             parts = 1
             file_size = 0
 
-        # Create the queue of parts to download
-        queue = Queue()
-        for i in range(parts):
-            start = self.part_size * i
-            end = min(file_size, start + self.part_size)
-            queue.put({'start': start, 'end': end})
+        request = ChunkedRequest(self, source, destination, parts=parts, file_size=file_size)
+        request.headers = headers
+        request.cookies = cookies
+        request.perform()
 
-        # Start up workers to download
-        workers = []
-        for i in range(min(parts, self.concurrency)):
-            worker = Worker(queue, source, destination, headers, cookies)
-            worker.start()
-            workers.append(worker)
+
+# Represents an http request that will attempt to open multiple connections
+# in order to improve overall download speed
+class ChunkedRequest:
+    def __init__(self, client: Downloader, source: str, destination: Path, parts: int, file_size: int):
+        self.client = client
+        self.source = source
+        self.destination = destination
+        self.parts = parts
+        self.file_size = file_size
+
+        # Defaults
+        self.headers = {}
+        self.cookies = {}
+
+        self._default_sigint_handler = signal.getsignal(signal.SIGPIPE)
+        self._workers = []
+
+        # Create the queue of parts to download
+        self.queue = deque()
+        for i in range(self.parts):
+            start = client.part_size * i
+            end = min(file_size, start + client.part_size)
+            self.queue.append({'start': start, 'end': end, 'attempts': 0})
+
+    # Start processing this request
+    def perform(self) -> None:
+        self._create_destination()
 
         try:
-            # Wait for workers to finish
-            for worker in workers:
-                worker.join(raise_exception=True)
-        except Exception as e:
-            # Empty the queue
-            with queue.mutex:
-                queue.queue.clear()
+            self._create_workers()
+            self._event_loop()
+        finally:
+            self.close()
 
-            # Wait for all workers to finish, ignoring any exceptions
-            for worker in workers:
-                worker.join()
+    # Ensure destination file exists
+    def _create_destination(self) -> None:
+        self.destination.touch()
 
-            raise e
+        # Ensure the file has the expected size so that each connection can write to
+        # its own portion
+        if self.parts > 1 and self.file_size:
+            with self.destination.open('wb') as file:
+                file.truncate(self.file_size)
+
+    # Create the workers that'll be processing from the queue
+    def _create_workers(self) -> None:
+        # Ignore sigpipe since the workers will have NOSIGNAL enabled
+        signal.signal(signal.SIGPIPE, self._ignore_signal)
+
+        curl_share = pycurl.CurlShare()
+        curl_share.setopt(pycurl.SH_SHARE, pycurl.LOCK_DATA_COOKIE)
+        curl_share.setopt(pycurl.SH_SHARE, pycurl.LOCK_DATA_DNS)
+        curl_share.setopt(pycurl.SH_SHARE, pycurl.LOCK_DATA_SSL_SESSION)
+
+        # Start up workers to download
+        for i in range(min(self.parts, self.client.max_concurrency)):
+            worker = Worker(self, i)
+            worker.connection.setopt(pycurl.SHARE, curl_share)
+            self._workers.append(worker)
+
+    # Starts the event loop in curl
+    def _event_loop(self) -> None:
+        for worker in self._workers:
+            worker.start()
+
+        # Wait for workers to finish
+        while True:
+            time.sleep(1)
+
+            # Check for an exception
+            for worker in self._workers:
+                if worker.exception:
+                    raise worker.exception
+
+            # See if they're all still alive
+            if all([not worker.is_alive() for worker in self._workers]):
+                break
+
+    # Simple no-op to ignore certain process signals
+    def _ignore_signal(self, *args, **kwargs) -> None:
+        pass
+
+    # Closes all open file handles / connections
+    def close(self) -> None:
+        # Restore signal handler
+        signal.signal(signal.SIGPIPE, self._default_sigint_handler)
+
+        for worker in self._workers:
+            worker.close()
 
 
+# Represents a threaded worker that's processed from a request chunk queue
 class Worker:
-    def __init__(self, queue: Queue, source: str, destination: Path, headers: dict, cookies: dict):
-        self.queue = queue
-        self.destination = destination
-        self.connection = pycurl.Curl()
-        self.connection.setopt(pycurl.COOKIE, ';'.join(f'{key}={value}' for key, value in cookies.items()))
-        self.connection.setopt(pycurl.FOLLOWLOCATION, True)
-        self.connection.setopt(pycurl.HTTPHEADER, list(f'{key}: {value}' for key, value in headers.items()))
-        self.connection.setopt(pycurl.URL, source)
-        self.connection.setopt(pycurl.FAILONERROR, True)
+    def __init__(self, request: ChunkedRequest, id: int):
+        self.id = id
+        self.request = request
 
+        self.connection = pycurl.Curl()
+        self.connection.setopt(pycurl.URL, request.source)
+        if request.cookies:
+            self.connection.setopt(pycurl.COOKIE, ';'.join(f'{key}={value}' for key, value in request.cookies.items()))
+        if request.headers:
+            self.connection.setopt(pycurl.HTTPHEADER, list(f'{key}: {value}' for key, value in request.headers.items()))
+
+        # Error handling
+        self.connection.setopt(pycurl.FAILONERROR, True)
+        self.connection.setopt(pycurl.NOSIGNAL, 1)
+
+        # Set basic timeouts
+        self.connection.setopt(pycurl.CONNECTTIMEOUT, 30)
+        self.connection.setopt(pycurl.TIMEOUT, 300)
+
+        # Allow redirects
+        self.connection.setopt(pycurl.FOLLOWLOCATION, True)
+        self.connection.setopt(pycurl.MAXREDIRS, 5)
+
+        self.closed = False
         self.exception = None
-        self.thread = None
+        self._thread = None
+
+    # The Downloader client
+    @property
+    def client(self) -> Downloader:
+        return self.request.client
 
     # Start a new thread to consume from the queue
     def start(self) -> None:
-        self.thread = threading.Thread(target=self.download)
-        self.thread.setDaemon(True)
-        self.thread.start()
+        self._thread = threading.Thread(target=self._process_queue)
+        self._thread.setDaemon(True)
+        self._thread.start()
+
+    # Is this worker still running?
+    def is_alive(self) -> bool:
+        return self._thread and self._thread.is_alive()
+
+    # Ends any processing by the worker and ensures the connection is closed
+    # 
+    # Note this will wait for the worker's thread to end before completing.
+    def close(self) -> None:
+        self.closed = True
+
+        try:
+            self.connection.close()
+        except Exception as e:
+            # Ignore -- we don't want to raise exceptions here
+            pass
 
     # Wait for the worker to finish.  This will throw an exception if one was
     # encountered during the download process.
     def join(self, raise_exception: bool = False) -> None:
-        if self.thread:
-            self.thread.join()
-            self.thread = None
+        if self._thread:
+            self._thread.join()
+            self._thread = None
 
             if raise_exception and self.exception:
                 raise self.exception
 
     # Downloads parts that have been enqueued
-    def download(self) -> None:
+    def _process_queue(self) -> None:
         try:
-            with self.destination.open('r+b') as file:
+            with self.request.destination.open('r+b') as file:
                 self.connection.setopt(pycurl.WRITEDATA, file)
 
-                while not self.queue.empty():
-                    request = self.queue.get_nowait()
+                while self.request.queue and not self.closed:
+                    try:
+                        chunk = self.request.queue.popleft()
+                    except IndexError as e:
+                        # Nothing left in queue
+                        chunk = None
 
                     # Nothing left -- finish the thread
-                    if not request:
+                    if not chunk:
                         break
 
-                    start = request['start']
-                    end = request['end'] - 1
-                    file.seek(start)
-
-                    # Specify the download range
-                    if end != -1:
-                        self.connection.setopt(pycurl.RANGE, '%d-%d' % (start, end))
-
-                    self.connection.perform()
-
-                self.connection.close()
+                    self._download_chunk(chunk, file)
         except Exception as e:
             self.exception = e
+
+    # Downloads a remote chunk to the given file
+    def _download_chunk(self, chunk: dict, file) -> None:
+        start = chunk['start']
+        end = chunk['end'] - 1
+        file.seek(start)
+
+        # Specify the download range
+        if end != -1:
+            self.connection.setopt(pycurl.RANGE, '%d-%d' % (start, end))
+
+        try:
+            self.connection.perform()
+            logging.debug(f'[Connection #{self.id}] Download success for part {start} -> {end}')
+
+            # Use final connection url so we don't have to deal with redirects and
+            # closed connections
+            effective_url = self.connection.getinfo(self.connection.EFFECTIVE_URL)
+            self.connection.setopt(pycurl.URL, effective_url)
+        except Exception as e:
+            # Reset the source url in case the resolved url is no longer available
+            self.connection.setopt(pycurl.URL, self.request.source)
+
+            attempts = chunk['attempts']
+            if attempts < self.client.retries:
+                # Add back to the queue (in the front, so this is immediately tried again)
+                chunk['attempts'] = attempts + 1
+                logging.debug(f'[Connection #{self.id}] Download error for part {start} -> {end} (attempt #{attempts}): {e}')
+                self.request.queue.appendleft(chunk)
+            else:
+                # Perma-failure
+                raise e

@@ -900,7 +900,13 @@ For example:
 ```json
 {
   "downloads": {
-    "concurrency": 2
+    "max_concurrency": 5,
+    "part_threshold": 10485760,
+    "part_size": 1048576,
+    "retries": 3,
+    "backoff_factor": 2,
+    "timeout": 300,
+    "conect_timeout": 5
   }
 }
 ```

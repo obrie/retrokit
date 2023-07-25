@@ -13,16 +13,11 @@ import logging
 import os
 import requests
 import shlex
-import time
 import traceback
 from collections import defaultdict
 from copy import copy
 from pathlib import Path
 from typing import Dict, Generator, List, Optional, Tuple
-
-# Maximum number of times we'll attempt to install a machine
-INSTALL_MAX_ATTEMPTS = os.getenv('INSTALL_MAX_ATTEMPTS', 3)
-INSTALL_RETRY_WAIT_TIME = os.getenv('INSTALL_RETRY_WAIT_TIME', 30) # seconds
 
 class BaseSystem:
     name = 'base'
@@ -194,17 +189,14 @@ class BaseSystem:
     # Installs the given machine and returns true/false depending on whether the
     # install was successful
     def install_machine(self, machine: Machine) -> bool:
-        for attempt in range(INSTALL_MAX_ATTEMPTS):
-            try:
-                machine.install()
-                return True
-            except (requests.exceptions.MissingSchema, requests.exceptions.URLRequired) as e:
-                logging.error(f'[{machine.name}] Failed to download (no url found)')
-                break
-            except Exception as e:
-                logging.error(f'[{machine.name}] Install failed')
-                traceback.print_exc()
-                time.sleep(INSTALL_RETRY_WAIT_TIME)
+        try:
+            machine.install()
+            return True
+        except (requests.exceptions.MissingSchema, requests.exceptions.URLRequired) as e:
+            logging.error(f'[{machine.name}] Failed to download (no url found)')
+        except Exception as e:
+            logging.error(f'[{machine.name}] Install failed')
+            traceback.print_exc()
 
         return False
 
