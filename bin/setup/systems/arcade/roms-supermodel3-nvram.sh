@@ -11,7 +11,7 @@ nvram_dir="$retropie_configs_dir/supermodel3/NVRAM"
 
 configure() {
   while read -r rom_name; do
-    local nvram_path=$(first_path "{cache_dir}/supermodel3/NVRAM/$rom_name.nv")
+    local nvram_path=$(first_path "{system_config_dir}/supermodel3/NVRAM/$rom_name.nv")
 
     if [ -n "$nvram_path" ]; then
       file_cp "$nvram_path" "$nvram_dir/$rom_name.nv"
