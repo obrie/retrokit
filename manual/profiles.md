@@ -668,3 +668,19 @@ most Raspberry Pi 4b devices.  This includes:
 
 This is considered a "low boost".  "High boost" options are also available, but not enabled
 by default.
+
+### [platform-rpi-bullseye](/profiles/platform-rpi-bullseye/)
+
+The `platform-rpi-bullseye` profile provides certain overrides so that retrokit can be
+run on Bullseye distributions of the Raspberry Pi OS instead of Buster.
+
+For example:
+
+* Use the FKMS display driver to support VNC and manualkit in a non-X11 environment
+* Set the default distribution to bullseye for generating binary builds and images
+* etc.
+
+This should be used anytime you expect to be using retrokit on a bullseye installation.
+
+*NOTE* that bullseye isn't yet officially supported by RetroPie, so you shouldn't
+expect *everything* to work just yet.

@@ -1,0 +1,11 @@
+arm_64bit=0
+
+# TODO:
+# 
+# We have to use fkms because it is currently impossible to render manuals
+# to the screen when there's another application that already owns the primary
+# DRM plane (i.e. is the DRM master).
+# 
+# We have to move to some form of a window manager in order to make this
+# work or we have to stop rendering manuals on top of running games.
+dtoverlay=vc4-fkms-v3d

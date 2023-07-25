@@ -5,7 +5,7 @@
 Most emulators are installed using the binary assuming you're using:
 
 * Raspberry Pi 4b+
-* Raspbian Buster
+* Raspbian Buster / Bullseye
 
 This is because [pre-built binaries](https://github.com/obrie/retrokit/releases/tag/latest)
 have been provided for emulators that would normally be built from source.

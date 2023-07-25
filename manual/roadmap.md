@@ -3,7 +3,6 @@
 There are too many improvements to count here, but some ideas are:
 
 * Move manualkit to sdl2
-* Support Raspberry Pi Buster (when officially supported by RetroPie)
 * Support more systems (amiga, pico-8, tic-80, zxspectrum)
 * Support non-Raspbian platforms (Ubuntu)
 * Support different frontends (attractmode, pegasus)
@@ -20,7 +19,6 @@ My focus has been and always will be to improve retrokit based on the systems I'
 personally building.  This means the places where you're most likely to see major changes
 in are likely:
 
-* Support Raspberry Pi Buster
 * Support more systems
 
 The other ideas in this roadmap are simply ideas for a rainy day.  Of course, I'd love
