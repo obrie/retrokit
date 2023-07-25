@@ -42,8 +42,8 @@ __load_rom_data() {
 
 # Reset metadata that was imported either through romkit or user configuration
 __reset_imports() {
-  __scraper --cache purge:m=import
-  __scraper --cache purge:m=user
+  __scraper --cache purge:m=import || true
+  __scraper --cache purge:m=user || true
 }
 
 # Scrape from all configured sources
