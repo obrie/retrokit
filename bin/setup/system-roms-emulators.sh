@@ -28,6 +28,7 @@ configure() {
   done < <(romkit_cache_list | jq -r 'select(.emulator) | [.name, .playlist .name, .emulator] | join("'$field_delim'")')
 
   echo 'Replacing emulator selections...'
+  touch "$emulators_config_file"
   sed -i "/^${system}_/d" "$emulators_config_file"
   crudini --merge "$emulators_config_file" < <(echo -e "$selections_cfg")
   sort -o "$emulators_config_file" "$emulators_config_file"
