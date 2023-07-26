@@ -16,7 +16,7 @@ elif sys.argv[2] == 'text':
   ioctl(fd, 0x4B3A, 0x00)
 
   # Clear screen
-  fd.write('\033c')
+  fd.write(b'\033c')
 
 # VT_SETMODE (0x5602), parameter 0x00 (VT_AUTO)
 buf = array('h', [0])
