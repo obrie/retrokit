@@ -39,7 +39,7 @@ class ExodosToDat(BaseAction):
                             element.append(description)
 
                             # Add ROM
-                            element.append(lxml.etree.Element('rom', name=f'{name}.zip'))
+                            element.append(lxml.etree.Element('rom', name=name))
 
                             # Add Year
                             release_date_tag = game.find('ReleaseDate')
