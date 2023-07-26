@@ -44,7 +44,7 @@ show() {
 
   if [ -n "$launch_image" ]; then
     # Change tty to graphics mode
-    python "$dir/tty.py" /dev/tty graphics
+    python3 "$dir/tty.py" /dev/tty graphics
 
     # Determine the size of the screen we're working with
     local screen_dimensions=$(fbset -s | grep -E "^mode" | grep -oE "[0-9]+x[0-9]+")
@@ -97,7 +97,7 @@ clear() {
   __blank_screen
 
   # Restore text mode for the console
-  python "$dir/tty.py" /dev/tty text
+  python3 "$dir/tty.py" /dev/tty text
 }
 
 "${@}"
