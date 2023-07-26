@@ -27,10 +27,10 @@ export roms_dir="$retropie_data_dir/roms"
 export retropie_setup_dir="$home/RetroPie-Setup"
 
 # Platform defaults
-export default_retropie_dist=buster
-export default_retropie_version=4.8
-export default_retropie_platform=rpi4
-export default_retropie_image_platform=rpi4_400
+export default_retropie_dist=${DEFAULT_RETROPIE_DIST:-buster}
+export default_retropie_version=${DEFAULT_RETROPIE_VERSION:-4.8}
+export default_retropie_platform=${DEFAULT_RETROPIE_PLATFORM:-rpi4}
+export default_retropie_image_platform=${DEFAULT_RETROPIE_IMAGE_PLATFORM:-rpi4_400}
 
 # Import helper functions
 source "$bin_dir/helpers/configs.sh"
