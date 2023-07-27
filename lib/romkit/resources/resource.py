@@ -13,13 +13,25 @@ from urllib.parse import urlparse
 
 class Resource:
     def __init__(self,
+        # Source url
         source_url: str,
+        # Cached url (if source isn't available)
         cached_source_url: Optional[str],
+        # Path to store the resource
         target_path: Optional[Path],
+        # Path to store a reference to the target based on a stable identifier
         xref_path: Optional[Path],
+        # Path to store the downloaded source (before processing)
         download_path: Optional[Path],
+        # Action to run for postprocessing the downloaded source
         install_action: BaseAction,
+        # How to uniquely identify files in a resource
         file_identifier: str,
+        # Whether the files in a resource are predefined in the DAT.  This can be useful
+        # if some resources don't define their full list of internal files (e.g. machines
+        # and their roms) but should still be downloaded.
+        predefined: bool,
+        # Client to use for downloading
         downloader: Downloader,
     ) -> None:
         self.source_url = source_url
@@ -59,6 +71,7 @@ class Resource:
             self.install_action.config['delete_source'] = False
 
         self.file_identifier = file_identifier
+        self.predefined = predefined
         self.downloader = downloader
 
     # The path of the source url, intended to only be used with a file protocol
@@ -128,16 +141,29 @@ class Resource:
 
 class ResourceTemplate:
     def __init__(self,
+        # Source url
         source_url_template: str,
+        # Cached url (if source isn't available)
         cached_source_url_template: Optional[str] = None,
+        # Path to store the resource
         target_path_template: Optional[str] = None,
+        # Path to store a reference to the target based on a stable identifier
         xref_path_template: Optional[str] = None,
+        # Path to store the downloaded source (before processing)
         download_path_template: Optional[str] = None,
+        # Client to use for downloading
         downloader: Downloader = Downloader.instance(),
+        # Action to run for postprocessing the downloaded source
         install_action: BaseAction = Copy(),
+        # Dynamic context to pull for each machine
         discovery: Optional[BaseDiscovery] = None,
+        # How to uniquely identify files in a resource
         file_identifier: str = 'crc',
+        # Whether the files in a resource are predefined in the DAT
+        predefined: bool = True,
+        # The default context to use when interpolating templates
         default_context: dict = {},
+        # Whether to generate stubbed resource target paths (empty files/directories)
         stub: bool = False,
     ):
         self.source_url_template = source_url_template
@@ -149,6 +175,7 @@ class ResourceTemplate:
         self.install_action = install_action
         self.discovery = discovery
         self.file_identifier = file_identifier
+        self.predefined = predefined
         self.default_context = default_context
 
         if stub:
@@ -176,6 +203,7 @@ class ResourceTemplate:
             download_path_template=json.get('download'),
             install_action=install_action,
             file_identifier=json.get('file_identifier', 'crc'),
+            predefined=json.get('predefined', True),
             **kwargs
         )
 
@@ -210,6 +238,7 @@ class ResourceTemplate:
             download_path=self._render_path(self.download_path_template, context),
             install_action=self.install_action,
             file_identifier=self.file_identifier,
+            predefined=self.predefined,
             downloader=self.downloader,
         )
 

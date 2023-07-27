@@ -650,7 +650,7 @@ class Machine:
 
         # Find matching ROMs to install
         roms = self.roms_from(machine)
-        if not roms:
+        if self.resource.predefined and not roms:
             return
 
         if self.resource.contains(roms):
@@ -666,7 +666,7 @@ class Machine:
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self) -> None:
-        if not self.resource:
+        if not(self.resource and self.resource.predefined):
             return
 
         # Clean the resource
