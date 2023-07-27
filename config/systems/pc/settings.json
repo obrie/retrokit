@@ -30,7 +30,8 @@
           "download": "$HOME/RetroPie/roms/pc/.exodos/{machine}.zip",
           "target": "$HOME/RetroPie/roms/pc/.exodos/{machine_sourcefile}",
           "install": {"action": "zip_extract", "include_parent": false},
-          "file_identifier": "name"
+          "file_identifier": "name",
+          "predefined": false
         },
         "dat": {
           "source": "{url}/Content/XODOSMetadata.zip/xml%2FMS-DOS.xml",

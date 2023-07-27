@@ -37,7 +37,8 @@
       "resources": {
         "machine": {
           "source": "{url}/roms.zip/roms/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/daphne/.roms/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/daphne/.roms/{machine}.zip",
+          "predefined": false
         },
         "disk": {
           "source": "{url}/{machine_description}.zip",
