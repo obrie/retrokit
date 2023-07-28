@@ -1,6 +1,6 @@
 # master
 
-## 2.0.0 / 2023-07-29
+## 2.0.0 / 2023-08-04
 
 * Second major release.  Actual changelogs to be tracked from hereon out.
 
