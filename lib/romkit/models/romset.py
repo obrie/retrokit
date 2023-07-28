@@ -85,6 +85,14 @@ class ROMSet:
 
         return romset
 
+    # Checks whether this romset has been configured to be able to
+    # download machines.  There must either be:
+    # * An explicit url on the romset
+    # * A url to be discovered
+    @property
+    def is_valid_for_download(self) -> bool:
+        return self.url or self.discovery and not(self.discovery.has_missing_urls)
+
     # Whether this romset has defined the given resource
     def has_resource(self, name: str) -> bool:
         return name in self.resource_templates

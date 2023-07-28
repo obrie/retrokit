@@ -19,12 +19,14 @@ class BaseDiscovery:
         ttl: int = 86400,
         downloader: Downloader = Downloader.instance(),
     ):
-        self.urls = urls
+        # Remove empty / blank urls
+        self.urls = [url for url in urls if url]
         self.match = match
         self.ttl = ttl
         self.downloader = downloader
         self.download_dir = Path(f'{tempfile.gettempdir()}/discovery/{self.name}')
         self._loaded = False
+        self.has_missing_urls = not(self.urls and self.urls == urls)
 
     # Builds a Discovery generator from the given JSON data
     @classmethod
@@ -46,6 +48,8 @@ class BaseDiscovery:
     # Discover mappings for the configured paths in thise Discovery object
     def mappings(self, context) -> Dict[str, str]:
         if not self._loaded:
+            if not self.urls:
+                logging.debug(f'No urls provided for discovery')
             self.load()
             self._loaded = True
 

@@ -176,10 +176,18 @@ class BaseSystem:
 
     # Installs all of the filtered machines
     def install(self) -> None:
+        installed_romsets = set()
+
         # Install and filter out invalid machines
         machines = self.list()
         for machine in machines:
+            installed_romsets.add(machine.romset)
             machine.before_install()
+
+        # Check whether the romsets are valid
+        for romset in installed_romsets:
+            if not romset.is_valid_for_download:
+                logging.warn(f'URL(s) missing for romset: {romset.name}')
 
         for machine in machines:
             self.install_machine(machine)
