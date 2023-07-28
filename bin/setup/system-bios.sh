@@ -12,6 +12,11 @@ build() {
 
   while IFS=$'\t' read -r bios_name bios_url_template; do
     local bios_url=$(render_template "$bios_url_template" url="$base_url")
+    if [[ ! "$bios_url" =~ ^(https?|file): ]]; then
+      >&2 echo "Invalid BIOS url: $bios_url"
+      continue
+    fi
+
     download "$bios_url" "$bios_dir/$bios_name"
   done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
