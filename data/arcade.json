@@ -6897,7 +6897,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -19708,7 +19708,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -37872,7 +37872,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -38799,7 +38799,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -46596,7 +46596,11 @@
     },
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "fairyl2": {
     "genres": [
@@ -50063,7 +50067,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -68407,7 +68411,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -81503,7 +81507,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -85275,7 +85279,7 @@
     ],
     "emulation": {
       "emulator": "lr-mame",
-      "rating": 4
+      "rating": 5
     }
   },
   "lottofun": {
@@ -135906,7 +135910,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -137610,8 +137614,8 @@
       "only_buttons"
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
-      "rating": 3
+      "emulator": "lr-fbneo",
+      "rating": 5
     }
   },
   "quiztvqq": {
@@ -141224,7 +141228,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -158441,7 +158445,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -162132,7 +162136,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -164059,7 +164063,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -166143,7 +166147,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame2015",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -175701,7 +175705,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -180327,7 +180331,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
