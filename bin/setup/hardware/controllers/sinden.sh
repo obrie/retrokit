@@ -38,14 +38,9 @@ build() {
     echo "$version" | sudo tee "$install_dir/version"
   fi
 
-  # Create ports
-  dir_rsync '{lib_dir}/sindenkit/shortcuts' "$roms_dir/ports/+Sinden/"
-
-  # Don't scrape ports files
-  touch "$roms_dir/ports/+Sinden/.skyscraperignoretree"
-
-  # Add management script
+  # Add management script / menu
   file_cp '{lib_dir}/sindenkit/sinden.sh' "$install_dir/sinden.sh" as_sudo=true backup=false envsubst=false
+  install_retropie_package sindensettings
 }
 
 configure() {
@@ -184,12 +179,13 @@ __retropie_config_file_for_player() {
 }
 
 remove() {
-  rm -rfv  "$roms_dir/ports/+Sinden"
   sudo rm -rfv "$install_dir"
 
   # We only remove mono as other dependencies are used by other parts of the system
   sudo apt-get remove -y mono-complete
   sudo apt-get autoremove --purge -y
+
+  uninstall_retropie_package sindensettings
 }
 
 setup "${@}"

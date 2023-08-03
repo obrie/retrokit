@@ -25,18 +25,19 @@ When `sindenkit` is installed, a set of udev rules are added that automatically:
 `sindenkit` understands how many players are already connected and which Player
 configuration to use.
 
-## EmulationStation Shortcuts
+## EmulationStation Menu
 
-In order to help manage your Sinden lightgun behavior through the UI, a set of
-EmulationStation shortcuts are installed to the `ports` system.
+In order to help manage your Sinden lightgun behavior through the UI, a menu is install
+to the EmulationStation RetroPie system.
 
 ### Calibrate
 
-The "Calibrate" menu provides shortcuts for supporting the calibration of lightguns
+The "Calibrate" menu provides actions for supporting the calibration of lightguns
 to your current screen.
 
 * Calibrate Player 1
 * Calibrate Player 2
+* Set Screen Height
 * Start All
 * Start Player 1
 * Start Player 2
@@ -44,7 +45,7 @@ to your current screen.
 
 ### Controls
 
-The "Controls" menu provides shortcuts for changing the behavior of how controls work
+The "Controls" menu provides actions for changing the behavior of how controls work
 on the lightgun.
 
 * Enable Trigger Repeat
@@ -52,7 +53,7 @@ on the lightgun.
 
 ### Recoil
 
-The "Recoil" menu provides shortcuts for changing the recoil behavior on your lightguns
+The "Recoil" menu provides actions for changing the recoil behavior on your lightguns
 (if they're installed).
 
 * Disable Recoil

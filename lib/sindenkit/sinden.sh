@@ -18,8 +18,11 @@ usage() {
   echo " $0 stop <player_id>"
   echo " $0 restart <player_id>"
   echo " $0 calibrate <player_id>"
+  echo " $0 edit_screen_height <height_in_inches> ..."
   echo " $0 edit_all key1=value1 key2=value2 ..."
   echo " $0 edit <player_id> key1=value1 key2=value2 ..."
+  echo " $0 get_screen_height <player_id>"
+  echo " $0 get <player_id> key"
   exit 1
 }
 
@@ -188,6 +191,24 @@ __player_bin_name() {
   fi
 }
 
+# Real guns and real gun sights don't 100% line up as the sight is a couple of cm's
+# above the center of the barrel.  This is the same with lightguns.  However, when
+# you calibrate the lightgun, Sinde will make an x/y pixel adjustment so that they
+# *do* line up.
+#
+# Unfortunately, this only works if you remain the same distance from the screen.
+# If you move closer or further away from the screen, that adjustment needs to be
+# changed *unless* you know the height of the screen.  Once Sinden knows the height,
+# it can update the x/y pixel adjustment based on how close / far away you are from
+# the screen.
+edit_screen_height() {
+  [ "$#" -eq 1 ] || usage
+
+  local height=$1
+  local offset=$(bc -l <<< "x = (120 / $height); scale = 2; x / 1")
+  edit_all "OffsetGunsightY=$offset"
+}
+
 # Modifies the configuration on all players
 edit_all() {
   [ "$#" -gt 0 ] || usage
@@ -200,8 +221,7 @@ edit() {
   [ "$#" -gt 1 ] || usage
 
   local player_id=$1
-
-  local config_file="$install_dir/Player$player_id/$(__player_bin_name "$player_id").config"
+  local config_file=$(__get_config_file "$1")
 
   for setting_config in "${@:2}"; do
     IFS='=' read setting_name setting_value <<< $setting_config
@@ -211,6 +231,31 @@ edit() {
   if __is_running "$player_id"; then
     restart "$player_id"
   fi
+}
+
+# Get the screen height currently configured
+get_screen_height() {
+  local offset_gunsight_y=$(get 1 OffsetGunsightY)
+  if [ -n "$offset_gunsight_y" ]; then
+    bc -l <<< "x = (120 / $offset_gunsight_y); scale = 2; x / 1"
+  fi
+}
+
+# Get a setting for the given player number
+get() {
+  [ "$#" -eq 2 ] || usage
+
+  local player_id=$1
+  local setting_name=$2
+  local config_file=$(__get_config_file "$1")
+
+  xmlstarlet sel -t -v "/*/*/*[@key=\"$setting_name\"]/@value" "$config_file" || true
+}
+
+# Get the path to the given player's configuration file
+__get_config_file() {
+  local player_id=$1
+  echo "$install_dir/Player$player_id/$(__player_bin_name "$player_id").config"
 }
 
 [ "$#" -gt 0 ] || usage
