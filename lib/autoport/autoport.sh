@@ -473,7 +473,7 @@ __setup_x11() {
       xinit "$xinput_initfile" -- /usr/bin/X -config dummy.conf
     else
       local tty_path=$(tty)
-      xinit "$xinput_initfile" -- tty${tty_path:8:1} -keeptty
+      xinit "$xinput_initfile" -- vt${tty_path:8:1} -keeptty
     fi
 
     while read input_name; do
