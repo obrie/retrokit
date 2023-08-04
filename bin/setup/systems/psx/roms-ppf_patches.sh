@@ -30,7 +30,7 @@ patches=(
   ['Star Wars - Rebel Assault II - The Hidden Empire (USA) (Disc 1)']=1
 )
 
-deps() {
+depends() {
   if [ ! `command -v applyppf` ]; then
     local ppf_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
     git clone --depth 1 https://github.com/meunierd/ppf.git "$ppf_dir"
