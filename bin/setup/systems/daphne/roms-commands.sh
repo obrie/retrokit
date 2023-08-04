@@ -33,8 +33,8 @@ __configure_commands() {
     emulator=${emulators["${emulator:-default}/emulator"]}
 
     # Set up the path that we're writing to
-    local target_file="$hypseus_commands_dir/commands/$rom_name.commands"
-    mkdir -p "$hypseus_commands_dir/commands"
+    local target_file="$hypseus_commands_dir/$rom_name.commands"
+    mkdir -p "$hypseus_commands_dir"
     rm -fv "$target_file"
 
     local source_files=("{system_config_dir}/$emulator.commands")
