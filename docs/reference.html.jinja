@@ -85,14 +85,15 @@
           <tr>
             <td>
               {%- for button in buttons.split(',') -%}
+                {%- if loop.index > 1 and button != '2x' %}
+              + 
+                {% endif -%}
                 {%- if button in retropad_button_names -%}
               <img src="images/retropad/retro_{{button}}.png" />
-                {%- elif loop.counter == 1 -%}
-              {{button}}
                 {%- elif button == '2x' -%}
               ²
                 {%- else -%}
-              + {{button}}
+              {{button}}
                 {%- endif -%}
               {%- endfor -%}
             </td>

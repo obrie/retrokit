@@ -263,7 +263,12 @@ __add_hotkey_controls() {
   local libretro_names=$(get_core_library_names)
   if [ -n "$libretro_names" ]; then
     # Figure out if there's a hotkey button
-    local hotkey_button=$(__find_retroarch_hotkey_button 'enable_hotkey')
+    local hotkey_config=$(__find_retroarch_hotkey_button 'enable_hotkey')
+    local hotkey_button=${retropad_buttons_map[$hotkey_config]}
+    if [ -z "$hotkey_button" ]; then
+      # Map to the original config (a keyboard key)
+      hotkey_button=$(echo "$hotkey_config" | sed 's/RETROK_//g')
+    fi
     local edit_args=()
 
     # Determine if we're needing to quit twice
