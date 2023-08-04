@@ -7,6 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system/daphne/roms-commands'
 setup_module_desc='Daphne game commands to run on startup'
 
+actionmax_launch_file="$retropie_dir/emulators/actionmax/actionmax.sh"
 hypseus_launch_file="$retropie_dir/emulators/hypseus/hypseus.sh"
 hypseus_commands_dir="$retropie_system_config_dir/commands"
 
@@ -19,11 +20,13 @@ configure() {
 # Sets up the hypseus launch file to look for commands files in a shared
 # configuration directory rather than within the rom's directory
 __configure_params() {
-  backup_and_restore "$hypseus_launch_file" as_sudo=true
+  for launch_file in "$actionmax_launch_file" "$hypseus_launch_file"; do
+    backup_and_restore "$launch_file" as_sudo=true
 
-  local insert_line=$(grep -nE '^if' "$hypseus_launch_file" | head -n 1 | cut -d: -f 1)
-  local append_to_script="if [[ -f \"$hypseus_commands_dir/\$name.commands\" ]]; then params=\$(<\"$hypseus_commands_dir/\$name.commands\"); fi"
-  sudo sed -i "$insert_line i $append_to_script" "$hypseus_launch_file"
+    local insert_line=$(grep -nE '^if' "$launch_file" | head -n 1 | cut -d: -f 1)
+    local append_to_script="if [[ -f \"$hypseus_commands_dir/\$name.commands\" ]]; then params=\$(<\"$hypseus_commands_dir/\$name.commands\"); fi"
+    sudo sed -i "$insert_line i $append_to_script" "$launch_file"
+  done
 }
 
 __configure_commands() {
