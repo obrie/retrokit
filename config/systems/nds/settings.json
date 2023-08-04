@@ -27,9 +27,9 @@
         "/opt/retropie/configs/nds/drastic/savestates/*"
       ]
     },
-    "lr-desmume2015": {
-      "core_name": "desmume2015",
-      "library_name": "DeSmuME 2015",
+    "lr-desmume": {
+      "core_name": "desmume",
+      "library_name": "DeSmuME",
       "gamestate": [
         "{rom_dir}/{rom}.dsv"
       ]
