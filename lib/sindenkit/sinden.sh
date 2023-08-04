@@ -179,7 +179,13 @@ __run() {
     mono_bin=mono-service
   fi
 
-  sudo $mono_bin $(__player_bin_name "$player_id") ${@:3}
+  local bin_name=$(__player_bin_name "$player_id")
+
+  if ! ps aux | grep -F "$bin_name" | grep -v grep; then
+    # Ensure lock file is removed so that the service can start up
+    sudo rm -f /tmp/"$bin_name".lock
+    sudo $mono_bin "$bin_name" ${@:3}
+  fi
 }
 
 __player_bin_name() {
