@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -g \
+  system emulator rom_path rom_filename rom_name rom_command \
   default_config_file system_override_file emulator_override_file rom_override_file \
   joystick_profile mouse_profile keyboard_profile
 
@@ -12,8 +13,20 @@ retropie_configs_dir=/opt/retropie/configs
 declare -A input_overrides
 
 usage() {
-  echo "usage: $0 <setup|restore> <system_name> <emulator_name> /path/to/rom"
+  echo "usage: $0 <setup|restore> <system_name> <emulator_name> <rom_path> <runcommand>"
   exit 1
+}
+
+# Initializes the autoport context
+init() {
+  [ "$#" -eq 4 ] || usage
+
+  system=$1
+  emulator=$2
+  rom_path=$3
+  rom_command=$4
+  rom_filename=${rom_path##*/}
+  rom_name=${rom_filename%.*}
 }
 
 # Sets up the port configurations for the given system running the
@@ -23,13 +36,7 @@ usage() {
 # * emulator - Name of the emulator (e.g. lr-fbneo)
 # * rom_path - Path to the ROM being loaded
 setup() {
-  [ "$#" -eq 3 ] || usage
-
-  local system=$1
-  local emulator=$2
-  local rom_path=$3
-  local rom_filename=${rom_path##*/}
-  local rom_name=${rom_filename%.*}
+  init "${@}"
 
   # Define config paths
   default_config_file="$retropie_configs_dir/all/autoport.cfg"
@@ -38,7 +45,7 @@ setup() {
   rom_override_file="$retropie_configs_dir/$system/autoport/$rom_name.cfg"
 
   # Determine what type of input configuration system we're dealing with
-  local system_type=$(__get_system_type "$emulator")
+  local system_type=$(__get_system_type)
   if [ -z "$system_type" ]; then
     echo "autoport implementation unavailable for $emulator"
     return
@@ -107,7 +114,12 @@ __find_setting() {
   fi
 
   # Find the relevant section
-  local section_content=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
+  local section_content
+  if [ -n "$section" ]; then
+    section_content=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
+  else
+    section_content=$(cat "$path")
+  fi
 
   # Find the associated key within that section
   if echo "$section_content" | grep -Eq "^[ \t]*$key[ \t]*="; then
@@ -121,12 +133,32 @@ __find_setting() {
 #
 # This determines how we'll enable the input priority order.
 __get_system_type() {
-  local emulator=$1
-
   if [[ "$emulator" == "lr-"* ]]; then
     echo 'libretro'
   elif [[ "$emulator" =~ ^(redream|drastic|ppsspp|hypseus|mupen64plus|supermodel3) ]]; then
     echo "${BASH_REMATCH[1]}"
+  fi
+}
+
+# Looks up the name of the libretro core that's being launched
+__get_libretro_core_name() {
+  local libretro_core_filename=$(echo "$rom_command" | grep -oE "[^/]+\.so" | grep -oE "^[^.]+")
+  local libretro_core_info_path="$retropie_configs_dir/all/retroarch/cores/$libretro_core_filename.info"
+  local libretro_core_name
+  if [ -f "$libretro_core_info_path" ]; then
+    __find_setting "$libretro_core_info_path" '' corename
+  else
+    # In some cases we have to fall back to a manual mapping
+    declare -A mappings=(
+      [mamearcade2016_libretro]=mame2016_libretro
+    )
+
+    libretro_core_name=${mappings[$libretro_core_filename]}
+    if [ -n "$libretro_core_name" ]; then
+      echo "$libretro_core_name"
+    else
+      return 1
+    fi
   fi
 }
 
@@ -156,10 +188,40 @@ __setup_libretro() {
     local device_type=${players["$player_index/device_type"]}
 
     echo "Player $player_index: index $device_index"
+
+    # Retroarch config contains:
+    # * Port mapping
     echo "input_player${player_index}_${retroarch_driver_name}_index = \"$device_index\"" >> "$retroarch_config_file"
 
+    # Remap config contains:
+    # * Device type
     if [ -n "$device_type" ]; then
-      echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$retroarch_config_file"
+      local libretro_core_name=$(__get_libretro_core_name)
+      if [ -z "$libretro_core_name" ]; then
+        echo "Failed to find core name for $libretro_core_filename.so"
+        return 1
+      fi
+
+      local remap_dir=$(__find_setting "$retropie_configs_dir/$system/retroarch.cfg" '' input_remapping_directory || "$retropie_configs_dir/$system")
+      local core_remap_dir="$remap_dir/$libretro_core_name"
+      local remap_file="$core_remap_dir/$rom_name.rmp"
+      local remap_backup_file="$remap_file.autoport"
+      local core_remap_file="$core_remap_dir/$libretro_core_name.rmp"
+
+      # We're either going to edit the exiting game-specific remap file,
+      # use the emulator one as a base, or start from scratch
+      if [ -f "$remap_file" ]; then
+        cp -v "$remap_file" "$remap_backup_file"
+      else
+        mkdir -p "$core_remap_dir"
+        touch "$remap_backup_file.missing"
+
+        if [ -f "$core_remap_file" ]; then
+          cp "$core_remap_file" "$remap_file"
+        fi
+      fi
+
+      echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$remap_file"
     fi
   done
 }
@@ -837,16 +899,10 @@ __list_raw_devices() {
 # Restores the emulator configuration back to how it was originally set up
 # prior to the overrides introduced by autoport
 restore() {
-  if [ "$#" -lt 3 ]; then
-    usage
-  fi
-
-  local system=$1
-  local emulator=$2
-  local rom_path=$3
+  init "${@}"
 
   # Determine what type of port configuration system we're dealing with
-  local system_type=$(__get_system_type "$emulator")
+  local system_type=$(__get_system_type)
   if [ -z "$system_type" ]; then
     return
   fi
@@ -856,8 +912,33 @@ restore() {
 }
 
 __restore_libretro() {
-  # No-op
-  return
+  local libretro_core_name=$(__get_libretro_core_name)
+  if [ -z "$libretro_core_name" ]; then
+    echo "Failed to find core name for $libretro_core_filename.so"
+    return 1
+  fi
+
+  local remap_dir=$(__find_setting "$retropie_configs_dir/$system/retroarch.cfg" '' input_remapping_directory || "$retropie_configs_dir/$system")
+  local core_remap_dir="$remap_dir/$libretro_core_name"
+  if [ ! -d "$core_remap_dir" ]; then
+    return
+  fi
+
+  local remap_file="$core_remap_dir/$rom_name.rmp"
+  local remap_backup_file="$remap_file.autoport"
+
+  if [ -f "$remap_backup_file" ]; then
+    # Restore the original game-specific remap
+    mv -v "$remap_backup_file" "$remap_file"
+  elif [ -f "$remap_backup_file.missing" ]; then
+    # Delete the remap files since they were never there to begin with
+    rm -fv "$remap_file" "$remap_backup_file.missing"
+  fi
+
+  # Remove empty folders
+  if [ -z "$(ls -A "$core_remap_dir")" ]; then
+    rmdir -v "$core_remap_dir"
+  fi
 }
 
 __restore_redream() {
