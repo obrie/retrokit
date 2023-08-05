@@ -146,7 +146,7 @@ __get_libretro_core_name() {
   local libretro_core_info_path="$retropie_configs_dir/all/retroarch/cores/$libretro_core_filename.info"
   local libretro_core_name
   if [ -f "$libretro_core_info_path" ]; then
-    __find_setting "$libretro_core_info_path" '' corename
+    libretro_core_name=$(__find_setting "$libretro_core_info_path" '' corename)
   else
     # In some cases we have to fall back to a manual mapping
     declare -A mappings=(
@@ -154,11 +154,13 @@ __get_libretro_core_name() {
     )
 
     libretro_core_name=${mappings[$libretro_core_filename]}
-    if [ -n "$libretro_core_name" ]; then
-      echo "$libretro_core_name"
-    else
-      return 1
-    fi
+  fi
+
+  if [ -n "$libretro_core_name" ]; then
+    libretro_core_name=${libretro_core_name// (Git)/}
+    echo "$libretro_core_name"
+  else
+    return 1
   fi
 }
 
