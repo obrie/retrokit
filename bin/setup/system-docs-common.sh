@@ -264,10 +264,13 @@ __add_hotkey_controls() {
   if [ -n "$libretro_names" ]; then
     # Figure out if there's a hotkey button
     local hotkey_config=$(__find_retroarch_hotkey_button 'enable_hotkey')
-    local hotkey_button=${retropad_buttons_map[$hotkey_config]}
-    if [ -z "$hotkey_button" ]; then
-      # Map to the original config (a keyboard key)
-      hotkey_button=$(echo "$hotkey_config" | sed 's/RETROK_//g')
+    local hotkey_button
+    if [ -n "$hotkey_config" ]; then
+      hotkey_button=${retropad_buttons_map[$hotkey_config]}
+      if [ -z "$hotkey_button" ]; then
+        # Map to the original config (a keyboard key)
+        hotkey_button=$(echo "$hotkey_config" | sed 's/RETROK_//g')
+      fi
     fi
     local edit_args=()
 
