@@ -136,7 +136,7 @@
       "core_name": "flycast",
       "library_name": "Flycast",
       "gamestate": [
-        "{rom_dir}/{rom}.nvmem"
+        "{rom_dir}/{rom}.nvmem",
         "{rom_dir}/{rom}.nvmem2"
       ]
     },
