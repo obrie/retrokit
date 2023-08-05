@@ -6,6 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='tools-pdf'
 setup_module_desc='Supplementary tools for processing PDFs'
 
+# TODO: These won't be needed once we're on bookworm
 ghostscript_min_version=9.55.0
 qpdf_min_version=10.6.3
 
@@ -74,7 +75,7 @@ __depends_exif() {
 
 # Tools to make PDFs searchable
 __depends_ocr() {
-  sudo pip3 install ocrmypdf~=13.3.0
+  sudo pip3 install ocrmypdf~=13.3.0 cryptography==3.3.2
   sudo apt-get install -y \
     tesseract-ocr-ara \
     tesseract-ocr-ces \
