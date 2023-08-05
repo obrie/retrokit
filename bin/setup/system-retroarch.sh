@@ -19,11 +19,11 @@ configure() {
 # System configuration overrides
 __configure_system_config() {
   # System configs
-  ini_merge '{system_config_dir}/retroarch.cfg' "$retropie_system_config_dir/retroarch.cfg"
+  ini_merge '{system_config_dir}/retroarch.cfg' "$retropie_system_config_dir/retroarch.cfg" comments='^#include '
 
   # Shared system configs
   while read shared_config_name; do
-    ini_merge "{system_config_dir}/$shared_config_name.cfg" "$retropie_system_config_dir/$shared_config_name.cfg" backup=false
+    ini_merge "{system_config_dir}/$shared_config_name.cfg" "$retropie_system_config_dir/$shared_config_name.cfg" backup=false comments='^#include '
   done < <(each_path '{system_config_dir}' find '{}' -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 

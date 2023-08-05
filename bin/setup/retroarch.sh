@@ -28,12 +28,12 @@ configure() {
 }
 
 __configure_global_overrides() {
-  ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_file" restore=false
+  ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_file" restore=false comments='^#include '
 }
 
 __configure_shared_overrides() {
   while read shared_config_name; do
-    ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "$retropie_configs_dir/all/$shared_config_name.cfg" backup=false
+    ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "$retropie_configs_dir/all/$shared_config_name.cfg" backup=false comments='^#include '
   done < <(each_path '{config_dir}/retroarch' find '{}'  -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 

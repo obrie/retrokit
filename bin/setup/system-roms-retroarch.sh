@@ -56,7 +56,7 @@ __configure_retroarch_configs() {
     # Merge in any valid paths
     for path in "${paths_to_merge[@]}"; do
       if any_path_exists_cached "$path"; then
-        ini_merge "$path" "$target_file" backup=false
+        ini_merge "$path" "$target_file" backup=false comments='^#include '
       fi
     done
 
