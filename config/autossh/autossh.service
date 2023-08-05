@@ -4,9 +4,9 @@ After=network-online.target
 
 [Service]
 User=pi
-Environment=AUTOSSH_LOGFILE=/var/log/autossh/default.log AUTOSSH_PIDFILE=/var/run/autossh/default.pid
+Environment=AUTOSSH_LOGFILE=/var/log/autossh/default.log AUTOSSH_PIDFILE=/run/autossh/default.pid
 EnvironmentFile=/etc/autossh/default.conf
-PIDFile=/var/run/autossh/default.pid
+PIDFile=/run/autossh/default.pid
 ExecStart=/usr/bin/autossh $SSH_OPTIONS $TARGET_HOST $FORWARDS
 Restart=always
 RestartSec=60
