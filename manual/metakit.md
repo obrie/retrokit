@@ -17,6 +17,21 @@ use that metadata without having to worry about what system it's dealing with.
 These goals are intended to help ensure that this data is high-quality and can be
 kept up-to-date as system DAT files are updated.
 
+## Dependencies
+
+The minimum metakit dependencies are:
+
+* internetarchive
+* questionary
+* waybackpy
+
+To install the relevant Python dependencies:
+
+```bash
+# Install the minimum Python dependencies
+metakit/setup.sh depends
+```
+
 ## Usage
 
 ```bash
