@@ -176,6 +176,7 @@ ini_merge() {
   local backup='true'
   local restore='true'
   local envsubst='true'
+  local comments=''
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if ! any_path_exists "$source"; then
@@ -200,7 +201,12 @@ ini_merge() {
 
   echo "Merging ini $source to $target"
   while read source_file; do
-    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_file" envsubst="$envsubst")"
+    local prepared_source_file=$(conf_prepare "$source_file" envsubst="$envsubst")
+    $cmd crudini --merge --inplace "$target" < "$prepared_source_file"
+
+    if [ -n "$comments" ]; then
+      grep -E "$comments" "$prepared_source_file" | $cmd tee -a "$target" >/dev/null
+    fi
   done < <(each_path "$source")
 
   if [ "$space_around_delimiters" == "false" ]; then
