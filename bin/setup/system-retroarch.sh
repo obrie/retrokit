@@ -36,11 +36,12 @@ __configure_emulator_configs() {
     local source_file="$source_dir/$library_name.cfg"
     local target_dir="$retroarch_config_dir/$library_name"
     local target_file="$target_dir/$library_name.cfg"
+
+    ini_merge "$source_file" "$target_file"
+
     if ! any_path_exists "$source_dir"; then
       continue
     fi
-
-    ini_merge "$source_file" "$target_file"
 
     # Shared emulator configs
     while read shared_config_name; do
