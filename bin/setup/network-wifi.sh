@@ -11,7 +11,10 @@ configure() {
     file_cp '{config_dir}/network/wpa_supplicant/wpa_supplicant.conf' '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
 
     # Explicitly enable the country in order to trigger rfkill changes
-    country=$(crudini --get /etc/wpa_supplicant/wpa_supplicant.conf '' 'country')
+    # 
+    # We avoid the use of crudini here so that we reduce additional external dependencies
+    # in order to enable wifi.
+    country=$(cat /etc/wpa_supplicant/wpa_supplicant.conf | grep -E '^country=' | cut -d'=' -f2)
     if [ -n "$country" ]; then
       sudo raspi-config nonint do_wifi_country "$country" >/dev/null
     fi
