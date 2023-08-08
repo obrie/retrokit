@@ -163,6 +163,8 @@ env_merge() {
       $cmd dotenv -f "$target" set "$env_line"
     done < <(cat "$(conf_prepare "$source_file" envsubst="$envsubst")" | grep -Ev "^#" | grep .)
   done < <(each_path "$source")
+
+  __conf_restore_permissions "$cmd" "$target"
 }
 
 # Merges INI files, backing up the target
@@ -212,6 +214,8 @@ ini_merge() {
   if [ "$space_around_delimiters" == "false" ]; then
     $cmd sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" "$target"
   fi
+
+  __conf_restore_permissions "$cmd" "$target"
 }
 
 # Looks up a configuration value in an INI file
@@ -259,6 +263,8 @@ restore_partial_ini() {
 
       # Merge the inputs back in
       $cmd crudini --merge --inplace "$file" < "$file_to_remerge"
+
+      __conf_restore_permissions "$cmd" "$file"
     else
       restore_file "$file" "${@:3}"
     fi
@@ -315,6 +321,7 @@ json_merge() {
   done < <(each_path "$source")
 
   $cmd mv "$staging_file" "$target"
+  __conf_restore_permissions "$cmd" "$target"
 }
 
 # Edits in-place one or more keys on the given JSON file
@@ -435,6 +442,7 @@ file_cp() {
   $cmd rm -f "$target"
 
   $cmd cp "$(conf_prepare "$prioritized_source" envsubst="$envsubst")" "$target"
+  __conf_restore_permissions "$cmd" "$target"
 }
 
 # Copies a file, backing up the target
@@ -517,4 +525,16 @@ render_template() {
     export "${@:2}"
     echo "$template" | sed -r 's/\{([^}]+)\}/$\1/g' | envsubst
   )
+}
+
+# Restores the file permissions after a new configuration file was overwritten.
+# This requires that the original file be backed up so that we have a reference
+# file to work off of.
+__conf_restore_permissions() {
+  local cmd=$1
+  local file=$2
+
+  if [ -f "$file.rk-src" ]; then
+    $cmd chmod --reference="$file.rk-src" "$file"
+  fi
 }
