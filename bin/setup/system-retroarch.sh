@@ -78,19 +78,17 @@ __configure_core_options() {
 
   local tmp_core_options_file=$(mktemp -p "$tmp_ephemeral_dir")
   while read core_option_prefix; do
-    # Global defaults from RetroPie
-    echo "Merging $core_option_prefix core options from $global_core_options_file to $core_options_file"
-    grep -E "^$core_option_prefix[\-_]" "$global_core_options_file" > "$tmp_core_options_file" || true
-    if [ -s "$tmp_core_options_file" ]; then
-      ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
-    fi
+    # Merge paths include:
+    # * Global defaults from RetroPie
+    # * retrokit global overrides
+    for merge_path in "$global_core_options_file" '{config_dir}/retroarch/retroarch-core-options.cfg'; do
+      echo "Merging $core_option_prefix core options from $merge_path to $core_options_file"
+      each_path "$merge_path" cat '{}' | grep -E "^$core_option_prefix[\-_]" > "$tmp_core_options_file" || true
 
-    # retrokit global overrides
-    echo "Merging $core_option_prefix global overrides to $core_options_file"
-    each_path '{config_dir}/retroarch/retroarch-core-options.cfg' cat '{}' | grep -E "^$core_option_prefix[\-_]" > "$tmp_core_options_file" || true
-    if [ -s "$tmp_core_options_file" ]; then
-      ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
-    fi
+      if [ -s "$tmp_core_options_file" ]; then
+        ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
+      fi
+    done
   done < <(emulators_setting '.[] | select(.core_name) | .core_option_prefix // .core_name' | sort | uniq)
 
   # Merge in system-specific overrides
@@ -141,6 +139,10 @@ __restore_emulator_configs() {
 }
 
 __restore_system_config() {
+  if [ ! -d "$retropie_system_config_dir" ]; then
+    return
+  fi
+
   restore_file "$retropie_system_config_dir/retroarch.cfg" delete_src=true
   find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec rm -fv '{}' +
 }
