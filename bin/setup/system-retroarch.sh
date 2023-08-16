@@ -82,10 +82,10 @@ __configure_core_options() {
     # * Global defaults from RetroPie
     # * retrokit global overrides
     for merge_path in "$global_core_options_file" '{config_dir}/retroarch/retroarch-core-options.cfg'; do
-      echo "Merging $core_option_prefix core options from $merge_path to $core_options_file"
       each_path "$merge_path" cat '{}' | grep -E "^$core_option_prefix[\-_]" > "$tmp_core_options_file" || true
 
       if [ -s "$tmp_core_options_file" ]; then
+        echo "Merging $core_option_prefix core options from $merge_path to $core_options_file"
         ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
       fi
     done
