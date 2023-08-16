@@ -10,8 +10,11 @@ export app_dir=$(cd "$setup_dir/.." && pwd)
 export bin_dir="$app_dir/bin"
 export ext_dir="$app_dir/ext"
 export lib_dir="$app_dir/lib"
-export field_delim=$'\u001f'
 export retrokit_version='2.0'
+
+# Delimiters (follows similar implementation to ANSI/NIST-ITL Standard)
+export field_delim=$'\u001d'
+export item_delim=$'\u001f'
 
 export binary_base_url='https://github.com/obrie/retrokit/releases/download/latest'
 
