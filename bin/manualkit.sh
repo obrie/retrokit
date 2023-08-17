@@ -42,6 +42,7 @@ remote_sync_system_manuals() {
   local install='true'
   local upload_sources='true'
   local upload_manuals='true'
+  local retries=10
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
@@ -65,8 +66,8 @@ remote_sync_system_manuals() {
   echo "$system manuals ($manuals_count, missing: $missing_count)"
   if [ "$upload_sources" == 'true' ]; then
     # Upload sources reference
-    ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
-    ia upload "$archive_id" "$data_file.missing" --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
+    ia upload "$archive_id" "$data_file.sources" --retries=$retries --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
+    ia upload "$archive_id" "$data_file.missing" --retries=$retries --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
   fi
 
   # Download and process the manuals
@@ -86,7 +87,7 @@ remote_sync_system_manuals() {
     # Zip up the files and upload to internetarchive
     local zip_file=$(mktemp -u -p "$tmp_ephemeral_dir")
     zip -j -db -r "$zip_file" "$postprocess_dir"/*.pdf
-    ia upload "$archive_id" "$zip_file" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
+    ia upload "$archive_id" "$zip_file" --retries=$retries --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
     rm "$zip_file"
   fi
 }
