@@ -97,8 +97,11 @@ class ManualFinder:
             current_download_path = self._build_download_path(f"{website['name']}-current", shared=website.get('shared', False), include_date=False)
             if current_download_path.exists():
                 previous_download_path = self._build_download_path(f"{website['name']}-previous", shared=website.get('shared', False), include_date=('compare_to' not in website))
-                print(f'cp -v {shlex.quote(str(current_download_path))} {shlex.quote(str(current_download_path.with_suffix(".snapshot")))}')
-                print(f'mv -v {shlex.quote(str(current_download_path))} {shlex.quote(str(previous_download_path))}')
+                if 'compare_to' in website:
+                    print(f'cp -v {shlex.quote(str(current_download_path))} {shlex.quote(str(previous_download_path))}')
+                else:
+                    print(f'cp -v {shlex.quote(str(current_download_path))} {shlex.quote(str(current_download_path.with_suffix(".snapshot")))}')
+                    print(f'mv -v {shlex.quote(str(current_download_path))} {shlex.quote(str(previous_download_path))}')
 
     # Refreshes the internetarchive content for the "manuals" collection
     def download_internetarchive_index(self) -> None:
