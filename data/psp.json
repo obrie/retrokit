@@ -1398,7 +1398,15 @@
     "genres": [
       "Compilation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/atarievolved_manual/atarievolved_manual.pdf"
+      }
+    ]
   },
   "Athena": {
     "id": "4876e3b4acb9839c1fc07ce0d2fca43aeb6a8bb0",
@@ -2717,6 +2725,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/burnout_dom_manual/burnout_dom_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -11061,6 +11075,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/legobatman_manual/legobatman_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -11450,6 +11470,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/lemmings_manual/lemmings_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -11514,6 +11540,12 @@
     ],
     "age_rating": "7",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/lbp_manual/lbp_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -11958,6 +11990,14 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/mlb11_manual/mlb11_manual.pdf"
+      }
     ]
   },
   "MTV Pimp My Ride": {
@@ -12605,7 +12645,15 @@
     "genres": [
       "Role playing games"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/ultimate2_manual/ultimate2_manual.pdf"
+      }
+    ]
   },
   "Marvel Nemesis - Rise of the Imperfects": {
     "id": "b9711ceed4e0e12b7136a4d60b45fbf5cad7c975",
@@ -13106,7 +13154,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Metal Slug Anthology (USA).pdf"
+        "url": "https://archive.org/download/msanth_manual/msanth_manual.pdf"
       }
     ],
     "merge": [
@@ -14148,7 +14196,15 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/nbastreet_manual/nbastreet_manual.pdf"
+      }
+    ]
   },
   "NCAA Football 07": {
     "id": "8f5dd34be14cf0274b09ae1713ae6ca89f67a948",
@@ -14228,7 +14284,15 @@
     "genres": [
       "Sports"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/street3_manual/street3_manual.pdf"
+      }
+    ]
   },
   "NHL 07": {
     "id": "e5d5f2612f77e4ca56c2138bb1e6f15f486968bf",
@@ -16019,7 +16083,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/pipemania_manual_202307/pipemania_manual.pdf"
+      }
+    ]
   },
   "Piposaru Academia 2": {
     "id": "847f10dd5ba123bc30168817ffaec03f489a8114",

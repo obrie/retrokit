@@ -1483,6 +1483,12 @@
       },
       {
         "languages": [
+          "en-au"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-BV-AUS_En_0.pdf"
+      },
+      {
+        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/battletoads-gb-manual-jp/Battletoads_GB_Manual_JP.pdf"
@@ -2567,7 +2573,15 @@
       "Adventure",
       "Simulation"
     ],
-    "age_rating": "KA"
+    "age_rating": "KA",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ACEE_En_0.pdf"
+      }
+    ]
   },
   "Castelian": {
     "id": "27f714bbc43ec2dcfac1c01b3212562e8189c28b",
@@ -4155,7 +4169,15 @@
       "Platform",
       "Platform / Fighter Scrolling"
     ],
-    "age_rating": "KA"
+    "age_rating": "KA",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ADHE_En_0.pdf"
+      }
+    ]
   },
   "Dragonborne": {
     "id": "d21b156e138144d33c30c51df009c0c21b7cacd2",
@@ -5730,6 +5752,14 @@
       "Sports",
       "Sports / Golf"
     ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-AGFE-USA_En_0.pdf"
+      }
+    ],
     "aliases": [
       "Sports Illustrated - Golf Classic"
     ]
@@ -6709,6 +6739,12 @@
           "en"
         ],
         "url": "https://www.thegameisafootarcade.com/wp-content/uploads/2017/03/James-Bond-007-Game-Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-au"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-AW7P-AUS_En_0.pdf"
       }
     ]
   },
@@ -7797,6 +7833,14 @@
       "Action",
       "Beat'em Up"
     ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-SX-UKV_En_0.pdf"
+      }
+    ],
     "aliases": [
       "Spartan X"
     ]
@@ -8023,6 +8067,12 @@
           "en"
         ],
         "url": "https://archive.org/download/NintendoGameBoyManuals/Legend of the River King GB (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-au"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-AFHU-AUS_En_0.pdf"
       }
     ],
     "aliases": [
@@ -10028,6 +10078,16 @@
     "genres": [
       "Sports",
       "Sports / Hockey"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ANHP-EUR_EnFr_0.pdf"
+      }
     ]
   },
   "NIV Bible & the 20 Lost Levels of Joshua": {
@@ -11291,6 +11351,16 @@
     "genres": [
       "Compilation",
       "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-APDP-EUR_EnFrGe_0.pdf"
+      }
     ]
   },
   "Pinball Dreams": {
@@ -13990,6 +14060,12 @@
           "en"
         ],
         "url": "https://archive.org/download/streetfighteriimanualgameboydmgasfeusa/Street Fighter II Manual (Game Boy DMG-ASFE-USA).pdf"
+      },
+      {
+        "languages": [
+          "en-au"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ASFP-AUS-1_En_0.pdf"
       }
     ]
   },
@@ -15779,6 +15855,14 @@
     "publisher": "Bandai Namco",
     "genres": [
       "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://gbdbstorage.s3.amazonaws.com/manuals/dmg/DMG-ULJ_Ja_0.pdf"
+      }
     ]
   },
   "Umi no Nushi Tsuri 2": {
