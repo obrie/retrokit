@@ -64,11 +64,16 @@ bin/metakit.sh update_dats <system>
 bin/metakit.sh update_groups <system>
 
 # Discovers new manuals on preconfigured website sources that have been added
-# since the given date
+# since the given date.
+# 
+# The date passed in should be the date of existing snapshots (if available).
 bin/metakit.sh find_manuals <system> [<date>] [<website_name>]
 
 # Snapshots all manual website sources so that they can be compared against
 # on a future date to see if any new manuals have been added
+#
+# The date passed in should be the *current* date (i.e. when the content was
+# downloaded)
 bin/metakit.sh snapshot_manuals <system> <date>
 
 # Update the content of the database based on internal/external data
