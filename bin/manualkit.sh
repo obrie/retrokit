@@ -71,7 +71,7 @@ remote_sync_system_manuals() {
 
   # Download and process the manuals
   if [ "$install" == 'true' ]; then
-    MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system || return
+    MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" update system-roms-manuals $system || return
   fi
 
   # Identify the post-processing base directory
