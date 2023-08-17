@@ -20,7 +20,7 @@
         "source": "internetarchive",
         "filter": {
           "include": "psx|ps1|playstation",
-          "exclude": "ps[2-5]|playstation ?[2-5]"
+          "exclude": "ps[2-5]|playstation ?([2-5]|portable)"
         }
       }
     ]
