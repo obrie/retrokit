@@ -10,6 +10,8 @@ project what it's become.  That includes:
 * [batocera](https://github.com/batocera-linux/lr-duckstation) for:
   * lr-duckstation binaries
   * supermodel3 NVRAM files
+* Ben McClean
+  * [TIC-80 artwork](https://github.com/BenMcLean/RetroPiePico8)
 * Black Falcon Games
   * [PC Engine multitap lists](https://blackfalcongames.net/?p=155)
 * crcerror

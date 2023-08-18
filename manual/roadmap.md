@@ -3,7 +3,7 @@
 There are too many improvements to count here, but some ideas are:
 
 * Move manualkit to sdl2
-* Support more systems (amiga, pico-8, tic-80, zxspectrum)
+* Support more systems (amiga, zxspectrum)
 * Support non-Raspbian platforms (Ubuntu)
 * Support different frontends (attractmode, pegasus)
 

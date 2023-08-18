@@ -215,6 +215,7 @@ Cheats are not supported on the following systems / emulators:
 * pokemini
 * psx
 * supergrafx
+* tic80
 * vectrex
 * videopac
 * wonderswan

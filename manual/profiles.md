@@ -368,6 +368,7 @@ The approximate capacity required per system is broken down below:
 * pcengine
 * ports
 * sega32x
+* tic80
 * wonderswan
 * wonderswancolor
 

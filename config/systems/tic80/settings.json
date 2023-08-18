@@ -1,0 +1,48 @@
+{
+  "system": "tic80",
+  "metadata": {
+    "path": "$RETROKIT_HOME/data/tic80.json"
+  },
+  "emulators": {
+    "lr-tic80": {
+      "default": true,
+      "core_name": "tic80",
+      "library_name": "TIC-80"
+    }
+  },
+  "romsets": {
+    "tic80": {
+      "protocol": "http",
+      "url": "$ROMSET_TIC80_URL",
+      "resources": {
+        "dat": {
+          "source": "{url}/tic80games_202303_files.xml",
+          "download": "$RETROKIT_HOME/cache/other/TIC-80.xml",
+          "target": "$RETROKIT_HOME/tmp/tic80/roms.dat",
+          "install": {"action": "archive_to_dat", "match": ".*\\.tic"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.tic",
+          "target": "$HOME/RetroPie/roms/tic80/.tic80/{machine}.tic",
+          "xref": "$HOME/RetroPie/roms/tic80/.tic80/.xrefs/{machine_id}.tic"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  },
+  "roms": {
+    "id": "name",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/tic80", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
