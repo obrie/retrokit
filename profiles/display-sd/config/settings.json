@@ -4,11 +4,9 @@
     "library": [
       {
         "name": "gbz35",
-        "repo": "rxbrad",
-        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/4x3-Launching_ComicRip/{platform}/launching.png"
+        "repo": "rxbrad"
       }
-    ],
-    "launch_theme": "gbz35"
+    ]
   },
   "setup": {
     "modules|overlays": {

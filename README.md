@@ -49,7 +49,7 @@ configuration, and management of:
 * Splash screens (using a new async loading process, reducing load time by 2s)
 * Overlays / Bezels (with auto-generated lightgun-compatible overlays)
 * Scraping (via skyscraper) with automated fallback queries
-* Launch images
+* Launch images (auto-generated via theme or sourced externally)
 * Themes
 
 ▶️ **Manuals**

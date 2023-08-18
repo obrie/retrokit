@@ -4,11 +4,15 @@
     "library": [
       {
         "name": "pixel-metadata",
-        "repo": "ehettervik",
-        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{platform}/launching.png"
+        "repo": "ehettervik"
       }
-    ],
-    "launch_theme": "pixel-metadata"
+    ]
+  },
+  "launchimages": {
+    "enabled": true,
+    "#source": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{theme}/launching.png",
+    "source": "theme",
+    "reference_view": "basic"
   },
   "overlays": {
     "enable_game_overrides": true,

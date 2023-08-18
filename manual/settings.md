@@ -25,10 +25,7 @@ The value simply needs to be a path to a remote url.
 
 ## themes
 
-The `themes` settings controls:
-
-* What themes are available to use for EmulationStation
-* What theme to use for launch images
+The `themes` settings controls what themes are available to use for EmulationStation
 
 The theme actually selected for EmulationStation is determined by the
 [es_settings.cfg](/config/emulationstation/es_settings.cfg) file.
@@ -41,18 +38,65 @@ For example:
     "library": [
       {
         "name": "pixel-metadata",
-        "repo": "ehettervik",
-
-        // The launch image template url associated with this theme
-        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{platform}/launching.png"
+        "repo": "ehettervik"
       }
-    ],
-
-    // The theme to use for launch images (can be different from the theme selected for EmulationStation)
-    "launch_theme": "pixel-metadata"
+    ]
   }
 }
 ```
+
+## launchimages
+
+The `launchimages` settings controls how launch images are generated for each system.  There
+are 2 ways you can create launch images:
+
+* Downloading them from an external source (e.g. https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie)
+* Generate them based on the theme you've configured for EmulationStation
+
+If you want to download from an external source, you can configure retrokit like so:
+
+```jsonc
+{
+  "launchimages": {
+    "enabled": true,
+    "source": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{theme}/launching.png"
+  }
+}
+```
+
+In this example, the `{theme}` variable is used to control which specific theme name to download from the
+external source.  This is useful in cases where you've decided to use an alternative theme name from the
+one that comes preconfigured in RetroPie (e.g. `genesis` instead of `megadrive`).
+
+If you don't want to worry about finding launch images that match your theme, you can auto-generate them
+like so:
+
+```jsonc
+{
+  "launchimages": {
+    "enabled": true,
+    "source": "theme",
+    // The EmulationStation theme view to use as a reference when determining which
+    // background image to use (typically "basic" or "system")
+    "background_view": "basic"
+  }
+}
+```
+
+This will use artwork and configurations from the theme in order to build launch images, including:
+
+* Background colors / images
+* System logos
+* Fonts
+
+These are then used as input to an HTML template which will be rendered by Chromium to generate
+your launch image.  You can see the HTML template information here:
+
+* [HTML Template](/config/themes/launchimage.html.jinja)
+* [CSS File](/config/themes/launchimage.css)
+
+If you want to customize the launch image look and feel, you can do so easily be overriding these
+files in your own profile.
 
 ## overlays
 

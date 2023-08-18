@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="{{hrefs.stylesheet}}" />
+  <style>
+    @page {
+      margin: 0;
+      size: {{screen.width}}px {{screen.height}}px;
+    }
+
+    @font-face {
+      font-family: 'ThemeFont';
+      src: url('{{hrefs.font}}');
+    }
+
+    html, body {
+      width: {{screen.width}}px;
+      height: {{screen.height}}px;
+    }
+
+    #background {
+      background-image: url("{{hrefs.background_image}}");
+    }
+
+    #background-overlay {
+      background-color: {{'#' + background.color if background.color else 'transparent' }};
+    }
+  </style>
+</head>
+
+<body id="background" class="{{'background-tile' if background.tile == 'true' else ''}}">
+  <div id="background-overlay"></div>
+
+  <div id="logo_belt">
+    <div id="logo_canvas">
+      <img id="logo" src="{{hrefs.logo}}" />
+    </div>
+  </div>
+
+  <div id="loading_text"></div>
+  <div id="press_button_text" class="{{'hidden' if runcommand.disable_menu == '1'}}"></div>
+</body>
+</html>

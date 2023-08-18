@@ -37,6 +37,7 @@ export default_retropie_image_platform=${DEFAULT_RETROPIE_IMAGE_PLATFORM:-rpi4_4
 
 # Import helper functions
 source "$bin_dir/helpers/configs.sh"
+source "$bin_dir/helpers/display.sh"
 source "$bin_dir/helpers/downloads.sh"
 source "$bin_dir/helpers/emulationstation.sh"
 source "$bin_dir/helpers/hooks.sh"

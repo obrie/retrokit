@@ -237,24 +237,31 @@ The following systems have libretro emulators that are configured to support che
 In some cases, the `cheats` configuration setting may be added, but isn't supported
 for any of the libretro emulators currently used by retrokit.
 
-## Themes
+## Launch Images
 
-For individual systems, `themes` define media used outside of EmulationStation and
-the emulators themselves.  Currently, this includes:
-
-* `launch_image` - The image to show after selecting a game and before the emulator is loaded
+For individual systems, `launchimages` allows explicit control over which image to display
+on screen when launching a game.
 
 You can override the launch image for a system like so:
 
 ```json
 {
-  "themes": {
-    "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
+  "launchimages": {
+    "source": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
   }
 }
 ```
 
-By default, the launch image will be based on what's defined in `config/settings.json`.
+By default, the launch image will be based on what's defined in `config/settings.json`.  You
+can also disable launch images for specific systems like so:
+
+```json
+{
+  "launchimages": {
+    "enabled": false
+  }
+}
+```
 
 ## Overlays
 

@@ -38,6 +38,7 @@ project what it's become.  That includes:
   * [Controller images])(https://vectogram.us/)
 * meleu
   * [joystick selection](https://github.com/meleu/RetroPie-joystick-selection) reference implementation
+  * [generate-launching-images](https://github.com/meleu/generate-launching-images) reference implementation
 * PatchesSmith
   * [Neo Geo CD EmulationStation theme assets](https://imgur.com/a/C03ixep)
 * Progretto-Snaps
