@@ -26,6 +26,9 @@ configure() {
   for filename in platforms screenscraper; do
     backup_and_restore "$skyscraper_dir/$filename.json"
 
+    # We have to manually merge the `platforms` array from each file, so we:
+    # (1) Identify all the files that want to add new platforms
+    # (2) Rewrite the target by union'ing each `platforms` array and generating a new json file
     mapfile -t merge_paths < <(each_path "{config_dir}/skyscraper/$filename.json")
     if [ ${#merge_paths[@]} -gt 0 ]; then
       local override_file=$(mktemp -p "$tmp_ephemeral_dir")
