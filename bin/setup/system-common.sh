@@ -109,8 +109,6 @@ romkit_cache_list() {
 # Retroarch
 ##############
 
-retroarch_base_dir="$retropie_configs_dir/all/retroarch"
-
 declare -Ag retroarch_path_defaults
 retroarch_path_defaults['core_options_path']="$retropie_configs_dir/all/retroarch-core-options.cfg"
 retroarch_path_defaults['cheat_database_path']="$retroarch_base_dir/cheats"
@@ -127,49 +125,6 @@ get_retroarch_path() {
   else
     echo "${retroarch_path_defaults["$config_name"]}"
   fi
-}
-
-##############
-# Overlays
-##############
-
-# Generates a Retroarch overlay configuration at the given path with the given
-# overlay image
-create_overlay_config() {
-  local path=$1
-  local overlay_filename=$2
-
-  echo "Overlaying $path with $overlay_filename"
-  cat > "$path" <<EOF
-#include "$retroarch_base_dir/overlay/base.cfg"
-overlay0_overlay = "$overlay_filename"
-EOF
-}
-
-# Outlines that gameplay area for an existing overlay image in order to be
-# compatible with certain lightgun controllers like Sinden.
-# 
-# This allows us to continue to use consistent overlay sources between all
-# games by just dynamically generated compatible lightgun overlays.
-outline_overlay_image() {
-  local source_file="$1"
-  local target_file="$2"
-
-  # Formatting
-  local width=$(setting '.overlays.lightgun_border.width')
-  local color=$(setting '.overlays.lightgun_border.color')
-  local fill=$(setting '.overlays.lightgun_border.fill')
-  local brightness=$(setting '.overlays.lightgun_border.brightness // 1.0')
-  
-  # Coordinates
-  local left=$(system_setting '.overlays.lightgun_border.offset_x // 0')
-  local right="-$left"
-  local top=$(system_setting '.overlays.lightgun_border.offset_y // 0')
-  local bottom="-$top"
-
-  python3 "$bin_dir/tools/outline-overlay.py" "$source_file" "$target_file" \
-    --left "$left" --right "$right" --top "$top" --bottom "$bottom" --width "$width" \
-    --color "$color" --fill "${fill:-true}" --brightness "$brightness"
 }
 
 ##############

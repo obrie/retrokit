@@ -29,6 +29,9 @@ export roms_dir="$retropie_data_dir/roms"
 
 export retropie_setup_dir="$home/RetroPie-Setup"
 
+# RetroArch paths
+export retroarch_base_dir="$retropie_configs_dir/all/retroarch"
+
 # Platform defaults
 export default_retropie_dist=${DEFAULT_RETROPIE_DIST:-buster}
 export default_retropie_version=${DEFAULT_RETROPIE_VERSION:-4.8}
@@ -42,6 +45,7 @@ source "$bin_dir/helpers/downloads.sh"
 source "$bin_dir/helpers/emulationstation.sh"
 source "$bin_dir/helpers/hooks.sh"
 source "$bin_dir/helpers/logging.sh"
+source "$bin_dir/helpers/overlays.sh"
 source "$bin_dir/helpers/profiles.sh"
 source "$bin_dir/helpers/retropie_packages.sh"
 source "$bin_dir/helpers/versions.sh"

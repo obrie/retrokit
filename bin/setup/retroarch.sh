@@ -43,8 +43,14 @@ __configure_overlays() {
   ini_merge '{config_dir}/retroarch/overlay/base.cfg' "$retroarch_default_overlay_config_file" backup=false overwrite=true
   file_cp '{config_dir}/retroarch/overlay/base.png' "$retroarch_default_overlay_image_file" backup=false
 
-  ini_merge '{config_dir}/retroarch/overlay/base-lightgun.cfg' "$retroarch_default_overlay_lightgun_config_file" backup=false overwrite=true
-  file_cp '{config_dir}/retroarch/overlay/base-lightgun.png' "$retroarch_default_overlay_lightgun_image_file" backup=false
+  local lightgun_overlay_image=$(first_path '{config_dir}/retroarch/overlay/base-lightgun.png')
+  if [ -n "$lightgun_overlay_image" ]; then
+    # Outline the overlay according to the user's preferred border settings
+    outline_overlay_image "$lightgun_overlay_image" "$retroarch_default_overlay_lightgun_image_file"
+
+    # Generate an overlay configuration pointing to this file
+    create_overlay_config "$retroarch_default_overlay_lightgun_config_file" 'base-lightgun.png'
+  fi
 }
 
 restore() {
