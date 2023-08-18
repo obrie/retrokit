@@ -8,6 +8,7 @@ setup_module_desc='Scrapes media / images / text via skyscraper, rebuilds the ga
 
 aggregate_report_file="$retropie_configs_dir/all/skyscraper/reports/report-$system-all.txt"
 gamelist_file="$home/.emulationstation/gamelists/$system/gamelist.xml"
+skyscraper_bin="$retropie_dir/supplementary/skyscraper-plus/Skyscraper"
 
 configure() {
   __load_rom_data
@@ -139,7 +140,7 @@ __scraper_exec() {
   local IFS=$'\n'
   local stdin_value=$1
   local extra_args=($(system_setting '.scraper.args[]?'))
-  local cmd=("$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${extra_args[@]}" "${@:2}")
+  local cmd=("$skyscraper_bin" -p "$system" "${extra_args[@]}" "${@:2}")
 
   echo "Running Skyscraper: $system (${*})"
   if [ -z "$stdin_value" ]; then
@@ -285,7 +286,7 @@ __build_gamelist() {
   args+=($(system_setting '.scraper | .gamelist_args? | .[]'))
 
   echo "Building gamelist for $system..."
-  "$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${args[@]}" >/dev/null
+  "$skyscraper_bin" -p "$system" "${args[@]}" >/dev/null
 
   # Fix gamelist being generated incorrectly with games marked as folders
   #
@@ -353,7 +354,7 @@ __vacuum_media() {
 }
 
 remove() {
-  if [ ! -f "$retropie_dir/supplementary/skyscraper/Skyscraper" ]; then
+  if [ ! -f "$skyscraper_bin" ]; then
     return
   fi
 

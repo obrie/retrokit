@@ -12,14 +12,28 @@ skyscraper_dir="$retropie_configs_dir/all/skyscraper"
 # 
 # Instructions: https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper
 build() {
-  install_retropie_package skyscraper
+  install_retropie_package skyscraper-plus
 
   # Add video convert script
   file_cp '{config_dir}/skyscraper/videoconvert.sh' "$skyscraper_dir/videoconvert.sh" backup=false envsubst=false
 }
 
 configure() {
+  # Configuration settings
   ini_merge '{config_dir}/skyscraper/config.ini' "$skyscraper_dir/config.ini" space_around_delimiters=false
+
+  # Platform settings
+  for filename in platforms screenscraper; do
+    backup_and_restore "$skyscraper_dir/$filename.json"
+
+    mapfile -t merge_paths < <(each_path "{config_dir}/skyscraper/$filename.json")
+    if [ ${#merge_paths[@]} -gt 0 ]; then
+      local override_file=$(mktemp -p "$tmp_ephemeral_dir")
+
+      jq -s '.[0].platforms = ([.[].platforms] | flatten) | .[0]' "$skyscraper_dir/$filename.json" "${merge_paths[@]}" > "$override_file"
+      cp "$override_file" "$skyscraper_dir/$filename.json"
+    fi
+  done
 }
 
 restore() {
@@ -29,8 +43,8 @@ restore() {
 remove() {
   rm -fv "$skyscraper_dir/video_convert.sh"
 
-  if [ -d "$retropie_dir/supplementary/skyscraper" ]; then
-    uninstall_retropie_package skyscraper
+  if [ -d "$retropie_dir/supplementary/skyscraper-plus" ]; then
+    uninstall_retropie_package skyscraper-plus
   fi
 }
 

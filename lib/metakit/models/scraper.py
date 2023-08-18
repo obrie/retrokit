@@ -249,8 +249,13 @@ class Scraper:
 
     # Runs the Skyscraper command with the given arguments
     def _exec_skyscraper(self, check=False, capture_output=False, args: list = []) -> None:
+        if Path('/opt/retropie/supplementary/skyscraper-plus/Skyscraper').exists():
+            skyscraper_bin = '/opt/retropie/supplementary/skyscraper-plus/Skyscraper'
+        else:
+            skyscraper_bin = '/opt/retropie/supplementary/skyscraper/Skyscraper'
+
         output = subprocess.run([
-            '/opt/retropie/supplementary/skyscraper/Skyscraper',
+            skyscraper_bin,
             '-p', self.scraper_platform,
             '-c', str(self.scraper_config_path),
             '-d', str(self.scraper_system_cache_path),
