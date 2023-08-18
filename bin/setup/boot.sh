@@ -17,7 +17,7 @@ __configure_bios() {
 
   # Build base config.txt without device tree settings settings (dtoverlay / dtparam)
   local boot_config_file=$(mktemp -p "$tmp_ephemeral_dir")
-  ini_merge '{config_dir}/boot/config.txt' "$boot_config_file" space_around_delimiters=false backup=false overwrite=true
+  ini_merge '{config_dir}/boot/config.txt' "$boot_config_file" space_around_delimiters=false backup=false
   sed -i '/^dt\(overlay\|param\)=/d' "$boot_config_file"
 
   # Merge into /boot
