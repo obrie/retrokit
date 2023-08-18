@@ -22,7 +22,7 @@ configure() {
 }
 
 restore() {
-  sudo rm -fv "$home/.config/internetarchive/ia.ini"
+  sudo rm -fv "$home/.config/ia.ini" "$home/ia.ini"
 }
 
 remove() {
