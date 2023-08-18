@@ -39,11 +39,11 @@ __configure_shared_overrides() {
 
 __configure_overlays() {
   # These are our own custom file, so no need to back up
-  ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_config_file" backup=false
-  file_cp '{config_dir}/retroarch/overlay.png' "$retroarch_default_overlay_image_file" backup=false
+  ini_merge '{config_dir}/retroarch/overlay/base.cfg' "$retroarch_default_overlay_config_file" backup=false
+  file_cp '{config_dir}/retroarch/overlay/base.png' "$retroarch_default_overlay_image_file" backup=false
 
-  ini_merge '{config_dir}/retroarch/overlay-lightgun.cfg' "$retroarch_default_overlay_lightgun_config_file" backup=false
-  file_cp '{config_dir}/retroarch/overlay-lightgun.png' "$retroarch_default_overlay_lightgun_image_file" backup=false
+  ini_merge '{config_dir}/retroarch/overlay/base-lightgun.cfg' "$retroarch_default_overlay_lightgun_config_file" backup=false
+  file_cp '{config_dir}/retroarch/overlay/base-lightgun.png' "$retroarch_default_overlay_lightgun_image_file" backup=false
 }
 
 restore() {
