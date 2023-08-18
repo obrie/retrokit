@@ -19,6 +19,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    if: github.repository == 'obrie/retrokit'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
