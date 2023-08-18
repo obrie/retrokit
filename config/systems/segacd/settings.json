@@ -14,10 +14,7 @@
         "repo": "thebezelproject/bezelprojectSA-SegaCD",
         "path": "retroarch/overlay/GameBezels/SegaCD"
       }
-    ],
-    "lightgun_border": {
-      "#offset_x": 223
-    }
+    ]
   },
   "scraper": {
     "args": ["--addext", "*.m3u"]

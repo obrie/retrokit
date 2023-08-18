@@ -20,10 +20,7 @@
         "repo": "thebezelproject/bezelprojectSA-MAME",
         "path": "retroarch/overlay/ArcadeBezels"
       }
-    ],
-    "lightgun_border": {
-      "#offset_x": 223
-    }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "arcadedb"],
