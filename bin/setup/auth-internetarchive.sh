@@ -15,6 +15,7 @@ depends() {
 
 configure() {
   if [ -z "$IA_USERNAME" ] || [ -z "$IA_PASSWORD" ]; then
+    restore
     return
   fi
 
