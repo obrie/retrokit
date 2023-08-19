@@ -36,6 +36,10 @@ jobs:
           sudo apt-get install -y jq
           ls data/ | sed 's/\.json//g' | grep -Ev arcade | sort | xargs -I{} jq -cr "to_entries[] | select(.value.manuals) | .key as \$group | .value as \$game | .value.manuals[] | [\"{}\", \$group, .name, ((\$game.aliases // [] + \$game.merge) | sort), .languages, .url]" "data/{}.json" | sed 's/$/,/g' > tmp/manuals.json
           sed -e '/var data = /r tmp/manuals.json' public/_templates/manuals.md.tmpl > public/manuals.md
+      - name: Generate directory listings
+        uses: jayanta525/github-pages-directory-listing@v3.0.0
+        with:
+          FOLDER: public/manual/examples/reference
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
