@@ -32,10 +32,14 @@ function install_lr-mame-common() {
 function configure_lr-mame-common() {
   local mame_version=$1
 
+  local md_common_data="${__mod_info[lr-mame-common/path]%/*}/lr-mame-common"
+  cp "$md_common_data/run_mame.sh" "$md_inst/"
+  chmod +x "$md_inst/run_mame.sh"
+
   local retroarch_bin="$rootdir/emulators/retroarch/bin/retroarch"
   local retroarch_config="$configdir/arcade/retroarch.cfg"
   local current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-  local script_runner=$(readlink -f "$current_dir/../run_mame.sh")
+  local script_runner="$md_inst/run_mame.sh"
 
   local system
   for system in arcade mame-libretro; do

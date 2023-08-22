@@ -38,11 +38,15 @@ function configure_lr-mess-common() {
   local mess_id=${2:-mame}
   local mess_args=$3
 
+  local md_common_data="${__mod_info[lr-mess-common/path]%/*}/lr-mess-common"
+  cp "$md_common_data/run_mess.sh" "$md_inst/"
+  chmod +x "$md_inst/run_mess.sh"
+
   local mess_lib=$(dirname "$md_inst")/lr-mess/mamemess_libretro.so
   local retroarch_bin="$rootdir/emulators/retroarch/bin/retroarch"
   local retroarch_config="$configdir/$system_name/retroarch.cfg"
   local current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-  local script_runner=$(readlink -f "$current_dir/../run_mess.sh")
+  local script_runner="$md_inst/run_mess.sh"
 
   mkRomDir "$system_name"
   ensureSystemretroconfig "$system_name"
