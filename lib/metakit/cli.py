@@ -100,7 +100,7 @@ class MetaKit:
     def scrape_incomplete(self) -> None:
         self.scrape(ScrapeType.INCOMPLETE)
 
-    # Forces machines that have were never found in the scraper sources
+    # Forces machines that were never found in the scraper sources
     def scrape_missing(self) -> None:
         self.scrape(ScrapeType.MISSING)
 
