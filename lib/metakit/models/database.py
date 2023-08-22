@@ -230,9 +230,8 @@ class Database:
 
     # Saves the current database to the same path it was read from
     def save(self) -> None:
-        output = json.dumps(self.serialize(), indent=2)
-        with self.path.open('w') as f:
-            f.write(output)
+        with self.path.open('w', encoding='utf8') as f:
+            json.dump(self.serialize(), f, ensure_ascii=False, indent=2)
 
     # Generates the JSON data to use when writing the database.
     # 

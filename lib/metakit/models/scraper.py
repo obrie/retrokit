@@ -90,6 +90,9 @@ class Scraper:
             if not value:
                 continue
 
+            # Replace bad data
+            value = value.replace('\u00a0', ' ')
+
             # Look up the associated group name
             quickid = element.get('id')
             group = quickid_to_group.get(quickid)
