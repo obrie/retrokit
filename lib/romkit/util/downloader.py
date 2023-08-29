@@ -16,6 +16,7 @@ from collections import deque
 from pathlib import Path, PurePath
 from requests.adapters import HTTPAdapter, Retry
 from urllib.parse import urlparse
+from urllib.request import urlretrieve
 
 # High-performance downloader using a multi-threaded approach in order to
 # improve download speeds from sites that rate-limit on a per connection
@@ -131,6 +132,15 @@ class Downloader:
 
     # Downloads from a remote source to the given local destination file path
     def download(self, source: str, destination: Path) -> None:
+        source_uri = urlparse(source)
+
+        if source_uri.scheme == 'http' or source_uri.scheme == 'https':
+            self._download_http(source, destination)
+        else:
+            self._download_ftp(source, destination)
+
+    # Downloads from an HTTP source to the given local destination file path
+    def _download_http(self, source: str, destination: Path) -> None:
         if self.auth and self.auth.match(source):
             headers = self.auth.headers
             cookies = self.auth.cookies
@@ -167,6 +177,20 @@ class Downloader:
         request.headers = headers
         request.cookies = cookies
         request.perform()
+
+    # Downloads from an FTP source to the given local destination file path
+    def _download_ftp(self, source: str, destination: Path) -> None:
+        attempts = 0
+        while True:
+            try:
+                urlretrieve(source, str(destination))
+                break
+            except Exception as e:
+                attempts += 1
+                if attempts > self.retries:
+                    raise e
+                else:
+                    time.sleep(self.timeout)
 
 
 # Represents an http request that will attempt to open multiple connections

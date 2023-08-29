@@ -304,7 +304,7 @@ All resources, except `dat`, are optional.  You only need to provide the other
 resources (such as `machine`) if you intend on installing games from some
 external archive.
 
-Resources can be sourced from either the local file system or a remote url:
+Resources can be sourced from either the local file system or a remote ftp/http url:
 
 ```jsonc
 // Locally sourced
