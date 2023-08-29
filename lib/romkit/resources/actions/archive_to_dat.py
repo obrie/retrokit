@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-from romkit.resources.actions.base import BaseAction
+from romkit.resources.actions.file_to_dat import FileToDat
 
 import lxml.etree
 import re
-import tempfile
 from pathlib import Path
 
-class ArchiveToDat(BaseAction):
+class ArchiveToDat(FileToDat):
     name = 'archive_to_dat'
 
     # Converts an archive file listing to a dat file readable by romkit
@@ -15,56 +14,45 @@ class ArchiveToDat(BaseAction):
         doc = lxml.etree.iterparse(str(source.path), tag=('file'))
         pattern = re.compile(self.config.get('match', '.*'))
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            # Write initially to a temporary file in case there's a failure part-way through
-            tmp_target = Path(tmpdir).joinpath('out.xml')
+        with self.create_dat(target) as file:
+            for event, archive_file in doc:
+                # Get actual name as it'll be downloaded from the source
+                archive_filename = archive_file.get('name')
 
-            with lxml.etree.xmlfile(str(tmp_target), encoding='utf-8') as file:
-                file.write_declaration(standalone=True)
-                file.write_doctype('<!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">')
+                if pattern.search(archive_filename):
+                    archive_name = Path(archive_filename).stem
 
-                with file.element('datafile'):
-                    for event, archive_file in doc:
-                        # Get actual name as it'll be downloaded from the source
-                        filename = archive_file.get('name')
+                    # Build element in target file
+                    element = lxml.etree.Element('game', name=archive_name)
 
-                        if pattern.search(filename):
-                            name = Path(filename).stem
+                    # Add description
+                    description_element = lxml.etree.Element('description')
+                    description_element.text = archive_name
+                    element.append(description_element)
 
-                            # Build element in target file
-                            element = lxml.etree.Element('game', name=name)
+                    # Add rom
+                    rom_element = lxml.etree.Element('rom', attrib={
+                        'name': archive_filename,
+                    })
 
-                            # Add description
-                            description = lxml.etree.Element('description')
-                            description.text = name
-                            element.append(description)
+                    archive_size = archive_file.find('size')
+                    if archive_size is not None:
+                        rom_element.attrib['size'] = archive_size.text
 
-                            # Add rom
-                            rom = lxml.etree.Element('rom')
-                            rom.attrib['name'] = filename
+                    archive_md5 = archive_file.find('md5')
+                    if archive_md5 is not None:
+                        rom_element.attrib['md5'] = archive_md5.text
 
-                            size_tag = archive_file.find('size')
-                            if size_tag is not None:
-                                rom.attrib['size'] = size_tag.text
+                    archive_crc32 = archive_file.find('crc32')
+                    if archive_crc32 is not None:
+                        rom_element.attrib['crc'] = archive_crc32.text
 
-                            md5_tag = archive_file.find('md5')
-                            if size_tag is not None:
-                                rom.attrib['md5'] = md5_tag.text
+                    archive_sha1 = archive_file.find('sha1')
+                    if archive_sha1 is not None:
+                        rom_element.attrib['sha1'] = archive_sha1.text
 
-                            crc32_tag = archive_file.find('crc32')
-                            if crc32_tag is not None:
-                                rom.attrib['crc'] = crc32_tag.text
+                    element.append(rom_element)
+                    file.write(element, pretty_print=True)
 
-                            sha1_tag = archive_file.find('sha1')
-                            if sha1_tag is not None:
-                                rom.attrib['sha1'] = sha1_tag.text
-
-                            element.append(rom)
-
-                            file.write(element, pretty_print=True)
-                            element = None
-
-                        # Release memory
-                        archive_file.clear()
-
-            tmp_target.rename(target.path)
+                # Release memory
+                archive_file.clear()
