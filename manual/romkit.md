@@ -349,6 +349,7 @@ following actions are currently available:
 | copy              | Copy file, as-is                                           |
 | exodos_to_dat     | Convert an exodos XML file to a compatible dat file        |
 | iso_to_cso        | Convert a PSP .iso file to .cso                            |
+| libretro_to_dat   | Convert a libretro database file to a compatible dat file  |
 | playlist_to_m3u   | Generate an m3u file from a collection of discs for a game |
 | seven_zip_extract | Extract one or more files from a .7z archive               |
 | stub              | Create an empty file                                       |
