@@ -227,8 +227,10 @@ class ResourceTemplate:
 
         # Encode remaining context
         for key, value in context.items():
-            if isinstance(value, str) or value is None:
+            if isinstance(value, str):
                 url_context[key] = quote(value)
+            elif value is None:
+                url_context[key] = ''
 
         return Resource(
             source_url=self._render_template(self.source_url_template, url_context),
