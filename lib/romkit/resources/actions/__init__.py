@@ -1,5 +1,6 @@
 from romkit.resources.actions.base import BaseAction
 from romkit.resources.actions.archive_to_dat import ArchiveToDat
+from romkit.resources.actions.composite import Composite
 from romkit.resources.actions.copy import Copy
 from romkit.resources.actions.exodos_to_dat import ExodosToDat
 from romkit.resources.actions.iso_to_cso import IsoToCso

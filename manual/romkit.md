@@ -345,6 +345,7 @@ following actions are currently available:
 
 | Action            | Description                                                |
 |-------------------|------------------------------------------------------------|
+| composite         | Combine multiple actions together                          |
 | copy              | Copy file, as-is                                           |
 | exodos_to_dat     | Convert an exodos XML file to a compatible dat file        |
 | iso_to_cso        | Convert a PSP .iso file to .cso                            |

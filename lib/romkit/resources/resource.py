@@ -108,7 +108,7 @@ class Resource:
             self.target_path.path.parent.mkdir(parents=True, exist_ok=True)
 
             # Install to target
-            self.install_action.install(source.download_path, self.target_path, **kwargs)
+            self.install_action.install(source.download_path, self.target_path, force=force, **kwargs)
 
     # If there's a valid cross-reference symlink for the target and the target doesn't exist,
     # rely on the symlink to create the new target
