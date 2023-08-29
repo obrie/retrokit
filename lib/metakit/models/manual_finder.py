@@ -62,19 +62,37 @@ class ManualFinder:
 
         if date and date != 'all':
             self.date = datetime.strptime(date, '%Y-%m-%d').date()
+
+        search_all_choice = 'Search across all websites'
+        search_per_website_choice = 'Search per website'
+        review_method = questionary.select('Website review method:', choices=[
+            search_all_choice,
+            search_per_website_choice,
+        ]).ask()
  
-        # Scrape and review each website
+        # Find applicable websites
+        websites = []
         for website in self.system.config['manuals']['websites']:
-            # Website filtering
             if website_name and website['name'] != website_name:
                 continue
+            else:
+                websites.append(website)
 
+        review = (review_method == search_per_website_choice)
+        all_matches = []
+        for website in self.system.config['manuals']['websites']:
             print(f"Searching {website['name']} (source: {website['source']})...")
             if website['source'] == 'internetarchive':
                 self.download_internetarchive_index()
-                self.search_internetarchive(website)
+                new_matches = self.search_internetarchive(website, review=review)
             else:
-                self.search_generic_website(website)
+                new_matches = self.search_generic_website(website, review=review)
+
+            all_matches.extend(new_matches)
+
+        if review_method == search_all_choice:
+            # Review all of the discovered matches by searching per group
+            self.review_matches(all_matches)
 
     # Creates a snapshot of the most recently downloaded sources from each website and
     # promotes it to the "previous" download for the given date.
@@ -123,7 +141,7 @@ class ManualFinder:
                 file.write(json.dumps(result) + '\n')
 
     # Searches for content on a generic, non-internetarchive website
-    def search_generic_website(self, website: dict) -> None:
+    def search_generic_website(self, website: dict, review: bool = True) -> List[dict]:
         url = website['source']
         url_has_date = '{year}' in url
 
@@ -174,10 +192,13 @@ class ManualFinder:
         new_matches = [m for m in current_matches if m not in previous_matches]
 
         # Review them
-        self.review_matches(new_matches)
+        if review:
+            self.review_matches(new_matches)
+
+        return new_matches
 
     # Searches the internetarchive manuals collection
-    def search_internetarchive(self, website: dict) -> None:
+    def search_internetarchive(self, website: dict, review: bool = True) -> List[dict]:
         # Set defaults
         website['base_href'] = 'https://archive.org/details/'
         website['match'] = '^.*"identifier": "(?P<path>[^"]+)".*"title": "(?P<name>[^"]+)".*$'
@@ -187,7 +208,10 @@ class ManualFinder:
         matches = self._find_matches(website, content)
 
         # Review them
-        self.review_matches(matches)
+        if review:
+            self.review_matches(matches)
+
+        return matches
 
     # Finds urls in the given content that match the website scraping configuration
     def _find_matches(self, website: dict, content: str) -> List[dict]:
@@ -296,8 +320,8 @@ class ManualFinder:
             return
 
         # Determine how we're reviewing
-        search_groups_choice = 'Search for groups'
-        search_urls_choice = 'Search for urls'
+        search_groups_choice = 'Review by URL (search for a group)'
+        search_urls_choice = 'Review by Group (search for url(s))'
         skip_choice = 'Skip'
         review_method = questionary.select('URL review method:', choices=[
             search_groups_choice,
@@ -305,10 +329,10 @@ class ManualFinder:
             skip_choice,
         ]).ask()
 
-        if review_method == search_urls_choice:
-            self._review_groups_by_url_search(matches)
-        elif review_method == search_groups_choice:
+        if review_method == search_groups_choice:
             self._review_urls_by_group_search(matches)
+        elif review_method == search_urls_choice:
+            self._review_groups_by_url_search(matches)
         else:
             return
 
@@ -326,10 +350,11 @@ class ManualFinder:
         start_index = questionary.text('Start index:', multiline=False, default='0', validate=self._validate_nonnegative_number).ask()
         if not start_index:
             return
-        groups = groups[int(start_index):]
+        start_index = int(start_index)
+        groups = groups[start_index:]
 
         for index, group in enumerate(groups):
-            print(f'\n{index+1}/{len(groups)}: {group}')
+            print(f'\n{start_index+index+1}/{start_index+len(groups)}: {group}')
             self._review_group_by_url_search(matches, group)
 
     # Reviews current database's groups by attempting to search for a keyword used in the url
@@ -340,26 +365,54 @@ class ManualFinder:
             if not search_string:
                 # No content -- stop looking
                 return
+
+            filtered_urls = []
+
+            # Find all groups that have an associated title which matches the
+            # regular expression provided by the user
+            filter_regex = re.compile(search_string, re.IGNORECASE)
+            for match in matches:
+                if filter_regex.search(f"{match['url']} {match['name']}"):
+                    filtered_urls.append(match['url'])
+
+            # Confirm the url with the user
+            if filtered_urls:
+                imported_urls = self._review_group_by_urls(group, filtered_urls)
+                matches = [match for match in matches if match['url'] not in imported_urls]
             else:
-                filtered_urls = []
+                custom_choice = 'Enter custom url'
+                done_choice = 'Done!'
+                next_step = questionary.select('No urls found!', choices=[
+                    custom_choice,
+                    done_choice,
+                ]).ask()
 
-                # Find all groups that have an associated title which matches the
-                # regular expression provided by the user
-                filter_regex = re.compile(search_string, re.IGNORECASE)
-                for match in matches:
-                    if filter_regex.search(f"{match['url']} {match['name']}"):
-                        filtered_urls.append(match['url'])
+                if next_step == custom_choice:
+                    # Allow the user to enter a custom url
+                    self._ask_manual(group, '')
 
-                # Confirm the url with the user
-                if filtered_urls:
-                    url = questionary.select('Select url:', choices=filtered_urls).ask()
-                    if url:
-                        self._ask_manual(group, url)
+    # Allow the user to review the given list of URLs for a group
+    def _review_group_by_urls(self, group: str, urls: List[str]) -> List[str]:
+        done_choice = 'Done!'
+        custom_choice = 'Enter custom url'
 
-                        # Don't prompt for this url again
-                        matches = [match for match in matches if match['url'] != url]
-                else:
-                    print('No urls found!')
+        imported_urls = []
+
+        while urls:
+            url = questionary.select('Select url:', choices=(urls + [custom_choice, done_choice])).ask()
+            if url and url != done_choice:
+                if url == custom_choice:
+                    # User wants to input a custom URL
+                    url = ''
+
+                if self._ask_manual(group, url):
+                    # Don't prompt for this url a second time
+                    if url in urls:
+                        urls.remove(url)
+            else:
+                break
+
+        return imported_urls
 
     # Reviews the given list of URLs by attempting to search for a group that matches
     # a keyword used in the url
@@ -368,7 +421,8 @@ class ManualFinder:
         start_index = questionary.text('Start index:', multiline=False, default='0', validate=self._validate_nonnegative_number).ask()
         if not start_index:
             return
-        matches = matches[int(start_index):]
+        start_index = int(start_index)
+        matches = matches[start_index:]
 
         # Check if we should open the URLs in chrome
         chrome_batch_size = 0
@@ -387,7 +441,7 @@ class ManualFinder:
                     )
 
             # Review the url
-            print(f"\n{index+1}/{len(matches)}: {self._describe_match(match)}")
+            print(f"\n{start_index+index+1}/{start_index+len(matches)}: {self._describe_match(match)}")
             self._review_url_by_group_search(match['url'])
 
     # Reviews the given URL by attempting to search for a group that matches a
@@ -439,7 +493,7 @@ class ManualFinder:
         return description
 
     # Prompts the user to provide the manual metadata information for the given group / url
-    def _ask_manual(self, group: str, url: str) -> None:
+    def _ask_manual(self, group: str, url: str) -> bool:
         # In case the user has edited it, we want to make sure we've pulled the latest
         # database content before overwriting it
         self.database.reload()
@@ -459,14 +513,16 @@ class ManualFinder:
 
         while True:
             if not questionary.confirm('Continue?', default=True).ask():
-                return
+                return False
 
             # Get manual basics
             download_url = questionary.text('URL:', default=url).ask()
             if not download_url:
-                return
+                return False
             download_url = urllib.parse.unquote(download_url)
             languages = questionary.text('Languages:', default='en').ask()
+            if not languages:
+                return False
 
             # Get manual advanced options
             options = {}
@@ -506,7 +562,7 @@ class ManualFinder:
                 metadata['manuals'].append(manual)
                 self.database.save()
 
-                return
+                return True
 
     # questionary validation
     # 
