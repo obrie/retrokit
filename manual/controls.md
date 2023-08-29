@@ -198,6 +198,7 @@ cheats for each emulator.
 Cheats are not supported on the following systems / emulators:
 
 * 3do
+* amiga
 * arcade - lr-mame2010
 * atari5200
 * atari7800

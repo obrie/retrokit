@@ -270,12 +270,15 @@ class Machine:
     def _resource_context(self) -> dict:
         return {
             'machine': self.name,
+            'machine_letter': ('0' if self.name[0].isnumeric() else self.name[0].upper()),
             'machine_id': self.id,
             'machine_alt_names': self.alt_names,
             'machine_description': self.description,
             'machine_sourcefile': self.sourcefile or self.name,
             'rom_root': self.rom_root,
             'parent': (self.parent_name or self.name),
+            'primary_rom': (self.primary_rom and self.primary_rom.name),
+            'primary_rom_basename': (self.primary_rom and Path(self.primary_rom.name).name),
             **self.custom_context,
         }
 

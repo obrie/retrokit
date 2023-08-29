@@ -1,0 +1,118 @@
+{
+  "romsets": {
+    "retroplay": {
+      "discovery": {
+        "type": "ftp",
+        "urls": [
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/0",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/A",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/B",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/C",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/D",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/E",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/F",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/G",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/H",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/I",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/J",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/K",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/L",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/M",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/N",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/O",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/P",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/Q",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/R",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/S",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/T",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/U",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/V",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/W",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/X",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/Y",
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games/Z"
+        ],
+        "match": {
+          "dat_url": "WHDLoad - Games \\(.*zip"
+        },
+        "max_depth": 0
+      },
+      "resources": {
+        "dat": {
+          "source": "{discovery_dat_url}",
+          "download": "$RETROKIT_HOME/tmp/amiga/roms.zip",
+          "target": "$RETROKIT_HOME/tmp/amiga/roms.dat",
+          "install": {
+            "action": "composite",
+            "actions": [
+              {"action": "zip_extract", "file": ".*\\.dat", "target": "$RETROKIT_HOME/cache/retroplay/Commodore Amiga - WHDLoad - Games.dat"},
+              {"action": "retroplay_to_dat", "file": ".*\\.dat"}
+            ]
+          }
+        }
+      }
+    }
+  },
+  "manuals": {
+    "websites": [
+      {
+        "name": "bombjack-games",
+        "source": "https://commodore.bombjack.org/amiga/games/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "filter": {
+          "exclude": "_(Box|Case|Maps?|Hints)[_.]"
+        }
+      },
+      {
+        "name": "bombjack-cd32",
+        "source": "https://commodore.bombjack.org/amiga/cd32/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "filter": {
+          "exclude": "_(Box|Case|Maps?|Hints)[_.]"
+        }
+      },
+      {
+        "name": "bombjack-cdtv",
+        "source": "https://commodore.bombjack.org/amiga/cdtv/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "filter": {
+          "exclude": "_(Box|Case|Maps?|Hints)[_.]"
+        }
+      },
+      {
+        "name": "bombjack-applications",
+        "source": "https://commodore.bombjack.org/amiga/applications/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "filter": {
+          "exclude": "_(Box|Case|Maps?|Hints)[_.]"
+        }
+      },
+      {
+        "name": "bombjack-educational",
+        "source": "https://commodore.bombjack.org/amiga/educational/",
+        "match": "(?P<path>[^\"]+\\.pdf).*(?P<date>[0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "filter": {
+          "exclude": "_(Box|Case|Maps?|Hints)[_.]"
+        }
+      },
+      {
+        "name": "amigamanuals-xiik",
+        "source": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/",
+        "match": "href=\"(?P<path>[^\"]+\\.pdf)"
+      },
+      {
+        "name": "internetarchive",
+        "source": "internetarchive",
+        "filter": {
+          "include": "amiga"
+        }
+      },
+      {
+        "name": "halloflight",
+        "source": "file://$RETROKIT_HOME/cache/manuals/amiga-halloflight.tsv",
+        "match": "^(?P<name>[^\t]+)\t(?P<path>.+$)"
+      }
+    ]
+  }
+}

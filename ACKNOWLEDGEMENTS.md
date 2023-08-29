@@ -43,6 +43,8 @@ project what it's become.  That includes:
   * [generate-launching-images](https://github.com/meleu/generate-launching-images) reference implementation
 * PatchesSmith
   * [Neo Geo CD EmulationStation theme assets](https://imgur.com/a/C03ixep)
+* Paul Vince
+  * [Commodore Amiga Lists](https://github.com/MrV2K/WHDLoad-Download-Tool)
 * Progretto-Snaps
   * [Arcade metadata and flyers](https://www.progettosnaps.net/)
 * roslof

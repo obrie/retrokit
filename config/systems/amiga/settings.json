@@ -1,0 +1,135 @@
+{
+  "system": "amiga",
+  "metadata": {
+    "path": "$RETROKIT_HOME/data/amiga.json"
+  },
+  "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Amiga/raw/master/retroarch/overlay/Commodore-Amiga.png",
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Amiga",
+        "path": "retroarch/overlay/GameBezels/Amiga"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectSA-Amiga",
+        "path": "retroarch/overlay/GameBezels/Amiga"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-puae2021": {
+      "default": true,
+      "core_name": "puae2021",
+      "library_name": "PUAE 2021",
+      "gamestate": [
+        "{rom_dir}/{rom}.nvr"
+      ]
+    },
+    "lr-puae": {
+      "core_name": "puae",
+      "library_name": "PUAE",
+      "gamestate": [
+        "{rom_dir}/{rom}.nvr"
+      ]
+    },
+    "amiberry": {
+    }
+  },
+  "bios": {
+    "url": "$BIOS_URL/batocera/bios",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "CD32 Extended-ROM rev 40.60 (1993)(Commodore)(CD32).rom": "{url}/kick40060.CD32.ext",
+      "CDTV Extended-ROM v1.0 (1991)(Commodore)(CDTV)[!].rom": "{url}/kick34005.CDTV",
+      "Kickstart v1.2 rev 33.180 (1986)(Commodore)(A500-A1000-A2000).rom": "{url}/kick33180.A500",
+      "Kickstart v1.2 r33.180 (1986)(Commodore)(A500-A1000-A2000).rom": "{url}/kick33180.A500",
+      "Kickstart v1.3 rev 34.5 (1987)(Commodore)(A500-A1000-A2000-CDTV).rom": "{url}/kick34005.A500",
+      "Kickstart v2.04 rev 37.175 (1991)(Commodore)(A500+).rom": "{url}/kick37175.A500",
+      "Kickstart v2.05 r37.350 (1992)(Commodore)(A600HD)[!].rom": "{url}/amiga-os-205.rom",
+      "Kickstart v3.0 rev 39.106 (1992)(Commodore)(A1200)[!].rom": "{url}/kick39106.A1200",
+      "Kickstart v3.1 rev 40.60 (1993)(Commodore)(CD32).rom": "{url}/kick40060.CD32",
+      "Kickstart v3.1 rev 40.63 (1993)(Commodore)(A500-A600-A2000)[!].rom": "{url}/kick40063.A600",
+      "Kickstart v3.1 rev 40.68 (1993)(Commodore)(A1200).rom": "{url}/kick40068.A1200",
+      "Kickstart v3.1 rev 40.68 (1993)(Commodore)(A4000).rom": "{url}/kick40068.A4000"
+    }
+  },
+  "romsets": {
+    "retroplay": {
+      "discovery": {
+        "type": "ftp",
+        "urls": [
+          "$ROMSET_AMIGA_WHDLOAD_URL/Retroplay WHDLoad Packs/Commodore_Amiga_-_WHDLoad_-_Games"
+        ],
+        "match": {
+          "url": "(?P<primary_rom>[^/]+)_v[0-9]+\\.[0-9]+(?P<flags>_?[^/]*.lha)"
+        },
+        "max_depth": 1
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$RETROKIT_HOME/cache/retroplay/Commodore Amiga - WHDLoad - Games.dat",
+          "target": "$RETROKIT_HOME/tmp/amiga/roms.dat",
+          "install": {
+            "action": "retroplay_to_dat",
+            "renames": {
+              "AlienBreed3D2": "Alien Breed 3D 2",
+              "BAT2": "BAT 2",
+              "ChaseHQ2": "Chase HQ 2",
+              "CJsElephantAntics": "CJs Elephant Antics",
+              "ETsRugbyLeague": "ETs Rugby League",
+              "Formula13D": "Formula 1 3D",
+              "GLOCR360": "GLOC R360",
+              "GrandPrix5002": "Grand Prix 500 2",
+              "MickeysABCs": "Mickeys ABCs",
+              "MiG29Fulcrum": "MiG 29 Fulcrum",
+              "MiG29MSuperFulcrum": "MiG 29M Super Fulcrum",
+              "MiG29SovietFighter": "MiG 29 Soviet Fighter",
+              "Millennium22": "Millennium 2.2",
+              "Nam19651975": "Nam 1965-1975",
+              "ProjectXSE": "Project X SE",
+              "ProjectXv2": "Project X v2",
+              "RBI2Baseball": "RBI 2 Baseball",
+              "RickDangerous25": "Rick Dangerous 2.5",
+              "SensibleSoccer9293": "Sensible Soccer 92-93",
+              "SensibleWorldOfSoccer1617": "Sensible World Of Soccer 16-17",
+              "SensibleWorldOfSoccer2020": "Sensible World Of Soccer 20-20",
+              "SensibleWorldOfSoccer2021": "Sensible World Of Soccer 20-21",
+              "SensibleWorldOfSoccer2122": "Sensible World Of Soccer 21-22",
+              "SensibleWorldOfSoccer2223": "Sensible World Of Soccer 22-23",
+              "SensibleWorldOfSoccer9596EuropeanChampionsEdition": "Sensible World Of Soccer 95-96 European Champions Edition",
+              "SensibleWorldOfSoccer9596": "Sensible World Of Soccer 95-96",
+              "SensibleWorldOfSoccer9697": "Sensible World Of Soccer 96-97",
+              "SensibleWorldOfSoccer9798": "Sensible World Of Soccer 97-98",
+              "SensibleWorldOfSoccerv11": "Sensible World Of Soccer v11",
+              "/Spellbound_.*LanderSoftware": "Spellbound!",
+              "SuperStreetFighter2DX": "Super Street Fighter 2 DX",
+              "TVSportsBasketball2223": "TV Sports Basketball 22-23",
+              "TZer0": "T Zer0",
+              "WorldCupUSA94": "World Cup USA 94"
+            }
+          }
+        },
+        "machine": {
+          "source": "{discovery_url}",
+          "target": "$HOME/RetroPie/roms/amiga/.retroplay/{machine}.lha",
+          "xref": "$HOME/RetroPie/roms/amiga/.retroplay/.xrefs/{machine_id}.lha"
+        }
+      }
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/amiga", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

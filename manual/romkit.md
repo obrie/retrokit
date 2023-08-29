@@ -343,21 +343,23 @@ When installing a resource, you can perform an action on it in order to transfor
 it to the format that you'd like.  The default action is a simple "copy".  The
 following actions are currently available:
 
-| Action            | Description                                                |
-|-------------------|------------------------------------------------------------|
-| composite         | Combine multiple actions together                          |
-| copy              | Copy file, as-is                                           |
-| exodos_to_dat     | Convert an exodos XML file to a compatible dat file        |
-| iso_to_cso        | Convert a PSP .iso file to .cso                            |
-| libretro_to_dat   | Convert a libretro database file to a compatible dat file  |
-| playlist_to_m3u   | Generate an m3u file from a collection of discs for a game |
-| seven_zip_extract | Extract one or more files from a .7z archive               |
-| stub              | Create an empty file                                       |
-| zip_extract       | Extract one or more files from a .zip archive              |
-| zip_merge         | Merge files from one .zip archive into another             |
-| zip_nibconv       | Convert between different Commodore disk formats           |
-| zip_to_chd        | Convert .zip archive to .chd                               |
-| zip_to_cso        | Convert .zip archive to .cso                               |
+| Action            | Description                                                 |
+|-------------------|-------------------------------------------------------------|
+| archive_to_dat    | Converts an archive.org item to a compatible dat file       |
+| composite         | Combine multiple actions together                           |
+| copy              | Copy file, as-is                                            |
+| exodos_to_dat     | Convert an exodos XML file to a compatible dat file         |
+| iso_to_cso        | Convert a PSP .iso file to .cso                             |
+| libretro_to_dat   | Convert a libretro database file to a compatible dat file   |
+| playlist_to_m3u   | Generate an m3u file from a collection of discs for a game  |
+| retroplay_to_dat  | Converts a retroplay database file to a compatible dat file |
+| seven_zip_extract | Extract one or more files from a .7z archive                |
+| stub              | Create an empty file                                        |
+| zip_extract       | Extract one or more files from a .zip archive               |
+| zip_merge         | Merge files from one .zip archive into another              |
+| zip_nibconv       | Convert between different Commodore disk formats            |
+| zip_to_chd        | Convert .zip archive to .chd                                |
+| zip_to_cso        | Convert .zip archive to .cso                                |
 
 #### Examples
 

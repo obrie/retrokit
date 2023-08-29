@@ -358,6 +358,7 @@ The approximate capacity required per system is broken down below:
 
 < 150MB:
 
+* amiga
 * atarijaguar
 * c64
 * gamegear

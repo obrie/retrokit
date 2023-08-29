@@ -1,0 +1,32 @@
+{
+  "system": {
+    "name": "amiga",
+    "description": "The Amiga was a family of personal computers released by Commodore in the 1980's and 1990's."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": true,
+    "multi controllers": true
+  },
+  "images": {
+    "controller": "keyboard.png"
+  },
+  "controls": {
+    "retropad": {
+      "select": "Toggle Keyboard",
+      "a": "Fire Button 1 / Red",
+      "b": "Fire Button 2 / Blue",
+      "x": "Space",
+      "l2": "Left Mouse Button",
+      "r2": "Right Mouse Button",
+      "left_stick": "Left Analog Mouse",
+      "right_stick": "Right Analog Mouse"
+    },
+    "keyboard_extra": {
+      "F12": "Toggle statusbar",
+      "Right Ctrl": "Toggle joystick/mouse"
+    }
+  }
+}
