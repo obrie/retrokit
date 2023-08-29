@@ -42,7 +42,7 @@ class BaseDiscovery:
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> BaseDiscovery:
         return cls.for_name(json['type'])(
-            **slice_only(json, ['urls', 'match']),
+            **slice_only(json, ['urls', 'match', 'ttl']),
             **kwargs,
         )
 

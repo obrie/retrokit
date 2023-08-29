@@ -419,7 +419,9 @@ them.  For example, consider the following:
         "urls": [
           "$ROMSET_DREAMCAST_REDUMP_URL"
         ],
-        "match": "(?P<machine>[^/]+).zip"
+        "match": "(?P<machine>[^/]+).zip",
+        // The amount of time to cache the discovered data
+        "ttl": 86400
       },
       "resources": {
         "dat": {
