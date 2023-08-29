@@ -446,6 +446,11 @@ In the above example, we're looking up all of the files available in the remote
 archive, matching them based on a regular expression, and then using the
 `{discovery_url}` parameter to define the machine's source.
 
+The following discovery types are supported:
+
+* `internetarchive`
+* `ftp`
+
 In addition, an additional authentication mechanism is used when downloading
 from the remote archive.
 

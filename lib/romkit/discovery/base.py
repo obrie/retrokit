@@ -41,10 +41,17 @@ class BaseDiscovery:
     # Builds a Discovery generator from the given JSON data
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> BaseDiscovery:
-        return cls.for_name(json['type'])(
+        discovery_cls = cls.for_name(json['type'])
+        return discovery_cls(
             **slice_only(json, ['urls', 'match', 'ttl']),
+            **discovery_cls.parse_extra_args(json),
             **kwargs,
         )
+
+    # Build additional arguments for constructing this class
+    @classmethod
+    def parse_extra_args(cls, json: dict) -> dict:
+        return {}
 
     # Looks up the discovery from the given name
     @classmethod
@@ -110,15 +117,18 @@ class BaseDiscovery:
         return set(self._machine_mappings.keys())
 
     # Downloads the given source unless it exists and is within the configured TTL
-    def update(self, source: str, filename: str) -> None:
+    def update(self, source: str, filename: str, do_update = None) -> None:
+        if not do_update:
+            do_update = self.download
+
         self.download_dir.mkdir(parents=True, exist_ok=True)
         target = self.download_dir.joinpath(filename)
 
         if not target.exists():
-            self.download(source, target)
+            do_update(source, target)
         elif (time.time() - target.stat().st_mtime) >= self.ttl:
             try:
-                self.download(source, target)
+                do_update(source, target)
             except Exception as e:
                 logging.debug(f'Failed to refresh discovery source: {source}')
 
