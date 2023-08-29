@@ -11,7 +11,7 @@ from pathlib import Path
 class ZipNibconv(BaseAction):
     name = 'zip_nibconv'
 
-    def install(self, source: ResourcePath, target: ResourcePath, files: Set[File]) -> None:
+    def install(self, source: ResourcePath, target: ResourcePath, files: Set[File], **kwargs) -> None:
         source_extension = self.config['source_extension']
         target_extension = self.config['target_extension']
 
