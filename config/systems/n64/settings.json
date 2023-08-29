@@ -60,7 +60,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Nintendo - Nintendo 64 \\(BigEndian\\)"
+        "match": {
+          "url": "Nintendo - Nintendo 64 \\(BigEndian\\)"
+        }
       },
       "resources": {
         "dat": {

@@ -53,7 +53,9 @@
         "urls": [
           "$ROMSET_SATURN_REDUMP_URL"
         ],
-        "match": "(?P<machine>[^/]+).chd"
+        "match": {
+          "url": "(?P<machine>[^/]+).chd"
+        }
       },
       "resources": {
         "dat": {

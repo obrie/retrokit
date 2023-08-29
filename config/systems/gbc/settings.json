@@ -51,7 +51,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Nintendo - Game Boy Color"
+        "match": {
+          "url": "Nintendo - Game Boy Color"
+        }
       },
       "resources": {
         "dat": {

@@ -40,7 +40,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Commodore - Commodore 64 \\([0-9-]+\\)"
+        "match": {
+          "url": "Commodore - Commodore 64 \\([0-9-]+\\)"
+        }
       },
       "resources": {
         "dat": {
@@ -63,7 +65,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Commodore - 64 \\(Tapes\\)"
+        "match": {
+          "url": "Commodore - 64 \\(Tapes\\)"
+        }
       },
       "resources": {
         "dat": {
@@ -86,7 +90,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Commodore - 64 \\(PP\\)"
+        "match": {
+          "url": "Commodore - 64 \\(PP\\)"
+        }
       },
       "resources": {
         "dat": {

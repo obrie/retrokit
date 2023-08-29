@@ -39,7 +39,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Mattel - Intellivision"
+        "match": {
+          "url": "Mattel - Intellivision"
+        }
       },
       "resources": {
         "dat": {

@@ -31,7 +31,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "GCE - Vectrex"
+        "match": {
+          "url": "GCE - Vectrex"
+        }
       },
       "resources": {
         "dat": {

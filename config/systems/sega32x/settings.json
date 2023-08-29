@@ -32,7 +32,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Sega - 32X"
+        "match": {
+          "url": "Sega - 32X"
+        }
       },
       "resources": {
         "dat": {

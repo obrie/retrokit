@@ -17,8 +17,7 @@ class AlternatesAttribute(BaseAttribute):
                 continue
 
             romset.discovery.load()
-            if None not in romset.discovery.keys():
-                self.valid_discovered_names.update(romset.discovery.keys())
+            self.valid_discovered_names.update(romset.discovery.machine_keys())
 
     # Validate:
     # * Non-empty keys and values

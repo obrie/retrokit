@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Atari - Lynx"
+        "match": {
+          "url": "Atari - Lynx"
+        }
       },
       "resources": {
         "dat": {

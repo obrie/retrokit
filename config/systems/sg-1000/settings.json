@@ -27,7 +27,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Sega - SG-1000"
+        "match": {
+          "url": "Sega - SG-1000"
+        }
       },
       "resources": {
         "dat": {

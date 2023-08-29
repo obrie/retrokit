@@ -53,7 +53,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "NEC - PC Engine SuperGrafx"
+        "match": {
+          "url": "NEC - PC Engine SuperGrafx"
+        }
       },
       "resources": {
         "dat": {

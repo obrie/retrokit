@@ -38,7 +38,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Magnavox - Odyssey2"
+        "match": {
+          "url": "Magnavox - Odyssey2"
+        }
       },
       "resources": {
         "dat": {
@@ -63,7 +65,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Philips - Videopac+"
+        "match": {
+          "url": "Philips - Videopac+"
+        }
       },
       "resources": {
         "dat": {

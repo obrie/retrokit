@@ -25,7 +25,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Nintendo - Pokemon Mini"
+        "match": {
+          "url": "Nintendo - Pokemon Mini"
+        }
       },
       "resources": {
         "dat": {

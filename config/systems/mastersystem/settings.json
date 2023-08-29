@@ -41,7 +41,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Sega - Master System - Mark III"
+        "match": {
+          "url": "Sega - Master System - Mark III"
+        }
       },
       "resources": {
         "dat": {

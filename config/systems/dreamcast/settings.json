@@ -53,7 +53,9 @@
         "urls": [
           "$ROMSET_DREAMCAST_REDUMP_URL"
         ],
-        "match": "(?P<machine>[^/]+).zip"
+        "match": {
+          "url": "(?P<machine>[^/]+).zip"
+        }
       },
       "resources": {
         "dat": {

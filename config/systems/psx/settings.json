@@ -61,7 +61,9 @@
           "${ROMSET_PSX_JAP_REDUMP_URL}_p2",
           "$ROMSET_PSX_MISC_REDUMP_URL"
         ],
-        "match": "(?P<machine>[^/]+).chd"
+        "match": {
+          "url": "(?P<machine>[^/]+).chd"
+        }
       },
       "resources": {
         "dat": {

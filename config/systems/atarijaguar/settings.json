@@ -53,7 +53,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Atari - Jaguar \\(J64\\)"
+        "match": {
+          "url": "Atari - Jaguar \\(J64\\)"
+        }
       },
       "resources": {
         "dat": {

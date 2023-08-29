@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Atari - 7800"
+        "match": {
+          "url": "Atari - 7800"
+        }
       },
       "resources": {
         "dat": {

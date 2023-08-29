@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Atari - 5200"
+        "match": {
+          "url": "Atari - 5200"
+        }
       },
       "resources": {
         "dat": {

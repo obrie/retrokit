@@ -21,7 +21,9 @@
           "$ROMSET_PSP_REDUMP_URL",
           "$ROMSET_PSP_REDUMP_URL.p2"
         ],
-        "match": "(?P<machine>[^/]+)\\.zip"
+        "match": {
+          "url": "(?P<machine>[^/]+)\\.zip"
+        }
       },
       "resources": {
         "dat": {
@@ -46,7 +48,9 @@
         "urls": [
           "$ROMSET_PSP_PSN_URL"
         ],
-        "match": "(?P<machine>[^/]+)\\.iso"
+        "match": {
+          "url": "(?P<machine>[^/]+)\\.iso"
+        }
       },
       "resources": {
         "dat": {
@@ -75,7 +79,9 @@
         "urls": [
           "$ROMSET_PSP_DLC_URL"
         ],
-        "match": "(?P<machine>[^/]+)\\.zip"
+        "match": {
+          "url": "(?P<machine>[^/]+)\\.zip"
+        }
       },
       "resources": {
         "dat": {

@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Nintendo - Game Boy Advance \\([0-9]"
+        "match": {
+          "url": "Nintendo - Game Boy Advance \\([0-9]"
+        }
       },
       "resources": {
         "dat": {

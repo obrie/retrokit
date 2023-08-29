@@ -34,7 +34,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "SNK - Neo Geo Pocket Color"
+        "match": {
+          "url": "SNK - Neo Geo Pocket Color"
+        }
       },
       "resources": {
         "dat": {

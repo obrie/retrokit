@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Sega - Game Gear"
+        "match": {
+          "url": "Sega - Game Gear"
+        }
       },
       "resources": {
         "dat": {

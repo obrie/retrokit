@@ -36,7 +36,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "NEC - PC Engine - TurboGrafx 16"
+        "match": {
+          "url": "NEC - PC Engine - TurboGrafx 16"
+        }
       },
       "resources": {
         "dat": {

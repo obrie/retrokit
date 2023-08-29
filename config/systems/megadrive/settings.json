@@ -43,7 +43,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Sega - Mega Drive - Genesis"
+        "match": {
+          "url": "Sega - Mega Drive - Genesis"
+        }
       },
       "resources": {
         "dat": {

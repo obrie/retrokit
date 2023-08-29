@@ -31,7 +31,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Atari - 2600"
+        "match": {
+          "url": "Atari - 2600"
+        }
       },
       "resources": {
         "dat": {

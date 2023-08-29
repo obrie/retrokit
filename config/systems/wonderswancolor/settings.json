@@ -34,7 +34,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Bandai - WonderSwan Color"
+        "match": {
+          "url": "Bandai - WonderSwan Color"
+        }
       },
       "resources": {
         "dat": {

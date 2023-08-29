@@ -54,7 +54,9 @@
         "urls": [
           "$ROMSET_NDS_NOINTRO_URL"
         ],
-        "match": "(?P<machine>[^/]+).zip"
+        "match": {
+          "url": "(?P<machine>[^/]+).zip"
+        }
       },
       "resources": {
         "dat": {

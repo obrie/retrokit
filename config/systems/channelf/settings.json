@@ -39,7 +39,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Fairchild - Channel F"
+        "match": {
+          "url": "Fairchild - Channel F"
+        }
       },
       "resources": {
         "dat": {

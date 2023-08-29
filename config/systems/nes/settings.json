@@ -36,7 +36,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Nintendo - Nintendo Entertainment System.*\\[headered]"
+        "match": {
+          "url": "Nintendo - Nintendo Entertainment System.*\\[headered]"
+        }
       },
       "resources": {
         "dat": {

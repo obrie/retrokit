@@ -34,7 +34,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Bandai - WonderSwan \\("
+        "match": {
+          "url": "Bandai - WonderSwan \\("
+        }
       },
       "resources": {
         "dat": {

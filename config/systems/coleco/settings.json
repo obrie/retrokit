@@ -46,7 +46,9 @@
         "urls": [
           "$ROMSET_NOINTRO_URL"
         ],
-        "match": "Coleco - ColecoVision"
+        "match": {
+          "url": "Coleco - ColecoVision"
+        }
       },
       "resources": {
         "dat": {
