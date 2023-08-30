@@ -34,7 +34,6 @@
   },
   "romsets": {
     "nointro-carts": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -59,7 +58,6 @@
       "auth": "internetarchive"
     },
     "nointro-tapes": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -84,7 +82,6 @@
       "auth": "internetarchive"
     },
     "nointro-pp": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [

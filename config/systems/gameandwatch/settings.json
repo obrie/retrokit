@@ -24,7 +24,6 @@
   },
   "romsets": {
     "mame": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_LATEST_URL",
       "resources": {
         "dat": {

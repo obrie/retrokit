@@ -12,7 +12,6 @@
   },
   "romsets": {
     "tic80": {
-      "protocol": "http",
       "url": "$ROMSET_TIC80_URL",
       "resources": {
         "dat": {

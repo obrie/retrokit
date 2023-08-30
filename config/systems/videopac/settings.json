@@ -32,7 +32,6 @@
   },
   "romsets": {
     "nointro": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -59,7 +58,6 @@
       "auth": "internetarchive"
     },
     "nointro-plus": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [

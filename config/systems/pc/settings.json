@@ -22,7 +22,6 @@
   },
   "romsets": {
     "the_eye": {
-      "protocol": "http",
       "url": "$ROMSET_PC_EXODOS_URL",
       "resources": {
         "machine": {

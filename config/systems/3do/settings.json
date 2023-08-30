@@ -33,7 +33,6 @@
   },
   "romsets": {
     "redump": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [

@@ -156,7 +156,6 @@
   },
   "romsets": {
     "fbneo": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_FBNEO_URL",
       "resources": {
         "dat": {
@@ -178,7 +177,6 @@
       ]
     },
     "mame2003": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2003_URL",
       "resources": {
         "dat": {
@@ -206,7 +204,6 @@
       ]
     },
     "mame2003-plus": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2003_PLUS_URL",
       "resources": {
         "dat": {
@@ -234,7 +231,6 @@
       ]
     },
     "mame2010": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
@@ -262,7 +258,6 @@
       ]
     },
     "mame2015": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2015_URL",
       "resources": {
         "dat": {
@@ -290,7 +285,6 @@
       ]
     },
     "mame2016": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2016_URL",
       "resources": {
         "dat": {
@@ -318,7 +312,6 @@
       ]
     },
     "mame-0222": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_0222_URL",
       "resources": {
         "dat": {
@@ -349,7 +342,6 @@
       ]
     },
     "mame-0244": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_0245_URL",
       "resources": {
         "dat": {
@@ -377,7 +369,6 @@
       ]
     },
     "advmame": {
-      "protocol": "http",
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {

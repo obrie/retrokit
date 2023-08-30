@@ -14,7 +14,6 @@
   },
   "romsets": {
     "redump": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -42,7 +41,6 @@
       }
     },
     "psn": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [
@@ -73,7 +71,6 @@
       }
     },
     "dlc": {
-      "protocol": "http",
       "discovery": {
         "type": "internetarchive",
         "urls": [

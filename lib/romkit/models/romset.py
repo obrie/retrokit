@@ -18,7 +18,6 @@ class ROMSet:
     def __init__(self,
         system: BaseSystem,
         name: str,
-        protocol: Optional[str] = None,
         url: Optional[str] = None,
         resource_templates: Dict[str, ResourceTemplate] = {},
         emulators: List[str] = [],
@@ -30,7 +29,6 @@ class ROMSet:
     ):
         self.system = system
         self.name = name
-        self.protocol = protocol
         self.url = url
         self.resource_templates = resource_templates
         self.emulators = emulators
@@ -57,7 +55,6 @@ class ROMSet:
     def from_json(cls, json: dict, system: System, **kwargs) -> ROMSet:
         romset = cls(system=system, **slice_only(json, [
             'name',
-            'protocol',
             'url',
             'emulators',
             'auth',
