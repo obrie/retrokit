@@ -3,7 +3,6 @@ from romkit.auth import BaseAuth
 import subprocess
 from http import cookies
 from pathlib import Path
-from urllib.parse import unquote
 
 class InternetArchiveAuth(BaseAuth):
     ARCHIVE_ORG_DOMAIN = 'archive.org'

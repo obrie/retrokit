@@ -5,8 +5,8 @@ from romkit.models.collection_set import CollectionSet
 from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
 from romkit.processing import Metadata, Ruleset, RuleMatchReason, SortableSet
+from romkit.resources.downloader import Downloader
 from romkit.systems.system_dir import SystemDir
-from romkit.util import Downloader
 from romkit.util.dict_utils import deepmerge
 
 import logging

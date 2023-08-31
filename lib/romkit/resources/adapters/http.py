@@ -1,24 +1,19 @@
 from __future__ import annotations
 
-from romkit.auth import BaseAuth
-from romkit.util.dict_utils import slice_only
+from romkit.resources.adapters import BaseAdapter
 
 import logging
 import math
 import pycurl
 import requests
+import requests.adapters
 import shutil
 import signal
-import tempfile
 import threading
 import time
 from collections import deque
-from pathlib import Path, PurePath
-from requests.adapters import HTTPAdapter, Retry
-from urllib.parse import urlparse
-from urllib.request import urlretrieve
 
-# High-performance downloader using a multi-threaded approach in order to
+# High-performance HTTP adapter using a multi-threaded approach in order to
 # improve download speeds from sites that rate-limit on a per connection
 # basis.
 # 
@@ -28,122 +23,25 @@ from urllib.request import urlretrieve
 # I found that the requests package would often result in connections being
 # replaced and eventually aborted due to the amount of time it would take
 # between requests.
-class Downloader:
-    _instance = None
+class HTTPAdapter(BaseAdapter):
+    schemes = ['http', 'https']
 
-    def __init__(self,
-        auth: str = None,
-        # Number of threads to run per download
-        max_concurrency: int = 5,
-        # File size after which the file will be split into multiple parts
-        part_threshold: int = 10 * 1024 * 1024,
-        # The size of parts that are downloaded in each thread
-        part_size: int = 1 * 1024 * 1024,
-        # Timeout *after* connection when no data is received
-        timeout: int = 300,
-        # Timeout of initial connection
-        connect_timeout: int = 15,
-        # Number of times to re-attempt a download
-        retries: int = 3,
-        # Backoff factor to apply between attempts
-        backoff_factor: float = 2.0,
-    ) -> None:
-        self.auth = auth and BaseAuth.from_name(auth)
-        self.max_concurrency = max_concurrency
-        self.part_threshold = part_threshold
-        self.part_size = part_size
-        self.timeout = timeout
-        self.connect_timeout = connect_timeout
-        self.retries = retries
-        self.backoff_factor = backoff_factor
+    def __init__(self, client: Downloader) -> None:
+        super().__init__(client)
+
         self.session = requests.Session()
 
-        http_adapter = HTTPAdapter(max_retries=Retry(total=retries, backoff_factor=backoff_factor))
+        retry_adapter = requests.adapters.Retry(total=self.client.retries, backoff_factor=self.client.backoff_factor)
+        http_adapter = requests.adapters.HTTPAdapter(max_retries=retry_adapter)
+
         self.session.mount('http://', http_adapter)
         self.session.mount('https://', http_adapter)
 
-    @classmethod
-    def instance(cls) -> Downloader:
-        if cls._instance is None:
-            cls._instance = cls.__new__(cls)
-            cls._instance.__init__()
-        return cls._instance
-
-    # Builds a new downloader from the given json
-    @classmethod
-    def from_json(cls, json: dict, **kwargs) -> Downloader:
-        return cls(**slice_only(json, [
-            'auth',
-            'max_concurrency',
-            'part_threshold',
-            'part_size',
-            'timeout',
-            'connect_timeout',
-            'retries',
-            'backoff_factor',
-        ]), **kwargs)
-
-    # Builds a new downloader configured for the given authentication
-    def with_auth(self, auth: str) -> Downloader:
-        return Downloader(
-            auth=auth,
-            max_concurrency=self.max_concurrency,
-            part_threshold=self.part_threshold,
-            part_size=self.part_size,
-            timeout=self.timeout,
-            connect_timeout=self.connect_timeout,
-            retries=self.retries,
-            backoff_factor=self.backoff_factor,
-        )
-
-    # Attempts to download from the given source unless either:
-    # * It already exists in the destination
-    # * The file is being force-refreshed
-    def get(self, source: str, destination: Path, force: bool = False) -> None:
-        if not source:
-            raise requests.exceptions.URLRequired()
-
-        source_uri = urlparse(source)
-
-        # Ensure directory exists
-        destination.parent.mkdir(parents=True, exist_ok=True)
-
-        if source_uri.scheme == 'file':
-            # Copy directly from the filesystem
-            if source_uri.path != str(destination):
-                logging.debug(f'Copying {source} to {destination}')
-                shutil.copyfile(source_uri.path, destination)
-        elif not destination.exists() or destination.stat().st_size == 0 or force:
-            # Re-download the file
-            logging.debug(f'Downloading {source} to {destination}')
-            with tempfile.TemporaryDirectory() as tmp_dir:
-                # Initially download to a temporary directory so we don't overwrite until
-                # the download is completed successfully
-                download_path = Path(tmp_dir).joinpath(destination.name)
-
-                self.download(source, download_path)
-
-                if download_path.stat().st_size > 0:
-                    # Rename file to final destination
-                    download_path.rename(destination)
-                else:
-                    download_path.unlink()
-                    raise requests.exceptions.HTTPError()
-
-    # Downloads from a remote source to the given local destination file path
-    def download(self, source: str, destination: Path) -> None:
-        source_uri = urlparse(source)
-
-        if source_uri.scheme == 'http' or source_uri.scheme == 'https':
-            self._download_http(source, destination)
-        else:
-            self._download_ftp(source, destination)
-
     # Downloads from an HTTP source to the given local destination file path
-    def _download_http(self, source: str, destination: Path) -> None:
-        if self.auth and self.auth.match(source):
-            headers = self.auth.headers
-            cookies = self.auth.cookies
+    def download(self, source: str, destination: Path) -> None:
+        if self.client.auth and self.client.auth.match(source):
+            headers = self.client.auth.headers
+            cookies = self.client.auth.cookies
         else:
             headers = {}
             cookies = {}
@@ -158,7 +56,7 @@ class Downloader:
             headers=headers,
             cookies=cookies,
             allow_redirects=True,
-            timeout=(self.connect_timeout, self.timeout),
+            timeout=(self.client.connect_timeout, self.client.timeout),
         )
         response.raise_for_status()
         file_size = int(response.headers.get('Content-Length', 0))
@@ -167,31 +65,16 @@ class Downloader:
         # * File > threshold
         # * Server accepts Range header
         # * Server cannot encode response
-        if file_size > self.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
-            parts = math.ceil(file_size / self.part_size)
+        if file_size > self.client.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
+            parts = math.ceil(file_size / self.client.part_size)
         else:
             parts = 1
             file_size = 0
 
-        request = ChunkedRequest(self, source, destination, parts=parts, file_size=file_size)
+        request = ChunkedRequest(self.client, source, destination, parts=parts, file_size=file_size)
         request.headers = headers
         request.cookies = cookies
         request.perform()
-
-    # Downloads from an FTP source to the given local destination file path
-    def _download_ftp(self, source: str, destination: Path) -> None:
-        attempts = 0
-        while True:
-            try:
-                urlretrieve(source, str(destination))
-                break
-            except Exception as e:
-                attempts += 1
-                if attempts > self.retries:
-                    raise e
-                else:
-                    time.sleep(self.timeout)
-
 
 # Represents an http request that will attempt to open multiple connections
 # in order to improve overall download speed

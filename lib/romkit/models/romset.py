@@ -4,8 +4,8 @@ from romkit.auth import BaseAuth
 from romkit.discovery import BaseDiscovery
 from romkit.models.machine import Machine
 from romkit.processing.ruleset import Ruleset
+from romkit.resources.downloader import Downloader
 from romkit.resources.resource import ResourceTemplate
-from romkit.util import Downloader
 from romkit.util.dict_utils import slice_only
 
 import logging

@@ -3,13 +3,12 @@ from __future__ import annotations
 from romkit.models.file import File
 from romkit.resources.actions import BaseAction, Copy
 from romkit.resources.actions.stub import Stub, StubDownloader
+from romkit.resources.downloader import Downloader
 from romkit.resources.resource_path import ResourcePath
-from romkit.util import Downloader
 
 from pathlib import Path
 from typing import Optional, Set
-from urllib.parse import quote
-from urllib.parse import urlparse
+from urllib.parse import quote, unquote, urlparse
 
 class Resource:
     def __init__(self,
@@ -77,7 +76,7 @@ class Resource:
     # The path of the source url, intended to only be used with a file protocol
     @property
     def source_url_path(self) -> Path:
-        return Path(urlparse(self.source_url).path)
+        return Path(unquote(urlparse(self.source_url).path))
  
     # Whether this resource is located locally on the system
     @property
@@ -210,7 +209,7 @@ class ResourceTemplate:
     # The path of the source url, intended to only be used with a file protocol
     @property
     def source_url_path(self) -> Path:
-        return Path(urlparse(self.source_url_template).path)
+        return Path(unquote(urlparse(self.source_url_template).path))
 
     # Whether this resource is located locally on the system
     @property

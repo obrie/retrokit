@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.util import Downloader
+from romkit.resources.downloader import Downloader
 from romkit.util.dict_utils import slice_only
 
 import logging
