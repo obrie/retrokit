@@ -361,7 +361,7 @@ class ManualFinder:
     def _review_group_by_url_search(self, matches: List[dict], group: str) -> None:
         # Keep prompting the user until all relevant urls have been reviewed
         while True:
-            search_string = questionary.text('URL:').ask()
+            search_string = questionary.text('URL:', default=group.replace(' ', '.*')).ask()
             if not search_string:
                 # No content -- stop looking
                 return
@@ -377,12 +377,17 @@ class ManualFinder:
 
             # Confirm the url with the user
             if filtered_urls:
-                imported_urls = self._review_group_by_urls(group, filtered_urls)
+                imported_urls, is_done = self._review_group_by_urls(group, filtered_urls)
                 matches = [match for match in matches if match['url'] not in imported_urls]
+
+                if is_done:
+                    return
             else:
+                search_again_choice = 'Search again'
                 custom_choice = 'Enter custom url'
                 done_choice = 'Done!'
                 next_step = questionary.select('No urls found!', choices=[
+                    search_again_choice,
                     custom_choice,
                     done_choice,
                 ]).ask()
@@ -390,17 +395,24 @@ class ManualFinder:
                 if next_step == custom_choice:
                     # Allow the user to enter a custom url
                     self._ask_manual(group, '')
+                elif next_step == done_choice:
+                    return
 
     # Allow the user to review the given list of URLs for a group
-    def _review_group_by_urls(self, group: str, urls: List[str]) -> List[str]:
-        done_choice = 'Done!'
+    def _review_group_by_urls(self, group: str, urls: List[str]) -> Tuple[List[str], bool]:
+        search_again_choice = 'Search again'
         custom_choice = 'Enter custom url'
+        done_choice = 'Done!'
 
         imported_urls = []
 
         while urls:
-            url = questionary.select('Select url:', choices=(urls + [custom_choice, done_choice])).ask()
-            if url and url != done_choice:
+            url = questionary.select('Select url:', choices=([search_again_choice] + urls + [custom_choice, done_choice])).ask()
+            if not url or url == search_again_choice:
+                break
+            elif url == done_choice:
+                return imported_urls, True
+            else:
                 if url == custom_choice:
                     # User wants to input a custom URL
                     url = ''
@@ -408,11 +420,10 @@ class ManualFinder:
                 if self._ask_manual(group, url):
                     # Don't prompt for this url a second time
                     if url in urls:
+                        imported_urls.append(url)
                         urls.remove(url)
-            else:
-                break
 
-        return imported_urls
+        return imported_urls, False
 
     # Reviews the given list of URLs by attempting to search for a group that matches
     # a keyword used in the url
