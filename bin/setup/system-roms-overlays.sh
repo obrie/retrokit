@@ -217,8 +217,8 @@ __update_retroarch_config() {
 
   mkdir -pv "$emulator_config_dir"
 
-  # Link emulator/rom retroarch config to overlay config
-  echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $overlay_config_file"
+  # Update <emulator>/<rom>.cfg retroarch config with overlay config
+  echo "Setting $emulator_config_dir/$rom_name.cfg input_overlay to $overlay_config_file"
   touch "$emulator_config_dir/$rom_name.cfg"
   crudini --set "$emulator_config_dir/$rom_name.cfg" '' 'input_overlay' "\"$overlay_config_file\""
 
