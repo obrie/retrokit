@@ -1,12 +1,16 @@
 #!/bin/bash
 
+set -e
+
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+
 all_depends() {
   depends
   optional_depends
 }
 
 depends() {
-  sudo pip3 install -r requirements.txt
+  sudo pip3 install -r "$dir/requirements.txt"
 }
 
 optional_depends() {
@@ -43,7 +47,7 @@ __depends_trrntzip() {
 remove() {
   sudo apt-get remove -y mame-tools p7zip-full
   sudo apt-get autoremove --purge -y
-  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r requirements.txt
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r "$dir/requirements.txt"
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 
