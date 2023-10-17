@@ -112,6 +112,8 @@ or a joystick), you can configure the following filters:
 * device_id: The unique identifier for the device (e.g. the bluetooth mac address)
 * running_process: A system process that must be running for the input to be considered connected
 
+Each of these filters supports regular expression matching and ignores case.
+
 Example configuration:
 
 ```ini

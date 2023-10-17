@@ -669,40 +669,40 @@ __match_players() {
 
       # Match vendor id
       local device_vendor_id=${devices["$device_index/vendor_id"]}
-      if [ -n "$config_vendor_id" ] && [[ "$device_vendor_id" != "$config_vendor_id" ]]; then
+      if [ -n "$config_vendor_id" ] && [[ ! "${device_vendor_id,,}" =~ ${config_vendor_id,,} ]]; then
         continue
       fi
 
       # Match product id
       local device_product_id=${devices["$device_index/product_id"]}
-      if [ -n "$config_product_id" ] && [[ "$device_product_id" != "$config_product_id" ]]; then
+      if [ -n "$config_product_id" ] && [[ ! "${device_product_id,,}" =~ ${config_product_id,,} ]]; then
         continue
       fi
 
       # Match sysfs (usb path)
       local device_sysfs=${devices["$device_index/sysfs"]}
-      if [ -n "$config_usb_path" ] && [[ "$device_sysfs" != *"$config_usb_path"* ]]; then
+      if [ -n "$config_usb_path" ] && [[ ! "${device_sysfs,,}" =~ ${device_sysfs,,} ]]; then
         continue
       fi
 
       local device_id=${devices["$device_index/uniq_id"]}
-      if [ -n "$config_device_id" ] && [ "${device_id,,}" != "${config_device_id,,}" ]; then
+      if [ -n "$config_device_id" ] && [[ ! "${device_id,,}" =~ ${config_device_id,,} ]]; then
         continue
       fi
 
       # Match related usb path
-      if [ -n "$config_related_usb_path" ] && { [[ "$device_sysfs" != *usb* ]] || ! find "/sys$device_sysfs/../../../.." | grep -Eq "$config_related_usb_path"; }; then
+      if [ -n "$config_related_usb_path" ] && { [[ "$device_sysfs" != *usb* ]] || ! find "/sys$device_sysfs/../../../.." | grep -Eiq "$config_related_usb_path"; }; then
         continue
       fi
 
       # Match running process
-      if [ -n "$config_running_process" ] && ! pgrep -f "$config_running_process" >/dev/null; then
+      if [ -n "$config_running_process" ] && ! pgrep -fi "$config_running_process" >/dev/null; then
         continue
       fi
 
       # Match name
       local device_name=${devices["$device_index/name"]}
-      if [ "$device_name" != "$config_name" ]; then
+      if [[ ! "${device_name,,}" =~ ${config_name,,} ]]; then
         continue
       fi
 
