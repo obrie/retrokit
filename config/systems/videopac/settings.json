@@ -55,7 +55,9 @@
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     },
     "nointro-plus": {
       "discovery": {
@@ -81,7 +83,9 @@
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     }
   },
   "roms": {

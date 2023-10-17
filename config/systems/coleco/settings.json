@@ -61,7 +61,9 @@
           "xref": "$HOME/RetroPie/roms/coleco/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     }
   },
   "roms": {

@@ -15,7 +15,7 @@ class Downloader:
     _instance = None
 
     def __init__(self,
-        auth: str = None,
+        auth: BaseAuth = None,
         # Maximum number of concurrent chunks to download at once
         max_concurrency: int = 5,
         # File size after which the file will be split into multiple parts
@@ -31,7 +31,7 @@ class Downloader:
         # Backoff factor to apply between attempts
         backoff_factor: float = 2.0,
     ) -> None:
-        self.auth = auth and BaseAuth.from_name(auth)
+        self.auth = auth
         self.max_concurrency = max_concurrency
         self.part_threshold = part_threshold
         self.part_size = part_size
@@ -57,8 +57,12 @@ class Downloader:
     # Builds a new downloader from the given json
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> Downloader:
-        return cls(**slice_only(json, [
-            'auth',
+        if 'auth' in json:
+            auth = BaseAuth.from_json(json['auth'])
+        else:
+            auth = None
+
+        return cls(auth=auth, **slice_only(json, [
             'max_concurrency',
             'part_threshold',
             'part_size',

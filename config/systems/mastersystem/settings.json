@@ -56,7 +56,9 @@
           "xref": "$HOME/RetroPie/roms/mastersystem/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     }
   },
   "roms": {

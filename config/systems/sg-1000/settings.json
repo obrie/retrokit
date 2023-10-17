@@ -42,7 +42,9 @@
           "xref": "$HOME/RetroPie/roms/sg-1000/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     }
   },
   "roms": {

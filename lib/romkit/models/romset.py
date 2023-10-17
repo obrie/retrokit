@@ -21,7 +21,7 @@ class ROMSet:
         url: Optional[str] = None,
         resource_templates: Dict[str, ResourceTemplate] = {},
         emulators: List[str] = [],
-        auth: Optional[str] = None,
+        auth: Optional[BaseAuth] = None,
         discovery: Optional[BaseDiscovery] = None,
         datlist: Optional[List[str]] = None,
         filters: Optional[Ruleset] = None,
@@ -53,11 +53,15 @@ class ROMSet:
     # Builds a ROMSet from the given json data
     @classmethod
     def from_json(cls, json: dict, system: System, **kwargs) -> ROMSet:
-        romset = cls(system=system, **slice_only(json, [
+        if 'auth' in json:
+            auth = BaseAuth.from_json(json['auth'])
+        else:
+            auth = None
+
+        romset = cls(system=system, auth=auth, **slice_only(json, [
             'name',
             'url',
             'emulators',
-            'auth',
             'datlist',
             'enabled',
         ]), **kwargs)

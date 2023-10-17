@@ -69,7 +69,9 @@
           "file_identifier": "name"
         }
       },
-      "auth": "internetarchive"
+      "auth": {
+        "type": "internetarchive"
+      }
     }
   },
   "roms": {
