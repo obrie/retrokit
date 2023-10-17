@@ -19,6 +19,9 @@ optional_depends() {
 
   # Torrentzip
   __depends_trrntzip
+
+  # internetarchive
+  __depends_internetarchive
 }
 
 __depends_trrntzip() {
@@ -44,10 +47,15 @@ __depends_trrntzip() {
   fi
 }
 
+__depends_internetarchive() {
+  sudo pip3 install -r "$dir/requirements-optional.txt"
+}
+
 remove() {
   sudo apt-get remove -y mame-tools p7zip-full
   sudo apt-get autoremove --purge -y
   [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r "$dir/requirements.txt"
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y -r "$dir/requirements-optional.txt"
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 
