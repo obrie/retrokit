@@ -1885,7 +1885,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Bigs 2, The (USA).pdf"
+        "url": "https://archive.org/download/thebigs2_manual/thebigs2_manual.pdf"
       },
       {
         "languages": [
@@ -2166,6 +2166,14 @@
       "Sports"
     ],
     "age_rating": "M",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/blitzovertime_manual/blitzovertime_manual.pdf"
+      }
+    ],
     "emulation": {
       "rating": 3
     }
@@ -4256,7 +4264,15 @@
       "Role playing games",
       "Various"
     ],
-    "age_rating": "3"
+    "age_rating": "3",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/uljm-05990-danball-senki-boost/ULJM-05990 Danball Senki Boost.pdf"
+      }
+    ]
   },
   "Danball Senki W": {
     "id": "59dbcd6952166c87d504ce245c6a5650ecc48d86"
@@ -9310,6 +9326,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/badman_manual/badman_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -11931,6 +11953,14 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/mlb07_manual_202309/mlb07_manual.pdf"
+      }
     ]
   },
   "MLB 08 - The Show": {
@@ -16441,7 +16471,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Prince of Persia - Revelations (USA).pdf"
+        "url": "https://archive.org/download/persia_manual_202310/persia_manual.pdf"
       },
       {
         "languages": [
@@ -20820,7 +20850,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://archive.org/download/SonyPSPManuals/Tekken - Dark Resurrection (USA).pdf"
+        "url": "https://archive.org/download/tekken_manual/tekken_manual.pdf"
       }
     ]
   },
@@ -21150,6 +21180,12 @@
     ],
     "age_rating": "3",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tiger10_manual/tiger10_manual.pdf"
+      },
       {
         "languages": [
           "en-gb",

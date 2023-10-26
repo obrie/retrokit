@@ -6512,7 +6512,15 @@
     "genres": [
       "Adventure"
     ],
-    "age_rating": "T"
+    "age_rating": "T",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/the-book-of-watermarks-psx-manual/the-book-of-watermarks-psx-manual_images.zip"
+      }
+    ]
   },
   "BoomBots": {
     "id": "d23aa7bda7b668bcca6a74eda706b73fce914b93",
@@ -16064,7 +16072,15 @@
     "genres": [
       "Action / Puzzle"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/enen-angel-psx-manual/enen-angel-psx-manual_images.zip"
+      }
+    ]
   },
   "Engacho!": {
     "id": "b0d1f5931047d2ed922a8fd79a18440ca6e1d46e",
@@ -17460,6 +17476,18 @@
     "age_rating": "KA",
     "peripherals": [
       "multitap"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/fifa97_manual_202310/fifa97_manual.pdf"
+      }
     ],
     "merge": [
       "FIFA Soccer 97"
@@ -21046,6 +21074,12 @@
           "en"
         ],
         "url": "http://psxdatacenter.com/manuals/Gex - Enter the Gecko [SLUS-00598] (E).cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spin-tail-manual-ps1/Spin Tail Manual.cbz"
       }
     ],
     "merge": [
@@ -24267,7 +24301,15 @@
     "genres": [
       "Action"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hyper-crazy-climber-psx-manual/hyper-crazy-climber-psx-manual_images.zip"
+      }
+    ]
   },
   "Hyper Formation Soccer": {
     "id": "48fadc3e9a4c853357b657bfd7e4209861348500",
@@ -27345,7 +27387,15 @@
     "genres": [
       "Simulation"
     ],
-    "age_rating": "E"
+    "age_rating": "E",
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kaze-no-notam-psx-manual/kaze-no-notam-psx-manual_images.zip"
+      }
+    ]
   },
   "Kaze no Oka Kouen Nite": {
     "id": "59983187c1c48a4231b5e77d02f3da6cc51d1095",
@@ -65382,6 +65432,13 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/Worms World Party (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "it"
+        ],
+        "url": "https://archive.org/download/wwparty_manual/wwparty_manual.pdf"
       }
     ],
     "tags": [
