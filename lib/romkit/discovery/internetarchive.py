@@ -16,10 +16,17 @@ class InternetArchiveDiscovery(BaseDiscovery):
         filename = f'{archive_name}_files.xml'
         self.update(f'{url}/{filename}', filename)
 
+        download_path = self.download_dir.joinpath(filename)
+
         # Extract paths
-        doc = lxml.etree.iterparse(str(self.download_dir.joinpath(filename)), tag=('file'))
-        paths = []
-        for event, element in doc:
-            paths.append(element.get('name'))
+        try:
+            doc = lxml.etree.iterparse(str(download_path), tag=('file'))
+            paths = []
+            for event, element in doc:
+                paths.append(element.get('name'))
+        except lxml.etree.Error as e:
+            # Remove the invalid file so that we re-attempt it next time
+            download_path.unlink(missing_ok=True)
+            raise
 
         return paths
