@@ -510,6 +510,7 @@ system.  This includes:
 * Disable most RetroPie setting menus except Bluetooth, Wifi, and Netplay
 * Disable most mupen64plus hotkey bindings
 * Disable mode switch hotkey in pce-cd and pcengine
+* Disable quick system select in EmulationStation
 
 The goal here is to avoid things getting messed up and poor experiences when your
 kids are playing and smashing all the buttons.
