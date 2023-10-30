@@ -9,6 +9,8 @@
 # at https://raw.githubusercontent.com/RetroPie/RetroPie-Setup/master/LICENSE.md
 #
 
+# TODO: Replace with RetroPie-Setup skyscraper once https://github.com/RetroPie/RetroPie-Setup/pull/3767 is merged
+
 rp_module_id="skyscraper-plus"
 rp_module_desc="Scraper for EmulationStation by Lars Muldjord + features by torresflo / detain"
 rp_module_licence="GPL3 https://raw.githubusercontent.com/muldjord/skyscraper/master/LICENSE"
@@ -29,6 +31,9 @@ function sources_skyscraper-plus() {
 
 function build_skyscraper-plus() {
     build_skyscraper
+
+    # Files expected by original skyscraper setup script
+    touch "$md_build/mobygames.json"
 }
 
 function install_skyscraper-plus() {
