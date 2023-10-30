@@ -17,18 +17,19 @@
     ]
   },
   "emulators": {
-    "redream": {
+    "lr-flycast-next": {
       "default": true,
+      "aliases": ["lr-flycast"],
+      "core_name": "flycast",
+      "library_name": "Flycast"
+    },
+    "redream": {
       "gamestate": [
         "/opt/retropie/configs/dreamcast/redream/cache/*",
         "/opt/retropie/configs/dreamcast/redream/saves/*",
         "/opt/retropie/configs/dreamcast/redream/states/*",
         "/opt/retropie/configs/dreamcast/redream/vmu*.bin"
       ]
-    },
-    "lr-flycast": {
-      "core_name": "flycast",
-      "library_name": "Flycast"
     }
   },
   "cheats": {

@@ -409,7 +409,10 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    }
+    },
+    "tags": [
+      "Multi-Disc"
+    ]
   },
   "Angel Present": {
     "id": "32b01286056819a90b64e9f161a76cf2ef4b68d6",
@@ -1791,6 +1794,9 @@
     "emulation": {
       "emulator": "lr-flycast"
     },
+    "tags": [
+      "Multi-Disc"
+    ],
     "merge": [
       "D2 - D no Shokutaku 2"
     ]
@@ -2104,7 +2110,10 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    }
+    },
+    "tags": [
+      "Multi-Disc"
+    ]
   },
   "Dejiko no Maibura": {
     "id": "291c3837ca8adc26ca7aabc52e178282424d27b2"
@@ -2133,6 +2142,7 @@
       "emulator": "lr-flycast"
     },
     "tags": [
+      "Multi-Disc",
       "Party"
     ]
   },
@@ -4352,7 +4362,10 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    }
+    },
+    "tags": [
+      "Multi-Disc"
+    ]
   },
   "Heavy Metal - Geomatrix": {
     "id": "dbddee914abf212e1be6448ea588ba9fd290d192",
@@ -8847,6 +8860,9 @@
     "emulation": {
       "emulator": "lr-flycast"
     },
+    "tags": [
+      "Multi-Disc"
+    ],
     "merge": [
       "Biohazard - Code - Veronica"
     ]
@@ -8886,6 +8902,9 @@
     "emulation": {
       "emulator": "lr-flycast"
     },
+    "tags": [
+      "Multi-Disc"
+    ],
     "merge": [
       "Biohazard 2 - Value Plus"
     ]
@@ -9906,6 +9925,9 @@
     "emulation": {
       "emulator": "lr-flycast"
     },
+    "tags": [
+      "Multi-Disc"
+    ],
     "merge": [
       "Shenmue - Ichishou Yokosuka",
       "US Shenmue"
@@ -9936,6 +9958,9 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue II (Europe).pdf"
       }
+    ],
+    "tags": [
+      "Multi-Disc"
     ],
     "emulation": {
       "emulator": "lr-flycast"
@@ -10073,6 +10098,9 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silent Scope (Europe).pdf"
       }
     ],
+    "tags": [
+      "Multi-Disc"
+    ],
     "emulation": {
       "emulator": "lr-flycast"
     }
@@ -10202,6 +10230,9 @@
     "emulation": {
       "emulator": "lr-flycast"
     },
+    "tags": [
+      "Multi-Disc"
+    ],
     "merge": [
       "Eternal Arcadia"
     ]
@@ -11061,6 +11092,9 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Stupid Invaders (France).pdf"
       }
+    ],
+    "tags": [
+      "Multi-Disc"
     ],
     "emulation": {
       "emulator": "lr-flycast"
