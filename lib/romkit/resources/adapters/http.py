@@ -46,29 +46,35 @@ class HTTPAdapter(BaseAdapter):
             headers = {}
             cookies = {}
 
-        # Get the file info without an encoding so that we can see what the
-        # real filesize is
-        headers['Accept-Encoding'] = ''
+        # By default, download entire file at once
+        parts = 1
 
-        # Find how how big the file is so that we can potentially split the download
-        # between many workers
-        response = self.session.head(source,
-            headers=headers,
-            cookies=cookies,
-            allow_redirects=True,
-            timeout=(self.client.connect_timeout, self.client.timeout),
-        )
-        response.raise_for_status()
-        file_size = int(response.headers.get('Content-Length', 0))
+        # Attempt to see if the download size exceeds the file part threshold
+        if self.client.part_threshold != -1:
+            # Get the file info without an encoding so that we can see what the
+            # real filesize is
+            headers['Accept-Encoding'] = ''
 
-        # Downloader in parts if:
-        # * File > threshold
-        # * Server accepts Range header
-        # * Server cannot encode response
-        if file_size > self.client.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
-            parts = math.ceil(file_size / self.client.part_size)
-        else:
-            parts = 1
+            # Find how how big the file is so that we can potentially split the download
+            # between many workers
+            response = self.session.head(source,
+                headers=headers,
+                cookies=cookies,
+                allow_redirects=True,
+                timeout=(self.client.connect_timeout, self.client.timeout),
+            )
+            response.raise_for_status()
+            file_size = int(response.headers.get('Content-Length', 0))
+
+            # Downloader in parts if:
+            # * File > threshold
+            # * Server accepts Range header
+            # * Server cannot encode response
+            if file_size > self.client.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
+                parts = math.ceil(file_size / self.client.part_size)
+
+        if parts == 1:
+            # Just downloading the entire file -- ignore its filesize
             file_size = 0
 
         request = ChunkedRequest(self.client, source, destination, parts=parts, file_size=file_size)
