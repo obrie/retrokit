@@ -4,8 +4,9 @@
     "path": "$RETROKIT_HOME/data/tic80.json"
   },
   "emulators": {
-    "lr-tic80": {
+    "lr-tic80-next": {
       "default": true,
+      "aliases": ["lr-tic80"],
       "core_name": "tic80",
       "library_name": "TIC-80"
     }
