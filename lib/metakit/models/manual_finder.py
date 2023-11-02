@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from romkit.resources.downloader import Downloader
+
 import html
 import internetarchive
 import json
@@ -19,6 +21,8 @@ class ManualFinder:
     def __init__(self, system: BaseSystem) -> None:
         self.system = system
         self.date = None
+        self.downloader = Downloader(part_threshold=-1)
+        self.downloader.headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
 
         # Build a cache of titles to corresponding groups
         #
@@ -108,7 +112,9 @@ class ManualFinder:
         self.date = datetime.strptime(date, '%Y-%m-%d').date()
 
         for website in self.system.config['manuals']['websites']:
-            if website['name'] == 'internetarchive' or '{year}' in website['source']:
+            url_scheme = urllib.parse.urlparse(website['source']).scheme
+
+            if website['name'] == 'internetarchive' or url_scheme == 'file' or '{year}' in website['source']:
                 # No need to snapshot since "current" represents a range
                 continue
 
@@ -143,6 +149,7 @@ class ManualFinder:
     # Searches for content on a generic, non-internetarchive website
     def search_generic_website(self, website: dict, review: bool = True) -> List[dict]:
         url = website['source']
+        url_scheme = urllib.parse.urlparse(url).scheme
         url_has_date = '{year}' in url
 
         # Interpolate any date templates in the URL.
@@ -166,7 +173,7 @@ class ManualFinder:
         # to review.  It's not perfect, but it minimizes the amount of review we have to do!
         previous_download_path = self._build_download_path(f"{website['name']}-previous", shared=website.get('shared', False))
         previous_content = ''
-        if self.date and not url_has_date:
+        if self.date and not url_has_date and (url_scheme == 'http' or url_scheme == 'https'):
             if 'compare_to' in website:
                 # Compare to specific url (date is always ignored)
                 previous_download_path = self._build_download_path(f"{website['name']}-previous", shared=website.get('shared', False), include_date=False)
@@ -274,17 +281,9 @@ class ManualFinder:
     def _get_or_download(self, url: str, path: Path) -> None:
         if not path.exists():
             print(f'Downloading {url}...')
+            self.downloader.get(url.replace(' ', '%20'), path, force=True)
 
-            request = urllib.request.Request(url.replace(' ', '%20'), headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'})
-            response = urllib.request.urlopen(request)
-            if response.status == 200:
-                with path.open('wb') as file:
-                    while chunk := response.read(1024):
-                        file.write(chunk)
-            else:
-                raise Exception(f'URL failed: {url}, Code: {response.status}')
-
-        content =  path.read_text(encoding='utf-8', errors='ignore')
+        content = path.read_text(encoding='utf-8', errors='ignore')
         content = re.sub(r'(https://web\.archive\.org)?/web/[0-9]+/', '', content)
         return content
 
