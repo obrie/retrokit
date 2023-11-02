@@ -40,6 +40,8 @@ class Downloader:
         self.retries = retries
         self.backoff_factor = backoff_factor
         self.adapters = {}
+        self.headers = {}
+        self.cookies = {}
 
         # Build default mapping of adapters for handling different URI schemes
         for adapter in BaseAdapter.__subclasses__():

@@ -39,12 +39,12 @@ class HTTPAdapter(BaseAdapter):
 
     # Downloads from an HTTP source to the given local destination file path
     def download(self, source: str, destination: Path) -> None:
+        headers = self.client.headers.copy()
+        cookies = self.client.cookies.copy()
+
         if self.client.auth and self.client.auth.match(source):
-            headers = self.client.auth.headers
-            cookies = self.client.auth.cookies
-        else:
-            headers = {}
-            cookies = {}
+            headers.update(self.client.auth.headers)
+            cookies.update(self.client.auth.cookies)
 
         # By default, download entire file at once
         parts = 1
