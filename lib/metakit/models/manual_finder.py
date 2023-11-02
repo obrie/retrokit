@@ -9,6 +9,7 @@ import questionary
 import re
 import shlex
 import subprocess
+import traceback
 import urllib.parse
 import urllib.request
 import waybackpy
@@ -163,7 +164,14 @@ class ManualFinder:
 
         # Look up latest content
         current_download_path = self._build_download_path(f"{website['name']}-current", shared=website.get('shared', False), include_date=url_has_date)
-        current_content = self._get_or_download(download_url, current_download_path)
+        try:
+            current_content = self._get_or_download(download_url, current_download_path)
+        except Exception as e:
+            if website.get('required') == False:
+                traceback.print_exc()
+                current_content = ''
+            else:
+                raise e
 
         # Look up previous content (if a date was specified and the current url doesn't have date
         # ranges built into it).
