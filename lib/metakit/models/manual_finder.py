@@ -366,25 +366,41 @@ class ManualFinder:
 
     # Reviews current database's groups by attempting to search for a keyword used in the url
     def _review_group_by_url_search(self, matches: List[dict], group: str) -> None:
+        self.database.reload()
+        metadata = self.database.get(group)
+
+        # Print alternate titles and existing manuals to help assist searching
+        if 'merge' in metadata:
+            print()
+            print(f'Alternate titles:')
+            for merge_title in metadata['merge']:
+                print(f'- {merge_title}')
+
+        self._print_existing_manuals(group)
+
         # Keep prompting the user until all relevant urls have been reviewed
         while True:
-            search_string = questionary.text('URL:', default=group.replace(' ', '.*')).ask()
+            # Default search string includes group title and all merge titles
+            all_titles = [group] + metadata.get('merge', [])
+            search_default = '|'.join([title.replace(' ', '.*') for title in all_titles])
+
+            search_string = questionary.text('URL:', default=search_default).ask()
             if not search_string:
                 # No content -- stop looking
                 return
 
-            filtered_urls = []
+            filtered_matches = []
 
             # Find all groups that have an associated title which matches the
             # regular expression provided by the user
             filter_regex = re.compile(search_string, re.IGNORECASE)
             for match in matches:
                 if filter_regex.search(f"{match['url']} {match['name']}"):
-                    filtered_urls.append(match['url'])
+                    filtered_matches.append(match)
 
             # Confirm the url with the user
-            if filtered_urls:
-                imported_urls, is_done = self._review_group_by_urls(group, filtered_urls)
+            if filtered_matches:
+                imported_urls, is_done = self._review_group_by_urls(group, filtered_matches)
                 matches = [match for match in matches if match['url'] not in imported_urls]
 
                 if is_done:
@@ -401,34 +417,37 @@ class ManualFinder:
 
                 if next_step == custom_choice:
                     # Allow the user to enter a custom url
-                    self._ask_manual(group, '')
+                    self._ask_manual(group, '', show_manuals=False)
                 elif next_step == done_choice:
                     return
 
     # Allow the user to review the given list of URLs for a group
-    def _review_group_by_urls(self, group: str, urls: List[str]) -> Tuple[List[str], bool]:
+    def _review_group_by_urls(self, group: str, matches: List[dict]) -> Tuple[List[str], bool]:
         search_again_choice = 'Search again'
         custom_choice = 'Enter custom url'
         done_choice = 'Done!'
 
         imported_urls = []
 
-        while urls:
-            url = questionary.select('Select url:', choices=([search_again_choice] + urls + [custom_choice, done_choice])).ask()
-            if not url or url == search_again_choice:
+        while matches:
+            url_choices = [{'name': f"{match['url']} ({match['name']})", 'value': match} for match in matches]
+            match = questionary.select('Select url:', choices=([search_again_choice] + url_choices + [custom_choice, done_choice])).ask()
+            if not match or match == search_again_choice:
                 break
-            elif url == done_choice:
+            elif match == done_choice:
                 return imported_urls, True
             else:
-                if url == custom_choice:
+                if match == custom_choice:
                     # User wants to input a custom URL
                     url = ''
+                else:
+                    url = match['url']
 
-                if self._ask_manual(group, url):
+                if self._ask_manual(group, url, show_manuals=False):
                     # Don't prompt for this url a second time
-                    if url in urls:
+                    if match in matches:
                         imported_urls.append(url)
-                        urls.remove(url)
+                        matches.remove(match)
 
         return imported_urls, False
 
@@ -510,12 +529,8 @@ class ManualFinder:
 
         return description
 
-    # Prompts the user to provide the manual metadata information for the given group / url
-    def _ask_manual(self, group: str, url: str) -> bool:
-        # In case the user has edited it, we want to make sure we've pulled the latest
-        # database content before overwriting it
-        self.database.reload()
-
+    # Prints the existing manuals for the given group
+    def _print_existing_manuals(self, group: str) -> None:
         metadata = self.database.get(group)
 
         # Print existing manuals
@@ -528,6 +543,15 @@ class ManualFinder:
                     manual_description += f" ({manual['name']})"
                 print(manual_description)
             print()
+
+    # Prompts the user to provide the manual metadata information for the given group / url
+    def _ask_manual(self, group: str, url: str, show_manuals: bool = True) -> bool:
+        # In case the user has edited it, we want to make sure we've pulled the latest
+        # database content before overwriting it
+        self.database.reload()
+
+        if show_manuals:
+            self._print_existing_manuals(group)
 
         while True:
             if not questionary.confirm('Continue?', default=True).ask():
@@ -571,6 +595,7 @@ class ManualFinder:
 
             print(f'Manual: {manual}')
             if questionary.confirm('Confirm?', default=True).ask():
+                metadata = self.database.get(group)
                 if 'manuals' in metadata:
                     metadata['manuals'] = [m for m in metadata['manuals'] if m['languages'] != manual['languages']]
                 else:
