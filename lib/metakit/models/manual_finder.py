@@ -393,10 +393,13 @@ class ManualFinder:
 
             # Find all groups that have an associated title which matches the
             # regular expression provided by the user
-            filter_regex = re.compile(search_string, re.IGNORECASE)
-            for match in matches:
-                if filter_regex.search(f"{match['url']} {match['name']}"):
-                    filtered_matches.append(match)
+            try:
+                filter_regex = re.compile(search_string, re.IGNORECASE)
+                for match in matches:
+                    if filter_regex.search(f"{match['url']} {match['name']}"):
+                        filtered_matches.append(match)
+            except re.error:
+                pass
 
             # Confirm the url with the user
             if filtered_matches:
@@ -495,10 +498,13 @@ class ManualFinder:
 
                 # Find all groups that have an associated title which matches the
                 # regular expression provided by the user
-                match_regex = re.compile(search_string, re.IGNORECASE)
-                for title in self.title_to_groups:
-                    if match_regex.search(title):
-                        groups.update(self.title_to_groups[title])
+                try:
+                    match_regex = re.compile(search_string, re.IGNORECASE)
+                    for title in self.title_to_groups:
+                        if match_regex.search(title):
+                            groups.update(self.title_to_groups[title])
+                except re.error:
+                    pass
 
                 # Builds list of choices based on matches groups
                 # * We include aliases so it's clear why the group matched.  title_to_groups
