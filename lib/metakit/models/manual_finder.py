@@ -402,27 +402,11 @@ class ManualFinder:
                 pass
 
             # Confirm the url with the user
-            if filtered_matches:
-                imported_urls, is_done = self._review_group_by_urls(group, filtered_matches)
-                matches = [match for match in matches if match['url'] not in imported_urls]
+            imported_urls, is_done = self._review_group_by_urls(group, filtered_matches)
+            matches = [match for match in matches if match['url'] not in imported_urls]
 
-                if is_done:
-                    return
-            else:
-                search_again_choice = 'Search again'
-                custom_choice = 'Enter custom url'
-                done_choice = 'Done!'
-                next_step = questionary.select('No urls found!', choices=[
-                    search_again_choice,
-                    custom_choice,
-                    done_choice,
-                ]).ask()
-
-                if next_step == custom_choice:
-                    # Allow the user to enter a custom url
-                    self._ask_manual(group, '', show_manuals=False)
-                elif next_step == done_choice:
-                    return
+            if is_done:
+                return
 
     # Allow the user to review the given list of URLs for a group
     def _review_group_by_urls(self, group: str, matches: List[dict]) -> Tuple[List[str], bool]:
@@ -432,7 +416,7 @@ class ManualFinder:
 
         imported_urls = []
 
-        while matches:
+        while True:
             url_choices = [{'name': f"{match['url']} ({match['name']})", 'value': match} for match in matches]
             match = questionary.select('Select url:', choices=([search_again_choice] + url_choices + [custom_choice, done_choice])).ask()
             if not match or match == search_again_choice:
