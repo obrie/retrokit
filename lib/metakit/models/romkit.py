@@ -69,6 +69,10 @@ class ROMKit:
                 if machine.parent_machine:
                     # Group this machine with its parent
                     machine.group_name = machine.parent_machine.group_name
+
+                    # Re-add the machine so that it's grouped with its parent in the
+                    # romkit SortableSet collection; otherwise it might be in its own
+                    # group
                     self.machines.add(machine)
 
                     machine = machine.parent_machine
