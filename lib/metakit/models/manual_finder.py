@@ -368,6 +368,9 @@ class ManualFinder:
     def _review_group_by_url_search(self, matches: List[dict], group: str) -> None:
         self.database.reload()
         metadata = self.database.get(group)
+        if not metadata:
+            # Group has since been removed
+            return
 
         # Print alternate titles and existing manuals to help assist searching
         if 'merge' in metadata:
