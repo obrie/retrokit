@@ -17,7 +17,7 @@ class ManualsAttribute(BaseAttribute):
         'html', 'txt',
         'jpeg', 'jpg', 'gif', 'png',
     }
-    ROTATE_VALUES = {90, 180, 270}
+    ROTATE_VALUES = {0, 90, 180, 270}
     REWRITE_EXIF_VALUES = {True, False}
 
     def validate(self, value: List[dict]) -> List[str]:
@@ -76,6 +76,9 @@ class ManualsAttribute(BaseAttribute):
 
             if 'options' in manual:
                 manual['options'] = self._sort_dict(manual['options'], self.OPTIONS_KEYS)
+
+                if manual['options'].get('rotate') == 0:
+                    del manual['options']['rotate']
 
         return sorted(manuals, key=lambda manual: [manual.get('name', ''), len(manual['languages']), ','.join(manual['languages'])])
 
