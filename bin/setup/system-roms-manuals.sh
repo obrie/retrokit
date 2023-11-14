@@ -277,6 +277,8 @@ __build_manual() {
 
   # Define the souce manual's extension
   local manual_url_extension=${manual_url##*.}
+  manual_url_extension=${manual_url_extension%%\?*} # Remove any query options
+  manual_url_extension=${manual_url_extension%%#*} # Remove any fragment identifiers
   local extension=${manual_ref['format']:-$manual_url_extension}
   manual_ref['extension']=${extension,,} # lowercase
 
