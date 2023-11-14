@@ -3,14 +3,16 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_module_id='tools-pdf'
-setup_module_desc='Supplementary tools for processing PDFs'
+setup_module_id='manualkit-dev'
+setup_module_desc='Supplementary tools for processing PDFs when doing development on manualkit libraries'
 
 # TODO: These won't be needed once we're on bookworm
 ghostscript_min_version=9.55.0
 qpdf_min_version=10.6.3
 
 depends() {
+  "$bin_dir/setup.sh" depends manualkit
+
   __depends_qpdf
   __depends_conversion_tools
   __depends_exif

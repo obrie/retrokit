@@ -13,7 +13,7 @@ setup_module_desc='System reference sheet builder'
 es_system_docs_dir="$home/.emulationstation/downloaded_media/$system/docs"
 
 depends() {
-  "$bin_dir/setup.sh" __depends_ghostscript tools-pdf
+  "$bin_dir/setup.sh" __depends_ghostscript manualkit-dev
 }
 
 build() {
