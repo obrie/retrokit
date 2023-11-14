@@ -7,7 +7,7 @@ setup_module_id='system-launchimages'
 setup_module_desc='System-specific launch images to display while emulators are loading'
 
 depends() {
-  sudo apt-get install -y chromium
+  sudo apt-get install -y $([ "$os_id" == 'Ubuntu' ] && echo chromium-browser || echo chromium)
 
   sudo pip3 install jinja2-cli~=0.8.2
 }

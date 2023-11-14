@@ -49,7 +49,7 @@ __depends_qpdf() {
 # Tools for converting from different formats to PDF
 __depends_conversion_tools() {
   # Convert txt/html to pdf
-  sudo apt-get install -y chromium
+  sudo apt-get install -y $([ "$os_id" == 'Ubuntu' ] && echo chromium-browser || echo chromium)
 
   # Convert cbr archives to pdf
   sudo apt-get install -y unrar-free

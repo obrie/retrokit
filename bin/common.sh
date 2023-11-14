@@ -18,6 +18,13 @@ export item_delim=$'\u001f'
 
 export binary_base_url='https://github.com/obrie/retrokit/releases/download/latest'
 
+# OS Info
+mapfile -t os < <(lsb_release -s -i -d -r -c)
+export os_id="${os[0]}"
+export os_desc="${os[1]}"
+export os_release="${os[2]}"
+export os_codename="${os[3]}"
+
 # RetroPie paths
 export retropie_dir="/opt/retropie"
 export retropie_configs_dir="$retropie_dir/configs"
