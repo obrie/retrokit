@@ -333,19 +333,23 @@ class ManualFinder:
             return
 
         # Determine how we're reviewing
-        search_groups_choice = 'Review by URL (search for a group)'
-        search_urls_choice = 'Review by Group (search for url(s))'
+        review_urls_choice = 'Review all URLs (search for a group)'
+        review_groups_choice = 'Review all Groups (search for url(s))'
+        review_custom_group_choice = 'Review specific Groups (search for url(s))'
         skip_choice = 'Skip'
         review_method = questionary.select('URL review method:', choices=[
-            search_groups_choice,
-            search_urls_choice,
+            review_urls_choice,
+            review_groups_choice,
+            review_custom_group_choice,
             skip_choice,
         ]).ask()
 
-        if review_method == search_groups_choice:
+        if review_method == review_urls_choice:
             self._review_urls_by_group_search(matches)
-        elif review_method == search_urls_choice:
+        elif review_method == review_groups_choice:
             self._review_groups_by_url_search(matches)
+        elif review_method == review_custom_group_choice:
+            self._review_custom_groups_by_url_search(matches)
         else:
             return
 
@@ -368,6 +372,21 @@ class ManualFinder:
 
         for index, group in enumerate(groups):
             print(f'\n{start_index+index+1}/{start_index+len(groups)}: {group}')
+            self._review_group_by_url_search(matches, group)
+
+    # Reviews user-provided group names
+    def _review_custom_groups_by_url_search(self, matches: List[dict]) -> None:
+        while True:
+            print()
+            group = questionary.text('Group:').ask()
+            if not group:
+                break
+
+            metadata = self.database.get(group)
+            if not metadata:
+                print('Group not found!')
+                continue
+
             self._review_group_by_url_search(matches, group)
 
     # Reviews current database's groups by attempting to search for a keyword used in the url
