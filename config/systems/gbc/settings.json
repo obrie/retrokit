@@ -65,9 +65,6 @@
           "target": "$HOME/RetroPie/roms/gbc/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/gbc/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

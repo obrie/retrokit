@@ -48,9 +48,6 @@
           "target": "$HOME/RetroPie/roms/wonderswancolor/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/wonderswancolor/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

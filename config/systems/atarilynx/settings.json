@@ -57,9 +57,6 @@
           "target": "$HOME/RetroPie/roms/atarilynx/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/atarilynx/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

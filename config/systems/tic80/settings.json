@@ -26,9 +26,6 @@
           "target": "$HOME/RetroPie/roms/tic80/.tic80/{machine}.tic",
           "xref": "$HOME/RetroPie/roms/tic80/.tic80/.xrefs/{machine_id}.tic"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

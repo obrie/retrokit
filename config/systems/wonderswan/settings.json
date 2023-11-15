@@ -48,9 +48,6 @@
           "target": "$HOME/RetroPie/roms/wonderswan/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/wonderswan/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

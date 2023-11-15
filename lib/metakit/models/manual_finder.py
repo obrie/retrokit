@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.resources.downloader import Downloader
+from romkit.resources.session import Session
 
 import html
 import internetarchive
@@ -19,11 +20,16 @@ from pathlib import Path
 from waybackpy import WaybackMachineCDXServerAPI
 
 class ManualFinder:
+    # Default headers to use when downloading content
+    DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
+
     def __init__(self, system: BaseSystem) -> None:
         self.system = system
         self.date = None
-        self.downloader = Downloader(part_threshold=-1)
-        self.downloader.headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'}
+        self.downloader = Downloader(session=Session(
+            headers=self.DEFAULT_HEADERS,
+            part_threshold=-1,
+        ))
 
         # Build a cache of titles to corresponding groups
         #

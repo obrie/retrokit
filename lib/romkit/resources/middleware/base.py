@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-# Authentication strategy
-class BaseAuth:
-    # Builds an authentication client from the given JSON data
+# Middleware for injecting additional data into Downloader requests
+class BaseMiddleware:
+    # Builds middleware from the given JSON data
     @classmethod
     def from_json(cls, json: dict, **kwargs) -> BaseAuth:
         return cls.for_name(json['type'])(
@@ -22,12 +22,7 @@ class BaseAuth:
     def match(self, url: str) -> bool:
         return False
 
-    # Headers to include in http requests
+    # Session configuration overrides to include
     @property
-    def headers(self) -> dict:
-        return {}
-
-    # Cookies to include in http requests
-    @property
-    def cookies(self) -> dict:
+    def overrides(self) -> dict:
         return {}

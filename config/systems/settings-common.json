@@ -21,6 +21,13 @@
       "{rom_dir}/{rom}.state"
     ]
   },
+  "downloads": {
+    "middleware": [
+      {"type": "internetarchive_auth"}
+    ],
+    "sites": {
+    }
+  },
   "mess": {
     "artwork": {
       "background_only": true

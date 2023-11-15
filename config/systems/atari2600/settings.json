@@ -45,9 +45,6 @@
           "target": "$HOME/RetroPie/roms/atari2600/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/atari2600/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

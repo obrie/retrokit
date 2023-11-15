@@ -14,7 +14,7 @@ class FileAdapter(BaseAdapter):
         source_uri = urlparse(source)
         return unquote(source_uri.path) != str(destination)
 
-    def download(self, source: str, destination: Path) -> None:
+    def download(self, source: str, destination: Path, session: Session) -> None:
         if self.force(source, destination):
             logging.debug(f'Copying {source} to {destination}')
             source_uri = urlparse(source)

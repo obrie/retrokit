@@ -26,42 +26,33 @@ from collections import deque
 class HTTPAdapter(BaseAdapter):
     schemes = ['http', 'https']
 
-    def __init__(self, client: Downloader) -> None:
-        super().__init__(client)
-
-        self.session = requests.Session()
-
-        retry_adapter = requests.adapters.Retry(total=self.client.retries, backoff_factor=self.client.backoff_factor)
-        http_adapter = requests.adapters.HTTPAdapter(max_retries=retry_adapter)
-
-        self.session.mount('http://', http_adapter)
-        self.session.mount('https://', http_adapter)
-
     # Downloads from an HTTP source to the given local destination file path
-    def download(self, source: str, destination: Path) -> None:
-        headers = self.client.headers.copy()
-        cookies = self.client.cookies.copy()
-
-        if self.client.auth and self.client.auth.match(source):
-            headers.update(self.client.auth.headers)
-            cookies.update(self.client.auth.cookies)
+    def download(self, source: str, destination: Path, session: Session) -> None:
+        headers = session.headers.copy()
+        cookies = session.cookies.copy()
 
         # By default, download entire file at once
         parts = 1
 
         # Attempt to see if the download size exceeds the file part threshold
-        if self.client.part_threshold != -1:
+        if session.part_threshold != -1:
             # Get the file info without an encoding so that we can see what the
             # real filesize is
             headers['Accept-Encoding'] = ''
 
+            http_client = requests.Session()
+            retry_adapter = requests.adapters.Retry(total=session.retries, backoff_factor=session.backoff_factor)
+            http_adapter = requests.adapters.HTTPAdapter(max_retries=retry_adapter)
+            http_client.mount('http://', http_adapter)
+            http_client.mount('https://', http_adapter)
+
             # Find how how big the file is so that we can potentially split the download
             # between many workers
-            response = self.session.head(source,
+            response = http_client.head(source,
                 headers=headers,
                 cookies=cookies,
                 allow_redirects=True,
-                timeout=(self.client.connect_timeout, self.client.timeout),
+                timeout=(session.connect_timeout, session.timeout),
             )
             response.raise_for_status()
             file_size = int(response.headers.get('Content-Length', 0))
@@ -70,14 +61,14 @@ class HTTPAdapter(BaseAdapter):
             # * File > threshold
             # * Server accepts Range header
             # * Server cannot encode response
-            if file_size > self.client.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
-                parts = math.ceil(file_size / self.client.part_size)
+            if file_size > session.part_threshold and response.headers.get('Accept-Ranges') == 'bytes' and 'Accept-Encoding' not in response.headers.get('Vary', ''):
+                parts = math.ceil(file_size / session.part_size)
 
         if parts == 1:
             # Just downloading the entire file -- ignore its filesize
             file_size = 0
 
-        request = ChunkedRequest(self.client, source, destination, parts=parts, file_size=file_size)
+        request = ChunkedRequest(session, source, destination, parts=parts, file_size=file_size)
         request.headers = headers
         request.cookies = cookies
         request.perform()
@@ -85,8 +76,8 @@ class HTTPAdapter(BaseAdapter):
 # Represents an http request that will attempt to open multiple connections
 # in order to improve overall download speed
 class ChunkedRequest:
-    def __init__(self, client: Downloader, source: str, destination: Path, parts: int, file_size: int):
-        self.client = client
+    def __init__(self, session: Session, source: str, destination: Path, parts: int, file_size: int):
+        self.session = session
         self.source = source
         self.destination = destination
         self.parts = parts
@@ -102,8 +93,8 @@ class ChunkedRequest:
         # Create the queue of parts to download
         self.queue = deque()
         for i in range(self.parts):
-            start = client.part_size * i
-            end = min(file_size, start + client.part_size)
+            start = session.part_size * i
+            end = min(file_size, start + session.part_size)
             self.queue.append({'start': start, 'end': end, 'attempts': 0})
 
     # Start processing this request
@@ -137,7 +128,7 @@ class ChunkedRequest:
         curl_share.setopt(pycurl.SH_SHARE, pycurl.LOCK_DATA_SSL_SESSION)
 
         # Start up workers to download
-        for i in range(min(self.parts, self.client.max_concurrency)):
+        for i in range(min(self.parts, self.session.max_concurrency)):
             worker = Worker(self, i)
             worker.connection.setopt(pycurl.SHARE, curl_share)
             self._workers.append(worker)
@@ -202,10 +193,10 @@ class Worker:
         self.exception = None
         self._thread = None
 
-    # The Downloader client
+    # The request session
     @property
-    def client(self) -> Downloader:
-        return self.request.client
+    def session(self) -> Session:
+        return self.request.session
 
     # Start a new thread to consume from the queue
     def start(self) -> None:
@@ -283,7 +274,7 @@ class Worker:
             self.connection.setopt(pycurl.URL, self.request.source)
 
             attempts = chunk['attempts']
-            if attempts < self.client.retries:
+            if attempts < self.session.retries:
                 # Add back to the queue (in the front, so this is immediately tried again)
                 chunk['attempts'] = attempts + 1
                 logging.debug(f'[Connection #{self.id}] Download error for part {start} -> {end} (attempt #{attempts}): {e}')

@@ -9,13 +9,10 @@ class BaseAdapter:
     # List of URI schemes this adapter is capable of handling
     schemes = []
 
-    def __init__(self, client: Downloader) -> None:
-        self.client = client
-
     # Whether to download files via this adapter even if the target file already exists
     def force(self, source: str, destination: Path) -> bool:
         return False
 
     # Downloads from a remote source to the given local destination file path
-    def download(self, source: str, destination: Path) -> None:
+    def download(self, source: str, destination: Path, session: Session) -> None:
         pass

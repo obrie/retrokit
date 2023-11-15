@@ -68,9 +68,6 @@
           "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/nds/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

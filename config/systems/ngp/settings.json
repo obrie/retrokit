@@ -48,9 +48,6 @@
           "target": "$HOME/RetroPie/roms/ngp/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/ngp/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

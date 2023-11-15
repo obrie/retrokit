@@ -53,9 +53,6 @@
           "target": "$HOME/RetroPie/roms/channelf/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/channelf/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

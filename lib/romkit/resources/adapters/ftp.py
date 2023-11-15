@@ -10,7 +10,7 @@ from urllib.request import urlretrieve
 class FTPAdapter(BaseAdapter):
     schemes = ['ftp']
 
-    def download(self, source: str, destination: Path) -> None:
+    def download(self, source: str, destination: Path, session: Session) -> None:
         attempts = 0
 
         while True:
@@ -19,8 +19,8 @@ class FTPAdapter(BaseAdapter):
                 break
             except Exception as e:
                 attempts += 1
-                if attempts > self.client.retries:
+                if attempts > session.retries:
                     raise e
                 else:
                     logging.debug(f'Download error for {source} (attempt #{attempts}): {e}')
-                    time.sleep(self.client.timeout)
+                    time.sleep(session.timeout)

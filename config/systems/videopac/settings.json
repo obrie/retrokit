@@ -54,9 +54,6 @@
           "xref": "$HOME/RetroPie/roms/videopac/.nointro/.xrefs/{machine_id}.bin",
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     },
     "nointro-plus": {
@@ -82,9 +79,6 @@
           "xref": "$HOME/RetroPie/roms/videopac/.nointro-plus/.xrefs/{machine_id}.bin",
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

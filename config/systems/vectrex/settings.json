@@ -45,9 +45,6 @@
           "target": "$HOME/RetroPie/roms/vectrex/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/vectrex/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

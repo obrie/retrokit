@@ -54,9 +54,6 @@
           "target": "$HOME/RetroPie/roms/c64/.nointro-carts/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/c64/.nointro-carts/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     },
     "nointro-tapes": {
@@ -80,9 +77,6 @@
           "target": "$HOME/RetroPie/roms/c64/.nointro-tapes/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/c64/.nointro-tapes/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     },
     "nointro-pp": {
@@ -106,9 +100,6 @@
           "target": "$HOME/RetroPie/roms/c64/.nointro-pp/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/c64/.nointro-pp/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

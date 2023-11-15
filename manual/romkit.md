@@ -440,8 +440,7 @@ them.  For example, consider the following:
           "xref": "$HOME/RetroPie/roms/dreamcast/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
-      },
-      "auth": "internetarchive"
+      }
     }
   }
 }
@@ -455,27 +454,6 @@ The following discovery types are supported:
 
 * `internetarchive`
 * `ftp`
-
-In addition, an additional authentication mechanism is used when downloading
-from the remote archive.
-
-Currently, the following discovery strategies are implemented:
-
-* internetarchive
-
-The following authentication strategies are implemented:
-
-* internetarchive
-
-#### Authentication
-
-When resources are being downloaded from an external location, you may need to provide
-some form of authentication alongside the HTTP requests being made.  To do so, you can
-configure the `auth` property with a romset.
-
-The following authenticiation strategies are implemented:
-
-* internetarchive: Uses the cookies stored from the `ia` command-line tool
 
 ### `roms`
 
@@ -904,27 +882,76 @@ As you can see, there are a lot of possible when it comes to organizing your gam
 
 ### `downloads`
 
-When downloading games via your own private archives, you can set some limits
-on how the download functionality behaves.
+When downloading from external sources, you can override some settings on how the
+download functionality behaves.
 
 For example:
 
 ```json
 {
   "downloads": {
+    // Maximum number of concurrent requests to make
     "max_concurrency": 5,
+
+    // The download threshold after which romkit will split the request up
+    // in order to increase the download concurrency (default: 10mb)
     "part_threshold": 10485760,
+
+    // The size of parts to download concurrently when enabled (default: 1mb)
     "part_size": 1048576,
+
+    // The number of times a request will be retried
     "retries": 3,
+
+    // A backoff factor to apply between attempts after the second try.  Sleep
+    // interval is: {backoff factor} * (2 ** ({number of previous retries}))
     "backoff_factor": 2,
+
+    // The number of seconds to wait until timing out when waiting for data
     "timeout": 300,
-    "conect_timeout": 5
+
+    // The number of seconds to wait until the initial connection times out
+    "conect_timeout": 5,
+
+    // Cookies to include in the request
+    "cookies": {},
+
+    // Headers to include in the request
+    "headers": {},
+
+    // Additional "middleware" to enable for individual requests for overriding
+    // the above configurations (e.g. injecting additional headers)
+    "middleware": [
+      {"type": "internetarchive_auth"}
+    ],
+
+    // Site-specific configuration overrides for requests (e.g. reducing concurrency,
+    // injecting headers, etc.)
+    "sites": {
+      "example.com": {
+        "max_concurrency": 1
+      }
+    }
   }
 }
 ```
 
 By default, romkit will use a concurrency of 5 when downloading from external sources.
 If you want to adjust that concurrency, you can do so.
+
+Request-level configurations (such as concurrency, timeouts, headers, etc.) can be defined
+at multiple levels:
+
+* Globally via the `downloads` setting
+* Runtime logic via the `middleware` setting
+* Domain-specific via the `sites` settings
+
+When defining site-specific overrides, romkit will include all matching domains, prioritizing
+the most specific domain highest.
+
+Currently, the following middleware is currently available:
+
+* internetarchive_auth - Injects internetarchive credentials into headers for matching URLs
 
 ## Output
 

@@ -60,9 +60,6 @@
           "target": "$HOME/RetroPie/roms/coleco/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/coleco/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

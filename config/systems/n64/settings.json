@@ -76,9 +76,6 @@
           "xref": "$HOME/RetroPie/roms/n64/.nointro/.xrefs/{machine_id}.z64",
           "install": {"action": "zip_extract", "file": ".*\\.z64"}
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

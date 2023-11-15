@@ -57,9 +57,6 @@
           "target": "$HOME/RetroPie/roms/megadrive/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/megadrive/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

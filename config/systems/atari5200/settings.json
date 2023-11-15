@@ -57,9 +57,6 @@
           "target": "$HOME/RetroPie/roms/atari5200/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/atari5200/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

@@ -46,9 +46,6 @@
           "target": "$HOME/RetroPie/roms/sega32x/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/sega32x/.nointro/.xrefs/{machine_id}.zip"
         }
-      },
-      "auth": {
-        "type": "internetarchive"
       }
     }
   },

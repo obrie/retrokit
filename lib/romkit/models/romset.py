@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from romkit.auth import BaseAuth
 from romkit.discovery import BaseDiscovery
 from romkit.models.machine import Machine
 from romkit.processing.ruleset import Ruleset
@@ -21,7 +20,6 @@ class ROMSet:
         url: Optional[str] = None,
         resource_templates: Dict[str, ResourceTemplate] = {},
         emulators: List[str] = [],
-        auth: Optional[BaseAuth] = None,
         discovery: Optional[BaseDiscovery] = None,
         datlist: Optional[List[str]] = None,
         filters: Optional[Ruleset] = None,
@@ -32,14 +30,10 @@ class ROMSet:
         self.url = url
         self.resource_templates = resource_templates
         self.emulators = emulators
-        self.auth = auth
         self.discovery = discovery
         self.filters = filters
         self.enabled = enabled
         self.downloader = system.downloader
-
-        if auth:
-            self.downloader = self.downloader.with_auth(auth)
 
         # Internal dat list for systems that don't have dat files
         if datlist:
@@ -53,12 +47,7 @@ class ROMSet:
     # Builds a ROMSet from the given json data
     @classmethod
     def from_json(cls, json: dict, system: System, **kwargs) -> ROMSet:
-        if 'auth' in json:
-            auth = BaseAuth.from_json(json['auth'])
-        else:
-            auth = None
-
-        romset = cls(system=system, auth=auth, **slice_only(json, [
+        romset = cls(system=system, **slice_only(json, [
             'name',
             'url',
             'emulators',
