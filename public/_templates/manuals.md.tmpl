@@ -3,6 +3,8 @@
 This is a collection of ~20,000 manuals across 40+ systems that have been catalogued by hand.
 For more information and bulk downloads, you can view this project over at [archive.org](https://archive.org/details/retrokit-manuals).
 
+<a id="permalink" href="">Permalink</a>
+
 <table id="manuals_data" class="stripe hover order-column row-border">
     <thead>
     </thead>
@@ -18,7 +20,7 @@ var data = [
 const urlParams = new URLSearchParams(window.location.search);
 
 $(document).ready(function() {
-  $('#manuals_data').DataTable({
+  var datatable = $('#manuals_data').DataTable({
     data: data,
     columns: [
       // System
@@ -65,7 +67,7 @@ $(document).ready(function() {
       sSearch: urlParams.get('search') || ''
     },
     // Pagination
-    pageLength: urlParams.get('page_size') || 10,
+    pageLength: parseInt(urlParams.get('page_size') || 10),
     pagingType: 'full',
     // Text content
     language: {
@@ -112,10 +114,25 @@ $(document).ready(function() {
 
       // Initial page
       const initialPage = urlParams.get('page');
-      if (initialPage != null && initialPage > 1 && initialPage <= table.api().page.info().pages) {
+      if (initialPage != null && initialPage > 1 && initialPage <= this.api().page.info().pages) {
         this.fnPageChange(initialPage - 1, true);
       }
     }
+  });
+
+  // Update the permalink anytime there's a change to the url
+  datatable.on('draw', function() {
+    var page = datatable.page() + 1;
+    var pageSize = datatable.page.len();
+    var system = $(datatable.column(0).header()).find('select').val();
+    var language = $(datatable.column(2).header()).find('select').val();
+    var search = datatable.search();
+
+    var baseUrlPieces = [location.protocol, '//', location.host, location.pathname];
+    var baseUrl = baseUrlPieces.join('');
+    var url = baseUrl + '?' + (new URLSearchParams({page: page, page_size: pageSize, system: system, language: language, search: search}).toString());
+
+    $('#permalink').attr('href', url);
   });
 });
 </script>
