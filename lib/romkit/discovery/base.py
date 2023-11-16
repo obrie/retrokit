@@ -35,6 +35,7 @@ class BaseDiscovery:
         self._loaded = False
         self._default_mappings = {'url': ''}
         self._machine_mappings = defaultdict(dict)
+        self._mapping_context_keys = set()
 
         self.has_missing_urls = not(self.urls and self.urls == urls)
 
@@ -74,36 +75,52 @@ class BaseDiscovery:
                 logging.debug(f'Unable to run discovery for {url}')
                 continue
 
-            for path in self.list_paths(url):
-                for match_name, match_pattern in self.match_patterns.items():
-                    result = match_pattern.search(path)
-                    if result:
-                        # Build the url
-                        discovered_url = urljoin(f'{url}/', quote(path))
-
-                        # Track either a machine-specific url or a default url
-                        if 'machine' in result.groupdict():
-                            stored_mappings = self._machine_mappings[result['machine']]
-                        else:
-                            stored_mappings = self._default_mappings
-
-                        stored_mappings[match_name] = discovered_url
+            self.load_url(url)
 
         self._loaded = True
 
+    def load_url(self, url: str) -> None:
+        for path in self.list_paths(url):
+            for match_name, match_pattern in self.match_patterns.items():
+                result = match_pattern.search(path)
+                if not result:
+                    continue
+                mapping_name = ''.join(result.groups())
+                capture_groups_by_name = result.groupdict()
+
+                # Build the url
+                discovered_url = urljoin(f'{url}/', quote(path))
+
+                # Track either a machine-specific url or a default url
+                if 'machine' in capture_groups_by_name:
+                    stored_mappings = self._machine_mappings[mapping_name]
+                    self._mapping_context_keys.add('machine')
+                elif 'primary_rom' in capture_groups_by_name:
+                    stored_mappings = self._machine_mappings[mapping_name]
+                    self._mapping_context_keys.add('primary_rom')
+                else:
+                    stored_mappings = self._default_mappings
+
+                stored_mappings[match_name] = discovered_url
+
     # Discover mappings for the configured paths in thise Discovery object
-    def mappings(self, context) -> Dict[str, str]:
+    def mappings(self, context: dict) -> Dict[str, str]:
         if not self._loaded:
             self.load()
 
         result = self._default_mappings.copy()
 
         machine_names = []
-        if 'machine' in context:
-            machine_names.append(context['machine'])
+        if 'machine' in self._mapping_context_keys:
+            if 'machine' in context:
+                machine_names.append(context['machine'])
 
-        if 'machine_alt_names' in context:
-            machine_names.extend(context['machine_alt_names'])
+            if 'machine_alt_names' in context:
+                machine_names.extend(context['machine_alt_names'])
+
+        if 'primary_rom' in self._mapping_context_keys:
+            if 'primary_rom' in context:
+                machine_names.append(context['primary_rom'])
 
         for machine_name in machine_names:
             if machine_name in self._machine_mappings:
