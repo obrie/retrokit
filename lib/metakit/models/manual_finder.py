@@ -293,12 +293,26 @@ class ManualFinder:
     # 
     # We use urllib.request here in order to avoid being blocked by certain websites.
     def _get_or_download(self, url: str, path: Path) -> None:
-        if not path.exists():
-            print(f'Downloading {url}...')
-            self.downloader.get(url.replace(' ', '%20'), path, force=True)
+        parsed_url = urllib.parse.urlparse(url)
+        url_scheme = parsed_url.scheme
 
-        content = path.read_text(encoding='utf-8', errors='ignore')
-        content = re.sub(r'(https://web\.archive\.org)?/web/[0-9]+/', '', content)
+        if url_scheme == 'file':
+            source_path = Path(parsed_url.path)
+
+            if source_path.is_dir():
+                # List files in the directory as the content
+                content = '\n'.join([f'file://{path}' for path in source_path.rglob('*')])
+            else:
+                # Content comes directly from the source -- no need to "download"
+                content = source_path.read_text()
+        else:
+            # if not path.exists():
+            print(f'Downloading {url}...')
+            self.downloader.get(url.replace(' ', '%20'), path)
+
+            content = path.read_text(encoding='utf-8', errors='ignore')
+            content = re.sub(r'(https://web\.archive\.org)?/web/[0-9]+/', '', content)
+
         return content
 
     # Builds a path to where the given website name should be downloaded.
