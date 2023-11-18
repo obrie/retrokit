@@ -91,7 +91,7 @@ class ManualFinder:
 
         review = (review_method == search_per_website_choice)
         all_matches = []
-        for website in self.system.config['manuals']['websites']:
+        for website in websites:
             print(f"Searching {website['name']} (source: {website['source']})...")
             if website['source'] == 'internetarchive':
                 self.download_internetarchive_index()
