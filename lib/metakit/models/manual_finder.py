@@ -285,6 +285,7 @@ class ManualFinder:
                 matches.append({
                     'url': url,
                     'name': groups.get('name', '').replace('\n', '').strip(),
+                    'group': groups.get('group', '').replace('\n', '').strip()
                 })
 
         return matches
@@ -508,14 +509,16 @@ class ManualFinder:
 
             # Review the url
             print(f"\n{start_index+index+1}/{start_index+len(matches)}: {self._describe_match(match)}")
-            self._review_url_by_group_search(match['url'])
+            self._review_url_by_group_search(match['url'], match['group'])
 
     # Reviews the given URL by attempting to search for a group that matches a
     # keyword used in the url
-    def _review_url_by_group_search(self, url: str) -> None:
+    def _review_url_by_group_search(self, url: str, group: str = None) -> None:
         # Keep prompting the user until we find a matching group or they stop looking
         while True:
-            search_string = questionary.text('Group:').ask()
+            search_default = re.escape(group).replace('\\ ', '.*')
+            search_string = questionary.text('Group:', default=search_default).ask()
+
             if not search_string:
                 # No content -- stop looking
                 return
@@ -556,7 +559,7 @@ class ManualFinder:
     # Generates a human-readable, clickable description of the given URL match
     def _describe_match(self, match: dict) -> str:
         description = f"\033]8;;{match['url']}\033\\{match['url']}\033]8;;\033\\"
-        if match.get('name'):
+        if match['name']:
             description = f"{description} ({match['name']})"
 
         return description
