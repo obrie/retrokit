@@ -513,48 +513,49 @@ class ManualFinder:
 
     # Reviews the given URL by attempting to search for a group that matches a
     # keyword used in the url
-    def _review_url_by_group_search(self, url: str, group: str = None) -> None:
+    def _review_url_by_group_search(self, url: str, match_group: str = None) -> None:
+        search_default = re.escape(match_group or '').replace('\\ ', '.*')
+
         # Keep prompting the user until we find a matching group or they stop looking
         while True:
-            search_default = re.escape(group).replace('\\ ', '.*')
             search_string = questionary.text('Group:', default=search_default).ask()
 
             if not search_string:
                 # No content -- stop looking
                 return
-            else:
-                groups = set()
 
-                # Find all groups that have an associated title which matches the
-                # regular expression provided by the user
-                try:
-                    match_regex = re.compile(search_string, re.IGNORECASE)
-                    for title in self.title_to_groups:
-                        if match_regex.search(title):
-                            groups.update(self.title_to_groups[title])
-                except re.error:
-                    pass
+            groups = set()
 
-                # Builds list of choices based on matches groups
-                # * We include aliases so it's clear why the group matched.  title_to_groups
-                #   above takes that into account
-                choices = []
-                for group in sorted(groups):
-                    description = group
-                    aliases = self.database.get(group).get('aliases', []) + self.database.get(group).get('merge', [])
-                    if aliases:
-                        description = f"{description} ({', '.join(aliases)})"
-                    choices.append(questionary.Choice(description, value=group))
+            # Find all groups that have an associated title which matches the
+            # regular expression provided by the user
+            try:
+                match_regex = re.compile(search_string, re.IGNORECASE)
+                for title in self.title_to_groups:
+                    if match_regex.search(title):
+                        groups.update(self.title_to_groups[title])
+            except re.error:
+                pass
 
-                if choices:
-                    # Confirm the group with the user
-                    group = questionary.select('Select group:', choices=choices).ask()
-                    if group:
-                        break
-                else:
-                    print('No groups found!')
+            # Builds list of choices based on matches groups
+            # * We include aliases so it's clear why the group matched.  title_to_groups
+            #   above takes that into account
+            choices = []
+            for group in sorted(groups):
+                description = group
+                aliases = self.database.get(group).get('aliases', []) + self.database.get(group).get('merge', [])
+                if aliases:
+                    description = f"{description} ({', '.join(aliases)})"
+                choices.append(questionary.Choice(description, value=group))
 
-        self._ask_manual(group, url)
+            search_again_choice = 'Search again'
+            done_choice = 'Done!'
+            choices.extend([search_again_choice, done_choice])
+
+            # Confirm the group with the user
+            group = questionary.select('Select group:', choices=choices).ask()
+            if not group or group == done_choice or (group != search_again_choice and self._ask_manual(group, url)):
+                # All done
+                break
 
     # Generates a human-readable, clickable description of the given URL match
     def _describe_match(self, match: dict) -> str:
