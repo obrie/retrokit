@@ -54,14 +54,14 @@ class PCSystem(BaseSystem):
         for name in sorted(list(exo_games.keys())):
             metadata = self.database.get(name, Machine.title_from(name))
             if not metadata:
-                return
+                continue
 
             exo_game = exo_games[name]
 
             # Genres
             genre_tag = exo_game.find('Genre')
             if genre_tag is not None:
-                genres = genre_tag.text.split(';')
+                genres = [genre.strip() for genre in genre_tag.text.split(';')]
                 if genres:
                     metadata['genres'] = genres
 
