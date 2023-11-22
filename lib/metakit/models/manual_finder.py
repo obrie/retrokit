@@ -609,8 +609,8 @@ class ManualFinder:
                 if pages_option:
                     options['pages'] = pages_option
 
-                rotate_option = questionary.text('Rotate:', validate=self._validate_nonnegative_number, default=0).ask()
-                if rotate_option and rotate_option != 0:
+                rotate_option = questionary.text('Rotate:', validate=self._validate_nonnegative_number, default='0').ask()
+                if rotate_option and rotate_option != '0':
                     options['rotate'] = int(rotate_option)
 
                 filter_option = questionary.text('Filter:').ask()
