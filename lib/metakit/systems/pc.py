@@ -58,7 +58,7 @@ class PCSystem(BaseSystem):
         exo_games = {}
         for event, exo_game in doc:
             application_path = exo_game.find('ApplicationPath').text
-            if application_path:
+            if application_path and application_path.startswith('eXo\\'):
                 name = PureWindowsPath(application_path).stem
                 exo_games[name] = exo_game
 
