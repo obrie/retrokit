@@ -20,13 +20,24 @@ class PCSystem(BaseSystem):
     def target_groups(self) -> Set[str]:
         self.romkit.load()
 
+        # Identify groups to ignore
+        ignored_groups = set()
+
         # Count how many times we see this title
         title_counts = defaultdict(lambda: 0)
         for machine in self.romkit.machines.all():
+            metadata = self.romkit.system.metadata.get(machine)
+            if 'merge' in metadata:
+                ignored_groups.update(metadata['merge'])
+
             title_counts[machine.title] = title_counts[machine.title] + 1
 
+        # Identify the target list of groups
         groups = set()
-        for machine in self.romkit.prioritized_machines:
+        for machine in self.romkit.machines.all():
+            if machine.title in ignored_groups or machine.name in ignored_groups:
+                continue
+
             if title_counts[machine.title] == 1:
                 groups.add(machine.title)
             else:
