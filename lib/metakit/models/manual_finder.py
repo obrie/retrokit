@@ -84,7 +84,7 @@ class ManualFinder:
         # Find applicable websites
         websites = []
         for website in self.system.config['manuals']['websites']:
-            if website_name and website['name'] != website_name:
+            if website_name and website['name'] != website_name or not website['source']:
                 continue
             else:
                 websites.append(website)
