@@ -64,7 +64,7 @@ class PCSystem(BaseSystem):
 
         for name in sorted(list(exo_games.keys())):
             metadata = self.database.get(name, Machine.title_from(name))
-            if not metadata:
+            if metadata is None:
                 continue
 
             exo_game = exo_games[name]
