@@ -211,9 +211,15 @@ class Database:
                     # There's a group override or we're not tracking this key.
                     # Ignore it.
                     continue
-                else:
-                    original_key = key
-                    break
+
+                if key in target_groups:
+                    # This key is *also* being targeted (target_groups), so we know we're not
+                    # transitioning to it.  Ignore it.
+                    continue
+
+                # High likelihood we're migrating from `key` => `group`
+                original_key = key
+                break
 
             if original_key and self.exists(original_key) and original_key not in migration_plan:
                 migration_plan[original_key] = group
