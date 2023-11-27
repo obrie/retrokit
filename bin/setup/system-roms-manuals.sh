@@ -435,10 +435,11 @@ __convert_file_to_pdf() {
   extension=${extension,,} # lowercase
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
     # Print to pdf via chrome
-    # 
-    # Chromium can't access files in hidden directories, so it needs to be sourced
-    # from a different directory
-    local chromium_file="$tmp_ephemeral_dir/$(basename "$source_file")"
+    #
+    # Chromium has some limitations that we need to account for:
+    # * It can't access files in hidden directories (so it needs to be sourced elsewhere)
+    # * It can't have certain characters (like single quotes) in it
+    local chromium_file="$tmp_ephemeral_dir/file.${source_file##*.}"
     cp "$source_file" "$chromium_file"
     chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_file" "$chromium_file" 2>/dev/null
     rm "$chromium_file"
