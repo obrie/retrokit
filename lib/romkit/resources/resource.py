@@ -30,10 +30,17 @@ class Resource:
         # if some resources don't define their full list of internal files (e.g. machines
         # and their roms) but should still be downloaded.
         predefined: bool,
+        # Whether to ignore case when looking for files on the filesystem
+        ignore_case: bool,
         # Client to use for downloading
         downloader: Downloader,
     ) -> None:
         self.source_url = source_url
+        self.ignore_case = ignore_case
+
+        # Map the source url if it's locally sourced (in case we're being told to ignore case)
+        if self.is_locally_sourced:
+            self.source_url = f'file://{self._map_path(self.source_url_path)}'
 
         # Used the cached source if the primary source doesn't exist
         if cached_source_url and self.is_locally_sourced and not self.source_url_path.exists():
@@ -76,7 +83,7 @@ class Resource:
     # The path of the source url, intended to only be used with a file protocol
     @property
     def source_url_path(self) -> Path:
-        return Path(unquote(urlparse(self.source_url).path))
+        return self._map_path(Path(unquote(urlparse(self.source_url).path)))
  
     # Whether this resource is located locally on the system
     @property
@@ -138,6 +145,36 @@ class Resource:
     def build_file(self, name: str, size: int, crc: str) -> File:
         return File(name, size, crc, self.file_identifier)
 
+    # Attempts to find the correct path based on `ignore_case`
+    def _map_path(self, path: Path) -> Path:
+        # Use original path if:
+        # * Case-sensitive
+        # * Path exists
+        if not self.ignore_case or path.exists():
+            return path
+
+        # Attempt to find a matching path, ignoring case
+        current_path = Path(path.parts[0])
+        for part in path.parts[1:]:
+            # Convert to lowercase in order to ignore case
+            part_name = part.lower()
+
+            # Find a child in the current directory that matches this part
+            matching_child_path = None
+            for child_path in current_path.iterdir():
+                if child_path.name.lower() == part_name:
+                    matching_child_path = child_path
+                    break
+
+            if matching_child_path:
+                current_path = matching_child_path
+            else:
+                # No match found -- use the original path
+                return path
+
+        # If we've gotten here, we know we found a matching path
+        return current_path
+
 class ResourceTemplate:
     def __init__(self,
         # Source url
@@ -160,6 +197,8 @@ class ResourceTemplate:
         file_identifier: str = 'crc',
         # Whether the files in a resource are predefined in the DAT
         predefined: bool = True,
+        # Whether to ignore case when looking for files on the filesystem
+        ignore_case: bool = False,
         # The default context to use when interpolating templates
         default_context: dict = {},
         # Whether to generate stubbed resource target paths (empty files/directories)
@@ -175,6 +214,7 @@ class ResourceTemplate:
         self.discovery = discovery
         self.file_identifier = file_identifier
         self.predefined = predefined
+        self.ignore_case = ignore_case
         self.default_context = default_context
 
         if stub:
@@ -203,6 +243,7 @@ class ResourceTemplate:
             install_action=install_action,
             file_identifier=json.get('file_identifier', 'crc'),
             predefined=json.get('predefined', True),
+            ignore_case=json.get('ignore_case', False),
             **kwargs
         )
 
@@ -240,6 +281,7 @@ class ResourceTemplate:
             install_action=self.install_action,
             file_identifier=self.file_identifier,
             predefined=self.predefined,
+            ignore_case=self.ignore_case,
             downloader=self.downloader,
         )
 
