@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from romkit.models.asset import Asset
 from romkit.models.disk import Disk
 from romkit.models.file import File
 from romkit.models.playlist import Playlist
@@ -17,6 +18,9 @@ class Machine:
     FLAG_DELIMITER_REGEX = re.compile(r', *')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
     NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
+
+    # The names of resources that have custom handling
+    CUSTOM_RESOURCE_NAMES = {'machine', 'disk', 'sample', 'dat', 'playlist'}
 
     def __init__(self,
         romset: ROMSet,
@@ -495,7 +499,7 @@ class Machine:
         else:
             return set()
 
-    # Disks installed directly from thismachine
+    # Disks installed directly from this machine
     @property
     def disks_from_self(self) -> Set[Disk]:
         return self.disks - self.disks_from_parent
@@ -516,6 +520,17 @@ class Machine:
     def playlist(self) -> Optional[Playlist]:
         if self.has_playlist and self.romset.has_resource('playlist'):
             return Playlist(self)
+
+    # External assets
+    @property
+    def assets(self) -> Set[Asset]:
+        assets = set()
+
+        for name in self.romset.resource_templates.keys():
+            if name not in self.CUSTOM_RESOURCE_NAMES:
+                assets.add(Asset(self, name))
+
+        return assets
 
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
@@ -645,6 +660,10 @@ class Machine:
         # Playlist
         if self.playlist:
             self.playlist.install()
+
+        # Assets
+        for asset in self.assets:
+            asset.install()
 
     # Installs the roms from the given source machine
     def install_from(self, machine: Machine) -> None:

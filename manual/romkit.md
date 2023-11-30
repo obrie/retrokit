@@ -292,13 +292,14 @@ things:
 * What transformation should happen when the resource is installed?
 * How can we cross-reference the resource if the name changes?
 
-There are 5 types of resources that can be defined for romsets:
+There are 6 types of resources that can be defined for romsets:
 
 * dat (the database file)
 * machine (the machine's file/package)
 * playlist (an m3u for multiple machines)
 * disk (arcade only)
 * sample (arcade only)
+* asset (this can be anything)
 
 All resources, except `dat`, are optional.  You only need to provide the other
 resources (such as `machine`) if you intend on installing games from some
@@ -334,6 +335,29 @@ Below is an example:
   "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
   "xref": "$HOME/RetroPie/roms/dreamcast/.redump/.xrefs/{machine_id}.chd",
   "install": {"action": "zip_to_chd"}
+}
+```
+
+Assets are a general-purpose resource type that capture anything that's not one of:
+
+* dat
+* machine
+* playlist
+* disk
+* sample
+
+For example, you might define any of the following resources:
+
+* Overlays / bezels
+* Videos
+* Configuration files
+
+Below is an example configuration:
+
+```json
+"config": {
+  "source": "file://$RETROKIT_HOME/config/systems/pc/configs/{machine_sourcefile}.conf",
+  "target": "$HOME/RetroPie/roms/pc/.exodos/{machine_sourcefile}/dosbox.conf"
 }
 ```
 
