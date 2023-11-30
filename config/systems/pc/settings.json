@@ -36,6 +36,16 @@
           "download": "$RETROKIT_HOME/cache/exodos/MS-DOS.xml",
           "target": "$RETROKIT_HOME/tmp/pc/roms.dat",
           "install": {"action": "exodos_to_dat"}
+        },
+        "config": {
+          "source": "file://$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",
+          "target": "$HOME/RetroPie/roms/pc/.exodos/{machine_sourcefile}/dosbox.conf",
+          "install": {
+            "action": "exodos_to_dosbox_staging_conf",
+            "mappings_file": "$RETROKIT_HOME/config/systems/pc/dosbox-staging-mappings.json",
+            "rewrite_root": "RetroPie/roms/pc/.exodos"
+          },
+          "ignore_case": true
         }
       }
     }
@@ -52,12 +62,7 @@
       {"path": "$HOME/RetroPie/roms/pc", "filters": {}}
     ],
     "files": {
-      "conf": {
-        "source": "{target_path}/dosbox.conf",
-        "target": "{dir}/{machine}.conf",
-        "migration": "$RETROKIT_HOME/config/systems/pc/dosbox-staging-migration.json",
-        "overrides": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf"
-      }
+      "machine": {"source": "{target_path}/dosbox.conf", "target": "{dir}/{machine}.conf"}
     }
   }
 }

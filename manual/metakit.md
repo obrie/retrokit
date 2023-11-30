@@ -439,3 +439,16 @@ Sources:
 
 * MAME
 * [Screenscraper](https://www.screenscraper.fr/)
+
+## System-specific usage
+
+### pc
+
+`metakit` settings are used to manage the `pc` dosbox configuration files that are
+mapped from the eXoDOS project.  To generate new configurations:
+
+```sh
+rm -f config/systems/pc/configs/*.conf
+PROFILES=image-base,metakit,filter-reset EXODOS_V6_HOME=... bin/romkit.sh install pc
+PROFILES=image-base,metakit,filter-reset EXODOS_IGNORE_MISSING_CONFIGS=true EXODOS_V6_HOME=... bin/romkit.sh install pc
+```

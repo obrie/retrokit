@@ -1,4 +1,22 @@
 {
+  "romsets": {
+    "exodos": {
+      "resources": {
+        "machine": {
+          "enabled": false
+        },
+        "config": {
+          "source": "file://$EXODOS_V5_HOME/eXo/eXoDOS/!dos/{machine_sourcefile}/dosbox.conf",
+          "download": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",
+          "target": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",
+          "install": {
+            "rewrite_root": "",
+            "ignore_missing_configs": "$EXODOS_IGNORE_MISSING_CONFIGS"
+          }
+        }
+      }
+    }
+  },
   "manuals": {
     "websites": [
       {

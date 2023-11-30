@@ -1,0 +1,730 @@
+{
+  "bios": {
+    "rename_to": "joystick",
+    "params": {}
+  },
+  "capture": {
+    "params": {
+      "capture_dir": {
+        "defaults": ["capture"]
+      }
+    }
+  },
+  "cpu": {
+    "params": {
+      "core": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "dynamic", "normal", "simple"],
+        "map_values": {
+          "# Bad values (wrong in eXoDOS)": null,
+          "40000": "auto"
+        }
+      },
+      "cputype": {
+        "defaults": ["auto"],
+        "map_values": {
+          "normal": "auto",
+          "pentium_mmx": "auto"
+        },
+        "allowlist": ["auto", "386", "386_slow", "486_slow", "pentium_slow", "386_prefetch"]
+      },
+      "cycledown": {
+        "defaults": [20]
+      },
+      "cycles": {
+        "defaults": ["auto"]
+      },
+      "cycleup": {
+        "defaults": [10]
+      }
+    },
+    "skip_params": [
+      "# Unsupported",
+      "cgasnow",
+      "forcerate",
+      "isapnpbios",
+      "use dynamic core with paging on"
+    ]
+  },
+  "debug": {
+    "skip": true
+  },
+  "dos": {
+    "params": {
+      "automount": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "ems": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false", "emsboard", "emm386"]
+      },
+      "keyboardlayout": {
+        "defaults": ["auto"],
+        "map_values": {
+          "none": "auto"
+        }
+      },
+      "umb": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "xms": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      }
+    },
+    "skip_params": [
+      "# Unsupported",
+      "biosps2",
+      "files",
+      "int33"
+    ]
+  },
+  "dosbox": {
+    "params": {
+      "language": {
+        "defaults": ["en"],
+        "allowlist": ["de", "en", "es", "fr", "it", "nl", "pl", "ru"]
+      },
+      "machine": {
+        "defaults": ["svga_s3"],
+        "allowlist": ["hercules", "cga_mono", "cga", "pcjr", "tandy", "ega", "svga_s3", "svga_et3000", "svga_et4000", "svga_paradise", "vesa_nolfb", "vesa_oldvbe"],
+        "map_values": {
+          "vgaonly": "svga_paradise"
+        }
+      },
+      "memsize": {
+        "defaults": [16]
+      },
+      "vmemsize": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", 1, 2, 4, 8, 256, 512, 1024, 2048, 4096, 8192]
+      },
+
+      "captures": {
+        "rename_to": "capture/capture_dir"
+      }
+    },
+    "skip_params": [
+      "# Unsupported",
+      "memalias",
+      "memsizekb",
+      "unmask keyboard on int 16 read"
+    ]
+  },
+  "ethernet": {
+    "params": {
+      "macaddr": {
+        "defaults": ["AC:DE:48:88:99:AA"]
+      },
+      "ne2000": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "nicbase": {
+        "defaults": ["300"],
+        "allowlist": ["200", "220", "240", "260", "280", "2c0", "300", "320", "340", "360"]
+      },
+      "nicirq": {
+        "defaults": [3],
+        "allowlist": [3, 4, 5, 9, 10, 11, 12, 14, 15]
+      }
+    }
+  },
+  "fdc, primary": {
+    "skip": true
+  },
+  "fluidsynth": {
+    "params": {
+      "fsynth_chorus": {
+        "defaults": ["auto", "3 1.2 0.3 8.0 sine"]
+      },
+      "soundfont": {
+        "defaults": ["default.sf2", "default.sf2 100"]
+      },
+      "fsynth_reverb": {
+        "defaults": ["auto", "0.61 0.23 0.76 0.56", "0.61 0.23 0.76 0.57"]
+      }
+    }
+  },
+  "glide": {
+    "skip": true
+  },
+  "gus": {
+    "params": {
+      "gus": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "gusbase": {
+        "defaults": ["240"],
+        "allowlist": ["240", "220", "260", "280",  "2a0", "2c0", "2e0", "300"]
+      },
+      "gusdma": {
+        "defaults": [3],
+        "allowlist": [0, 1, 3, 5, 6, 7],
+        "map_values": {
+          "# Bad values (wrong in eXoDOS)": null,
+          "2": 3
+        }
+      },
+      "gusirq": {
+        "defaults": [5],
+        "allowlist": [3, 5, 7, 9, 10, 11, 12]
+      },
+      "ultradir": {
+        "defaults": ["C:\\ULTRASND"]
+      },
+
+      "base": {
+        "rename_to": "gusbase"
+      },
+      "dma1": {
+        "rename_to": "gusdma"
+      },
+      "irq1": {
+        "rename_to": "gusirq"
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "gusrate",
+      "rate",
+
+      "# Unsupported",
+      "dma2",
+      "irq2"
+    ]
+  },
+  "ide, octernary": {
+    "skip": true
+  },
+  "ide, primary": {
+    "skip": true
+  },
+  "ide, quaternary": {
+    "skip": true
+  },
+  "ide, quinternary": {
+    "skip": true
+  },
+  "ide, secondary": {
+    "skip": true
+  },
+  "ide, septernary": {
+    "skip": true
+  },
+  "ide, sexternary": {
+    "skip": true
+  },
+  "ide, tertiary": {
+    "skip": true
+  },
+  "innova": {
+    "rename_to": "innovation",
+    "params": {
+      "innova": {
+        "rename_to": "sidmodel",
+        "map_values": {
+          "true": "auto",
+          "false": "none"
+        }
+      },
+      "sidbase": {
+        "rename_to": "sidport"
+      }
+    },
+    "skip_params": [
+      "quality",
+
+      "# Obsolete",
+      "samplerate"
+    ]
+  },
+  "innovation": {
+    "params": {
+      "sidmodel": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "6581", "8580", "none"]
+      },
+      "sidport": {
+        "defaults": ["280"],
+        "allowlist": ["240", "260", "280", "2a0", "2c0"]
+      }
+    }
+  },
+  "ipx": {
+    "params": {
+      "ipx": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      }
+    }
+  },
+  "joystick": {
+    "params": {
+      "autofire": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "buttonwrap": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "circularinput": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "deadzone": {
+        "defaults": [10]
+      },
+      "joysticktype": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "2axis", "4axis", "4axis_2", "fcs", "ch", "hidden", "disabled"],
+        "map_values": {
+          "none": "disabled",
+
+          "# Bad values (wrong in eXoDOS)": null,
+          "nona": "disabled"
+        }
+      },
+      "swap34": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "timed": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+
+      "joystick": {
+        "rename_to": "joysticktype"
+      }
+    }
+  },
+  "keyboard": {
+    "params": {
+      "auxdevice": {
+        "rename_to": "mouse/ps2_mouse_model",
+        "map_values": {
+          "2button": "standard",
+          "3button": "standard",
+          "intellimouse45": "explorer"
+        }
+      }
+    },
+    "skip_params": [
+      "aux"
+    ]
+  },
+  "log": {
+    "skip": true
+  },
+  "mapper": {
+    "skip": true
+  },
+  "midi": {
+    "params": {
+      "midiconfig": {
+        "defaults": [],
+        "map_values": {
+          ".\\mt32\\SoundCanvas.sf2": ""
+        }
+      },
+      "mididevice": {
+        "defaults": ["auto"],
+        "map_values": {
+          "default": "auto"
+        },
+        "allowlist": ["auto", "alsa", "fluidsynth", "mt32", "none"]
+      },
+      "mpu401": {
+        "defaults": ["intelligent"],
+        "allowlist": ["intelligent", "uart", "none"]
+      },
+
+      "fluid.chorus": {
+        "rename_to": "fluidsynth/fsynth_chorus",
+        "map_values": {
+          "yes": "{section.get('fluid.chorus.number', fallback=3)} {'%0.1f' % float(section.get('fluid.chorus.level', fallback='1.2'))} {'%0.1f' % float(section.get('fluid.chorus.speed', fallback='0.3'))} {'%0.1f' % float(section.get('fluid.chorus.depth', fallback='8.0'))} {'sine' if section.get('fluid.chorus.type', fallback='0') == '0' else 'triangle'}"
+        }
+      },
+      "fluid.soundfont": {
+        "rename_to": "fluidsynth/soundfont",
+        "map_values": {
+          ".\\mt32\\SoundCanvas.sf2": "./mt32/SoundCanvas.sf2 {int(float(section.get('fluid.gain', fallback=1)) * 100)}"
+        }
+      },
+      "fluid.reverb": {
+        "rename_to": "fluidsynth/fsynth_reverb",
+        "map_values": {
+          "yes": "{'%0.2f' % float(section.get('fluid.reverb,roomsize', fallback='0.61'))} {'%0.2f' % float(section.get('fluid.reverb.damping', fallback='0.23'))} {'%0.2f' % float(section.get('fluid.reverb.width', fallback='0.76'))} {'%0.2f' % float(section.get('fluid.reverb.level', fallback='0.56'))}"
+        }
+      },
+
+      "mt32.romdir": {
+        "rename_to": "mt32/romdir",
+        "map_values": {
+          ".\\mt32": "mt32-roms"
+        }
+      }
+    },
+    "skip_params": [
+      "# Set via fluid.soundfont",
+      "fluid.gain",
+
+      "# Set via fluid.chorus",
+      "fluid.chorus.depth",
+      "fluid.chorus.level",
+      "fluid.chorus.number",
+      "fluid.chorus.speed",
+      "fluid.chorus.type",
+
+      "# Set via fluid.reverb",
+      "fluid.reverb.damping",
+      "fluid.reverb.level",
+      "fluid.reverb,roomsize",
+      "fluid.reverb.width",
+
+      "# Obsolete",
+      "fluid.samplerate",
+
+      "# Unsupported",
+      "fluid.cores",
+      "fluid.driver",
+      "fluid.periods",
+      "fluid.periodsize",
+      "fluid.polyphony",
+      "mt32.analog",
+      "mt32.chunk",
+      "mt32.dac",
+      "mt32.niceampramp",
+      "mt32.output.gain",
+      "mt32.partials",
+      "mt32.prebuffer",
+      "mt32.rate",
+      "mt32.reverb.level",
+      "mt32.reverb.mode",
+      "mt32.reverb.output.gain",
+      "mt32.reverb.time",
+      "mt32.reverse.stereo",
+      "mt32.src.quality",
+      "mt32.thread",
+      "mt32.verbose"
+    ]
+  },
+  "mixer": {
+    "params": {
+      "blocksize": {
+        "defaults": [1024],
+        "allowlist": [128, 256, 512, 1024, 2048, 4096, 8192]
+      },
+      "nosound": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
+      "prebuffer": {
+        "defaults": [20]
+      },
+      "rate": {
+        "defaults": [48000]
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "sample accurate",
+      "sampleaccurate",
+
+      "# Unsupported",
+      "swapstereo"
+    ]
+  },
+  "mouse": {
+    "params": {
+      "mouse_capture": {
+        "defaults": ["onclick"],
+        "allowlist": ["onclick", "onstart", "seamless", "nomouse"]
+      },
+      "mouse_sensitivity": {
+        "defaults": [100, "100 100"]
+      },
+      "ps2_mouse_model": {
+        "defaults": ["explorer"],
+        "allowlist": ["standard", "intellimouse", "explorer", "none"]
+      }
+    }
+  },
+  "mt32": {
+    "params": {
+      "romdir": {
+        "defaults": ["mt32-roms"]
+      }
+    }
+  },
+  "ne2000": {
+    "rename_to": "ethernet",
+    "params": {},
+    "skip_params": [
+      "# Unsupported",
+      "realnic"
+    ]
+  },
+  "parallel": {
+    "skip": true
+  },
+  "pci": {
+    "params": {
+      "voodoo": {
+        "rename_to": "voodoo/voodoo",
+        "map_values": {
+          "auto": "true",
+          "opengl": "true",
+          "software": "true"
+        }
+      },
+      "voodoomem": {
+        "rename_to": "voodoo/voodoo_memsize",
+        "map_values": {
+          "standard": 4,
+          "max": 12
+        }
+      }
+    }
+  },
+  "printer": {
+    "skip": true
+  },
+  "render": {
+    "params": {
+      "aspect": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "frameskip": {
+        "defaults": [0]
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "doublescan",
+      "scaler",
+
+      "# Unsupported",
+      "autofit",
+      "char9",
+
+      "# Unused / Unsupported",
+      "linewise",
+      "multiscan"
+    ]
+  },
+  "sblaster": {
+    "params": {
+      "dma": {
+        "defaults": [1],
+        "allowlist": [0, 1, 3, 5, 6, 7]
+      },
+      "hdma": {
+        "defaults": [5],
+        "allowlist": [0, 1, 3, 5, 6, 7]
+      },
+      "irq": {
+        "defaults": [7],
+        "allowlist": [3, 5, 7, 9, 10, 11, 12]
+      },
+      "oplmode": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "cms", "opl2", "dualopl2", "opl3", "opl3gold", "none"]
+      },
+      "sbbase": {
+        "defaults": ["220"],
+        "allowlist": ["220", "240", "260", "280", "2a0", "2c0", "2e0", "300"]
+      },
+      "sbmixer": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "sbtype": {
+        "defaults": ["sb16"],
+        "allowlist": ["sb1", "sb2", "sbpro1", "sbpro2", "sb16", "gb", "none"]
+      },
+
+      "mixer": {
+        "rename_to": "sbmixer"
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "oplemu",
+      "oplrate",
+
+      "# Unused & Unsupported",
+      "fmstrength",
+      "goldplay",
+      "hardwarebase"
+    ]
+  },
+  "sdl": {
+    "params": {
+      "host_rate": {
+        "defaults": ["auto"]
+      },
+      "priority": {
+        "defaults": ["auto auto"],
+        "map_values": {
+          "*": "{value.replace(',', ' ')}"
+        }
+      },
+      "vsync": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "on", "adaptive", "off", "yield"]
+      },
+      "waitonerror": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+
+      "autolock": {
+        "rename_to": "mouse/mouse_capture",
+        "map_values": {
+          "false": "nomouse",
+          "true": "onclick"
+        }
+      },
+      "sensitivity": {
+        "rename_to": "mouse/mouse_sensitivity"
+      },
+      "xsensitivity": {
+        "rename_to": "mouse/mouse_sensitivity",
+        "map_values": {
+          "*": "{value} {section.get('ysensitivity', fallback=100)}"
+        }
+      },
+      "ysensitivity": {
+        "rename_to": "mouse/mouse_sensitivity",
+        "map_values": {
+          "*": "{section.get('xsensitivity', fallback=100)} {value}"
+        }
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "fulldouble",
+      "usescancodes",
+
+      "# Unused or intentionally not migrating",
+      "glfullvsync",
+      "mapperfile",
+      "pixelshader",
+      "surfacenp-sharpness",
+
+      "# Intentionally not migrated for non-desktop environment",
+      "fullfixed",
+      "fullresolution",
+      "fullscreen",
+      "windowresolution",
+      "windowtitle",
+
+      "# Intentionally not migrated for Raspberry Pi performance",
+      "output",
+
+      "# Unused & Unsupported",
+      "fullborderless",
+      "overscan",
+      "sensitivityaspect",
+      "surface-collapse-dbl",
+
+      "# Unsupported",
+      "autolock_feedback",
+      "gamelinkmaster",
+      "showmenu"
+    ]
+  },
+  "serial": {
+    "params": {
+      "serial1": {
+        "defaults": ["dummy"]
+      },
+      "serial2": {
+        "defaults": ["dummy"]
+      },
+      "serial3": {
+        "defaults": ["disabled"]
+      },
+      "serial4": {
+        "defaults": ["disabled"]
+      }
+    }
+  },
+  "speaker": {
+    "params": {
+      "lpt_dac": {
+        "defaults": ["none"],
+        "allowlist": ["none", "disney", "covox", "ston1", "off"]
+      },
+      "pcspeaker": {
+        "defaults": ["discrete"],
+        "map_values": {
+          "true": "discrete",
+          "false": "off"
+        },
+        "allowlist": ["discrete", "impulse", "none", "off"]
+      },
+      "ps1audio": {
+        "defaults": ["false"],
+        "map_values": {
+          "off": "false",
+          "on": "true"
+        },
+        "allowlist": ["true", "false"]
+      },
+      "tandy": {
+        "defaults": ["auto"],
+        "map_values": {
+          "ON": "on"
+        },
+        "allowlist": ["auto", "on", "psg", "off"]
+      },
+
+      "disney": {
+        "rename_to": "lpt_dac",
+        "map_values": {
+          "true": "disney",
+          "false": "off"
+        }
+      }
+    },
+    "skip_params": [
+      "# Obsolete",
+      "pcrate",
+      "ps1audiorate",
+      "tandyrate",
+
+      "# Unsupported",
+      "wizpopfix"
+    ]
+  },
+  "voodoo": {
+    "params": {
+      "voodoo": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "voodoo_memsize": {
+        "defaults": [4],
+        "allowlist": [4, 12]
+      }
+    }
+  },
+  "vsync": {
+    "params": {
+      "vsyncmode": {
+        "rename_to": "sdl/vsync"
+      },
+      "vsyncrate": {
+        "rename_to": "sdl/host_rate"
+      }
+    }
+  }
+}
