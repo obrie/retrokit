@@ -186,7 +186,7 @@ class ResourceTemplate:
             target_path = target_path_template and Path(target_path_template)
             target_path_exists = target_path and target_path.exists() and target_path.stat().st_size > 0
 
-            if not(source_is_local or download_path_exists or target_path_exists):
+            if not(source_is_local or download_path_exists or target_path_exists) and install_action.allow_stubbing:
                 self.install_action = Stub({})
                 self.downloader = StubDownloader()
 

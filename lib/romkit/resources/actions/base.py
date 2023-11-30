@@ -8,7 +8,12 @@ def all_subclasses(cls):
 
 class BaseAction:
     name = None
+
+    # Whether to always overwrite the target regardless of its existence
     overwrite_target = False
+
+    # Whether to allow this action to be stubbed out with empty target files
+    allow_stubbing = True
 
     def __init__(self, config: dict = {}) -> None:
       self.config = config

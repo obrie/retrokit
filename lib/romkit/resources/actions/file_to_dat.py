@@ -10,6 +10,7 @@ from pathlib import Path
 # Provides a standard interface for converting a file to a standard DAT format
 class FileToDat(BaseAction):
     overwrite_target = True
+    allow_stubbing = False
 
     @contextmanager
     def create_dat(self, target: ResourcePath) -> None:
