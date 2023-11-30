@@ -7,8 +7,7 @@
     "args": ["--excludepattern", "*DOSBox*"]
   },
   "emulators": {
-    "dosbox-staging": {"default": true},
-    "dosbox": {}
+    "dosbox-staging": {"default": true}
   },
   "bios": {
     "url": "$ROMSET_MAME_LATEST_URL",

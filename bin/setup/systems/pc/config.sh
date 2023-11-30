@@ -15,7 +15,6 @@ depends() {
 
 configure() {
   ini_merge '{system_config_dir}/dosbox-staging.conf' "$retropie_system_config_dir/dosbox-staging.conf"
-  ini_merge '{system_config_dir}/dosbox-SVN.conf' "$retropie_system_config_dir/dosbox-SVN.conf"
 
   mkdir -p "$retropie_system_config_dir/mapperfiles"
   each_path '{system_config_dir}/mapperfiles' find '{}' -name '*.map' -exec cp -v -t "$retropie_system_config_dir/mapperfiles/" '{}' +
@@ -24,7 +23,6 @@ configure() {
 
 restore() {
   restore_file "$retropie_system_config_dir/dosbox-staging.conf" delete_src=true
-  restore_file "$retropie_system_config_dir/dosbox-SVN.conf" delete_src=true
   rm -rfv "$retropie_system_config_dir/mapperfiles"
 }
 
