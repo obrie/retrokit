@@ -20,8 +20,8 @@
     }
   },
   "romsets": {
-    "the_eye": {
-      "url": "$ROMSET_PC_EXODOS_URL",
+    "exodos": {
+      "url": "$ROMSET_PC_EXODOS_V5_URL",
       "resources": {
         "machine": {
           "source": "{url}/eXo/eXoDOS/{machine}.zip",
