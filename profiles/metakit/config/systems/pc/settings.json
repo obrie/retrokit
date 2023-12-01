@@ -11,7 +11,8 @@
           "target": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",
           "install": {
             "rewrite_root": "",
-            "ignore_missing_configs": "$EXODOS_IGNORE_MISSING_CONFIGS"
+            "ignore_missing_configs": "$EXODOS_IGNORE_MISSING_CONFIGS",
+            "overwrite_target": true
           }
         }
       }
