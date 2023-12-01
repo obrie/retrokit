@@ -16,7 +16,7 @@ class ExodosToDat(FileToDat):
             for event, game in doc:
                 # Get actual name as it'll be downloaded from the source
                 application_path = game.find('ApplicationPath').text
-                if application_path:
+                if application_path and application_path.startswith('eXo\\'):
                     path = PureWindowsPath(application_path)
                     name = path.stem
                     sourcefile = path.parent.stem

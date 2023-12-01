@@ -10,6 +10,33 @@
       }
     }
   },
+  "composite": {
+    "params": {
+      "brightness": {
+        "defaults": [0]
+      },
+      "composite": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "on", "off"]
+      },
+      "contrast": {
+        "defaults": [100]
+      },
+      "convergence": {
+        "defaults": [0]
+      },
+      "era": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "old", "new"]
+      },
+      "hue": {
+        "defaults": [0]
+      },
+      "saturation": {
+        "defaults": [100]
+      }
+    }
+  },
   "cpu": {
     "params": {
       "core": {
@@ -69,6 +96,9 @@
         "defaults": ["true"],
         "allowlist": ["true", "false"]
       },
+      "ver": {
+        "defaults": ["5.0"]
+      },
       "xms": {
         "defaults": ["true"],
         "allowlist": ["true", "false"]
@@ -91,6 +121,7 @@
         "defaults": ["svga_s3"],
         "allowlist": ["hercules", "cga_mono", "cga", "pcjr", "tandy", "ega", "svga_s3", "svga_et3000", "svga_et4000", "svga_paradise", "vesa_nolfb", "vesa_oldvbe"],
         "map_values": {
+          "amstrad": "tandy",
           "vgaonly": "svga_paradise"
         }
       },
@@ -108,6 +139,7 @@
     },
     "skip_params": [
       "# Unsupported",
+      "mcb_fault_strategy",
       "memalias",
       "memsizekb",
       "unmask keyboard on int 16 read"
@@ -129,6 +161,12 @@
       "nicirq": {
         "defaults": [3],
         "allowlist": [3, 4, 5, 9, 10, 11, 12, 14, 15]
+      },
+      "tcp_port_forwards": {
+        "defaults": []
+      },
+      "udp_port_forwards": {
+        "defaults": []
       }
     }
   },
@@ -194,6 +232,7 @@
 
       "# Unsupported",
       "dma2",
+      "gravis",
       "irq2"
     ]
   },
@@ -220,6 +259,14 @@
   },
   "ide, tertiary": {
     "skip": true
+  },
+  "imfc": {
+    "params": {
+      "imfc": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      }
+    }
   },
   "innova": {
     "rename_to": "innovation",
@@ -429,6 +476,9 @@
       },
       "rate": {
         "defaults": [48000]
+      },
+      "sbmixer": {
+        "rename_to": "sblaster/sbmixer"
       }
     },
     "skip_params": [
@@ -442,9 +492,33 @@
   },
   "mouse": {
     "params": {
+      "com_mouse_model": {
+        "defaults": ["wheel+msm"],
+        "allowlist": ["2button", "3button", "wheel", "msm", "2button+msm", "3button+msm", "wheel+msm"]
+      },
+      "dos_mouse_driver": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "dos_mouse_immediate": {
+        "defaults": ["false"],
+        "allowlist": ["true", "false"]
+      },
       "mouse_capture": {
         "defaults": ["onclick"],
         "allowlist": ["onclick", "onstart", "seamless", "nomouse"]
+      },
+      "mouse_middle_release": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "mouse_multi_display_aware": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+      "mouse_raw_input": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
       },
       "mouse_sensitivity": {
         "defaults": [100, "100 100"]
@@ -495,6 +569,20 @@
   "printer": {
     "skip": true
   },
+  "reelmagic": {
+    "params": {
+      "reelmagic": {
+        "defaults": ["off"],
+        "allowlist": ["off", "cardonly", "on"]
+      },
+      "reelmagic_key": {
+        "defaults": ["auto"]
+      },
+      "reelmagic_fcode": {
+        "defaults": [0]
+      }
+    }
+  },
   "render": {
     "params": {
       "aspect": {
@@ -503,6 +591,17 @@
       },
       "frameskip": {
         "defaults": [0]
+      },
+      "glshader": {
+        "defaults": ["default"]
+      },
+      "integer_scaling": {
+        "defaults": ["auto"],
+        "allowlist": ["auto", "vertical", "horizontal", "off"]
+      },
+      "monochrome_palette": {
+        "defaults": ["amber"],
+        "allowlist": ["amber", "green", "white", "paperwhite"]
       }
     },
     "skip_params": [
@@ -533,9 +632,15 @@
         "defaults": [7],
         "allowlist": [3, 5, 7, 9, 10, 11, 12]
       },
+      "opl_filter": {
+        "defaults": ["auto"]
+      },
       "oplmode": {
         "defaults": ["auto"],
         "allowlist": ["auto", "cms", "opl2", "dualopl2", "opl3", "opl3gold", "none"]
+      },
+      "sb_filter": {
+        "defaults": ["modern"]
       },
       "sbbase": {
         "defaults": ["220"],
@@ -552,6 +657,9 @@
 
       "mixer": {
         "rename_to": "sbmixer"
+      },
+      "sblaster": {
+        "rename_to": "sbtype"
       }
     },
     "skip_params": [
@@ -575,6 +683,10 @@
         "map_values": {
           "*": "{value.replace(',', ' ')}"
         }
+      },
+      "texture_renderer": {
+        "defaults": ["auto"],
+        "allowlist": ["auto"]
       },
       "vsync": {
         "defaults": ["auto"],
@@ -643,6 +755,9 @@
   },
   "serial": {
     "params": {
+      "phonebookfile": {
+        "defaults": ["phonebook.txt"]
+      },
       "serial1": {
         "defaults": ["dummy"]
       },
@@ -714,6 +829,17 @@
       "voodoo_memsize": {
         "defaults": [4],
         "allowlist": [4, 12]
+      },
+      "voodoo_multithreading": {
+        "defaults": ["true"],
+        "allowlist": ["true", "false"]
+      },
+
+      "voodoo_perf": {
+        "rename_to": "voodoo_multithreading",
+        "map_values": {
+          "1": "true"
+        }
       }
     }
   },

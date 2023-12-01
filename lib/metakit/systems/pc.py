@@ -96,3 +96,23 @@ class PCSystem(BaseSystem):
             publisher_tag = exo_game.find('Publisher')
             if publisher_tag is not None and publisher_tag.text is not None:
                 metadata['publisher'] = publisher_tag.text
+
+            tags = set()
+
+            # Series
+            series_tag = exo_game.find('Series')
+            if series_tag is not None and series_tag.text is not None:
+                all_series = [series.strip() for series in series_tag.text.split(';')]
+                series = [series for series in all_series if 'Playlist' not in series]
+                if series:
+                    metadata['series'] = series
+
+                playlists = [series.replace('Playlist: ', '') for series in all_series if 'Playlist' in series]
+                if playlists:
+                    tags.update(playlists)
+
+            # Tags
+            if tags:
+                metadata['tags'] = list(tags)
+            else:
+                metadata['tags'] = []
