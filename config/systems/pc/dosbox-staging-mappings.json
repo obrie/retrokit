@@ -400,7 +400,7 @@
       "fluid.soundfont": {
         "rename_to": "fluidsynth/soundfont",
         "map_values": {
-          ".\\mt32\\SoundCanvas.sf2": "./mt32/SoundCanvas.sf2 {int(float(section.get('fluid.gain', fallback=1)) * 100)}"
+          ".\\mt32\\SoundCanvas.sf2": "./mt32/SoundCanvas.sf2{' ' + str(int(float(section['fluid.gain']) * 100)) if 'fluid.gain' in section else ''}"
         }
       },
       "fluid.reverb": {
