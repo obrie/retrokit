@@ -155,7 +155,7 @@ class Machine:
         dumped_disks = []
         dumped_roms = []
 
-        has_machine_template = 'machine' in romset.resource_templates
+        has_machine_template = 'machine' in romset.enabled_resource_templates
 
         for child in xml:
             tag = child.tag
@@ -526,7 +526,7 @@ class Machine:
     def assets(self) -> Set[Asset]:
         assets = set()
 
-        for name in self.romset.resource_templates.keys():
+        for name in self.romset.enabled_resource_templates.keys():
             if name not in self.CUSTOM_RESOURCE_NAMES:
                 assets.add(Asset(self, name))
 

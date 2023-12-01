@@ -75,6 +75,11 @@ class ROMSet:
 
         return romset
 
+    # Only enabled resource templates
+    @property
+    def enabled_resource_templates(self) -> List[ResourceTemplate]:
+        return {name: template for name, template in self.resource_templates.items() if template.enabled}
+
     # Checks whether this romset has been configured to be able to
     # download machines.  There must either be:
     # * An explicit url on the romset
@@ -85,11 +90,11 @@ class ROMSet:
 
     # Whether this romset has defined the given resource
     def has_resource(self, name: str) -> bool:
-        return name in self.resource_templates
+        return name in self.enabled_resource_templates
 
     # Looks up the resource with the given name
     def resource(self, name: str, **context) -> Optional[Resource]:
-        resource_template = self.resource_templates.get(name)
+        resource_template = self.enabled_resource_templates.get(name)
         if resource_template:
             return resource_template.render(**context)
 

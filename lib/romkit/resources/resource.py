@@ -191,6 +191,8 @@ class ResourceTemplate:
         downloader: Downloader = Downloader.instance(),
         # Action to run for postprocessing the downloaded source
         install_action: BaseAction = Copy(),
+        # Whether usage of this resource is enabled
+        enabled: bool = True,
         # Dynamic context to pull for each machine
         discovery: Optional[BaseDiscovery] = None,
         # How to uniquely identify files in a resource
@@ -211,6 +213,7 @@ class ResourceTemplate:
         self.download_path_template = download_path_template
         self.downloader = downloader
         self.install_action = install_action
+        self.enabled = enabled
         self.discovery = discovery
         self.file_identifier = file_identifier
         self.predefined = predefined
@@ -241,6 +244,7 @@ class ResourceTemplate:
             xref_path_template=json.get('xref'),
             download_path_template=json.get('download'),
             install_action=install_action,
+            enabled=json.get('enabled', True),
             file_identifier=json.get('file_identifier', 'crc'),
             predefined=json.get('predefined', True),
             ignore_case=json.get('ignore_case', False),
