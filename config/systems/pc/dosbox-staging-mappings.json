@@ -756,7 +756,7 @@
   "serial": {
     "params": {
       "phonebookfile": {
-        "defaults": ["phonebook.txt"]
+        "defaults": ["phonebook.txt", "phonebook-dosbox-x.txt"]
       },
       "serial1": {
         "defaults": ["dummy"]
