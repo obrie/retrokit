@@ -54,14 +54,14 @@ class ExodosToDosboxStagingConf(BaseAction):
         target_autoexec_content = ''
         for line in autoexec_content.split('\n'):
             if '\\exodos' in line.lower():
-                # Use linux-style paths
-                line = line.replace('\\', '/')
-
                 # Replace the default exodos root with the one provided
                 if exodos_root_dir:
                     line = self.EXODOS_REGEX.sub(exodos_root_dir, line)
 
             target_autoexec_content += f'{line}\n'
+
+        # Consistent trailing newlines
+        target_autoexec_content = target_autoexec_content.rstrip() + '\n'
 
         # Write the final translated configuration file
         with target.path.open('w') as config_file:
@@ -145,5 +145,8 @@ class ExodosToDosboxStagingConf(BaseAction):
         # Ensure the section exists, otherwise `set` will fail
         if target_section not in target_config:
             target_config.add_section(target_section)
+
+        # Replace windows-style slashes
+        value = value.replace('\\', '/')
 
         target_config.set(target_section, target_param, value)
