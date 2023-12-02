@@ -10,13 +10,13 @@
     "dosbox-staging": {"default": true}
   },
   "bios": {
-    "url": "$ROMSET_MAME_LATEST_URL",
+    "url": "$ROMSET_PC_ROLAND_MT32_URL",
     "dir": "/opt/retropie/configs/pc/mt32-roms",
     "files": {
-      "cm32l_control.rom": "{url}/cm32l.zip/cm32l_control.rom",
-      "mt32_1.0.7.ic26.bin": "{url}/mt32.zip/mt32_1.0.7.ic26.bin",
-      "r15179945.ic8.bin": "{url}/cm32l.zip/r15179945.ic8.bin",
-      "r15449121.ic37.bin": "{url}/mt32.zip/r15449121.ic37.bin"
+      "CM32L_CONTROL.ROM": "{url}/mt32pi/ctrl_cm32l_1_02.rom",
+      "CM32L_PCM.ROM": "{url}/mt32pi/pcm_cm32l.rom",
+      "MT32_CONTROL.ROM": "{url}/mt32pi/ctrl_mt32_bluer.rom",
+      "MT32_PCM.ROM": "{url}/mt32pi/pcm_mt32.rom"
     }
   },
   "romsets": {

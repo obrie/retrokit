@@ -78,6 +78,7 @@ export ROMSET_NDS_NOINTRO_URL=https://<domain>/download/<name>
 export ROMSET_NEOGEO_REDUMP_URL=https://<domain>/download/<name>
 export ROMSET_NOINTRO_URL=https://<domain>/download/<name>
 export ROMSET_PC_EXODOS_V6_URL=https://<domain>/<path>
+export ROMSET_PC_ROLAND_MT32_URL=https://<domain>/<path>
 export ROMSET_PCENGINE_REDUMP_URL=https://<domain>/download/<name>
 export ROMSET_PSP_DLC_URL=https://<domain>/download/<name>
 export ROMSET_PSP_PSN_URL=https://<domain>/download/<name>
