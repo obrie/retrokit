@@ -2,9 +2,6 @@
   "romsets": {
     "exodos": {
       "resources": {
-        "machine": {
-          "enabled": false
-        },
         "config": {
           "source": "file://$EXODOS_V6_HOME/eXo/eXoDOS/!dos/{machine_sourcefile}/dosbox.conf",
           "download": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",

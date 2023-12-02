@@ -449,6 +449,6 @@ mapped from the eXoDOS project.  To generate new configurations:
 
 ```sh
 rm -f config/systems/pc/configs/*.conf
-PROFILES=image-base,metakit,filter-reset EXODOS_V6_HOME=... bin/romkit.sh install pc
-PROFILES=image-base,metakit,filter-reset EXODOS_IGNORE_MISSING_CONFIGS=true EXODOS_V6_HOME=... bin/romkit.sh install pc
+PROFILES=metakit,filter-reset EXODOS_V6_HOME=... bin/romkit.sh install pc resources=config
+PROFILES=metakit,filter-reset EXODOS_IGNORE_MISSING_CONFIGS=true EXODOS_V6_HOME=... bin/romkit.sh install pc resources=config
 ```
