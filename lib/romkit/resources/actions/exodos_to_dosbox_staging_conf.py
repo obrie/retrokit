@@ -65,7 +65,7 @@ class ExodosToDosboxStagingConf(BaseAction):
 
         # Write the final translated configuration file
         with target.path.open('w') as config_file:
-            target_config.write(config_file)
+            target_config.write(config_file, space_around_delimiters=False)
 
             # Add back the [autoexec] section
             config_file.write(target_autoexec_content)
