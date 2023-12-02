@@ -532,7 +532,11 @@
   "mt32": {
     "params": {
       "romdir": {
-        "defaults": ["mt32-roms"]
+        "defaults": ["mt32-roms"],
+        "map_values": {
+          ".\\mt32": "mt32-roms",
+          ".\\mt32\\rev0": "mt32-roms/rev0"
+        }
       }
     }
   },
