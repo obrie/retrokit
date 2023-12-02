@@ -16,7 +16,10 @@
       "CM32L_CONTROL.ROM": "{url}/mt32pi/ctrl_cm32l_1_02.rom",
       "CM32L_PCM.ROM": "{url}/mt32pi/pcm_cm32l.rom",
       "MT32_CONTROL.ROM": "{url}/mt32pi/ctrl_mt32_bluer.rom",
-      "MT32_PCM.ROM": "{url}/mt32pi/pcm_mt32.rom"
+      "MT32_PCM.ROM": "{url}/mt32pi/pcm_mt32.rom",
+
+      "rev0/MT32_CONTROL.ROM": "{url}/mt32pi/ctrl_mt32_1_07.rom",
+      "rev0/MT32_PCM.ROM": "{url}/mt32pi/pcm_mt32.rom"
     }
   },
   "romsets": {
