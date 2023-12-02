@@ -31,8 +31,8 @@ class ROMKit:
         # Build system
         self.system = BaseSystem.from_json(self.config)
 
-    def run(self) -> None:
-        getattr(ROMKit, self.action)(self)
+    def run(self, **kwargs) -> None:
+        getattr(ROMKit, self.action)(self, **kwargs)
 
     # Lists machines filtered for this system
     def list(self) -> None:
@@ -40,8 +40,11 @@ class ROMKit:
             print(json.dumps(machine.dump(), cls=SetEncoder))
 
     # Installs the list of filtered machines onto the local filesystem
-    def install(self) -> None:
-        self.system.install()
+    def install(self, resources: str = None) -> None:
+        if resources:
+            resources = set(resources.split(','))
+
+        self.system.install(resource_names=resources)
 
     # Rewrites the rom directory structure based on current filters
     def organize(self) -> None:
@@ -57,8 +60,9 @@ def main() -> None:
     parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'organize', 'vacuum'])
     parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
-    args = {k: v for k, v in vars(parser.parse_args()).items() if v is not None}
-    ROMKit(**args).run()
+    args, action_args = parser.parse_known_args()
+    args = {k: v for k, v in vars(args).items() if v is not None}
+    ROMKit(**args).run(**{arg.split('=')[0]: arg.split('=')[1] for arg in action_args})
 
 
 if __name__ == '__main__':

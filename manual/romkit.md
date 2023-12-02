@@ -88,6 +88,9 @@ bin/romkit.sh list n64 --log-level DEBUG
 # Download/Install ROMs
 bin/romkit.sh install <system>
 
+# Download/Install specific resources
+bin/romkit.sh install <system> resources=<resource1,resource2>
+
 # Re-build the ROM folder structure
 bin/romkit.sh organize <system>
 
@@ -1013,6 +1016,12 @@ $ bin/romkit.sh install vectrex
 ...
 2023-05-20 13:49:21,034 - [Armor..Attack (World)] Enabling in: /home/pi/RetroPie/roms/vectrex
 2023-05-20 13:49:21,046 - [Bedlam (USA, Europe)] Enabling in: /home/pi/RetroPie/roms/vectrex
+...
+
+$ bin/romkit.sh install pc resources=config
+2023-05-20 13:48:10,443 - [!Bingo Granny! (2002)] Installing asset "config"
+2023-05-20 13:48:10,452 - [$100,000 Pyramid (1988)] Installing asset "config"
+2023-05-20 13:48:10,454 - ['Nam 1965-1975 (1991)] Installing asset "config"
 ...
 ```
 

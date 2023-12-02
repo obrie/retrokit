@@ -623,47 +623,54 @@ class Machine:
         if self.playlist:
             # Delete existing playlists so that we start empty as each machine
             # gets added to it.  We prefer this over re-using the existing list
-            # in case the previousy playlist was bad or the number of discs has
+            # in case the previous playlist was bad or the number of discs has
             # been reduced.
             self.playlist.delete()
 
-    # Installs this machine onto the local filesystem
-    def install(self) -> None:
-        if self.resource:
-            self.resource.check_xref()
+    # Installs the given resources for this machine onto the local filesystem
+    def install(self, resource_names: Set[str] = None) -> None:
+        if not resource_names:
+            resource_names = {'machine', 'device', 'disk', 'sample', 'playlist', *(asset.name for asset in self.assets)}
 
-        # Always install from self first in case we're working with a non-merged source
-        self.install_from(self)
-        self.install_from(self.parent_machine)
-        self.install_from(self.bios_machine)
+        if 'machine' in resource_names:
+            if self.resource:
+                self.resource.check_xref()
 
-        if self.resource:
-            # Special cases where there were no roms (e.g. pong in mame)
-            if not self.resource.exists():
-                logging.info(f'[{self.name}] Creating empty resource')
-                self.resource.target_path.touch()
+            # Always install from self first in case we're working with a non-merged source
+            self.install_from(self)
+            self.install_from(self.parent_machine)
+            self.install_from(self.bios_machine)
 
-            self.resource.create_xref()
+            if self.resource:
+                # Special cases where there were no roms (e.g. pong in mame)
+                if not self.resource.exists():
+                    logging.info(f'[{self.name}] Creating empty resource')
+                    self.resource.target_path.touch()
+
+                self.resource.create_xref()
 
         # Devices
-        for device_machine in self.device_machines:
-            self.install_from(device_machine)
+        if 'device' in resource_names:
+            for device_machine in self.device_machines:
+                self.install_from(device_machine)
 
         # Disks
-        for disk in (self.disks_from_self | self.disks_from_parent):
-            disk.install()
+        if 'disk' in resource_names:
+            for disk in (self.disks_from_self | self.disks_from_parent):
+                disk.install()
 
         # Samples
-        if self.sample:
+        if self.sample and 'sample' in resource_names:
             self.sample.install()
 
         # Playlist
-        if self.playlist:
+        if self.playlist and 'playlist' in resource_names:
             self.playlist.install()
 
         # Assets
         for asset in self.assets:
-            asset.install()
+            if asset.name in resource_names:
+                asset.install()
 
     # Installs the roms from the given source machine
     def install_from(self, machine: Machine) -> None:

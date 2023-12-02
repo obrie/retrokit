@@ -175,7 +175,7 @@ class BaseSystem:
         return self.sorted_prioritized_machines
 
     # Installs all of the filtered machines
-    def install(self) -> None:
+    def install(self, resource_names: List[str] = None) -> None:
         installed_romsets = set()
 
         # Install and filter out invalid machines
@@ -190,15 +190,18 @@ class BaseSystem:
                 logging.warn(f'URL(s) missing for romset: {romset.name}')
 
         for machine in machines:
-            self.install_machine(machine)
+            self.install_machine(machine, resource_names=resource_names)
 
-        self.organize()
+        if not resource_names or 'machine' in resource_names:
+            self.organize()
 
     # Installs the given machine and returns true/false depending on whether the
-    # install was successful
-    def install_machine(self, machine: Machine) -> bool:
+    # install was successful.
+    # 
+    # A set of resources to install can be provided.
+    def install_machine(self, machine: Machine, resource_names: Set[str] = None) -> bool:
         try:
-            machine.install()
+            machine.install(resource_names)
             return True
         except (requests.exceptions.MissingSchema, requests.exceptions.URLRequired) as e:
             logging.error(f'[{machine.name}] Failed to download (no url found)')
