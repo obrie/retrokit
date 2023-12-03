@@ -416,7 +416,8 @@
         "rename_to": "mt32/romdir",
         "map_values": {
           ".\\mt32": "mt32-roms",
-          ".\\mt32\\": "mt32-roms"
+          ".\\mt32\\": "mt32-roms",
+          ".\\mt32\\rev0": "~/.config/dosbox/mt32-roms/rev0"
         },
         "case_sensitive": true
       }
@@ -540,7 +541,7 @@
         "map_values": {
           ".\\mt32": "mt32-roms",
           ".\\mt32\\": "mt32-roms",
-          ".\\mt32\\rev0": "mt32-roms/rev0"
+          ".\\mt32\\rev0": "~/.config/dosbox/mt32-roms/rev0"
         }
       }
     }
