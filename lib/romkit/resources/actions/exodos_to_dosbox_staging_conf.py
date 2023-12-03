@@ -109,6 +109,9 @@ class ExodosToDosboxStagingConf(BaseAction):
         else:
             target_section = mapper.get('rename_to', section.name)
 
+        # All params are lowercase
+        target_param = target_param.lower()
+
         # Current value
         value = section.get(param, raw=True)
 
@@ -148,5 +151,9 @@ class ExodosToDosboxStagingConf(BaseAction):
 
         # Replace windows-style slashes
         value = value.replace('\\', '/')
+
+        # Ensure consistent case if the param isn't case-sensitive
+        if not param_mapping.get('case_sensitive', False):
+            value = value.lower()
 
         target_config.set(target_section, target_param, value)

@@ -179,7 +179,8 @@
         "defaults": ["auto", "3 1.2 0.3 8.0 sine"]
       },
       "soundfont": {
-        "defaults": ["default.sf2", "default.sf2 100"]
+        "defaults": ["default.sf2", "default.sf2 100"],
+        "case_sensitive": true
       },
       "fsynth_reverb": {
         "defaults": ["auto", "0.61 0.23 0.76 0.56", "0.61 0.23 0.76 0.57"]
@@ -377,7 +378,8 @@
         "defaults": [],
         "map_values": {
           ".\\mt32\\SoundCanvas.sf2": ""
-        }
+        },
+        "case_sensitive": true
       },
       "mididevice": {
         "defaults": ["auto"],
@@ -414,7 +416,8 @@
         "rename_to": "mt32/romdir",
         "map_values": {
           ".\\mt32": "mt32-roms"
-        }
+        },
+        "case_sensitive": true
       }
     },
     "skip_params": [
@@ -521,7 +524,7 @@
         "allowlist": ["true", "false"]
       },
       "mouse_sensitivity": {
-        "defaults": [100, "100 100"]
+        "defaults": [100, "100 100", "100,100"]
       },
       "ps2_mouse_model": {
         "defaults": ["explorer"],
@@ -760,19 +763,36 @@
   "serial": {
     "params": {
       "phonebookfile": {
-        "defaults": ["phonebook.txt", "phonebook-dosbox-x.txt"]
+        "defaults": ["phonebook.txt", "phonebook-dosbox-x.txt"],
+        "case_sensitive": true
       },
       "serial1": {
-        "defaults": ["dummy"]
+        "defaults": ["dummy"],
+        "allowlist": ["dummy", "disabled", "mouse", "modem", "nullmodem", "direct"],
+        "map_values": {
+          "serialmouse": "mouse"
+        }
       },
       "serial2": {
-        "defaults": ["dummy"]
+        "defaults": ["dummy"],
+        "allowlist": ["dummy", "disabled", "mouse", "modem", "nullmodem", "direct"],
+        "map_values": {
+          "serialmouse": "mouse"
+        }
       },
       "serial3": {
-        "defaults": ["disabled"]
+        "defaults": ["disabled"],
+        "allowlist": ["dummy", "disabled", "mouse", "modem", "nullmodem", "direct"],
+        "map_values": {
+          "serialmouse": "mouse"
+        }
       },
       "serial4": {
-        "defaults": ["disabled"]
+        "defaults": ["disabled"],
+        "allowlist": ["dummy", "disabled", "mouse", "modem", "nullmodem", "direct"],
+        "map_values": {
+          "serialmouse": "mouse"
+        }
       }
     }
   },
