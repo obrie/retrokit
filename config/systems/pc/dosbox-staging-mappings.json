@@ -415,7 +415,8 @@
       "mt32.romdir": {
         "rename_to": "mt32/romdir",
         "map_values": {
-          ".\\mt32": "mt32-roms"
+          ".\\mt32": "mt32-roms",
+          ".\\mt32\\": "mt32-roms"
         },
         "case_sensitive": true
       }
@@ -538,6 +539,7 @@
         "defaults": ["mt32-roms"],
         "map_values": {
           ".\\mt32": "mt32-roms",
+          ".\\mt32\\": "mt32-roms",
           ".\\mt32\\rev0": "mt32-roms/rev0"
         }
       }
