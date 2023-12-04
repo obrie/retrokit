@@ -118,7 +118,7 @@ class ExodosToDosboxStagingConf(BaseAction):
         # Map the value
         value_mappings = param_mapping.get('map_values', {})
         value_template = value_mappings.get(value, value_mappings.get('*'))
-        if value_template:
+        if value_template is not None:
             value = eval(f"f\"{value_template}\"")
 
         # Skip if no value was set
