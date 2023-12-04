@@ -41,6 +41,8 @@ project what it's become.  That includes:
 * meleu
   * [joystick selection](https://github.com/meleu/RetroPie-joystick-selection) reference implementation
   * [generate-launching-images](https://github.com/meleu/generate-launching-images) reference implementation
+* nemo93
+  * [dosbox mapperfiles](https://github.com/dosbox-staging/dosbox-staging/pull/1977)
 * PatchesSmith
   * [Neo Geo CD EmulationStation theme assets](https://imgur.com/a/C03ixep)
 * Paul Vince

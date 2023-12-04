@@ -8,6 +8,11 @@ setup_module_id='systems/pc/roms-configs'
 setup_module_desc='Configure game-specific dosbox configurations'
 
 configure() {
+  __configure_confs
+  __configure_mapperfiles
+}
+
+__configure_confs() {
   while IFS=$'\t' read -r rom_name rom_path; do
     ini_merge "{system_config_dir}/conf/$rom_name.conf" "$rom_path/dosbox.conf" overwrite=true space_around_delimiters=false
 
@@ -25,10 +30,29 @@ configure() {
   done < <(romkit_cache_list | jq -r '[.name, .path] | @tsv')
 }
 
+__configure_mapperfiles() {
+  mkdir -pv "$retropie_system_config_dir/mapperfiles"
+
+  while IFS=$'\t' read -r rom_name rom_path; do
+    if ! any_path_exists "{system_config_dir}/mapperfiles/$rom_name.map"; then
+      continue
+    fi
+
+    local mapperfile_target="$retropie_system_config_dir/mapperfiles/$rom_name.map"
+    ini_no_delimiter_merge "{system_config_dir}/mapperfiles/dosbox.map" "$mapperfile_target" backup=false overwrite=true
+    ini_no_delimiter_merge "{system_config_dir}/mapperfiles/$rom_name.map" "$mapperfile_target" backup=false
+
+    # Remove comments since dosbox doesn't support them in mapperfiles
+    sed -i '/^[ \t]*#/d' "$mapperfile_target"
+  done < <(romkit_cache_list | jq -r '.name')
+}
+
 restore() {
   while IFS=$'\t' read -r rom_path; do
     restore_file "$rom_path/dosbox.conf" delete_src=true
   done < <(romkit_cache_list | jq -r '.path')
+
+  find "$retropie_system_config_dir/mapperfiles" -not -name 'dosbox*.map' -exec rm -fv '{}' +
 }
 
 setup "${@}"
