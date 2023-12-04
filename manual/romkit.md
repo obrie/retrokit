@@ -149,9 +149,11 @@ and sorting/prioritizing roms:
 | collections            | config           | Assigned collections                                                      |
 | comments               | datfile comments | Machine comments                                                          |
 | controls               | controls         | Input control type requirements (e.g. lightgun, joy, etc.)                |
+| custom                 | custom           | Custom associated with the machine                                        |
 | descriptions           | name             | Machine descriptions (same as name except for arcade systems)             |
 | developers             | developer        | Total number of flag groups in the name                                   |
 | disc_titles            | name             | Machine disc title                                                        |
+| discs                  | discs            | Number if discs in the title                                              |
 | emulator_compatibility | emulation        | Whether the assigned emulator is compatible with the assigned romset      |
 | emulator_ratings       | emulation        | Emulator performance rating                                               |
 | emulators              | emulation        | Total number of flag groups in the name                                   |
@@ -169,21 +171,21 @@ and sorting/prioritizing roms:
 | manual_exists          | manuals          | Whether the machine has a manual                                          |
 | media                  | media            | Media associated with the machine, such as artwork                        |
 | names                  | name             | Machine name                                                              |
+| orientations           | screen           | Screen orientation                                                        |
 | parent_disc_titles     | datfile parent   | Parent machine disc title                                                 |
 | parent_names           | datfile parent   | Parent machine name                                                       |
 | parent_titles          | datfile parent   | Parent machine title                                                      |
-| titles                 | name             | Machine title                                                             |
-| versions               | name             | Best-guess version number in the title                                    |
 | peripherals            | peripherals      | Peripherals supported (e.g. multitap)                                     |
 | players                | players          | Maximum number of players supported by the machine                        |
 | publishers             | publisher        | Game publisher                                                            |
 | ratings                | rating           | Community-determined rating of the game                                   |
 | romsets                | config           | The machine's romset name                                                 |
 | runnable               | datfile          | Whether the machine is runnable                                           |
-| orientations           | screen           | Screen orientation                                                        |
 | series                 | series           | The series the game belongs to                                            |
 | systems                | config           | The machine's system name                                                 |
 | tags                   | tags             | The machine's system name                                                 |
+| titles                 | name             | Machine title                                                             |
+| versions               | name             | Best-guess version number in the title                                    |
 | years                  | year             | Year of the release                                                       |
 
 ## Configuration

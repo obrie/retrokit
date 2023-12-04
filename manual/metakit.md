@@ -116,9 +116,24 @@ Sources:
 * [Screenscraper](https://www.screenscraper.fr/)
 * [Progretto Snaps](https://www.progettosnaps.net/)
 
+### Aliases
+
+Other *titles* that are associated with the game via the parent->child
+datfile relationship.
+
+Property: `aliases`
+
+Systems:
+
+* all
+
+Sources:
+
+* Romsets
+
 ### Alternate Names
 
-Other names the game may be referred to as.  This can be useful if an archive
+Other *names* the game may be referred to as.  This can be useful if an archive
 source is different from the latest DAT file for a system.
 
 Property: `alternates`
@@ -175,6 +190,21 @@ Sources:
 * MAME
 * Sinden Lightgun compatiblity spreadsheet
 
+### Custom
+
+An open-ended dictionary that allows you to define key-value attributes on a group
+rather than open-ended strings like you can with `tags`.
+
+Property: `custom`
+
+Systems:
+
+* all
+
+Sources:
+
+* User-provided
+
 ### Developer
 
 The name of the company that developed the game.
@@ -189,6 +219,21 @@ Sources:
 
 * MAME
 * [Screenscraper](https://www.screenscraper.fr/)
+
+### Discs
+
+The number of discs associated with the title.  Note that this is based on the
+primary region (in case you see discrepancies between regions).
+
+Property: `discs`
+
+Systems:
+
+* All cd-based systems
+
+Sources:
+
+* Discs
 
 ### Emulation
 
