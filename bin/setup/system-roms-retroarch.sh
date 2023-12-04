@@ -279,7 +279,7 @@ __list_libretro_roms() {
       .path,
       .emulator,
       (.controls | join(",")),
-      ((.peripherals + .tags) | join("'$item_delim'"))
+      ((.peripherals + .tags + .collections) | join("'$item_delim'"))
     ] | join("'$field_delim'")
   ')
 }
