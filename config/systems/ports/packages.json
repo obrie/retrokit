@@ -2,20 +2,20 @@
   "doom": {
     "package": "lr-prboom",
     "files": {
-      "doom.wad": "$HOME/RetroPie/roms/pc/.exodos/DOOM/DOOM.WAD"
+      "doom.wad": "$HOME/RetroPie/roms/pc/.exodos/DOOM (1993)/DOOM.WAD"
     }
   },
   "duke3d": {
     "package": "eduke32",
     "files": {
-      "duke3d.grp": "$HOME/RetroPie/roms/pc/.exodos/Duke3D/DUKE3D/DUKE3D.GRP",
-      "duke.rts": "$HOME/RetroPie/roms/pc/.exodos/Duke3D/DUKE3D/DUKE.RTS"
+      "duke3d.grp": "$HOME/RetroPie/roms/pc/.exodos/Duke Nukem 3D (1996)/DUKE3D/DUKE3D.GRP",
+      "duke.rts": "$HOME/RetroPie/roms/pc/.exodos/Duke Nukem 3D (1996)/DUKE3D/DUKE.RTS"
     }
   },
   "quake": {
     "package": "lr-tyrquake",
     "files": {
-      "id1/pak1.pak": "$HOME/RetroPie/roms/pc/.exodos/Quake/QUAKE/ID1/PAK1.PAK"
+      "id1/pak1.pak": "$HOME/RetroPie/roms/pc/.exodos/Quake (1996)/QUAKE/ID1/PAK1.PAK"
     }
   }
 }
