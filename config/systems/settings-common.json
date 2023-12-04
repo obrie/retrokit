@@ -69,6 +69,11 @@
           "manual_exists": [true]
         }
       },
+      "Multidisc": {
+        "filters": {
+          "!discs": [null, 1]
+        }
+      },
       "Multiplayer": {
         "filters": {
           "!players": [null, 1]
