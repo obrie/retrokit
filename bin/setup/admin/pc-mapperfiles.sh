@@ -4,7 +4,7 @@ system='pc'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../system-common.sh"
 
-setup_module_id='localdev/pc-mapperfiles'
+setup_module_id='admin/pc-mapperfiles'
 setup_module_desc='Generates game-specific mapperfiles (local development purposes only)'
 
 # Mappings from dosbox-staging config name to exodos name
