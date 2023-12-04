@@ -44,7 +44,7 @@ class MetaKit:
 
     # Validates that machines are mapped properly to names in each romset's discovery
     # data.
-    def validate_discovery(self):
+    def validate_discovery(self) -> None:
         self.system.validate_discovery()
 
     # Vacuums unneded data from the system's database
