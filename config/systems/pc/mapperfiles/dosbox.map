@@ -1,35 +1,25 @@
-# Disable...
-# TODO: This should be a part of the kiosk profile
-#
-# Not disabled:
-# * hand_capmouse
-# * hand_pause
-# * hand_restart
-# * hand_shutdown
-# * hand_speedlock
-# * hand_swapimg
+# Defaults from dosbox-staging
 hand_capmouse "key 67 mod1"
-hand_shutdown "key 66 mod1"
-# hand_fullscr "key 40 mod2"
+hand_fullscr "key 40 mod2"
 hand_restart "key 74 mod1 mod2"
 hand_pause "key 72 mod2"
-# hand_mapper "key 58 mod1"
+hand_mapper "key 58 mod1"
+hand_mute "key 65 mod1"
 hand_speedlock "key 69 mod2"
-# hand_recwave "key 63 mod1"
-# hand_caprawmidi
-# hand_scrshot "key 62 mod1"
-# hand_video "key 64 mod1"
-# hand_decfskip
-# hand_incfskip
-# hand_cycledown "key 68 mod1"
-# hand_cycleup "key 69 mod1"
-# hand_select "key 67"
-# hand_incval "key 68"
-# hand_decval "key 68 mod2"
-# hand_cgacomp "key 69"
-# hand_caprawopl
+hand_recwave "key 63 mod1"
+hand_reloadshad "key 59 mod1"
+hand_rendshot "key 62 mod2"
+hand_scrshot "key 62 mod1"
+hand_video "key 64 mod1"
+hand_cycledown "key 68 mod1"
+hand_cycleup "key 69 mod1"
+hand_select "key 67"
+hand_incval "key 68"
+hand_decval "key 68 mod2"
+hand_cgacomp "key 69"
 hand_swapimg "key 61 mod1"
-key_esc "key 41"
+hand_caprawmidi
+hand_caprawopl
 key_f1 "key 58"
 key_f2 "key 59"
 key_f3 "key 60"
@@ -69,7 +59,6 @@ key_o "key 18"
 key_p "key 19"
 key_lbracket "key 47"
 key_rbracket "key 48"
-key_enter "key 40"
 key_capslock "key 57"
 key_a "key 4"
 key_s "key 22"
@@ -99,7 +88,6 @@ key_rshift "key 229"
 key_lctrl "key 224"
 key_lgui "key 227"
 key_lalt "key 226"
-key_space "key 44"
 key_ralt "key 230"
 key_rgui "key 231"
 key_rctrl "key 228"
@@ -112,10 +100,6 @@ key_pageup "key 75"
 key_delete "key 76"
 key_end "key 77"
 key_pagedown "key 78"
-key_up "key 82"
-key_left "key 80"
-key_down "key 81"
-key_right "key 79"
 key_numlock "key 83"
 key_kp_divide "key 84"
 key_kp_multiply "key 85"
@@ -133,30 +117,35 @@ key_kp_3 "key 91"
 key_kp_enter "key 88"
 key_kp_0 "key 98"
 key_kp_period "key 99"
-jbutton_0_0
-jbutton_0_1
-jaxis_0_1-
-jaxis_0_1+
-jaxis_0_0-
-jaxis_0_0+
-jbutton_0_2
-jbutton_0_3
-jbutton_1_0
-jbutton_1_1
-jaxis_0_2-
-jaxis_0_2+
-jaxis_0_3-
-jaxis_0_3+
-jaxis_1_0-
-jaxis_1_0+
-jaxis_1_1-
-jaxis_1_1+
-jbutton_0_4
-jbutton_0_5
-jhat_0_0_0
-jhat_0_0_3
-jhat_0_0_2
-jhat_0_0_1
+key_intl1 "key 135"
+
+# Default joystick configurations from dosbox-staging (xbox)
+# a=0,b=1,x=2,y=3,4=lb,5=rb,6=select,7=start
+jaxis_0_0+ "stick_0 axis 0 1"
+jaxis_0_0- "stick_0 axis 0 0"
+jaxis_0_1+ "stick_0 axis 1 1"
+jaxis_0_1- "stick_0 axis 1 0"
+jaxis_0_2+ "stick_0 axis 2 1"
+jaxis_0_2- "stick_0 axis 2 0"
+jaxis_0_3+ "stick_0 axis 3 1"
+jaxis_0_3- "stick_0 axis 3 0"
+jaxis_1_0+ "stick_1 axis 0 1"
+jaxis_1_0- "stick_1 axis 0 0"
+jaxis_1_1+ "stick_1 axis 1 1"
+jaxis_1_1- "stick_1 axis 1 0"
+jbutton_0_0 "stick_0 button 0"
+jbutton_0_1 "stick_0 button 1"
+jbutton_0_2 "stick_0 button 2"
+jbutton_0_3 "stick_0 button 3"
+jbutton_0_4 "stick_0 button 4"
+jbutton_0_5 "stick_0 button 5"
+jbutton_1_0 "stick_1 button 0"
+jbutton_1_1 "stick_1 button 1"
+jhat_0_0_0 "stick_0 hat 0 1"
+jhat_0_0_1 "stick_0 hat 0 2"
+jhat_0_0_2 "stick_0 hat 0 4"
+jhat_0_0_3 "stick_0 hat 0 8"
+
 mod_1 "key 224" "key 228"
 mod_2 "key 226" "key 230"
 mod_3 "key 227" "key 231"

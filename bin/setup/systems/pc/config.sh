@@ -18,14 +18,20 @@ __configure_conf() {
 }
 
 __configure_mapperfiles() {
-  mkdir -p "$retropie_system_config_dir/mapperfiles"
-  each_path '{system_config_dir}/mapperfiles' find '{}' -name '*.map' -exec cp -v -t "$retropie_system_config_dir/mapperfiles/" '{}' +
-  sed -i '/^[ \t]*#/d' "$retropie_system_config_dir/mapperfiles/"*.map
+  mkdir -pv "$retropie_system_config_dir/mapperfiles"
+
+  while read mapperfile_name; do
+    local mapperfile_target="$retropie_system_config_dir/mapperfiles/$mapperfile_name"
+    ini_no_delimiter_merge "{system_config_dir}/mapperfiles/$mapperfile_name" "$mapperfile_target" backup=false overwrite=true
+
+    # Remove comments since dosbox doesn't support them in mapperfiles
+    sed -i '/^[ \t]*#/d' "$mapperfile_target"
+  done < <(each_path '{system_config_dir}/mapperfiles' find '{}' -name 'dosbox*.map' -exec basename {} .conf \; | sort | uniq)
 }
 
 restore() {
   restore_file "$retropie_system_config_dir/dosbox-staging.conf" delete_src=true
-  rm -rfv "$retropie_system_config_dir/mapperfiles"
+  rm -rfv "$retropie_system_config_dir/mapperfiles/dosbox*.map"
 }
 
 setup "${@}"

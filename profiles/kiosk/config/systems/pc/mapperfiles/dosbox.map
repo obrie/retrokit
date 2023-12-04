@@ -1,0 +1,30 @@
+# Disable rarely used (and possibly confusing) hotkeys
+#
+# Keep:
+# * hand_capmouse
+# * hand_pause
+# * hand_restart
+# * hand_shutdown
+# * hand_speedlock
+# * hand_swapimg
+hand_caprawmidi
+hand_caprawopl
+hand_cgacomp
+hand_cycledown
+hand_cycleup
+hand_decfskip
+hand_decval
+hand_fullscr
+hand_incfskip
+hand_incval
+hand_mapper
+hand_mute
+hand_recwave
+hand_reloadshad
+hand_rendshot
+hand_scrshot
+hand_select
+hand_video
+
+# Rely on powerkit to shut down so that we can use the double start+select hotkey
+hand_shutdown "key 66 mod1"
