@@ -26,6 +26,9 @@ __configure_mapperfiles() {
 
     # Remove comments since dosbox doesn't support them in mapperfiles
     sed -i '/^[ \t]*#/d' "$mapperfile_target"
+
+    # Delete lines that have no binds (since dosbox considers those invalid)
+    sed -i '/^[^ ]\+ *$/d' "$mapperfile_target"
   done < <(each_path '{system_config_dir}/mapperfiles' find '{}' -name 'dosbox*.map' -exec basename {} .conf \; | sort | uniq)
 }
 

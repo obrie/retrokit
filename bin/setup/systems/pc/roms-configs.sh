@@ -44,6 +44,9 @@ __configure_mapperfiles() {
 
     # Remove comments since dosbox doesn't support them in mapperfiles
     sed -i '/^[ \t]*#/d' "$mapperfile_target"
+
+    # Delete lines that have no binds (since dosbox considers those invalid)
+    sed -i '/^[^ ]\+ *$/d' "$mapperfile_target"
   done < <(romkit_cache_list | jq -r '.name')
 }
 
