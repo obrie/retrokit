@@ -332,6 +332,7 @@
   "Alice Dreams Tournament": {
     "id": "6ebe85c7297e223df31c5df992b05085f706e4e7",
     "players": 4,
+    "discs": 2,
     "rating": 0.9,
     "year": 2017,
     "developer": "Alice Team",
@@ -384,6 +385,7 @@
   "Alone in the Dark - The New Nightmare": {
     "id": "657e938c53135f928446c4481ed2a58a120c8ba1",
     "players": 1,
+    "discs": 2,
     "rating": 0.85,
     "year": 2001,
     "developer": "Darkworks",
@@ -664,6 +666,7 @@
   "Biohazard - Code - Veronica - Kanzenban": {
     "id": "642315c425ca8e2728e6e9dfb4c0618f537d04fc",
     "players": 1,
+    "discs": 2,
     "rating": 0.95,
     "year": 2001,
     "developer": "NexTech",
@@ -698,6 +701,7 @@
   "Black-Matrix Advanced": {
     "id": "46b3380be9dfdba2351cf3af9390793c3195dec0",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 1999,
     "developer": "Flight-Plan",
@@ -1533,6 +1537,7 @@
   "Comic Party": {
     "id": "38692419bc91fa5593f210e74dbf0bc14e9aec7a",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 2001,
     "developer": "Aquaplus",
@@ -1770,6 +1775,7 @@
   "D2": {
     "id": "1c44e02e8b44da8767e516ca64dc8d36ce6e3788",
     "players": 1,
+    "discs": 4,
     "rating": 0.8,
     "year": 2000,
     "developer": "WARP",
@@ -1868,6 +1874,7 @@
   "Dancing Blade Katte ni Momotenshi II - Tears of Eden Kanzenban": {
     "id": "6bdbfadfbcf0623899044276707077f867ec2cc7",
     "players": 1,
+    "discs": 2,
     "rating": 0.85,
     "year": 1999,
     "developer": "Konami Computer Entertainment Tokyo",
@@ -1881,6 +1888,7 @@
   "Dancing Blade Katte ni Momotenshi! Kanzenban": {
     "id": "1652b746a80acb7bfa3f3c6982f0664acdc0f185",
     "players": 1,
+    "discs": 2,
     "rating": 0.7,
     "year": 1999,
     "developer": "Konami Computer Entertainment Tokyo",
@@ -2085,6 +2093,7 @@
   "Deep Fighter": {
     "id": "f82fb14eae3fb4ccd8c50b6fb2deaaee12ee0a4e",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 2000,
     "developer": "Criterion Games",
@@ -2389,7 +2398,8 @@
     "id": "59c944c5f4f31b2a3a62ad9fc11783b600f6f69c"
   },
   "Dorimaga GD Vol. 2": {
-    "id": "ba7dba6a14a3cfc929b00b3fb0fb139565466889"
+    "id": "ba7dba6a14a3cfc929b00b3fb0fb139565466889",
+    "discs": 2
   },
   "Dorimaga GD Vol. 3": {
     "id": "3b276fead7128a603e5b4f1de90adfe3477f2961"
@@ -2525,16 +2535,20 @@
     "id": "af6f54f490b5785d06197a2d92234626063d9bca"
   },
   "Dreamcast Express Vol. 4": {
-    "id": "8c8b8957638cc1f000b7cf2d3a4f78b8ac408aef"
+    "id": "8c8b8957638cc1f000b7cf2d3a4f78b8ac408aef",
+    "discs": 2
   },
   "Dreamcast Express Vol. 5": {
-    "id": "7e771d71837b659a6c262158511bdbba7249739e"
+    "id": "7e771d71837b659a6c262158511bdbba7249739e",
+    "discs": 2
   },
   "Dreamcast Express Vol. 6": {
-    "id": "09d982165a74217cc7ecad37257b60dfe3688772"
+    "id": "09d982165a74217cc7ecad37257b60dfe3688772",
+    "discs": 2
   },
   "Dreamcast Express Vol. 7": {
-    "id": "7492dd6939ee9210a6e56a36782b2413fda77150"
+    "id": "7492dd6939ee9210a6e56a36782b2413fda77150",
+    "discs": 2
   },
   "Dreamcast Middleware Conference Demo Disc Part.2": {
     "id": "e78763f6eaa0b4c7afb7601c7320441f6163925a"
@@ -3017,6 +3031,7 @@
   "Es": {
     "id": "5316e4878375a6695102696112fa4975a51ab80e",
     "players": 1,
+    "discs": 3,
     "rating": 0.85,
     "year": 2001,
     "developer": "Four-Some",
@@ -3066,6 +3081,7 @@
   "Eve Zero Kanzenban - Ark of the Matter": {
     "id": "425248e57baf59fc66da32fe4d97bf0749621ace",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 2001,
     "developer": "C's Ware",
@@ -3456,6 +3472,7 @@
   "First Kiss Story": {
     "id": "a9cc38f430fa7a11905922a43d5b585c7b9713d8",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 2002,
     "developer": "Broccoli",
@@ -3468,6 +3485,7 @@
   "First Kiss Story II - Anata ga Iru kara": {
     "id": "93aea827268ab008f5ec1d9ea0a5aa42d6e819cd",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 2002,
     "developer": "Broccoli",
@@ -4333,6 +4351,7 @@
   "Headhunter": {
     "id": "ba69ce8519f66a7c62f4e7d5a0bcc186eba64309",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 2001,
     "developer": "Amuze AB",
@@ -5138,6 +5157,7 @@
   "Kaen Seibo - The Virgin on Megiddo": {
     "id": "adcce34a30bd7939076e2204d559959ec0a080c7",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 2001,
     "developer": "Studio Line",
@@ -5248,6 +5268,7 @@
   "Kidou Senshi Gundam - Gihren no Yabou - Zeon no Keifu": {
     "id": "1bea4e93dbfb31852d2b98089dfc16badcf79952",
     "players": 1,
+    "discs": 2,
     "rating": 0.85,
     "year": 2000,
     "developer": "Bandai",
@@ -5261,6 +5282,7 @@
   "Kidou Senshi Gundam - Renpou vs. Zeon & DX": {
     "id": "f69c54df6b8d780f8350a5d5df9276aee9c59e6f",
     "players": 1,
+    "discs": 2,
     "rating": 0.9,
     "year": 2002,
     "developer": "Capcom",
@@ -6633,6 +6655,7 @@
   "My Merry Maybe": {
     "id": "6d7af1be56fa28a2e6083747707a12634f27bac8",
     "players": 1,
+    "discs": 2,
     "rating": 0.5,
     "year": 2003,
     "developer": "Kindle Imagine Develop",
@@ -7510,6 +7533,7 @@
   "Oogami Ichirou Funtou-ki - Sakura Taisen Kayou Show Beni Tokage yori": {
     "id": "8b2dd30a30dd04d08d750aa938890046c8ab52a7",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 2000,
     "developer": "Red Company",
@@ -7813,6 +7837,7 @@
   "Pia Carrot e Youkoso!! 2.5": {
     "id": "8596c8c0f282e2aa76ec60e48bca2cd320c9c8d8",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 2001,
     "developer": "NEC Interchannel",
@@ -8676,6 +8701,7 @@
   "Real Sound - Kaze no Regret": {
     "id": "9fdd20abe73944f826636d0d875740f5fa7524cc",
     "players": 1,
+    "discs": 2,
     "rating": 0.75,
     "year": 1999,
     "developer": "Warp Inc.",
@@ -8822,6 +8848,7 @@
   "Resident Evil - Code - Veronica": {
     "id": "55b55777828a605c6f40e254d1eb0dc01ef59019",
     "players": 1,
+    "discs": 2,
     "rating": 0.95,
     "year": 2000,
     "developer": "Capcom",
@@ -8855,6 +8882,7 @@
   "Resident Evil 2": {
     "id": "d2393651dc8cf6b060f8c4c9d283f039bfc4121c",
     "players": 1,
+    "discs": 2,
     "rating": 0.85,
     "year": 2000,
     "developer": "Capcom",
@@ -9182,6 +9210,7 @@
   "Sakura Taisen": {
     "id": "e4ec6701046d6eac63f893b9d8398a734191fb82",
     "players": 1,
+    "discs": 2,
     "rating": 0.8,
     "year": 2000,
     "developer": "SEGA",
@@ -9208,6 +9237,7 @@
   "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare": {
     "id": "596df477417d6795fac2c0bc89a9f9cc85c2087f",
     "players": 1,
+    "discs": 3,
     "rating": 0.8,
     "year": 2000,
     "developer": "Overworks",
@@ -9244,6 +9274,7 @@
   "Sakura Taisen 3 - Paris wa Moeteiru ka": {
     "id": "dd19526c6e0755bd9a0a7f2a5d00f64a1717361d",
     "players": 1,
+    "discs": 3,
     "rating": 0.95,
     "year": 2001,
     "developer": "Overworks",
@@ -9786,6 +9817,7 @@
   "Sentimental Graffiti 2": {
     "id": "17578e995aea47c137bb95ba105d26546c60d600",
     "players": 1,
+    "discs": 2,
     "rating": 0.6,
     "year": 2000,
     "developer": "NEC",
@@ -9876,6 +9908,7 @@
   "Shenmue": {
     "id": "567ea1c36b2aabbda4c0f6ccabd73e306722b5f3",
     "players": 1,
+    "discs": 3,
     "rating": 0.9,
     "year": 2000,
     "developer": "AM2",
@@ -9915,6 +9948,7 @@
   "Shenmue II": {
     "id": "6f14eab258397b47a51fc7eb4ba5bf70610b4d06",
     "players": 1,
+    "discs": 4,
     "rating": 0.9,
     "year": 2001,
     "developer": "AM2",
@@ -10160,6 +10194,7 @@
   "Sister Princess - Premium Edition": {
     "id": "c328d8728c8f8e1fb4c703169ed2acf2081b8242",
     "players": 1,
+    "discs": 2,
     "rating": 0.9,
     "year": 2002,
     "developer": "Stack",
@@ -10172,6 +10207,7 @@
   "Skies of Arcadia": {
     "id": "0eeb08ac7551920af9c01bed8e6ac508e9b23963",
     "players": 1,
+    "discs": 2,
     "rating": 0.9,
     "year": 2000,
     "developer": "Overworks",
@@ -11040,6 +11076,7 @@
   "Stupid Invaders": {
     "id": "5a6a2f1960df8cf00fcd72b2990f4c2bee4ab821",
     "players": 1,
+    "discs": 2,
     "rating": 0.85,
     "year": 2001,
     "developer": "Titanium Studios",
@@ -11098,6 +11135,7 @@
   "Suigetsu - Mayoigokoro": {
     "id": "6535a25245dd0c61cdc4eefa6d76f4eb0c5ea18f",
     "players": 1,
+    "discs": 2,
     "rating": 0.65,
     "year": 2004,
     "developer": "Kindle Imagine Develop",
@@ -12757,6 +12795,7 @@
   "Web Mystery - Yochimu o Miru Neko": {
     "id": "a96c95ff1b1fe1d32fa3ce50f712ee94ebd40be8",
     "players": 1,
+    "discs": 2,
     "rating": 0.7,
     "year": 1999,
     "developer": "Studio Mebius",

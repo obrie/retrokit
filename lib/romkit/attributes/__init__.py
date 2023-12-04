@@ -8,6 +8,7 @@ import romkit.attributes.collections
 import romkit.attributes.controls
 import romkit.attributes.description
 import romkit.attributes.developer
+import romkit.attributes.discs
 import romkit.attributes.emulation
 import romkit.attributes.favorite
 import romkit.attributes.filesystem

@@ -59,6 +59,7 @@ class Machine:
         languages: Set[str] = None,
         rating: Optional[float] = None,
         players: Optional[int] = None,
+        discs: Optional[int] = None,
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
         media: Optional[dict] = None,
@@ -111,6 +112,7 @@ class Machine:
         self.languages = languages or set()
         self.rating = rating
         self.players = players
+        self.discs = discs or 1
         self.emulator_rating = emulator_rating
         self.manual = manual
         self.media = media or {}
@@ -570,6 +572,7 @@ class Machine:
             'languages': self.languages,
             'rating': self.rating,
             'players': self.players,
+            'discs': self.discs,
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
             'manual': self.manual,
