@@ -237,10 +237,14 @@ build() {
     local staging_mapperfile=$(mktemp -p "$tmp_ephemeral_dir")
     local target_mapperfile="$system_config_dir/mapperfiles/$romkit_name.map"
 
-    # Add:
-    # * Game binds
-    # * Default binds (keys only) in case we need to revert what was set globally
+    # Add game binds
     __sort_joystick_binds "$game_mapperfile" > "$staging_mapperfile"
+
+    # Remove xbox "button 8" because it doesn't have a default mapping in RetroPie
+    sed -i 's/ *"stick_0 button 8"//g' "$staging_mapperfile"
+    sed -i '/^key[^"]\+"key[^"]\+" *$/d' "$staging_mapperfile"
+
+    # Add default binds (keys only) in case we need to revert what was set globally
     cat "$default_binds_file" >> "$staging_mapperfile"
 
     # Write the binds that aren't in common with the defaults
