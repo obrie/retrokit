@@ -79,7 +79,7 @@ __configure_overrides() {
 }
 
 __configure_xpad() {
-  if ! grep -Eq '^options xpad triggers_to_buttons=1' /etc/modprobe.d/xpad.conf; then
+  if [ ! -f /etc/modprobe.d/xpad.conf ] || ! grep -Eq '^options xpad triggers_to_buttons=1' /etc/modprobe.d/xpad.conf; then
     return
   fi
 
