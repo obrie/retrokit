@@ -30,7 +30,7 @@
           "source": "{url}/eXo/eXoDOS/{machine}.zip",
           "download": "$HOME/RetroPie/roms/pc/.exodos/{machine}.zip",
           "target": "$HOME/RetroPie/roms/pc/.exodos/{machine}",
-          "xref": "$HOME/RetroPie/roms/pc/.dos-home/{machine_sourcefile}",
+          "xref": "$HOME/eXoDOS/{machine_sourcefile}",
           "install": {"action": "zip_extract", "include_parent": false},
           "file_identifier": "name",
           "predefined": false
@@ -45,8 +45,7 @@
           "target": "$HOME/RetroPie/roms/pc/.exodos/{machine}/dosbox.conf",
           "install": {
             "action": "exodos_to_dosbox_staging_conf",
-            "mappings_file": "$RETROKIT_HOME/config/systems/pc/dosbox-staging-mappings.json",
-            "rewrite_root": "RetroPie/roms/pc/.dos-home"
+            "mappings_file": "$RETROKIT_HOME/config/systems/pc/dosbox-staging-mappings.json"
           },
           "ignore_case": true
         }

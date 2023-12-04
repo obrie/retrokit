@@ -14,23 +14,14 @@ configure() {
     # Clean up [autoexec] mess that crudini leaves behind
     crudini --del "$rom_path/dosbox.conf" autoexec
 
-    local autoexec_content=
-
-    # See if user is providing an override for the autoexec content
-    local conf_files=$()
+    # Write the highest priority autoexec content
     while read conf_file; do
-      autoexec_content=$(sed -n '/\[autoexec\]/,$p' "$conf_file")
+      local autoexec_content=$(sed -n '/\[autoexec\]/,$p' "$conf_file")
       if [ -n "$autoexec_content" ]; then
+        echo "$autoexec_content" >> "$rom_path/dosbox.conf"
         break
       fi
-    done < <(each_path "{system_config_dir}/conf/$rom_name.conf" | grep -Fv "$system_config_dir/conf/$rom_name.conf")
-
-    # If no overrides were found, then we rely on the source...
-    if [ -z "$autoexec_content" ]; then
-      autoexec_content=$(sed -n '/\[autoexec\]/,$p' "$rom_path/dosbox.conf.rk-src")
-    fi
-
-    echo "$autoexec_content" >> "$rom_path/dosbox.conf"
+    done < <(each_path "{system_config_dir}/conf/$rom_name.conf" | tac)
   done < <(romkit_cache_list | jq -r '[.name, .path] | @tsv')
 }
 
