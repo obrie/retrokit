@@ -764,10 +764,6 @@
   },
   "serial": {
     "params": {
-      "phonebookfile": {
-        "defaults": ["phonebook.txt", "phonebook-dosbox-x.txt"],
-        "case_sensitive": true
-      },
       "serial1": {
         "defaults": ["dummy"],
         "allowlist": ["dummy", "disabled", "mouse", "modem", "nullmodem", "direct"],
@@ -796,7 +792,12 @@
           "serialmouse": "mouse"
         }
       }
-    }
+    },
+
+    "skip_params": [
+      "# Intentionally not migrated",
+      "phonebookfile"
+    ]
   },
   "speaker": {
     "params": {
