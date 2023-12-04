@@ -17,6 +17,7 @@ additional emulators.
 autoport currently supports the following emulators:
 
 * libretro cores
+* dosbox-staging
 * drastic
 * hpyseus
 * mupen64plus

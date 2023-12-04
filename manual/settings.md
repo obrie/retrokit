@@ -397,6 +397,7 @@ when a new controller is registered.
 The additional systems that are supported by retrokit include:
 
 * advmame
+* dosbox-staging
 * drastic
 * hypseus
 * ppsspp

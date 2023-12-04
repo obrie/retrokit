@@ -6,6 +6,7 @@ This is because retrokit introduces additional autoconfiguration scripts for a n
 of emulators, including:
 
 * advmame
+* dosbox-staging
 * drastic
 * hypseus
 * ppsspp

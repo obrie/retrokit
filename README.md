@@ -34,7 +34,7 @@ configuration, and management of:
 
 ▶️ **Inputs**
 
-* Controller autoconfig (including support for advmame, drastic, hypseus, mupen64plus/keyboard, ppsspp, redream, sinden, supermodel, and ir)
+* Controller autoconfig (including support for advmame, dosbox-staging, drastic, hypseus, mupen64plus/keyboard, ppsspp, redream, sinden, supermodel, and ir)
 * Keyboard autoconfig for players 2, 3, and 4 in RetroArch via EmulationStation UI
 * Automatic port selection based on active inputs (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
 * Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard

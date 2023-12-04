@@ -51,6 +51,7 @@ The [`es-configscripts`](/ext/es-configscripts/) directory contains scripts for 
 additional emulators used by retrokit.  Those systems include:
 
 * advmame
+* dosbox-staging
 * drastic
 * hypseus
 * ppsspp
