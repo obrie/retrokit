@@ -6,6 +6,7 @@ import romkit.attributes.buttons
 import romkit.attributes.category
 import romkit.attributes.collections
 import romkit.attributes.controls
+import romkit.attributes.custom
 import romkit.attributes.description
 import romkit.attributes.developer
 import romkit.attributes.discs

@@ -5,6 +5,7 @@ from metakit.attributes.alternates import AlternatesAttribute
 from metakit.attributes.buttons import ButtonsAttribute
 from metakit.attributes.category import CategoryAttribute
 from metakit.attributes.controls import ControlsAttribute
+from metakit.attributes.custom import CustomAttribute
 from metakit.attributes.developer import DeveloperAttribute
 from metakit.attributes.discs import DiscsAttribute
 from metakit.attributes.emulation import EmulationAttribute
@@ -50,6 +51,7 @@ __all_attributes__ = [
     MediaAttribute,
     EmulationAttribute,
     TagsAttribute,
+    CustomAttribute,
     AlternatesAttribute,
     MergeAttribute,
     AliasesAttribute,

@@ -56,6 +56,7 @@ class Machine:
         genres: Set[str] = None,
         collections: Set[str] = None,
         tags: Set[str] = None,
+        custom: Optional[dict] = None,
         languages: Set[str] = None,
         rating: Optional[float] = None,
         players: Optional[int] = None,
@@ -109,6 +110,7 @@ class Machine:
         self.genres = genres or set()
         self.collections = collections or set()
         self.tags = tags or set()
+        self.custom = custom or {}
         self.languages = languages or set()
         self.rating = rating
         self.players = players
@@ -583,6 +585,7 @@ class Machine:
             'peripherals': self.peripherals,
             'buttons': self.buttons,
             'tags': self.tags,
+            'custom': self.custom,
             'group': {
                 'name': self.group_name,
                 'title': self.group_title,
