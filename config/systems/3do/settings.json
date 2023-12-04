@@ -20,7 +20,11 @@
     "lr-opera": {
       "default": true,
       "core_name": "opera",
-      "library_name": "Opera"
+      "library_name": "Opera",
+      "gamestate": [
+        "{rom_dir}/opera/per_game/{rom}.*.srm",
+        "{rom_dir}/opera/shared/nvram.*.srm"
+      ]
     }
   },
   "bios": {
