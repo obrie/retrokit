@@ -407,6 +407,56 @@ restore_partial_xml() {
   fi
 }
 
+# Merges INI-like files that have no delimiters between the key/value, backing up the target
+ini_no_delimiter_merge() {
+  local source=$1
+  local target=$2
+
+  local space_around_delimiters='true'
+  local as_sudo='false'
+  local overwrite='false'
+  local backup='true'
+  local restore='true'
+  local envsubst='true'
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+  
+  if ! any_path_exists "$source"; then
+    echo "Skipping $source (does not exist)"
+    return
+  fi
+
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
+  if [ "$backup" == 'true' ]; then
+    backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  else
+    $cmd mkdir -p "$(dirname "$target")"
+  fi
+
+  if [ "$overwrite" == 'true' ]; then
+    $cmd rm -fv "$target"
+  fi
+
+  local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
+  if [ -s "$target" ]; then
+    cp "$target" "$staging_file"
+  fi
+
+  echo "Merging non-delimited ini $source to $target"
+  while read source_file; do
+    local prepared_source_file=$(conf_prepare "$source_file" envsubst="$envsubst")
+    cat "$prepared_source_file" >> "$staging_file"
+  done < <(each_path "$source")
+
+  # Remove duplicate configurations (last config wins)
+  tac "$staging_file" | awk -F' ' '! seen[$1]++' | tac > "$target"
+
+  __conf_restore_permissions "$cmd" "$target"
+}
+
 # Copies a file, backing up the target and substituting environment variables
 # in the source file
 file_cp() {

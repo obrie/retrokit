@@ -28,8 +28,8 @@ __configure_advmame() {
   backup_file "$config_file"
   __restore_config
 
-  # Add overrides.  This is a custom non-ini format, so we need to do it manually.
-  each_path '{system_config_dir}/advmame.rc' __configure_advmame_ini '{}'
+  # Add overrides
+  ini_no_delimiter_merge '{system_config_dir}/advmame.rc' "$config_file"
 
   # Add possible rom paths
   sed -i '/dir_rom /d' "$config_file"
@@ -37,28 +37,6 @@ __configure_advmame() {
 
   # Make the config readable
   sort -o "$config_file" "$config_file"
-}
-
-__configure_advmame_ini() {
-  local source_file=$1
-
-  echo "Merging ini $source_file to $config_file"
-  while IFS=$'\t' read -r name value; do
-    if [ -z "$name" ]; then
-      continue
-    fi
-
-    # Escape the config name so that we can use it in sed to match and
-    # replace the existing value
-    local escaped_name=$(printf '%s\n' "$name" | sed -e 's/[]\/$*.^[]/\\&/g')
-
-    # Remove the existing key.  We do this instead of a replace so we can avoid
-    # having to also escape the value.
-    sed -i "/$escaped_name /d" "$config_file"
-
-    # Add it back in
-    echo "$name $value" >> "$config_file"
-  done < <(cat "$source_file" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
 }
 
 restore() {
