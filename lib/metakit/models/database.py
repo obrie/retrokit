@@ -30,6 +30,7 @@ class Database:
         return next((attribute_cls for attribute_cls in self.attributes if attribute_cls.name == name))
 
     # Gets the list of keys used in this database.
+    @property
     def keys(self) -> Set[str]:
         return self.dataset.keys()
 
@@ -246,7 +247,7 @@ class Database:
         serialized_data = {}
 
         # Add metadata sorted by key
-        for key in sorted(self.keys()):
+        for key in sorted(self.keys):
             metadata = self.dataset[key]
             metadata_attrs = sorted(metadata.keys())
 
