@@ -92,9 +92,21 @@ class PCSystem(BaseSystem):
                 else:
                     metadata['players'] = 1
 
+            # Release Year
+            release_date = exo_game.find('ReleaseDate')
+            if release_date is not None and release_date.text is not None:
+                year = int(release_date.text[0:4])
+                if 'year' not in metadata or year <= metadata['year']:
+                    metadata['year'] = year
+
+            # Developer
+            developer_tag = exo_game.find('Developer')
+            if developer_tag is not None and developer_tag.text is not None and developer_tag.text != 'Unknown':
+                metadata['developer'] = developer_tag.text
+
             # Publisher
             publisher_tag = exo_game.find('Publisher')
-            if publisher_tag is not None and publisher_tag.text is not None:
+            if publisher_tag is not None and publisher_tag.text is not None and publisher_tag.text != 'Unknown':
                 metadata['publisher'] = publisher_tag.text
 
             tags = set()
