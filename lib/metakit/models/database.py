@@ -8,6 +8,7 @@ from typing import Dict, List, Optional, Set
 
 from metakit.attributes import __all_attributes__, BaseAttribute
 from metakit.models.romkit import ROMKit
+from metakit.models.validation_results import ValidationResults
 from romkit.models.machine import Machine
 
 # Represents a metadata database for a system
@@ -134,24 +135,23 @@ class Database:
 
     # Validates that this database is properly implemented by checking all values
     # and grous defined in it
-    def validate(self, target_groups: set = None) -> Dict[str, List[str]]:
+    def validate(self, target_groups: set = None) -> ValidationResults:
         self.romkit.load()
 
-        errors = {}
+        validation_results = ValidationResults()
 
         # Check metadata values
         for key, metadata in self.dataset.items():
+            validation_results.scope = key
             for attribute in self.attributes:
-                key_errors = attribute.validate_metadata(key, metadata)
-                if key_errors:
-                    errors[key] = key_errors
+                attribute.validate_metadata(key, metadata, validation_results)
 
         # Check expected groups
         for group in (target_groups or self.romkit.resolved_groups):
             if not self.exists(group):
-                errors[group] = ['Missing']
+                validation_results.error('Missing', scope=group)
 
-        return errors
+        return validation_results
 
     # Generates a dictionary for attempting to find a key in the database
     # based on some other piece of metadata, such as:

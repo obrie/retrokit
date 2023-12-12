@@ -35,11 +35,17 @@ class MetaKit:
         getattr(MetaKit, self.action)(self, *args)
 
     # Validate the content of the system's database
-    def validate(self) -> bool:
-        errors = self.system.validate()
-        if errors:
-            for key in sorted(errors.keys()):
-                logging.warning(f'[{key}] Error: {", ".join(errors[key])}')
+    def validate(self) -> None:
+        validation_results = self.system.validate()
+
+        for key in sorted(set(list(validation_results.errors.keys()) + list(validation_results.warnings.keys()))):
+            if key in validation_results.errors:
+                logging.warning(f'[{key}] Error: {", ".join(validation_results.errors[key])}')
+
+            if key in validation_results.warnings:
+                logging.warning(f'[{key}] Warn: {", ".join(validation_results.warnings[key])}')
+
+        if validation_results.errors:
             sys.exit(1)
 
     # Validates that machines are mapped properly to names in each romset's discovery

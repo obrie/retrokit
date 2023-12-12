@@ -5,6 +5,6 @@ from metakit.attributes.base import BaseAttribute
 class SeriesAttribute(BaseAttribute):
     name = 'series'
 
-    def validate(self, value: str) -> bool:
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if not value or not isinstance(value, str):
-            return [f'series must be non-empty string: {value}']
+            validation.error(f'series must be non-empty string: {value}')

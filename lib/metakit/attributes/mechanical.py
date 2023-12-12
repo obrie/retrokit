@@ -7,6 +7,6 @@ class MechanicalAttribute(BaseAttribute):
 
     VALUES = {True, False}
 
-    def validate(self, value: str) -> List[str]:
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if value not in self.VALUES:
-            return [f'mechanical not valid: {value}']
+            validation.error(f'mechanical not valid: {value}')

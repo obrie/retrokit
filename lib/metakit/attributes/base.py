@@ -22,31 +22,21 @@ class BaseAttribute:
         pass
 
     # Validates the given key / value in the database
-    def validate_metadata(self, key, metadata) -> List[str]:
-        errors = []
-
+    def validate_metadata(self, key: str, metadata: dict, validation: ValidationResults) -> None:
         value = self.get(key, metadata)
         if value is not None or self.required:
-            new_errors = self.validate(value)
-            if new_errors:
-                errors.extend(new_errors)
+            self.validate(value, validation)
 
         if self.supports_overrides:
             merge_key = f'{self.name}|'
             for key, value in metadata.items():
                 if key.startswith(merge_key) and value is not None:
-                    new_errors = self.validate(value)
-                    if new_errors:
-                        errors.extend(new_errors)
+                    self.validate(value, validation)
 
         replace_key = f'{self.name}~'
         for key, value in metadata.items():
             if key.startswith(replace_key) and value is not None:
-                new_errors = self.validate(value)
-                if new_errors:
-                    errors.extend(new_errors)
-
-        return errors
+                self.validate(value, validation)
 
     # Gets the value of this attribute from the given metadata
     def get(self, key: str, metadata: dict):
@@ -57,9 +47,7 @@ class BaseAttribute:
         pass
 
     # Validates that the given value is valid.
-    # 
-    # By default, returns true.
-    def validate(self, value) -> List[str]:
+    def validate(self, value, validation: ValidationResults) -> None:
         pass
 
     # Formats the given value.

@@ -11,17 +11,13 @@ class MediaAttribute(BaseAttribute):
         'overlay',
     }
 
-    def validate(self, value: Dict[str, str]) -> List[str]:
-        errors = []
-
+    def validate(self, value: Dict[str, str], validation: ValidationResults) -> None:
         for key, value in value.items():
             if key not in self.VALID_VALUES:
-                errors.append(f"media name not valid: {key}")
+                validation.error(f"media name not valid: {key}")
 
             if not value:
-                errors.append(f"media url is missing for {key}")
-
-        return errors
+                validation.error(f"media url is missing for {key}")
 
     def format(self, value: Dict[str, str]) -> Dict[str, str]:
         return self._sort_dict(value)

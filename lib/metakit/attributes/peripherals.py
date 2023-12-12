@@ -7,14 +7,10 @@ class PeripheralsAttribute(BaseAttribute):
 
     VALUES = {'link_cable', 'multitap'}
 
-    def validate(self, value: List[str]) -> List[str]:
-        errors = []
-
+    def validate(self, value: List[str], validation: ValidationResults) -> None:
         for peripheral in value:
             if peripheral not in self.VALUES:
-                errors.append(f"peripheral not valid: {peripheral}")
-
-        return errors
+                validation.error(f"peripheral not valid: {peripheral}")
 
     def format(self, value: List[str]) -> List[str]:
         return self._sort_list(value)

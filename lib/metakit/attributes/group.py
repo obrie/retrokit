@@ -9,13 +9,9 @@ class GroupAttribute(BaseAttribute):
     def get(self, key, metadata) -> str:
         return metadata.get(self.name, key)
 
-    def validate(self, value: str) -> List[str]:
-        errors = []
-
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if not value or not isinstance(value, str):
-            errors.append('group is blank')
+            validation.error('group is blank')
 
         if value not in self.romkit.resolved_groups:
-            errors.append(f"group not valid: {value}")
-
-        return errors
+            validation.error(f"group not valid: {value}")

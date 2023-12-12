@@ -6,9 +6,9 @@ class AliasesAttribute(BaseAttribute):
     name = 'aliases'
     set_from_machine = True
 
-    def validate(self, value: List[str]) -> List[str]:
+    def validate(self, value: List[str], validation: ValidationResults) -> None:
         if not all(alias and isinstance(alias, str) for alias in value):
-            return [f'aliases must contain non-empty strings: {value}']
+            validation.error(f'aliases must contain non-empty strings: {value}')
 
     def format(self, value: List[str]) -> List[str]:
         return self._sort_list(value)

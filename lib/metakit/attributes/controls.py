@@ -25,10 +25,10 @@ class ControlsAttribute(BaseAttribute):
         'trackball',
     }
 
-    def validate(self, value: List[str]) -> List[str]:
+    def validate(self, value: List[str], validation: ValidationResults) -> None:
         for control in value:
             if control not in self.VALID_VALUES:
-                return [f'control not valid: {control}']
+                validation.error(f'control not valid: {control}')
 
     def format(self, value: List[str]) -> List[str]:
         return self._sort_list(value)

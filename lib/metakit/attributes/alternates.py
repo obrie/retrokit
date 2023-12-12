@@ -15,23 +15,19 @@ class AlternatesAttribute(BaseAttribute):
     # Validate:
     # * Non-empty keys and values
     # * Keys are valid rom names
-    def validate(self, value: Dict[str, str]) -> List[str]:
+    def validate(self, value: Dict[str, str], validation: ValidationResults) -> None:
         self._load_discovery()
-
-        errors = []
 
         for rom_name, alt_names in value.items():
             if rom_name not in self.romkit.names:
-                errors.append(f'alternate key not valid: {rom_name}')
+                validation.error(f'alternate key not valid: {rom_name}')
 
             if not alt_names:
-                errors.append(f'alternate names missing: {rom_name}')
+                validation.error(f'alternate names missing: {rom_name}')
             else:
                 for alt_name in alt_names:
                     if self._valid_discovered_names and alt_name not in self._valid_discovered_names:
-                        errors.append(f'alternate name not valid: {alt_name}')
-
-        return errors
+                        validation.error(f'alternate name not valid: {alt_name}')
 
     def format(self, value: Dict[str, str]) -> Dict[str, str]:
         sorted_dict = self._sort_dict(value)

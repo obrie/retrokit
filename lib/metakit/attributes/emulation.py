@@ -20,21 +20,17 @@ class EmulationAttribute(BaseAttribute):
                 if 'aliases' in emulator_config:
                     self.emulators.update(emulator_config['aliases'])
 
-    def validate(self, value: dict) -> List[str]:
-        errors = []
-
+    def validate(self, value: dict, validation: ValidationResults) -> None:
         # Emulator must be defined in the settings
         if 'emulator' in value and value['emulator'] not in self.emulators:
-            errors.append(f"emulator not valid: {value['emulator']}")
+            validation.error(f"emulator not valid: {value['emulator']}")
 
         if 'rating' in value and (value['rating'] < 0 or value['rating'] > 5):
-            errors.append(f"emulator rating must be between 0 and 5: {value['rating']}")
+            validation.error(f"emulator rating must be between 0 and 5: {value['rating']}")
 
         invalid_keys = value.keys() - self.KEYS
         if invalid_keys:
-            errors.append(f"emulator config not valid: {', '.join(invalid_keys)}")
-
-        return errors
+            validation.error(f"emulator config not valid: {', '.join(invalid_keys)}")
 
     def format(self, value: dict) -> List[str]:
         return self._sort_dict(value, self.KEYS)

@@ -20,52 +20,48 @@ class ManualsAttribute(BaseAttribute):
     ROTATE_VALUES = {0, 90, 180, 270}
     REWRITE_EXIF_VALUES = {True, False}
 
-    def validate(self, value: List[dict]) -> List[str]:
-        errors = []
-
+    def validate(self, value: List[dict], validation: ValidationResults) -> None:
         languages_seen = defaultdict(set)
 
         for manual in value:
             if 'name' in manual and manual['name'] not in self.romkit.names and manual['name'] not in self.romkit.titles:
-                errors.append(f"manual name not found: {manual['name']}")
+                validation.error(f"manual name not found: {manual['name']}")
 
             if 'languages' not in manual:
-                errors.append('manual languages missing')
+                validation.error('manual languages missing')
 
             for language in manual['languages']:
                 if language not in Language.CODES:
-                    errors.append(f"manual language not valid: {language}")
+                    validation.error(f"manual language not valid: {language}")
 
             name = manual.get('name', None)
             if frozenset(manual['languages']) in languages_seen[name]:
-                errors.append(f"manual conflict: {manual['languages']}")
+                validation.error(f"manual conflict: {manual['languages']}")
 
             languages_seen[name].add(frozenset(manual['languages']))
 
             if 'url' not in manual:
-                errors.append('manual url missing')
+                validation.error('manual url missing')
 
             if 'options' in manual:
                 options = manual['options']
 
                 if 'format' in options and options['format'] not in self.FORMAT_VALUES:
-                    errors.append(f"manual format not valid: {options['format']}")
+                    validation.error(f"manual format not valid: {options['format']}")
 
                 if 'rotate' in options and options['rotate'] not in self.ROTATE_VALUES:
-                    errors.append(f"manual rotate not valid: {options['rotate']}")
+                    validation.error(f"manual rotate not valid: {options['rotate']}")
 
                 if 'rewrite_exif' in options and options['rewrite_exif'] not in self.REWRITE_EXIF_VALUES:
-                    errors.append(f"manual rewrite_exif not valid: {options['rewrite_exif']}")
+                    validation.error(f"manual rewrite_exif not valid: {options['rewrite_exif']}")
 
                 invalid_keys = options.keys() - self.OPTIONS_KEYS
                 if invalid_keys:
-                    errors.append(f"manual options not valid: {invalid_keys}")
+                    validation.error(f"manual options not valid: {invalid_keys}")
 
             invalid_keys = manual.keys() - self.KEYS
             if invalid_keys:
-                errors.append(f"manual config not valid: {invalid_keys}")
-
-        return errors
+                validation.error(f"manual config not valid: {invalid_keys}")
 
     def format(self, value: dict) -> List[str]:
         manuals = []

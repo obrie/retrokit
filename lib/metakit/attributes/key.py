@@ -26,9 +26,9 @@ class KeyAttribute(BaseAttribute):
     def get(self, key, entry):
         return key
 
-    def validate(self, value: str) -> List[str]:
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if value not in self.romkit.keys:
-            return [f"key not a valid name / disc title / title: {value}"]
+            validation.error(f"key not a valid name / disc title / title: {value}")
 
     # Migrates any references to the group outside the context of the metadata
     # database (such as config files)

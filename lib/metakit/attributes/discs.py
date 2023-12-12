@@ -19,6 +19,6 @@ class DiscsAttribute(BaseAttribute):
         if count > 1:
             return count
 
-    def validate(self, value: int) -> List[str]:
+    def validate(self, value: int, validation: ValidationResults) -> None:
         if not isinstance(value, int) or value < 0:
-            return [f'discs must be positive integer: {value}']
+            validation.error(f'discs must be positive integer: {value}')

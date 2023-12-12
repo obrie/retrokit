@@ -10,9 +10,9 @@ class IdAttribute(BaseAttribute):
     def required(self) -> bool:
         return self.config['roms']['id'] == 'crc'
 
-    def validate(self, value: str) -> List[str]:
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if not value or not isinstance(value, str):
-            return [f'id not valid: {value}']
+            validation.error(f'id not valid: {value}')
 
     def get_from_machine(self, machine: Machine, grouped_machines: List[Machine]) -> Optional[str]:
         if self.required:

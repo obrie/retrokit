@@ -5,6 +5,6 @@ from metakit.attributes.base import BaseAttribute
 class PublisherAttribute(BaseAttribute):
     name = 'publisher'
 
-    def validate(self, value: str) -> List[str]:
+    def validate(self, value: str, validation: ValidationResults) -> None:
         if not value or not isinstance(value, str):
-            return [f'publisher not valid: {value}']
+            validation.error(f'publisher not valid: {value}')

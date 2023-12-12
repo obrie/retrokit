@@ -6,14 +6,10 @@ from metakit.models.language import Language
 class LanguagesAttribute(BaseAttribute):
     name = 'languages'
 
-    def validate(self, value: List[str]) -> List[str]:
-        errors = []
-
+    def validate(self, value: List[str], validation: ValidationResults) -> None:
         for code in value:
             if code not in Language.CODES:
-                errors.append(f'language not valid: {code}')
-
-        return errors
+                validation.error(f'language not valid: {code}')
 
     def format(self, value: List[str]) -> List[str]:
         return self._sort_list(value)

@@ -39,7 +39,7 @@ class BaseSystem:
         self.romkit.load(force=True)
 
     # Run several validation checks on the content of the database
-    def validate(self) -> Dict[str, List[str]]:
+    def validate(self) -> ValidationResults:
         return self.database.validate(target_groups=self.target_groups)
 
     # Run several validation checks on the content of the database

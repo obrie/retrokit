@@ -8,14 +8,10 @@ from metakit.attributes.base import BaseAttribute
 class MergeAttribute(BaseAttribute):
     name = 'merge'
 
-    def validate(self, value: List[str]) -> List[str]:
-        errors = []
-
+    def validate(self, value: List[str], validation: ValidationResults) -> None:
         for merge_key in value:
             if not self._is_valid_merge_key(merge_key):
-                errors.append(f"merge key not found: {merge_key}")
-
-        return errors
+                validation.error(f"merge key not found: {merge_key}")
 
     def format(self, value: List[str]) -> List[str]:
         return self._sort_list(value)
