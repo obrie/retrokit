@@ -38,7 +38,10 @@
         "dat": {
           "source": "file://$RETROKIT_HOME/cache/exodos/MS-DOS.xml",
           "target": "$RETROKIT_HOME/tmp/pc/roms.dat",
-          "install": {"action": "exodos_to_dat"}
+          "install": {
+            "action": "launchbox_to_dat",
+            "match": "eXo\\\\eXoDOS\\\\!dos\\\\(?P<sourcefile>[^\\\\]+)\\\\(?P<name>[^\\\\]+)\\.bat"
+          }
         },
         "config": {
           "source": "file://$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf",

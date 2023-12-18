@@ -3,23 +3,32 @@ from __future__ import annotations
 from romkit.resources.actions.file_to_dat import FileToDat
 
 import lxml.etree
+import re
 from pathlib import PureWindowsPath
 
-class ExodosToDat(FileToDat):
-    name = 'exodos_to_dat'
+class LaunchBoxToDat(FileToDat):
+    name = 'launchbox_to_dat'
 
-    # Converts an exodos MS-DOS.xml file to a dat file readable by romkit
+    DEFAULT_PATH_PATTERN = re.compile('(?P<name>[^\\/]+)\.[^\\/]*$')
+
+    # Converts an LaunchBox XML file to a dat file readable by romkit
     def install(self, source: ResourcePath, target: ResourcePath, **kwargs) -> None:
         doc = lxml.etree.iterparse(str(source.path), tag=('Game'))
 
+        if self.config.get('match'):
+            path_pattern = re.compile(self.config.get('match'))
+        else:
+            path_pattern = DEFAULT_PATH_PATTERN
+
         with self.create_dat(target) as file:
             for event, game in doc:
-                # Get actual name as it'll be downloaded from the source
-                application_path = game.find('ApplicationPath').text
-                if application_path and application_path.startswith('eXo\\'):
-                    path = PureWindowsPath(application_path)
-                    name = path.stem
-                    sourcefile = path.parent.stem
+                # Get actual name
+                application_path = game.find('ApplicationPath').text or ''
+                match = path_pattern.search(application_path)
+
+                if match:
+                    name = match['name']
+                    sourcefile = match.groupdict().get('sourcefile', None)
 
                     # Build element in target file
                     element = lxml.etree.Element('game', name=name, sourcefile=sourcefile)
