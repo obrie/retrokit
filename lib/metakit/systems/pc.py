@@ -1,11 +1,12 @@
 from __future__ import annotations
 
-import lxml.etree
+import re
 from collections import defaultdict
-from pathlib import PureWindowsPath
 
 from romkit.models.machine import Machine
+from romkit.util.dict_utils import slice_only
 from metakit.systems.base import BaseSystem
+from metakit.frontends.launchbox import LaunchboxDatabase
 
 class PCSystem(BaseSystem):
     name = 'pc'
@@ -52,79 +53,20 @@ class PCSystem(BaseSystem):
     # Update metadata from the exodos database
     def update_metadata(self) -> None:
         romset = self.romkit.romsets[0]
-        doc = lxml.etree.iterparse(str(romset.dat.download_path.path), tag=('Game'))
 
-        # Map game names to their exodos metadata
-        exo_games = {}
-        for event, exo_game in doc:
-            application_path = exo_game.find('ApplicationPath').text
-            if application_path and application_path.startswith('eXo\\'):
-                name = PureWindowsPath(application_path).stem
-                exo_games[name] = exo_game
+        # Load the launchbox database
+        launchbox_db = LaunchboxDatabase(
+            path=romset.dat.download_path.path,
+            name_pattern=re.compile('(?P<name>[^\\\\]+)\\.bat'),
+        )
+        launchbox_db.load()
 
-        for name in sorted(list(exo_games.keys())):
-            metadata = self.database.get(name, Machine.title_from(name))
+        for game in launchbox_db.games:
+            metadata = self.database.get(game['name'], Machine.title_from(game['name']))
             if metadata is None:
                 continue
 
-            exo_game = exo_games[name]
-
-            # Genres
-            genre_tag = exo_game.find('Genre')
-            if genre_tag is not None:
-                genres = [genre.strip() for genre in genre_tag.text.split(';')]
-                if genres:
-                    metadata['genres'] = genres
-
-            # Rating
-            rating_tag = exo_game.find('CommunityStarRating')
-            if rating_tag is not None and rating_tag.text is not None:
-                rating = round(float(rating_tag.text), 1)
-                if rating:
-                    metadata['rating'] = rating
-
-            # Players
-            play_mode_tag = exo_game.find('PlayMode')
-            if play_mode_tag is not None and play_mode_tag.text is not None:
-                play_mode = play_mode_tag.text
-                if 'Multiplayer' in play_mode or 'Cooperative' in play_mode:
-                    metadata['players'] = 2
-                else:
-                    metadata['players'] = 1
-
-            # Release Year
-            release_date = exo_game.find('ReleaseDate')
-            if release_date is not None and release_date.text is not None:
-                year = int(release_date.text[0:4])
-                if 'year' not in metadata or year <= metadata['year']:
-                    metadata['year'] = year
-
-            # Developer
-            developer_tag = exo_game.find('Developer')
-            if developer_tag is not None and developer_tag.text is not None and developer_tag.text != 'Unknown':
-                metadata['developer'] = developer_tag.text
-
-            # Publisher
-            publisher_tag = exo_game.find('Publisher')
-            if publisher_tag is not None and publisher_tag.text is not None and publisher_tag.text != 'Unknown':
-                metadata['publisher'] = publisher_tag.text
-
-            tags = set()
-
-            # Series
-            series_tag = exo_game.find('Series')
-            if series_tag is not None and series_tag.text is not None:
-                all_series = [series.strip() for series in series_tag.text.split(';')]
-                series = [series for series in all_series if 'Playlist' not in series]
-                if series:
-                    metadata['series'] = series
-
-                playlists = [series.replace('Playlist: ', '') for series in all_series if 'Playlist' in series]
-                if playlists:
-                    tags.update(playlists)
-
-            # Tags
-            if tags:
-                metadata['tags'] = list(tags)
-            else:
-                metadata['tags'] = []
+            # Merge in metadata
+            # * Since we own the series / tag values, they get reset if not detected from the launchbox database
+            metadata.update({'series': [], 'tags': []})
+            metadata.update(slice_only(game, {'genres', 'rating', 'players', 'year', 'developer', 'publisher', 'series', 'tags'}))
