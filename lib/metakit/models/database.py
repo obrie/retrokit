@@ -125,6 +125,14 @@ class Database:
                 metadata = self.dataset[group]
                 attribute.set(metadata, machine, self.romkit.find_machines_by_group(group))
 
+            if attribute.name == 'id':
+                for key, metadata in self.dataset.items():
+                    if 'group' not in metadata:
+                        continue
+
+                    group = metadata['group']
+                    attribute.set(metadata, machine, self.romkit.find_machines_by_group(group))
+
     # Cleans up attribute values in the database based on the current DAT.
     # 
     # This is typically run after a merge.
