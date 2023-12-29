@@ -97,8 +97,21 @@ Additional benefits:
 
 ### The Monster
 
-I don't know what this configuration looks like yet, but it involves the use of Intel NUC
-in order to support Playstation 2 / Wii.
+This represents a more powerful system that supports Playstation 2 / Wii gamging.
+
+
+| Component         | Description                         | Cost  | URL |
+| - | - | - | - |
+| Computer          | Beelink SER5 Mini PC                | $319   | https://www.amazon.com/dp/B0CF1Y4Z8T |
+| Hard Drive        | Western Digital 1TB M.2 SSD         | $90   | https://www.westerndigital.com/products/internal-drives/wd-blue-sata-m-2-ssd#WDS100T2B0B |
+| TV Cable          | HDMI Cable                          | $7    | https://www.amazon.com/dp/B01GCGKI3O |
+| Keyboard + Mouse  | Arteck 2.4ghz Keyboard + Mouse      | $30   | https://www.amazon.com/dp/B07MCTZ3LZ |
+
+Total cost: $436 ($726 with controllers)
+
+References:
+
+* [Mini PCs](https://docs.google.com/spreadsheets/d/1nfmESc0IbpT6OCws7irEId41aR1T2m2xj9Fp4jKOq0U/edit)
 
 ### The Traveler
 
