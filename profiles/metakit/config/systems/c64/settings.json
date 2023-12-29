@@ -55,6 +55,11 @@
         "match": "(?P<path>[^\"]+\\.txt).*<td>(?P<name>[^<]+)"
       },
       {
+        "name": "c64games",
+        "source": "https://c64games.de/phpseiten/spiele.php?aufruf=true&Suche=&ANL=True&Bewert=0&Hersteller=&Katego=0&medium=0&anfangb=",
+        "match": "(?P<path>spieledetail\\.php\\?filnummer=[0-9]+).*<b>(?P<name>[^<]+)"
+      },
+      {
         "name": "c64dreams",
         "source": "https://archive.org/download/c64-dreams-v0.60/C64 Dreams v0.60.7z/",
         "compare_to": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/",
