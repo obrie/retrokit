@@ -100,3 +100,14 @@ class C64System(BaseSystem):
                 custom = metadata.get('custom', {})
                 custom[C64Dreams.CUSTOM_NAME] = game['name']
                 metadata['custom'] = custom
+
+            # Add playlists as tags
+            for playlist in game['playlists']:
+                playlist = playlist.replace('C64 Dreams ', 'C64 Dreams: ')
+
+                # Add original playlist name as-is
+                metadata['tags'].append(playlist)
+
+                # Add aggregate playlist name (e.g. exclude Volume info)
+                if ' - ' in playlist:
+                    metadata['tags'].append(playlist.split(' - ')[0])

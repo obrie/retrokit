@@ -42,6 +42,7 @@ class C64Dreams:
         self.launchbox_database = LaunchboxDatabase(
             path=self.GAMES_DB_PATH,
             name_pattern=self.GAME_NAME_REGEX,
+            playlists_dir=self.PLAYLISTS_PATH,
         )
 
         # Cached properties
@@ -60,8 +61,6 @@ class C64Dreams:
     # Generates an easily-browsable version of the C64 Dreams database
     def load(self) -> None:
         self.launchbox_database.load()
-
-        # TODO: Load Playlists
 
     # Gets the list of games (and associated metadata) in the C64 Dreams database
     @property
