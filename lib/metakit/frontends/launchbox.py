@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import lxml.etree
 import re
+from pathlib import Path
 
 class LaunchboxDatabase:
     DEFAULT_NAME_PATTERN = re.compile('(?P<name>[^\\/]+)\.[^\\/]*$')
@@ -9,9 +10,11 @@ class LaunchboxDatabase:
     def __init__(self,
         path: Path,
         name_pattern: re.Pattern = DEFAULT_NAME_PATTERN,
+        playlists_dir: Path = None,
     ) -> None:
         self.path = path
         self.name_pattern = name_pattern
+        self.playlists_dir = playlists_dir
         self.games_by_id = {}
         self._loaded = False
 
@@ -31,7 +34,7 @@ class LaunchboxDatabase:
 
         doc = lxml.etree.iterparse(str(self.path), tag=('Game', 'AlternateName'))
 
-        # Map game names to their exodos metadata
+        # Map game names to their metadata
         for event, element in doc:
             if element.tag == 'Game':
                 self._load_game(element)
@@ -39,6 +42,11 @@ class LaunchboxDatabase:
                 self._load_alternate_name(element)
 
             element.clear()
+
+        # Load playlists
+        if self.playlists_dir:
+            for playlist_path in self.playlists_dir.glob('*.xml'):
+                self._load_playlist(playlist_path)
 
         self._loaded = True
 
@@ -53,6 +61,7 @@ class LaunchboxDatabase:
             'id': element.find('ID').text,
             'name': match['name'],
             'alternate_names': set(),
+            'playlists': set(),
         }
         self.games_by_id[game['id']] = game
 
@@ -127,3 +136,22 @@ class LaunchboxDatabase:
         alternate_name = element.find('Name').text
         if alternate_name != game['name'] and alternate_name != game.get('title'):
             game['alternate_names'].add(alternate_name)
+
+    # Loads the playlist at the given path
+    def _load_playlist(self, path: Path) -> None:
+        playlist_name = None
+        game_ids = set()
+
+        # Identify name of the playlist and list of associated games
+        doc = lxml.etree.iterparse(str(path), tag=('Playlist', 'PlaylistGame'))
+        for event, element in doc:
+            if element.tag == 'Playlist':
+                playlist_name = element.find('Name').text
+            else:
+                game_ids.add(element.find('GameId').text)
+
+            element.clear()
+
+        # Update game metadata
+        for game_id in game_ids:
+            self.find(game_id)['playlists'].add(playlist_name)
