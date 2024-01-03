@@ -11,10 +11,15 @@ import re
 class FTPDiscovery(BaseDiscovery):
     name = 'ftp'
 
-    def __init__(self, *args, max_depth: int = -1, **kwargs):
+    def __init__(self, *args,
+        max_depth: int = -1,
+        timeout: int = 300,
+        **kwargs,
+    ):
         super().__init__(*args, **kwargs)
 
         self.max_depth = max_depth
+        self.timeout = timeout
 
     # Build additional arguments for constructing this class
     @classmethod
@@ -36,7 +41,12 @@ class FTPDiscovery(BaseDiscovery):
         parsed_url = urlparse(url)
 
         # List remote paths
-        with ftplib.FTP(host=parsed_url.hostname, user=parsed_url.username, passwd=parsed_url.password) as ftp:
+        with ftplib.FTP(
+            host=parsed_url.hostname,
+            user=parsed_url.username,
+            passwd=parsed_url.password,
+            timeout=self.timeout,
+        ) as ftp:
             paths = self._remote_list_paths_in_dir(ftp, Path(parsed_url.path or '/'))
 
         # Write to the download path
