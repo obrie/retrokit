@@ -215,7 +215,7 @@ configure() {
     if [ -f "$core_options_path" ]; then
       __configure_retroarch_core_options "$group" "$core_options_path"
     fi
-  done < <(romkit_cache_list | jq -r 'select(.tags | index("C64 Dreams")) | [.group .name, .custom."c64dreams-name" // .group .name] | @tsv' | uniq)
+  done < <(cat "$data_dir/c64.json" | jq -r 'to_entries[] | select((.value.tags | index("C64 Dreams")) or .value.custom."c64dreams-name") | [.key, .value.custom."c64dreams-name" // .key] | @tsv')
 }
 
 # Loads defaults from retrokit's overrides (higher priority over what's
