@@ -50,8 +50,8 @@ class Machine:
         # External metadata
         group_name: Optional[str] = None,
         year: Optional[int] = None,
-        developer: Optional[str] = None,
-        publisher: Optional[str] = None,
+        developers: Set[str] = None,
+        publishers: Set[str] = None,
         age_rating: Optional[str] = None,
         genres: Set[str] = None,
         collections: Set[str] = None,
@@ -104,8 +104,8 @@ class Machine:
 
         # External attributes
         self.year = year
-        self.developer = developer
-        self.publisher = publisher
+        self.developers = developers or set()
+        self.publishers = publishers or set()
         self.age_rating = age_rating
         self.genres = genres or set()
         self.collections = collections or set()
@@ -118,7 +118,7 @@ class Machine:
         self.emulator_rating = emulator_rating
         self.manual = manual
         self.media = media or {}
-        self.series = series
+        self.series = series or set()
         self.group_name = group_name or self.parent_title or self.title
 
         # Automatic defaults
@@ -206,7 +206,7 @@ class Machine:
             device_names=device_names,
             sourcefile=sourcefile,
             year=year,
-            developer=manufacturer,
+            developers=manufacturer and {manufacturer},
         )
 
         # Disks
@@ -566,8 +566,8 @@ class Machine:
 
             # External metadata
             'year': self.year,
-            'developer': self.developer,
-            'publisher': self.publisher,
+            'developers': self.developers,
+            'publishers': self.publishers,
             'age_rating': self.age_rating,
             'genres': self.genres,
             'collections': self.collections,

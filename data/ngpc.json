@@ -21,8 +21,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 2000,
-    "developer": "S-Neo",
-    "publisher": "SNK",
+    "developers": [
+      "S-Neo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Wrestling"
@@ -53,8 +57,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -73,8 +81,12 @@
     "players": 1,
     "rating": 0.45,
     "year": 2000,
-    "developer": "UEP Systems",
-    "publisher": "SNK",
+    "developers": [
+      "UEP Systems"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Skiing"
@@ -94,8 +106,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 2000,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Music and Dance",
       "Rhythm"
@@ -106,8 +122,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1999,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -127,8 +147,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1999,
-    "developer": "Noise Factory",
-    "publisher": "SNK",
+    "developers": [
+      "Noise Factory"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Role playing games"
@@ -154,8 +178,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 2000,
-    "developer": "Iosys",
-    "publisher": "SNK",
+    "developers": [
+      "Iosys"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -173,8 +201,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 2000,
-    "developer": "Quest",
-    "publisher": "Quest",
+    "developers": [
+      "Quest"
+    ],
+    "publishers": [
+      "Quest"
+    ],
     "genres": [
       "Role playing games",
       "Strategy"
@@ -193,7 +225,9 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "Taito",
+    "developers": [
+      "Taito"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -211,8 +245,12 @@
     "players": 2,
     "rating": 0.55,
     "year": 2000,
-    "developer": "Sacnoth",
-    "publisher": "SNK",
+    "developers": [
+      "Sacnoth"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -234,8 +272,12 @@
     "players": 2,
     "rating": 0.5,
     "year": 2000,
-    "developer": "Sacnoth",
-    "publisher": "SNK",
+    "developers": [
+      "Sacnoth"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -249,8 +291,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1999,
-    "developer": "ADK",
-    "publisher": "ADK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -261,8 +307,12 @@
     "players": 2,
     "rating": 0.45,
     "year": 2000,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -273,7 +323,9 @@
     "players": 2,
     "rating": 0.7,
     "year": 2000,
-    "publisher": "SEGA",
+    "publishers": [
+      "SEGA"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -294,8 +346,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 2000,
-    "developer": "Success",
-    "publisher": "SNK",
+    "developers": [
+      "Success"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -315,8 +371,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1999,
-    "developer": "Sacnoth",
-    "publisher": "SNK",
+    "developers": [
+      "Sacnoth"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -335,8 +395,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Fight"
     ],
@@ -355,8 +419,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 2000,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Simulation"
@@ -375,8 +443,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 2000,
-    "developer": "Kindle Imagine Develop",
-    "publisher": "Kindle Imagine Develop",
+    "developers": [
+      "Kindle Imagine Develop"
+    ],
+    "publishers": [
+      "Kindle Imagine Develop"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -386,8 +458,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 2000,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -397,8 +473,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -418,8 +498,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 2000,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Board game"
     ],
@@ -442,8 +526,12 @@
     "id": "07a31ecdd62260cb4bc5f6130fc0bc0c04b1812d",
     "rating": 0.5,
     "year": 2000,
-    "developer": "Visco",
-    "publisher": "Visco",
+    "developers": [
+      "Visco"
+    ],
+    "publishers": [
+      "Visco"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -454,8 +542,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 2000,
-    "developer": "Saurus",
-    "publisher": "SNK",
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -478,8 +570,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1999,
-    "developer": "SAS Sakata",
-    "publisher": "SNK",
+    "developers": [
+      "SAS Sakata"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -498,8 +594,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 2000,
-    "developer": "Kindle Imagine Develop",
-    "publisher": "Kindle Imagine Develop",
+    "developers": [
+      "Kindle Imagine Develop"
+    ],
+    "publishers": [
+      "Kindle Imagine Develop"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -517,8 +617,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1999,
-    "developer": "Ukiyotei",
-    "publisher": "SNK",
+    "developers": [
+      "Ukiyotei"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Shooter",
@@ -545,8 +649,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 2000,
-    "developer": "Ukiyotei",
-    "publisher": "SNK",
+    "developers": [
+      "Ukiyotei"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Shooter",
@@ -566,8 +674,12 @@
     "id": "6138a989e167344f75232f736d1d80701da4a322",
     "players": 1,
     "year": 2000,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Educational"
     ]
@@ -577,8 +689,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1999,
-    "developer": "Ukiyotei",
-    "publisher": "SNK",
+    "developers": [
+      "Ukiyotei"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -596,8 +712,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 2000,
-    "developer": "Dyna Corp.",
-    "publisher": "Dyna Corp",
+    "developers": [
+      "Dyna Corp."
+    ],
+    "publishers": [
+      "Dyna Corp"
+    ],
     "genres": [
       "Casino"
     ],
@@ -608,8 +728,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 2000,
-    "developer": "Dyna Corp.",
-    "publisher": "Dyna Corp.",
+    "developers": [
+      "Dyna Corp."
+    ],
+    "publishers": [
+      "Dyna Corp."
+    ],
     "genres": [
       "Casino",
       "Casino / Cards"
@@ -620,8 +744,12 @@
     "players": 2,
     "rating": 1.0,
     "year": 1999,
-    "developer": "Dyna Corp.",
-    "publisher": "SNK",
+    "developers": [
+      "Dyna Corp."
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Casino"
     ],
@@ -639,8 +767,12 @@
     "id": "dc29ae01a2a20963cab075d3ac35e5621b9f046e",
     "players": 1,
     "year": 1999,
-    "developer": "Dyna Corporation",
-    "publisher": "Dyna Corporation",
+    "developers": [
+      "Dyna Corporation"
+    ],
+    "publishers": [
+      "Dyna Corporation"
+    ],
     "genres": [
       "Casino",
       "Casino / Race",
@@ -654,8 +786,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1999,
-    "developer": "Dyna Corp.",
-    "publisher": "SNK",
+    "developers": [
+      "Dyna Corp."
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Casino"
     ],
@@ -673,8 +809,12 @@
     "id": "16e7d8a73b1a31be0a3e0700afc4d15fbc8c9ef0",
     "players": 2,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -693,8 +833,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Sports",
@@ -732,8 +876,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 2000,
-    "developer": "Dennou Eizou",
-    "publisher": "Dennou Eizou",
+    "developers": [
+      "Dennou Eizou"
+    ],
+    "publishers": [
+      "Dennou Eizou"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -746,8 +894,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1999,
-    "developer": "Namco",
-    "publisher": "SNK",
+    "developers": [
+      "Namco"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -767,8 +919,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 2000,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -778,8 +934,12 @@
     "id": "001579611275aa7ed2ae1fd8734e1c2153a10319",
     "players": 1,
     "year": 2001,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -790,8 +950,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 2000,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -802,8 +966,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1999,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -822,8 +990,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 2000,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -834,8 +1006,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 2001,
-    "developer": "Aruze Corp",
-    "publisher": "Aruze Corp",
+    "developers": [
+      "Aruze Corp"
+    ],
+    "publishers": [
+      "Aruze Corp"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -853,8 +1029,12 @@
     "id": "83a03b169988b1e87ba3dd6e85363e656ab1808d",
     "players": 1,
     "year": 1999,
-    "developer": "Vistec",
-    "publisher": "Sankyo",
+    "developers": [
+      "Vistec"
+    ],
+    "publishers": [
+      "Sankyo"
+    ],
     "genres": [
       "Casino"
     ]
@@ -863,16 +1043,24 @@
     "id": "ddb53bfd3f40b2d8d53b907ac3989f9fb2ab4e76",
     "players": 1,
     "year": 1999,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Picture Puzzle": {
     "id": "353b0c3118ace5645afb8fea96814044893296e0",
     "players": 1,
     "rating": 0.8,
     "year": 2000,
-    "developer": "Success",
-    "publisher": "SNK",
+    "developers": [
+      "Success"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -885,8 +1073,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1999,
-    "developer": "Kindle Imagine Develop",
-    "publisher": "Kindle Imagine Develop",
+    "developers": [
+      "Kindle Imagine Develop"
+    ],
+    "publishers": [
+      "Kindle Imagine Develop"
+    ],
     "genres": [
       "Simulation"
     ]
@@ -896,8 +1088,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 2000,
-    "developer": "Success",
-    "publisher": "SNK",
+    "developers": [
+      "Success"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -907,8 +1103,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1999,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -928,8 +1128,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1999,
-    "developer": "Compile",
-    "publisher": "SNK",
+    "developers": [
+      "Compile"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -948,8 +1152,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1999,
-    "developer": "Taito",
-    "publisher": "SNK",
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Strategy"
@@ -972,8 +1180,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1999,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -995,8 +1207,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 2000,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -1018,8 +1234,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 2000,
-    "developer": "Capcom",
-    "publisher": "Capcom",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Fight"
     ],
@@ -1037,8 +1257,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 2000,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -1064,8 +1288,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 2001,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -1075,8 +1303,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "Capcom",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Role playing games",
       "Strategy"
@@ -1091,8 +1323,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "Capcom",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Role playing games",
       "Strategy"
@@ -1118,8 +1354,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1999,
-    "developer": "Capcom",
-    "publisher": "Capcom",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -1139,8 +1379,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -1160,8 +1404,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -1171,8 +1419,12 @@
     "id": "6705a20fddb9a155919974d5b742852c966653ad",
     "players": 2,
     "year": 1999,
-    "developer": "ADK",
-    "publisher": "ADK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ],
     "genres": [
       "Asiatic board game",
       "Shougi"
@@ -1183,8 +1435,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Action",
       "Platform"
@@ -1210,8 +1466,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1999,
-    "developer": "Dyna Corporation",
-    "publisher": "Dyna",
+    "developers": [
+      "Dyna Corporation"
+    ],
+    "publishers": [
+      "Dyna"
+    ],
     "genres": [
       "Asiatic board game",
       "Hanafuda"
@@ -1222,8 +1482,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 2001,
-    "developer": "SETA Corporation",
-    "publisher": "SETA Corporation",
+    "developers": [
+      "SETA Corporation"
+    ],
+    "publishers": [
+      "SETA Corporation"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"

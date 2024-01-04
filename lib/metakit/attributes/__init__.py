@@ -6,7 +6,7 @@ from metakit.attributes.buttons import ButtonsAttribute
 from metakit.attributes.category import CategoryAttribute
 from metakit.attributes.controls import ControlsAttribute
 from metakit.attributes.custom import CustomAttribute
-from metakit.attributes.developer import DeveloperAttribute
+from metakit.attributes.developers import DevelopersAttribute
 from metakit.attributes.discs import DiscsAttribute
 from metakit.attributes.emulation import EmulationAttribute
 from metakit.attributes.genres import GenresAttribute
@@ -20,7 +20,7 @@ from metakit.attributes.media import MediaAttribute
 from metakit.attributes.merge import MergeAttribute
 from metakit.attributes.peripherals import PeripheralsAttribute
 from metakit.attributes.players import PlayersAttribute
-from metakit.attributes.publisher import PublisherAttribute
+from metakit.attributes.publishers import PublishersAttribute
 from metakit.attributes.rating import RatingAttribute
 from metakit.attributes.screen import ScreenAttribute
 from metakit.attributes.series import SeriesAttribute
@@ -35,8 +35,8 @@ __all_attributes__ = [
     DiscsAttribute,
     RatingAttribute,
     YearAttribute,
-    DeveloperAttribute,
-    PublisherAttribute,
+    DevelopersAttribute,
+    PublishersAttribute,
     CategoryAttribute,
     GenresAttribute,
     SeriesAttribute,

@@ -79,8 +79,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Something Good",
-    "publisher": "Taito",
+    "developers": [
+      "Something Good"
+    ],
+    "publishers": [
+      "Taito"
+    ],
     "genres": [
       "Asiatic board game"
     ]
@@ -90,8 +94,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "I*Motion",
-    "publisher": "Infogrames",
+    "developers": [
+      "I*Motion"
+    ],
+    "publishers": [
+      "Infogrames"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
@@ -114,8 +122,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Interplay",
-    "publisher": "Infogrames",
+    "developers": [
+      "Interplay"
+    ],
+    "publishers": [
+      "Infogrames"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
@@ -133,8 +145,12 @@
   "Anno Mitsumasa Pepperon-mura no Shiki": {
     "id": "c97dd6f8f263e88984617e0743818d861252f5c3",
     "year": 1995,
-    "developer": "Media Vision",
-    "publisher": "Marubeni",
+    "developers": [
+      "Media Vision"
+    ],
+    "publishers": [
+      "Marubeni"
+    ],
     "genres": [
       "Educational"
     ]
@@ -144,8 +160,12 @@
     "players": 1,
     "rating": 0.15,
     "year": 1995,
-    "developer": "Mizuki",
-    "publisher": "Mizuki",
+    "developers": [
+      "Mizuki"
+    ],
+    "publishers": [
+      "Mizuki"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -155,8 +175,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Sanai",
-    "publisher": "Panasonic",
+    "developers": [
+      "Sanai"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -167,8 +191,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1995,
-    "developer": "Core Design",
-    "publisher": "Goldstar",
+    "developers": [
+      "Core Design"
+    ],
+    "publishers": [
+      "Goldstar"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -192,8 +220,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1996,
-    "developer": "Right Stuff",
-    "publisher": "Panasonic",
+    "developers": [
+      "Right Stuff"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -203,8 +235,12 @@
     "players": 4,
     "rating": 0.6,
     "year": 1995,
-    "developer": "TOSE",
-    "publisher": "Yoshimoto Kogyo",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Yoshimoto Kogyo"
+    ],
     "genres": [
       "Quiz",
       "Quiz / Japanese"
@@ -215,8 +251,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "PF Magic",
-    "publisher": "Panasonic",
+    "developers": [
+      "PF Magic"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Fight"
     ],
@@ -234,8 +274,12 @@
     "id": "bf0d3e8ddb68dc56d14aef1dd724b12fbcc650b0",
     "players": 1,
     "rating": 0.4,
-    "developer": "Shin's Entertainment",
-    "publisher": "LG Electronics Inc.",
+    "developers": [
+      "Shin's Entertainment"
+    ],
+    "publishers": [
+      "LG Electronics Inc."
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -245,8 +289,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1993,
-    "developer": "Krisalis Software",
-    "publisher": "Interplay",
+    "developers": [
+      "Krisalis Software"
+    ],
+    "publishers": [
+      "Interplay"
+    ],
     "genres": [
       "Board game"
     ],
@@ -264,8 +312,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Japan DataWorks",
-    "publisher": "Panasonic",
+    "developers": [
+      "Japan DataWorks"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Pinball"
     ]
@@ -275,8 +327,12 @@
     "players": 1,
     "rating": 0.95,
     "year": 1996,
-    "developer": "Cyclone Studios",
-    "publisher": "3DO",
+    "developers": [
+      "Cyclone Studios"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Sports"
     ],
@@ -294,8 +350,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Human",
-    "publisher": "Human",
+    "developers": [
+      "Human"
+    ],
+    "publishers": [
+      "Human"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -305,8 +365,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1995,
-    "developer": "Studio 3DO",
-    "publisher": "3DO",
+    "developers": [
+      "Studio 3DO"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -325,8 +389,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -336,8 +404,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Bandai Visual",
-    "publisher": "Amuse Productions",
+    "developers": [
+      "Bandai Visual"
+    ],
+    "publishers": [
+      "Amuse Productions"
+    ],
     "genres": [
       "Simulation"
     ]
@@ -348,8 +420,12 @@
     "discs": 2,
     "rating": 0.6,
     "year": 1996,
-    "developer": "ReadySoft",
-    "publisher": "ReadySoft",
+    "developers": [
+      "ReadySoft"
+    ],
+    "publishers": [
+      "ReadySoft"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -368,8 +444,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Genki",
-    "publisher": "Panasonic",
+    "developers": [
+      "Genki"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "1st person",
       "Shooter",
@@ -382,8 +462,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Sensible Software",
-    "publisher": "Virgin Interactive Entertainment",
+    "developers": [
+      "Sensible Software"
+    ],
+    "publishers": [
+      "Virgin Interactive Entertainment"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -402,8 +486,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Cyclone Studios",
-    "publisher": "3DO",
+    "developers": [
+      "Cyclone Studios"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -421,8 +509,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Cyclone Studios",
-    "publisher": "3DO",
+    "developers": [
+      "Cyclone Studios"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Shoot'em Up"
     ]
@@ -432,8 +524,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "RMG Dentsu USA",
-    "publisher": "Panasonic",
+    "developers": [
+      "RMG Dentsu USA"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -451,8 +547,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Logicware",
-    "publisher": "Interplay",
+    "developers": [
+      "Logicware"
+    ],
+    "publishers": [
+      "Interplay"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -471,8 +571,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Future Pirates",
-    "publisher": "Future Pirates",
+    "developers": [
+      "Future Pirates"
+    ],
+    "publishers": [
+      "Future Pirates"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -482,8 +586,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Future Pirates",
-    "publisher": "Future Pirates",
+    "developers": [
+      "Future Pirates"
+    ],
+    "publishers": [
+      "Future Pirates"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -493,8 +601,12 @@
     "players": 5,
     "rating": 0.7,
     "year": 1994,
-    "developer": "3DO",
-    "publisher": "3DO",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Compilation"
     ],
@@ -512,8 +624,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Digital Pictures",
-    "publisher": "Digital Pictures",
+    "developers": [
+      "Digital Pictures"
+    ],
+    "publishers": [
+      "Digital Pictures"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -535,8 +651,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ],
@@ -547,8 +667,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Intellimedia Sports",
-    "publisher": "IntelliPlay",
+    "developers": [
+      "Intellimedia Sports"
+    ],
+    "publishers": [
+      "IntelliPlay"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -558,8 +682,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1993,
-    "developer": "Crystal Dynamics",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "Crystal Dynamics"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -583,8 +711,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "TOSE",
-    "publisher": "Bandai",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Bandai"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -595,8 +727,12 @@
     "discs": 2,
     "rating": 0.5,
     "year": 1996,
-    "developer": "Argonaut Software",
-    "publisher": "Virgin",
+    "developers": [
+      "Argonaut Software"
+    ],
+    "publishers": [
+      "Virgin"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -615,8 +751,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -649,8 +789,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1996,
-    "developer": "Pixel Technologies",
-    "publisher": "Panasonic",
+    "developers": [
+      "Pixel Technologies"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -662,8 +806,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Xatrix",
-    "publisher": "Interplay",
+    "developers": [
+      "Xatrix"
+    ],
+    "publishers": [
+      "Interplay"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -683,8 +831,12 @@
     "discs": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "WARP",
-    "publisher": "Panasonic",
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
@@ -707,8 +859,12 @@
     "discs": 3,
     "rating": 0.8,
     "year": 1995,
-    "developer": "WARP",
-    "publisher": "Panasonic",
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
@@ -720,8 +876,12 @@
     "discs": 4,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Mechadeus",
-    "publisher": "Panasonic",
+    "developers": [
+      "Mechadeus"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -742,8 +902,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Lion Entertainment",
-    "publisher": "Strategic Simulations",
+    "developers": [
+      "Lion Entertainment"
+    ],
+    "publishers": [
+      "Strategic Simulations"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -761,8 +925,12 @@
     "id": "0ed2ad6ee3badfdb7b729ccfa78d5f2feca5088c",
     "players": 2,
     "rating": 0.3,
-    "developer": "3DO",
-    "publisher": "3DO",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Sports"
     ]
@@ -772,8 +940,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Millennium Interactive",
-    "publisher": "Panasonic",
+    "developers": [
+      "Millennium Interactive"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -783,8 +955,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Virgin Interactive",
-    "publisher": "Virgin",
+    "developers": [
+      "Virgin Interactive"
+    ],
+    "publishers": [
+      "Virgin"
+    ],
     "genres": [
       "Action"
     ],
@@ -804,8 +980,12 @@
   "Dennou Hyouryuu - Multimedia Cruising": {
     "id": "6d1e29cda7134bc47c6e9c4c1831bebd5ef38652",
     "players": 1,
-    "developer": "Scritron & Art Inc.",
-    "publisher": "Hamlet"
+    "developers": [
+      "Scritron & Art Inc."
+    ],
+    "publishers": [
+      "Hamlet"
+    ]
   },
   "Digital Dreamware": {
     "id": "2cd63590484748d56f1c8cb09325fd437d33eb7c",
@@ -823,8 +1003,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Manley & Associates, Inc.",
-    "publisher": "MECC",
+    "developers": [
+      "Manley & Associates, Inc."
+    ],
+    "publishers": [
+      "MECC"
+    ],
     "genres": [
       "Educational"
     ],
@@ -840,16 +1024,24 @@
   "Diving Spot Guide - Marine Tour": {
     "id": "8752cb5e713490f233b01e714e8663b0985da624",
     "year": 1994,
-    "developer": "Office Create",
-    "publisher": "Office Create"
+    "developers": [
+      "Office Create"
+    ],
+    "publishers": [
+      "Office Create"
+    ]
   },
   "Doctor Hauzer": {
     "id": "f84a567c3b6d7e21907453d2113516441d1a2154",
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "River Hill Software",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "River Hill Software"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -859,8 +1051,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1996,
-    "developer": "Art Data Interactive",
-    "publisher": "id Software",
+    "developers": [
+      "Art Data Interactive"
+    ],
+    "publishers": [
+      "id Software"
+    ],
     "genres": [
       "Action",
       "Shooter",
@@ -882,8 +1078,12 @@
     "discs": 3,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Cryo",
-    "publisher": "Mindscape",
+    "developers": [
+      "Cryo"
+    ],
+    "publishers": [
+      "Mindscape"
+    ],
     "genres": [
       "Adventure",
       "Role playing games"
@@ -902,8 +1102,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Sara International",
-    "publisher": "Sara International",
+    "developers": [
+      "Sara International"
+    ],
+    "publishers": [
+      "Sara International"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -913,8 +1117,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "ReadySoft",
-    "publisher": "ReadySoft",
+    "developers": [
+      "ReadySoft"
+    ],
+    "publishers": [
+      "ReadySoft"
+    ],
     "genres": [
       "Action"
     ],
@@ -937,8 +1145,12 @@
     "players": 2,
     "rating": 0.5,
     "year": 1994,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -960,8 +1172,12 @@
     "id": "fcace0ff7be9e2d7685dcfa7925c8386e6d2f512",
     "players": 1,
     "year": 1994,
-    "developer": "IntelliPlay",
-    "publisher": "IntelliPlay",
+    "developers": [
+      "IntelliPlay"
+    ],
+    "publishers": [
+      "IntelliPlay"
+    ],
     "genres": [
       "Educational",
       "Sports",
@@ -982,7 +1198,9 @@
     "discs": 4,
     "rating": 0.75,
     "year": 1994,
-    "publisher": "Vise",
+    "publishers": [
+      "Vise"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -1004,8 +1222,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -1014,8 +1236,12 @@
     "id": "ebb5da65925ecb7ac10630b71178dbe1c3b32f75",
     "players": 1,
     "year": 1995,
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -1025,8 +1251,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -1036,8 +1266,12 @@
     "players": 1,
     "rating": 0.1,
     "year": 1995,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -1047,8 +1281,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1993,
-    "developer": "Panasonic",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Action",
       "Shooter",
@@ -1071,8 +1309,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Pony Canyon",
-    "publisher": "Pony Canyon",
+    "developers": [
+      "Pony Canyon"
+    ],
+    "publishers": [
+      "Pony Canyon"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -1083,8 +1325,12 @@
     "players": 6,
     "rating": 0.5,
     "year": 1995,
-    "developer": "EA Sports",
-    "publisher": "EA Sports",
+    "developers": [
+      "EA Sports"
+    ],
+    "publishers": [
+      "EA Sports"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1103,8 +1349,12 @@
     "players": 8,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Imagineer",
-    "publisher": "GameTek",
+    "developers": [
+      "Imagineer"
+    ],
+    "publishers": [
+      "GameTek"
+    ],
     "genres": [
       "Puzzle-Game",
       "Quiz",
@@ -1124,8 +1374,12 @@
     "players": 10,
     "rating": 0.6,
     "year": 1993,
-    "developer": "Humongous Entertainment",
-    "publisher": "Humongous Entertainment",
+    "developers": [
+      "Humongous Entertainment"
+    ],
+    "publishers": [
+      "Humongous Entertainment"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -1142,8 +1396,12 @@
     "id": "8778f4248eb1467faee262e52bc16ec32f2f21c0",
     "players": 1,
     "rating": 0.8,
-    "developer": "Humongous Entertainment",
-    "publisher": "Humongous Entertainment",
+    "developers": [
+      "Humongous Entertainment"
+    ],
+    "publishers": [
+      "Humongous Entertainment"
+    ],
     "genres": [
       "Various"
     ],
@@ -1164,8 +1422,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Nippon Data Works",
-    "publisher": "Panasonic",
+    "developers": [
+      "Nippon Data Works"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Pinball",
       "Simulation"
@@ -1174,8 +1436,12 @@
   "Firewall": {
     "id": "0c0739b1cbfaed319956755bcecbbef918697493",
     "players": 1,
-    "developer": "Visionary Media",
-    "publisher": "Visionary Media",
+    "developers": [
+      "Visionary Media"
+    ],
+    "publishers": [
+      "Visionary Media"
+    ],
     "genres": [
       "Action",
       "Action / Adventure"
@@ -1186,8 +1452,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "U.S. Gold",
-    "publisher": "Delphine Software International",
+    "developers": [
+      "U.S. Gold"
+    ],
+    "publishers": [
+      "Delphine Software International"
+    ],
     "genres": [
       "Adventure",
       "Platform"
@@ -1209,8 +1479,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "WARP",
-    "publisher": "WARP",
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "WARP"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -1220,8 +1494,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Lifelike Productions",
-    "publisher": "Domark",
+    "developers": [
+      "Lifelike Productions"
+    ],
+    "publishers": [
+      "Domark"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -1240,8 +1518,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Grey Matter",
-    "publisher": "EA Sports",
+    "developers": [
+      "Grey Matter"
+    ],
+    "publishers": [
+      "EA Sports"
+    ],
     "genres": [
       "Fight",
       "Sports",
@@ -1270,8 +1552,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Williams",
-    "publisher": "Panasonic",
+    "developers": [
+      "Williams"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Casual Game",
       "Various"
@@ -1282,8 +1568,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Williams",
-    "publisher": "Panasonic",
+    "developers": [
+      "Williams"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Casual Game",
       "Various"
@@ -1294,8 +1584,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Amuse",
-    "publisher": "Amuse",
+    "developers": [
+      "Amuse"
+    ],
+    "publishers": [
+      "Amuse"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -1305,8 +1599,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Sunsoft",
-    "publisher": "Sunsoft",
+    "developers": [
+      "Sunsoft"
+    ],
+    "publishers": [
+      "Sunsoft"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -1319,8 +1617,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Crystal Dynamics",
-    "publisher": "BMG Interactive",
+    "developers": [
+      "Crystal Dynamics"
+    ],
+    "publishers": [
+      "BMG Interactive"
+    ],
     "genres": [
       "Action",
       "Adventure",
@@ -1346,8 +1648,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Hummingbird Soft",
-    "publisher": "Matsushita Electric Industrial",
+    "developers": [
+      "Hummingbird Soft"
+    ],
+    "publishers": [
+      "Matsushita Electric Industrial"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -1357,8 +1663,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Carrozzeria",
-    "publisher": "Carrozzeria",
+    "developers": [
+      "Carrozzeria"
+    ],
+    "publishers": [
+      "Carrozzeria"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1369,8 +1679,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Tetragon",
-    "publisher": "Panasonic",
+    "developers": [
+      "Tetragon"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -1386,15 +1700,21 @@
   },
   "Grimm Meisaku Gekijou Vol. 1 - Bremen no Ongakutai": {
     "id": "4c60b714342e75546f71bb869184a54b9e85c664",
-    "publisher": "Ima Company"
+    "publishers": [
+      "Ima Company"
+    ]
   },
   "Grimm Meisaku Gekijou Vol. 2 - Hansel to Gretel": {
     "id": "8982f2ace9c05934c4d793022bcbd4c3346f4bb8",
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Ima Company",
-    "publisher": "Ima Company",
+    "developers": [
+      "Ima Company"
+    ],
+    "publishers": [
+      "Ima Company"
+    ],
     "genres": [
       "Various"
     ]
@@ -1404,8 +1724,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Ima Company",
-    "publisher": "Ima Company",
+    "developers": [
+      "Ima Company"
+    ],
+    "publishers": [
+      "Ima Company"
+    ],
     "genres": [
       "Various"
     ]
@@ -1418,8 +1742,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "Take 2 Interactive",
-    "publisher": "GameTek",
+    "developers": [
+      "Take 2 Interactive"
+    ],
+    "publishers": [
+      "GameTek"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -1437,8 +1765,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Mizuki",
-    "publisher": "Mizuki",
+    "developers": [
+      "Mizuki"
+    ],
+    "publishers": [
+      "Mizuki"
+    ],
     "genres": [
       "Various"
     ]
@@ -1448,16 +1780,24 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Elcom",
-    "publisher": "Elcom"
+    "developers": [
+      "Elcom"
+    ],
+    "publishers": [
+      "Elcom"
+    ]
   },
   "Hirata Shougo Interactive Ehon - Cinderella": {
     "id": "c4c4e2519335d4ef9f2bf81983b2140d1abecfb7",
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Elcom",
-    "publisher": "Elcom",
+    "developers": [
+      "Elcom"
+    ],
+    "publishers": [
+      "Elcom"
+    ],
     "genres": [
       "Action",
       "Various"
@@ -1480,8 +1820,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Toyota",
-    "publisher": "Panasonic",
+    "developers": [
+      "Toyota"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -1491,8 +1835,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1984,
-    "developer": "Toys For Bob",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "Toys For Bob"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -1510,8 +1858,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Magnet",
-    "publisher": "Panasonic",
+    "developers": [
+      "Magnet"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -1519,8 +1871,12 @@
   "Icebreaker II": {
     "id": "191a5354a9d28272f51885931d62eb8e66c2967b",
     "players": 1,
-    "developer": "Magnet Interactive Studios",
-    "publisher": "OlderGames",
+    "developers": [
+      "Magnet Interactive Studios"
+    ],
+    "publishers": [
+      "OlderGames"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -1528,8 +1884,12 @@
   "Ide Yousuke Meijin no Shin Jissen Mahjong": {
     "id": "b3d99a792b5b0bef7cc7c0d5fcc844e7a3190960",
     "players": 2,
-    "developer": "Capcom",
-    "publisher": "Capcom",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Asiatic board game"
     ]
@@ -1539,8 +1899,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Jaleco",
-    "publisher": "Jaleco",
+    "developers": [
+      "Jaleco"
+    ],
+    "publishers": [
+      "Jaleco"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -1550,8 +1914,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Infini",
-    "publisher": "Video System",
+    "developers": [
+      "Infini"
+    ],
+    "publishers": [
+      "Video System"
+    ],
     "genres": [
       "Asiatic board game",
       "Puzzle-Game"
@@ -1563,8 +1931,12 @@
   "Igo Time Trial - Tsumego I": {
     "id": "4498be601554adfa2c842d00009c26314e4e72e0",
     "players": 2,
-    "developer": "Ematic",
-    "publisher": "Ematic",
+    "developers": [
+      "Ematic"
+    ],
+    "publishers": [
+      "Ematic"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -1574,8 +1946,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Five Miles Out",
-    "publisher": "EA Games",
+    "developers": [
+      "Five Miles Out"
+    ],
+    "publishers": [
+      "EA Games"
+    ],
     "genres": [
       "Action"
     ],
@@ -1598,8 +1974,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -1609,8 +1989,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Dynamix",
-    "publisher": "Dynamix",
+    "developers": [
+      "Dynamix"
+    ],
+    "publishers": [
+      "Dynamix"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -1630,8 +2014,12 @@
     "id": "f6a178a0e3be5625743850d6aa1c3c05730ffdc2",
     "rating": 0.65,
     "year": 1994,
-    "developer": "Riverhillsoft",
-    "publisher": "Riverhillsoft"
+    "developers": [
+      "Riverhillsoft"
+    ],
+    "publishers": [
+      "Riverhillsoft"
+    ]
   },
   "Interplay 3DO Buffet, The": {
     "id": "61ff5de7548d0a14a722d598c6df0df09c20b73e",
@@ -1649,8 +2037,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Synergy",
-    "publisher": "Synergy",
+    "developers": [
+      "Synergy"
+    ],
+    "publishers": [
+      "Synergy"
+    ],
     "genres": [
       "Action"
     ],
@@ -1671,8 +2063,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Synergy",
-    "publisher": "Synergy",
+    "developers": [
+      "Synergy"
+    ],
+    "publishers": [
+      "Synergy"
+    ],
     "genres": [
       "Action"
     ],
@@ -1694,8 +2090,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Electronic Arts"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Asiatic board game"
     ]
@@ -1706,8 +2106,12 @@
     "discs": 2,
     "rating": 0.5,
     "year": 1995,
-    "developer": "Riverhillsoft",
-    "publisher": "Riverhillsoft",
+    "developers": [
+      "Riverhillsoft"
+    ],
+    "publishers": [
+      "Riverhillsoft"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
@@ -1718,8 +2122,12 @@
     "players": 6,
     "rating": 0.6,
     "year": 1994,
-    "developer": "EA Games",
-    "publisher": "EA Games",
+    "developers": [
+      "EA Games"
+    ],
+    "publishers": [
+      "EA Games"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball",
@@ -1730,8 +2138,12 @@
     "id": "3270a5e0899aef50cdd533e14fcbacf22931cf31",
     "players": 6,
     "year": 1995,
-    "developer": "Extended Play Productions",
-    "publisher": "Electronic Arts Victor",
+    "developers": [
+      "Extended Play Productions"
+    ],
+    "publishers": [
+      "Electronic Arts Victor"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1742,8 +2154,12 @@
     "players": 2,
     "rating": 0.4,
     "year": 1994,
-    "developer": "GTE Entertainment",
-    "publisher": "GTE Entertainment",
+    "developers": [
+      "GTE Entertainment"
+    ],
+    "publishers": [
+      "GTE Entertainment"
+    ],
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -1754,8 +2170,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1995,
-    "developer": "Electronic Arts Victor",
-    "publisher": "Electronic Arts Victor",
+    "developers": [
+      "Electronic Arts Victor"
+    ],
+    "publishers": [
+      "Electronic Arts Victor"
+    ],
     "genres": [
       "Casino"
     ]
@@ -1765,8 +2185,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "High Score Productions",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "High Score Productions"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Sports",
       "Sports / Football"
@@ -1789,8 +2213,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Arc Developments",
-    "publisher": "U.S. Gold",
+    "developers": [
+      "Arc Developments"
+    ],
+    "publishers": [
+      "U.S. Gold"
+    ],
     "genres": [
       "Action",
       "Platform"
@@ -1810,8 +2238,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1994,
-    "developer": "3DO",
-    "publisher": "Universal ",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "Universal "
+    ],
     "genres": [
       "Action",
       "Driving",
@@ -1831,8 +2263,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "ASCII Corporation",
-    "publisher": "ASCII Corporation",
+    "developers": [
+      "ASCII Corporation"
+    ],
+    "publishers": [
+      "ASCII Corporation"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -1842,7 +2278,9 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "publisher": "Copya System",
+    "publishers": [
+      "Copya System"
+    ],
     "genres": [
       "Horses race",
       "Sports with Animals"
@@ -1852,8 +2290,12 @@
     "id": "5652caa6772edac6fc19008bc61b5b586497ea4f",
     "players": 1,
     "year": 1995,
-    "developer": "Mizuki",
-    "publisher": "Mizuki",
+    "developers": [
+      "Mizuki"
+    ],
+    "publishers": [
+      "Mizuki"
+    ],
     "genres": [
       "Educational"
     ]
@@ -1863,8 +2305,12 @@
     "players": 1,
     "rating": 0.95,
     "year": 1995,
-    "developer": "Panasonic",
-    "publisher": "Panasonic",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Action",
       "Lightgun Shooter",
@@ -1892,8 +2338,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Interplay",
-    "publisher": "Interplay",
+    "developers": [
+      "Interplay"
+    ],
+    "publishers": [
+      "Interplay"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -1912,8 +2362,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Micro Cabin Corp.",
-    "publisher": "Tokuma Shoten",
+    "developers": [
+      "Micro Cabin Corp."
+    ],
+    "publishers": [
+      "Tokuma Shoten"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -1923,8 +2377,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Ariadne",
-    "publisher": "Ariadne",
+    "developers": [
+      "Ariadne"
+    ],
+    "publishers": [
+      "Ariadne"
+    ],
     "genres": [
       "Various"
     ]
@@ -1934,8 +2392,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1995,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -1957,8 +2419,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Psygnosis",
-    "publisher": "Psygnosis",
+    "developers": [
+      "Psygnosis"
+    ],
+    "publishers": [
+      "Psygnosis"
+    ],
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -1977,8 +2443,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "IntelliPlay",
-    "publisher": "IntelliPlay",
+    "developers": [
+      "IntelliPlay"
+    ],
+    "publishers": [
+      "IntelliPlay"
+    ],
     "genres": [
       "Sports"
     ],
@@ -2001,7 +2471,9 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "publisher": "IntelliPlay",
+    "publishers": [
+      "IntelliPlay"
+    ],
     "genres": [
       "Sports",
       "Sports / Volleyball"
@@ -2017,8 +2489,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1993,
-    "developer": "Microcabin",
-    "publisher": "Panasonic",
+    "developers": [
+      "Microcabin"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Educational"
     ],
@@ -2074,8 +2550,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Cryo Interactive",
-    "publisher": "Virgin",
+    "developers": [
+      "Cryo Interactive"
+    ],
+    "publishers": [
+      "Virgin"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2094,8 +2574,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Mythos Software",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Mythos Software"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2113,8 +2597,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1995,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -2124,8 +2612,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Panasonic",
-    "publisher": "Microcabin",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Microcabin"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -2147,8 +2639,12 @@
     "players": 2,
     "rating": 0.95,
     "year": 1994,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -2169,8 +2665,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1994,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -2203,8 +2703,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Micronet",
-    "publisher": "Micronet",
+    "developers": [
+      "Micronet"
+    ],
+    "publishers": [
+      "Micronet"
+    ],
     "genres": [
       "Casino"
     ]
@@ -2214,8 +2718,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Micronet",
-    "publisher": "Micronet",
+    "developers": [
+      "Micronet"
+    ],
+    "publishers": [
+      "Micronet"
+    ],
     "genres": [
       "Asiatic board game"
     ]
@@ -2225,8 +2733,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1995,
-    "developer": "Toshiba EMI",
-    "publisher": "Toshiba EMI",
+    "developers": [
+      "Toshiba EMI"
+    ],
+    "publishers": [
+      "Toshiba EMI"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -2247,8 +2759,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Action"
     ],
@@ -2266,8 +2782,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Cryo Interactive",
-    "publisher": "Cryo Interactive",
+    "developers": [
+      "Cryo Interactive"
+    ],
+    "publishers": [
+      "Cryo Interactive"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -2290,8 +2810,12 @@
     "id": "9aeb5f10bc2fcf3127e1d92c7e00d88552e765ae",
     "players": 2,
     "rating": 0.7,
-    "developer": "Psygnosis",
-    "publisher": "Psygnosis",
+    "developers": [
+      "Psygnosis"
+    ],
+    "publishers": [
+      "Psygnosis"
+    ],
     "genres": [
       "Action"
     ],
@@ -2314,8 +2838,12 @@
     "id": "259abf39e29bc1bd449833394d590f82b50ebdf1",
     "players": 1,
     "year": 1995,
-    "developer": "Future Pirates",
-    "publisher": "Future Pirates",
+    "developers": [
+      "Future Pirates"
+    ],
+    "publishers": [
+      "Future Pirates"
+    ],
     "genres": [
       "Action"
     ]
@@ -2324,8 +2852,12 @@
     "id": "364e7793e402ce46d3a167f176e6c63cab43c033",
     "players": 1,
     "year": 1995,
-    "developer": "TOSE",
-    "publisher": "Pack In Video",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Pack In Video"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -2335,7 +2867,9 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "publisher": "Bantan International",
+    "publishers": [
+      "Bantan International"
+    ],
     "genres": [
       "Action"
     ]
@@ -2345,8 +2879,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Panasonic",
-    "publisher": "Microcabin",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Microcabin"
+    ],
     "genres": [
       "Adventure",
       "Puzzle-Game"
@@ -2362,7 +2900,9 @@
   },
   "N.O.B.": {
     "id": "788a0b80b18af40ae6457755c6c2402d33d8d688",
-    "publisher": "Sanyo",
+    "publishers": [
+      "Sanyo"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -2370,8 +2910,12 @@
   "Naoko to Hide-bou - Kanji no Tensai 1 - Bushu-hen, Bushu no Namae ga Tanoshii Chou Kioku-hou": {
     "id": "3c6e28c5f724021b4ee5fcbef65ef151fd46774a",
     "year": 1995,
-    "developer": "Gakuman",
-    "publisher": "Gakuman"
+    "developers": [
+      "Gakuman"
+    ],
+    "publishers": [
+      "Gakuman"
+    ]
   },
   "Naoko to Hide-bou - Sansuu no Tensai 1 - Wa to Sa no Bunshoudai Tsurukamezan Part I": {
     "id": "f8049eef765db2f9a1793b11138fc970103f272b"
@@ -2387,8 +2931,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "Electric Dreams Software",
-    "publisher": "PIXIS Interactive",
+    "developers": [
+      "Electric Dreams Software"
+    ],
+    "publishers": [
+      "PIXIS Interactive"
+    ],
     "genres": [
       "Adult"
     ],
@@ -2406,7 +2954,9 @@
     "players": 1,
     "rating": 0.3,
     "year": 1995,
-    "publisher": "Fuji Television",
+    "publishers": [
+      "Fuji Television"
+    ],
     "genres": [
       "Various"
     ]
@@ -2417,8 +2967,12 @@
     "discs": 2,
     "rating": 0.6,
     "year": 1993,
-    "developer": "Digital Pictures",
-    "publisher": "Digital Pictures",
+    "developers": [
+      "Digital Pictures"
+    ],
+    "publishers": [
+      "Digital Pictures"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2430,16 +2984,24 @@
     "discs": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "TOSE",
-    "publisher": "Pack In Video"
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Pack In Video"
+    ]
   },
   "Nobunaga no Yabou - Haouden": {
     "id": "7eea61a19449deba277afcc8b3a95234bc1a1b6d",
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -2449,7 +3011,9 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "publisher": "Victor Interactive",
+    "publishers": [
+      "Victor Interactive"
+    ],
     "genres": [
       "Various"
     ]
@@ -2459,7 +3023,9 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "publisher": "Victor Interactive",
+    "publishers": [
+      "Victor Interactive"
+    ],
     "genres": [
       "Various"
     ]
@@ -2469,8 +3035,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Psygnosis",
-    "publisher": "Psygnosis",
+    "developers": [
+      "Psygnosis"
+    ],
+    "publishers": [
+      "Psygnosis"
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -2491,8 +3061,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "The Software Toolworks",
-    "publisher": "Multisoft",
+    "developers": [
+      "The Software Toolworks"
+    ],
+    "publishers": [
+      "Multisoft"
+    ],
     "genres": [
       "Adventure",
       "Educational"
@@ -2511,8 +3085,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Crystal Dynamics",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "Crystal Dynamics"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Action"
     ],
@@ -2534,8 +3112,12 @@
     "players": 8,
     "rating": 0.7,
     "year": 1996,
-    "developer": "U.S. Gold",
-    "publisher": "Silicon Dreams Studio",
+    "developers": [
+      "U.S. Gold"
+    ],
+    "publishers": [
+      "Silicon Dreams Studio"
+    ],
     "genres": [
       "Sports"
     ]
@@ -2545,8 +3127,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1996,
-    "developer": "Silicon Dreams Studio",
-    "publisher": "Panasonic",
+    "developers": [
+      "Silicon Dreams Studio"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -2570,8 +3156,12 @@
     "players": 8,
     "rating": 0.7,
     "year": 1996,
-    "developer": "U.S. Gold",
-    "publisher": "Silicon Dreams Studio",
+    "developers": [
+      "U.S. Gold"
+    ],
+    "publishers": [
+      "Silicon Dreams Studio"
+    ],
     "genres": [
       "Sports"
     ],
@@ -2589,8 +3179,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 2007,
-    "developer": "Motivetime Ltd.",
-    "publisher": "Telstar Electronic Studios Ltd.",
+    "developers": [
+      "Motivetime Ltd."
+    ],
+    "publishers": [
+      "Telstar Electronic Studios Ltd."
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -2609,8 +3203,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1996,
-    "developer": "Sara International",
-    "publisher": "Sara International",
+    "developers": [
+      "Sara International"
+    ],
+    "publishers": [
+      "Sara International"
+    ],
     "genres": [
       "Role playing games"
     ]
@@ -2620,8 +3218,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Interplay",
-    "publisher": "Interplay",
+    "developers": [
+      "Interplay"
+    ],
+    "publishers": [
+      "Interplay"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2642,8 +3244,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "WARP",
-    "publisher": "WARP",
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "WARP"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -2654,8 +3260,12 @@
     "players": 4,
     "rating": 0.8,
     "year": 1995,
-    "developer": "EA Sports",
-    "publisher": "EA Sports",
+    "developers": [
+      "EA Sports"
+    ],
+    "publishers": [
+      "EA Sports"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -2680,8 +3290,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Any Channel",
-    "publisher": "Accolade",
+    "developers": [
+      "Any Channel"
+    ],
+    "publishers": [
+      "Accolade"
+    ],
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -2700,8 +3314,12 @@
     "players": 4,
     "rating": 0.7,
     "year": 1994,
-    "developer": "PF Magic",
-    "publisher": "PF Magic",
+    "developers": [
+      "PF Magic"
+    ],
+    "publishers": [
+      "PF Magic"
+    ],
     "genres": [
       "Action"
     ],
@@ -2719,8 +3337,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1995,
-    "developer": "Scitron",
-    "publisher": "Fuji Television",
+    "developers": [
+      "Scitron"
+    ],
+    "publishers": [
+      "Fuji Television"
+    ],
     "genres": [
       "Simulation"
     ]
@@ -2746,7 +3368,9 @@
     "id": "0225c9058416c827a98affe25572617ff269ab74",
     "players": 1,
     "year": 1994,
-    "publisher": "Apollo, Inc.",
+    "publishers": [
+      "Apollo, Inc."
+    ],
     "genres": [
       "Adult"
     ]
@@ -2756,8 +3380,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1996,
-    "developer": "Game Guild",
-    "publisher": "Kirin Entertainment",
+    "developers": [
+      "Game Guild"
+    ],
+    "publishers": [
+      "Kirin Entertainment"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -2775,8 +3403,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1995,
-    "developer": "TBS",
-    "publisher": "TBS",
+    "developers": [
+      "TBS"
+    ],
+    "publishers": [
+      "TBS"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -2786,8 +3418,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Gray Matter",
-    "publisher": "Panasonic",
+    "developers": [
+      "Gray Matter"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -2807,8 +3443,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1994,
-    "developer": "United Pixtures",
-    "publisher": "United Pixtures ",
+    "developers": [
+      "United Pixtures"
+    ],
+    "publishers": [
+      "United Pixtures "
+    ],
     "genres": [
       "Simulation"
     ],
@@ -2827,8 +3467,12 @@
     "discs": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Konami",
-    "publisher": "Konami",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Konami"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -2838,8 +3482,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Konami",
-    "publisher": "Konami",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Konami"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -2849,8 +3497,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "Panasonic",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -2870,8 +3522,12 @@
     "id": "654db72f30200059e0b653ffc95f53ab0382293b",
     "players": 1,
     "rating": 0.55,
-    "developer": "Elite Systems",
-    "publisher": "Older Games",
+    "developers": [
+      "Elite Systems"
+    ],
+    "publishers": [
+      "Older Games"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -2882,8 +3538,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "TOSE",
-    "publisher": "Bandai Namco",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Bandai Namco"
+    ],
     "genres": [
       "Fight"
     ],
@@ -2901,8 +3561,12 @@
     "players": 2,
     "rating": 1.0,
     "year": 1995,
-    "developer": "Time Warner Interactive",
-    "publisher": "Atari",
+    "developers": [
+      "Time Warner Interactive"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -2922,7 +3586,9 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Gainax",
+    "developers": [
+      "Gainax"
+    ],
     "genres": [
       "Role playing games",
       "Simulation"
@@ -2933,8 +3599,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1995,
-    "developer": "Sanyo",
-    "publisher": "Sanyo",
+    "developers": [
+      "Sanyo"
+    ],
+    "publishers": [
+      "Sanyo"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2945,7 +3615,9 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "publisher": "Electronic Arts Victor",
+    "publishers": [
+      "Electronic Arts Victor"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2957,8 +3629,12 @@
     "discs": 3,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Colossal Pictures",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Colossal Pictures"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2980,8 +3656,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Humongous Entertainment",
-    "publisher": "Humongous Entertainment",
+    "developers": [
+      "Humongous Entertainment"
+    ],
+    "publishers": [
+      "Humongous Entertainment"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -2991,8 +3671,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1993,
-    "developer": "Humongous Entertainment",
-    "publisher": "Humongous Entertainment",
+    "developers": [
+      "Humongous Entertainment"
+    ],
+    "publishers": [
+      "Humongous Entertainment"
+    ],
     "genres": [
       "Adventure",
       "Educational"
@@ -3003,8 +3687,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Humongous Entertainment",
-    "publisher": "Humongous Entertainment",
+    "developers": [
+      "Humongous Entertainment"
+    ],
+    "publishers": [
+      "Humongous Entertainment"
+    ],
     "genres": [
       "Action"
     ],
@@ -3019,8 +3707,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Panasonic",
-    "publisher": "Taito",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Taito"
+    ],
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -3040,8 +3732,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "High Tech Laboratory",
-    "publisher": "Taito",
+    "developers": [
+      "High Tech Laboratory"
+    ],
+    "publishers": [
+      "Taito"
+    ],
     "genres": [
       "Action"
     ]
@@ -3051,8 +3747,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "Imagexcel",
-    "publisher": "GameTek",
+    "developers": [
+      "Imagexcel"
+    ],
+    "publishers": [
+      "GameTek"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -3076,8 +3776,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Digital Pictures",
-    "publisher": "Digital Pictures",
+    "developers": [
+      "Digital Pictures"
+    ],
+    "publishers": [
+      "Digital Pictures"
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -3096,8 +3800,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Nippon Data Works",
-    "publisher": "Panasonic",
+    "developers": [
+      "Nippon Data Works"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Pinball",
       "Simulation"
@@ -3116,8 +3824,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Silent Software",
-    "publisher": "Time Warner Interactive",
+    "developers": [
+      "Silent Software"
+    ],
+    "publishers": [
+      "Time Warner Interactive"
+    ],
     "genres": [
       "Action",
       "Strategy"
@@ -3136,8 +3848,12 @@
     "id": "cbca6857762d9b4b376b4bbdc8ef76cb38a2499c",
     "players": 2,
     "rating": 0.8,
-    "developer": "Silent Software",
-    "publisher": "Prolific Publishing",
+    "developers": [
+      "Silent Software"
+    ],
+    "publishers": [
+      "Prolific Publishing"
+    ],
     "genres": [
       "Simulation"
     ]
@@ -3147,8 +3863,12 @@
     "players": 2,
     "rating": 0.1,
     "year": 1995,
-    "developer": "Art Data Interactive",
-    "publisher": "Absolute Entertainment",
+    "developers": [
+      "Art Data Interactive"
+    ],
+    "publishers": [
+      "Absolute Entertainment"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -3159,8 +3879,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Electronic Arts"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -3183,8 +3907,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1994,
-    "developer": "Monkey Do Productions",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Monkey Do Productions"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "3rd Pers.",
       "Driving",
@@ -3205,8 +3933,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1996,
-    "developer": "ReadySoft",
-    "publisher": "Silmarils",
+    "developers": [
+      "ReadySoft"
+    ],
+    "publishers": [
+      "Silmarils"
+    ],
     "genres": [
       "Adventure",
       "Role playing games"
@@ -3217,8 +3949,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "Natsume",
-    "publisher": "Natsume",
+    "developers": [
+      "Natsume"
+    ],
+    "publishers": [
+      "Natsume"
+    ],
     "genres": [
       "Sports",
       "Sports / Wrestling"
@@ -3229,8 +3965,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Tribeca Interactive",
-    "publisher": "3DO",
+    "developers": [
+      "Tribeca Interactive"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Fight"
     ],
@@ -3251,8 +3991,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -3269,8 +4013,12 @@
   },
   "Sangokushi IV": {
     "id": "849b0b9ebc0f32d97fe719b2e5be78b9b6bf0c55",
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -3280,8 +4028,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Genki",
-    "publisher": "Panasonic",
+    "developers": [
+      "Genki"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Action"
     ],
@@ -3299,8 +4051,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "ASK Kodansha",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "ASK Kodansha"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -3321,14 +4077,20 @@
     "players": 1,
     "rating": 0.55,
     "year": 1994,
-    "developer": "Glams",
-    "publisher": "Glams"
+    "developers": [
+      "Glams"
+    ],
+    "publishers": [
+      "Glams"
+    ]
   },
   "Seimei Handan": {
     "id": "9fc9a3fa9690c988c2b1c2c6da75a3d9738aa7c1",
     "players": 1,
     "year": 1995,
-    "publisher": "Ariadne",
+    "publishers": [
+      "Ariadne"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -3338,8 +4100,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Ariadne",
-    "publisher": "Ariadne",
+    "developers": [
+      "Ariadne"
+    ],
+    "publishers": [
+      "Ariadne"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -3349,8 +4115,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Children's Television Workshop",
-    "publisher": "Philips Interactive Media",
+    "developers": [
+      "Children's Television Workshop"
+    ],
+    "publishers": [
+      "Philips Interactive Media"
+    ],
     "genres": [
       "Educational"
     ],
@@ -3368,8 +4138,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Sony Electronic Publishing",
-    "publisher": "Digital Pictures",
+    "developers": [
+      "Sony Electronic Publishing"
+    ],
+    "publishers": [
+      "Digital Pictures"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -3387,8 +4161,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -3398,8 +4176,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Board game"
     ],
@@ -3420,8 +4202,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1993,
-    "developer": "Sanctuary Woods",
-    "publisher": "Sanctuary Woods",
+    "developers": [
+      "Sanctuary Woods"
+    ],
+    "publishers": [
+      "Sanctuary Woods"
+    ],
     "genres": [
       "Educational"
     ]
@@ -3431,8 +4217,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Electronic Arts"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Action"
     ],
@@ -3458,8 +4248,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts"
+    "developers": [
+      "Electronic Arts"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ]
   },
   "Shockwave 2 - Beyond the Gate": {
     "id": "ef458706541c0f025afdd204359010e316af77fb",
@@ -3467,8 +4261,12 @@
     "discs": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Electronic Arts",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Electronic Arts"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Action"
     ],
@@ -3487,8 +4285,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1996,
-    "developer": "Wasp",
-    "publisher": "Wasp"
+    "developers": [
+      "Wasp"
+    ],
+    "publishers": [
+      "Wasp"
+    ]
   },
   "Sid Meier's C.P.U. Bach": {
     "id": "ef85cddd1c6702eae2edbabf309590e3697668d7"
@@ -3497,8 +4299,12 @@
     "id": "39882efe9c690e7b9c0818556be6be575307af36",
     "players": 2,
     "rating": 0.7,
-    "developer": "BMG Interactive",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "BMG Interactive"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -3517,8 +4323,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Lion Entertainment",
-    "publisher": "Strategic Simulations",
+    "developers": [
+      "Lion Entertainment"
+    ],
+    "publishers": [
+      "Strategic Simulations"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -3543,8 +4353,12 @@
     "discs": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "3DO",
-    "publisher": "3DO",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
@@ -3571,8 +4385,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Krisalis Software",
-    "publisher": "Krisalis Software",
+    "developers": [
+      "Krisalis Software"
+    ],
+    "publishers": [
+      "Krisalis Software"
+    ],
     "genres": [
       "Action",
       "Platform"
@@ -3595,8 +4413,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1994,
-    "developer": "SharRock",
-    "publisher": "SharRock",
+    "developers": [
+      "SharRock"
+    ],
+    "publishers": [
+      "SharRock"
+    ],
     "genres": [
       "Adventure",
       "Various"
@@ -3606,8 +4428,12 @@
     "id": "8ddc5f995de46ff7017c5dc88e0d415f9e72f028",
     "players": 1,
     "year": 1995,
-    "developer": "SharRock",
-    "publisher": "SharRock",
+    "developers": [
+      "SharRock"
+    ],
+    "publishers": [
+      "SharRock"
+    ],
     "genres": [
       "Various"
     ]
@@ -3616,8 +4442,12 @@
     "id": "84fc07c85797ccc47eb160c6359f04b99b38800e",
     "players": 1,
     "rating": 0.8,
-    "developer": "ReadySoft",
-    "publisher": "ReadySoft",
+    "developers": [
+      "ReadySoft"
+    ],
+    "publishers": [
+      "ReadySoft"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -3635,8 +4465,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Key Game",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Key Game"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Action",
       "Strategy"
@@ -3659,8 +4493,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -3682,8 +4520,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Amazing Media",
-    "publisher": "The Software Toolworks",
+    "developers": [
+      "Amazing Media"
+    ],
+    "publishers": [
+      "The Software Toolworks"
+    ],
     "genres": [
       "Action"
     ],
@@ -3700,8 +4542,12 @@
     "id": "d87db6de4c4c5e2b9de4d49e73e15384563783cb",
     "players": 2,
     "rating": 0.7,
-    "developer": "Accolade",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "Accolade"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -3722,8 +4568,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1996,
-    "developer": "The World Federation Entertainments Network",
-    "publisher": "3DO",
+    "developers": [
+      "The World Federation Entertainments Network"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Action"
     ],
@@ -3741,8 +4591,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "LucasArts",
-    "publisher": "LucasArts",
+    "developers": [
+      "LucasArts"
+    ],
+    "publishers": [
+      "LucasArts"
+    ],
     "genres": [
       "Action"
     ],
@@ -3759,8 +4613,12 @@
     "id": "ec7ffa82877f4c2a29b24d47a7668afda0dc923b",
     "players": 1,
     "rating": 0.95,
-    "developer": "Panasonic",
-    "publisher": "Namco",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Namco"
+    ],
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -3784,8 +4642,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1993,
-    "developer": "Dynamix",
-    "publisher": "Dynamix",
+    "developers": [
+      "Dynamix"
+    ],
+    "publishers": [
+      "Dynamix"
+    ],
     "genres": [
       "Action"
     ],
@@ -3822,8 +4684,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Media Entertainment",
-    "publisher": "Panasonic",
+    "developers": [
+      "Media Entertainment"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Action"
     ],
@@ -3841,8 +4707,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "Rage Software",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Rage Software"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -3857,8 +4727,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1995,
-    "developer": "SETA Corporation",
-    "publisher": "SETA Corporation",
+    "developers": [
+      "SETA Corporation"
+    ],
+    "publishers": [
+      "SETA Corporation"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -3869,8 +4743,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "SETA Corporation",
-    "publisher": "SETA Corporation",
+    "developers": [
+      "SETA Corporation"
+    ],
+    "publishers": [
+      "SETA Corporation"
+    ],
     "genres": [
       "Playing cards"
     ]
@@ -3880,8 +4758,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1994,
-    "developer": "Capcom",
-    "publisher": "Capcom",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -3903,8 +4785,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Origin Systems",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Origin Systems"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -3922,8 +4808,12 @@
     "players": 1,
     "rating": 0.3,
     "year": 1994,
-    "developer": "Vivid Interactive",
-    "publisher": "Vivid Interactive",
+    "developers": [
+      "Vivid Interactive"
+    ],
+    "publishers": [
+      "Vivid Interactive"
+    ],
     "genres": [
       "Adult"
     ]
@@ -3933,8 +4823,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Digital Pictures",
-    "publisher": "Digital Pictures",
+    "developers": [
+      "Digital Pictures"
+    ],
+    "publishers": [
+      "Digital Pictures"
+    ],
     "genres": [
       "Action",
       "Adventure",
@@ -3954,8 +4848,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "Bullfrog",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Bullfrog"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -3974,8 +4872,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "T&E Soft",
-    "publisher": "T&E Soft",
+    "developers": [
+      "T&E Soft"
+    ],
+    "publishers": [
+      "T&E Soft"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -3986,7 +4888,9 @@
     "players": 4,
     "rating": 0.4,
     "year": 1995,
-    "publisher": "Sanyei Shobou",
+    "publishers": [
+      "Sanyei Shobou"
+    ],
     "genres": [
       "Action"
     ]
@@ -3996,8 +4900,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Fun Project",
-    "publisher": "Panasonic",
+    "developers": [
+      "Fun Project"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -4006,8 +4914,12 @@
     "id": "f5bdd80349afdbf676d7d890bf397e00086304d2",
     "players": 1,
     "year": 1996,
-    "developer": "Fill in Café",
-    "publisher": "SharRock",
+    "developers": [
+      "Fill in Café"
+    ],
+    "publishers": [
+      "SharRock"
+    ],
     "genres": [
       "Build And Management",
       "Simulation"
@@ -4018,8 +4930,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Axes Art Amuse",
-    "publisher": "Ariadne",
+    "developers": [
+      "Axes Art Amuse"
+    ],
+    "publishers": [
+      "Ariadne"
+    ],
     "genres": [
       "Various"
     ]
@@ -4029,8 +4945,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Scitron",
-    "publisher": "Hamlet",
+    "developers": [
+      "Scitron"
+    ],
+    "publishers": [
+      "Hamlet"
+    ],
     "genres": [
       "Build And Management",
       "Simulation"
@@ -4041,8 +4961,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Bullfrog",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Bullfrog"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Simulation",
       "Strategy"
@@ -4061,8 +4985,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Thinking Rabbit",
-    "publisher": "Panasonic",
+    "developers": [
+      "Thinking Rabbit"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -4072,8 +5000,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Sonnet",
-    "publisher": "Sonnet",
+    "developers": [
+      "Sonnet"
+    ],
+    "publishers": [
+      "Sonnet"
+    ],
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -4095,8 +5027,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1993,
-    "developer": "Crystal Dynamics",
-    "publisher": "Crystal Dynamics",
+    "developers": [
+      "Crystal Dynamics"
+    ],
+    "publishers": [
+      "Crystal Dynamics"
+    ],
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -4114,15 +5050,23 @@
     "id": "328609efe52ae317da425682cb8551ba0a89729a",
     "rating": 0.75,
     "year": 1994,
-    "developer": "WARP",
-    "publisher": "WARP"
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "WARP"
+    ]
   },
   "Touhaiden Akagi": {
     "id": "3ed8fe08badefe74a6720431b7ac23e992b1c127",
     "players": 1,
     "rating": 0.4,
-    "developer": "Micronet",
-    "publisher": "Micronet",
+    "developers": [
+      "Micronet"
+    ],
+    "publishers": [
+      "Micronet"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -4132,7 +5076,9 @@
     "players": 1,
     "rating": 0.9,
     "year": 1996,
-    "publisher": "OPeNBooK",
+    "publishers": [
+      "OPeNBooK"
+    ],
     "genres": [
       "Build And Management",
       "Simulation"
@@ -4143,8 +5089,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1995,
-    "developer": "WARP",
-    "publisher": "Panasonic",
+    "developers": [
+      "WARP"
+    ],
+    "publishers": [
+      "Panasonic"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -4157,8 +5107,12 @@
     "players": 4,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "T&E Soft",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "T&E Soft"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -4181,8 +5135,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Axes Art Amuse",
-    "publisher": "Intarus",
+    "developers": [
+      "Axes Art Amuse"
+    ],
+    "publishers": [
+      "Intarus"
+    ],
     "genres": [
       "Casino"
     ]
@@ -4192,8 +5150,12 @@
     "players": 4,
     "rating": 0.8,
     "year": 1993,
-    "developer": "3DO",
-    "publisher": "EA Games",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "EA Games"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -4214,8 +5176,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1994,
-    "developer": "TOSE",
-    "publisher": "Bandai Namco",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "Bandai Namco"
+    ],
     "genres": [
       "Fight"
     ]
@@ -4225,8 +5191,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1996,
-    "developer": "Tecmo",
-    "publisher": "Tecmo",
+    "developers": [
+      "Tecmo"
+    ],
+    "publishers": [
+      "Tecmo"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -4237,8 +5207,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "Morpheus",
-    "publisher": "American Laser Games",
+    "developers": [
+      "Morpheus"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Action"
     ],
@@ -4261,8 +5235,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Transpegasus",
-    "publisher": "Naxat Soft",
+    "developers": [
+      "Transpegasus"
+    ],
+    "publishers": [
+      "Naxat Soft"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -4272,8 +5250,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1995,
-    "developer": "Transpegasus",
-    "publisher": "Naxat Soft",
+    "developers": [
+      "Transpegasus"
+    ],
+    "publishers": [
+      "Naxat Soft"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -4289,8 +5271,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Movietime",
-    "publisher": "Data East",
+    "developers": [
+      "Movietime"
+    ],
+    "publishers": [
+      "Data East"
+    ],
     "genres": [
       "Action"
     ],
@@ -4308,8 +5294,12 @@
     "players": 4,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "T&E Soft",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "T&E Soft"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -4335,8 +5325,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1994,
-    "developer": "Naughty Dog",
-    "publisher": "Universal ",
+    "developers": [
+      "Naughty Dog"
+    ],
+    "publishers": [
+      "Universal "
+    ],
     "genres": [
       "Action",
       "Fight"
@@ -4359,8 +5353,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Origin Systems",
-    "publisher": "American Laser Games",
+    "developers": [
+      "Origin Systems"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "genres": [
       "Lightgun Shooter"
     ],
@@ -4372,8 +5370,12 @@
     "id": "9303eeb9f17976ceec3dc7d73a9c3fed9cdec7a2",
     "rating": 0.65,
     "year": 1995,
-    "developer": "T&E Soft",
-    "publisher": "T&E Soft",
+    "developers": [
+      "T&E Soft"
+    ],
+    "publishers": [
+      "T&E Soft"
+    ],
     "genres": [
       "Sports / Golf"
     ],
@@ -4395,8 +5397,12 @@
     "discs": 4,
     "rating": 0.85,
     "year": 1995,
-    "developer": "Origin Systems",
-    "publisher": "Electronic Arts",
+    "developers": [
+      "Origin Systems"
+    ],
+    "publishers": [
+      "Electronic Arts"
+    ],
     "genres": [
       "Simulation",
       "Simulation / SciFi"
@@ -4415,8 +5421,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Koei",
-    "publisher": "Koei",
+    "developers": [
+      "Koei"
+    ],
+    "publishers": [
+      "Koei"
+    ],
     "genres": [
       "Simulation",
       "Sports"
@@ -4427,8 +5437,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1995,
-    "developer": "Interplay",
-    "publisher": "id Software",
+    "developers": [
+      "Interplay"
+    ],
+    "publishers": [
+      "id Software"
+    ],
     "genres": [
       "Action",
       "Shooter",
@@ -4449,8 +5463,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Universal ",
-    "publisher": "Universal ",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Universal "
+    ],
     "genres": [
       "Various"
     ],
@@ -4468,8 +5486,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Universal ",
-    "publisher": "Universal ",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Universal "
+    ],
     "genres": [
       "Various"
     ],
@@ -4487,8 +5509,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1994,
-    "developer": "Universal ",
-    "publisher": "Universal ",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Universal "
+    ],
     "genres": [
       "Various"
     ],
@@ -4506,7 +5532,9 @@
     "players": 1,
     "rating": 0.75,
     "year": 1994,
-    "publisher": "U.S. Gold",
+    "publishers": [
+      "U.S. Gold"
+    ],
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -4525,8 +5553,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1994,
-    "developer": "Panasonic",
-    "publisher": "Rage Software",
+    "developers": [
+      "Panasonic"
+    ],
+    "publishers": [
+      "Rage Software"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -4538,14 +5570,20 @@
   },
   "Yakyuuken Special, The": {
     "id": "9360bf6caba2d84648a283ec05a7946385a09347",
-    "developer": "Societa Daikanyama"
+    "developers": [
+      "Societa Daikanyama"
+    ]
   },
   "Yamada Kamachi Bijutsukan - Kamachi's Museum": {
     "id": "efc9130b3321a596cef8b99ebaac5140c8db06c3",
     "players": 1,
     "year": 1995,
-    "developer": "System Sacom",
-    "publisher": "TV Asahi",
+    "developers": [
+      "System Sacom"
+    ],
+    "publishers": [
+      "TV Asahi"
+    ],
     "genres": [
       "Various"
     ]
@@ -4556,8 +5594,12 @@
     "discs": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "TOSE",
-    "publisher": "T&E Soft",
+    "developers": [
+      "TOSE"
+    ],
+    "publishers": [
+      "T&E Soft"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -4566,8 +5608,12 @@
     "id": "7c02cd88344e6399cf63b57028f62de35660a85a",
     "players": 2,
     "rating": 0.4,
-    "developer": "Hudson",
-    "publisher": "Tomy",
+    "developers": [
+      "Hudson"
+    ],
+    "publishers": [
+      "Tomy"
+    ],
     "genres": [
       "Fight"
     ]
@@ -4577,8 +5623,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Shogakukan",
-    "publisher": "Shogakukan",
+    "developers": [
+      "Shogakukan"
+    ],
+    "publishers": [
+      "Shogakukan"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -4588,8 +5638,12 @@
     "players": 4,
     "rating": 0.5,
     "year": 1995,
-    "developer": "3DO",
-    "publisher": "3DO",
+    "developers": [
+      "3DO"
+    ],
+    "publishers": [
+      "3DO"
+    ],
     "genres": [
       "Strategy"
     ],

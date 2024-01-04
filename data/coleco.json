@@ -4,8 +4,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Strategy"
     ],
@@ -21,8 +25,12 @@
   "A.E.": {
     "id": "6fe48f4e8e4a047402a770cf8b8dad6a418c6392",
     "players": 2,
-    "developer": "Programmers-3",
-    "publisher": "CollectorVision Games",
+    "developers": [
+      "Programmers-3"
+    ],
+    "publishers": [
+      "CollectorVision Games"
+    ],
     "genres": [
       "Shoot'em Up"
     ]
@@ -32,8 +40,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Sports"
     ],
@@ -53,8 +65,12 @@
     "id": "15b6464410429df35c44406be3aad9476c876715",
     "players": 1,
     "year": 1985,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -71,8 +87,12 @@
     "id": "5a6ef6b70383730c80723f4e2d95b820562b196d",
     "players": 2,
     "year": 1984,
-    "developer": "Spinnaker Software Corporation",
-    "publisher": "Spinnaker Software Corporation",
+    "developers": [
+      "Spinnaker Software Corporation"
+    ],
+    "publishers": [
+      "Spinnaker Software Corporation"
+    ],
     "genres": [
       "Educational",
       "Various"
@@ -90,8 +110,12 @@
     "id": "c1e3eca80eaaf61834f1241da6a8653d65182733",
     "players": 1,
     "year": 1984,
-    "developer": "VSS",
-    "publisher": "Telegames",
+    "developers": [
+      "VSS"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Action"
     ],
@@ -112,8 +136,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -130,8 +158,12 @@
     "id": "19c45c62618a8100a079417294b42227a2562b14",
     "players": 1,
     "year": 1984,
-    "developer": "Interphase Technologies Inc.",
-    "publisher": "Interphase Technologies Inc.",
+    "developers": [
+      "Interphase Technologies Inc."
+    ],
+    "publishers": [
+      "Interphase Technologies Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -150,8 +182,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1983,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -169,8 +205,12 @@
     "players": 1,
     "rating": 0.95,
     "year": 1983,
-    "developer": "Sydney Development Corp.",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sydney Development Corp."
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action"
     ],
@@ -187,8 +227,12 @@
     "id": "8f7330dcdc5c104f785da53a5fae3b0e450d3c15",
     "players": 2,
     "year": 1984,
-    "developer": "Sydney Development Corp.",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sydney Development Corp."
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action",
       "Driving",
@@ -208,8 +252,12 @@
     "players": 4,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Action"
     ],
@@ -230,8 +278,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1984,
-    "developer": "Interphase Technologies Inc.",
-    "publisher": "Interphase Technologies Inc.",
+    "developers": [
+      "Interphase Technologies Inc."
+    ],
+    "publishers": [
+      "Interphase Technologies Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -250,8 +302,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1984,
-    "developer": "First Star Software",
-    "publisher": "Micro Fun",
+    "developers": [
+      "First Star Software"
+    ],
+    "publishers": [
+      "Micro Fun"
+    ],
     "genres": [
       "Action",
       "Puzzle-Game"
@@ -270,8 +326,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Carousel Software",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Carousel Software"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Music and Dance"
     ],
@@ -289,8 +349,12 @@
     "players": 2,
     "rating": 0.45,
     "year": 1983,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -317,8 +381,12 @@
     "id": "932412e86b60b5ee365a4036e6b5dbc9384b0d29",
     "players": 2,
     "year": 1984,
-    "developer": "Data East",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -347,8 +415,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1984,
-    "developer": "Data East",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -373,15 +445,21 @@
   },
   "CAT S.O.S. Game, The": {
     "id": "cc884c3d0e829f66a657dfc885bb2bcc345cedfc",
-    "developer": "Nuvatec"
+    "developers": [
+      "Nuvatec"
+    ]
   },
   "Cabbage Patch Kids - Adventures in the Park": {
     "id": "22d23279b6716f9f362d20841640cf1c30b79b59",
     "players": 2,
     "rating": 0.8,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -408,8 +486,12 @@
     "id": "1a91335022857820b1e258b079fd0aaadf804153",
     "players": 2,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Various",
       "Various / Print Club"
@@ -427,8 +509,12 @@
     "id": "a5ea02509a05cc9bcffaa219de67657ce5d57121",
     "players": 2,
     "year": 1983,
-    "developer": "Sunrise Software",
-    "publisher": "Sunrise Software",
+    "developers": [
+      "Sunrise Software"
+    ],
+    "publishers": [
+      "Sunrise Software"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -446,8 +532,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1982,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -485,8 +575,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Atari",
-    "publisher": "Atari",
+    "developers": [
+      "Atari"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "1st person",
       "Shooter",
@@ -506,8 +600,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1984,
-    "developer": "Brøderbund Software",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Brøderbund Software"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -525,8 +623,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1983,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Action"
     ],
@@ -547,8 +649,12 @@
     "players": 2,
     "rating": 0.45,
     "year": 1984,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -566,8 +672,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1982,
-    "developer": "Gordon Martin & Associates",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Gordon Martin & Associates"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -590,8 +700,12 @@
     "id": "1de12ff0559f0bd875146fc09113b1db825491bf",
     "players": 2,
     "year": 1983,
-    "developer": "Bit Corp.",
-    "publisher": "Bit Corp.",
+    "developers": [
+      "Bit Corp."
+    ],
+    "publishers": [
+      "Bit Corp."
+    ],
     "genres": [
       "Platform"
     ],
@@ -608,8 +722,12 @@
     "id": "995004ac14038c180b6af49d4e9eefb0764230be",
     "players": 1,
     "year": 1984,
-    "developer": "Sydney Development Corp.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Sydney Development Corp."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Simulation",
       "Strategy"
@@ -627,8 +745,12 @@
     "id": "841ebd452bf49acca2ee412957d374c63d6c1166",
     "players": 1,
     "year": 1984,
-    "developer": "Fisher-Price",
-    "publisher": "Fisher-Price",
+    "developers": [
+      "Fisher-Price"
+    ],
+    "publishers": [
+      "Fisher-Price"
+    ],
     "genres": [
       "Music and Dance"
     ],
@@ -646,8 +768,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Williams",
-    "publisher": "Atari",
+    "developers": [
+      "Williams"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -665,8 +791,12 @@
     "id": "60cf5e423418b06cb56d625f065c6f6ce58f3b78",
     "players": 1,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -694,8 +824,12 @@
     "id": "c225fd56ccb2ed61a216b354ff2ce23e8b677400",
     "players": 2,
     "year": 1984,
-    "developer": "Namco",
-    "publisher": "Atari",
+    "developers": [
+      "Namco"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -706,8 +840,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1982,
-    "developer": "Nintendo",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Nintendo"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -731,8 +869,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Nintendo",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Nintendo"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -755,8 +897,12 @@
     "id": "683160eca7f4a2af7c6a8736dd69fb1b0ee1fb36",
     "players": 1,
     "rating": 0.7,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -777,8 +923,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1984,
-    "developer": "Imagic",
-    "publisher": "Imagic",
+    "developers": [
+      "Imagic"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Action"
     ],
@@ -795,8 +945,12 @@
     "id": "e7a3a30e3f4bd7087346f2bc0e6bf00f15974257",
     "players": 2,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -814,7 +968,9 @@
     "id": "2a58beb9ddd253889e9ef9d1ad6d05ed3e372ad9",
     "players": 1,
     "year": 1983,
-    "developer": "Starpath Corporation",
+    "developers": [
+      "Starpath Corporation"
+    ],
     "genres": [
       "Adventure"
     ]
@@ -824,8 +980,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1983,
-    "developer": "Sydney Development Corp.",
-    "publisher": "Sydney Development Corp.",
+    "developers": [
+      "Sydney Development Corp."
+    ],
+    "publishers": [
+      "Sydney Development Corp."
+    ],
     "manuals": [
       {
         "languages": [
@@ -839,8 +999,12 @@
     "id": "35c3cd86fa1b5fc22bd9961108f7c00f3b26be0f",
     "players": 1,
     "year": 1983,
-    "developer": "Spinnaker Software Corporation",
-    "publisher": "Spinnaker Software Corporation",
+    "developers": [
+      "Spinnaker Software Corporation"
+    ],
+    "publishers": [
+      "Spinnaker Software Corporation"
+    ],
     "genres": [
       "Educational"
     ],
@@ -857,8 +1021,12 @@
     "id": "543fdf87b260cdb74beb795df32408202f5197da",
     "players": 1,
     "year": 1983,
-    "developer": "20th Century Fox",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "20th Century Fox"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Platform",
@@ -871,8 +1039,12 @@
     "players": 1,
     "rating": 0.45,
     "year": 1983,
-    "developer": "Imagic",
-    "publisher": "Imagic",
+    "developers": [
+      "Imagic"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Action"
     ],
@@ -896,8 +1068,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1983,
-    "developer": "Spectravision",
-    "publisher": "Spectravision",
+    "developers": [
+      "Spectravision"
+    ],
+    "publishers": [
+      "Spectravision"
+    ],
     "genres": [
       "Action"
     ],
@@ -914,8 +1090,12 @@
     "id": "6e382e6884d599bb0d68682f2f74cda937344344",
     "players": 2,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Simulation"
     ],
@@ -932,8 +1112,12 @@
     "id": "56faec9f00657d6cc7b6a4a352438d882d277080",
     "players": 1,
     "year": 1983,
-    "developer": "Spinnaker Software Corporation",
-    "publisher": "Spinnaker Software Corporation",
+    "developers": [
+      "Spinnaker Software Corporation"
+    ],
+    "publishers": [
+      "Spinnaker Software Corporation"
+    ],
     "genres": [
       "Educational"
     ],
@@ -950,8 +1134,12 @@
     "id": "7e24403aefc2c8406a44db0bb84045c56a95c871",
     "players": 2,
     "year": 1983,
-    "developer": "Spectravideo",
-    "publisher": "Spectravideo",
+    "developers": [
+      "Spectravideo"
+    ],
+    "publishers": [
+      "Spectravideo"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -969,8 +1157,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1983,
-    "developer": "Stern Electronics, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Stern Electronics, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -998,8 +1190,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1983,
-    "developer": "Konami",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1017,8 +1213,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1984,
-    "developer": "Parker Brothers",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Parker Brothers"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1036,8 +1236,12 @@
     "players": 2,
     "rating": 0.3,
     "year": 1983,
-    "developer": "Taito",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1065,8 +1269,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1983,
-    "developer": "Namco",
-    "publisher": "Atari",
+    "developers": [
+      "Namco"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1086,8 +1294,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1984,
-    "developer": "The Connelley Group",
-    "publisher": "Epyx",
+    "developers": [
+      "The Connelley Group"
+    ],
+    "publishers": [
+      "Epyx"
+    ],
     "genres": [
       "Role playing games"
     ],
@@ -1105,8 +1317,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1983,
-    "developer": "Bally Midway",
-    "publisher": "CBS Software",
+    "developers": [
+      "Bally Midway"
+    ],
+    "publishers": [
+      "CBS Software"
+    ],
     "genres": [
       "Action"
     ],
@@ -1129,8 +1345,12 @@
     "id": "6c7218526ce59fe1c357dda73c0634aff5881f76",
     "players": 1,
     "year": 1983,
-    "developer": "Sunrise Software",
-    "publisher": "Sunrise Software",
+    "developers": [
+      "Sunrise Software"
+    ],
+    "publishers": [
+      "Sunrise Software"
+    ],
     "genres": [
       "Action"
     ],
@@ -1154,8 +1374,12 @@
     "players": 2,
     "rating": 0.45,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Shooter",
       "Shooter / Run and Gun"
@@ -1174,8 +1398,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Action"
     ],
@@ -1193,8 +1421,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1983,
-    "developer": "Livesay Computer Games, Inc.",
-    "publisher": "Micro Fun",
+    "developers": [
+      "Livesay Computer Games, Inc."
+    ],
+    "publishers": [
+      "Micro Fun"
+    ],
     "genres": [
       "Action"
     ],
@@ -1211,8 +1443,12 @@
     "id": "d8f1fdb44e1b88d35b83439de035c4996e30e958",
     "players": 2,
     "year": 1984,
-    "developer": "Nice  Ideas",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Nice  Ideas"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -1229,8 +1465,12 @@
     "id": "0968adc6414c2a53af87cf33c090e0a839758d36",
     "players": 2,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Telegames",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -1248,8 +1488,12 @@
     "players": 2,
     "rating": 0.25,
     "year": 1984,
-    "developer": "Parker Brothers",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Parker Brothers"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1265,15 +1509,23 @@
   "Joust": {
     "id": "c7bc6f62ededeee96cd56ceebff3a4e286b7a1e9",
     "year": 2014,
-    "developer": "Team Pixelboy",
-    "publisher": "Team Pixelboy"
+    "developers": [
+      "Team Pixelboy"
+    ],
+    "publishers": [
+      "Team Pixelboy"
+    ]
   },
   "Jukebox": {
     "id": "123dffd36b39b4c0b445c1ea30c71e0f2b55fc55",
     "players": 2,
     "year": 1984,
-    "developer": "Spinnaker Software Corporation",
-    "publisher": "Spinnaker Software Corporation",
+    "developers": [
+      "Spinnaker Software Corporation"
+    ],
+    "publishers": [
+      "Spinnaker Software Corporation"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -1291,8 +1543,12 @@
     "players": 2,
     "rating": 0.4,
     "year": 1984,
-    "developer": "Micro Fun",
-    "publisher": "Micro Fun",
+    "developers": [
+      "Micro Fun"
+    ],
+    "publishers": [
+      "Micro Fun"
+    ],
     "genres": [
       "Sports"
     ]
@@ -1302,8 +1558,12 @@
     "players": 4,
     "rating": 0.85,
     "year": 1984,
-    "developer": "Epyx",
-    "publisher": "Epyx",
+    "developers": [
+      "Epyx"
+    ],
+    "publishers": [
+      "Epyx"
+    ],
     "genres": [
       "Action"
     ],
@@ -1332,8 +1592,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1983,
-    "developer": "Taito",
-    "publisher": "Atari",
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action"
     ],
@@ -1351,8 +1615,12 @@
     "players": 4,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Strategy"
     ],
@@ -1370,8 +1638,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Action"
     ],
@@ -1389,8 +1661,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1982,
-    "developer": "Universal ",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1413,8 +1689,12 @@
     "id": "7df9a2b016fb290e7f17fb6921496f7ef3fa8062",
     "players": 1,
     "year": 1984,
-    "developer": "Sierra",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sierra"
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action"
     ],
@@ -1431,8 +1711,12 @@
     "id": "6444eda1d9b5877029e35cc1f5e050c94fc44e9c",
     "players": 1,
     "year": 1984,
-    "developer": "Fisher-Price",
-    "publisher": "Fisher-Price",
+    "developers": [
+      "Fisher-Price"
+    ],
+    "publishers": [
+      "Fisher-Price"
+    ],
     "genres": [
       "Puzzle-Game"
     ],
@@ -1449,8 +1733,12 @@
     "id": "5caa52f77cc60e8554d8aaad66ee1c5a967ea655",
     "players": 1,
     "year": 1984,
-    "developer": "Fisher-Price",
-    "publisher": "Fisher-Price",
+    "developers": [
+      "Fisher-Price"
+    ],
+    "publishers": [
+      "Fisher-Price"
+    ],
     "genres": [
       "Educational"
     ],
@@ -1468,8 +1756,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1983,
-    "developer": "Venture Line, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Venture Line, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1513,15 +1805,23 @@
   "M.A.S.H": {
     "id": "23e0d42d99b7ec7db9cb26e6285b2453488dcbb2",
     "year": 1983,
-    "developer": "20th Century Fox",
-    "publisher": "20th Century Fox"
+    "developers": [
+      "20th Century Fox"
+    ],
+    "publishers": [
+      "20th Century Fox"
+    ]
   },
   "Matt Patrol": {
     "id": "63810f777cb593950513551244dd08ddc2e7a6fd",
     "players": 1,
     "year": 2014,
-    "developer": "Irata",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Irata"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Platform"
     ],
@@ -1531,8 +1831,12 @@
     "id": "e0b814f0d352e30f746dd2baaf1dc6e18482a48e",
     "players": 1,
     "year": 1984,
-    "developer": "Frieda Lekkerkerker Inc.",
-    "publisher": "Fisher-Price",
+    "developers": [
+      "Frieda Lekkerkerker Inc."
+    ],
+    "publishers": [
+      "Fisher-Price"
+    ],
     "genres": [
       "Educational"
     ],
@@ -1549,8 +1853,12 @@
     "id": "d87b7a7021644a138e5ea8aab5ae3c088e5dd1a8",
     "players": 2,
     "year": 1984,
-    "developer": "Bit Corp.",
-    "publisher": "Bit Corp.",
+    "developers": [
+      "Bit Corp."
+    ],
+    "publishers": [
+      "Bit Corp."
+    ],
     "genres": [
       "Shoot'em Up",
       "Shooter"
@@ -1561,8 +1869,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Big Five Software",
-    "publisher": "Micro Fun",
+    "developers": [
+      "Big Five Software"
+    ],
+    "publishers": [
+      "Micro Fun"
+    ],
     "genres": [
       "Action"
     ],
@@ -1590,8 +1902,12 @@
     "id": "e6429f58023a97c3a1542c1d947509a1b0e24cdb",
     "players": 2,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Educational",
       "Various"
@@ -1609,8 +1925,12 @@
     "id": "cf9f1e6bce83a1445db96ed5df9207e0ed803311",
     "players": 1,
     "year": 1984,
-    "developer": "Parker Brothers",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Parker Brothers"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1628,8 +1948,12 @@
     "players": 1,
     "rating": 0.55,
     "year": 1983,
-    "developer": "Imagic",
-    "publisher": "Imagic",
+    "developers": [
+      "Imagic"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Action"
     ],
@@ -1647,8 +1971,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1984,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -1667,8 +1995,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1984,
-    "developer": "E.F. Dreyer",
-    "publisher": "Sunrise Software",
+    "developers": [
+      "E.F. Dreyer"
+    ],
+    "publishers": [
+      "Sunrise Software"
+    ],
     "genres": [
       "Action"
     ],
@@ -1686,8 +2018,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1982,
-    "developer": "Exidy, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Exidy, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1711,8 +2047,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1983,
-    "developer": "Universal ",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1730,8 +2070,12 @@
     "players": 1,
     "rating": 0.95,
     "year": 1984,
-    "developer": "Universal ",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1748,8 +2092,12 @@
     "id": "138d5d3e0d0038589cc2f9de750f5d13bf978232",
     "players": 1,
     "year": 1983,
-    "developer": "Imagic",
-    "publisher": "Imagic",
+    "developers": [
+      "Imagic"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Action"
     ],
@@ -1767,8 +2115,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1984,
-    "developer": "Sierra",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sierra"
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1787,8 +2139,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1984,
-    "developer": "Bally Midway",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Bally Midway"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1818,8 +2174,12 @@
     "id": "75c5c68929dde00eae6af3b35205a08bbcf3f2eb",
     "players": 2,
     "year": 1983,
-    "developer": "Atari",
-    "publisher": "Atari",
+    "developers": [
+      "Atari"
+    ],
+    "publishers": [
+      "Atari"
+    ],
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1831,8 +2191,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Exidy, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Exidy, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1850,8 +2214,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -1870,8 +2238,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Action"
     ],
@@ -1889,8 +2261,12 @@
     "players": 4,
     "rating": 0.6,
     "year": 1983,
-    "developer": "Epyx",
-    "publisher": "Epyx",
+    "developers": [
+      "Epyx"
+    ],
+    "publishers": [
+      "Epyx"
+    ],
     "genres": [
       "Simulation"
     ],
@@ -1918,8 +2294,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Nintendo",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Nintendo"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1936,8 +2316,12 @@
     "id": "756b7f3f238117ea67021ba9d7030a1214a053a8",
     "players": 1,
     "year": 1983,
-    "developer": "20th Century Fox",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "20th Century Fox"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -1947,8 +2331,12 @@
     "id": "01a190c215cddd9b406d888604cfd7ac9e9e6cf8",
     "players": 1,
     "year": 1983,
-    "developer": "NAP Consumer Electronics Corp.",
-    "publisher": "NAP Consumer Electronics Corp.",
+    "developers": [
+      "NAP Consumer Electronics Corp."
+    ],
+    "publishers": [
+      "NAP Consumer Electronics Corp."
+    ],
     "genres": [
       "Action"
     ],
@@ -1959,8 +2347,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1993,
-    "developer": "D. Gottlieb & Co.",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "D. Gottlieb & Co."
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1978,8 +2370,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1984,
-    "developer": "Mylstar Electronics, Inc.",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Mylstar Electronics, Inc."
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -1997,8 +2393,12 @@
     "players": 1,
     "rating": 0.45,
     "year": 1983,
-    "developer": "VSS, Inc.",
-    "publisher": "Sunrise Software",
+    "developers": [
+      "VSS, Inc."
+    ],
+    "publishers": [
+      "Sunrise Software"
+    ],
     "genres": [
       "Adventure"
     ],
@@ -2022,8 +2422,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Action"
     ],
@@ -2041,8 +2445,12 @@
     "id": "9bc4d30e582985246becdc44a193482e5d899764",
     "players": 2,
     "year": 1984,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Action"
     ],
@@ -2060,8 +2468,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2088,8 +2500,12 @@
     "id": "54b028e13c101919cfa91ea6b29fde7ebc26fd14",
     "players": 2,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Telegames",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Action"
     ],
@@ -2106,8 +2522,12 @@
     "id": "14cfb81fa8a066893bc937056c51a75f1157526e",
     "players": 2,
     "year": 1983,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Sports",
       "Sports / Boxing"
@@ -2135,8 +2555,12 @@
     "id": "54714b5d54eeee0c0f53794c8d09947e3b7095cf",
     "players": 1,
     "year": 1983,
-    "developer": "Sunrise Software",
-    "publisher": "Sunrise Software",
+    "developers": [
+      "Sunrise Software"
+    ],
+    "publishers": [
+      "Sunrise Software"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -2154,8 +2578,12 @@
     "players": 2,
     "rating": 0.65,
     "year": 1984,
-    "developer": "Bally Midway",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Bally Midway"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Sports",
       "Sports / Table tennis"
@@ -2173,8 +2601,12 @@
     "id": "3ab7ecfe22bf48adf1715cc928719ba4fefe2655",
     "players": 2,
     "year": 1983,
-    "developer": "Sierra",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sierra"
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action"
     ],
@@ -2191,8 +2623,12 @@
     "id": "7798a21ff5fb43a9542ee384badb1bbc7cff8a2c",
     "players": 1,
     "year": 1983,
-    "developer": "Spectravision",
-    "publisher": "Spectravision",
+    "developers": [
+      "Spectravision"
+    ],
+    "publishers": [
+      "Spectravision"
+    ],
     "genres": [
       "Action"
     ],
@@ -2210,8 +2646,12 @@
     "id": "a4d82230e1a887703bedc260706be5ad65ff60dd",
     "players": 2,
     "year": 1984,
-    "developer": "Interphase Technologies Inc.",
-    "publisher": "Interphase Technologies Inc.",
+    "developers": [
+      "Interphase Technologies Inc."
+    ],
+    "publishers": [
+      "Interphase Technologies Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2229,8 +2669,12 @@
     "players": 2,
     "rating": 0.2,
     "year": 1983,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Action"
     ],
@@ -2247,8 +2691,12 @@
     "id": "a0a05f31bcab72b0bee7ca22d88e1160e0690335",
     "players": 4,
     "year": 1986,
-    "developer": "Telegames",
-    "publisher": "Telegames",
+    "developers": [
+      "Telegames"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Sports"
     ],
@@ -2265,8 +2713,12 @@
     "id": "45533862cec3d516620dcd3474a7540a9ab312f3",
     "players": 1,
     "year": 1983,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2284,8 +2736,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Emag",
-    "publisher": "Xonox",
+    "developers": [
+      "Emag"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Action"
     ],
@@ -2303,8 +2759,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Educational",
       "Various"
@@ -2323,8 +2783,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1982,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2351,8 +2815,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1983,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2376,8 +2844,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Universal ",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Universal "
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2400,8 +2872,12 @@
     "id": "03a1d6f3090c4aa393add7ad3358f7917b0271a2",
     "players": 2,
     "year": 1983,
-    "developer": "Spectravideo",
-    "publisher": "Spectravideo",
+    "developers": [
+      "Spectravideo"
+    ],
+    "publishers": [
+      "Spectravideo"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -2419,8 +2895,12 @@
     "players": 2,
     "rating": 0.35,
     "year": 1984,
-    "developer": "Bally Midway",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Bally Midway"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -2438,8 +2918,12 @@
     "id": "1994d604796f14020624a23372db188763491a96",
     "players": 1,
     "year": 1984,
-    "developer": "Sirius",
-    "publisher": "Sirius",
+    "developers": [
+      "Sirius"
+    ],
+    "publishers": [
+      "Sirius"
+    ],
     "genres": [
       "Action"
     ],
@@ -2456,14 +2940,20 @@
   "Star Fire": {
     "id": "78fcf7a9357fdc5e958ed35a584a5bc30edd1de0",
     "players": 1,
-    "developer": "Chris Oberth"
+    "developers": [
+      "Chris Oberth"
+    ]
   },
   "Star Trek - Strategic Operations Simulator": {
     "id": "3650ed777a8d7995194de83f0cb1518421c20d4e",
     "players": 2,
     "year": 1984,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2482,8 +2972,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1984,
-    "developer": "Atari",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Atari"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -2500,8 +2994,12 @@
     "id": "64315c1faa80c21103ff5903364e14907efb545a",
     "players": 2,
     "year": 2000,
-    "developer": "Cheshire Engineering",
-    "publisher": "Retrotopia",
+    "developers": [
+      "Cheshire Engineering"
+    ],
+    "publishers": [
+      "Retrotopia"
+    ],
     "genres": [
       "Strategy"
     ]
@@ -2510,8 +3008,12 @@
     "id": "1ccfc6db246608bc566f94b8e26301074f4a0a43",
     "players": 1,
     "year": 1986,
-    "developer": "Telegames",
-    "publisher": "Telegames",
+    "developers": [
+      "Telegames"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Action",
       "Action / Breakout games"
@@ -2529,8 +3031,12 @@
     "id": "ce51fba29a46bd444a426835f51f45536d5c020b",
     "players": 1,
     "year": 1983,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -2554,8 +3060,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1983,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2573,8 +3083,12 @@
     "id": "f4d833ad4ce700401c1feef57f7d2a3735e5c29c",
     "players": 2,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Sports",
       "Sports / Football"
@@ -2603,8 +3117,12 @@
     "players": 1,
     "rating": 0.45,
     "year": 1983,
-    "developer": "Konami",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -2624,8 +3142,12 @@
     "id": "30d9a4111275a6047a1c858d9b40e781d36c181a",
     "players": 1,
     "year": 1983,
-    "developer": "Spectravideo",
-    "publisher": "Spectravideo",
+    "developers": [
+      "Spectravideo"
+    ],
+    "publishers": [
+      "Spectravideo"
+    ],
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
@@ -2643,15 +3165,23 @@
   "Super DK!": {
     "id": "0510e742a1351706c131af88ed13987e5907ff1e",
     "year": 1983,
-    "developer": "Nintendo",
-    "publisher": "Coleco Industries, Inc."
+    "developers": [
+      "Nintendo"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ]
   },
   "Super DK! Junior": {
     "id": "25c9bbdbd11a0e332eb63222709cefcf4f3dc89d",
     "players": 2,
     "year": 1983,
-    "developer": "Nintendo",
-    "publisher": "Nintendo",
+    "developers": [
+      "Nintendo"
+    ],
+    "publishers": [
+      "Nintendo"
+    ],
     "genres": [
       "Action"
     ]
@@ -2675,8 +3205,12 @@
     "players": 1,
     "rating": 0.2,
     "year": 1984,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Action"
     ],
@@ -2693,8 +3227,12 @@
     "id": "8d39bc5d5a71fb63f04a3ada57a8e2ca1b03b420",
     "players": 2,
     "year": 1986,
-    "developer": "Telegames",
-    "publisher": "Telegames",
+    "developers": [
+      "Telegames"
+    ],
+    "publishers": [
+      "Telegames"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -2711,8 +3249,12 @@
     "id": "ace1c7fecdc91823b08d76987851de87afeac0eb",
     "players": 1,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action",
       "Action / Adventure"
@@ -2737,8 +3279,12 @@
     "id": "cfecd8116a3c023c0654077a0937744e524b2592",
     "players": 1,
     "year": 1984,
-    "developer": "Carousel Software",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Carousel Software"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Educational",
       "Various"
@@ -2756,8 +3302,12 @@
     "id": "70e350f5e3c500106dd44ca92e99072e9f208916",
     "players": 1,
     "year": 1983,
-    "developer": "Sierra",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sierra"
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Action"
     ],
@@ -2775,8 +3325,12 @@
     "players": 1,
     "rating": 0.6,
     "year": 1983,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2799,8 +3353,12 @@
     "id": "37ea43b0b4da19924663b02cdf981dcb409b25d6",
     "players": 1,
     "year": 1984,
-    "developer": "D&L Research",
-    "publisher": "Imagic",
+    "developers": [
+      "D&L Research"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Simulation",
       "Sports"
@@ -2818,8 +3376,12 @@
     "id": "311bc068ac1359ddd0fe264b6c72eab060909f6e",
     "players": 1,
     "year": 1983,
-    "developer": "Flying Buffalo",
-    "publisher": "Flying Buffalo",
+    "developers": [
+      "Flying Buffalo"
+    ],
+    "publishers": [
+      "Flying Buffalo"
+    ],
     "genres": [
       "Action"
     ]
@@ -2829,8 +3391,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1982,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -2849,8 +3415,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1983,
-    "developer": "Konami",
-    "publisher": "Parker Brothers",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Parker Brothers"
+    ],
     "genres": [
       "Action"
     ],
@@ -2878,8 +3448,12 @@
     "id": "366c0a7d0d73bca28e4556528758139b166bdb06",
     "players": 2,
     "year": 1984,
-    "developer": "SEGA",
-    "publisher": "SEGA",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "SEGA"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -2898,8 +3472,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1982,
-    "developer": "Exidy, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Exidy, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2923,8 +3501,12 @@
     "id": "fee7b3fbab9ddec3fb22f44e59cc70724d2a49ad",
     "players": 1,
     "year": 1983,
-    "developer": "Exidy, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Exidy, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action"
     ],
@@ -2941,8 +3523,12 @@
     "id": "fb1c54f9a29a06a54166d908eeb8a63aef80479c",
     "players": 1,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action",
       "Sports",
@@ -2954,8 +3540,12 @@
     "id": "554ad6a82838cfbf5b63f78e5a8705b65cde5e50",
     "players": 1,
     "year": 1983,
-    "developer": "Probe 2000",
-    "publisher": "Probe 2000",
+    "developers": [
+      "Probe 2000"
+    ],
+    "publishers": [
+      "Probe 2000"
+    ],
     "genres": [
       "Strategy"
     ],
@@ -2973,8 +3563,12 @@
     "players": 1,
     "rating": 1.0,
     "year": 1984,
-    "developer": "Coleco Industries, Inc.",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "Coleco Industries, Inc."
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Strategy"
     ],
@@ -3001,8 +3595,12 @@
     "id": "0d7c009b7bd63827f068b2e384ce5de6e40e05a4",
     "players": 1,
     "year": 1983,
-    "developer": "Imagic",
-    "publisher": "Imagic",
+    "developers": [
+      "Imagic"
+    ],
+    "publishers": [
+      "Imagic"
+    ],
     "genres": [
       "Action"
     ],
@@ -3019,8 +3617,12 @@
     "id": "05bee76f52a2333efa3bea1b49a1e5ad78b89df3",
     "players": 2,
     "year": 1984,
-    "developer": "Sydney Development Corp.",
-    "publisher": "Sierra On-Line",
+    "developers": [
+      "Sydney Development Corp."
+    ],
+    "publishers": [
+      "Sierra On-Line"
+    ],
     "genres": [
       "Educational",
       "Various"
@@ -3038,8 +3640,12 @@
     "id": "c14f0afae5251bfe78191a7a1181770befee5bd6",
     "players": 2,
     "year": 1984,
-    "developer": "Xonox",
-    "publisher": "Xonox",
+    "developers": [
+      "Xonox"
+    ],
+    "publishers": [
+      "Xonox"
+    ],
     "genres": [
       "Educational"
     ],
@@ -3055,8 +3661,12 @@
   "Yolk's on you, The": {
     "id": "8f2bb242259fdbf9c9ae03f2b4dcb8cb1e11d384",
     "year": 1983,
-    "developer": "20th Century Fox",
-    "publisher": "20th Century Fox",
+    "developers": [
+      "20th Century Fox"
+    ],
+    "publishers": [
+      "20th Century Fox"
+    ],
     "genres": [
       "Action"
     ]
@@ -3066,8 +3676,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1982,
-    "developer": "SEGA",
-    "publisher": "Coleco Industries, Inc.",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "Coleco Industries, Inc."
+    ],
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -3103,8 +3717,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Activision",
-    "publisher": "Activision",
+    "developers": [
+      "Activision"
+    ],
+    "publishers": [
+      "Activision"
+    ],
     "genres": [
       "Strategy"
     ],

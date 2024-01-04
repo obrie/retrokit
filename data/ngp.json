@@ -7,8 +7,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Fight"
     ],
@@ -35,8 +39,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1998,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Simulation",
       "Simulation / Life"
@@ -46,8 +54,12 @@
     "id": "1b709f111bba1384dbf7669ae41b1dd1a036a0b3",
     "players": 1,
     "year": 1998,
-    "developer": "Dyna Corporation",
-    "publisher": "SNK",
+    "developers": [
+      "Dyna Corporation"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Casino",
       "Casino / Slot machine"
@@ -58,8 +70,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -78,8 +94,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1999,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -98,8 +118,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1998,
-    "developer": "Yumekobo",
-    "publisher": "SNK",
+    "developers": [
+      "Yumekobo"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Puzzle-Game"
     ]
@@ -109,8 +133,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1998,
-    "developer": "Saurus",
-    "publisher": "SNK",
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Fight"
     ],
@@ -127,8 +155,12 @@
     "id": "00db01af963e404a42dc0d1ddc0b6fdf342e7b33",
     "players": 2,
     "year": 1998,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "genres": [
       "Asiatic board game",
       "Shougi",

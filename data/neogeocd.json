@@ -4,39 +4,59 @@
     "players": 2,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Pallas",
-    "publisher": "SNK"
+    "developers": [
+      "Pallas"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "ADK World": {
     "id": "15877a09b0cb65a6ad91c6673c7747b313c5d6db",
     "players": 2,
     "rating": 0.65,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "ADK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ]
   },
   "ASO II - The Last Guardian ~ Alpha Mission II": {
     "id": "ee79624ef5617b37014b815f0e5e3a5e1b823a62",
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Andro Dunos": {
     "id": "8d82c94e98e4e3ddc6e40b38b3da1db769289122",
     "players": 2,
     "rating": 0.7,
-    "developer": "Visgo",
-    "publisher": "Visgo"
+    "developers": [
+      "Visgo"
+    ],
+    "publishers": [
+      "Visgo"
+    ]
   },
   "Art of Fighting - Ryuuko no Ken Gaiden ~ The Path of the Warrior - Art of Fighting 3": {
     "id": "940f83a3da80efbfc18011047033a745c85cb11e",
     "players": 2,
     "rating": 0.55,
     "year": 1996,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -51,8 +71,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1998,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -67,8 +91,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1998,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -86,24 +114,36 @@
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Baseball Stars Professional": {
     "id": "ae5cff043b1ce313d002ad38c34753b28c58040b",
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Big Tournament Golf ~ Neo Turf Masters": {
     "id": "4789fde3975b33f885823af0794f5f493f574d16",
     "players": 2,
     "rating": 1.0,
     "year": 1996,
-    "developer": "Nazca",
-    "publisher": "SNK",
+    "developers": [
+      "Nazca"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -118,104 +158,156 @@
     "players": 2,
     "rating": 0.75,
     "year": 1997,
-    "developer": "Visco",
-    "publisher": "Visco"
+    "developers": [
+      "Visco"
+    ],
+    "publishers": [
+      "Visco"
+    ]
   },
   "Burning Fight": {
     "id": "a71bb985ee4faca1ddbbfe10965ab785a3738dd0",
     "players": 2,
     "rating": 0.85,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Choujin Gakuen - Gowcaizer": {
     "id": "23a38acfc34b9f7338db5886c9de7dcdc8c6dec7",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Technos Japan Corp.",
-    "publisher": "SNK"
+    "developers": [
+      "Technos Japan Corp."
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Choutetsu Brikin'ger ~ Ironclad - Tesshou Rusha": {
     "id": "1ff8ee85cc087b6798bf5b6b956a99cf9de16be3",
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "Saurus",
-    "publisher": "SNK"
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Crossed Swords": {
     "id": "dbf6d374e0ceb097e008229cefee85665caa7fd2",
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Crossed Swords II": {
     "id": "b9a3ca292c1099a6997ed7a6cbbaaddbe5e1feb2",
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "ADK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ]
   },
   "Cyber-Lip": {
     "id": "0b7cfa244f0884c0513cdc9145fbcdeb26c2dced",
     "players": 2,
     "rating": 0.7,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Double Dragon": {
     "id": "78715760c52c09bfde39f9d6c000119cade77d08",
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "Technos Japan Corp.",
-    "publisher": "SNK"
+    "developers": [
+      "Technos Japan Corp."
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Dunk Dream ~ Street Slam ~ Street Hoop": {
     "id": "8398b6ffab1b5a0ea259478f56849c4747106e9d",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Data East",
-    "publisher": "SNK"
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Far East of Eden - Tengai Makyou Shinden ~ Far East of Eden - Kabuki Klash": {
     "id": "4a86dac6d97eebe1a404102af65e799c9c08377c",
     "players": 2,
     "rating": 0.55,
     "year": 1995,
-    "developer": "Red Company Corporation",
-    "publisher": "Hudson"
+    "developers": [
+      "Red Company Corporation"
+    ],
+    "publishers": [
+      "Hudson"
+    ]
   },
   "Fighter's History Dynamite ~ Karnov's Revenge": {
     "id": "3a0702ed677cc5a814f140604748a79c082be372",
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "Data East",
-    "publisher": "SNK"
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Fire Suplex ~ 3 Count Bout": {
     "id": "efe7040dc1603206b0a5267e73683a8714e1df70",
     "players": 2,
     "rating": 0.5,
     "year": 1995,
-    "developer": "UPL",
-    "publisher": "SNK"
+    "developers": [
+      "UPL"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Flying Power Disc ~ Windjammers": {
     "id": "4d83b9a55e216c07ea8b349059a7855ff42593b6",
     "players": 2,
     "rating": 1.0,
     "year": 1995,
-    "developer": "Data East",
-    "publisher": "SNK",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -230,23 +322,33 @@
     "players": 2,
     "rating": 0.4,
     "year": 1994,
-    "publisher": "SNK"
+    "publishers": [
+      "SNK"
+    ]
   },
   "Futsal - 5 on 5 Mini Soccer ~ PleasureGoal - 5 on 5 Mini Soccer": {
     "id": "ee36e077b711f272c2181c738a686c74c3ae8051",
     "players": 2,
     "rating": 0.6,
     "year": 1996,
-    "developer": "Saurus",
-    "publisher": "SNK"
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Fuuun Mokushiroku - Kakutou Sousei ~ Savage Reign": {
     "id": "293092a7288c0514218e92d1ca7b7600781e2164",
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Fuuun Mokushiroku - Kakutou Sousei ~ Savage Reign (World) (En,Ja,Es,Pt)": [
         "Fuuun Mokushiroku - Kakutou Sousei ~ Savage Reign (Japan) (En,Ja,Es,Pt)"
@@ -258,15 +360,23 @@
     "players": 2,
     "rating": 0.65,
     "year": 1995,
-    "developer": "Sunsoft",
-    "publisher": "Sunsoft"
+    "developers": [
+      "Sunsoft"
+    ],
+    "publishers": [
+      "Sunsoft"
+    ]
   },
   "Garou Densetsu - Shukumei no Tatakai ~ Fatal Fury - King of Fighters": {
     "id": "016f119e8ccb8acec7c59fa8652724f7dad6ff37",
     "players": 2,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -281,16 +391,24 @@
     "players": 2,
     "rating": 0.85,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Garou Densetsu 3 - Road to the Final Victory ~ Fatal Fury 3 - Road to the Final Victory": {
     "id": "3aaaef1b114dd5e03770bec366d46b8a29d34a1c",
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -305,8 +423,12 @@
     "players": 2,
     "rating": 0.85,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -321,8 +443,12 @@
     "players": 2,
     "rating": 0.55,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Ghost Pilots (World)": [
         "Ghost Pilots (Japan)"
@@ -334,24 +460,36 @@
     "players": 1,
     "rating": 0.7,
     "year": 1995,
-    "developer": "Video System",
-    "publisher": "Video System"
+    "developers": [
+      "Video System"
+    ],
+    "publishers": [
+      "Video System"
+    ]
   },
   "Janshin Densetsu - Quest of Jongmaster": {
     "id": "ff315f5c4641a7ba0d0042419a1d28e7c22da9b9",
     "players": 1,
     "rating": 0.4,
     "year": 1994,
-    "developer": "Aicom",
-    "publisher": "SNK"
+    "developers": [
+      "Aicom"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Joy Joy Kid ~ Puzzled": {
     "id": "3cfb4ab50b9b6131e1338fb7ec6aef88575e1f14",
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Joy Joy Kid ~ Puzzled (World) (En,Ja)": [
         "Joy Joy Kid ~ Puzzled (Japan) (En,Ja)"
@@ -363,8 +501,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -384,8 +526,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -400,8 +546,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1996,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -416,8 +566,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1996,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -432,8 +586,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1997,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -448,8 +606,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1998,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -470,8 +632,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1999,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -485,56 +651,84 @@
     "id": "7751a2050830749406d412a1c0ec85ec3272c827",
     "players": 1,
     "year": 2007,
-    "developer": "NG:Dev.Team",
-    "publisher": "NG:Dev.Team"
+    "developers": [
+      "NG:Dev.Team"
+    ],
+    "publishers": [
+      "NG:Dev.Team"
+    ]
   },
   "Last Resort": {
     "id": "2e12907a966354ca14e746297dfc9d35b706c7c5",
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "League Bowling": {
     "id": "8665715e7f904ec263726c62033d5d6ab52b5a13",
     "players": 8,
     "rating": 0.8,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Magical Drop 2": {
     "id": "d63c6e477608e5e4bec4769871d48ec5c8572f67",
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "Data East",
-    "publisher": "Data East"
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Data East"
+    ]
   },
   "Magician Lord": {
     "id": "0b00c6b434520b5318638c02eb047177fb26c9ef",
     "players": 2,
     "rating": 0.75,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Mahjong-kyou Retsuden - Nishi Nihon-hen": {
     "id": "3b84c7bcbd22061e9ee2b062acabecbdeed226a3",
     "players": 1,
     "rating": 0.2,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Metal Slug": {
     "id": "04f353d5ce81d4d59193ce2c74f1e140e66aff0a",
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "Nazca",
-    "publisher": "SNK",
+    "developers": [
+      "Nazca"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -549,8 +743,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1998,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -565,32 +763,48 @@
     "players": 2,
     "rating": 0.7,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Nam-1975": {
     "id": "ad03427c0b50b6d575cba5fae3f87fc7d1d52f50",
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Neo Drift Out - New Technology": {
     "id": "a6adcbff584850e1ba7b9a88d34f0778794fa8b9",
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "Visco",
-    "publisher": "Visco"
+    "developers": [
+      "Visco"
+    ],
+    "publishers": [
+      "Visco"
+    ]
   },
   "Neo-Geo CD Special": {
     "id": "fdfe702630721cf7fa833b4aa435480973b4e3d0",
     "players": 2,
     "rating": 0.5,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -605,64 +819,96 @@
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Ninja Combat": {
     "id": "76fe77c9c94f0a4121c144a29144d034ce74d8f2",
     "players": 2,
     "rating": 0.5,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "ADK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ]
   },
   "Ninja Commando": {
     "id": "c43d0d194c10e1b7f9d62c63c2b2243d38c5c444",
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Ninja Master's - Haou Ninpou Chou": {
     "id": "e40fe09a589a3770dac24fae7c6c964d8d802a38",
     "players": 2,
     "rating": 0.75,
     "year": 1996,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Oshidashi Zintrick ~ ZinTricK": {
     "id": "bdb82f393992ff6d29eb172cbc38d6fc9e35e5bc",
     "players": 2,
     "rating": 0.65,
     "year": 1996,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "OverTop": {
     "id": "3fccebdf6763c4f7ec66939d4ed8a4ffce98a7a4",
     "players": 1,
     "rating": 0.6,
     "year": 1996,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Power Spikes II": {
     "id": "f37b5c2054607ccdfd487bc7491f061cc712cfc6",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "Video System",
-    "publisher": "Video System"
+    "developers": [
+      "Video System"
+    ],
+    "publishers": [
+      "Video System"
+    ]
   },
   "Pulstar": {
     "id": "db9dd7ba4e075b6b9110dc2002838b9d204f55d5",
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "Aicom",
-    "publisher": "SNK",
+    "developers": [
+      "Aicom"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Pulstar (Japan) (En,Ja)": [
         "Pulstar (Japan)"
@@ -674,24 +920,36 @@
     "players": 2,
     "rating": 0.85,
     "year": 1995,
-    "developer": "Taito",
-    "publisher": "Taito"
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "Taito"
+    ]
   },
   "Quiz King of Fighters": {
     "id": "8ab502768eab0385ed9ebfadde851edb88a0ed07",
     "players": 2,
     "rating": 0.2,
     "year": 1995,
-    "developer": "Saurus",
-    "publisher": "SNK"
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "RB2 - The Newcomers - Real Bout Garou Densetsu 2 ~ RB2 - The Newcomers - Real Bout Fatal Fury 2": {
     "id": "5fce67a677b0283d093178bc783a6b2f209842fa",
     "players": 2,
     "rating": 1.0,
     "year": 1998,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -706,24 +964,36 @@
     "players": 2,
     "rating": 0.3,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Rally Chase": {
     "id": "2934a6ea243a462fea8d2cc51ecda4947203c689",
     "players": 1,
     "rating": 0.6,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "Alpha"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "Alpha"
+    ]
   },
   "Real Bout Garou Densetsu Special ~ Real Bout Fatal Fury Special": {
     "id": "fd08c4aa08663cb88dc1f86b90db5ad4a5749f5c",
     "players": 2,
     "rating": 1.0,
     "year": 1997,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -738,8 +1008,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1996,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -760,24 +1034,36 @@
     "players": 2,
     "rating": 0.2,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Robo Army": {
     "id": "8d6b44e5abd116c00a1653a8696128c0e8db56da",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Ryuuko no Ken 2 ~ Art of Fighting 2": {
     "id": "4dd99fdf1c2ad2e9b56d58bd76be209fe8bcdb87",
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -792,8 +1078,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -808,24 +1098,36 @@
     "players": 2,
     "rating": 0.8,
     "year": 1996,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Samurai Spirits - Zankurou Musouken ~ Samurai Shodown III": {
     "id": "e9fe7711202e8d5dce841027d041a97692935174",
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Samurai Spirits ~ Samurai Shodown": {
     "id": "85c3b2bb77c280b60311ae7b33b603d18b737883",
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -840,56 +1142,84 @@
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Sengoku Denshou ~ Sengoku": {
     "id": "7f8c3695b6d4931b4b12de907bf178413e1741c4",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Shin Samurai Spirits - Haoumaru Jigokuhen ~ Samurai Shodown II": {
     "id": "1c2c43c0518ecb27473b1fcc269b8f787ef352bf",
     "players": 2,
     "rating": 0.7,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Shinouken ~ Ragnagard": {
     "id": "ef1e7c8e9b5646c1f577cde1d37fc24d2f2a2533",
     "players": 2,
     "rating": 0.4,
     "year": 1996,
-    "developer": "Saurus",
-    "publisher": "SNK"
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Shinsetsu Samurai Spirits - Bushidou Retsuden": {
     "id": "9ad5391a35783c4c00d87ceb8acdf0b129af3c09",
     "players": 2,
     "rating": 0.6,
     "year": 1997,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Shougi no Tatsujin - Master of Syougi": {
     "id": "8ebff6572dc9cd8b23c81f2d6552bdd12737c05e",
     "players": 2,
     "rating": 0.4,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Soccer Brawl": {
     "id": "03431e0b574e36dd0307ad55a5491b8cfc3103ce",
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK",
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Soccer Brawl (World)": [
         "Soccer Brawl (Japan)"
@@ -901,8 +1231,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1994,
-    "developer": "Video System",
-    "publisher": "SNK",
+    "developers": [
+      "Video System"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "alternates": {
       "Sonic Wings 2 ~ Aero Fighters 2 (World) (En,Ja)": [
         "Sonic Wings 2 ~ Aero Fighters 2 (Japan) (En,Ja)"
@@ -914,118 +1248,176 @@
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "Video System",
-    "publisher": "SNK"
+    "developers": [
+      "Video System"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Stakes Winner - GI Kanzen Seiha e no Michi": {
     "id": "f34c94bbd4af2b241f59932c44879b38a172e21b",
     "players": 2,
     "rating": 0.2,
     "year": 1996,
-    "developer": "Saurus",
-    "publisher": "Saurus"
+    "developers": [
+      "Saurus"
+    ],
+    "publishers": [
+      "Saurus"
+    ]
   },
   "Super Sidekicks - Tokuten-ou": {
     "id": "6b7ce33a2d89d802e29582d324a5f7a68e0c727b",
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Super Spy, The": {
     "id": "7d1bda5d4955e7bbe0f81bf90a495f8bbc7e97a7",
     "players": 2,
     "rating": 0.4,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Tokuten-ou 2 ~ Super Sidekicks 2 - The World Championship": {
     "id": "f3b542caf6ee9b764b9f10a4f64ecf7231d6b545",
     "players": 2,
     "rating": 0.8,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Tokuten-ou 3 - Eikou e no Chousen ~ Super Sidekicks 3 - The Next Glory": {
     "id": "144e811d0b68f1127b9a28271fb7bfdebd378ea9",
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Top Hunter - Roddy & Cathy": {
     "id": "602843c6f986c8a33182fe4e1d95043680e102b2",
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Top Player's Golf": {
     "id": "25fdc61fe4eddc85c4ec4a53cd29bd251be9d488",
     "players": 2,
     "rating": 0.4,
     "year": 1994,
-    "developer": "SNK",
-    "publisher": "SNK"
+    "developers": [
+      "SNK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Treasure of the Caribbean": {
     "id": "3a406d653291dc84aaee65223c519fe87dc76a22",
     "players": 2,
     "year": 2012,
-    "developer": "Le Cortex / Face",
-    "publisher": "Neo Conception International"
+    "developers": [
+      "Le Cortex / Face"
+    ],
+    "publishers": [
+      "Neo Conception International"
+    ]
   },
   "Tsuukai Gangan Koushinkyoku ~ Aggressors of Dark Kombat": {
     "id": "b7b59f55d55251f729e66d1e415571dd8828af26",
     "players": 2,
     "rating": 0.55,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Twinkle Star Sprites": {
     "id": "71a52f03a7eac94f08fedd13cf425d1af5acadb2",
     "players": 2,
     "rating": 0.8,
     "year": 1997,
-    "developer": "ADK",
-    "publisher": "SNK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ]
   },
   "Viewpoint": {
     "id": "6255f0270c05f34ad4db68a5efebd51a6fa5c93e",
     "players": 2,
     "rating": 1.0,
     "year": 1995,
-    "publisher": "SNK"
+    "publishers": [
+      "SNK"
+    ]
   },
   "World Heroes": {
     "id": "5bd2252d5a62214cd613061ce8bd0c731f89d731",
     "players": 2,
     "rating": 0.8,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "ADK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ]
   },
   "World Heroes 2": {
     "id": "2344cd70f7f070563eb6e3c3384fcc3fef0f0d48",
     "players": 2,
     "rating": 0.75,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "ADK"
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "ADK"
+    ]
   },
   "World Heroes 2 Jet": {
     "id": "7063b8a52432597ab216c7e340064da7199aa78e",
     "players": 2,
     "rating": 0.6,
     "year": 1994,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -1040,8 +1432,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1995,
-    "developer": "ADK",
-    "publisher": "SNK",
+    "developers": [
+      "ADK"
+    ],
+    "publishers": [
+      "SNK"
+    ],
     "manuals": [
       {
         "languages": [
@@ -1055,8 +1451,12 @@
     "id": "917d95228d0d52b6de81fc65e49797355555d33d",
     "players": 2,
     "year": 2018,
-    "developer": "Bitmap Bureau",
-    "publisher": "Bitmap Bureau",
+    "developers": [
+      "Bitmap Bureau"
+    ],
+    "publishers": [
+      "Bitmap Bureau"
+    ],
     "age_rating": "7"
   }
 }

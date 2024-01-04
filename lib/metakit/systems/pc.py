@@ -69,4 +69,4 @@ class PCSystem(BaseSystem):
             # Merge in metadata
             # * Since we own the series / tag values, they get reset if not detected from the launchbox database
             metadata.update({'series': [], 'tags': []})
-            metadata.update(slice_only(game, {'genres', 'rating', 'players', 'year', 'developer', 'publisher', 'series', 'tags'}))
+            metadata.update(slice_only(game, {'genres', 'rating', 'players', 'year', 'developers', 'publishers', 'series', 'tags'}))

@@ -68,8 +68,8 @@ class PSXSystem(BaseSystem):
                     # release
                     developer = gamedb_data.get('developer')
                     if developer:
-                        metadata['developer'] = developer
+                        metadata['developers'] = [developer]
 
                     publisher = gamedb_data.get('publisher')
                     if publisher:
-                        metadata['publisher'] = publisher
+                        metadata['publishers'] = [publisher]

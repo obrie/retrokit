@@ -118,9 +118,9 @@ class Scraper:
                 else:
                     metadata['year'] = None
             elif attribute_name == 'publisher':
-                metadata['publisher'] = value
+                metadata['publishers'] = [value]
             elif attribute_name == 'developer':
-                metadata['developer'] = value
+                metadata['developers'] = [value]
             elif attribute_name == 'ages':
                 metadata['age_rating'] = value
 

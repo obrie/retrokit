@@ -14,4 +14,4 @@ class SeriesData(ExternalData):
     version_pattern = r'pS_Series_([0-9]+).zip'
 
     def _parse_value(self, value):
-        return value
+        return [value]

@@ -4,8 +4,12 @@
     "players": 2,
     "rating": 0.75,
     "year": 1991,
-    "developer": "Capcom",
-    "publisher": "Capcom",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "Capcom"
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -19,8 +23,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1991,
-    "developer": "Produce Co., Ltd.",
-    "publisher": "Hudson",
+    "developers": [
+      "Produce Co., Ltd."
+    ],
+    "publishers": [
+      "Hudson"
+    ],
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
@@ -32,8 +40,12 @@
     "players": 1,
     "rating": 0.65,
     "year": 1989,
-    "developer": "Hudson",
-    "publisher": "Hudson",
+    "developers": [
+      "Hudson"
+    ],
+    "publishers": [
+      "Hudson"
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -44,8 +56,12 @@
     "players": 2,
     "rating": 0.7,
     "year": 1990,
-    "developer": "Capcom",
-    "publisher": "NEC",
+    "developers": [
+      "Capcom"
+    ],
+    "publishers": [
+      "NEC"
+    ],
     "genres": [
       "Action",
       "Platform"
@@ -68,8 +84,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1990,
-    "developer": "Sunrise Software",
-    "publisher": "Hudson",
+    "developers": [
+      "Sunrise Software"
+    ],
+    "publishers": [
+      "Hudson"
+    ],
     "genres": [
       "Action",
       "Platform"

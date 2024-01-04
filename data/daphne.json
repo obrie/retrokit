@@ -8,8 +8,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1984,
-    "developer": "Advanced Microcomputer Systems",
-    "publisher": "Cinematronics",
+    "developers": [
+      "Advanced Microcomputer Systems"
+    ],
+    "publishers": [
+      "Cinematronics"
+    ],
     "genres": [
       "Action",
       "Platform",
@@ -29,16 +33,24 @@
     "players": 2,
     "rating": 0.7,
     "year": 1992,
-    "developer": "Konami",
-    "publisher": "Konami"
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Konami"
+    ]
   },
   "astroboy": {},
   "astron": {
     "players": 1,
     "rating": 0.6,
     "year": 1983,
-    "developer": "SEGA",
-    "publisher": "SEGA",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "SEGA"
+    ],
     "genres": [
       "1st person",
       "Shoot'em Up",
@@ -58,8 +70,12 @@
     "players": 1,
     "rating": 0.8,
     "year": 1984,
-    "developer": "Konami",
-    "publisher": "Konami",
+    "developers": [
+      "Konami"
+    ],
+    "publishers": [
+      "Konami"
+    ],
     "genres": [
       "Driving",
       "Driving / Race",
@@ -78,8 +94,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1983,
-    "developer": "Data East",
-    "publisher": "Data East",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Data East"
+    ],
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -103,8 +123,12 @@
     "players": 2,
     "rating": 0.9,
     "year": 1983,
-    "developer": "Stern Electronics, Inc.",
-    "publisher": "Stern Electronics",
+    "developers": [
+      "Stern Electronics, Inc."
+    ],
+    "publishers": [
+      "Stern Electronics"
+    ],
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -124,8 +148,12 @@
     "players": 1,
     "rating": 0.75,
     "year": 1983,
-    "developer": "Data East",
-    "publisher": "Data East",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Data East"
+    ],
     "genres": [
       "Shooter"
     ],
@@ -173,8 +201,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1983,
-    "developer": "Funai",
-    "publisher": "Gakken",
+    "developers": [
+      "Funai"
+    ],
+    "publishers": [
+      "Gakken"
+    ],
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -197,8 +229,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1987,
-    "developer": "Millennium Game",
-    "publisher": "Millennium Game",
+    "developers": [
+      "Millennium Game"
+    ],
+    "publishers": [
+      "Millennium Game"
+    ],
     "controls": [
       "lightgun"
     ]
@@ -208,8 +244,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1983,
-    "developer": "SEGA",
-    "publisher": "SEGA",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "SEGA"
+    ],
     "genres": [
       "1st person",
       "Shooter",
@@ -229,8 +269,12 @@
     "players": 1,
     "rating": 0.4,
     "year": 1984,
-    "developer": "SEGA",
-    "publisher": "SEGA",
+    "developers": [
+      "SEGA"
+    ],
+    "publishers": [
+      "SEGA"
+    ],
     "genres": [
       "Driving",
       "Race",
@@ -242,8 +286,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Taito",
-    "publisher": "Taito"
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "Taito"
+    ]
   },
   "hydrosub2021": {
     "controls": [
@@ -254,8 +302,12 @@
     "players": 1,
     "rating": 0.5,
     "year": 1983,
-    "developer": "Funai",
-    "publisher": "Gakken",
+    "developers": [
+      "Funai"
+    ],
+    "publishers": [
+      "Gakken"
+    ],
     "genres": [
       "Driving",
       "Race",
@@ -275,8 +327,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1982,
-    "developer": "Cinematronics",
-    "publisher": "Hara Industries (Cinematronics license)"
+    "developers": [
+      "Cinematronics"
+    ],
+    "publishers": [
+      "Hara Industries (Cinematronics license)"
+    ]
   },
   "johnnyrock": {
     "controls": [
@@ -295,8 +351,12 @@
     "players": 2,
     "rating": 0.8,
     "year": 1983,
-    "developer": "Sullivan Bluth Interactive",
-    "publisher": "Cinematronics",
+    "developers": [
+      "Sullivan Bluth Interactive"
+    ],
+    "publishers": [
+      "Cinematronics"
+    ],
     "genres": [
       "Action",
       "Action / Adventure",
@@ -319,8 +379,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1991,
-    "developer": "Sullivan Bluth Interactive",
-    "publisher": "Leland Corp",
+    "developers": [
+      "Sullivan Bluth Interactive"
+    ],
+    "publishers": [
+      "Leland Corp"
+    ],
     "genres": [
       "Action",
       "Action / Adventure",
@@ -356,8 +420,12 @@
     "players": 1,
     "rating": 0.9,
     "year": 1983,
-    "developer": "Mylstar",
-    "publisher": "Mylstar",
+    "developers": [
+      "Mylstar"
+    ],
+    "publishers": [
+      "Mylstar"
+    ],
     "genres": [
       "Shoot'em Up"
     ],
@@ -376,8 +444,12 @@
   "maddog": {
     "players": 1,
     "year": 1990,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "controls": [
       "lightgun"
     ],
@@ -392,8 +464,12 @@
   },
   "maddog2": {
     "year": 1992,
-    "developer": "American Laser Games",
-    "publisher": "American Laser Games",
+    "developers": [
+      "American Laser Games"
+    ],
+    "publishers": [
+      "American Laser Games"
+    ],
     "controls": [
       "lightgun"
     ],
@@ -412,8 +488,12 @@
     "players": 2,
     "rating": 0.6,
     "year": 1987,
-    "developer": "Sunsoft",
-    "publisher": "Nintendo",
+    "developers": [
+      "Sunsoft"
+    ],
+    "publishers": [
+      "Nintendo"
+    ],
     "controls": [
       "lightgun"
     ]
@@ -428,8 +508,12 @@
     "players": 1,
     "rating": 0.85,
     "year": 1985,
-    "developer": "Data East",
-    "publisher": "Data East",
+    "developers": [
+      "Data East"
+    ],
+    "publishers": [
+      "Data East"
+    ],
     "genres": [
       "Driving",
       "Race"
@@ -479,14 +563,22 @@
   "timegal": {
     "players": 1,
     "rating": 0.8,
-    "developer": "Taito",
-    "publisher": "Taito"
+    "developers": [
+      "Taito"
+    ],
+    "publishers": [
+      "Taito"
+    ]
   },
   "timetraveler": {
     "players": 1,
     "rating": 0.7,
-    "developer": "Virtual Image Productions",
-    "publisher": "SEGA",
+    "developers": [
+      "Virtual Image Productions"
+    ],
+    "publishers": [
+      "SEGA"
+    ],
     "manuals": [
       {
         "languages": [
@@ -501,8 +593,12 @@
     "players": 1,
     "rating": 0.7,
     "year": 1984,
-    "developer": "RDI Video Systems",
-    "publisher": "RDI Video Systems",
+    "developers": [
+      "RDI Video Systems"
+    ],
+    "publishers": [
+      "RDI Video Systems"
+    ],
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -524,15 +620,23 @@
     "players": 2,
     "rating": 0.9,
     "year": 1982,
-    "developer": "Bally Midway",
-    "publisher": "Bally Midway"
+    "developers": [
+      "Bally Midway"
+    ],
+    "publishers": [
+      "Bally Midway"
+    ]
   },
   "uvt": {
     "players": 1,
     "rating": 0.7,
     "year": 1984,
-    "developer": "Mylstar",
-    "publisher": "Mylstar",
+    "developers": [
+      "Mylstar"
+    ],
+    "publishers": [
+      "Mylstar"
+    ],
     "genres": [
       "Shoot'em Up"
     ],

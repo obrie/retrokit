@@ -103,12 +103,12 @@ class LaunchboxDatabase:
         # Developer
         developer_tag = element.find('Developer')
         if developer_tag is not None and developer_tag.text is not None and developer_tag.text != 'Unknown':
-            game['developer'] = developer_tag.text
+            game['developers'] = [developer_tag.text]
 
         # Publisher
         publisher_tag = element.find('Publisher')
         if publisher_tag is not None and publisher_tag.text is not None and publisher_tag.text != 'Unknown':
-            game['publisher'] = publisher_tag.text
+            game['publishers'] = [publisher_tag.text]
 
         tags = set()
 

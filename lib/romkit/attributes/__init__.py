@@ -8,7 +8,7 @@ import romkit.attributes.collections
 import romkit.attributes.controls
 import romkit.attributes.custom
 import romkit.attributes.description
-import romkit.attributes.developer
+import romkit.attributes.developers
 import romkit.attributes.discs
 import romkit.attributes.emulation
 import romkit.attributes.favorite
@@ -23,7 +23,7 @@ import romkit.attributes.name
 import romkit.attributes.parent
 import romkit.attributes.peripherals
 import romkit.attributes.players
-import romkit.attributes.publisher
+import romkit.attributes.publishers
 import romkit.attributes.rating
 import romkit.attributes.romset
 import romkit.attributes.runnable
